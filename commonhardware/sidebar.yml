@@ -1,0 +1,17 @@
+---
+section: commonhardware
+title: Halten Sie die Appliance-Konfiguration aufrecht
+entries:
+- title: Überblick
+  pdf-filename: Appliance-Konfiguration beibehalten (alle Nodes)
+  url: "/commonhardware/index.html"
+- title: Stellen Sie das Gerät in den Wartungsmodus
+  url: "/commonhardware/placing-appliance-into-maintenance-mode.html"
+- title: MTU-Einstellung ändern
+  url: "/commonhardware/changing-mtu-setting.html"
+- title: Überprüfen Sie die DNS-Server-Konfiguration
+  url: "/commonhardware/checking-dns-server-configuration.html"
+- title: Aktualisieren Sie die MAC-Adressenverweise
+  url: "/commonhardware/locate-mac-address.html"
+- title: Überwachung der Node-Verschlüsselung im Wartungsmodus
+  url: "/commonhardware/monitoring-node-encryption-in-maintenance-mode.html"

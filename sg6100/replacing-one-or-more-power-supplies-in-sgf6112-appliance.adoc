@@ -1,0 +1,78 @@
+---
+permalink: sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, sgf6112, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
+summary: Appliances der SG6100 Serie verfügen aus Redundanzgründen über zwei Netzteile. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät über eine redundante Stromversorgung verfügt. Beide Netzteile, die im Gerät betrieben werden, müssen das gleiche Modell und die gleiche Nennleistung aufweisen. 
+---
+= Ersetzen Sie ein oder beide Netzteile im SGF6112
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die SGF6112 Appliance verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät über eine redundante Stromversorgung verfügt. Beide Netzteile, die im Gerät betrieben werden, müssen das gleiche Modell und die gleiche Nennleistung aufweisen.
+
+.Bevor Sie beginnen
+* Das ist schon link:locating-sgf6112-in-data-center.html["Das Gerät befindet sich physisch"] Bei zu ersetzenden Netzteilen.
+* Das ist schon link:verify-component-to-replace.html["Standort des zu ersetzenden Netzteils ermittelt"].
+* Wenn Sie nur ein Netzteil ersetzen:
++
+** Sie haben das Ersatznetzteil entpackt und sichergestellt, dass es das gleiche Modell und die gleiche Stromleistung wie das Netzteil ist, das Sie ersetzen.
+** Sie haben bestätigt, dass das andere Netzteil installiert ist und in Betrieb ist.
+
+
+* Wenn Sie beide Netzteile gleichzeitig ersetzen:
++
+** Sie haben die Ersatz-Netzteile entpackt und sichergestellt, dass sie das gleiche Modell und die gleiche Wattzahl haben.
+
+
+
+
+.Über diese Aufgabe
+Die Abbildung zeigt die beiden Netzteile für den SGF6112. Die Netzteile sind von der Rückseite des Geräts zugänglich.
+
+image::../media/sgf6112_power_supplies.png[Rückseite des SGF6112 mit zwei Netzteilen]
+
+.Schritte
+. Wenn Sie nur ein Netzteil ersetzen, müssen Sie das Gerät nicht herunterfahren. Wechseln Sie zum <<Unplug_the_power_cord,Ziehen Sie das Netzkabel ab>> Schritt: Wenn Sie beide Netzteile gleichzeitig ersetzen, gehen Sie folgendermaßen vor, bevor Sie die Netzkabel abziehen:
++
+.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Schalten Sie das Gerät aus"].
++
+
+CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt und beide Netzteile gleichzeitig austauschen, müssen Sie die Netzteile während eines geplanten Wartungsfensters austauschen. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
+
+
+
+. [[Trenne den Netzstecker_Power_cordel, Start=2]]] Trennen Sie das Netzkabel von jedem zu ersetzenden Netzteil.
++
+Von der Rückseite des Geräts aus gesehen befindet sich das Netzteil A (PSU0) auf der rechten Seite und das Netzteil B (PSU1) auf der linken Seite.
+
+. Heben Sie den Griff am ersten zu ersetzenden Netzteil an.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Heben Sie den Griff an, um das Netzteil zu entfernen]
+
+. Drücken Sie auf den blauen Riegel, und ziehen Sie das Netzteil heraus.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Entfernen eines Netzteils]
+
+. Schieben Sie das Ersatznetzteil mit der blauen Verriegelung nach rechts in das Gehäuse.
++
+
+NOTE: Beide Netzteile müssen das gleiche Modell und die gleiche Wattzahl haben.
+
++
+Stellen Sie sicher, dass sich die blaue Verriegelung auf der rechten Seite befindet, wenn Sie die Ersatzeinheit einschieben.
+
++
+Sie werden ein Klicken spüren, wenn das Netzteil einrastet.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Gleitende Stromversorgung]
+
+. Drücken Sie den Griff wieder gegen das Gehäuse des Netzteils.
+. Wenn Sie beide Netzteile austauschen, wiederholen Sie die Schritte 2 bis 6, um das zweite Netzteil auszutauschen.
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Schließen Sie die Stromkabel an die ersetzten Geräte an, und wenden Sie Strom an"].
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

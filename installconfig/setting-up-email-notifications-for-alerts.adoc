@@ -1,0 +1,84 @@
+---
+permalink: installconfig/setting-up-email-notifications-for-alerts.html 
+sidebar: sidebar 
+keywords: email, notifications, alerts, set up, setup, configure, configuration, bmc 
+summary: Wenn Sie möchten, dass E-Mail-Benachrichtigungen bei Auftreten von Warnungen gesendet werden, verwenden Sie die BMC-Schnittstelle, um SMTP-Einstellungen, Benutzer, LAN-Ziele, Warnungsrichtlinien und Ereignisfilter zu konfigurieren. 
+---
+= E-Mail-Benachrichtigungen für BMC-Warnungen einrichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie möchten, dass E-Mail-Benachrichtigungen bei Auftreten von Warnungen gesendet werden, verwenden Sie die BMC-Schnittstelle, um SMTP-Einstellungen, Benutzer, LAN-Ziele, Warnungsrichtlinien und Ereignisfilter zu konfigurieren.
+
+
+NOTE: BMC-Einstellungen, die durch dieses Verfahren vorgenommen werden, bleiben möglicherweise nicht erhalten, wenn der SG6000-CN-Controller oder die Services-Appliance ausfällt und ersetzt werden muss. Stellen Sie sicher, dass Sie über eine Aufzeichnung aller Einstellungen verfügen, die Sie angewendet haben, so dass sie nach einem Hardware-Austausch bei Bedarf leicht wieder angewendet werden können.
+
+.Bevor Sie beginnen
+Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
+
+.Über diese Aufgabe
+In der BMC-Schnittstelle verwenden Sie die Optionen *SMTP-Einstellungen*, *Benutzerverwaltung* und *Platform Event Filters* auf der Seite Einstellungen, um E-Mail-Benachrichtigungen zu konfigurieren.
+
+image::../media/bmc_settings_menu.png[BMC-Einstellungsmenü]
+
+.Schritte
+. link:configuring-snmp-settings-for-bmc.html["Konfigurieren Sie die SNMP-Einstellungen für BMC"].
++
+.. Wählen Sie *Einstellungen* > *SMTP-Einstellungen*.
+.. Geben Sie für die Absender-E-Mail-ID eine gültige E-Mail-Adresse ein.
++
+Diese E-Mail-Adresse wird als von-Adresse angegeben, wenn der BMC E-Mail sendet.
+
+
+
+. Richten Sie Benutzer für den Empfang von Warnungen ein.
++
+.. Wählen Sie im BMC-Dashboard die Option *Einstellungen* > *Benutzerverwaltung* aus.
+.. Fügen Sie mindestens einen Benutzer hinzu, um Benachrichtigungen zu erhalten.
++
+Die für einen Benutzer konfigurierte E-Mail-Adresse ist die Adresse, an die BMC Warnmeldungen sendet. Sie können beispielsweise einen generischen Benutzer wie „`notification-user,`“ hinzufügen und die E-Mail-Adresse einer E-Mail-Verteilerliste für das technische Support-Team verwenden.
+
+
+
+. Konfigurieren Sie das LAN-Ziel für Meldungen.
++
+.. Wählen Sie *Einstellungen* > *Plattformereignisfilter* > *LAN-Ziele*.
+.. Konfigurieren Sie mindestens ein LAN-Ziel.
++
+*** Wählen Sie als Zieltyp *E-Mail* aus.
+*** Wählen Sie für BMC-Benutzername einen Benutzernamen aus, den Sie zuvor hinzugefügt haben.
+*** Wenn Sie mehrere Benutzer hinzugefügt haben und möchten, dass alle von ihnen Benachrichtigungs-E-Mails erhalten, fügen Sie für jeden Benutzer ein LAN-Ziel hinzu.
+
+
+.. Eine Testwarnung senden.
+
+
+. Konfigurieren von Meldungsrichtlinien, um festzulegen, wann und wo BMC Alarme sendet
++
+.. Wählen Sie *Einstellungen* > *Plattformereignisfilter* > *Benachrichtigungsrichtlinien* Aus.
+.. Konfigurieren Sie mindestens eine Meldungsrichtlinie für jedes LAN-Ziel.
++
+*** Wählen Sie für die Policengruppennummer *1* aus.
+*** Wählen Sie für Policy Action * immer Warnung an dieses Ziel senden* aus.
+*** Wählen Sie für LAN-Kanal *1* aus.
+*** Wählen Sie in der Zielauswahl das LAN-Ziel für die Richtlinie aus.
+
+
+
+
+. Ereignisfilter konfigurieren, um Warnmeldungen für verschiedene Ereignistypen an die entsprechenden Benutzer zu leiten.
++
+.. Wählen Sie *Einstellungen* > *Plattformereignisfilter* > *Ereignisfilter*.
+.. Geben Sie für die Nummer der Meldungsrichtlinie *1* ein.
+.. Erstellen Sie Filter für jedes Ereignis, über das die Meldungsrichtlinie-Gruppe benachrichtigt werden soll.
++
+*** Sie können Ereignisfilter für Energieaktionen, bestimmte Sensorereignisse oder alle Ereignisse erstellen.
+*** Wenn Sie unsicher sind, welche Ereignisse überwacht werden sollen, wählen Sie *Alle Sensoren* für den Sensortyp und *Alle Ereignisse* für Ereignisoptionen. Wenn Sie unerwünschte Benachrichtigungen erhalten, können Sie Ihre Auswahl später ändern.
+
+
+
+
+

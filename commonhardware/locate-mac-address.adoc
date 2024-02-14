@@ -1,0 +1,37 @@
+---
+permalink: commonhardware/locate-mac-address.html 
+sidebar: sidebar 
+keywords: storagegrid, mac, mac address 
+summary: In einigen Fällen müssen Sie möglicherweise die MAC-Adressenreferenzen nach dem Austausch einer Appliance aktualisieren. 
+---
+= Aktualisieren Sie die MAC-Adressenverweise
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In einigen Fällen müssen Sie möglicherweise die MAC-Adressenreferenzen nach dem Austausch einer Appliance aktualisieren.
+
+.Über diese Aufgabe
+Wenn eine der Netzwerkschnittstellen auf einer Appliance, die Sie ersetzen, für DHCP konfiguriert ist, müssen Sie möglicherweise die permanenten DHCP-Lease-Zuweisungen auf den DHCP-Servern aktualisieren, um auf die MAC-Adressen der Ersatz-Appliance zu verweisen. Das Update stellt sicher, dass dem Ersatzgerät die erwarteten IP-Adressen zugewiesen werden.
+
+.Schritte
+. Suchen Sie das Etikett auf der Vorderseite des Geräts. Das Etikett enthält die MAC-Adresse für den BMC-Verwaltungsport der Appliance.
+. Um die MAC-Adresse für den Admin-Netzwerkanschluss zu ermitteln, müssen Sie der Hexadezimalzahl auf dem Etikett *2* hinzufügen.
++
+Wenn die MAC-Adresse auf dem Etikett beispielsweise mit *09* endet, endet die MAC-Adresse für den Admin-Port in *0B*. Wenn die MAC-Adresse auf dem Etikett mit *(_y_)FF* endet, endet die MAC-Adresse für den Admin-Port in *(_y_+1)01*.
+
++
+Sie können diese Berechnung einfach durchführen, indem Sie den Rechner unter Windows öffnen, ihn auf den Programmiermodus setzen, Hex auswählen, die MAC-Adresse eingeben und dann *+ 2 =* eingeben.
+
+. Bitten Sie Ihren Netzwerkadministrator, die DNS/Netzwerk- und IP-Adresse für das Gerät, das Sie entfernt haben, mit der MAC-Adresse für das Ersatzgerät zu verknüpfen.
++
+
+CAUTION: Sie müssen sicherstellen, dass alle IP-Adressen für das Originalgerät aktualisiert wurden, bevor Sie das Ersatzgerät mit Strom versorgen. Andernfalls erhält die Appliance beim Booten von neue DHCP IP-Adressen und kann die Verbindung zu StorageGRID möglicherweise nicht wiederherstellen. Dieser Schritt gilt für alle StorageGRID-Netzwerke, die mit der Appliance verbunden sind.
+
++
+
+NOTE: Wenn die ursprüngliche Appliance statische IP-Adresse verwendet, übernimmt die neue Appliance automatisch die IP-Adressen der entfernten Appliance.
+
+

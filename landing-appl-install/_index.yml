@@ -1,0 +1,45 @@
+---
+indexpage:
+  tiles:
+  - title: Schnellstart
+    links:
+    - title: Schnellstart für die Installation des Geräts
+      url: "../installconfig/index.html"
+    - title: Automatisierung der Appliance-Installation und -Konfiguration
+      url: "../installconfig/automating-appliance-installation-and-configuration.html"
+    - title: Automatisieren Sie die StorageGRID-Konfiguration
+      url: "../installconfig/automating-configuration-of-storagegrid.html"
+    - title: REST-APIs für die Installation (erweiterte Benutzer)
+      url: "../installconfig/overview-of-installation-rest-apis.html"
+  - title: Installation vorbereiten
+    links:
+    - title: Standort vorbereiten
+      url: "../installconfig/preparing-site.html"
+    - title: Packen Sie die Kartons aus
+      url: "../installconfig/unpacking-boxes.html"
+    - title: Beschaffen Sie sich zusätzliche Geräte und Werkzeuge
+      url: "../installconfig/obtaining-additional-equipment-and-tools.html"
+  - title: Erfassung von Netzwerkinformationen
+    links:
+    - title: StorageGRID-Netzwerktypen
+      url: "../installconfig/reviewing-appliance-network-connections.html"
+    - title: SG100 und SG1000
+      url: "../installconfig/gathering-installation-information-sg100-and-sg1000.html"
+    - title: SG5700
+      url: "../installconfig/gathering-installation-information-sg5700.html"
+    - title: SG6000
+      url: "../installconfig/gathering-installation-information-sg6000.html"
+    - title: SG6100
+      url: "../installconfig/gathering-installation-information-sg6100.html"
+  - title: Hardware installieren
+    links:
+    - title: Hardware registrieren
+      url: "../installconfig/registering-hardware.html"
+    - title: Installieren Sie das Gerät
+      url: "../landing-install-hdwr/index.html"
+    - title: Richten Sie die Hardware ein
+      url: "../installconfig/configuring-hardware.html"
+    - title: Appliance-Storage-Node implementieren
+      url: "../installconfig/deploying-appliance-storage-node.html"
+    - title: Implementieren des Services-Appliance-Nodes
+      url: "../installconfig/deploying-services-appliance-node.html"

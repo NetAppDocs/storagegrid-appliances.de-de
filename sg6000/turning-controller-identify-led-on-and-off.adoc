@@ -1,0 +1,44 @@
+---
+permalink: sg6000/turning-controller-identify-led-on-and-off.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, locate, find, locating, finding, identify, blue led, blue light 
+summary: Die blaue Identify-LED auf der Vorder- und Rückseite des Controllers kann eingeschaltet werden, um das Gerät in einem Datacenter zu lokalisieren. 
+---
+= Aktivieren und deaktivieren Sie die LED für die Identifizierung des SG6000-CN-Controllers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die blaue Identify-LED auf der Vorder- und Rückseite des Controllers kann eingeschaltet werden, um das Gerät in einem Datacenter zu lokalisieren.
+
+.Bevor Sie beginnen
+Sie haben die BMC-IP-Adresse des Controllers, den Sie identifizieren möchten.
+
+.Schritte
+. Greifen Sie auf die BMC-Schnittstelle des Controllers zu.
+. Wählen Sie *Server Identify* Aus.
++
+Der aktuelle Status der Identifizieren-LED ist ausgewählt.
+
+. Wählen Sie *EIN* oder *AUS*, und wählen Sie dann *Aktion ausführen*.
++
+Wenn Sie *EIN* auswählen, leuchten die blauen Identifizieren-LEDs auf der Vorderseite (abgebildet) und der Rückseite des Geräts.
+
++
+image::../media/sg6060_front_panel_service_led_on.jpg[Vordere Identify-LED - ein]
+
++
+
+NOTE: Wenn eine Blende auf dem Controller installiert ist, kann es schwierig sein, die vordere Identify-LED zu erkennen.
+
+. Schalten Sie die LED nach Bedarf ein und aus.
+
+
+.Verwandte Informationen
+link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Überprüfen Sie, ob der Fibre-Channel-HBA ersetzt werden soll"]
+
+link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+
+link:../installconfig/accessing-bmc-interface.html["Greifen Sie auf die BMC-Schnittstelle zu"]

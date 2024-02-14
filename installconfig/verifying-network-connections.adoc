@@ -1,0 +1,45 @@
+---
+permalink: installconfig/verifying-network-connections.html 
+sidebar: sidebar 
+keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, mtu, test, testing 
+summary: Vergewissern Sie sich, dass Sie über die Appliance auf die StorageGRID-Netzwerke zugreifen können, die Sie verwenden. Um das Routing über Netzwerk-Gateways zu validieren, sollten Sie die Verbindung zwischen dem StorageGRID Appliance Installer und den IP-Adressen in verschiedenen Subnetzen testen. Sie können auch die MTU-Einstellung überprüfen. 
+---
+= Netzwerkverbindungen prüfen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vergewissern Sie sich, dass Sie über die Appliance auf die StorageGRID-Netzwerke zugreifen können, die Sie verwenden. Um das Routing über Netzwerk-Gateways zu validieren, sollten Sie die Verbindung zwischen dem StorageGRID Appliance Installer und den IP-Adressen in verschiedenen Subnetzen testen. Sie können auch die MTU-Einstellung überprüfen.
+
+.Schritte
+. Klicken Sie in der Menüleiste des StorageGRID-Appliance-Installationsprogramms auf *Netzwerke konfigurieren* > *Ping und MTU-Test*.
++
+Die Seite Ping und MTU Test wird angezeigt.
+
++
+image::../media/ping_test_start.png[Screenshot der Ping- und MTU-Testoption im StorageGRID-Appliance-Installationsprogramm]
+
+. Wählen Sie aus dem Dropdown-Feld *Netzwerk* das Netzwerk aus, das Sie testen möchten: Grid, Admin oder Client.
+. Geben Sie die IPv4-Adresse oder den vollqualifizierten Domänennamen (FQDN) für einen Host in diesem Netzwerk ein.
++
+Beispielsweise möchten Sie das Gateway im Netzwerk oder den primären Admin-Node pingen.
+
+. Aktivieren Sie optional das Kontrollkästchen *MTU testen*, um die MTU-Einstellung für den gesamten Pfad durch das Netzwerk zum Ziel zu überprüfen.
++
+Sie können beispielsweise den Pfad zwischen dem Appliance-Node und einem Node an einem anderen Standort testen.
+
+. Klicken Sie Auf *Konnektivität Testen*.
++
+Wenn die Netzwerkverbindung gültig ist, wird die Meldung „Ping Test bestanden“ angezeigt, wobei die Ausgabe des Ping-Befehls aufgelistet ist.
+
++
+image::../media/ping_test_passed.png[Screenshot der Ping-Testergebnisse im StorageGRID Webscale Appliance Installer]
+
+
+
+.Verwandte Informationen
+* link:configuring-network-links.html["Netzwerkverbindungen konfigurieren"]
+* link:../commonhardware/changing-mtu-setting.html["MTU-Einstellung ändern"]
+

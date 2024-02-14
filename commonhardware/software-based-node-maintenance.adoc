@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+permalink: commonhardware/software-based-node-maintenance.html 
+keywords: software based node maintenance 
+summary: Software-basierte Node-Wartung. 
+---
+= Software-basierte Node-Wartung
+:allow-uri-read: 
+
+
+[role="lead"]
+Software-basierte Node-Wartung. Gibt es etwas, das hier geht?

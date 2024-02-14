@@ -1,0 +1,78 @@
+---
+permalink: installconfig/accessing-bmc-interface.html 
+sidebar: sidebar 
+keywords: BMC, baseboard management controller, access, open, login 
+summary: 'Sie können auf die BMC-Schnittstelle über die DHCP- oder statische IP-Adresse für den BMC-Verwaltungsport auf den folgenden Appliance-Modellen zugreifen: ' 
+---
+= Greifen Sie auf die BMC-Schnittstelle zu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf die BMC-Schnittstelle über die DHCP- oder statische IP-Adresse für den BMC-Verwaltungsport auf den folgenden Appliance-Modellen zugreifen:
+
+* SG100
+* SG1000
+* SG6000
+* SG6100
+
+
+.Bevor Sie beginnen
+* Der Management-Client verwendet ein https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Der BMC-Managementport der Appliance ist mit dem zu verwendenden Managementnetzwerk verbunden.
++
+[role="tabbed-block"]
+====
+.SG100
+--
+image::../media/sg100_bmc_management_port.png[SG100 BMC Management-Port]
+
+--
+.SG1000
+--
+image::../media/sg1000_bmc_management_port.png[SG1000 BMC-Management-Port]
+
+--
+.SG6000
+--
+image::../media/sg6000_cn_bmc_management_port.gif[BMC-Managementport für SG6000-CN-Controller]
+
+--
+.SG6100
+--
+image::../media/sgf6112_cn_bmc_management_port.png[BMC-Management-Port SGF6112]
+
+--
+====
+
+
+.Schritte
+. Geben Sie die URL für die BMC-Schnittstelle ein: +
+`*https://_BMC_Port_IP_*`
++
+Für `_BMC_Port_IP_`, Verwenden Sie die DHCP- oder statische IP-Adresse für den BMC-Management-Port.
+
++
+Die BMC-Anmeldeseite wird angezeigt.
+
++
+
+NOTE: Wenn Sie noch nicht konfiguriert haben `BMC_Port_IP`, Folgen Sie den Anweisungen in link:configuring-bmc-interface.html["Konfigurieren Sie die BMC-Schnittstelle"].  Wenn Sie diese Vorgehensweise aufgrund eines Hardwareproblems nicht ausführen können und noch keine BMC-IP-Adresse konfiguriert haben, können Sie möglicherweise weiterhin auf den BMC zugreifen. Standardmäßig erhält der BMC über DHCP eine IP-Adresse. Wenn DHCP im BMC-Netzwerk aktiviert ist, kann Ihr Netzwerkadministrator die dem BMC-MAC zugewiesene IP-Adresse angeben, die auf dem Etikett auf der Vorderseite des Geräts aufgedruckt ist. Wenn DHCP im BMC-Netzwerk nicht aktiviert ist, reagiert der BMC nach einigen Minuten nicht und weist sich selbst die standardmäßige statische IP zu `192.168.0.120`. Möglicherweise müssen Sie Ihren Laptop direkt mit dem BMC-Port verbinden und die Netzwerkeinstellung ändern, um Ihrem Laptop eine IP-Adresse wie zuzuweisen `192.168.0.200/24`, Um zu suchen `192.168.0.120`.
+
+. Geben Sie den Admin- oder Root-Benutzernamen und das Passwort ein. Geben Sie dabei das Passwort ein, das Sie bei Ihrer Einstellung festgelegt haben link:changing-root-password-for-bmc-interface.html["Das Standardpasswort wurde geändert"]:
++
+
+NOTE: Der Standardbenutzer hängt davon ab, wann Sie Ihre StorageGRID-Appliance installiert haben. Der Standardbenutzer ist *admin* für neue Installationen und *root* für ältere Installationen.
+
+. Wählen Sie *Sign me in* aus.
++
+image::../media/bmc_dashboard.gif[BMC Dashboard]
+
+. Erstellen Sie optional weitere Benutzer, indem Sie *Einstellungen* > *Benutzerverwaltung* wählen und auf einen beliebigen Benutzer "`disabled`" klicken.
++
+
+NOTE: Wenn sich Benutzer zum ersten Mal anmelden, werden sie möglicherweise aufgefordert, ihr Passwort zu ändern, um die Sicherheit zu erhöhen.
+
+

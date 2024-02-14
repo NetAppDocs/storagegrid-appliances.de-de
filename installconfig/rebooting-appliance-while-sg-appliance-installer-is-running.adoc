@@ -1,0 +1,32 @@
+---
+permalink: installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, service appliance, services appliance, gateway Node, admin node, reboot, restart 
+summary: Möglicherweise müssen Sie die Appliance neu starten, während das Installationsprogramm der StorageGRID-Appliance ausgeführt wird. Sie müssen die Appliance beispielsweise neu starten, wenn die Installation fehlschlägt. 
+---
+= Starten Sie die Appliance neu, während das Installationsprogramm der StorageGRID Appliance ausgeführt wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie die Appliance neu starten, während das Installationsprogramm der StorageGRID-Appliance ausgeführt wird. Sie müssen die Appliance beispielsweise neu starten, wenn die Installation fehlschlägt.
+
+.Über diese Aufgabe
+Dieses Verfahren gilt nur, wenn die Appliance das Installationsprogramm für die StorageGRID-Appliance ausführt. Nach Abschluss der Installation funktioniert dieser Schritt nicht mehr, da das Installationsprogramm für StorageGRID-Geräte nicht mehr verfügbar ist.
+
+.Schritte
+. Klicken Sie im Installationsprogramm der StorageGRID-Appliance auf *Erweitert* > *Controller neu starten*, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus, um den Controller neu zu starten, wobei der Knoten wieder in das Raster integriert wird. Wählen Sie diese Option, wenn Sie im Wartungsmodus ausgeführt werden und den Node in den normalen Betrieb zurückkehren möchten.
+** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. (Diese Option ist nur verfügbar, wenn sich der Controller im Wartungsmodus befindet.) Wählen Sie diese Option aus, wenn weitere Wartungsmaßnahmen erforderlich sind, die Sie auf dem Node durchführen müssen, bevor Sie das Raster neu beitreten.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Das Gerät wird neu gestartet.
+
+
+
+

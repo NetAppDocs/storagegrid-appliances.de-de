@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: commonhardware/storage-node-maintenance.html 
+keywords: stub, layered 
+summary: 'Wartung von Storage-Nodes:' 
+---
+= Wartung von Storage-Nodes
+:allow-uri-read: 
+
+
+[role="lead"]
+Wartung von Storage-Nodes: Ist dies sinnvoll zu konsolidieren?
+
+(Neues Einführungsthema)
+
+
+
+== Aktualisieren des SANtricity OS auf den Storage Controllern (Storage-Nodes)
+
+(Abholung unter bestehendem Appliance-Thema – Kombination erforderlich)
+
+
+
+=== Aktualisieren von SANtricity OS auf den Storage Controllern mit Grid Manager
+
+(Abholung unter bestehendem Appliance-Thema – Kombination erforderlich)
+
+
+
+=== Aktualisieren des SANtricity OS auf den Storage Controllern mithilfe des Wartungsmodus
+
+(Abholung unter bestehendem Appliance-Thema – Kombination erforderlich)
+
+
+
+== Aktualisieren der Laufwerk-Firmware mit SANtricity System Manager
+
+(Abholung von bestehendem Appliance-Thema – bereits kombiniert)

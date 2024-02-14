@@ -1,0 +1,50 @@
+---
+section: sg6000
+title: Wartung der SG6000 Hardware
+url: "/landing-maintain-sg6000/index.html"
+entries:
+- title: Überblick
+  pdf-filename: SG6000 Hardware-Wartung
+  url: "/sg6000/index.html"
+- title: Verfahren zur Wartungskonfiguration
+  pdf-filename: Konfigurationsverfahren für die Wartung – SG6000
+  entries:
+  - title: Upgrades des SANtricity OS auf Storage Controllern
+    url: "/sg6000/upgrading-santricity-os-on-storage-controllers.html"
+    entries:
+    - title: Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager
+      url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html"
+    - title: Aktualisieren Sie das SANtricity OS auf Storage Controllern mit dem Wartungsmodus
+      url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html"
+  - title: Aktualisieren Sie die Laufwerk-Firmware mit SANtricity System Manager
+    url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: Ein- und Ausschalten der Controller-ID-LED
+    url: "/sg6000/turning-controller-identify-led-on-and-off.html"
+  - title: Controller im Datacenter finden
+    url: "/sg6000/locating-controller-in-data-center.html"
+  - title: Schalten Sie den Controller aus und ein
+    url: "/sg6000/power-sg6000-cn-controller-off-on.html"
+  - title: Ändern der Link-Konfiguration des SG6000-CN Controllers
+    url: "/sg6000/changing-link-configuration-of-sg6000-cn-controller.html"
+- title: Hardware-Verfahren
+  pdf-filename: Hardwareverfahren – SG6000
+  entries:
+  - title: Erweiterungs-Shelf für das implementierte SG6060 hinzufügen
+    url: "/sg6000/adding-expansion-shelf-to-deployed-sg6060.html"
+  - title: Austausch des Storage Controllers
+    url: "/sg6000/replacing-storage-controller-sg6000.html"
+  - title: Hardwarekomponenten in das Storage-Controller-Shelf austauschen
+    url: "/sg6000/replacing-hardware-components-in-storage-controller-shelf.html"
+  - title: Ersetzen Sie Hardwarekomponenten in dem optionalen Erweiterungs-Shelf für
+      60 Laufwerke
+    url: "/sg6000/replacing-hardware-components-in-optional-60-drive-expansion-shelf.html"
+  - title: Tauschen Sie den SG6000-CN Controller aus
+    url: "/sg6000/replacing-sg6000-cn-controller.html"
+  - title: Tauschen Sie ein oder beide Netzteile im SG6000-CN Controller aus
+    url: "/sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
+  - title: Controller im Rack austauschen
+    url: "/sg6000/reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html"
+  - title: Bringen Sie die Controllerabdeckung wieder an
+    url: "/sg6000/reinstalling-sg6000-cn-controller-cover.html"
+  - title: Tauschen Sie den Fibre-Channel-HBA in den SG6000-CN-Controller aus
+    url: "/sg6000/reinstalling-fibre-channel-hba.html"

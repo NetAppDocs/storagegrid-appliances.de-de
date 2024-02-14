@@ -1,0 +1,16 @@
+---
+permalink: sg5600/index.html 
+sidebar: sidebar 
+keywords: 'storagegrid, sg5600, storage node, storage appliance"' 
+summary: Die SG5600 Appliance hat das Ende des Supports erreicht. Weitere Informationen zu Hardware-Aktualisierungen erhalten Sie von Ihrem NetApp Vertriebsmitarbeiter. 
+---
+= SG5600-Appliance warten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die SG5600 Appliance hat das Ende des Supports erreicht. Weitere Informationen zu Hardware-Aktualisierungen erhalten Sie von Ihrem NetApp Vertriebsmitarbeiter.
+
+Wenn Sie Wartungsverfahren für SG5600-Hardware durchführen müssen, verwenden Sie die https://docs.netapp.com/us-en/storagegrid-116/sg5600/maintaining-sg5600-appliance.html["Anweisungen für StorageGRID 11.6"^].

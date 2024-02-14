@@ -1,0 +1,58 @@
+---
+permalink: installconfig/registering-hardware.html 
+sidebar: sidebar 
+keywords: register, registering, registration, support 
+summary: Die Registrierung der Appliance-Hardware bietet Support-Vorteile. 
+---
+= Hardware registrieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Registrierung der Appliance-Hardware bietet Support-Vorteile.
+
+.Schritte
+. Suchen Sie die Seriennummer des Gehäuses für das Gerät. Bei SG6000 Appliances befindet sich die Seriennummer des Chassis auf dem Storage Controller-Shelf.
++
+Sie finden die Nummer auf dem Packzettel, in Ihrer Bestätigungs-E-Mail oder auf dem Gerät nach dem Auspacken.
+
++
+image::../media/appliance_label.gif[Etikett mit Seriennummer]
+
++
+
+NOTE: Die SG6000 Storage Appliance enthält mehrere Seriennummern. Die Seriennummer auf dem Storage-Controller-Shelf muss registriert und verwendet werden, wenn Sie Service oder Support für die SG6000 Appliance anrufen.
+
+. Wechseln Sie zur NetApp Support Site unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Bestimmen Sie, ob Sie die Hardware registrieren müssen:
++
+[cols="1a,2a"]
+|===
+| Wenn Sie ein... | Führen Sie die folgenden Schritte aus... 
+
+
+ a| 
+Bestehender NetApp Kunde
+ a| 
+.. Melden Sie sich mit Ihrem Benutzernamen und Passwort an.
+.. Wählen Sie *Produkte* > *Meine Produkte*.
+.. Bestätigen Sie, dass die neue Seriennummer aufgeführt ist.
+.. Falls nicht, folgen Sie den Anweisungen für neue NetApp Kunden.
+
+
+
+
+ a| 
+Neuer NetApp Kunde
+ a| 
+.. Klicken Sie auf *Jetzt registrieren* und erstellen Sie ein Konto.
+.. Wählen Sie *Produkte* > *Produkte Registrieren*.
+.. Geben Sie die Seriennummer des Produkts und die angeforderten Details ein.
+
+
+Nach der Registrierung können Sie die erforderliche Software herunterladen. Der Genehmigungsprozess kann bis zu 24 Stunden in Anspruch nehmen.
+
+|===
+

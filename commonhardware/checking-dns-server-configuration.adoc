@@ -1,0 +1,65 @@
+---
+permalink: commonhardware/checking-dns-server-configuration.html 
+sidebar: sidebar 
+keywords: DNS, server, servers, check, checking, change, changing, modify, modifying, modification 
+summary: Sie können die DNS-Server, die derzeit von diesem Appliance-Knoten verwendet werden, überprüfen und vorübergehend ändern. 
+---
+= Überprüfen Sie die DNS-Server-Konfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die DNS-Server, die derzeit von diesem Appliance-Knoten verwendet werden, überprüfen und vorübergehend ändern.
+
+.Bevor Sie beginnen
+Das Gerät war link:../commonhardware/placing-appliance-into-maintenance-mode.html["In den Wartungsmodus versetzt"].
+
+.Über diese Aufgabe
+Möglicherweise müssen Sie die DNS-Servereinstellungen ändern, wenn eine verschlüsselte Appliance keine Verbindung zum Schlüsselverwaltungsserver (KMS) oder KMS-Cluster herstellen kann, da der Hostname für das KMS als Domänenname anstelle einer IP-Adresse angegeben wurde. Alle Änderungen, die Sie an den DNS-Einstellungen für die Appliance vornehmen, sind temporär und gehen verloren, wenn Sie den Wartungsmodus verlassen. Um diese Änderungen dauerhaft vorzunehmen, geben Sie die DNS-Server im Grid Manager an (*MAINTENANCE* > *Network* > *DNS-Server*).
+
+* Temporäre Änderungen an der DNS-Konfiguration sind nur für Node-verschlüsselte Appliances erforderlich, bei denen der KMS-Server mithilfe eines vollständig qualifizierten Domänennamens anstelle einer IP-Adresse für den Hostnamen definiert wird.
+* Wenn eine Node-verschlüsselte Appliance über einen Domänennamen eine Verbindung zu einem KMS herstellt, muss sie eine Verbindung zu einem der für das Grid definierten DNS-Server herstellen. Einer dieser DNS-Server übersetzt dann den Domain-Namen in eine IP-Adresse.
+* Wenn der Knoten keinen DNS-Server für das Grid erreichen kann oder wenn Sie die DNS-Einstellungen für das Grid geändert haben, wenn ein Node-verschlüsselter Appliance-Knoten offline war, kann der Node keine Verbindung zum KMS herstellen. Verschlüsselte Daten auf der Appliance können erst entschlüsselt werden, nachdem das DNS-Problem behoben wurde.
+
+
+Um ein DNS-Problem zu beheben, das die KMS-Verbindung verhindert, geben Sie die IP-Adresse eines oder mehrerer DNS-Server im Installationsprogramm der StorageGRID Appliance an. Diese temporären DNS-Einstellungen ermöglichen es der Appliance, eine Verbindung zum KMS herzustellen und Daten auf dem Knoten zu entschlüsseln.
+
+Wenn sich beispielsweise der DNS-Server für das Grid ändert, während ein verschlüsselter Knoten offline war, kann der Node das KMS nicht erreichen, wenn es wieder online ist, da er weiterhin die vorherigen DNS-Werte verwendet. Durch Eingabe der neuen IP-Adresse des DNS-Servers im StorageGRID-Appliance-Installationsprogramm kann eine temporäre KMS-Verbindung die Knotendaten entschlüsseln.
+
+.Schritte
+. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Netzwerke konfigurieren* > *DNS-Konfiguration* aus.
+. Vergewissern Sie sich, dass die angegebenen DNS-Server richtig sind.
++
+image::../media/dns_configuration.png[DNS-Konfiguration]
+
+. Ändern Sie bei Bedarf die DNS-Server.
++
+
+NOTE: Änderungen an den DNS-Einstellungen erfolgen temporär und gehen verloren, wenn Sie den Wartungsmodus beenden.
+
+. Wenn Sie mit den temporären DNS-Einstellungen zufrieden sind, wählen Sie *Speichern*.
++
+Der Knoten verwendet die auf dieser Seite angegebenen DNS-Servereinstellungen, um eine Verbindung mit dem KMS herzustellen, sodass die Daten auf dem Knoten entschlüsselt werden können.
+
+. Nachdem die Node-Daten entschlüsselt wurden, booten Sie den Node neu. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus, um den Controller neu zu starten, wobei der Knoten wieder in das Raster integriert wird. Wählen Sie diese Option, wenn Sie im Wartungsmodus ausgeführt werden und den Node in den normalen Betrieb zurückkehren möchten.
+** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. (Diese Option ist nur verfügbar, wenn sich der Controller im Wartungsmodus befindet.) Wählen Sie diese Option aus, wenn weitere Wartungsmaßnahmen erforderlich sind, die Sie auf dem Node durchführen müssen, bevor Sie das Raster neu beitreten.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+
+NOTE: Wenn der Node neu gebootet und neu in das Grid wechselt, werden die im Grid Manager aufgeführten systemweiten DNS-Server verwendet. Nach dem erneuten Beitritt zum Grid verwendet die Appliance nicht mehr die im StorageGRID Appliance Installer angegebenen temporären DNS-Server, während sich die Appliance im Wartungsmodus befand.
+
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite *NODES* sollte ein normaler Status (grünes Häkchen-Symbol) angezeigt werden image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+
++
+image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+
+
+

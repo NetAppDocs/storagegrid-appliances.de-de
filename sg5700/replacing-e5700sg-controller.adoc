@@ -1,0 +1,117 @@
+---
+permalink: sg5700/replacing-e5700sg-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, Replacing, replace, E5700sg, controller, remove, removing, removal, install, installing, installation 
+summary: Möglicherweise müssen Sie den E5700SG-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist. 
+---
+= E5700SG Compute-Controller austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie den E5700SG-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
+
+.Bevor Sie beginnen
+* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
+* Sie haben die Anweisungen zur E-Series zum Austausch eines ausgefallenen E5700 Controllers heruntergeladen.
++
+
+NOTE: Wenn Sie weitere Details für einen bestimmten Schritt benötigen, sollten Sie die E-Series Anweisungen als Referenz verwenden. Verlassen Sie sich beim Austausch eines Controllers in der StorageGRID Appliance nicht auf die Anweisungen zur E-Series, da die Vorgehensweisen nicht identisch sind. In der Anleitung zur E-Series für den E5700 Controller wird beispielsweise beschrieben, wie Sie den Akku und die Host-Schnittstellenkarte (HIC) von einem ausgefallenen Controller entfernen und in einem Ersatz-Controller installieren. Diese Schritte gelten nicht für den E5700SG Controller.
+
+* Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
+
+
+.Über diese Aufgabe
+Auf den Appliance-Speicherknoten kann nicht zugegriffen werden, wenn Sie den Controller austauschen. Wenn der E5700SG-Controller ausreichend funktioniert, können Sie zu Beginn dieses Verfahrens ein kontrolliertes Herunterfahren durchführen.
+
+
+NOTE: Wenn Sie den Controller vor dem Installieren der StorageGRID-Software ersetzen, können Sie nach Abschluss dieses Verfahrens möglicherweise nicht sofort auf den StorageGRID Appliance Installer zugreifen. Sie können zwar von anderen Hosts im selben Subnetz wie die Appliance auf das Installationsprogramm der StorageGRID-Appliance zugreifen, können jedoch nicht von Hosts in anderen Subnetzen darauf zugreifen. Diese Bedingung sollte sich innerhalb von 15 Minuten lösen (wenn Einträge im ARP-Cache für die ursprüngliche Controller-Zeit erforderlich sind), oder Sie können den Zustand sofort löschen, indem Sie alle alten ARP-Cacheeinträge manuell vom lokalen Router oder Gateway löschen.
+
+.Schritte
+. Fahren Sie den E5700SG Controller herunter.
++
+.. Melden Sie sich beim Grid-Node an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Schalten Sie den E5700SG-Controller: + aus
+`*shutdown -h now*`
+.. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
++
+Die grüne LED „Cache aktiv“ auf der Rückseite des E2800 Controllers leuchtet, wenn Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
+
+
+
+. Schalten Sie den Strom aus.
++
+.. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.
+.. Vergewissern Sie sich, dass alle Vorgänge abgeschlossen sind.
+.. Schalten Sie beide Netzschalter am Gerät aus.
+.. Warten Sie, bis alle LEDs ausgeschaltet sind.
+
+
+. Wenn die mit dem Controller verbundenen StorageGRID-Netzwerke DHCP-Server verwenden:
++
+.. Beachten Sie die MAC-Adressen für die Ports am Ersatz-Controller (auf Etiketten am Controller).
+.. Bitten Sie den Netzwerkadministrator, die IP-Adresseinstellungen für den ursprünglichen Controller zu aktualisieren, um die MAC-Adressen für den Ersatz-Controller zu reflektieren.
++
+
+CAUTION: Sie müssen sicherstellen, dass die IP-Adressen für den ursprünglichen Controller aktualisiert wurden, bevor Sie den Ersatz-Controller mit Strom versorgen. Andernfalls erhält der Controller neue DHCP-IP-Adressen, wenn er gebootet wird und kann möglicherweise nicht die Verbindung mit StorageGRID wiederherstellen. Dieser Schritt gilt für alle StorageGRID-Netzwerke, die mit dem Controller verbunden sind.
+
+
+
+. Entfernen Sie den Controller aus dem Gerät:
++
+.. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+.. Beschriften Sie die Kabel, und trennen Sie dann die Kabel und SFPs.
++
+
+NOTE: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
+.. Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff so lange drücken, bis sie sich löst, und öffnen Sie dann den Nockengriff nach rechts.
+.. Schieben Sie den Regler mit zwei Händen und dem Nockengriff aus dem Gerät.
++
+
+CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht der Steuerung zu unterstützen.
+
+
+
+. Setzen Sie den Ersatzcontroller in das Gerät ein.
++
+.. Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.
+.. Schieben Sie den Steuerknebel in die geöffnete Stellung, und schieben Sie ihn bis zum Gerät.
+.. Bewegen Sie den Nockengriff nach links, um die Steuerung zu verriegeln.
+.. Ersetzen Sie die Kabel und SFPs.
+
+
+. Schalten Sie das Gerät ein, und überwachen Sie die Controller-LEDs und die Sieben-Segment-Anzeigen.
++
+Nachdem die Controller erfolgreich gestartet wurden, sollten in den sieben Segment-Displays folgende Werte angezeigt werden:
+
++
+** Controller der E2800 Serie:
++
+Der endgültige Zustand ist `99`.
+
+** E5700SG Controller:
++
+Der endgültige Zustand ist `HA`.
+
+
+
+. Vergewissern Sie sich, dass der Appliance Storage Node im Grid Manager angezeigt wird und keine Alarme angezeigt werden.
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+
+.Verwandte Informationen
+http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]

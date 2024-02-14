@@ -1,0 +1,38 @@
+---
+permalink: installconfig/optional-remapping-network-ports-for-appliance.html 
+sidebar: sidebar 
+keywords: remap appliance ports, network, internal to external port mapping 
+summary: Optional können Sie die internen Ports auf einem Appliance-Node verschiedenen externen Ports neu zuordnen. Aufgrund eines Firewall-Problems müssen Sie möglicherweise Ports neu zuordnen. 
+---
+= Optional: Netzwerkports für Appliance neu zuordnen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Optional können Sie die internen Ports auf einem Appliance-Node verschiedenen externen Ports neu zuordnen. Aufgrund eines Firewall-Problems müssen Sie möglicherweise Ports neu zuordnen.
+
+.Bevor Sie beginnen
+* Sie haben zuvor auf das Installationsprogramm für StorageGRID-Geräte zugegriffen.
+
+
+.Über diese Aufgabe
+Für Load Balancer-Endpunkte können keine neu zugeordneten Ports verwendet werden. Wenn Sie einen neu zugeordneten Port entfernen müssen, führen Sie die Schritte unter aus https://docs.netapp.com/us-en/storagegrid-118/maintain/removing-port-remaps.html["Entfernen Sie die Port-Remaps"^].
+
+.Schritte
+. Wählen Sie im Installationsprogramm des StorageGRID-Geräts die Option *Netzwerk konfigurieren* > *Ports neu zusammenfassen*.
++
+Die Seite Remap Port wird angezeigt.
+
+. Wählen Sie aus dem Dropdown-Feld *Netzwerk* das Netzwerk für den Port aus, den Sie neu zuordnen möchten: Grid, Administrator oder Client.
+. Wählen Sie aus dem Dropdown-Feld *Protokoll* das IP-Protokoll TCP oder UDP aus.
+. Wählen Sie aus dem Dropdown-Feld *Remap Direction* aus, welche Verkehrsrichtung Sie für diesen Port neu zuordnen möchten: Inbound, Outbound oder Bi-direktional.
+. Geben Sie für *Original Port* die Nummer des Ports ein, den Sie neu zuordnen möchten.
+. Geben Sie für den * Port zugeordnet* die Nummer des Ports ein, den Sie stattdessen verwenden möchten.
+. Wählen Sie *Regel Hinzufügen*.
++
+Die neue Port-Zuordnung wird der Tabelle hinzugefügt, und die erneute Zuordnung wird sofort wirksam.
+
+. Um eine Port-Zuordnung zu entfernen, aktivieren Sie das Optionsfeld für die Regel, die Sie entfernen möchten, und wählen Sie *Ausgewählte Regel entfernen* aus.
+

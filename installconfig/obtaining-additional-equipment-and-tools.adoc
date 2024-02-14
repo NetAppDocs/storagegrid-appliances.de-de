@@ -1,0 +1,167 @@
+---
+permalink: installconfig/obtaining-additional-equipment-and-tools.html 
+sidebar: sidebar 
+keywords: equipment to install appliance, tools for installation 
+summary: Vergewissern Sie sich vor der Installation eines StorageGRID-Geräts, dass Sie über alle zusätzlichen Geräte und Werkzeuge verfügen, die Sie benötigen. 
+---
+= Beschaffen Sie sich zusätzliche Geräte und Werkzeuge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vergewissern Sie sich vor der Installation eines StorageGRID-Geräts, dass Sie über alle zusätzlichen Geräte und Werkzeuge verfügen, die Sie benötigen.
+
+
+
+== Alle Geräte
+
+Für die Installation und Konfiguration aller Appliances benötigen Sie die folgenden Geräte:
+
+Schraubendreher::
++
+--
+* Phillips Nr. 2 Schraubendreher
+* Mittlerer Schlitzschraubendreher
+
+
+--
+ESD-Handgelenkschlaufe::
++
+--
+* https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^]
+* SSH-Client, z. B. PuTTY
+* 1-GbE-Port (RJ-45
+
+
+--
+
+
+
+NOTE: Einige Ports unterstützen möglicherweise keine 10/100 Ethernet-Geschwindigkeiten.
+
+Optionale Werkzeuge::
++
+--
+* Kraftbohrer mit Kreuzschlitz
+* Taschenlampe
+
+
+--
+
+
+
+
+== Gerätespezifische Geräte und Werkzeuge
+
+[role="tabbed-block"]
+====
+.SG100 und SG1000
+--
+Für die Installation und Konfiguration der SG100- und SG1000-Hardware benötigen Sie die folgenden zusätzlichen Geräte.
+
+Optische Kabel und Transceiver::
++
+--
+* Kabel, 1 bis 4 von:
++
+** Twinax/Kupfer
+** Glasfaser/Optisch
+
+
+* Transceiver/Adapter, jeweils 1 bis 4 je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt):
++
+** SG100:
++
+*** 10-GbE SFP+
+*** 25-GbE-SFP28
+
+
+** SG1000:
++
+*** 10-GbE QSFP-to-SFP-Adapter (QSA) und SFP+
+*** 25-GbE QSFP-zu-SFP-Adapter (QSA) und SFP28
+*** 40-GbE QSFP+
+*** 100-GbE-QFSP28
+
+
+
+
+
+
+--
+Ethernet-Kabel:: RJ-45 (Kat. 5/Kat. 5e/Kat. 6/Kat. 6a)
+
+
+--
+.SG5700
+--
+Für die Installation und Konfiguration der SG5700-Hardware benötigen Sie die folgenden zusätzlichen Geräte:
+
+Optische Kabel und SFP-Transceiver::
++
+--
+* Optische Kabel für die 10/25-GbE-Ports, die Sie verwenden möchten
+* Optional: SFP28 Transceiver, wenn Sie 25-GbE-Verbindungsgeschwindigkeit verwenden möchten
+
+
+--
+Ethernet-Kabel:: Mechanisierter Lift für SG5760
+
+
+--
+.SG6000
+--
+Für die Installation und Konfiguration der SG6000-Hardware benötigen Sie die folgenden zusätzlichen Geräte:
+
+Optische Kabel und SFP-Transceiver::
++
+--
+* Kabel, 1 bis 4 von:
++
+** Twinax/Kupfer
+** Glasfaser/Optisch
+
+
+* Transceiver/Adapter, jeweils 1 bis 4 je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt):
++
+** 10-GbE SFP+
+** 25-GbE-SFP28
+
+
+
+
+--
+Ethernet-Kabel:: RJ-45 (Kat. 5/Kat. 5e/Kat. 6)
+Optionale Werkzeuge:: Mechanisierter Lift für 60-Laufwerk-Shelfs
+
+
+--
+.SG6100
+--
+Für die Installation und Konfiguration der SGF6112-Hardware benötigen Sie die folgenden zusätzlichen Geräte.
+
+Optische Kabel und Transceiver::
++
+--
+* Kabel, 1 bis 4 von:
++
+** Twinax/Kupfer
+** Glasfaser/Optisch
+
+
+* Transceiver/Adapter, jeweils 1 bis 4 je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt):
++
+** 10-GbE SFP+
+** 25-GbE-SFP28
+
+
+
+
+--
+Ethernet-Kabel:: RJ-45 (Kat. 5/Kat. 5e/Kat. 6/Kat. 6a)
+
+
+--
+====

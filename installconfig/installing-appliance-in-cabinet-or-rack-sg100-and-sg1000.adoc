@@ -1,0 +1,39 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installing, installation, cabinet, rack, rail, rails 
+summary: Sie installieren eine Reihe von Schienen für das Gerät in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen. 
+---
+= In Schrank oder Rack installieren (SG100 und SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie installieren eine Reihe von Schienen für das Gerät in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen.
+
+.Bevor Sie beginnen
+* Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
+* Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
+
+
+.Schritte
+. Befolgen Sie die Anweisungen für den Schienensatz, um die Schienen in Ihrem Schrank oder Rack zu installieren.
+. Verlängern Sie auf den beiden Schienen, die im Schrank oder Rack installiert sind, die beweglichen Teile der Schienen, bis Sie ein Klicken hören.
++
+image::../media/rails_extended_out.gif[SG100- und SG 1000-Schienen]
+
+. Setzen Sie das Gerät in die Schienen ein.
+. Schieben Sie das Gerät in das Gehäuse oder Rack.
++
+Wenn Sie das Gerät nicht weiter bewegen können, ziehen Sie an den blauen Verriegelungen auf beiden Seiten des Gehäuses, um das Gerät vollständig einzuschieben.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG 100 und SG1000 Schieben auf Schienen]
+
++
+
+NOTE: Befestigen Sie die Frontverkleidung erst, nachdem Sie das Gerät eingeschaltet haben.
+
+

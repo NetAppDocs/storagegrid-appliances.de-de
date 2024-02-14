@@ -1,0 +1,53 @@
+---
+permalink: installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html 
+sidebar: sidebar 
+keywords: verifying, verify, upgrading, upgrade, update, updating, Appliance Installer, version, release 
+summary: Die Installationsversion der StorageGRID Appliance auf der Appliance muss mit der auf dem StorageGRID-System installierten Softwareversion übereinstimmen, um sicherzustellen, dass alle StorageGRID-Funktionen unterstützt werden. 
+---
+= Überprüfen und Aktualisieren der Installationsversion der StorageGRID Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Installationsversion der StorageGRID Appliance auf der Appliance muss mit der auf dem StorageGRID-System installierten Softwareversion übereinstimmen, um sicherzustellen, dass alle StorageGRID-Funktionen unterstützt werden.
+
+.Bevor Sie beginnen
+Sie haben auf das Installationsprogramm für StorageGRID-Geräte zugegriffen.
+
+.Über diese Aufgabe
+StorageGRID-Appliances werden ab Werk mit dem StorageGRID-Appliance-Installationsprogramm vorinstalliert. Wenn Sie einem kürzlich aktualisierten StorageGRID-System eine Appliance hinzufügen, müssen Sie möglicherweise das Installationsprogramm für StorageGRID-Appliances manuell aktualisieren, bevor Sie die Appliance als neuen Node installieren.
+
+Das Installationsprogramm von StorageGRID Appliance wird automatisch aktualisiert, wenn Sie auf eine neue StorageGRID-Version aktualisieren. Sie müssen den StorageGRID-Appliance-Installer nicht auf installierten Appliance-Knoten aktualisieren. Diese Vorgehensweise ist nur erforderlich, wenn Sie eine Appliance installieren, die eine frühere Version des Installationsprogramms für StorageGRID-Geräte enthält.
+
+.Schritte
+. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *Firmware aktualisieren* aus.
+. Vergleichen Sie die aktuelle Firmware-Version mit der auf Ihrem StorageGRID System installierten Softwareversion. (Wählen Sie oben im Grid Manager das Hilfesymbol aus, und wählen Sie *über*.)
++
+Die zweite Ziffer in den beiden Versionen sollte übereinstimmen. Wenn auf Ihrem StorageGRID-System beispielsweise die Version 11.*6*._x_._y_ ausgeführt wird, sollte die StorageGRID Appliance Installer-Version 3.*6*._z_ sein.
+
+. Wenn die Appliance über eine heruntergeebene Version des Installationsprogramms für StorageGRID-Geräte verfügt, fahren Sie mit fort https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^].
++
+Melden Sie sich mit Ihrem Benutzernamen und Passwort für Ihr NetApp Konto an.
+
+. Laden Sie die entsprechende Version der *Support-Datei für StorageGRID-Geräte* und der entsprechenden Prüfsummendatei herunter.
++
+Die Support-Datei für StorageGRID Appliances ist eine `.zip` Archiv, das die aktuellen und früheren Firmware-Versionen für alle StorageGRID Appliance-Modelle enthält.
+
++
+Nachdem Sie die Support-Datei für StorageGRID Appliances heruntergeladen haben, extrahieren Sie die `.zip` Archivieren Sie die README-Datei, und lesen Sie sie, um wichtige Informationen zur Installation des StorageGRID-Appliance-Installationsprogramms zu erhalten.
+
+. Befolgen Sie die Anweisungen auf der Seite Firmware aktualisieren Ihres StorageGRID-Appliance-Installationsprogramms, um die folgenden Schritte auszuführen:
++
+.. Laden Sie die entsprechende Support-Datei (Firmware-Image) für Ihren Controller-Typ hoch. Einige Firmware-Versionen erfordern auch das Hochladen einer Prüfsummendatei. Wenn Sie zur Eingabe einer Prüfsummendatei aufgefordert werden, finden Sie diese auch in der Support-Datei für StorageGRID-Appliances.
+.. Aktualisieren Sie die inaktive Partition.
+.. Starten Sie neu und tauschen Sie die Partitionen aus.
+.. Laden Sie die entsprechende Support-Datei (Firmware-Image) erneut für Ihren Controller-Typ hoch. Einige Firmware-Versionen erfordern auch das Hochladen einer Prüfsummendatei. Wenn Sie zur Eingabe einer Prüfsummendatei aufgefordert werden, finden Sie diese auch in der Support-Datei für StorageGRID-Appliances.
+.. Aktualisieren Sie die zweite (inaktive) Partition.
+
+
+
+
+.Verwandte Informationen
+link:../installconfig/accessing-storagegrid-appliance-installer.html["Zugriff auf das Installationsprogramm der StorageGRID Appliance"]

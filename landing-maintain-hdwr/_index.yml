@@ -1,0 +1,33 @@
+---
+indexpage:
+  tiles:
+  - title: Häufig ausgeführte Prozeduren
+    links:
+    - title: Gerät in den Wartungsmodus versetzen
+      url: "../commonhardware/placing-appliance-into-maintenance-mode.html"
+    - title: MTU-Einstellung ändern
+      url: "../commonhardware/changing-mtu-setting.html"
+    - title: Überprüfen Sie die DNS-Konfiguration
+      url: "../commonhardware/checking-dns-server-configuration.html"
+    - title: MAC-Adresse aktualisieren
+      url: "../commonhardware/locate-mac-address.html"
+    - title: Monitoring der Node-Verschlüsselung
+      url: "../commonhardware/monitoring-node-encryption-in-maintenance-mode.html"
+  - title: Klonen von Nodes
+    links:
+    - title: Anforderungen für das Klonen von Nodes
+      url: "../commonhardware/considerations-and-requirements-for-appliance-node-cloning.html"
+    - title: Klon-Appliance-Node
+      url: "../commonhardware/appliance-node-cloning-procedure.html"
+  - title: Appliance-spezifische Wartung
+    links:
+    - title: SG1000 und SG100
+      url: "../landing-maintain-sg1000-100/index.html"
+    - title: SG5600
+      url: "../sg5600/index.html"
+    - title: SG5700
+      url: "../landing-maintain-sg5700/index.html"
+    - title: SG6000
+      url: "../landing-maintain-sg6000/index.html"
+    - title: SG6100
+      url: "../landing-maintain-sgf6112/index.html"

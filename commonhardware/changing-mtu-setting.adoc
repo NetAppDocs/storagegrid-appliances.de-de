@@ -1,0 +1,65 @@
+---
+permalink: commonhardware/changing-mtu-setting.html 
+sidebar: sidebar 
+keywords: mtu, change, changing 
+summary: Sie können die MTU-Einstellung ändern, die Sie beim Konfigurieren von IP-Adressen für den Appliance-Node zugewiesen haben. 
+---
+= MTU-Einstellung ändern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die MTU-Einstellung ändern, die Sie beim Konfigurieren von IP-Adressen für den Appliance-Node zugewiesen haben.
+
+.Über diese Aufgabe
+
+CAUTION: Der MTU-Wert des Netzwerks muss mit dem Wert übereinstimmen, der auf dem Switch-Port konfiguriert ist, mit dem der Node verbunden ist. Andernfalls können Probleme mit der Netzwerkleistung oder Paketverluste auftreten.
+
+
+NOTE: Für die beste Netzwerkleistung sollten alle Knoten auf ihren Grid Network Interfaces mit ähnlichen MTU-Werten konfiguriert werden. Die Warnung *Grid Network MTU mismatch* wird ausgelöst, wenn sich die MTU-Einstellungen für das Grid Network auf einzelnen Knoten erheblich unterscheiden. Die MTU-Werte müssen nicht für alle Netzwerktypen gleich sein.
+
+Um die MTU-Einstellung zu ändern, ohne den Appliance-Node neu zu booten, <<Ändern Sie die MTU-Einstellung mit dem Tool IP ändern,Verwenden Sie das Werkzeug IP ändern>>.
+
+Wenn das Client- oder Admin-Netzwerk während der ersten Installation nicht im Installationsprogramm der StorageGRID-Appliance konfiguriert wurde, <<Ändern Sie die MTU-Einstellung im Wartungsmodus,Ändern Sie die MTU-Einstellung im Wartungsmodus>>.
+
+
+
+== Ändern Sie die MTU-Einstellung mit dem Tool IP ändern
+
+.Bevor Sie beginnen
+Sie haben die `Passwords.txt` Datei zum Verwenden des Tools zum Ändern der IP-Adresse.
+
+.Schritte
+Greifen Sie auf das Change IP-Tool zu und aktualisieren Sie die MTU-Einstellungen, wie in beschrieben https://docs.netapp.com/us-en/storagegrid-118/maintain/changing-nodes-network-configuration.html["Ändern der Node-Netzwerkkonfiguration"^].
+
+
+
+== Ändern Sie die MTU-Einstellung im Wartungsmodus
+
+Ändern Sie die MTU-Einstellung unter Verwendung des Wartungsmodus, wenn Sie mit dem Tool IP ändern nicht auf diese Einstellungen zugreifen können.
+
+.Bevor Sie beginnen
+Das Gerät war link:../commonhardware/placing-appliance-into-maintenance-mode.html["In den Wartungsmodus versetzt"].
+
+.Schritte
+. Wählen Sie im Installationsprogramm des StorageGRID-Geräts die Option *Netzwerk konfigurieren* > *IP-Konfiguration* aus.
+. Nehmen Sie die gewünschten Änderungen an den MTU-Einstellungen für Grid Network, Admin Network und Client Network vor.
+. Wenn Sie mit den Einstellungen zufrieden sind, wählen Sie *Speichern*.
+. Wenn diese Prozedur erfolgreich abgeschlossen ist und Sie weitere durchzuführenden Verfahren haben, während sich der Node im Wartungsmodus befindet, führen Sie sie jetzt aus. Wenn Sie fertig sind oder Fehler auftreten und von vorne beginnen möchten, wählen Sie *Erweitert* > *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus
+** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt.  Wählen Sie diese Option aus, wenn während des Verfahrens Fehler auftreten und neu starten möchten. Nachdem der Node das Neubooten in den Wartungsmodus abgeschlossen hat, starten Sie den entsprechenden Schritt während des ausgefallenen Verfahrens neu.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite *NODES* sollte ein normaler Status (grünes Häkchen-Symbol) angezeigt werden image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+
++
+image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+
+
+

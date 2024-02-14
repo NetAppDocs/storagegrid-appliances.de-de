@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: storagegrid-documentation.html 
+keywords: storagegrid, software, grid 
+summary: Erfahren Sie, wie Sie ein StorageGRID System konfigurieren und verwenden. 
+---
+= StorageGRID Softwaredokumentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gehen Sie zu https://docs.netapp.com/us-en/storagegrid-118/index.html["StorageGRID 11.8-Dokumentation"^] Anleitung zur Konfiguration und Verwendung eines StorageGRID 11.8-Systems.
+
+Die StorageGRID-Dokumentseite enthält Informationen wie:
+
+* Netzwerkrichtlinien.
+* Installationsanweisungen für Linux- und VMware-Nodes
+* StorageGRID-Upgrade- und Hotfix-Anweisungen.
+* Administrationsanweisungen zur Konfiguration des Systems, einschließlich der Verwendung von Information Lifecycle Management (ILM) zum Schutz von Objektdaten.
+* Anweisungen zur Verwendung von StorageGRID-Mandantenkonten und der S3-REST-API.
+* Anleitungen zur Überwachung und Fehlerbehebung, einschließlich Informationen zu Warnmeldungen, Audit-Meldungen und Systemprotokollen.
+* Anweisungen zur Wartung eines StorageGRID Systems, das das Hinzufügen neuer StorageGRID-Volumes, Nodes oder Standorte, die Wiederherstellung ausgefallener Nodes und Volumes, die Deaktivierung von Nodes oder Standorten und weitere Wartungsarbeiten am Grid umfasst
+
+
+
+
+== Andere Versionen
+
+Dokumentation für andere Versionen der NetApp StorageGRID-Software finden Sie hier:
+
+* https://docs.netapp.com/us-en/storagegrid-117/index.html["StorageGRID 11.7-Dokumentation"^]
+* https://docs.netapp.com/us-en/storagegrid-116/index.html["StorageGRID 11.6-Dokumentation"^]
+* https://docs.netapp.com/us-en/storagegrid-115/index.html["StorageGRID 11.5-Dokumentation"^]
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61023["StorageGRID 11.4-Dokumentation"^]
+

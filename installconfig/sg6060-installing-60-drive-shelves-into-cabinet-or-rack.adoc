@@ -1,0 +1,63 @@
+---
+permalink: installconfig/sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
+summary: Sie installieren einen Satz Schienen für das E2860-Controller-Shelf in Ihrem Schrank oder Rack und schieben das Controller-Shelf dann auf die Schienen. Bei Installation der Erweiterungs-Shelfs für 60 Laufwerke gilt dasselbe Verfahren. 
+---
+= Installation von Shelfs mit 60 Laufwerken (SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie installieren einen Satz Schienen für das E2860-Controller-Shelf in Ihrem Schrank oder Rack und schieben das Controller-Shelf dann auf die Schienen. Bei Installation der Erweiterungs-Shelfs für 60 Laufwerke gilt dasselbe Verfahren.
+
+.Bevor Sie beginnen
+* Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
+* Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
+
+
+
+CAUTION: Jedes Shelf mit 60 Laufwerken wiegt ohne installierte Laufwerke etwa 60 kg (132 lb). Vier Personen oder ein mechanisierter Lift sind erforderlich, um das Regal sicher zu bewegen.
+
+
+CAUTION: Um eine Beschädigung der Hardware zu vermeiden, verschieben Sie niemals das Shelf, wenn Laufwerke installiert sind. Vor dem Verschieben des Shelfs müssen alle Laufwerke entfernt werden.
+
+
+CAUTION: Installieren Sie bei der Installation des E2860 Controller-Shelfs oder optionaler Erweiterungs-Shelfs die Hardware von unten nach oben im Rack oder Schrank, um zu vermeiden, dass das System umkippt. Installieren Sie den SG6000-CN Controller über dem E2860 Controller-Shelf und Erweiterungs-Shelfs, um sicherzustellen, dass sich die schwersten Geräte unten im Rack oder Rack befinden.
+
+
+NOTE: Stellen Sie vor der Installation sicher, dass die im Lieferumfang des Geräts enthaltenen 0,5-m-Glasfaserkabel oder -Kabel lang genug für das geplante Layout sind.
+
+.Schritte
+. Befolgen Sie die Anweisungen für den Schienensatz, um die Schienen in Ihrem Schrank oder Rack zu installieren.
++
+Bei Vierkantlochschränken zuerst die mitgelieferten Käfigmuttern einbauen, um die Vorder- und Rückseite des Regals mit Schrauben zu sichern.
+
+. Entfernen Sie den äußeren Verpackungskasten für das Gerät. Falten Sie dann die Klappen auf dem inneren Kasten nach unten.
+. Wenn Sie das Gerät mit der Hand anheben, befestigen Sie die vier Griffe an den Seiten des Gehäuses.
++
+Drücken Sie auf jeden Griff nach oben, bis er einrastet.
+
++
+image::../media/lift_handles.gif[Hebe Griffe]
+
+. Setzen Sie die Rückseite des Regals (das Ende mit den Anschlüssen) auf die Schienen.
+. Das Regal von unten halten und in den Schrank schieben. Wenn Sie die Griffe verwenden, lösen Sie mit den Daumenverriegelungen jeweils einen Griff, während Sie das Regal einschieben.
++
+Um die Griffe zu entfernen, ziehen Sie den Entriegelungshebel nach unten und ziehen Sie dann aus dem Shelf heraus.
+
+. Befestigen Sie das Regal an der Vorderseite des Schranks.
++
+Bringen Sie die Schrauben an beiden Seiten in die ersten und dritten Löcher von der Oberseite des Regals ein.
+
+. Befestigen Sie das Regal an der Rückseite des Gehäuses.
++
+Legen Sie zwei hintere Halterungen an jeder Seite des oberen hinteren Bereichs des Regals an. Bringen Sie die Schrauben in die ersten und dritten Löcher jeder Halterung ein.
+
++
+image::../media/mount_hardware.gif[Montieren Sie Die Hardware]
+
+. Wiederholen Sie diese Schritte für alle Erweiterungs-Shelfs.
+

@@ -1,0 +1,51 @@
+---
+permalink: installconfig/sg6060-installing-drives.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, drives, drive, disk, disks, install, installing, installation 
+summary: Installieren Sie nach der Installation des Shelf für 60 Laufwerke in einem Schrank oder Rack alle 60 Laufwerke in das Shelf. Der Versand für das E2860 Controller-Shelf umfasst zwei SSD-Laufwerke, die Sie im oberen Einschub des Controller Shelf installieren sollten. Jedes optionale Erweiterungs-Shelf umfasst 60 HDD-Laufwerke und keine SSD-Laufwerke. 
+---
+= Laufwerke installieren (SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Installieren Sie nach der Installation des Shelf für 60 Laufwerke in einem Schrank oder Rack alle 60 Laufwerke in das Shelf. Der Versand für das E2860 Controller-Shelf umfasst zwei SSD-Laufwerke, die Sie im oberen Einschub des Controller Shelf installieren sollten. Jedes optionale Erweiterungs-Shelf umfasst 60 HDD-Laufwerke und keine SSD-Laufwerke.
+
+.Bevor Sie beginnen
+Sie haben das E2860 Controller-Shelf oder optionale Erweiterungs-Shelfs (ein oder zwei) im Rack oder Rack installiert.
+
+
+CAUTION: Um eine Beschädigung der Hardware zu vermeiden, verschieben Sie niemals das Shelf, wenn Laufwerke installiert sind. Vor dem Verschieben des Shelfs müssen alle Laufwerke entfernt werden.
+
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Nehmen Sie die Laufwerke aus der Verpackung.
+. Lösen Sie die Hebel an der oberen Antriebsschublade, und schieben Sie die Schublade mit den Hebeln heraus.
+. Suchen Sie die beiden SSD-Laufwerke.
++
+
+NOTE: Erweiterungs-Shelfs verwenden keine SSD-Laufwerke.
+
+. Heben Sie jeden Antriebsgriff in eine vertikale Position.
+. Installieren Sie die beiden SSD-Laufwerke in den Steckplätzen 0 und 1 (die ersten beiden Steckplätze entlang der linken Seite der Schublade).
+. Positionieren Sie jedes Laufwerk vorsichtig in seinen Steckplatz, und senken Sie den angehobenen Laufwerkgriff ab, bis er einrastet.
++
+image::../media/install_drives_in_e2860.gif[Installieren Sie Laufwerke]
+
+. Setzen Sie 10 Festplattenlaufwerke in das obere Fach ein.
+. Schieben Sie die Schublade wieder nach innen, indem Sie die Mitte drücken und beide Hebel vorsichtig schließen.
++
+
+CAUTION: Drücken Sie die Schublade nicht mehr, wenn Sie sich binden. Schieben Sie die Schublade mit den Freigabehebel an der Vorderseite der Schublade nach außen. Setzen Sie dann die Schublade vorsichtig wieder in den Schlitz ein.
+
+. Wiederholen Sie diese Schritte, um Festplattenlaufwerke in die anderen vier Schubladen zu installieren.
++
+
+NOTE: Sie müssen alle 60 Laufwerke installieren, um den korrekten Betrieb zu gewährleisten.
+
+. Befestigen Sie die Frontverkleidung am Shelf.
+. Wenn Sie Erweiterungs-Shelfs haben, wiederholen Sie diese Schritte, um 12 Festplattenlaufwerke in jede Schublade jedes Erweiterungs-Shelfs zu installieren.
+. Befolgen Sie die Anweisungen zur Installation des SG6000-CN in einem Schrank oder Rack.
+

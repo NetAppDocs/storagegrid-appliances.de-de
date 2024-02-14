@@ -1,0 +1,30 @@
+---
+section: sg100-1000
+title: Instandhaltung der SG100 und SG1000 Hardware
+url: "/landing-maintain-sg1000-100/index.html"
+entries:
+- title: Überblick
+  pdf-filename: Hardware-Wartung für SG100 und SG1000
+  url: "/sg100-1000/index.html"
+- title: Verfahren zur Wartungskonfiguration
+  pdf-filename: Wartungskonfigurationsverfahren – SG100 und SG1000
+  entries:
+  - title: Die Identifizieren-LED ein- und ausschalten
+    url: "/sg100-1000/turning-controller-identify-led-on-and-off.html"
+  - title: Controller im Datacenter finden
+    url: "/sg100-1000/locating-controller-in-data-center.html"
+  - title: Fahren Sie das Gerät herunter
+    url: "/sg100-1000/shut-down-sg100-and-sg1000.html"
+  - title: Verbindungskonfiguration ändern
+    url: "/sg100-1000/changing-link-configuration-of-services-appliance.html"
+- title: Hardware-Verfahren
+  pdf-filename: Hardware-Verfahren - SG100 und SG1000
+  entries:
+  - title: Ersetzen Sie ein oder beide Netzteile
+    url: "/sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
+  - title: Ersetzen Sie den Lüfter
+    url: "/sg100-1000/replacing-fan-in-services-appliance.html"
+  - title: Laufwerk austauschen
+    url: "/sg100-1000/replacing-drive-in-services-appliance.html"
+  - title: Ersetzen Sie das Gerät
+    url: "/sg100-1000/replacing-services-appliance.html"

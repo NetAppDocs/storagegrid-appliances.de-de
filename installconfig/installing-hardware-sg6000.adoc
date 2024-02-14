@@ -1,0 +1,55 @@
+---
+permalink: installconfig/installing-hardware-sg6000.html 
+sidebar: sidebar 
+keywords: install, sg6000, sg6060, sgf6024, expansion shelf, cabinet, rack, drives 
+summary: Beim SG6060 und SGF6024 installieren Sie Schienen in Ihrem Schrank oder Rack und schieben das Controller-Shelf, alle Erweiterungseinschübe und den Compute-Controller auf die Schienen. Installieren Sie beim SG6060 die Laufwerke erst in jedem Shelf, wenn die Shelfs installiert sind. 
+---
+= In Schrank oder Rack installieren (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim SG6060 und SGF6024 installieren Sie Schienen in Ihrem Schrank oder Rack und schieben das Controller-Shelf, alle Erweiterungseinschübe und den Compute-Controller auf die Schienen. Installieren Sie beim SG6060 die Laufwerke erst in jedem Shelf, wenn die Shelfs installiert sind.
+
+[cols="1a,2a,2a"]
+|===
+| Modell | Installieren | Zur Information 
+
+
+ a| 
+SG6060
+ a| 
+Controller Shelf mit 60 Laufwerken und Erweiterungs-Shelfs mit 60 Laufwerken
+ a| 
+link:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html["Installation von Shelfs mit 60 Laufwerken"]
+
+
+
+ a| 
+SG6060
+ a| 
+60 Laufwerke in jedes Shelf
+ a| 
+link:sg6060-installing-drives.html["Installieren Sie Laufwerke"]
+
+
+
+ a| 
+SGF6024
+ a| 
+Controller Shelf mit 24 Laufwerken
+ a| 
+link:sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html["Installation von Shelfs mit 24 Laufwerken"]
+
+
+
+ a| 
+SG6060 und SGF6024
+ a| 
+SG6000-CN Computing-Controller
+ a| 
+link:sg6000-cn-installing-into-cabinet-or-rack.html["Installieren Sie den SG6000-CN-Controller"]
+
+|===

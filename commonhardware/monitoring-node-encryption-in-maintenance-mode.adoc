@@ -1,0 +1,133 @@
+---
+permalink: commonhardware/monitoring-node-encryption-in-maintenance-mode.html 
+sidebar: sidebar 
+keywords: kms, key management server, monitor, monitoring, status, encryption 
+summary: 'Wenn Sie während der Installation die Node-Verschlüsselung für die Appliance aktiviert haben, können Sie den Verschlüsselungsstatus aller Appliance-Nodes überwachen, einschließlich Details zur Node-Verschlüsselung und zum Schlüsselmanagementserver \(KMS\).' 
+---
+= Überwachung der Node-Verschlüsselung im Wartungsmodus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie während der Installation die Node-Verschlüsselung für die Appliance aktiviert haben, können Sie den Verschlüsselungsstatus aller Appliance-Nodes überwachen, einschließlich Details zur Node-Verschlüsselung und zum Key Management Server (KMS).
+
+Siehe https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Konfigurieren von Verschlüsselungsmanagement-Servern"^] Für Informationen zur Implementierung von KMS für StorageGRID-Appliances.
+
+.Bevor Sie beginnen
+* Während der Installation aktiviert Sie die Node-Verschlüsselung für die Appliance. Sie können die Node-Verschlüsselung nicht aktivieren, nachdem die Appliance installiert wurde.
+* Das ist schon link:../commonhardware/placing-appliance-into-maintenance-mode.html["Das Gerät in den Wartungsmodus versetzt"].
+
+
+.Schritte
+. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Hardware konfigurieren* > *Node-Verschlüsselung*.
++
+image::../media/fde_monitor_in_maint_mode.png[KMS klare Konfiguration]
+
++
+Die Seite Node Encryption enthält drei Abschnitte:
+
++
+** Der Verschlüsselungsstatus gibt an, ob die Node-Verschlüsselung für die Appliance aktiviert oder deaktiviert ist.
+** Details des Schlüsselmanagementservers zeigen Informationen über den KMS an, der zur Verschlüsselung der Appliance verwendet wird. Sie können die Abschnitte Server- und Clientzertifikat erweitern, um Zertifikatdetails und -Status anzuzeigen.
++
+*** Um Probleme mit den Zertifikaten selbst zu lösen, wie z. B. die Verlängerung abgelaufener Zertifikate, siehe https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Anweisungen zur Konfiguration von KMS"^].
+*** Wenn bei der Verbindung zu KMS-Hosts unerwartete Probleme auftreten, überprüfen Sie, ob der link:../commonhardware/checking-dns-server-configuration.html["DNS-Server sind korrekt"] Und das link:../installconfig/configuring-network-links.html["Appliance-Netzwerk wurde ordnungsgemäß konfiguriert"].
+*** Wenden Sie sich an den technischen Support, wenn Sie Ihre Zertifikatsprobleme nicht lösen können.
+
+
+** Der klare KMS-Schlüssel deaktiviert die Node-Verschlüsselung für die Appliance, entfernt die Zuordnung zwischen der Appliance und dem für den StorageGRID-Standort konfigurierten Schlüsselmanagementserver und löscht alle Daten von der Appliance. Unbedingt <<Die Konfiguration des Verschlüsselungsmanagement-Servers löschen,Löschen Sie den KMS-Schlüssel>> Bevor Sie die Appliance in ein anderes StorageGRID-System installieren können.
++
+
+CAUTION: Durch das Löschen der KMS-Konfiguration werden Daten von der Appliance gelöscht, sodass dauerhaft kein Zugriff darauf besteht. Diese Daten können nicht wiederhergestellt werden.
+
+
+
+. Wenn Sie den Status der Node-Verschlüsselung überprüfen, booten Sie den Node neu. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus, um den Controller neu zu starten, wobei der Knoten wieder in das Raster integriert wird. Wählen Sie diese Option, wenn Sie im Wartungsmodus ausgeführt werden und den Node in den normalen Betrieb zurückkehren möchten.
+** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. (Diese Option ist nur verfügbar, wenn sich der Controller im Wartungsmodus befindet.) Wählen Sie diese Option aus, wenn weitere Wartungsmaßnahmen erforderlich sind, die Sie auf dem Node durchführen müssen, bevor Sie das Raster neu beitreten.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite *NODES* sollte ein normaler Status (grünes Häkchen-Symbol) angezeigt werden image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+
++
+image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+
+
+
+
+
+
+== Die Konfiguration des Verschlüsselungsmanagement-Servers löschen
+
+Durch Löschen der KMS-Konfiguration (Key Management Server) wird die Node-Verschlüsselung auf der Appliance deaktiviert. Nach dem Löschen der KMS-Konfiguration werden die Daten auf der Appliance dauerhaft gelöscht und sind nicht mehr zugänglich. Diese Daten können nicht wiederhergestellt werden.
+
+.Bevor Sie beginnen
+Wenn Daten auf der Appliance aufbewahrt werden müssen, müssen Sie einen Node außer Betrieb nehmen oder den Node klonen, bevor Sie die KMS-Konfiguration löschen.
+
+
+CAUTION: Wenn KMS gelöscht wird, werden die Daten auf der Appliance dauerhaft gelöscht und sind nicht mehr zugänglich. Diese Daten können nicht wiederhergestellt werden.
+
+https://docs.netapp.com/us-en/storagegrid-118/maintain/grid-node-decommissioning.html["Bauen Sie den Node aus"^] Um beliebige Daten zu anderen Nodes in StorageGRID zu verschieben.
+
+.Über diese Aufgabe
+Beim Löschen der Appliance-KMS-Konfiguration wird die Node-Verschlüsselung deaktiviert, wodurch die Zuordnung zwischen dem Appliance-Node und der KMS-Konfiguration für den StorageGRID-Standort entfernt wird. Die Daten auf dem Gerät werden gelöscht und das Gerät wird im Installationszustand zurückgelassen. Dieser Prozess kann nicht rückgängig gemacht werden.
+
+Sie müssen die KMS-Konfiguration löschen:
+
+* Bevor Sie die Appliance in einem anderen StorageGRID-System installieren können, wird kein KMS verwendet oder ein anderer KMS verwendet.
++
+
+CAUTION: Löschen Sie die KMS-Konfiguration nicht, wenn Sie einen Appliance-Node in einem StorageGRID-System, das denselben KMS-Schlüssel verwendet, neu installieren möchten.
+
+* Bevor Sie einen Node wiederherstellen und neu installieren können, bei dem die KMS-Konfiguration verloren ging und der KMS-Schlüssel nicht wiederhergestellt werden kann.
+* Bevor Sie ein Gerät zurückgeben, das zuvor an Ihrem Standort verwendet wurde.
+* Nach der Stilllegung einer Appliance, für die die Node-Verschlüsselung aktiviert war.
+
+
+
+CAUTION: Die Appliance muss vor dem Löschen von KMS deaktiviert werden, um ihre Daten auf andere Nodes im StorageGRID System zu verschieben. Das Löschen von KMS vor der Deaktivierung der Appliance führt zu Datenverlusten und kann dazu führen, dass die Appliance funktionsunfähig bleibt.
+
+.Schritte
+. Öffnen Sie einen Browser, und geben Sie eine der IP-Adressen für den Computing-Controller der Appliance ein.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` Die IP-Adresse des Compute-Controllers (nicht des Storage-Controllers) in einem der drei StorageGRID-Netzwerke.
+
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
+
+. Wählen Sie *Hardware Konfigurieren* > *Node Encryption*.
++
+
+CAUTION: Wenn die KMS-Konfiguration gelöscht wird, werden die Daten auf der Appliance dauerhaft gelöscht. Diese Daten können nicht wiederhergestellt werden.
+
+. Wählen Sie unten im Fenster *KMS-Schlüssel löschen und Daten löschen*.
+. Wenn Sie sicher sind, dass Sie die KMS-Konfiguration löschen möchten, geben Sie ein `*clear*` Wählen Sie im Warndialogfeld *KMS-Schlüssel löschen und Daten löschen*.
++
+Der KMS-Schlüssel und alle Daten werden vom Node gelöscht und die Appliance wird neu gebootet. Dies kann bis zu 20 Minuten dauern.
+
+. Öffnen Sie einen Browser, und geben Sie eine der IP-Adressen für den Computing-Controller der Appliance ein. +
+`*https://_Controller_IP_:8443*`
++
+`_Controller_IP_` Die IP-Adresse des Compute-Controllers (nicht des Storage-Controllers) in einem der drei StorageGRID-Netzwerke.
+
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
+
+. Wählen Sie *Hardware Konfigurieren* > *Node Encryption*.
+. Vergewissern Sie sich, dass die Knotenverschlüsselung deaktiviert ist und dass die Schlüssel- und Zertifikatinformationen in *Key Management Server Details* und die Kontrolle *KMS-Schlüssel löschen und Daten löschen* aus dem Fenster entfernt werden.
++
+Die Node-Verschlüsselung kann auf der Appliance erst wieder aktiviert werden, wenn sie in einem Grid neu installiert wird.
+
+
+
+.Nachdem Sie fertig sind
+Nachdem die Appliance neu gebootet wurde und Sie überprüft haben, dass der KMS gelöscht wurde und sich die Appliance im Installationszustand befindet, können Sie die Appliance physisch aus dem StorageGRID System entfernen. Siehe https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["Anweisungen zur Vorbereitung des Geräts für die Neuinstallation"^].

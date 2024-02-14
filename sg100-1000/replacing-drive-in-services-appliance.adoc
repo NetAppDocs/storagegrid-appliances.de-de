@@ -1,0 +1,71 @@
+---
+permalink: sg100-1000/replacing-drive-in-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Die SSDs in der Services-Appliance enthalten das Betriebssystem StorageGRID. Wenn die Appliance als Admin-Node konfiguriert ist, enthalten die SSDs außerdem Prüfprotokolle, Kennzahlen und Datenbanktabellen. Die Laufwerke werden aus Redundanzgründen mithilfe von RAID1 gespiegelt. Wenn eines der Laufwerke ausfällt, müssen Sie es so schnell wie möglich ersetzen, um Redundanz sicherzustellen. 
+---
+= Das Laufwerk in SG100 oder SG1000 austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die SSDs in der Services-Appliance enthalten das Betriebssystem StorageGRID. Wenn die Appliance als Admin-Node konfiguriert ist, enthalten die SSDs außerdem Prüfprotokolle, Kennzahlen und Datenbanktabellen. Die Laufwerke werden aus Redundanzgründen mithilfe von RAID1 gespiegelt. Wenn eines der Laufwerke ausfällt, müssen Sie es so schnell wie möglich ersetzen, um Redundanz sicherzustellen.
+
+.Bevor Sie beginnen
+* Das ist schon link:locating-controller-in-data-center.html["Das Gerät befindet sich physisch"].
+* Sie haben überprüft, welches Laufwerk ausgefallen ist, indem Sie die linke LED gelb blinken.
++
+Die beiden SSDs werden wie in der folgenden Abbildung gezeigt in die Steckplätze eingesetzt:
+
++
+image::../media/drive_locations_sg1000_front_with_ssds.png[Laufwerkpositionen]
+
++
+
+CAUTION: Wenn Sie das Arbeitslaufwerk entfernen, wird der Appliance-Node heruntergefahren. Informationen zur Anzeige von Statusanzeigen zur Überprüfung des Fehlers finden Sie unter.
+
+* Sie haben das Ersatzlaufwerk erhalten.
+* Sie haben einen angemessenen ESD-Schutz erhalten.
+
+
+.Schritte
+. Stellen Sie sicher, dass die linke LED des zu ersetzenden Laufwerks gelb blinkt. Wenn im Grid Manager oder BMC UIs ein Laufwerkproblem gemeldet wurde, beziehen sich HDD02 oder HDD2 auf das Laufwerk im oberen Steckplatz und HDD03 oder HDD3 auf das Laufwerk im unteren Steckplatz.
++
+Sie können den Status der SSDs auch mit Grid Manager überwachen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Appliance Node*` > *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld Speicher-RAID-Modus eine Meldung darüber, welches Laufwerk ausgefallen ist.
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.
++
+Alle Verpackungsmaterialien speichern.
+
+. Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
++
+image::../media/h600s_driveremoval.gif[Ausbau Des Laufwerks]
+
++
+Der Griff an den Antriebsfedern öffnet sich teilweise, und das Laufwerk löst sich aus dem Schlitz.
+
+. Öffnen Sie den Griff, schieben Sie das Laufwerk heraus und legen Sie es auf eine statisch freie, Ebene Oberfläche.
+. Drücken Sie die Entriegelungstaste am Ersatzlaufwerk, bevor Sie es in den Laufwerkschacht einsetzen.
++
+Die Verriegelungsfedern öffnen sich.
+
++
+image::../media/h600s_driveinstall.gif[Laufwerksinstallation]
+
+. Setzen Sie das Ersatzlaufwerk in den Steckplatz ein, und schließen Sie dann den Laufwerkgriff.
++
+
+CAUTION: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
+
++
+Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
+
++
+Das Laufwerk wird automatisch mit gespiegelten Daten aus dem Arbeitslaufwerk neu aufgebaut. Sie können den Status der Neuerstellung mithilfe des Grid Manager überprüfen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Appliance Node*` > *Hardware*. Das Feld Speicher-RAID-Modus enthält eine Meldung „`reBuilding`“, bis das Laufwerk komplett neu aufgebaut ist.
+
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

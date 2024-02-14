@@ -1,0 +1,395 @@
+---
+permalink: sg6000/replacing-storage-controller-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, storage controller, e2800, ef570, controller, remove, removing, removal, install, installing, installation 
+summary: Möglicherweise müssen Sie einen E2800 Controller oder einen EF570 Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist. 
+---
+= Tauschen Sie den Speicher-Controller in der SG6000 aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie einen E2800 Series Controller oder einen EF570 Controller austauschen, wenn er nicht optimal funktioniert oder wenn er ausgefallen ist.
+
+.Bevor Sie beginnen
+* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
+* Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
+* Sie haben ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen getroffen.
+* Sie haben einen #1 Kreuzschlitzschraubendreher.
+* Sie haben die Storage Appliance physisch gefunden, an der der Controller im Datacenter ausgetauscht wird.
++
+link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+
+
+
+
+NOTE: Verlassen Sie sich beim Austausch eines Controllers in der StorageGRID Appliance nicht auf die Anweisungen zur E-Series, da die Vorgehensweisen nicht identisch sind.
+
+.Über diese Aufgabe
+Sie haben zwei Möglichkeiten zur Feststellung, ob ein ausgefallener Controller aufgetreten ist:
+
+* Der Recovery Guru im SANtricity System Manager führt Sie dazu, den Controller zu ersetzen.
+* Die gelbe Warn-LED am Controller leuchtet und gibt an, dass der Controller einen Fehler aufweist.
++
+
+NOTE: Wenn die Warn-LEDs für beide Controller im Shelf leuchten, wenden Sie sich an den technischen Support, um Hilfe zu erhalten.
+
+
+
+Wenn Ihre Appliance zwei Storage-Controller enthält, können Sie einen der Controller austauschen, während das Gerät eingeschaltet ist und Lese-/Schreibvorgänge ausführt, sofern die folgenden Bedingungen erfüllt sind:
+
+* Der zweite Controller im Shelf hat optimalen Status.
+* Im Feld *OK to remove* im Bereich Details des Recovery Guru im SANtricity System Manager wird *Ja* angezeigt, was darauf hinweist, dass es sicher ist, diese Komponente zu entfernen.
+
+
+
+NOTE: Wenn möglich, schalten Sie das Gerät für dieses Ersatzverfahren in den Wartungsmodus, um die potenziellen Auswirkungen unvorhergesehener Fehler oder Ausfälle zu minimieren.
+
+
+NOTE: Wenn der zweite Controller im Shelf nicht über den optimalen Status verfügt oder wenn der Recovery Guru angibt, dass er nicht in Ordnung ist, den Controller zu entfernen, wenden Sie sich an den technischen Support.
+
+Wenn Sie einen Controller austauschen, müssen Sie den Akku aus dem ursprünglichen Controller entfernen und in den Ersatzcontroller einsetzen. In einigen Fällen müssen Sie möglicherweise auch die Host-Schnittstellenkarte vom ursprünglichen Controller entfernen und im Ersatzcontroller installieren.
+
+
+NOTE: Die Storage Controller in den meisten Appliance-Modellen umfassen keine Host Interface Cards (HIC).
+
+Diese Aufgabe hat folgende Teile:
+
+. Vorbereiten
+. Controller in den Offline-Modus versetzen
+. Controller entfernen
+. Den Akku in den neuen Controller verschieben
+. Verschieben Sie HIC zu einem neuen Controller, falls erforderlich
+. Controller austauschen
+
+
+
+
+== Vorbereiten
+
+.Schritte
+. Packen Sie die neue Steuerung aus und stellen Sie sie auf eine flache, statische Oberfläche.
++
+Bewahren Sie das Verpackungsmaterial auf, das beim Versand der fehlerhaften Steuerung verwendet werden soll.
+
+. Suchen Sie die Etiketten für MAC-Adresse und FRU-Teilenummer auf der Rückseite des Ersatzcontrollers.
+
+
+Diese Abbildungen zeigen den E2800A-Controller und den E2800B-Controller. Das Verfahren zum Austausch der E2800 Controller der Serie und des EF570 Controllers ist identisch.
+
+E2800A Storage-Controller:
+
+image::../media/e2800_labels_on_controller.gif[MAC- und FRU-Etiketten am E2800A-Controller]
+
+E2800B Storage-Controller:
+
+image::../media/e2800B_labels_on_controller.gif[MAC- und FRU-Etiketten am E2800A-Controller]
+
+[cols="1a,2a,4a"]
+|===
+| Etikett | Komponente | Beschreibung 
+
+
+ a| 
+1
+ a| 
+MAC-Adresse
+ a| 
+Die MAC-Adresse für Management-Port 1 („`P1 auf E2800A und 0a auf E2800B`"). Wenn Sie die IP-Adresse des Original-Controllers über DHCP erhalten haben, benötigen Sie diese Adresse, um eine Verbindung zum neuen Controller herzustellen.
+
+
+
+ a| 
+2
+ a| 
+FRU-Teilenummer
+ a| 
+Die FRU-Teilenummer. Diese Nummer muss der Teilenummer des derzeit installierten Controllers entsprechen.
+
+
+
+ a| 
+3
+ a| 
+4-Port-HIC
+ a| 
+Die Host Interface Card (HIC) mit 4 Ports. Diese Karte muss auf den neuen Controller verschoben werden, wenn Sie den Austausch durchführen.
+
+*Hinweis*: Der E2800A Controller besitzt keine HIC.
+
+|===
+
+
+== Controller in den Offline-Modus versetzen
+
+.Schritte
+. Bereiten Sie das Entfernen des Controllers vor. Sie führen die folgenden Schritte mit SANtricity System Manager aus.
++
+.. Vergewissern Sie sich, dass die Ersatzteilnummer des ausgefallenen Controllers mit der FRU-Teilenummer für den Ersatz-Controller identisch ist.
++
+Wenn ein Controller einen Fehler aufweist und ausgetauscht werden muss, wird im Bereich Details des Recovery Guru die Ersatzteilnummer angezeigt. Wenn Sie diese Nummer manuell finden müssen, können Sie auf der Registerkarte *Base* des Controllers nachsehen.
+
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs &#8212;* Wenn die beiden Teilenummern nicht identisch sind, versuchen Sie nicht, dieses Verfahren durchzuführen.
+
+.. Sichern Sie die Konfigurationsdatenbank.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen.
+
+.. Sammeln von Support-Daten für die Appliance
++
+
+NOTE: Durch das Erfassen von Support-Daten vor und nach dem Ersetzen einer Komponente wird sichergestellt, dass Sie einen vollständigen Satz von Protokollen an den technischen Support senden können, wenn der Austausch das Problem nicht behebt.
+
+.. Nehmen Sie den Controller, den Sie ersetzen möchten, in den Offline-Modus.
+
+
+
+
+
+
+== Entfernen Sie den Controller
+
+.Schritte
+. Entfernen Sie den Controller aus dem Gerät:
++
+.. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+.. Beschriften Sie die Kabel, und trennen Sie dann die Kabel und SFPs.
++
+
+NOTE: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
+.. Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff so lange drücken, bis sie sich löst, und öffnen Sie dann den Nockengriff nach rechts.
+.. Schieben Sie den Regler mit zwei Händen und dem Nockengriff aus dem Gerät.
++
+
+CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht der Steuerung zu unterstützen.
+
+.. Stellen Sie den Controller auf eine flache, statische Oberfläche, wobei die abnehmbare Abdeckung nach oben zeigt.
+.. Entfernen Sie die Abdeckung, indem Sie die Taste nach unten drücken und die Abdeckung abnehmen.
+
+
+
+
+
+
+== Bringen Sie den Akku in den neuen Controller
+
+.Schritte
+. Entfernen Sie den Akku aus dem ausgefallenen Controller, und setzen Sie ihn in den Ersatzcontroller ein:
++
+.. Vergewissern Sie sich, dass die grüne LED im Controller (zwischen Akku und DIMMs) aus ist.
++
+Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
+
++
+image::../media/e2800_internal_cache_active_led.gif[Grüne LED auf E2800]
+
++
+[cols="1a,2a"]
+|===
+| Element | Beschreibung 
+
+
+ a| 
+1
+ a| 
+Interne LED für aktiven Cache
+
+
+
+ a| 
+2
+ a| 
+Batterie
+
+|===
+.. Suchen Sie den blauen Freigabehebel für die Batterie.
+.. Entriegeln Sie den Akku, indem Sie den Entriegelungshebel nach unten und aus dem Controller entfernen.
++
+image::../media/e2800_remove_battery.gif[Batterieverriegelung]
+
++
+[cols="1a,2a"]
+|===
+| Element | Beschreibung 
+
+
+ a| 
+1
+ a| 
+Akkufreigaberiegel
+
+
+
+ a| 
+2
+ a| 
+Batterie
+
+|===
+.. Heben Sie den Akku an, und schieben Sie ihn aus dem Controller.
+.. Entfernen Sie die Abdeckung vom Ersatzcontroller.
+.. Richten Sie den Ersatz-Controller so aus, dass der Steckplatz für die Batterie zu Ihnen zeigt.
+.. Setzen Sie den Akku in einem leichten Abwärtswinkel in den Controller ein.
++
+Sie müssen den Metallflansch an der Vorderseite der Batterie in den Schlitz an der Unterseite des Controllers einsetzen und die Oberseite der Batterie unter den kleinen Ausrichtstift auf der linken Seite des Controllers schieben.
+
+.. Schieben Sie die Akkuverriegelung nach oben, um die Batterie zu sichern.
++
+Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
+
+.. Drehen Sie den Controller um, um zu bestätigen, dass der Akku korrekt installiert ist.
++
+
+CAUTION: *Mögliche Hardware-Schäden* -- der Metallflansch an der Vorderseite der Batterie muss vollständig in den Schlitz am Controller eingesetzt werden (wie in der ersten Abbildung dargestellt). Wenn die Batterie nicht richtig eingesetzt ist (wie in der zweiten Abbildung dargestellt), kann der Metallflansch die Controllerplatine kontaktieren, was zu Schäden führt.
+
++
+*** *Korrekt -- der Metallflansch der Batterie ist vollständig in den Schlitz am Controller eingesetzt:*
++
+image::../media/e2800_battery_flange_ok.gif[Batterieflansch Korrekt]
+
+*** *Falsch -- der Metallflansch der Batterie ist nicht in den Steckplatz an der Steuerung eingefügt:*
++
+image::../media/e2800_battery_flange_not_ok.gif[Batterieflansch Nicht Korrekt]
+
+
+
+
+
+. Bringen Sie die Controllerabdeckung wieder an.
+
+
+
+
+== Verschieben Sie HIC zu einem neuen Controller, falls erforderlich
+
+.Schritte
+. Wenn der ausgefallene Controller eine Host Interface Card (HIC) enthält, verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
++
+Eine separate HIC wird nur für den E2800B-Controller verwendet. Die HIC wird auf der Haupt-Controller-Platine montiert und enthält zwei SPF-Anschlüsse.
+
++
+
+NOTE: Die Abbildungen in diesem Verfahren zeigen eine HIC mit 2 Ports. Die HIC in Ihrem Controller hat möglicherweise eine andere Anzahl von Ports.
+
+. Wenn der Controller keine HIC (E2800A) besitzt, ersetzen Sie die Controller-Abdeckung. Wenn der Controller über eine HIC (E2800B) verfügt, fahren Sie mit fort <<move_the_HIC_to_the_replacement_controller,Verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller>>.
++
+.. [[move_the_HIC_to_the_Replacement_Controller]]Wenn Sie über eine HIC verfügen, verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
+.. Entfernen Sie alle SFPs von der HIC.
+.. Entfernen Sie mit einem #1 Kreuzschlitzschraubendreher die Schrauben, mit denen die HIC-Frontplatte am Controller befestigt ist.
++
+Es gibt vier Schrauben: Eine auf der Oberseite, eine auf der Seite und zwei auf der Vorderseite.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800 Frontplattenschrauben]
+
+.. Entfernen Sie die HIC-Frontplatte.
+.. Lösen Sie mit den Fingern oder einem Kreuzschlitzschraubendreher die drei Rändelschrauben, mit denen die HIC an der Controllerkarte befestigt ist.
+.. Lösen Sie die HIC vorsichtig von der Controllerkarte, indem Sie die Karte nach oben heben und wieder zurückschieben.
++
+
+CAUTION: Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.png[HIC-Rändelschrauben E2800A]
+
++
+[cols="1a,2a"]
+|===
+| Etikett | Beschreibung 
+
+
+ a| 
+1
+ a| 
+Host-Schnittstellenkarte
+
+
+
+ a| 
+2
+ a| 
+Rändelschrauben
+
+|===
+.. Platzieren Sie die HIC auf einer statischen Oberfläche.
+.. Entfernen Sie mit einem #1 Kreuzschlitzschraubendreher die vier Schrauben, mit denen die leere Frontplatte an der Ersatzsteuerung befestigt ist, und entfernen Sie die Frontplatte.
+.. Richten Sie die drei Rändelschrauben der HIC an den entsprechenden Löchern am Ersatz-Controller aus, und richten Sie den Anschluss an der Unterseite der HIC an dem HIC-Schnittstellenanschluss auf der Controllerkarte aus.
++
+Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
+
+.. Senken Sie die HIC vorsichtig ab, und setzen Sie den HIC-Anschluss ein, indem Sie vorsichtig auf die HIC drücken.
++
+
+CAUTION: *Mögliche Geräteschäden* -- Vorsicht, den goldenen Bandanschluss für die Controller-LEDs nicht zwischen der HIC und den Rändelschrauben zu quetschen.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[HIC-Gewindestifte E2800A]
+
++
+[cols="1a,2a"]
+|===
+| Etikett | Beschreibung 
+
+
+ a| 
+1
+ a| 
+Host-Schnittstellenkarte
+
+
+
+ a| 
+2
+ a| 
+Rändelschrauben
+
+|===
+.. Ziehen Sie die HIC-Rändelschrauben manuell fest.
++
+Verwenden Sie keinen Schraubendreher, da Sie die Schrauben sonst möglicherweise zu fest anziehen.
+
+.. Befestigen Sie mit einem #1 Kreuzschlitzschraubendreher die HIC-Frontplatte, die Sie vom ursprünglichen Controller entfernt haben, mit vier Schrauben an der neuen Steuerung.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[Schrauben für die E2800A-Frontplatte]
+
+.. Installieren Sie alle entfernten SFPs wieder auf der HIC.
+
+
+
+
+
+
+== Controller austauschen
+
+.Schritte
+. Setzen Sie den Ersatzcontroller in das Gerät ein.
++
+.. Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.
+.. Schieben Sie den Steuerknebel in die geöffnete Stellung, und schieben Sie ihn bis zum Gerät.
+.. Bewegen Sie den Nockengriff nach links, um die Steuerung zu verriegeln.
+.. Ersetzen Sie die Kabel und SFPs.
+.. Wenn der ursprüngliche Controller DHCP für die IP-Adresse verwendet hat, suchen Sie die MAC-Adresse auf dem Etikett auf der Rückseite des Ersatzcontrollers. Bitten Sie den Netzwerkadministrator, die DNS/Netzwerk- und IP-Adresse des entfernten Controllers mit der MAC-Adresse des Ersatzcontrollers zu verknüpfen.
++
+
+NOTE: Wenn der ursprüngliche Controller DHCP für die IP-Adresse nicht verwendet hat, übernimmt der neue Controller die IP-Adresse des entfernten Controllers.
+
+
+
+. Stellen Sie den Controller mit SANtricity System Manager online:
++
+.. Wählen Sie *Hardware*.
+.. Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück von Regal anzeigen*.
+.. Wählen Sie den Controller aus, den Sie online platzieren möchten.
+.. Wählen Sie im Kontextmenü * Online platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
+.. Vergewissern Sie sich, dass auf der 7-Segment-Anzeige ein Status von angezeigt wird `99`.
+
+
+. Vergewissern Sie sich, dass der neue Controller optimal ist, und sammeln Sie Support-Daten.
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

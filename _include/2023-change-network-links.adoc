@@ -1,0 +1,51 @@
+= 
+:allow-uri-read: 
+
+
+.Bevor Sie beginnen
+* Das ist schon link:../commonhardware/placing-appliance-into-maintenance-mode.html["Das Gerät in den Wartungsmodus versetzt"].
+
+
+
+NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.
+
+.Schritte
+. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Netzwerke konfigurieren* > *Link-Konfiguration* aus.
+. Nehmen Sie die gewünschten Änderungen an der Verbindungskonfiguration vor.
++
+Weitere Informationen zu den Optionen finden Sie unter link:../installconfig/configuring-network-links.html["Netzwerkverbindungen konfigurieren"].
+
++
+
+NOTE: IP-Konfigurationsänderungen, die vorgenommen werden, während sich die Appliance im Wartungsmodus befindet, werden nicht auf die installierte StorageGRID-Umgebung angewendet. Führen Sie den Link:../maintain/changing-nodes-network-configuration.html aus[`change-ip` Befehl] nach dem Neustart der Appliance in StorageGRID.
+
+. Wenn Sie mit Ihrer Auswahl zufrieden sind, klicken Sie auf *Speichern*.
++
+
+NOTE: Wenn Sie Änderungen am Netzwerk oder an der Verbindung vorgenommen haben, über die Sie verbunden sind, können Sie die Verbindung verlieren. Wenn die Verbindung nicht innerhalb von 1 Minute wiederhergestellt wird, geben Sie die URL für den StorageGRID-Appliance-Installer erneut ein. Verwenden Sie dazu eine der anderen IP-Adressen, die der Appliance zugewiesen sind: `*https://_appliance_IP_:8443*`
+
+. Nehmen Sie alle erforderlichen Änderungen an den IP-Adressen der Appliance vor.
++
+Wenn Sie Änderungen an den VLAN-Einstellungen vorgenommen haben, hat sich das Subnetz für die Appliance möglicherweise geändert. Informationen zum Ändern der IP-Adressen für die Appliance finden Sie unter link:../installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"].
+
+. Wählen Sie im Menü die Option *Netzwerk konfigurieren* > *Ping-Test* aus.
+. Verwenden Sie das Ping-Test-Tool, um die Verbindung zu IP-Adressen in Netzwerken zu prüfen, die möglicherweise von den Änderungen der Verbindungskonfiguration betroffen sind, die Sie bei der Konfiguration der Appliance vorgenommen haben.
++
+Zusätzlich zu allen anderen Tests, die Sie durchführen möchten, bestätigen Sie, dass Sie die Grid Network IP-Adresse des primären Admin-Knotens und die Grid-Netzwerk-IP-Adresse von mindestens einem anderen Knoten pingen können. Falls erforderlich, kehren Sie zu den Anweisungen zur Konfiguration von Netzwerkverbindungen zurück, und beheben Sie etwaige Probleme.
+
+. Wenn Sie damit einverstanden sind, dass die Änderungen der Verbindungskonfiguration ausgeführt werden, booten Sie den Node neu. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus, um den Compute-Controller neu zu starten, wenn der Knoten wieder dem Grid hinzugefügt wird. Wählen Sie diese Option, wenn Sie im Wartungsmodus ausgeführt werden und den Node in den normalen Betrieb zurückkehren möchten.
+** Wählen Sie *Neustart im Wartungsmodus*, um den Compute-Controller neu zu starten, wobei der Knoten im Wartungsmodus verbleibt. (Diese Option ist nur verfügbar, wenn sich der Controller im Wartungsmodus befindet.) Wählen Sie diese Option aus, wenn zusätzliche Wartungsmaßnahmen auf dem Node ausgeführt werden müssen, bevor er dem Grid erneut beitreten kann.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite Knoten sollte ein normaler Status angezeigt werden (grünes Häkchen-Symbol image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+
++
+image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+
+
+

@@ -1,0 +1,39 @@
+---
+indexpage:
+  tiles:
+  - title: Häufig ausgeführte Prozeduren
+    links:
+    - title: Die Position-LED ein- oder ausschalten
+      url: "../sg6000/turning-controller-identify-led-on-and-off.html"
+    - title: Suchen Sie die Appliance im Datacenter
+      url: "../sg6000/locating-controller-in-data-center.html"
+    - title: Schalten Sie das Gerät aus und ein
+      url: "../sg6000/power-sg6000-cn-controller-off-on.html"
+    - title: Verbindungskonfiguration ändern
+      url: "../sg6000/changing-link-configuration-of-sg6000-cn-controller.html"
+    - title: Upgrade von SANtricity
+      url: "../sg6000/upgrading-santricity-os-on-storage-controllers.html"
+    - title: Aktualisieren Sie die Laufwerk-Firmware
+      url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: Rack-Verfahren
+    links:
+    - title: Controller im Rack austauschen
+      url: "../sg6000/reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html"
+    - title: Erweiterungs-Shelf hinzufügen
+      url: "../sg6000/adding-expansion-shelf-to-deployed-sg6060.html"
+  - title: Hardware-Verfahren
+    links:
+    - title: Bringen Sie die Controllerabdeckung wieder an
+      url: "../sg6000/reinstalling-sg6000-cn-controller-cover.html"
+    - title: Austausch des Storage Controllers
+      url: "../sg6000/replacing-storage-controller-sg6000.html"
+    - title: Ersetzen Sie die Komponenten des Storage-Controllers
+      url: "../sg6000/replacing-hardware-components-in-storage-controller-shelf.html"
+    - title: Ersetzen Sie die Komponenten des Erweiterungs-Shelf mit 60 Laufwerken
+      url: "../sg6000/replacing-hardware-components-in-optional-60-drive-expansion-shelf.html"
+    - title: Tauschen Sie den SG6000-CN Controller aus
+      url: "../sg6000/replacing-sg6000-cn-controller.html"
+    - title: Ersetzen Sie das Netzteil
+      url: "../sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
+    - title: Fibre-Channel-HBA austauschen
+      url: "../sg6000/reinstalling-fibre-channel-hba.html"

@@ -1,0 +1,40 @@
+---
+permalink: installconfig/configuring-snmp-settings-for-bmc.html 
+sidebar: sidebar 
+keywords: SNMP, configure, setup, set up 
+summary: Wenn Sie mit der Konfiguration von SNMP für Hardware vertraut sind, können Sie die SNMP-Einstellungen für SG6100-, SG6000- und Services-Appliances über die BMC-Schnittstelle konfigurieren. Sie können sichere Community-Strings bereitstellen, SNMP-Trap aktivieren und bis zu fünf SNMP-Ziele angeben. 
+---
+= Konfigurieren Sie die SNMP-Einstellungen für BMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie mit der Konfiguration von SNMP für Hardware vertraut sind, können Sie die SNMP-Einstellungen für SG6100-, SG6000- und Services-Appliances über die BMC-Schnittstelle konfigurieren. Sie können sichere Community-Strings bereitstellen, SNMP-Trap aktivieren und bis zu fünf SNMP-Ziele angeben.
+
+.Bevor Sie beginnen
+* Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
+* Sie haben Erfahrung in der Konfiguration von SNMP-Einstellungen für SNMPv1-v2c Geräte.
+
+
+
+NOTE: Die durch diese Vorgehensweise vorgenommenen BMC-Einstellungen bleiben möglicherweise nicht erhalten, wenn das Gerät ausfällt und ersetzt werden muss.  Stellen Sie sicher, dass Sie über eine Aufzeichnung aller Einstellungen verfügen, die Sie angewendet haben, so dass sie nach einem Hardware-Austausch bei Bedarf leicht wieder angewendet werden können.
+
+.Schritte
+. Wählen Sie im BMC-Dashboard *Einstellungen* > *SNMP-Einstellungen* aus.
+. Wählen Sie auf der Seite SNMP-Einstellungen die Option *SNMP V1/V2* aktivieren und geben Sie dann eine schreibgeschützte Community-Zeichenfolge und eine Read-Write Community-Zeichenfolge an.
++
+Die schreibgeschützte Community-Zeichenfolge ist wie eine Benutzer-ID oder ein Passwort. Sie sollten diesen Wert ändern, um zu verhindern, dass Eindringlinge Informationen über Ihr Netzwerk-Setup erhalten. Die Lese-Schreib-Community-Zeichenfolge schützt das Gerät vor nicht autorisierten Änderungen.
+
+. Wählen Sie optional *Trap aktivieren* aus, und geben Sie die erforderlichen Informationen ein.
++
+
+NOTE: Geben Sie die Ziel-IP für jeden SNMP-Trap unter Verwendung einer IP-Adresse ein. DNS-Namen werden nicht unterstützt.
+
++
+Aktivieren Sie Traps, wenn die Appliance sofortige Benachrichtigungen an eine SNMP-Konsole senden soll, wenn sie sich in einem ungewöhnlichen Zustand befindet. Je nach Gerät können Traps auf Hardwareausfälle verschiedener Komponenten, auf Verbindungsabstände, Temperaturschwellenwerte oder hohen Datenverkehr hinweisen.
+
+. Klicken Sie optional auf *Test-Trap senden*, um Ihre Einstellungen zu testen.
+. Wenn die Einstellungen korrekt sind, klicken Sie auf *Speichern*.
+

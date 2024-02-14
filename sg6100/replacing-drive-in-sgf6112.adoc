@@ -1,0 +1,168 @@
+---
+permalink: sg6100/replacing-drive-in-sgf6112.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6112, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Die SGF6112 Storage Appliance enthält 12 SSD-Laufwerke. Die Daten auf den Laufwerken werden durch ein RAID-Schema geschützt, mit dem die Appliance nach dem Ausfall eines einzelnen Laufwerks wiederherstellen kann, ohne dass die Daten von einem anderen Node kopiert werden müssen.  
+---
+= Ersetzen Sie die Laufwerke im SGF6112
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die SGF6112 Storage Appliance enthält 12 SSD-Laufwerke. Die Daten auf den Laufwerken werden durch ein RAID-Schema geschützt, mit dem die Appliance nach dem Ausfall eines einzelnen Laufwerks wiederherstellen kann, ohne dass die Daten von einem anderen Node kopiert werden müssen.
+
+Wenn ein zweites Laufwerk ausfällt, bevor ein erster Laufwerksausfall behoben wurde, müssen möglicherweise Daten von anderen Nodes kopiert werden, um die Redundanz wiederherzustellen. Diese Wiederherstellung von Redundanz kann länger dauern – was möglicherweise nicht möglich ist, wenn ILM-Regeln mit einer einzigen Kopie verwendet werden oder in der Vergangenheit verwendet wurden oder wenn die Datenredundanz durch Ausfälle auf anderen Nodes beeinträchtigt wurde. Wenn daher eines der SGF6112-Laufwerke ausfällt, müssen Sie es so schnell wie möglich austauschen, um Redundanz zu gewährleisten.
+
+.Bevor Sie beginnen
+* Das ist schon link:locating-sgf6112-in-data-center.html["Das Gerät befindet sich physisch"].
+* Sie haben überprüft, welches Laufwerk ausgefallen ist, indem Sie feststellen, dass die linke LED des Laufwerks gelb leuchtet oder den Grid Manager für verwenden link:verify-component-to-replace.html["Zeigen Sie die Warnung an, die durch das ausgefallene Laufwerk verursacht wurde"].
++
+
+NOTE: Informationen zur Anzeige von Statusanzeigen zur Überprüfung des Fehlers finden Sie unter.
+
+* Sie haben das Ersatzlaufwerk erhalten.
+* Sie haben einen angemessenen ESD-Schutz erhalten.
+
+
+.Schritte
+. Stellen Sie sicher, dass die linke Fehler-LED des Laufwerks gelb leuchtet, oder verwenden Sie die Laufwerksteckplatz-ID aus der Warnmeldung, um das Laufwerk zu finden.
++
+Die zwölf Laufwerke befinden sich in den folgenden Positionen im Gehäuse (Vorderseite des Gehäuses mit entfernter Blende):
+
++
+image::../media/sgf6112_ssds_locations.png[Laufwerkpositionen]
+
++
+|===
+| Position | Laufwerk 
+
+
+ a| 
+1
+ a| 
+HDD00
+
+
+
+ a| 
+2
+ a| 
+HDD01
+
+
+
+ a| 
+3
+ a| 
+HDD02
+
+
+
+ a| 
+4
+ a| 
+HDD03
+
+
+
+ a| 
+5
+ a| 
+HDD04
+
+
+
+ a| 
+6
+ a| 
+HDD05
+
+
+
+ a| 
+7
+ a| 
+HDD06
+
+
+
+ a| 
+8
+ a| 
+HDD07
+
+
+
+ a| 
+9
+ a| 
+HDD08
+
+
+
+ a| 
+10
+ a| 
+HDD09
+
+
+
+ a| 
+11
+ a| 
+HDD10
+
+
+
+ a| 
+12
+ a| 
+HDD11
+
+|===
++
+Sie können den Grid Manager auch verwenden, um den Status der SSD-Laufwerke zu überwachen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Storage Node*` > *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld Speicher-RAID-Modus eine Meldung darüber, welches Laufwerk ausgefallen ist.
+
+
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.
++
+Alle Verpackungsmaterialien speichern.
+
+. Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
++
+image::../media/h600s_driveremoval.gif[Ausbau Des Laufwerks]
+
++
+Der Griff an den Antriebsfedern öffnet sich teilweise, und das Laufwerk löst sich aus dem Schlitz.
+
+. Öffnen Sie den Griff, schieben Sie das Laufwerk heraus und legen Sie es auf eine statisch freie, Ebene Oberfläche.
+. Drücken Sie die Entriegelungstaste am Ersatzlaufwerk, bevor Sie es in den Laufwerkschacht einsetzen.
++
+Die Verriegelungsfedern öffnen sich.
+
++
+image::../media/h600s_driveinstall.gif[Laufwerksinstallation]
+
+. Setzen Sie das Ersatzlaufwerk in den Steckplatz ein, und schließen Sie dann den Laufwerkgriff.
++
+
+NOTE: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
+
++
+Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
+
++
+Das ersetzte Laufwerk wird automatisch mit gespiegelten Daten von den Arbeitslaufwerken neu aufgebaut. Die Laufwerk-LED blinkt zunächst, hört aber auf zu blinken, sobald das System feststellt, dass das Laufwerk über genügend Kapazität verfügt und funktionsfähig ist.
+
++
+Sie können den Status der Neuerstellung mithilfe des Grid Manager überprüfen.
+
+. Wenn mehr als ein Laufwerk ausgefallen und ersetzt wurde, haben Sie möglicherweise Warnmeldungen, die darauf hinweisen, dass einige Volumes Daten wiederherstellen müssen. Wenn Sie eine Warnmeldung erhalten, wählen Sie vor dem Versuch, eine Volume-Wiederherstellung durchzuführen, *NODES* > aus `*appliance Storage Node*` > *Hardware*. Überprüfen Sie im Abschnitt StorageGRID-Appliance auf der Seite, ob der Speicher-RAID-Modus ordnungsgemäß ist oder neu erstellt wird. Wenn im Status ein oder mehrere ausgefallene Laufwerke aufgeführt sind, korrigieren Sie diese Bedingung, bevor Sie eine Wiederherstellung des Volumes durchführen.
+. Gehen Sie im Grid Manager zu *NODES* > `*appliance Storage Node*` > *Hardware*. Überprüfen Sie im Abschnitt StorageGRID-Gerät auf der Seite, ob der Speicher-RAID-Modus ordnungsgemäß funktioniert.
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

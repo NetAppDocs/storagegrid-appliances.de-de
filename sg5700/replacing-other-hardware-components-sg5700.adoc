@@ -1,0 +1,83 @@
+---
+permalink: sg5700/replacing-other-hardware-components-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, controller battery, battery, drive, fan, power supply 
+summary: Möglicherweise müssen Sie einen Controller-Akku, ein Laufwerk, einen Lüfter oder ein Netzteil in dem StorageGRID-Gerät austauschen. 
+---
+= Tauschen Sie andere Hardwarekomponenten des SG5700 aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie einen Controller-Akku, ein Laufwerk, einen Lüfter oder ein Netzteil in dem StorageGRID-Gerät austauschen.
+
+.Bevor Sie beginnen
+* Sie haben das Verfahren zum Austausch der E-Series Hardware.
+* Das Gerät war link:../commonhardware/placing-appliance-into-maintenance-mode.html["Wird in den Wartungsmodus versetzt"] Wenn das Verfahren zum Austausch von Komponenten erfordert, schalten Sie das Gerät aus.
+
+
+.Über diese Aufgabe
+Informationen zum Austauschen der Batterie im E2800-Controller finden Sie in den Anweisungen in dieser Anleitung für link:replacing-e2800-controller.html["Austausch des E2800-Controllers"]. Diese Anweisungen beschreiben, wie Sie den Controller aus dem Gerät entfernen, den Akku aus dem Controller entfernen, den Akku einbauen und den Controller austauschen.
+
+Wenn Sie ein Laufwerk, einen Netzlüfterbehälter, einen Lüfterbehälter, einen Aktivkohlebehälter oder eine Laufwerksschublade im Gerät austauschen möchten, greifen Sie auf den zu http://mysupport.netapp.com/info/web/ECMP1658252.html["E-Series Verfahren zur Wartung von E2800 Hardware"^].
+
+
+
+== Anweisungen zum Austausch der SG5712-Komponente
+
+[cols="1a,3a"]
+|===
+| FRU | Weitere Informationen finden Sie in den Anweisungen zur E-Series 
+
+
+ a| 
+Laufwerk
+ a| 
+Austausch eines Laufwerks bei Shelfs der E2800 mit 12 Laufwerken oder mit 24 Laufwerken
+
+
+
+ a| 
+Lüfter-Behälter
+ a| 
+Austausch eines Power-Fan-Behälters in E2800 Shelfs
+
+|===
+
+
+== Anweisungen zum Austausch der SG5760 Komponenten
+
+[cols="1a,3a"]
+|===
+| FRU | Weitere Informationen finden Sie in den Anweisungen zur E-Series 
+
+
+ a| 
+Laufwerk
+ a| 
+Ersetzen eines Laufwerks in E2860 Shelfs
+
+
+
+ a| 
+Leistungsbehälter
+ a| 
+Austausch eines Netzkanisters in E2860 Shelfs
+
+
+
+ a| 
+Gebläsebehälter
+ a| 
+Austausch eines Lüftergehäuses in E2860 Shelfs
+
+
+
+ a| 
+Laufwerksschublade
+ a| 
+Austauschen eines Laufwerksschubs in E2860 Shelfs
+
+|===

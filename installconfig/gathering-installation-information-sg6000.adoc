@@ -1,0 +1,558 @@
+---
+permalink: installconfig/gathering-installation-information-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance StorageGRID, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup 
+summary: Notieren Sie die erforderlichen Informationen für jedes Netzwerk, das Sie mit dem Gerät verbinden, in den Tabellen. Diese Werte sind für die Installation und Konfiguration der Hardware erforderlich. 
+---
+= Netzwerkinformationen erfassen (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Notieren Sie die erforderlichen Informationen für jedes Netzwerk, das Sie mit dem Gerät verbinden, in den Tabellen. Diese Werte sind für die Installation und Konfiguration der Hardware erforderlich.
+
+
+TIP: Verwenden Sie anstelle der Tabellen das mit ConfigBuilder bereitgestellte Arbeitsbuch. Mit der Arbeitsmappe „ConfigBuilder“ können Sie Ihre Systeminformationen hochladen und eine JSON-Datei erstellen, um einige Konfigurationsschritte im Installationsprogramm für StorageGRID-Appliances automatisch auszuführen. Siehe link:automating-appliance-installation-and-configuration.html["Automatisierung der Appliance-Installation und -Konfiguration"].
+
+
+
+== Erforderliche Informationen für die Verbindung mit SANtricity System Manager auf Storage Controllern
+
+Beide Storage-Controller in der Appliance (entweder die Controller der E2800 Serie oder die EF570 Controller) werden mit dem Managementnetzwerk verbunden, das Sie für SANtricity System Manager verwenden. Die Controller befinden sich in jeder Appliance wie folgt:
+
+* SG6060 und SG6060X: Controller A befindet sich oben und Controller B befindet sich unten.
+* SGF6024: Controller A befindet sich auf der linken Seite, und Controller B befindet sich auf der rechten Seite.
+
+
+[cols="2a,1a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert für Controller A | Ihr Wert für Controller B 
+
+
+ a| 
+Ethernet-Switch-Port Sie werden eine Verbindung zu Management-Port 1 herstellen (gekennzeichnet mit P1 auf dem Controller).
+ a| 
+ a| 
+
+
+
+ a| 
+MAC-Adresse für Management-Port 1 (auf einem Etikett in der Nähe von Port P1 gedruckt)
+ a| 
+ a| 
+
+
+
+ a| 
+Über DHCP zugewiesene IP-Adresse für Management-Port 1, sofern nach dem Einschalten verfügbar
+
+*Hinweis:* Wenn das Netzwerk, das Sie mit dem Speicher-Controller verbinden, einen DHCP-Server enthält, kann der Netzwerkadministrator die MAC-Adresse verwenden, um die vom DHCP-Server zugewiesene IP-Adresse zu ermitteln.
+ a| 
+ a| 
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für die Appliance im Managementnetzwerk verwenden möchten
+ a| 
+Für IPv4:
+
+* IPv4-Adresse:
+* Subnetzmaske:
+* Gateway:
+
+
+Für IPv6:
+
+* IPv6-Adresse:
+* Routingfähige IP-Adresse:
+* IP-Adresse des Storage Controller-Routers:
+
+ a| 
+Für IPv4:
+
+* IPv4-Adresse:
+* Subnetzmaske:
+* Gateway:
+
+
+Für IPv6:
+
+* IPv6-Adresse:
+* Routingfähige IP-Adresse:
+* IP-Adresse des Storage Controller-Routers:
+
+
+
+
+ a| 
+IP-Adressformat
+ a| 
+Bitte auswählen:
+
+* IPv4
+* IPv6
+
+ a| 
+Bitte auswählen:
+
+* IPv4
+* IPv6
+
+
+
+
+ a| 
+Geschwindigkeit und Duplexmodus
+
+*Hinweis:* Sie müssen sicherstellen, dass der Ethernet-Switch für das SANtricity-System-Manager-Managementnetzwerk auf Autonegotiation gesetzt ist.
+ a| 
+Muss sein:
+
+* Autonegotiation (Standard)
+
+ a| 
+Muss sein:
+
+* Autonegotiation (Standard)
+
+
+|===
+
+
+== Zum Anschließen des SG6000-CN-Controllers an das Admin-Netzwerk erforderliche Informationen
+
+Das Admin-Netzwerk für StorageGRID ist ein optionales Netzwerk, das zur Systemadministration und -Wartung verwendet wird. Die Appliance stellt über die folgenden 1-GbE-Management-Ports des SG6000-CN-Controllers eine Verbindung zum Admin-Netzwerk her.
+
+image::../media/rj_45_ports_circled.png[RJ-45-Anschlüsse]
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Admin-Netzwerk aktiviert
+ a| 
+Bitte auswählen:
+
+* Nein
+* Ja (Standard)
+
+
+
+
+ a| 
+Netzwerk-Bond-Modus
+ a| 
+Bitte auswählen:
+
+* Unabhängig (Standard)
+* Aktiv/Backup
+
+
+
+
+ a| 
+Switch-Port für den linken Port im roten Kreis im Diagramm (Standard-aktiv-Port für unabhängigen Netzwerk-Bond-Modus)
+ a| 
+
+
+
+ a| 
+Switch-Port für den rechten Port im roten Kreis im Diagramm (nur aktiv-Backup Netzwerk-Bond-Modus)
+ a| 
+
+
+
+ a| 
+MAC-Adresse für den Netzwerkport Admin
+
+*Hinweis:* das MAC-Adressenetikett auf der Vorderseite des SG6000-CN Controllers listet die MAC-Adresse für den BMC-Management-Port auf. Um die MAC-Adresse für den Admin-Netzwerkanschluss zu ermitteln, müssen Sie der Hexadezimalzahl auf dem Etikett *2* hinzufügen. Wenn die MAC-Adresse auf dem Etikett beispielsweise mit *09* endet, endet die MAC-Adresse für den Admin-Port in *0B*. Wenn die MAC-Adresse auf dem Etikett mit *(_y_)FF* endet, endet die MAC-Adresse für den Admin-Port in *(_y_+1)01*. Sie können diese Berechnung einfach durchführen, indem Sie den Rechner unter Windows öffnen, ihn auf den Programmiermodus setzen, Hex auswählen, die MAC-Adresse eingeben und dann *+ 2 =* eingeben.
+ a| 
+
+
+
+ a| 
+DHCP-zugewiesene IP-Adresse für den Admin-Netzwerkport, sofern nach dem Einschalten verfügbar
+
+*Hinweis:* Sie können die IP-Adresse ermitteln, die über DHCP zugewiesen wurde, indem Sie die MAC-Adresse verwenden, um die zugewiesene IP zu ermitteln.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Admin-Netzwerk verwenden möchten
+
+*Hinweis:* Wenn Ihr Netzwerk kein Gateway hat, geben Sie die gleiche statische IPv4-Adresse für das Gateway an.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Admin-Netzwerk-Subnetze (CIDR)
+ a| 
+
+|===
+
+
+== Erforderliche Informationen zum Verbinden und Konfigurieren von 10/25-GbE-Ports am SG6000-CN Controller
+
+Die vier 10/25-GbE-Ports des SG6000-CN-Controllers stellen eine Verbindung zum StorageGRID-Grid-Netzwerk und dem optionalen Client-Netzwerk her.
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Verbindungsgeschwindigkeit
+ a| 
+Bitte auswählen:
+
+* Auto (Standard)
+* 10 GbE
+* 25 GBitE
+
+
+
+
+ a| 
+Port Bond-Modus
+ a| 
+Bitte auswählen:
+
+* Fest (Standard)
+* Aggregat
+
+
+
+
+ a| 
+Switch-Port für Port 1 (Client-Netzwerk für festen Modus)
+ a| 
+
+
+
+ a| 
+Switch-Port für Port 2 (Grid-Netzwerk für Fixed-Modus)
+ a| 
+
+
+
+ a| 
+Switch-Port für Port 3 (Client-Netzwerk für festen Modus)
+ a| 
+
+
+
+ a| 
+Switch-Port für Port 4 (Grid-Netzwerk für Fixed-Modus)
+ a| 
+
+|===
+
+
+== Informationen zum Anschließen des SG6000-CN-Controllers an das Grid-Netzwerk erforderlich
+
+Das Grid-Netzwerk für StorageGRID ist ein erforderliches Netzwerk, das für den gesamten internen StorageGRID-Datenverkehr verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des SG6000-CN-Controllers mit dem Grid-Netzwerk verbunden.
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Netzwerk-Bond-Modus
+ a| 
+Bitte auswählen:
+
+* Aktiv/Backup (Standard)
+* LACP (802.3ad)
+
+
+
+
+ a| 
+VLAN-Tagging aktiviert
+ a| 
+Bitte auswählen:
+
+* Nein (Standard)
+* Ja.
+
+
+
+
+ a| 
+VLAN-Tag (bei aktiviertem VLAN-Tagging)
+ a| 
+Geben Sie einen Wert zwischen 0 und 4095 ein:
+
+
+
+ a| 
+DHCP-zugewiesene IP-Adresse für das Grid-Netzwerk, sofern nach dem Einschalten verfügbar
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Grid-Netzwerk verwenden möchten
+
+*Hinweis:* Wenn Ihr Netzwerk kein Gateway hat, geben Sie die gleiche statische IPv4-Adresse für das Gateway an.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Grid-Netzwerknetze (CIDRs)
+ a| 
+
+|===
+
+
+== Informationen zum Anschließen des SG6000-CN-Controllers an das Client-Netzwerk erforderlich
+
+Das Client-Netzwerk für StorageGRID ist ein optionales Netzwerk, das in der Regel für den Zugriff auf das Grid auf das Clientprotokoll verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des SG6000-CN-Controllers mit dem Client-Netzwerk verbunden.
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Client-Netzwerk aktiviert
+ a| 
+Bitte auswählen:
+
+* Nein (Standard)
+* Ja.
+
+
+
+
+ a| 
+Netzwerk-Bond-Modus
+ a| 
+Bitte auswählen:
+
+* Aktiv/Backup (Standard)
+* LACP (802.3ad)
+
+
+
+
+ a| 
+VLAN-Tagging aktiviert
+ a| 
+Bitte auswählen:
+
+* Nein (Standard)
+* Ja.
+
+
+
+
+ a| 
+VLAN-Tag (bei aktiviertem VLAN-Tagging)
+ a| 
+Geben Sie einen Wert zwischen 0 und 4095 ein:
+
+
+
+ a| 
+DHCP-zugewiesene IP-Adresse für das Client-Netzwerk, falls nach dem Einschalten verfügbar
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Client-Netzwerk verwenden möchten
+
+*Hinweis:* Wenn das Client-Netzwerk aktiviert ist, verwendet die Standardroute auf dem Controller das hier angegebene Gateway.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+|===
+
+
+== Informationen zum Anschließen des SG6000-CN Controllers an das BMC-Managementnetzwerk erforderlich
+
+Sie können über den folgenden 1-GbE-Management-Port auf die BMC-Schnittstelle des SG6000-CN Controllers zugreifen. Dieser Port unterstützt die Remote-Verwaltung der Controller-Hardware über Ethernet unter Verwendung des IPMI-Standards (Intelligent Platform Management Interface).
+
+image::../media/bmc_management_port.gif[BMC-Management-Port]
+
+
+NOTE: Sie können den Remote-IPMI-Zugriff für alle Appliances aktivieren oder deaktivieren, die einen BMC enthalten. Die Remote-IPMI-Schnittstelle ermöglicht jedem Benutzer mit einem BMC-Konto und Passwort den Zugriff auf Ihre StorageGRID-Geräte auf niedriger Ebene. Wenn Sie keinen Remote-IPMI-Zugriff auf den BMC benötigen, deaktivieren Sie diese Option mit einer der folgenden Methoden: +
+Gehen Sie im Grid Manager zu *CONFIGURATION* > *Security* > *Security settings* > *Appliances* und deaktivieren Sie das Kontrollkästchen *Remote-IPMI-Zugriff aktivieren*. +
+Verwenden Sie in der Grid-Management-API den privaten Endpunkt: `PUT /private/bmc`.
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Ethernet-Switch-Port Sie stellen eine Verbindung zum BMC-Management-Port her (im Diagramm eingekreist).
+ a| 
+
+
+
+ a| 
+DHCP-zugewiesene IP-Adresse für das BMC-Managementnetzwerk, sofern nach dem Einschalten verfügbar
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für den BMC-Verwaltungsport verwenden möchten
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+|===
+
+
+== Port-Bond-Modi
+
+Wenn link:configuring-network-links.html["Netzwerk-Links werden konfiguriert"] Für den SG6000-CN-Controller können Sie Port-Bonding für die 10/25-GbE-Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie für die 1-GbE-Management-Ports, die mit dem optionalen Admin-Netzwerk verbunden werden. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen.
+
+
+
+=== Netzwerk-Bond-Modi für 10/25-GbE-Ports
+
+Die 10/25-GbE-Netzwerk-Ports des SG6000-CN-Controllers unterstützen den Bond-Modus Fixed Port oder den Bond-Modus für aggregierte Ports für Grid-Netzwerk- und Client-Netzwerk-Verbindungen.
+
+
+
+==== Bond-Modus mit festem Port
+
+Der Fixed-Modus ist die Standardkonfiguration für 10/25-GbE-Netzwerkports.
+
+image::../media/sg6000_cn_fixed_port.gif[Bond-Modus Für Festen Anschluss]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+C
+ a| 
+Die Ports 1 und 3 sind für das Client-Netzwerk verbunden, falls dieses Netzwerk verwendet wird.
+
+
+
+ a| 
+G
+ a| 
+Die Ports 2 und 4 sind für das Grid-Netzwerk verbunden.
+
+|===
+Bei Verwendung des Bond-Modus mit festem Port können die Ports über den aktiv-Backup-Modus oder den Link Aggregation Control Protocol-Modus (LACP 802.3ad) verbunden werden.
+
+* Im aktiv-Backup-Modus (Standard) ist jeweils nur ein Port aktiv. Wenn der aktive Port ausfällt, stellt sein Backup-Port automatisch eine Failover-Verbindung bereit. Port 4 bietet einen Sicherungspfad für Port 2 (Grid Network), und Port 3 stellt einen Sicherungspfad für Port 1 (Client Network) bereit.
+* Im LACP-Modus bildet jedes Port-Paar einen logischen Kanal zwischen dem Controller und dem Netzwerk, wodurch ein höherer Durchsatz ermöglicht wird. Wenn ein Port ausfällt, stellt der andere Port den Kanal weiterhin bereit. Der Durchsatz wird verringert, die Konnektivität wird jedoch nicht beeinträchtigt.
+
+
+
+NOTE: Wenn Sie keine redundanten Verbindungen benötigen, können Sie für jedes Netzwerk nur einen Port verwenden. Beachten Sie jedoch, dass nach der Installation von StorageGRID im Grid Manager eine Warnmeldung ausgelöst wird, die angibt, dass der Link nicht verfügbar ist. Da dieser Port speziell getrennt ist, können Sie diese Warnmeldung sicher deaktivieren.
+
+Wählen Sie im Grid Manager die Option *Warnung* > *Regeln*, wählen Sie die Regel aus und klicken Sie auf *Regel bearbeiten*. Deaktivieren Sie dann das Kontrollkästchen *aktiviert*.
+
+
+
+==== Bond-Modus für aggregierten Ports
+
+Der Aggregat-Port-Bond-Modus erhöht das ganze für jedes StorageGRID-Netzwerk deutlich und bietet zusätzliche Failover-Pfade.
+
+image::../media/sg6000_cn_aggregate_port.gif[Aggregat-Port-Bond-Modus]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+1
+ a| 
+Alle verbundenen Ports werden in einer einzelnen LACP Bond gruppiert, sodass alle Ports für den Grid-Netzwerk- und Client-Netzwerk-Datenverkehr verwendet werden können.
+
+|===
+Wenn Sie planen, den aggregierten Port Bond-Modus zu verwenden:
+
+* Sie müssen LACP Network Bond-Modus verwenden.
+* Sie müssen für jedes Netzwerk ein eindeutiges VLAN-Tag angeben. Dieses VLAN-Tag wird zu jedem Netzwerkpaket hinzugefügt, um sicherzustellen, dass der Netzwerkverkehr an das richtige Netzwerk weitergeleitet wird.
+* Die Ports müssen mit Switches verbunden sein, die VLAN und LACP unterstützen können. Wenn mehrere Switches an der LACP-Verbindung beteiligt sind, müssen die Switches MLAG (Multi-Chassis Link Aggregation Groups) oder eine vergleichbare Position unterstützen.
+* Sie wissen, wie Sie die Switches für die Verwendung von VLAN, LACP und MLAG oder gleichwertig konfigurieren.
+
+
+Wenn Sie nicht alle vier 10/25-GbE-Ports verwenden möchten, können Sie einen, zwei oder drei Ports verwenden. Durch die Verwendung mehrerer Ports wird die Wahrscheinlichkeit maximiert, dass einige Netzwerkverbindungen verfügbar bleiben, wenn einer der 10/25-GbE-Ports ausfällt.
+
+
+NOTE: Wenn Sie weniger als vier Ports verwenden, beachten Sie, dass nach der Installation von StorageGRID ein oder mehrere Alarme im Grid Manager angehoben werden, was darauf hinweist, dass die Kabel nicht angeschlossen sind. Sie können die Alarme sicher bestätigen, um sie zu löschen.
+
+
+
+=== Netzwerk-Bond-Modi für 1-GbE-Management-Ports
+
+Für die beiden 1-GbE-Management-Ports des SG6000-CN-Controllers können Sie den unabhängigen Netzwerk-Bond-Modus oder den aktiv-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen.
+
+Im Independent-Modus ist nur der Management-Port links mit dem Admin-Netzwerk verbunden. Dieser Modus stellt keinen redundanten Pfad bereit. Der Management Port auf der rechten Seite ist nicht verbunden und für temporäre lokale Verbindungen verfügbar (verwendet IP-Adresse 169.254.0.1)
+
+Im Active-Backup-Modus sind beide Management-Ports mit dem Admin-Netzwerk verbunden. Es ist jeweils nur ein Port aktiv. Wenn der aktive Port ausfällt, stellt sein Backup-Port automatisch eine Failover-Verbindung bereit. Die Verbindung dieser beiden physischen Ports zu einem logischen Management-Port bietet einen redundanten Pfad zum Admin-Netzwerk.
+
+
+NOTE: Wenn Sie eine temporäre lokale Verbindung zum SG6000-CN-Controller herstellen müssen, wenn die 1-GbE-Management-Ports für den aktiv-Backup-Modus konfiguriert sind, entfernen Sie die Kabel von beiden Management-Ports, schließen Sie das temporäre Kabel an den Managementport auf der rechten Seite an und greifen Sie über die IP-Adresse 169.254.0 auf das Gerät zu.
+
+image::../media/sg6000_cn_bonded_managemente_ports.png[1-GbE-Ports]
+
+[cols="1a,3a"]
+|===
+| Legende | Netzwerk-Bond-Modus 
+
+
+ a| 
+A
+ a| 
+Beide Management-Ports sind mit einem logischen Management-Port verbunden, der mit dem Admin-Netzwerk verbunden ist.
+
+
+
+ a| 
+ICH
+ a| 
+Der Port auf der linken Seite ist mit dem Admin-Netzwerk verbunden. Der Anschluss rechts ist für temporäre lokale Verbindungen verfügbar (IP-Adresse 169.254.0.1).
+
+|===
+.Verwandte Informationen
+* link:../installconfig/hardware-description-sg6000.html#sg6000-controllers["SG6000 Controller"]
+* link:../installconfig/reviewing-appliance-network-connections.html["Appliance-Netzwerkverbindungen ermitteln"]
+* link:../installconfig/gathering-installation-information-sg6000.html#port-bond-modes["Port-Bond-Modi (SG6000-CN-Controller)"]
+* link:cabling-appliance.html["Kabelgerät"]
+* link:../installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"]
+

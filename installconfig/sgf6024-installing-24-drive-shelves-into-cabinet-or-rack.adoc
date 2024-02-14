@@ -1,0 +1,54 @@
+---
+permalink: installconfig/sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, drive shelf, drive shelves, 24-drive, shelf, shelves, rail, rails 
+summary: Sie installieren einen Satz Schienen für das EF570 Controller-Shelf in Ihrem Schrank oder Rack und schieben das Array dann auf die Schienen. 
+---
+= Shelfs mit 24 Laufwerken installieren (SGF6024)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie installieren einen Satz Schienen für das EF570 Controller-Shelf in Ihrem Schrank oder Rack und schieben das Array dann auf die Schienen.
+
+.Bevor Sie beginnen
+* Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
+* Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
+
+
+.Schritte
+. Befolgen Sie die Anweisungen für den Schienensatz, um die Schienen in Ihrem Schrank oder Rack zu installieren.
++
+Bei Vierkantlochschränken zuerst die mitgelieferten Käfigmuttern einbauen, um die Vorder- und Rückseite des Regals mit Schrauben zu sichern.
+
+. Entfernen Sie den äußeren Verpackungskasten für das Gerät. Falten Sie dann die Klappen auf dem inneren Kasten nach unten.
+. Setzen Sie die Rückseite des Regals (das Ende mit den Anschlüssen) auf die Schienen.
++
+
+CAUTION: Ein voll beladenes Regal wiegt etwa 24 kg (52 lb). Zum sicheren Bewegen des Gehäuses sind zwei Personen erforderlich.
+
+. Schieben Sie das Gehäuse vorsichtig ganz auf die Schienen.
++
+
+CAUTION: Möglicherweise müssen Sie die Schienen anpassen, um sicherzustellen, dass das Gehäuse den ganzen Weg auf die Schienen führt.
+
++
+
+CAUTION: Stellen Sie keine zusätzlichen Geräte auf die Schienen, nachdem Sie die Installation des Gehäuses abgeschlossen haben. Die Schienen sind nicht für zusätzliches Gewicht ausgelegt.
+
++
+
+NOTE: Falls zutreffend, müssen Sie die Shelf-Endkappen oder die Systemverkleidung entfernen, um das Gehäuse am Rack-Beitrag zu befestigen. In diesem Fall müssen Sie die Endkappen oder die Blende austauschen, wenn Sie fertig sind.
+
+. Befestigen Sie das Gehäuse an der Vorderseite des Schranks oder Racks und Schienen, indem Sie zwei M5-Schrauben durch die Befestigungshalterungen (vorinstalliert auf beiden Seiten des Gehäuses), die Löcher am Rack oder am Systemschrank und die Löcher auf der Vorderseite der Schienen einsetzen.
++
+image::../media/secure_shelf.png[Sicheres Regal an der Vorderseite des Schranks]
+
+. Befestigen Sie das Gehäuse an der Rückseite der Schienen, indem Sie zwei M5-Schrauben durch die Halterungen am Gehäuse und an der Halterung des Schienensatz einsetzen.
+. Ersetzen Sie gegebenenfalls die Shelf-Abschlusskappen oder die Systemblende.
++
+image::../media/install_endcaps.png[Die Endkappen Des Regals Ersetzen]
+
+

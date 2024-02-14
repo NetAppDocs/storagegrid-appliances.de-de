@@ -1,0 +1,33 @@
+---
+permalink: sg6000/upgrading-santricity-os-on-storage-controllers.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
+summary: Um die optimale Funktion des Storage Controllers sicherzustellen, müssen Sie auf die neueste Wartungsversion des SANtricity-Betriebssystems aktualisieren, das für Ihre StorageGRID Appliance geeignet ist. 
+---
+= Upgrade des SANtricity Betriebssystems auf SG6000 Storage-Controllern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die optimale Funktion des Storage Controllers sicherzustellen, müssen Sie auf die neueste Wartungsversion des SANtricity-Betriebssystems aktualisieren, das für Ihre StorageGRID Appliance geeignet ist.
+
+Konsultieren Sie die https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um zu bestimmen, welche Version Sie verwenden sollen.
+
+Laden Sie die neue Datei für die SANtricity OS Software von herunter https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^].
+
+Verwenden Sie eines der folgenden Verfahren, das auf der derzeit installierten Version von SANtricity OS basiert:
+
+* Wenn der Storage-Controller SANtricity OS 08.42.20.00 (11.42) oder eine neuere Version verwendet, führen Sie das Upgrade mit dem Grid Manager durch.
++
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html["Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager"]
+
+* Wenn der Storage-Controller eine SANtricity OS-Version verwendet, die älter als 08.42.20.00 ist (11.42), führen Sie das Upgrade im Wartungsmodus durch.
++
+link:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html["Aktualisieren Sie das SANtricity OS auf Storage Controllern mit dem Wartungsmodus"]
+
+
+
+
+CAUTION: Wenn Sie ein Upgrade des SANtricity-Betriebssystems für Ihre Storage Appliance durchführen, müssen Sie die Anweisungen in der StorageGRID-Dokumentation befolgen. Wenn Sie andere Anweisungen verwenden, kann das Gerät nicht mehr funktionieren.

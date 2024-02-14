@@ -1,0 +1,44 @@
+---
+permalink: installconfig/sg6000-cn-installing-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6000-cn, rail, rails 
+summary: Sie installieren einen Satz Schienen für den SG6000-CN Controller in Ihrem Schrank oder Rack und schieben den Controller dann auf die Schienen. 
+---
+= Installieren des SG6000-CN Controllers (SG6060 und SG6024)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie installieren einen Satz Schienen für den SG6000-CN Controller in Ihrem Schrank oder Rack und schieben den Controller dann auf die Schienen.
+
+.Bevor Sie beginnen
+* Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
+* Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
+* Sie haben das E2860 Controller-Shelf und -Laufwerke oder das EF570 Controller-Shelf installiert.
+
+
+.Schritte
+. Befolgen Sie die Anweisungen für den Schienensatz, um die Schienen in Ihrem Schrank oder Rack zu installieren.
+. Verlängern Sie auf den beiden Schienen, die im Schrank oder Rack installiert sind, die beweglichen Teile der Schienen, bis Sie ein Klicken hören.
++
+image::../media/rails_extended_out.gif[SG6000-Schienen]
+
+. Setzen Sie den SG6000-CN-Controller in die Schienen ein.
+. Schieben Sie den Controller in den Schrank oder Rack.
++
+Wenn Sie den Controller nicht weiter bewegen können, ziehen Sie die blauen Laschen auf beiden Seiten des Chassis, um den Controller vollständig einzuschieben.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 Schieben auf Schienen]
+
++
+
+NOTE: Bringen Sie die Frontverkleidung erst an, nachdem Sie den Controller eingeschaltet haben.
+
+. Ziehen Sie die unverlierbaren Schrauben an der Vorderseite des Controllers fest, um den Controller im Rack zu befestigen.
++
+image::../media/sg6060_rack_retaining_screws.png[Befestigungsschrauben des SG6060-Racks]
+
+

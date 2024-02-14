@@ -1,0 +1,67 @@
+---
+permalink: installconfig/configuring-hardware.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, hardware, configure, configuration, set up, setup, network, networking 
+summary: Nachdem Sie die Appliance mit Strom versorgt haben, konfigurieren Sie die Netzwerkverbindungen, die von StorageGRID verwendet werden.  
+---
+= Hardware einrichten: Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die Appliance mit Strom versorgt haben, konfigurieren Sie die Netzwerkverbindungen, die von StorageGRID verwendet werden.
+
+
+
+== Konfigurieren Sie die erforderlichen Netzwerkverbindungen
+
+Bei allen Appliances führen Sie mehrere Aufgaben zur Konfiguration erforderlicher Netzwerkverbindungen aus, z. B.:
+
+* Greifen Sie auf den Appliance Installer zu
+* Netzwerkverbindungen konfigurieren
+* Überprüfen Sie Netzwerkverbindungen auf Portebene
+
+
+
+
+== Zusätzliche Konfiguration, die möglicherweise erforderlich ist
+
+Je nachdem, welche Gerätetypen Sie konfigurieren, ist möglicherweise eine zusätzliche Hardwarekonfiguration erforderlich.
+
+
+
+=== SANtricity System Manager
+
+Für SG6000 und SG5700 konfigurieren Sie SANtricity System Manager. Die SANtricity-Software wird verwendet, um die Hardware für diese Appliances zu überwachen.
+
+
+
+=== BMC Schnittstelle
+
+Die folgenden Geräte verfügen über eine BMC-Schnittstelle, die konfiguriert werden muss:
+
+* SG100
+* SG1000
+* SG6000
+* SG6100
+
+
+
+
+== Optionale Konfiguration
+
+* Storage Appliances
++
+** Konfigurieren Sie SANtricity System Manager (SG5700 und SG6000) für die Hardware-Überwachung
+** Ändern Sie den RAID-Modus
+** Greifen Sie auf die BMC-Schnittstelle für den SG6000-CN-Controller zu
+
+
+* Service-Appliances
++
+** Greifen Sie auf die BMC-Schnittstelle für das SG100 oder SG1000 zu
+
+
+

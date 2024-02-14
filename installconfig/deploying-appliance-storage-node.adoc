@@ -1,0 +1,115 @@
+---
+permalink: installconfig/deploying-appliance-storage-node.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, deploy node, deploying node, node, deploy, deploying 
+summary: Nach der Installation und Konfiguration der Storage Appliance können Sie sie als Storage Node in einem StorageGRID System bereitstellen. Wenn Sie eine Appliance als Speicherknoten bereitstellen, verwenden Sie das StorageGRID-Appliance-Installationsprogramm, das in der Appliance enthalten ist. 
+---
+= Appliance-Storage-Node implementieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Installation und Konfiguration der Storage Appliance können Sie sie als Storage Node in einem StorageGRID System bereitstellen. Wenn Sie eine Appliance als Speicherknoten bereitstellen, verwenden Sie das StorageGRID-Appliance-Installationsprogramm, das in der Appliance enthalten ist.
+
+.Bevor Sie beginnen
+* Wenn Sie einen Appliance-Node klonen, fahren Sie mit fort link:../commonhardware/appliance-node-cloning-procedure.html["Klonen von Appliance-Nodes"] Prozess.
+* Das Gerät wurde in einem Rack oder Schrank installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
+* Mithilfe des Installationsprogramms der StorageGRID Appliance wurden Netzwerkverbindungen, IP-Adressen und (falls erforderlich) die Port-Neuzuordnung für die Appliance konfiguriert.
+* Sie kennen eine der IP-Adressen, die dem Computing-Controller der Appliance zugewiesen sind. Sie können die IP-Adresse für jedes angeschlossene StorageGRID-Netzwerk verwenden.
+* Der primäre Admin-Node für das StorageGRID System wurde bereitgestellt.
+* Alle Grid-Subnetze, die auf der Seite IP-Konfiguration des Installationsprogramms für StorageGRID-Geräte aufgeführt sind, wurden in der Netznetzwerksubnetz-Liste auf dem primären Admin-Node definiert.
+* Sie verfügen über einen Service-Laptop mit einem unterstützten Webbrowser.
+
+
+.Über diese Aufgabe
+Jede Storage Appliance arbeitet als einzelner Storage-Node. Jede Appliance kann eine Verbindung zum Grid-Netzwerk, dem Admin-Netzwerk und dem Client-Netzwerk herstellen
+
+Um einen Appliance-Speicherknoten in einem StorageGRID-System bereitzustellen, greifen Sie auf das Installationsprogramm der StorageGRID-Appliance zu und führen Sie die folgenden Schritte aus:
+
+* Sie geben die IP-Adresse des primären Admin-Knotens und den Namen des Speicherknoten an oder bestätigen sie.
+* Sie starten die Implementierung und warten, bis die Volumes konfiguriert und die Software installiert ist.
+* Wenn die Installation die Installationsaufgaben der Appliance gemeinsam durchlaufen hat, setzen Sie die Installation fort, indem Sie sich beim Grid Manager anmelden, alle Grid-Nodes genehmigen und den Installations- und Implementierungsprozess von StorageGRID abschließen.
+
+
+
+NOTE: Wenn Sie mehrere Appliance-Nodes gleichzeitig implementieren müssen, können Sie den Installationsprozess mithilfe des automatisieren `configure-sga.py` Installationsskript für Geräte.
+
+* Wenn Sie eine Erweiterung oder Wiederherstellung durchführen, befolgen Sie die entsprechenden Anweisungen:
++
+** Informationen zum Hinzufügen eines Appliance-Storage-Knotens zu einem vorhandenen StorageGRID-System finden Sie in den Anweisungen für https://docs.netapp.com/us-en/storagegrid-118/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["Grid-Nodes werden hinzugefügt"^].
+** Informationen zum Bereitstellen eines Appliance Storage Node als Teil eines Wiederherstellungsvorgangs finden Sie in den Anweisungen https://docs.netapp.com/us-en/storagegrid-118/maintain/recovering-storagegrid-appliance-storage-node.html["Wiederherstellen eines Appliance Storage Node"^].
+
+
+
+
+.Schritte
+. Öffnen Sie einen Browser, und geben Sie eine der IP-Adressen für den Computing-Controller der Appliance ein. +
+`*https://_Controller_IP_:8443*`
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
+
++
+image::../media/appliance_installer_home_start_installation_enabled.gif[Homepage des Appliance Installer für andere Node-Typen (außer Admin-Nodes)]
+
+. Legen Sie im Abschnitt * Primary Admin Node Connection* fest, ob Sie die IP-Adresse für den primären Admin Node angeben müssen.
++
+Wenn Sie zuvor andere Knoten in diesem Rechenzentrum installiert haben, kann der StorageGRID-Appliance-Installer diese IP-Adresse automatisch erkennen, vorausgesetzt, dass der primäre Admin-Knoten oder mindestens ein anderer Grid-Node mit ADMIN_IP konfiguriert ist, im selben Subnetz vorhanden ist.
+
+. Wenn diese IP-Adresse nicht angezeigt wird oder Sie sie ändern müssen, geben Sie die Adresse an:
++
+[cols="1a,2a"]
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Manuelle IP-Eingabe
+ a| 
+.. Deaktivieren Sie das Kontrollkästchen *Admin-Node-Erkennung aktivieren*.
+.. Geben Sie die IP-Adresse manuell ein.
+.. Klicken Sie Auf *Speichern*.
+.. Warten Sie, bis der Verbindungsstatus bereit ist, bis die neue IP-Adresse einsatzbereit ist.
+
+
+
+
+ a| 
+Automatische Erkennung aller verbundenen primären Admin-Nodes
+ a| 
+.. Aktivieren Sie das Kontrollkästchen *Admin-Node-Erkennung aktivieren*.
+.. Warten Sie, bis die Liste der erkannten IP-Adressen angezeigt wird.
+.. Wählen Sie den primären Admin-Node für das Grid aus, in dem dieser Appliance-Speicher-Node bereitgestellt werden soll.
+.. Klicken Sie Auf *Speichern*.
+.. Warten Sie, bis der Verbindungsstatus bereit ist, bis die neue IP-Adresse einsatzbereit ist.
+
+
+|===
+. Geben Sie im Feld *Node Name* den Systemnamen ein, den Sie für diesen Appliance-Knoten verwenden möchten, und klicken Sie auf *Save*.
++
+Der Name, der hier angezeigt wird, ist der Systemname des Appliance-Node. Systemnamen sind für interne StorageGRID-Vorgänge erforderlich und können nicht geändert werden.
+
+. Bestätigen Sie im Abschnitt *Installation*, dass der aktuelle Status „bereit zum Starten der Installation von ist `_node name_` In das Grid mit primärem Admin-Node `_admin_ip_` " Und dass die Schaltfläche *Installation starten* aktiviert ist.
++
+Wenn die Schaltfläche *Installation starten* nicht aktiviert ist, müssen Sie möglicherweise die Netzwerkkonfiguration oder die Porteinstellungen ändern. Anweisungen hierzu finden Sie in der Wartungsanleitung Ihres Geräts.
+
++
+
+NOTE: Wenn Sie die Storage Node-Appliance als Ziel für das Klonen von Nodes bereitstellen, beenden Sie den Bereitstellungsprozess hier, und fahren Sie mit fort
+link:../commonhardware/appliance-node-cloning-procedure.html["Node-Klonen"].
+
+. Klicken Sie auf der Startseite des StorageGRID-Appliance-Installationsprogramms auf *Installation starten*.
++
+Der aktuelle Status ändert sich in „`Installation is in progress,`“ und die Seite Monitor Installation wird angezeigt.
+
++
+
+NOTE: Wenn Sie manuell auf die Seite Monitor Installation zugreifen müssen, klicken Sie auf *Monitor Installation*.
+
+. Wenn in Ihrem Grid mehrere Speicherknoten für Geräte enthalten sind, wiederholen Sie diese Schritte für jede Appliance.
++
+
+NOTE: Wenn Sie mehrere Appliance Storage Nodes gleichzeitig bereitstellen müssen, können Sie den Installationsprozess mithilfe des automatisieren `configure-sga.py` Installationsskript für Geräte.
+
+

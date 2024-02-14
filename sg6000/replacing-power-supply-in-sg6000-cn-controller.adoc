@@ -1,0 +1,52 @@
+---
+permalink: sg6000/replacing-power-supply-in-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, power supply, remove, removing, removal, install, installing, installation 
+summary: Der SG6000-CN Controller verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich ersetzen, um sicherzustellen, dass der Compute-Controller über redundante Stromversorgung verfügt. 
+---
+= Ersetzen Sie das Netzteil im SG6000-CN-Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der SG6000-CN Controller verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich ersetzen, um sicherzustellen, dass der Compute-Controller über redundante Stromversorgung verfügt.
+
+
+NOTE: Beide Netzteile müssen die gleiche Nennleistung aufweisen. Informationen zum Austauschen beider Netzteile finden Sie unter link:replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html["Austauschen beider Netzteile im SG6000-CN-Controller"].
+
+.Bevor Sie beginnen
+* Sie haben das Ersatznetzteil entpackt.
+* Sie befinden sich physisch auf dem Controller, an dem das Netzteil im Datacenter ersetzt wird.
++
+link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+
+* Sie haben bestätigt, dass das andere Netzteil installiert ist und in Betrieb ist.
+
+
+.Über diese Aufgabe
+Die Abbildung zeigt die beiden Netzteile des SG6000-CN Controllers, auf die über die Rückseite des Controllers zugegriffen werden kann.
+
+image::../media/sg6000_cn_power_supplies.gif[Rückseite des SG6000-CN mit zwei Netzteilen]
+
+.Schritte
+. Ziehen Sie das Netzkabel vom Netzteil ab.
+. Heben Sie den Nockengriff an.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Nockengriff anheben, um das SG6000-CN-Netzteil zu entfernen]
+
+. Drücken Sie auf den blauen Riegel, und ziehen Sie das Netzteil heraus.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Entfernen Sie das SG6000-CN-Netzteil]
+
+. Schieben Sie das Ersatznetzteil in das Gehäuse.
++
+Stellen Sie sicher, dass sich der blaue Riegel auf der rechten Seite befindet, wenn Sie das Gerät einschieben.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Schieben Sie das Netzteil in das SG6000-CN]
+
+. Drücken Sie den Nockengriff nach unten, um die Stromversorgung zu sichern.
+. Schließen Sie das Netzkabel an das Netzteil an, und stellen Sie sicher, dass die grüne LED leuchtet.
+

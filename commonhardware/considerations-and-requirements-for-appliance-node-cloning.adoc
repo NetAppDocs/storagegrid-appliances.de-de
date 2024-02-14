@@ -1,0 +1,66 @@
+---
+permalink: commonhardware/considerations-and-requirements-for-appliance-node-cloning.html 
+sidebar: sidebar 
+keywords: storagegrid, clone appliance node, cloning appliance node 
+summary: Vor dem Klonen eines Appliance-Nodes müssen Sie die Überlegungen und Anforderungen verstehen. 
+---
+= Überlegungen und Anforderungen zum Klonen von Appliance-Nodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor dem Klonen eines Appliance-Nodes müssen Sie die Überlegungen und Anforderungen verstehen.
+
+
+
+== Hardwareanforderungen für die Ersatz-Appliance
+
+Stellen Sie sicher, dass das Ersatzgerät die folgenden Kriterien erfüllt:
+
+* Der Quell-Node (eine Appliance, die ersetzt wird) und das Ziel-Appliance müssen denselben Appliance-Typ sein:
++
+** Sie können eine Admin-Node-Appliance oder eine Gateway-Node-Appliance nur auf einer neuen Services-Appliance klonen.
+** Sie können eine Storage-Node-Appliance nur auf einer neuen Storage Appliance klonen.
+
+
+* Bei Admin-Node- oder Gateway-Node-Appliances müssen die Quell-Node-Appliance und die Ziel-Appliance nicht den gleichen Gerätetyp aufweisen. Bei einer Änderung des Gerätetyps müssen jedoch möglicherweise die Kabel oder SFP-Module ausgetauscht werden.
++
+Sie können beispielsweise eine SG1000-Node-Appliance durch ein SG100 ersetzen oder eine SG100-Appliance durch eine SG1000-Appliance ersetzen.
+
+* Bei Storage-Node-Appliances müssen die Quell-Node-Appliance und die Ziel-Appliance nicht denselben Appliance-Typ aufweisen. Die Ziel-Appliance muss jedoch über eine größere Speicherkapazität verfügen als die Quell-Appliance.
++
+Beispielsweise kann eine SG5700 Node Appliance durch eine SG6000 Appliance ersetzt werden.
+
+
+
+Wenden Sie sich an Ihren StorageGRID Vertriebsmitarbeiter, wenn Sie Unterstützung bei der Auswahl kompatibler Ersatzgeräte benötigen, um bestimmte Appliance-Nodes in Ihrer StorageGRID Installation zu klonen.
+
+
+
+== Das Klonen eines Appliance-Nodes wird vorbereitet
+
+Vor dem Klonen eines Appliance-Node müssen Sie folgende Informationen haben:
+
+* Beziehen Sie eine temporäre IP-Adresse für das Grid-Netzwerk von Ihrem Netzwerkadministrator zur Verwendung mit der Ziel-Appliance während der ersten Installation. Wenn der Quellknoten zu einem Admin-Netzwerk oder Client-Netzwerk gehört, erhalten Sie temporäre IP-Adressen für diese Netzwerke.
++
+Temporäre IP-Adressen befinden sich normalerweise im selben Subnetz wie die zu klonende Quell-Node-Appliance und sind nach Abschluss des Klonens nicht erforderlich. Die Quell- und Ziel-Appliances müssen eine Verbindung zu dem primären Admin-Node Ihrer StorageGRID herstellen, um eine Klonverbindung herzustellen.
+
+* Bestimmung des Netzwerks zum Klonen von Datenübertragungsdaten, das die beste Performance bei der Datenübertragung bietet, ohne die Leistung des StorageGRID-Netzwerks oder die Datenverfügbarkeit zu beeinträchtigen
++
+
+NOTE: Die Verwendung des 1-GbE-Admin-Netzwerks für die Übertragung von Klondaten führt zu langsamerem Klonen.
+
+* Ermitteln, ob die Node-Verschlüsselung mithilfe eines Verschlüsselungsmanagement-Servers (KMS) auf der Ziel-Appliance verwendet wird, damit die Node-Verschlüsselung während der Erstinstallation der Ziel-Appliance vor dem Klonen aktiviert werden kann. Sie können prüfen, ob die Knotenverschlüsselung auf dem Quell-Appliance-Node aktiviert ist, wie in beschrieben link:../installconfig/optional-enabling-node-encryption.html["Aktivieren der Node-Verschlüsselung"].
++
+Der Quell- und die Ziel-Appliance können unterschiedliche Node-Verschlüsselungseinstellungen aufweisen. Die Entschlüsselung und Verschlüsselung der Daten erfolgt automatisch während des Datentransfers und beim Neustart des Ziel-Nodes und Beitritt zum Grid.
+
+* Ermitteln Sie, ob der RAID-Modus auf der Ziel-Appliance von der Standardeinstellung geändert werden soll, damit Sie diese Informationen bei der Erstinstallation der Ziel-Appliance vor dem Klonen angeben können. Auf der Seite *NODES* im Grid Manager können Sie Informationen zum aktuellen RAID-Modus des Quell-Appliance-Knotens anzeigen. Wählen Sie die Registerkarte * Storage* für das Gerät aus.
++
+Der Quell- und die Ziel-Appliance können unterschiedliche RAID-Einstellungen aufweisen.
+
+* Planen Sie ausreichend Zeit, um den Node-Klonprozess abzuschließen. Für den Datentransfer von einem betrieblichen Storage Node zu einer Ziel-Appliance sind möglicherweise mehrere Tage erforderlich. Planen Sie das Klonen zu einer Zeit, die die Auswirkungen auf Ihr Geschäft minimiert.
+* Sie sollten jeweils nur einen Appliance-Node klonen. Durch Klonen wird verhindert, dass Sie weitere StorageGRID-Wartungsarbeiten gleichzeitig ausführen.
+* Nachdem Sie einen Appliance-Node geklont haben, können Sie die Quell-Appliance verwenden, die zu einem Installationszustand zurückgeschickt wurde, als Ziel, eine weitere kompatible Node-Appliance zu klonen.
+

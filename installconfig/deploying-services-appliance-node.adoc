@@ -1,0 +1,196 @@
+---
+permalink: installconfig/deploying-services-appliance-node.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, deploy node, deploying node, node, deploy, deploying, primary, primary admin node, non-primary admin node, non-primary 
+summary: 'Sie können eine Services-Appliance als primären Admin-Node, als nicht-primärer Admin-Node oder als Gateway-Node bereitstellen. Alle Services-Appliances können gleichzeitig als Gateway-Nodes und Admin-Nodes \(primär oder nicht primär\) betrieben werden.' 
+---
+= Implementieren des Services-Appliance-Nodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Services-Appliance als primären Admin-Node, als nicht-primärer Admin-Node oder als Gateway-Node bereitstellen. Alle Service-Appliances können als Gateway-Nodes und Admin-Nodes (primär oder nicht primär) gleichzeitig ausgeführt werden.
+
+
+
+== Services-Appliance als primärer Admin-Node bereitstellen
+
+Wenn Sie eine Services-Appliance als primären Administratorknoten bereitstellen, verwenden Sie das auf der Appliance enthaltene StorageGRID-Appliance-Installationsprogramm, um die StorageGRID-Software zu installieren, oder Sie laden die gewünschte Softwareversion hoch. Sie müssen den primären Admin-Node installieren und konfigurieren, bevor Sie andere Node-Typen installieren. Ein primärer Admin-Node kann eine Verbindung mit dem Grid-Netzwerk und dem optionalen Admin-Netzwerk und dem Client-Netzwerk herstellen, wenn ein oder beide konfiguriert sind.
+
+.Bevor Sie beginnen
+* Das Gerät wurde in einem Rack oder Schrank installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
+* Mithilfe des Installationsprogramms der StorageGRID Appliance wurden Netzwerkverbindungen, IP-Adressen und (falls erforderlich) die Port-Neuzuordnung für die Appliance konfiguriert.
+* Sie haben einen Service-Laptop mit einem https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie kennen eine der IP-Adressen, die der Appliance zugewiesen sind. Sie können die IP-Adresse für jedes angeschlossene StorageGRID-Netzwerk verwenden.
+
+
+.Über diese Aufgabe
+So installieren Sie StorageGRID auf einem primären Administrator-Node einer Appliance:
+
+* Sie verwenden das Installationsprogramm für StorageGRID-Appliances, um die StorageGRID-Software zu installieren. Wenn Sie eine andere Version der Software installieren möchten, laden Sie sie zuerst mithilfe des StorageGRID-Appliance-Installationsprogramms hoch.
+* Sie warten, bis die Software installiert ist.
+* Nach der Installation der Software wird die Appliance automatisch neu gestartet.
+
+
+.Schritte
+. Öffnen Sie einen Browser, und geben Sie die IP-Adresse für das Gerät ein. +
+`*https://_services_appliance_IP_:8443*`
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
+
+. Wählen Sie im Abschnitt *dieser Knoten* die Option *Hauptadministrator* aus.
+. Geben Sie im Feld *Knotenname* den Namen ein, den Sie für diesen Appliance-Knoten verwenden möchten, und klicken Sie auf *Speichern*.
++
+Der Node-Name wird diesem Appliance-Node im StorageGRID-System zugewiesen. Sie wird auf der Seite Grid Nodes im Grid Manager angezeigt.
+
+. Führen Sie optional folgende Schritte aus, um eine andere Version der StorageGRID-Software zu installieren:
++
+.. Laden Sie das Installationsarchiv herunter:
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^]
+
+.. Extrahieren Sie das Archiv.
+.. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *StorageGRID-Software hochladen*.
+.. Klicken Sie auf *Entfernen*, um das aktuelle Softwarepaket zu entfernen.
++
+image::../media/appliance_installer_rmv_current_software.png[Appliance Installer - Aktuelle Software Entfernen]
+
+.. Klicken Sie auf *Durchsuchen* für das Softwarepaket, das Sie heruntergeladen und extrahiert haben, und klicken Sie dann auf *Durchsuchen* für die Prüfsummendatei.
++
+image::../media/appliance_installer_upload_sg_software.png[Appliance Installer – SG-Software hochladen]
+
+.. Wählen Sie *Home*, um zur Startseite zurückzukehren.
+
+
+. Vergewissern Sie sich, dass der aktuelle Status „`bereit ist, die Installation des primären Admin Node-Namens mit der Softwareversion x.y` zu starten und dass die Schaltfläche *Installation starten* aktiviert ist.
++
+
+NOTE: Wenn Sie die Admin-Node-Appliance als Ziel für das Klonen von Nodes bereitstellen, beenden Sie den Bereitstellungsprozess hier, und fahren Sie mit fort link:../commonhardware/appliance-node-cloning-procedure.html["Node-Klonen"].
+
+. Klicken Sie auf der Startseite des StorageGRID-Appliance-Installationsprogramms auf *Installation starten*.
++
+image::../media/appliance_installer_home_start_installation_enabled_primary_an.png[Installation Des Primären Admin-Knotens Der Appliance]
+
++
+Der aktuelle Status ändert sich in „`Installation is in progress,`“ und die Seite Monitor Installation wird angezeigt.
+
++
+
+NOTE: Wenn Sie manuell auf die Seite Monitor-Installation zugreifen müssen, klicken Sie in der Menüleiste auf *Monitor-Installation*.
+
+
+
+
+
+== Services-Appliance als Gateway oder nicht-primärer Admin-Node implementieren
+
+Wenn Sie eine Services-Appliance als Gateway-Node oder als nicht-primärer Admin-Node bereitstellen, verwenden Sie das Installationsprogramm für StorageGRID-Appliances, das in der Appliance enthalten ist.
+
+.Bevor Sie beginnen
+* Das Gerät wurde in einem Rack oder Schrank installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
+* Mithilfe des Installationsprogramms der StorageGRID Appliance wurden Netzwerkverbindungen, IP-Adressen und (falls erforderlich) die Port-Neuzuordnung für die Appliance konfiguriert.
+* Der primäre Admin-Node für das StorageGRID System wurde bereitgestellt.
+* Alle Grid-Subnetze, die auf der Seite IP-Konfiguration des Installationsprogramms für StorageGRID-Geräte aufgeführt sind, wurden in der Netznetzwerksubnetz-Liste auf dem primären Admin-Node definiert.
+* Sie haben einen Service-Laptop mit einem https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie kennen die IP-Adresse, die der Appliance zugewiesen ist. Sie können die IP-Adresse für jedes angeschlossene StorageGRID-Netzwerk verwenden.
+
+
+.Über diese Aufgabe
+So installieren Sie StorageGRID auf einem Services Appliance-Node:
+
+* Sie geben die IP-Adresse des primären Admin-Knotens und den Namen des Appliance-Nodes an oder bestätigen sie.
+* Sie starten die Installation und warten, bis die Software installiert ist.
++
+Die Installation wird durch die Installationsaufgaben für den Gateway Node der Appliance partway angehalten. Um die Installation fortzusetzen, melden Sie sich beim Grid Manager an, genehmigen alle Grid-Nodes und schließen den StorageGRID-Installationsprozess ab. Für die Installation eines nicht primären Admin-Knotens ist keine Genehmigung erforderlich.
+
+
+
+
+NOTE: Implementieren Sie SG100- und SG1000-Service-Appliances nicht am selben Standort. Das kann zu einer unvorhersehbaren Performance führen.
+
+
+NOTE: Wenn Sie mehrere Appliance-Nodes gleichzeitig implementieren müssen, können Sie den Installationsprozess automatisieren. Siehe link:automating-appliance-installation-and-configuration.html["Automatisierung der Appliance-Installation und -Konfiguration"].
+
+.Schritte
+. Öffnen Sie einen Browser, und geben Sie die IP-Adresse für das Gerät ein.
++
+`*https://_Controller_IP_:8443*`
+
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
+
+. Legen Sie im Abschnitt primäre Administratorknoten-Verbindung fest, ob Sie die IP-Adresse für den primären Admin-Node angeben müssen.
++
+Wenn Sie zuvor andere Knoten in diesem Rechenzentrum installiert haben, kann der StorageGRID-Appliance-Installer diese IP-Adresse automatisch erkennen, vorausgesetzt, dass der primäre Admin-Knoten oder mindestens ein anderer Grid-Node mit ADMIN_IP konfiguriert ist, im selben Subnetz vorhanden ist.
+
+. Wenn diese IP-Adresse nicht angezeigt wird oder Sie sie ändern müssen, geben Sie die Adresse an:
++
+[cols="1a,2a"]
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Manuelle IP-Eingabe
+ a| 
+.. Deaktivieren Sie das Kontrollkästchen *Admin-Node-Erkennung aktivieren*.
+.. Geben Sie die IP-Adresse manuell ein.
+.. Klicken Sie Auf *Speichern*.
+.. Warten Sie, bis der Verbindungsstatus bereit ist, bis die neue IP-Adresse einsatzbereit ist.
+
+
+
+
+ a| 
+Automatische Erkennung aller verbundenen primären Admin-Nodes
+ a| 
+.. Aktivieren Sie das Kontrollkästchen *Admin-Node-Erkennung aktivieren*.
+.. Warten Sie, bis die Liste der erkannten IP-Adressen angezeigt wird.
+.. Wählen Sie den primären Admin-Node für das Grid aus, in dem dieser Appliance-Speicher-Node bereitgestellt werden soll.
+.. Klicken Sie Auf *Speichern*.
+.. Warten Sie, bis der Verbindungsstatus bereit ist, bis die neue IP-Adresse einsatzbereit ist.
+
+
+|===
+. Geben Sie im Feld *Node Name* den Systemnamen ein, den Sie für diesen Appliance-Knoten verwenden möchten, und klicken Sie auf *Save*.
++
+Der Name, der hier angezeigt wird, ist der Systemname des Appliance-Node. Systemnamen sind für interne StorageGRID-Vorgänge erforderlich und können nicht geändert werden.
+
+. Führen Sie optional folgende Schritte aus, um eine andere Version der StorageGRID-Software zu installieren:
++
+.. Laden Sie das Installationsarchiv herunter:
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^]
+
+.. Extrahieren Sie das Archiv.
+.. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *StorageGRID-Software hochladen*.
+.. Klicken Sie auf *Entfernen*, um das aktuelle Softwarepaket zu entfernen.
++
+image::../media/appliance_installer_rmv_current_software.png[Appliance Installer - Aktuelle Software Entfernen]
+
+.. Klicken Sie auf *Durchsuchen* für das Softwarepaket, das Sie heruntergeladen und extrahiert haben, und klicken Sie dann auf *Durchsuchen* für die Prüfsummendatei.
++
+image::../media/appliance_installer_upload_sg_software.png[Appliance Installer – SG-Software hochladen]
+
+.. Wählen Sie *Home*, um zur Startseite zurückzukehren.
+
+
+. Überprüfen Sie im Abschnitt Installation, ob der aktuelle Status „bereit zum Starten der Installation von ist `_node name_` In das Grid mit primärem Admin-Node `_admin_ip_` " Und dass die Schaltfläche *Installation starten* aktiviert ist.
++
+Wenn die Schaltfläche *Installation starten* nicht aktiviert ist, müssen Sie möglicherweise die Netzwerkkonfiguration oder die Porteinstellungen ändern. Anweisungen hierzu finden Sie in der Wartungsanleitung Ihres Geräts.
+
+. Klicken Sie auf der Startseite des StorageGRID-Appliance-Installationsprogramms auf *Installation starten*.
++
+image::../media/appliance_installer_services_appliance_non_pan.png[Appliance Installer Home - Installieren eines nicht-primären Admin-Knotens]
+
++
+Der aktuelle Status ändert sich in „`Installation is in progress,`“ und die Seite Monitor Installation wird angezeigt.
+
++
+
+NOTE: Wenn Sie manuell auf die Seite Monitor-Installation zugreifen müssen, klicken Sie in der Menüleiste auf *Monitor-Installation*.
+
+. Wenn Ihr Grid mehrere Appliance-Nodes enthält, wiederholen Sie die vorherigen Schritte für jede Appliance.
+

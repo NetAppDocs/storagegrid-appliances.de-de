@@ -1,0 +1,469 @@
+---
+permalink: installconfig/gathering-installation-information-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10/25-gbe, 10/25 gbe, e5700sg, independent, active-backup, active backup, 1-gbe, 1 gbe 
+summary: Notieren Sie die erforderlichen Informationen für jedes Netzwerk, das Sie mit dem Gerät verbinden, in den Tabellen. Diese Werte sind für die Installation und Konfiguration der Hardware erforderlich. 
+---
+= Netzwerkinformationen erfassen (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Notieren Sie die erforderlichen Informationen für jedes Netzwerk, das Sie mit dem Gerät verbinden, in den Tabellen. Diese Werte sind für die Installation und Konfiguration der Hardware erforderlich.
+
+
+TIP: Verwenden Sie anstelle der Tabellen das mit ConfigBuilder bereitgestellte Arbeitsbuch. Mit der Arbeitsmappe „ConfigBuilder“ können Sie Ihre Systeminformationen hochladen und eine JSON-Datei erstellen, um einige Konfigurationsschritte im Installationsprogramm für StorageGRID-Appliances automatisch auszuführen. Siehe link:automating-appliance-installation-and-configuration.html["Automatisierung der Appliance-Installation und -Konfiguration"].
+
+
+
+== Für die Verbindung mit SANtricity System Manager auf dem E2800 Controller erforderliche Informationen
+
+Sie verbinden den Controller der E2800 Serie mit dem Managementnetzwerk, das Sie für SANtricity System Manager verwenden.
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Ethernet-Switch-Port die Verbindung zum Management-Port 1 wird hergestellt
+ a| 
+
+
+
+ a| 
+MAC-Adresse für Management-Port 1 (auf einem Etikett in der Nähe von Port P1 gedruckt)
+ a| 
+
+
+
+ a| 
+Über DHCP zugewiesene IP-Adresse für Management-Port 1, sofern nach dem Einschalten verfügbar
+
+*Hinweis:* Wenn das Netzwerk, das Sie mit dem E2800-Controller verbinden, einen DHCP-Server enthält, kann der Netzwerkadministrator die MAC-Adresse verwenden, um die vom DHCP-Server zugewiesene IP-Adresse zu ermitteln.
+ a| 
+
+
+
+ a| 
+Geschwindigkeit und Duplexmodus
+
+*Hinweis:* Sie müssen sicherstellen, dass der Ethernet-Switch für das SANtricity-System-Manager-Managementnetzwerk auf Autonegotiation gesetzt ist.
+ a| 
+Muss sein:
+
+* Autonegotiation (Standard)
+
+
+
+
+ a| 
+IP-Adressformat
+ a| 
+Bitte auswählen:
+
+* IPv4
+* IPv6
+
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für die Appliance im Managementnetzwerk verwenden möchten
+ a| 
+Für IPv4:
+
+* IPv4-Adresse:
+* Subnetzmaske:
+* Gateway:
+
+
+Für IPv6:
+
+* IPv6-Adresse:
+* Routingfähige IP-Adresse:
+* E2800 Controller-Router-IP-Adresse:
+
+
+|===
+
+
+== Für die Verbindung des E5700SG-Controllers mit dem Admin-Netzwerk erforderliche Informationen
+
+Das Admin-Netzwerk für StorageGRID ist ein optionales Netzwerk, das zur Systemadministration und -Wartung verwendet wird. Die Appliance wird über die 1-GbE-Management-Ports des E5700SG Controllers mit dem Admin-Netzwerk verbunden.
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Admin-Netzwerk aktiviert
+ a| 
+Bitte auswählen:
+
+* Nein
+* Ja (Standard)
+
+
+
+
+ a| 
+Netzwerk-Bond-Modus
+ a| 
+Bitte auswählen:
+
+* Unabhängig
+* Aktiv/Backup
+
+
+
+
+ a| 
+Switch-Port für Port 1
+ a| 
+
+
+
+ a| 
+Switch-Port für Port 2 (nur aktiv-Backup-Netzwerk-Bond-Modus)
+ a| 
+
+
+
+ a| 
+Über DHCP zugewiesene IP-Adresse für Management-Port 1, sofern nach dem Einschalten verfügbar
+
+*Hinweis:* enthält das Admin-Netzwerk einen DHCP-Server, zeigt der E5700SG-Controller nach dem Start die DHCP-zugewiesene IP-Adresse auf seinem 7-Segment-Display an. Sie können auch die IP-Adresse bestimmen, die über DHCP zugewiesen wurde, indem Sie die MAC-Adresse verwenden, um die zugewiesene IP-Adresse zu ermitteln.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Admin-Netzwerk verwenden möchten
+
+*Hinweis:* Wenn Ihr Netzwerk kein Gateway hat, geben Sie die gleiche statische IPv4-Adresse für das Gateway an.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Admin-Netzwerk-Subnetze (CIDR)
+ a| 
+
+|===
+
+
+== Erforderliche Informationen zum Verbinden und Konfigurieren von 10/25-GbE-Ports auf dem E5700SG Controller
+
+Die vier 10/25-GbE-Ports des E5700SG-Controllers stellen eine Verbindung zum StorageGRID-Grid-Netzwerk und dem Client-Netzwerk her.
+
+
+NOTE: Siehe link:gathering-installation-information-sg5700.html#port-bond-modes["Port-Bond-Modi (E5700SG Controller)"].
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Verbindungsgeschwindigkeit
+
+*Hinweis:* Wenn Sie 25 GbE wählen, installieren Sie SPF28 Transceiver. Autonegotiation wird nicht unterstützt, daher müssen Sie auch die Ports und die verbundenen Switches für 25 GbE konfigurieren.
+ a| 
+Bitte auswählen:
+
+* 10 GbE (Standard)
+* 25 GBitE
+
+
+
+
+ a| 
+Port Bond-Modus
+ a| 
+Bitte auswählen:
+
+* Fest (Standard)
+* Aggregat
+
+
+
+
+ a| 
+Switch-Port für Port 1 (Client-Netzwerk)
+ a| 
+
+
+
+ a| 
+Switch-Port für Port 2 (Grid-Netzwerk)
+ a| 
+
+
+
+ a| 
+Switch-Port für Port 3 (Client-Netzwerk)
+ a| 
+
+
+
+ a| 
+Switch-Port für Port 4 (Grid-Netzwerk)
+ a| 
+
+|===
+
+
+== Zum Verbinden des E5700SG-Controllers mit dem Grid-Netzwerk erforderliche Informationen
+
+Das Grid-Netzwerk für StorageGRID ist ein erforderliches Netzwerk, das für den gesamten internen StorageGRID-Datenverkehr verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des E5700SG-Controllers mit dem Grid-Netzwerk verbunden.
+
+
+NOTE: Siehe link:gathering-installation-information-sg5700.html#port-bond-modes["Port-Bond-Modi (E5700SG Controller)"].
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Netzwerk-Bond-Modus
+ a| 
+Bitte auswählen:
+
+* Aktiv/Backup (Standard)
+* LACP (802.3ad)
+
+
+
+
+ a| 
+VLAN-Tagging aktiviert
+ a| 
+Bitte auswählen:
+
+* Nein (Standard)
+* Ja.
+
+
+
+
+ a| 
+VLAN-Tag (bei aktiviertem VLAN-Tagging)
+ a| 
+Geben Sie einen Wert zwischen 0 und 4095 ein:
+
+
+
+ a| 
+DHCP-zugewiesene IP-Adresse für das Grid-Netzwerk, sofern nach dem Einschalten verfügbar
+
+*Hinweis:* enthält das Grid-Netzwerk einen DHCP-Server, zeigt der E5700SG-Controller nach dem Start die DHCP-zugewiesene IP-Adresse für das Grid-Netzwerk auf seiner 7-Segment-Anzeige an.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Grid-Netzwerk verwenden möchten
+
+*Hinweis:* Wenn Ihr Netzwerk kein Gateway hat, geben Sie die gleiche statische IPv4-Adresse für das Gateway an.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Grid-Netzwerknetze (CIDR)
+
+*Hinweis:* Wenn das Client-Netzwerk nicht aktiviert ist, verwendet die Standardroute auf dem Controller das hier angegebene Gateway.
+ a| 
+
+|===
+
+
+== Für die Verbindung des E5700SG-Controllers mit dem Client-Netzwerk erforderliche Informationen
+
+Das Client-Netzwerk für StorageGRID ist ein optionales Netzwerk, das in der Regel für den Zugriff auf das Grid auf das Clientprotokoll verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des E5700SG-Controllers mit dem Client-Netzwerk verbunden.
+
+
+NOTE: Siehe link:gathering-installation-information-sg5700.html#port-bond-modes["Port-Bond-Modi (E5700SG Controller)"].
+
+[cols="2a,1a"]
+|===
+| Erforderliche Informationen | Ihr Wert 
+
+
+ a| 
+Client-Netzwerk aktiviert
+ a| 
+Bitte auswählen:
+
+* Nein (Standard)
+* Ja.
+
+
+
+
+ a| 
+Netzwerk-Bond-Modus
+ a| 
+Bitte auswählen:
+
+* Aktiv/Backup (Standard)
+* LACP (802.3ad)
+
+
+
+
+ a| 
+VLAN-Tagging aktiviert
+ a| 
+Bitte auswählen:
+
+* Nein (Standard)
+* Ja.
+
+
+
+
+ a| 
+VLAN-Tag
+
+(Bei aktiviertem VLAN-Tagging)
+ a| 
+Geben Sie einen Wert zwischen 0 und 4095 ein:
+
+
+
+ a| 
+DHCP-zugewiesene IP-Adresse für das Client-Netzwerk, falls nach dem Einschalten verfügbar
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Client-Netzwerk verwenden möchten
+
+*Hinweis:* Wenn das Client-Netzwerk aktiviert ist, verwendet die Standardroute auf dem Controller das hier angegebene Gateway.
+ a| 
+* IPv4-Adresse (CIDR):
+* Gateway:
+
+
+|===
+
+
+== Port-Bond-Modi
+
+Wenn link:configuring-network-links.html["Netzwerk-Links werden konfiguriert"] Für den E5700SG-Controller können Sie Port-Bonding für die 10/25-GbE-Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie für die 1-GbE-Management-Ports, die mit dem optionalen Admin-Netzwerk verbunden werden. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen.
+
+
+
+=== Netzwerk-Bond-Modi für 10/25-GbE-Ports
+
+Die 10/25-GbE-Netzwerk-Ports auf dem E5700SG Controller unterstützen den Bond-Modus für festen Port oder aggregierten Port für die Grid-Netzwerk- und Client-Netzwerkverbindungen.
+
+
+
+==== Bond-Modus mit festem Port
+
+Der Fixed-Modus ist die Standardkonfiguration für 10/25-GbE-Netzwerkports.
+
+image::../media/e5700sg_fixed_port.gif[Ports für den Bond-Modus mit fester Schnittstelle]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+C
+ a| 
+Die Ports 1 und 3 sind für das Client-Netzwerk verbunden, falls dieses Netzwerk verwendet wird.
+
+
+
+ a| 
+G
+ a| 
+Die Ports 2 und 4 sind für das Grid-Netzwerk verbunden.
+
+|===
+Bei Verwendung des Fixed Port Bond-Modus können Sie einen von zwei Netzwerk-Bond-Modi nutzen: Active-Backup oder Link Aggregation Control Protocol (LACP).
+
+* Im aktiv-Backup-Modus (Standard) ist immer nur ein Port aktiv. Wenn der aktive Port ausfällt, stellt sein Backup-Port automatisch eine Failover-Verbindung bereit. Port 4 bietet einen Sicherungspfad für Port 2 (Grid Network), und Port 3 stellt einen Sicherungspfad für Port 1 (Client Network) bereit.
+* Im LACP-Modus bildet jedes Port-Paar einen logischen Kanal zwischen dem Controller und dem Netzwerk, wodurch ein höherer Durchsatz ermöglicht wird. Wenn ein Port ausfällt, stellt der andere Port den Kanal weiterhin bereit. Der Durchsatz wird verringert, die Konnektivität wird jedoch nicht beeinträchtigt.
+
+
+
+NOTE: Wenn Sie keine redundanten Verbindungen benötigen, können Sie für jedes Netzwerk nur einen Port verwenden. Beachten Sie jedoch, dass nach der Installation von StorageGRID im Grid Manager ein Alarm ausgelöst wird, was darauf hinweist, dass ein Kabel nicht angeschlossen ist. Sie können diesen Alarm sicher bestätigen, um ihn zu löschen.
+
+
+
+==== Bond-Modus für aggregierten Ports
+
+Der Aggregat-Port-Bond-Modus erhöht das ganze für jedes StorageGRID-Netzwerk deutlich und bietet zusätzliche Failover-Pfade.
+
+image::../media/e5700sg_aggregate_port.gif[Ports, die für den Bond-Modus des aggregierten Ports verwendet werden]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+1
+ a| 
+Alle verbundenen Ports werden in einer einzelnen LACP Bond gruppiert, sodass alle Ports für den Grid-Netzwerk- und Client-Netzwerk-Datenverkehr verwendet werden können.
+
+|===
+Wenn Sie planen, den aggregierten Port Bond-Modus zu verwenden:
+
+* Sie müssen LACP Network Bond-Modus verwenden.
+* Sie müssen für jedes Netzwerk ein eindeutiges VLAN-Tag angeben. Dieses VLAN-Tag wird zu jedem Netzwerkpaket hinzugefügt, um sicherzustellen, dass der Netzwerkverkehr an das richtige Netzwerk weitergeleitet wird.
+* Die Ports müssen mit Switches verbunden sein, die VLAN und LACP unterstützen können. Wenn mehrere Switches an der LACP-Verbindung beteiligt sind, müssen die Switches MLAG (Multi-Chassis Link Aggregation Groups) oder eine vergleichbare Position unterstützen.
+* Sie wissen, wie Sie die Switches für die Verwendung von VLAN, LACP und MLAG oder gleichwertig konfigurieren.
+
+
+Wenn Sie nicht alle vier 10/25-GbE-Ports verwenden möchten, können Sie einen, zwei oder drei Ports verwenden. Durch die Verwendung mehrerer Ports wird die Wahrscheinlichkeit maximiert, dass einige Netzwerkverbindungen verfügbar bleiben, wenn einer der 10/25-GbE-Ports ausfällt.
+
+
+NOTE: Wenn Sie weniger als vier Ports verwenden, beachten Sie, dass nach der Installation von StorageGRID ein oder mehrere Alarme im Grid Manager angehoben werden, was darauf hinweist, dass die Kabel nicht angeschlossen sind. Sie können die Alarme sicher bestätigen, um sie zu löschen.
+
+
+
+=== Netzwerk-Bond-Modi für 1-GbE-Management-Ports
+
+Für die beiden 1-GbE-Management-Ports des E5700SG-Controllers können Sie den Independent Network Bond-Modus oder den Active-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen.
+
+Im Independent-Modus ist nur Management-Port 1 mit dem Admin-Netzwerk verbunden. Dieser Modus stellt keinen redundanten Pfad bereit. Management-Port 2 bleibt unverkabelt und für temporäre lokale Verbindungen verfügbar (verwenden Sie IP-Adresse 169.254.0.1)
+
+Im Active-Backup-Modus sind beide Management-Ports 1 und 2 mit dem Admin-Netzwerk verbunden. Es ist jeweils nur ein Port aktiv. Wenn der aktive Port ausfällt, stellt sein Backup-Port automatisch eine Failover-Verbindung bereit. Die Verbindung dieser beiden physischen Ports zu einem logischen Management-Port bietet einen redundanten Pfad zum Admin-Netzwerk.
+
+
+NOTE: Wenn Sie eine temporäre lokale Verbindung zum E5700SG-Controller herstellen müssen, wenn die 1-GbE-Management-Ports für den aktiv-Backup-Modus konfiguriert sind, entfernen Sie die Kabel von beiden Management-Ports, schließen Sie das temporäre Kabel an den Management-Port 2 an und greifen Sie über die IP-Adresse 169.254.0 auf das Gerät zu.
+
+image::../media/e5700sg_bonded_management_ports.gif[E5700SG Management-Port mit Bonded]
+
+.Verwandte Informationen
+* link:cabling-appliance-sg5700.html["Kabel-Appliance (SG5700)"]
+* link:gathering-installation-information-sg5700.html#port-bond-modes["Port-Bond-Modi (E5700SG Controller)"]
+* link:configuring-hardware.html["Hardware konfigurieren (SG5700)"]
+

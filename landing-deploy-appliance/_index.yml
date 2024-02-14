@@ -1,0 +1,22 @@
+---
+indexpage:
+  tiles:
+  - title: Appliance implementieren
+    links:
+    - title: Appliance-Storage-Node implementieren
+      url: "../installconfig/deploying-appliance-storage-node.html"
+    - title: Implementieren des Services-Appliance-Nodes
+      url: "../installconfig/deploying-services-appliance-node.html"
+    - title: Überwachen Sie die Appliance-Installation
+      url: "../installconfig/monitoring-appliance-installation.html"
+    - title: Starten Sie die Appliance neu, während das Installationsprogramm ausgeführt
+        wird
+      url: "../installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html"
+  - title: Fehlerbehebung bei der Appliance-Installation
+    links:
+    - title: SG100 und SG1000
+      url: "../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html"
+    - title: SG5700 und SG6000
+      url: "../installconfig/troubleshooting-hardware-installation.html"
+    - title: SG6100
+      url: "../installconfig/troubleshooting-hardware-installation-sg6100.html"

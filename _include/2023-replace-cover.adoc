@@ -1,0 +1,34 @@
+= Setzen Sie die Abdeckung wieder ein
+:allow-uri-read: 
+
+
+.Schritte
+. Stellen Sie sicher, dass die Verriegelung der Geräteabdeckung nicht verriegelt ist. Falls erforderlich, drehen Sie die blaue Kunststoffverriegelung um eine Vierteldrehung in die Entsperrungsrichtung, wie auf der Verriegelung gezeigt.
+. Drehen Sie den Riegel nach oben und zurück in Richtung der Rückseite des Gerätegehäuses, bis er anhält. Heben Sie dann die Abdeckung vorsichtig vom Gehäuse ab und legen Sie sie beiseite.
++
+image::../media/sg6060_cover_latch_open.jpg[Verriegelung der Geräteabdeckung geöffnet]
+
++
+
+CAUTION: Wickeln Sie das Gurtende eines ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende an einem Metallboden, um eine statische Entladung bei Arbeiten im Inneren des Geräts zu verhindern.
+
+
+
+
+
+== Setzen Sie die Abdeckung wieder ein
+
+.Bevor Sie beginnen
+Sie haben alle Wartungsarbeiten im Gerät durchgeführt.
+
+.Schritte
+. Halten Sie bei geöffneter Abdeckungsverriegelung die Abdeckung über dem Gehäuse und richten Sie die Öffnung in der oberen Abdeckung an dem Stift im Gehäuse aus. Wenn die Abdeckung ausgerichtet ist, senken Sie sie auf das Gehäuse ab.
++
+image::../media/sg6060_cover_latch_alignment_pin.jpg[Führungsstift SG6060 Deckelverriegelung]
+
+. Drehen Sie die Verriegelung nach vorne und unten, bis sie anhält und die Abdeckung vollständig im Gehäuse sitzt. Stellen Sie sicher, dass an der Vorderkante der Abdeckung keine Lücken vorhanden sind.
++
+Wenn die Abdeckung nicht vollständig eingesetzt ist, können Sie das Gerät möglicherweise nicht in das Rack schieben.
+
+. Optional: Drehen Sie die blaue Kunststoffverriegelung um eine Vierteldrehung in die Schlossrichtung, wie auf der Verriegelung gezeigt, um sie zu verriegeln.
+

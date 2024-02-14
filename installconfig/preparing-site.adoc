@@ -1,0 +1,270 @@
+---
+permalink: installconfig/preparing-site.html 
+sidebar: sidebar 
+keywords: site prep, site preparation, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
+summary: Vor der Installation der Appliance müssen Sie sicherstellen, dass der Standort und das Rack, das Sie verwenden möchten, die Spezifikationen einer StorageGRID Appliance erfüllen. 
+---
+= Standort vorbereiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor der Installation der Appliance müssen Sie sicherstellen, dass der Standort und das Rack, das Sie verwenden möchten, die Spezifikationen einer StorageGRID Appliance erfüllen.
+
+.Schritte
+. Vergewissern Sie sich, dass der Standort die Anforderungen an Temperatur, Luftfeuchtigkeit, Höhenbereich, Luftstrom, Wärmeableitung, Verkabelung, Strom und Erdung. Siehe https://hwu.netapp.com["NetApp Hardware Universe"^] Finden Sie weitere Informationen.
+. Vergewissern Sie sich, dass Ihr Standort die richtige Wechselstromspannung liefert:
++
+[cols="1a,1a"]
+|===
+| Modell | Anforderungen 
+
+
+ a| 
+SG100 und SG1000
+ a| 
+120 bis 240 Volt Wechselstrom
+
+
+
+ a| 
+SG5760
+ a| 
+240-Volt-Wechselspannung
+
+
+
+ a| 
+SGF6024
+ a| 
+120-Volt-Wechselspannung
+
+
+
+ a| 
+SG6060
+ a| 
+240-Volt-Wechselspannung
+
+
+
+ a| 
+SGF6112
+ a| 
+100 bis 240 Volt Wechselstrom
+
+|===
+. Beziehen Sie einen 19-Zoll-Schrank (48.3 cm) für die folgenden Regale (ohne Kabel).
++
+[role="tabbed-block"]
+====
+.SG100 und SG1000
+--
+[cols="1a,1a,1a,1a"]
+|===
+| Höhe | Breite | Tiefe | Maximales Gewicht 
+
+
+ a| 
+1.70 Zoll
+
+(4.32 cm)
+ a| 
+17.32 Zoll
+
+(44.0 cm)
+ a| 
+32.0 Zoll
+
+(81.3 cm)
+ a| 
+39 lb.
+
+(17.7 kg)
+
+|===
+--
+.SG5700
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Appliance-Modell | Höhe | Breite | Tiefe | Maximales Gewicht 
+
+
+ a| 
+SG5712
+
+(12 Festplatten)
+ a| 
+3.41 Zoll
+
+(8.68 cm)
+ a| 
+17.6 Zoll
+
+(44.7 cm)
+ a| 
+21.1 Zoll
+
+(53.6 cm)
+ a| 
+63.9 lb
+
+(29.0 kg)
+
+
+
+ a| 
+SG5760
+
+(60 Festplatten)
+ a| 
+6.87 Zoll
+
+(17.46 cm)
+ a| 
+17.66 Zoll
+
+(44.86 cm)
+ a| 
+38.25 Zoll
+
+(97.16 cm)
+ a| 
+250 lb.
+
+(113 kg)
+
+|===
+--
+.SG6000
+--
+[cols="2a,1a,1a,1a,1a"]
+|===
+| Typ des Shelfs | Höhe | Breite | Tiefe | Maximales Gewicht 
+
+
+ a| 
+E2860 Controller-Shelf (SG6060)
+ a| 
+6.87 Zoll
+
+(17.46 cm)
+ a| 
+17.66 Zoll
+
+(44.86 cm)
+ a| 
+38.25 Zoll
+
+(97.16 cm)
+ a| 
+250 lb.
+
+(113 kg)
+
+
+
+ a| 
+Erweiterungs-Shelf (SG6060) - optional
+ a| 
+6.87 Zoll
+
+(17.46 cm)
+ a| 
+17.66 Zoll
+
+(44.86 cm)
+ a| 
+38.25 Zoll
+
+(97.16 cm)
+ a| 
+250 lb.
+
+(113 kg)
+
+
+
+ a| 
+EF570 Controller-Shelf (SGF6024)
+ a| 
+3.35 Zoll
+
+(8.50 cm)
+ a| 
+17.66 Zoll
+
+(44.86 cm)
+ a| 
+19.00 Zoll
+
+(48.26 cm)
+ a| 
+51.74 lb.
+
+(23.47 kg)
+
+
+
+ a| 
+SG6000-CN Computing-Controller
+ a| 
+1.70 Zoll
+
+(4.32 cm)
+ a| 
+17.32 Zoll
+
+(44.0 cm)
+ a| 
+32.0 Zoll
+
+(81.3 cm)
+ a| 
+39 lb.
+
+(17.7 kg)
+
+|===
+--
+.SG6100
+--
+[cols="1a,1a,1a,1a"]
+|===
+| Höhe | Breite | Tiefe | Maximales Gewicht 
+
+
+ a| 
+1.70 Zoll
+
+(4.31 cm)
+ a| 
+18.98 Zoll
+
+(48.2 cm)
+ a| 
+33.11 Zoll
+
+(84.1 cm)
+ a| 
+43.83 lb.
+
+(19.88 kg)
+
+|===
+--
+====
+. Entscheiden Sie, wo Sie das Gerät installieren möchten.
++
+
+CAUTION: Installieren Sie bei der Installation des E2860 Controller-Shelfs oder optionaler Erweiterungs-Shelfs die Hardware von unten nach oben im Rack oder Schrank, um zu vermeiden, dass das System umkippt. Installieren Sie den SG6000-CN Controller über dem E2860 Controller-Shelf und Erweiterungs-Shelfs, um sicherzustellen, dass sich die schwersten Geräte unten im Rack oder Rack befinden.
+
++
+
+NOTE: Stellen Sie vor der Installation sicher, dass die mit einem SG6000-Gerät gelieferten 0,5-m-Glasfaserkabel oder die von Ihnen gelieferten Kabel lang genug für das geplante Layout sind.
+
+. Installieren Sie alle erforderlichen Netzwerk-Switches. Siehe link:https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool"^] Informationen zur Kompatibilität.
+

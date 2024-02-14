@@ -1,0 +1,45 @@
+---
+permalink: commonhardware/index.html 
+sidebar: sidebar 
+keywords: maintain overview, maintenance overview, about maintain, about maintenance 
+summary: Befolgen Sie diese Anweisungen, um Ihr StorageGRID-System zu warten. 
+---
+= Allgemeine Verfahren für die Knotenwartung: Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Befolgen Sie diese Anweisungen, um Ihr StorageGRID-System zu warten.
+
+
+
+== Informationen zu diesen Anweisungen
+
+In diesen Anweisungen werden die für alle Knoten üblichen Verfahren beschrieben, z. B. die Anwendung eines Software-Hotfix, die Wiederherstellung von Grid-Nodes, die Wiederherstellung eines ausgefallenen Standorts, die Stilllegung von Grid-Nodes oder eines gesamten Standorts, die Durchführung von Netzwerkwartungen, die Durchführung von Wartungsverfahren auf Host-Ebene und Middleware sowie die Durchführung von Grid Node-Verfahren.
+
+
+NOTE: In dieser Anleitung bezieht sich „`Linux`“ auf eine Red hat® Enterprise Linux®-, Ubuntu®- oder Debian®-Bereitstellung. Verwenden Sie die https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um eine Liste der unterstützten Versionen zu erhalten.
+
+
+
+== Bevor Sie beginnen
+
+* Sie verfügen über ein umfassendes Verständnis des StorageGRID Systems.
+* Sie haben die Topologie Ihres StorageGRID Systems überprüft und sich mit der Grid-Konfiguration vertraut gemacht.
+* Ihr versteht, dass ihr alle Anweisungen genau befolgen und alle Warnungen beachten müsst.
+* Sie wissen, dass nicht beschriebene Wartungsverfahren nicht unterstützt werden oder eine Serviceerbringung erfordern.
+
+
+
+
+== Wartungsverfahren für Geräte
+
+Spezifische Wartungsverfahren für jeden StorageGRID-Gerätetyp finden Sie in den Abschnitten zur Gerätewartung:
+
+* link:../sg6100/index.html["SG6100 Appliance warten"]
+* link:../sg6000/index.html["Warten Sie die SG6000-Appliance"]
+* link:../sg5700/index.html["SG5700 Appliance warten"]
+* link:../sg100-1000/index.html["Wartung von SG100 und SG1000 Appliances"]
+

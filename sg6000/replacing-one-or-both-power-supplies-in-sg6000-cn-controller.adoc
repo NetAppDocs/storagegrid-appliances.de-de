@@ -1,0 +1,70 @@
+---
+permalink: sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, power supply, remove, removing, removal, install, installing 
+summary: Der SG6000-CN Controller verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich ersetzen, um sicherzustellen, dass der Compute-Controller über redundante Stromversorgung verfügt. Beide im Controller ausgeführten Netzteile müssen das gleiche Modell und die gleiche Stromleistung aufweisen. 
+---
+= Tauschen Sie ein oder beide Netzteile im SG6000-CN Controller aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der SG6000-CN Controller verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich ersetzen, um sicherzustellen, dass der Compute-Controller über redundante Stromversorgung verfügt. Beide im Controller ausgeführten Netzteile müssen das gleiche Modell und die gleiche Stromleistung aufweisen.
+
+.Bevor Sie beginnen
+* Sie haben den physischen Standort im Datacenter des Controllers ermittelt und das zu ersetzende Netzteil verwendet.
++
+link:locating-controller-in-data-center.html["Lokalisierung des Controllers in einem Rechenzentrum"]
+
+* Wenn Sie nur ein Netzteil ersetzen:
++
+** Sie haben das Ersatznetzteil entpackt und sichergestellt, dass es das gleiche Modell und die gleiche Stromleistung wie das Netzteil ist, das Sie ersetzen.
+** Sie haben bestätigt, dass das andere Netzteil installiert ist und in Betrieb ist.
+
+
+* Wenn Sie beide Netzteile gleichzeitig ersetzen:
++
+** Sie haben die Ersatz-Netzteile entpackt und sichergestellt, dass sie das gleiche Modell und die gleiche Wattzahl haben.
+
+
+
+
+.Über diese Aufgabe
+Die Abbildung zeigt die beiden Netzteile des SG6000-CN Controllers, auf die über die Rückseite des Controllers zugegriffen werden kann. Gehen Sie folgendermaßen vor, um ein oder beide Netzteile zu ersetzen. Wenn Sie beide Netzteile austauschen, müssen Sie zunächst ein kontrolliertes Herunterfahren des Geräts durchführen.
+
+image::../media/sg6000_cn_power_supplies.gif[Rückseite des SG6000-CN mit zwei Netzteilen]
+
+.Schritte
+. Wenn Sie nur ein Netzteil ersetzen, müssen Sie das Gerät nicht herunterfahren. Wechseln Sie zum <<Unplug_the_power_cord,Ziehen Sie das Netzkabel ab>> Schritt: Wenn Sie beide Netzteile gleichzeitig ersetzen, gehen Sie folgendermaßen vor, bevor Sie die Netzkabel abziehen:
++
+.. link:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Schalten Sie das Gerät aus"].
+
+
+. [[Trenne den Netzstecker_Power_cordel, Start=2]]] Trennen Sie das Netzkabel von jedem zu ersetzenden Netzteil.
+. Den Nockengriff an der ersten zu ersetzenden Versorgung anheben.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Heben Sie den Nockengriff an, um das SG6000-CN-Netzteil zu entfernen]
+
+. Drücken Sie auf den blauen Riegel, und ziehen Sie das Netzteil heraus.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Entfernen eines SG6000-CN Netzteils]
+
+. Schieben Sie das Ersatznetzteil mit der blauen Verriegelung nach rechts in das Gehäuse.
++
+
+NOTE: Beide Netzteile müssen das gleiche Modell und die gleiche Wattzahl haben.
+
++
+Stellen Sie sicher, dass sich die blaue Verriegelung auf der rechten Seite befindet, wenn Sie die Ersatzeinheit einschieben.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Stromversorgung in SG6000-CN schieben]
+
+. Drücken Sie den Nockengriff nach unten, um die Ersatzstromversorgung zu sichern.
+. Wenn Sie beide Netzteile austauschen, wiederholen Sie die Schritte 2 bis 6, um das zweite Netzteil auszutauschen.
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Schließen Sie die Stromkabel an die ersetzten Geräte an, und wenden Sie Strom an"].
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

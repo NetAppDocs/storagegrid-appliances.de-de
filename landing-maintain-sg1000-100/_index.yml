@@ -1,0 +1,25 @@
+---
+indexpage:
+  tiles:
+  - title: Häufig ausgeführte Prozeduren
+    links:
+    - title: Die Position-LED ein- oder ausschalten
+      url: "../sg100-1000/turning-controller-identify-led-on-and-off.html"
+    - title: Suchen Sie die Appliance im Datacenter
+      url: "../sg100-1000/locating-controller-in-data-center.html"
+    - title: Gerät ausschalten
+      url: "../sg100-1000/shut-down-sg100-and-sg1000.html"
+    - title: Verbindungskonfiguration ändern
+      url: "../sg100-1000/changing-link-configuration-of-services-appliance.html"
+  - title: Rack-Verfahren
+    links:
+    - title: Ersetzen Sie das Gerät
+      url: "../sg100-1000/replacing-services-appliance.html"
+  - title: Hardware-Verfahren
+    links:
+    - title: Ersetzen Sie das Netzteil
+      url: "../sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
+    - title: Ersetzen Sie den Lüfter
+      url: "../sg100-1000/replacing-fan-in-services-appliance.html"
+    - title: Laufwerk austauschen
+      url: "../sg100-1000/replacing-drive-in-services-appliance.html"

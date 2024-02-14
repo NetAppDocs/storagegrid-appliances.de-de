@@ -1,0 +1,118 @@
+---
+permalink: sg6100/power-sgf6112-off-on.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6112, power off, turn off, shut off, shutdown, shut down, power on, turn on, start 
+summary: Sie können das SGF6112-Gerät herunterfahren und wieder einschalten, um Wartungsarbeiten durchzuführen. 
+---
+= Schalten Sie das SGF6112-Gerät aus und wieder ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das SGF6112-Gerät herunterfahren und wieder einschalten, um Wartungsarbeiten durchzuführen.
+
+
+
+== Fahren Sie die SGF6112-Appliance herunter
+
+Fahren Sie die Appliance herunter, um eine Hardwarewartung durchzuführen.
+
+.Bevor Sie beginnen
+* Das ist schon link:locating-sgf6112-in-data-center.html["Das Gerät befindet sich physisch"].
+
+
+.Über diese Aufgabe
+Um Serviceunterbrechungen zu vermeiden, fahren Sie die Appliance während eines geplanten Wartungsfensters herunter, wenn Serviceunterbrechungen akzeptabel sind.
+
+.Schritte
+. Fahren Sie das Gerät herunter:
++
+
+CAUTION: Sie müssen ein kontrolliertes Herunterfahren des Geräts durchführen, indem Sie die unten angegebenen Befehle eingeben. Es ist eine Best Practice, nach Möglichkeit eine kontrollierte Abschaltung durchzuführen, um unnötige Warnmeldungen zu vermeiden, sicherzustellen, dass vollständige Protokolle verfügbar sind und Serviceunterbrechungen zu vermeiden.
+
++
+.. Wenn Sie sich noch nicht beim Grid-Knoten angemeldet haben, melden Sie sich mit PuTTY oder einem anderen ssh-Client an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Schalten Sie das Gerät aus: +
+`*shutdown -h now*`
++
+Dieser Befehl kann bis zu 10 Minuten in Anspruch nehmen.
+
+
+
+. Überprüfen Sie anhand einer der folgenden Methoden, ob das Gerät ausgeschaltet ist:
++
+** Sehen Sie sich die LED-Betriebsanzeige an der Vorderseite des Geräts an, und vergewissern Sie sich, dass sie ausgeschaltet ist.
+** Überprüfen Sie auf der Seite Power Control der BMC-Schnittstelle, ob das Gerät ausgeschaltet ist.
+
+
+
+
+
+
+== Schalten Sie SGF6112 ein, und überprüfen Sie den Betrieb
+
+Schalten Sie den Controller nach dem Abschluss der Wartung ein.
+
+.Bevor Sie beginnen
+* Das ist schon link:reinstalling-sgf6112-into-cabinet-or-rack.html["Controller in einem Schrank oder Rack installiert"] Und die Daten- und Stromkabel angeschlossen.
+* Das ist schon link:locating-sgf6112-in-data-center.html["Standort des Controllers im Datacenter"].
+
+
+.Schritte
+. Schalten Sie das Gerät ein.
++
+Möglicherweise müssen Sie die Blende entfernen, um auf den Netzschalter zugreifen zu können. Wenn dies der Fall ist, müssen Sie sie anschließend wieder einbauen.
+
+. Überwachen Sie die Controller-LEDs und die Startcodes mit einer der folgenden Methoden:
++
+** Drücken Sie den Netzschalter an der Vorderseite des Controllers.
+** Verwenden Sie die BMC-Schnittstelle des Controllers:
++
+... link:../installconfig/accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle des Controllers auf"].
+... Wählen Sie *Power Control*.
+... Wählen Sie *Einschalten* und dann *Aktion ausführen*.
++
+image::../media/sgf6112_power_on_from_bmc.png[Schalten Sie das Gerät von BMC ein]
+
++
+Verwenden Sie die BMC-Schnittstelle, um den Startstatus zu überwachen.
+
+
+
+
+
+. Vergewissern Sie sich, dass der Appliance-Controller im Grid Manager und ohne Warnungen angezeigt wird.
++
+Es kann bis zu 20 Minuten dauern, bis der Controller im Grid Manager angezeigt wird.
+
++
+
+CAUTION: Nehmen Sie einen anderen Appliance-Node nur offline, wenn diese Appliance über ein grünes Symbol verfügt.
+
+. Vergewissern Sie sich, dass die neue Appliance vollständig betriebsbereit ist, indem Sie sich beim Grid-Node über PuTTY oder einen anderen ssh-Client anmelden:
++
+.. Geben Sie den folgenden Befehl ein: `ssh _Appliance_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+
+
+.Verwandte Informationen
+link:../installconfig/viewing-status-indicators.html["Statusanzeigen anzeigen anzeigen anzeigen"]
