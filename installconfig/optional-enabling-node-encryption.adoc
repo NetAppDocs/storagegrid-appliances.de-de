@@ -19,7 +19,7 @@ Sie können die Verschlüsselung auf Knoten- und Festplattenebene aktivieren, um
 
 Sie können beide Verschlüsselungsstufen auf unterstützten Laufwerken durchführen, um zusätzliche Sicherheit zu gewährleisten.
 
-Siehe https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/reviewing-storagegrid-encryption-methods.html["Verschlüsselungsmethoden von StorageGRID"^] Um Informationen zu allen für StorageGRID Appliances verfügbaren Verschlüsselungsmethoden zu erhalten.
+Siehe https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Verschlüsselungsmethoden von StorageGRID"^] Um Informationen zu allen für StorageGRID Appliances verfügbaren Verschlüsselungsmethoden zu erhalten.
 
 
 
@@ -100,7 +100,7 @@ Die Festplattenverschlüsselung ist nicht bei von SANtricity gemanagten Laufwerk
 Sie können die Laufwerkverschlüsselung während der ersten Appliance-Installation aktivieren, bevor Sie den Grid Manager laden. Sie können auch die Node-Verschlüsselung aktivieren oder Ihre Passphrase ändern, indem Sie die Appliance in den Wartungsmodus versetzen.
 
 .Bevor Sie beginnen
-Überprüfen Sie die Informationen über https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/reviewing-storagegrid-encryption-methods.html["Verschlüsselungsmethoden von StorageGRID"^].
+Überprüfen Sie die Informationen über https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Verschlüsselungsmethoden von StorageGRID"^].
 
 .Über diese Aufgabe
 Eine Passphrase wird festgelegt, wenn die Laufwerkverschlüsselung zunächst aktiviert ist. Wenn ein Compute-Node ersetzt wird oder wenn eine verschlüsselte SED auf einen neuen Compute-Node verschoben wird, müssen Sie die Passphrase manuell erneut eingeben.
