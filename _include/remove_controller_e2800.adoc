@@ -1,28 +1,26 @@
-= Entfernen Sie den Controller
+= Schritt 3: Entfernen Sie die Steuerung
 :allow-uri-read: 
 
 
 
 
-== Entfernen Sie den Controller
+== Schritt 3: Entfernen Sie die Steuerung
+
+Entfernen Sie den fehlerhaften Controller aus dem Gerät.
 
 .Schritte
-. Entfernen Sie den Controller aus dem Gerät:
-+
-.. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
-.. Beschriften Sie die Kabel, und trennen Sie dann die Kabel und SFPs.
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie die Kabel, und trennen Sie dann die Kabel und SFPs.
 +
 
 NOTE: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
 
-.. Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff so lange drücken, bis sie sich löst, und öffnen Sie dann den Nockengriff nach rechts.
-.. Schieben Sie den Regler mit zwei Händen und dem Nockengriff aus dem Gerät.
+. Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff so lange drücken, bis sie sich löst, und öffnen Sie dann den Nockengriff nach rechts.
+. Schieben Sie den Regler mit zwei Händen und dem Nockengriff aus dem Gerät.
 +
 
 CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht der Steuerung zu unterstützen.
 
-.. Stellen Sie den Controller auf eine flache, statische Oberfläche, wobei die abnehmbare Abdeckung nach oben zeigt.
-.. Entfernen Sie die Abdeckung, indem Sie die Taste nach unten drücken und die Abdeckung abnehmen.
-
-
+. Stellen Sie den Controller auf eine flache, statische Oberfläche, wobei die abnehmbare Abdeckung nach oben zeigt.
+. Entfernen Sie die Abdeckung, indem Sie die Taste nach unten drücken und die Abdeckung abnehmen.
 

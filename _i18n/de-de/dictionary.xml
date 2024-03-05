@@ -2773,8 +2773,6 @@ Die Laufwerke werden parallel aktualisiert, während sich die Appliance im Wartu
   <block id="bba366c7647bbe1d5257439c4c705de2" category="list-text">Wenn die Seriennummern nicht übereinstimmen, wählen Sie einen anderen Knoten aus der Strukturansicht aus.</block>
   <block id="b5ede840d77243156ecf58a68049831a" category="list-text">Nachdem Sie den Knoten gefunden haben, an dem die Komponente ersetzt werden muss, notieren Sie sich die BMC-IP-Adresse der Appliance, die im Abschnitt StorageGRID-Appliance aufgeführt ist.</block>
   <block id="ed14a9b16ba1bf2269212f09e6a7d6d2" category="paragraph">Um die Appliance im Rechenzentrum zu lokalisieren, können Sie die BMC-IP-Adresse verwenden, um die LED für die Geräteidentifierung einzuschalten.</block>
-  <block id="3265f1a32d767d5d4a8eee12e6317c69" category="doc">Bringen Sie den Akku in den neuen Controller</block>
-  <block id="d708815fa74d85cd087786cef2ab1cd6" category="list-text">Entfernen Sie den Akku aus dem ausgefallenen Controller, und setzen Sie ihn in den Ersatzcontroller ein:</block>
   <block id="e764e0e5854c6f45b3f893be8ea63ed7" category="list-text">Vergewissern Sie sich, dass die grüne LED im Controller (zwischen Akku und DIMMs) aus ist.</block>
   <block id="997a0d6eac5c38e607fa8951b2a2b74c" category="paragraph">Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.</block>
   <block id="8fea29345b9eb8aa445923cdf359f5ba" category="image-alt">Grüne LED auf E2800</block>
@@ -2999,7 +2997,6 @@ Laden Sie nach Abschluss des aktuellen Upgrades die korrekte SANtricity OS-Datei
   <block id="94a49ae35398530df80646bb544513f0" category="paragraph">Wenn Sie *EIN* auswählen, leuchten die blauen Identifizieren-LEDs auf der Vorderseite (typisch abgebildet) und der Rückseite des Geräts.</block>
   <block id="9004fc2719e98443b495c432e10ffb2e" category="paragraph">Die hintere Identifizieren-LED befindet sich in der Mitte des Geräts unter dem Micro-SD-Steckplatz.</block>
   <block id="f57d0dae24c14fe0b57a6cf0e4aa9b52" category="list-text">Schalten Sie die Identifizieren-LEDs nach Bedarf ein und aus.</block>
-  <block id="a3c54240889d795a785f54b21112d1b7" category="doc">Entfernen Sie den Controller</block>
   <block id="b45afbec52f534783a03eff995ab7c60" category="list-text">Entfernen Sie den Controller aus dem Gerät:</block>
   <block id="cf53429bbb1adc08633a9a45088a58f5" category="list-text">Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.</block>
   <block id="901be424bced93384bed30ffebbad97d" category="list-text">Beschriften Sie die Kabel, und trennen Sie dann die Kabel und SFPs.</block>
@@ -3021,13 +3018,8 @@ Laden Sie nach Abschluss des aktuellen Upgrades die korrekte SANtricity OS-Datei
   <block id="91c692d2e5b928a44446baeb67e25a50" category="paragraph">4-Port-HIC</block>
   <block id="52748a4020101685ab95f44d89b7ce8c" category="paragraph">Die Host Interface Card (HIC) mit 4 Ports. Diese Karte muss auf den neuen Controller verschoben werden, wenn Sie den Austausch durchführen.</block>
   <block id="8028710d01a41ca2ea84072e77d7385b" category="paragraph">*Hinweis*: Der E2800A Controller besitzt keine HIC.</block>
-  <block id="67d5b6933ccbaf5b0a5fbedd2e53d3c4" category="doc">Verschieben Sie HIC zu einem neuen Controller, falls erforderlich</block>
-  <block id="f98925abc6cb4377ae64ff1ac4820659" category="list-text">Wenn der ausgefallene Controller eine Host Interface Card (HIC) enthält, verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.</block>
   <block id="c8efe06bb7eee5e4d90e049e86bf65dc" category="paragraph">Eine separate HIC wird nur für den E2800B-Controller verwendet. Die HIC wird auf der Haupt-Controller-Platine montiert und enthält zwei SPF-Anschlüsse.</block>
   <block id="3974b35b2cf021e8db213f0104048701" category="admonition">Die Abbildungen in diesem Verfahren zeigen eine HIC mit 2 Ports. Die HIC in Ihrem Controller hat möglicherweise eine andere Anzahl von Ports.</block>
-  <block id="269cafd6c8073deeb85a9bd332a74947" category="inline-xref">Verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller</block>
-  <block id="963c2eb9efcfeefa0eda5318bcdf4900" category="list-text">Wenn der Controller keine HIC (E2800A) besitzt, ersetzen Sie die Controller-Abdeckung. Wenn der Controller über eine HIC (E2800B) verfügt, fahren Sie mit fort <block ref="45559081ecf57b0c388c65e5f8f80079" category="inline-xref-macro-rx"></block>.</block>
-  <block id="35b8298e26bba9285059b47bb9a4eeab" category="list-text">[[move_the_HIC_to_the_Replacement_Controller]]Wenn Sie über eine HIC verfügen, verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.</block>
   <block id="1abae1b2ca77419d27f9d38b1a5ce79e" category="list-text">Entfernen Sie alle SFPs von der HIC.</block>
   <block id="260b692edc8c35ec0a94e0a66944afbf" category="list-text">Entfernen Sie mit einem #1 Kreuzschlitzschraubendreher die Schrauben, mit denen die HIC-Frontplatte am Controller befestigt ist.</block>
   <block id="c1191295734430664731c130f36d12d6" category="paragraph">Es gibt vier Schrauben: Eine auf der Oberseite, eine auf der Seite und zwei auf der Vorderseite.</block>
@@ -3591,7 +3583,6 @@ Um das Klonen des Quellknoten neu zu starten, starten Sie den Klonprozess erneut
   <block id="65499790690d2c454fcef420d0986cd2" category="list-text">Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.</block>
   <block id="6df8f1985e7a6f402e722600a5f522af" category="admonition">Verlassen Sie sich beim Austausch eines Controllers in der StorageGRID Appliance nicht auf die Anweisungen zur E-Series, da die Vorgehensweisen nicht identisch sind.</block>
   <block id="2bb86ccc72619207d683e45635d07991" category="list-text">Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.</block>
-  <block id="fe4e9e2834367a1bf8d2c51578f417e3" category="list-text">Wenn alle Laufwerke gesichert sind, haben Sie die Schritte im Verfahren zum Austausch der Controller der simplex E2800 Serie überprüft. Dazu gehört das Herunterladen und Installieren des E-Series SANtricity System Managers von der NetApp Support Website und dann die Verwendung des Enterprise Management-Fensters (EMW), um die gesicherten Laufwerke nach dem Austausch des Controllers zu entsperren.</block>
   <block id="822f3e8582776cbafa8007c1adb5ec11" category="admonition">Sie können das Gerät erst dann verwenden, wenn Sie die Laufwerke mit dem gespeicherten Schlüssel entsperren.</block>
   <block id="b865bb98d9b0550e0a993612bafda00d" category="list-text">Sie müssen über spezifische Zugriffsberechtigungen verfügen.</block>
   <block id="8ff1ab4da14b392126e0be753ff139ad" category="list-text">Sie müssen mit einem beim Grid Manager angemeldet sein<block ref="a18f1d7592d98ae161543980d36b8697" category="inline-link-rx"></block>.</block>
@@ -3602,14 +3593,8 @@ Um das Klonen des Quellknoten neu zu starten, starten Sie den Klonprozess erneut
   <block id="94f8e078397fb87116b6f9abde423938" category="paragraph">Auf den Appliance-Speicherknoten kann nicht zugegriffen werden, wenn Sie den Controller austauschen. Wenn der Controller der E2800 Serie ausreichend funktioniert, können Sie dies gerne tun <block ref="b3dcbd550feb67c7e16c70bc63f72e18" category="inline-link-macro-rx"></block>.</block>
   <block id="752e2b22735dd0a3dc51389142f82b7a" category="paragraph">Wenn Sie einen Controller austauschen, müssen Sie den Akku aus dem ursprünglichen Controller entfernen und in den Ersatzcontroller einsetzen. In einigen Fällen müssen Sie möglicherweise auch die Host-Schnittstellenkarte vom ursprünglichen Controller entfernen und im Ersatzcontroller installieren.</block>
   <block id="9ce903ec97f42a702063374b8f9558b5" category="admonition">Die Storage Controller in den meisten Appliance-Modellen umfassen keine Host Interface Cards (HIC).</block>
-  <block id="74ddc706cc279e81e96ba2d0f0b7e327" category="paragraph">Diese Aufgabe hat folgende Teile:</block>
   <block id="f8199556cf6a62ca9268aa50c99b34a1" category="list-text">Vorbereiten</block>
-  <block id="db138738f11a6c56c06b54240b38df1d" category="list-text">Controller in den Offline-Modus versetzen</block>
-  <block id="abf8f13bdb84c7122ff9a72d14501969" category="list-text">Controller entfernen</block>
-  <block id="176958306106ed587f1ed281973576da" category="list-text">Den Akku in den neuen Controller verschieben</block>
-  <block id="44f0502a4e12ff4c7b2a8e29ddf1240f" category="list-text">Controller austauschen</block>
   <block id="c1873ea87bdf996ede9990c97f3270e4" category="list-text">Befolgen Sie die Anweisungen beim Austausch des E2800 Controllers, um das Entfernen des Controllers vorzubereiten.</block>
-  <block id="55c892922ea20ac558136aea5a263d6a" category="paragraph">Sie führen die folgenden Schritte mit SANtricity System Manager aus.</block>
   <block id="2ecfec7bfa276afdd11c54d5abaab7fa" category="list-text">Notieren Sie sich, welche Version der SANtricity OS Software derzeit auf dem Controller installiert ist.</block>
   <block id="b8813be0069959617e6f40c3a22df0fc" category="list-text">Notieren Sie sich, welche NVSRAM-Version derzeit installiert ist.</block>
   <block id="ba155e9172d5994c57e93fb656141227" category="list-text">Wenn die Laufwerksicherheit aktiviert ist, stellen Sie sicher, dass ein gespeicherter Schlüssel existiert und dass Sie den Passphrase kennen, der für die Installation erforderlich ist.</block>
@@ -3618,7 +3603,6 @@ Um das Klonen des Quellknoten neu zu starten, starten Sie den Klonprozess erneut
   <block id="7a96ab4cc5d58598488f7e2fdcea9df9" category="paragraph">Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen.</block>
   <block id="fd4061a4924f1e0bf98462757a83fc33" category="list-text">Sammeln von Support-Daten für die Appliance</block>
   <block id="d5b7c4e4db51ddcf44d5c764d7d12dec" category="admonition">Durch das Erfassen von Support-Daten vor und nach dem Ersetzen einer Komponente wird sichergestellt, dass Sie einen vollständigen Satz von Protokollen an den technischen Support senden können, wenn der Austausch das Problem nicht behebt.</block>
-  <block id="da397caaa5e3712e133c0d13d60aa55f" category="section-title">Versetzen Sie den Controller in den Offline-Modus</block>
   <block id="1c473716429e7b086c508d4d989b6460" category="list-text">Wenn die StorageGRID Appliance in einem StorageGRID System ausgeführt wird, <block ref="b3dcbd550feb67c7e16c70bc63f72e18" category="inline-link-macro-rx"></block>.</block>
   <block id="b479d08d9995967f3e39eb8f8dda7580" category="list-text">Wenn der E2800 Controller ausreichend funktioniert, um ein kontrolliertes Herunterfahren zu ermöglichen, bestätigen Sie, dass alle Operationen abgeschlossen wurden.</block>
   <block id="01d4dba33c39acfee6527a2ef4d297b1" category="list-text">Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.</block>
@@ -4228,5 +4212,29 @@ Weitere Informationen zum Verwalten von Objekten mit Information Lifecycle Manag
   <block id="46621f49f52b2e7735202aeadc8627bc" category="paragraph"><block ref="46621f49f52b2e7735202aeadc8627bc" category="inline-link-rx"></block></block>
   <block id="39822573479d4d01c9fc52445e6f90d4" category="paragraph">Siehe<block ref="182f5524fe0d353d40aacb3022a6d00c" category="inline-link-rx"></block> Um Informationen zu allen für StorageGRID Appliances verfügbaren Verschlüsselungsmethoden zu erhalten.</block>
   <block id="38863f5650b2800fa51be4d3a390b203" category="paragraph">Überprüfen Sie die Informationen über<block ref="182f5524fe0d353d40aacb3022a6d00c" category="inline-link-rx"></block>.</block>
-  <block id="00480567d9c91f7b7ba44e21f754f737" category="paragraph">Wenn Sie über eine SGF6112-Appliance und entweder den verfügen<block ref="646dc3cd3bd62a6be1690aac96e1dd08" category="inline-link-rx"></block>, Auf der Seite mit den Gerätedetails wird die Registerkarte Laufwerke verwalten angezeigt.</block>
+  <block id="8982aaa194b18d24402b49fbe219e3e5" category="list-text">Lassen Sie die Kabel, um einen Switch-Port und eine IP-Adresse zu speichern. Greifen Sie über die Grid Manager- oder Speicher Grid Appliance Installer-UIs auf den SANtricity System Manager zu.</block>
+  <block id="c114b6896b71306b6ff5217eebf1d7eb" category="doc">Schritt 4: Batterie auf den neuen Controller bringen</block>
+  <block id="eed22a946ecb2d3652178906c8adb5c5" category="paragraph">Entfernen Sie den Akku aus dem fehlerhaften Controller, und setzen Sie ihn in den Ersatz-Controller ein.</block>
+  <block id="a9c0cea0fa970dd78f5c9b732ed7af82" category="doc">Schritt 3: Entfernen Sie die Steuerung</block>
+  <block id="73c449311895c44cdc2cb9f82f1d86a8" category="paragraph">Entfernen Sie den fehlerhaften Controller aus dem Gerät.</block>
+  <block id="41cead6208beaab4753fef7eb16b7b3d" category="doc">Schritt 5: Verschieben Sie HIC auf neuen Controller, falls erforderlich</block>
+  <block id="52cea5d7c14ce5a1a352ae36b02fc89c" category="paragraph">Wenn der ausgefallene Controller eine HIC enthält, bringen Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.</block>
+  <block id="f2323bfac4b2b6c0bed61a2782d7b2a3" category="open-title">E2800A</block>
+  <block id="c7c61e2e49b4848eb04ef9166c62112e" category="paragraph">Ein E2800A-Controller verfügt nicht über eine HIC.</block>
+  <block id="66e02a6be1542a6c5ab5b6e835ace031" category="inline-xref">Schritt 6: Controller austauschen</block>
+  <block id="bee477a851e07f638eb69240b1b317bc" category="paragraph">Die Abdeckung des E2800A-Controllers wieder anbringen und mit fortfahren <block ref="4bd98407e7ac018ef33f15dc5a2ef6d6" category="inline-xref-macro-rx"></block></block>
+  <block id="b186f28a62d42b7cdd50516610c1e839" category="open-title">E2800B</block>
+  <block id="477f610d0d161e316a6f06600c56252b" category="paragraph">Setzen Sie die HIC vom ausgefallenen E2800B-Controller auf den Ersatz-Controller.</block>
+  <block id="bfc87e4ee97496c70a38995efddf5be3" category="paragraph">Wenn Sie über eine SGF6112-Appliance und entweder den verfügen<block ref="5540729631f9c458d692d5b76bbc9b38" category="inline-link-rx"></block>, Auf der Seite mit den Gerätedetails wird die Registerkarte Laufwerke verwalten angezeigt.</block>
+  <block id="b8325740c6f1fdf42bd83d726c080c9a" category="inline-link">Controller-Austauschverfahren bei der simplex E2800 Serie</block>
+  <block id="0f31bf890cf0f06d20912d7da5d50990" category="list-text">Wenn alle Laufwerke gesichert sind, haben Sie die Schritte im überprüft<block ref="ab9bcc1613fce025138f2bd863db4580" category="inline-link-rx"></block>, Die das Herunterladen und Installieren der E-Serie SANtricity System Manager von der NetApp Support-Website und dann mit dem Enterprise Management Fenster (EMW), um die gesicherten Laufwerke nach dem Austausch des Controllers entsperren.</block>
+  <block id="16cd89923af48ed14de009bdd8e2993f" category="section-title">Schritt 1: Bereiten Sie vor, den Controller zu entfernen</block>
+  <block id="f187670d0aad1013a9fbfc3c71bf760e" category="paragraph">Sie verwenden SANtricity System Manager, um die folgenden Schritte auszuführen.</block>
+  <block id="c5a54dca8b6ca77546f4cc165d0d11a4" category="section-title">Schritt 2: Den Controller offline schalten</block>
+  <block id="89fb5d48855149ae02912143426f3adc" category="paragraph">Versetzen Sie den Controller in den Offline-Modus und vergewissern Sie sich, dass alle Vorgänge abgeschlossen sind.</block>
+  <block id="14dc8bb572f0f111ffb3d882de64812c" category="list-text">Schaltet das Controller-Shelf aus.</block>
+  <block id="b2f9b08b9c77fd0d4c43b02ecac55483" category="paragraph">Installieren Sie den Ersatz-Controller und überprüfen Sie, ob er wieder an das Raster angeschlossen ist.</block>
+  <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Schalten Sie das Controller-Shelf ein.</block>
+  <block id="944f002f126d9f60a7abfb7abb8b19a6" category="section-title">Schritt 1: Bereiten Sie die Ersatzsteuerung vor</block>
+  <block id="7dc8820948fbd0653bf70cd43dd02d4c" category="paragraph">Bereiten Sie vor, den ausgefallenen Controller zu entfernen und in den Offline-Modus zu versetzen.</block>
 </blocks>

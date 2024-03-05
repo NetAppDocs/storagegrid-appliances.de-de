@@ -18,7 +18,7 @@ summary: Über die Registerkarte Laufwerke managen im Grid Manager können Sie F
 
 
 .Über diese Aufgabe
-Wenn Sie über eine SGF6112-Appliance und entweder den verfügen https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Zugriffsberechtigung für den Administrator der Storage-Appliance oder den Root-Zugriff"], Auf der Seite mit den Gerätedetails wird die Registerkarte Laufwerke verwalten angezeigt.
+Wenn Sie über eine SGF6112-Appliance und entweder den verfügen https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Zugriffsberechtigung für den Administrator der Storage-Appliance oder den Root-Zugriff"^], Auf der Seite mit den Gerätedetails wird die Registerkarte Laufwerke verwalten angezeigt.
 
 Die Registerkarte Laufwerke managen enthält die folgenden Ansichten:
 

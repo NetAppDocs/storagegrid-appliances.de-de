@@ -1,15 +1,15 @@
-= Bringen Sie den Akku in den neuen Controller
+= Schritt 4: Batterie auf den neuen Controller bringen
 :allow-uri-read: 
 
 
 
 
-== Bringen Sie den Akku in den neuen Controller
+== Schritt 4: Batterie auf den neuen Controller bringen
+
+Entfernen Sie den Akku aus dem fehlerhaften Controller, und setzen Sie ihn in den Ersatz-Controller ein.
 
 .Schritte
-. Entfernen Sie den Akku aus dem ausgefallenen Controller, und setzen Sie ihn in den Ersatzcontroller ein:
-+
-.. Vergewissern Sie sich, dass die grüne LED im Controller (zwischen Akku und DIMMs) aus ist.
+. Vergewissern Sie sich, dass die grüne LED im Controller (zwischen Akku und DIMMs) aus ist.
 +
 Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
 
@@ -35,8 +35,8 @@ Interne LED für aktiven Cache
 Batterie
 
 |===
-.. Suchen Sie den blauen Freigabehebel für die Batterie.
-.. Entriegeln Sie den Akku, indem Sie den Entriegelungshebel nach unten und aus dem Controller entfernen.
+. Suchen Sie den blauen Freigabehebel für die Batterie.
+. Entriegeln Sie den Akku, indem Sie den Entriegelungshebel nach unten und aus dem Controller entfernen.
 +
 image::../media/e2800_remove_battery.gif[Batterieverriegelung]
 
@@ -59,32 +59,30 @@ Akkufreigaberiegel
 Batterie
 
 |===
-.. Heben Sie den Akku an, und schieben Sie ihn aus dem Controller.
-.. Entfernen Sie die Abdeckung vom Ersatzcontroller.
-.. Richten Sie den Ersatz-Controller so aus, dass der Steckplatz für die Batterie zu Ihnen zeigt.
-.. Setzen Sie den Akku in einem leichten Abwärtswinkel in den Controller ein.
+. Heben Sie den Akku an, und schieben Sie ihn aus dem Controller.
+. Entfernen Sie die Abdeckung vom Ersatzcontroller.
+. Richten Sie den Ersatz-Controller so aus, dass der Steckplatz für die Batterie zu Ihnen zeigt.
+. Setzen Sie den Akku in einem leichten Abwärtswinkel in den Controller ein.
 +
 Sie müssen den Metallflansch an der Vorderseite der Batterie in den Schlitz an der Unterseite des Controllers einsetzen und die Oberseite der Batterie unter den kleinen Ausrichtstift auf der linken Seite des Controllers schieben.
 
-.. Schieben Sie die Akkuverriegelung nach oben, um die Batterie zu sichern.
+. Schieben Sie die Akkuverriegelung nach oben, um die Batterie zu sichern.
 +
 Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
 
-.. Drehen Sie den Controller um, um zu bestätigen, dass der Akku korrekt installiert ist.
+. Drehen Sie den Controller um, um zu bestätigen, dass der Akku korrekt installiert ist.
 +
 
 CAUTION: *Mögliche Hardware-Schäden* -- der Metallflansch an der Vorderseite der Batterie muss vollständig in den Schlitz am Controller eingesetzt werden (wie in der ersten Abbildung dargestellt). Wenn die Batterie nicht richtig eingesetzt ist (wie in der zweiten Abbildung dargestellt), kann der Metallflansch die Controllerplatine kontaktieren, was zu Schäden führt.
 
 +
-*** *Korrekt -- der Metallflansch der Batterie ist vollständig in den Schlitz am Controller eingesetzt:*
+** *Korrekt -- der Metallflansch der Batterie ist vollständig in den Schlitz am Controller eingesetzt:*
 +
 image::../media/e2800_battery_flange_ok.gif[Batterieflansch Korrekt]
 
-*** *Falsch -- der Metallflansch der Batterie ist nicht in den Steckplatz an der Steuerung eingefügt:*
+** *Falsch -- der Metallflansch der Batterie ist nicht in den Steckplatz an der Steuerung eingefügt:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Batterieflansch Nicht Korrekt]
-
-
 
 
 
