@@ -163,7 +163,7 @@ CAUTION: Wenn Sie die Daten auf den Laufwerken aufbewahren möchten, müssen Sie
 
 
 . Schalten Sie das Gerät ein.
-. Wenn die Hardwareverschlüsselung für die SED-Laufwerke auf der Appliance, die Sie ausgetauscht haben, aktiviert war, müssen Sie dies tun link:optional-enabling-node-encryption.html#access-an-encrypted-drive["Geben Sie die Passphrase für die Laufwerkverschlüsselung ein"] So greifen Sie auf die verschlüsselten Laufwerke zu, wenn die Ersatz-Appliance zum ersten Mal gestartet wird.
+. Wenn die Hardwareverschlüsselung für die SED-Laufwerke auf der Appliance, die Sie ausgetauscht haben, aktiviert war, müssen Sie dies tun link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["Geben Sie die Passphrase für die Laufwerkverschlüsselung ein"] So greifen Sie auf die verschlüsselten Laufwerke zu, wenn die Ersatz-Appliance zum ersten Mal gestartet wird.
 . Warten Sie, bis die Appliance wieder mit dem Raster verbunden ist. Wenn die Appliance nicht erneut dem Raster angeschlossen wird, befolgen Sie die Anweisungen auf der Startseite des StorageGRID-Geräteinstallationsprogramms, um Probleme zu beheben.
 +
 
