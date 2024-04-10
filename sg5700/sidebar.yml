@@ -18,7 +18,15 @@ entries:
         Wartungsmodus
       url: "/sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html"
   - title: Aktualisieren Sie die Laufwerk-Firmware mit SANtricity System Manager
-    url: "/sg5700/upgrading-drive-firmware-using-santricity-system-manager.html"
+    entries:
+    - title: Aktualisieren Sie die Laufwerk-Firmware mithilfe von SANtricity System
+        Manager und verwenden Sie die Online-Methode
+      url: "/sg5700/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Aktualisieren Sie die Laufwerk-Firmware mithilfe von SANtricity System
+        Manager unter Verwendung der Offline-Methode
+      url: "/sg5700/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
+    - title: Fehler beim Upgrade der Laufwerk-Firmware beheben
+      url: "/sg5700/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
   - title: Ändern Sie die Link-Konfiguration des E5700SG Controllers
     url: "/sg5700/changing-link-configuration-of-e5700sg-controller.html"
 - title: Hardware-Verfahren

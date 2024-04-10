@@ -1,0 +1,73 @@
+= 
+:allow-uri-read: 
+
+
+Beheben Sie Fehler, die auftreten können, wenn Sie SANtricity System Manager zum Aktualisieren der Firmware auf den Laufwerken in Ihrer Appliance verwenden.
+
+* *Fehlgeschlagene zugewiesene Laufwerke*
++
+** Ein Grund für den Fehler könnte sein, dass das Laufwerk nicht über die entsprechende Signatur verfügt. Stellen Sie sicher, dass es sich bei dem betroffenen Laufwerk um ein autorisiertes Laufwerk handelt. Weitere Informationen erhalten Sie vom technischen Support.
+** Stellen Sie beim Austausch eines Laufwerks sicher, dass das Ersatzlaufwerk eine Kapazität hat, die der des ausgefallenen Laufwerks entspricht oder größer ist als das ausgefallene Laufwerk, das Sie ersetzen.
+** Sie können das ausgefallene Laufwerk ersetzen, während das Speicher-Array I/O-Vorgänge erhält
+
+
+* *Speicher-Array prüfen*
++
+** Stellen Sie sicher, dass jedem Controller eine IP-Adresse zugewiesen wurde.
+** Stellen Sie sicher, dass alle Kabel, die an den Controller angeschlossen sind, nicht beschädigt sind.
+** Stellen Sie sicher, dass alle Kabel fest angeschlossen sind.
+
+
+* * Integrierte Hot-Spare-Laufwerke*
++
+Diese Fehlerbedingung muss korrigiert werden, bevor Sie die Firmware aktualisieren können.
+
+* *Unvollständige Volume-Gruppen*
++
+Wenn eine oder mehrere Volume-Gruppen oder Disk Pools unvollständig sind, müssen Sie diese Fehlerbedingung korrigieren, bevor Sie die Firmware aktualisieren können.
+
+* *Exklusive Operationen (außer Hintergrund-Medien/Paritäts-Scan), die derzeit auf beliebigen Volume-Gruppen* ausgeführt werden
++
+Wenn ein oder mehrere exklusive Vorgänge ausgeführt werden, müssen die Vorgänge abgeschlossen sein, bevor die Firmware aktualisiert werden kann. Überwachen Sie den Fortschritt des Betriebs mit System Manager.
+
+* *Fehlende Volumen*
++
+Sie müssen den fehlenden Datenträgerzustand korrigieren, bevor die Firmware aktualisiert werden kann.
+
+* *Entweder Controller in einem anderen Zustand als optimal*
++
+Einer der Controller des Storage Arrays muss Aufmerksamkeit schenken. Diese Bedingung muss korrigiert werden, bevor die Firmware aktualisiert werden kann.
+
+* *Unpassende Speicherpartitionsdaten zwischen Controller-Objektgrafiken*
++
+Beim Validieren der Daten auf den Controllern ist ein Fehler aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+* *SPM Überprüfung des Datenbankcontrollers schlägt fehl*
++
+Auf einem Controller ist ein Fehler bei der Zuordnung von Speicherpartitionen zur Datenbank aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+* *Überprüfung der Konfigurationsdatenbank (sofern von der Controller-Version des Speicherarrays unterstützt)*
++
+Auf einem Controller ist ein Fehler in der Konfigurationsdatenbank aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+* *MEL-bezogene Prüfungen*
++
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+* *In den letzten 7 Tagen wurden mehr als 10 DDE Informations- oder kritische MEL-Ereignisse gemeldet*
++
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+* *Mehr als 2 Seiten 2C kritische MEL-Ereignisse wurden in den letzten 7 Tagen* gemeldet
++
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+* *In den letzten 7 Tagen wurden mehr als 2 heruntergestuften Drive Channel-kritische MEL-Ereignisse gemeldet*
++
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+* *Mehr als 4 kritische MEL-Einträge in den letzten 7 Tagen*
++
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+

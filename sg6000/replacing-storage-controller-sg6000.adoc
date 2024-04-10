@@ -59,6 +59,9 @@ NOTE: Die Storage Controller in den meisten Appliance-Modellen umfassen keine Ho
 
 == Schritt 1: Bereiten Sie die Ersatzsteuerung vor
 
+Bereiten Sie den neuen E2800A- oder E2800B-Controller vor.
+
+.Schritte
 . Packen Sie die neue Steuerung aus und stellen Sie sie auf eine flache, statische Oberfläche.
 +
 Bewahren Sie das Verpackungsmaterial auf, das beim Versand der fehlerhaften Steuerung verwendet werden soll.
@@ -255,7 +258,7 @@ image::../media/e2800_battery_flange_not_ok.gif[Batterieflansch Nicht Korrekt]
 
 == Schritt 5: Verschieben Sie HIC auf neuen Controller, falls erforderlich
 
-Wenn der ausgefallene Controller eine HIC enthält, bringen Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
+Wenn der ausgefallene Controller eine Host Interface Card (HIC) enthält, verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
 
 Eine separate HIC wird nur für den E2800B-Controller verwendet. Die HIC wird auf der Haupt-Controller-Platine montiert und enthält zwei SPF-Anschlüsse.
 

@@ -1,0 +1,139 @@
+---
+permalink: sg6000/upgrading-drive-firmware-using-santricity-system-manager-online.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, upgrade, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
+---
+= Aktualisieren Sie die Firmware des SG6000 Laufwerks mithilfe von SANtricity System Manager über die Online-Methode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aktualisieren Sie mit der Online-Methode des SANtricity System Managers die Firmware auf den Laufwerken in Ihrer Appliance, um sicherzustellen, dass Sie über die neuesten Funktionen und Fehlerbehebungen verfügen.
+
+.Bevor Sie beginnen
+* Die Storage Appliance hat einen optimalen Status.
+* Alle Laufwerke haben einen optimalen Status.
+
+
+
+CAUTION: Aktualisieren Sie nicht gleichzeitig die Laufwerk-Firmware auf mehr als einer StorageGRID Appliance. Dies kann je nach Bereitstellungsmodell und ILM-Richtlinie zu einer Nichtverfügbarkeit von Daten führen.
+
+.Über diese Aufgabe
+Die Laufwerke werden nacheinander aktualisiert, während die Appliance I/O-Vorgänge durchführt Bei dieser Methode müssen Sie das Gerät nicht in den Wartungsmodus versetzen. Allerdings kann die System-Performance beeinträchtigt sein und das Upgrade kann mehrere Stunden länger dauern als die Offline-Methode.
+
+[NOTE]
+====
+Laufwerke, die zu Volumes ohne Redundanz gehören, müssen mithilfe des aktualisiert werden link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["Offline-Methode"]. Die Offline-Methode sollte für alle Laufwerke verwendet werden, die mit dem Flash Read-Cache verbunden sind (z. B. SSD-Laufwerke im SG6060), sowie für alle Pools oder Volume-Gruppen, deren Betrieb derzeit beeinträchtigt ist.
+
+Es gibt zwei Laufwerkstypen: SSD und HDD. Sie müssen den verwenden link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["Offline-Methode"] Um die Firmware auf den SSDs zu aktualisieren (z. B. SSD-Laufwerke im SG6060). Sie können entweder die Online- oder die Offline-Methode verwenden, um die Firmware auf HDDs zu aktualisieren.
+
+====
+.Schritte
+. Greifen Sie mit einer der folgenden Methoden auf SANtricity System Manager zu:
++
+** Verwenden Sie das StorageGRID-Appliance-Installationsprogramm, und wählen Sie *Erweitert* > *SANtricity-Systemmanager*
+** Verwenden Sie den Grid-Manager, und wählen Sie *NODES* > *_Storage Node_* > *SANtricity System Manager* aus
+** Verwenden Sie SANtricity System Manager, indem Sie zur Storage Controller-IP navigieren:
++
+`*https://_Storage_Controller_IP_*`
+
+
+
+. Geben Sie bei Bedarf den Benutzernamen und das Kennwort des SANtricity System Manager-Administrators ein.
+. Überprüfen Sie die Version der Laufwerk-Firmware, die derzeit in der Speicher-Appliance installiert ist:
++
+.. Wählen Sie im SANtricity System Manager *SUPPORT* > *Upgrade-Center* aus.
+.. Wählen Sie unter Laufwerk-Firmware-Upgrade die Option *Upgrade starten* aus.
++
+Auf der Seite Laufwerksfirmware aktualisieren werden die aktuell installierten Laufwerksfirmware-Dateien angezeigt.
+
+.. Beachten Sie die aktuellen Versionen der Laufwerk-Firmware und die Laufwerkskennungen in der Spalte Aktueller Laufwerk-Firmware.
++
+image::../media/storagegrid_update_drive_firmware.png[Aktualisieren Sie Die Laufwerk-Firmware]
+
++
+In diesem Beispiel:
+
++
+*** Die Version der Laufwerk-Firmware lautet *MS02*.
+*** Die Laufwerk-ID lautet *KPM51VUG800G*.
+
+
+.. Wählen Sie in der Spalte „verbundene Laufwerke“ die Option *Laufwerke anzeigen* aus, um anzuzeigen, wo diese Laufwerke in Ihrem Speichergerät installiert sind.
+.. Schließen Sie das Fenster Upgrade Drive Firmware.
+
+
+. Laden Sie das verfügbare Laufwerk-Firmware-Upgrade herunter, und bereiten Sie es vor:
++
+.. Wählen Sie unter Laufwerk-Firmware-Upgrade *NetApp Support* aus.
+.. Wählen Sie auf der NetApp Support-Website die Registerkarte *Downloads* aus und wählen Sie dann *E-Series Festplatten-Firmware* aus.
++
+Die Seite E-Series Festplatten-Firmware wird angezeigt.
+
+.. Suchen Sie nach jedem in Ihrer Speicheranwendung installierten *Drive Identifier*, und stellen Sie sicher, dass jeder Laufwerkkennung die neueste Firmware-Version hat.
++
+*** Wenn die Firmware-Version kein Link ist, hat diese Laufwerkkennung die neueste Firmware-Version.
+*** Wenn eine oder mehrere Laufwerk-Teilenummern für eine Laufwerksidentifikation aufgeführt sind, ist für diese Laufwerke ein Firmware-Upgrade verfügbar. Sie können einen beliebigen Link auswählen, um die Firmware-Datei herunterzuladen.
++
+image::../media/storagegrid_drive_firmware_download.png[Seite E-Series Festplatten-Firmware]
+
+
+
+.. Wenn eine spätere Firmware-Version aufgeführt wird, wählen Sie den Link im Firmware-Rev. Aus (Download) Spalte zum Herunterladen einer `.zip` Archiv mit der Firmware-Datei.
+.. Extrahieren Sie die von der Support-Website heruntergeladenen Archivdateien der Laufwerk-Firmware (entpacken).
+
+
+. Installieren Sie das Laufwerk-Firmware-Upgrade:
++
+.. Wählen Sie im SANtricity System Manager unter Upgrade der Laufwerk-Firmware die Option *Upgrade starten* aus.
+.. Wählen Sie *Durchsuchen* aus, und wählen Sie die neuen Laufwerk-Firmware-Dateien aus, die Sie von der Support-Website heruntergeladen haben.
++
+Die Firmware-Dateien des Laufwerks haben einen ähnlichen Dateinamen wie `D_HUC101212CSS600_30602291_MS01_2800_0002.dlp`.
+
++
+Sie können bis zu vier Laufwerk-Firmware-Dateien auswählen, jeweils eine. Wenn mehrere Firmware-Dateien eines Laufwerks mit demselben Laufwerk kompatibel sind, wird ein Dateikonflikt angezeigt. Legen Sie fest, welche Laufwerk-Firmware-Datei Sie für das Upgrade verwenden möchten, und entfernen Sie die andere.
+
+.. Wählen Sie *Weiter*.
++
+*Select Drives* listet die Laufwerke auf, die Sie mit den ausgewählten Firmware-Dateien aktualisieren können.
+
++
+Es werden nur kompatible Laufwerke angezeigt.
+
++
+Die ausgewählte Firmware für das Laufwerk wird in der Spalte *vorgeschlagene Firmware* angezeigt. Wenn Sie diese Firmware ändern müssen, wählen Sie *Zurück*.
+
+.. Wählen Sie *Alle Laufwerke online aktualisieren* – Aktualisieren Sie die Laufwerke, die einen Firmware-Download unterstützen können, während das Speicherarray I/O-Vorgänge verarbeitet Sie müssen die I/O-Vorgänge für die zugehörigen Volumes, die diese Laufwerke verwenden, nicht stoppen, wenn Sie diese Aktualisierungsmethode auswählen.
++
+[NOTE]
+====
+Ein Online-Upgrade kann mehrere Stunden länger dauern als ein Offline-Upgrade.
+
+Sie müssen den verwenden link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["Offline-Methode"] Um die Firmware auf SSDs zu aktualisieren.
+
+====
+.. Wählen Sie in der ersten Spalte der Tabelle das Laufwerk oder die Laufwerke aus, die aktualisiert werden sollen.
++
+Als Best Practice wird empfohlen, alle Laufwerke desselben Modells auf dieselbe Firmware-Version zu aktualisieren.
+
+.. Wählen Sie *Start* und bestätigen Sie, dass Sie das Upgrade durchführen möchten.
++
+Wenn Sie das Upgrade beenden möchten, wählen Sie *Stopp*. Alle derzeit ausgeführten Firmware-Downloads abgeschlossen. Alle nicht gestarteten Firmware-Downloads werden abgebrochen.
+
++
+
+CAUTION: Das Anhalten der Laufwerk-Firmware-Aktualisierung kann zu Datenverlust oder nicht verfügbaren Laufwerken führen.
+
+.. (Optional) um eine Liste der aktualisierten Versionen anzuzeigen, wählen Sie *Protokoll speichern*.
++
+Die Protokolldatei wird im Download-Ordner für Ihren Browser mit dem Namen gespeichert `latest-upgrade-log-timestamp.txt`.
+
++
+link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html["Beheben Sie bei Bedarf Fehler bei der Aktualisierung der Treiber-Firmware"].
+
+
+
+

@@ -17,7 +17,15 @@ entries:
     - title: Aktualisieren Sie das SANtricity OS auf Storage Controllern mit dem Wartungsmodus
       url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html"
   - title: Aktualisieren Sie die Laufwerk-Firmware mit SANtricity System Manager
-    url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager.html"
+    entries:
+    - title: Aktualisieren Sie die Firmware des SG6000 Laufwerks mithilfe von SANtricity
+        System Manager über die Online-Methode
+      url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Aktualisieren Sie die Firmware des SG6000-Laufwerks mithilfe von SANtricity
+        System Manager über die Offline-Methode
+      url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
+    - title: Fehler beim Upgrade der Laufwerk-Firmware beheben
+      url: "/sg6000/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
   - title: Ein- und Ausschalten der Controller-ID-LED
     url: "/sg6000/turning-controller-identify-led-on-and-off.html"
   - title: Controller im Datacenter finden

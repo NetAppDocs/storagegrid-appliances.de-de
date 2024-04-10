@@ -6,7 +6,7 @@
 
 == Schritt 5: Verschieben Sie HIC auf neuen Controller, falls erforderlich
 
-Wenn der ausgefallene Controller eine HIC enthält, bringen Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
+Wenn der ausgefallene Controller eine Host Interface Card (HIC) enthält, verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
 
 Eine separate HIC wird nur für den E2800B-Controller verwendet. Die HIC wird auf der Haupt-Controller-Platine montiert und enthält zwei SPF-Anschlüsse.
 
