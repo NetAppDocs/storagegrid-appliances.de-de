@@ -134,7 +134,7 @@ NOTE: Dieses Verfahren richtet sich an fortgeschrittene Benutzer mit Erfahrung i
 +
 [listing]
 ----
-configure-sga.py --help
+./configure-sga.py --help
 ----
 +
 Der `configure-sga.py` Skript verwendet fünf Unterbefehle:
@@ -147,7 +147,7 @@ Der `configure-sga.py` Skript verwendet fünf Unterbefehle:
 ** `reboot` Um das Gerät neu zu starten
 +
 Wenn Sie ein Unterbefehlsargument (erweitert, konfigurieren, installieren, überwachen oder neu booten), gefolgt vom eingeben `--help` Option Sie erhalten einen anderen Hilfetext mit mehr Details zu den Optionen, die in diesem Unterbefehl verfügbar sind: +
-`configure-sga.py _subcommand_ --help`
+`./configure-sga.py _subcommand_ --help`
 
 +
 Wenn möglich <<back-up-appliance-config,Sichern Sie die Appliance-Konfiguration in einer JSON-Datei>>, Stellen Sie sicher, dass die Knotennamen folgende Anforderungen erfüllen:
@@ -163,9 +163,9 @@ Wenn möglich <<back-up-appliance-config,Sichern Sie die Appliance-Konfiguration
 
 
 . Um die Konfiguration aus der JSON-Datei auf die Appliance anzuwenden, geben Sie Folgendes ein, wobei `_SGA-INSTALL-IP_` Ist die Admin-Netzwerk-IP-Adresse für die Appliance, `_json-file-name_` Ist der Name der JSON-Datei, und `_node-name-inside-json-file_` Ist der Name des Knotens mit der anzuwendenden Konfiguration: +
-`configure-sga.py advanced --restore-file _json-file-name_ --restore-node _node-name-inside-json-file_ _SGA-INSTALL-IP_`
+`./configure-sga.py advanced --restore-file _json-file-name_ --restore-node _node-name-inside-json-file_ _SGA-INSTALL-IP_`
 . Um die aktuelle Konfiguration des Appliance-Knotens zu bestätigen, geben Sie hier Folgendes ein `_SGA-INSTALL-IP_` Ist die Admin-Netzwerk-IP-Adresse für die Appliance: +
-`configure-sga.py configure _SGA-INSTALL-IP_`
+`./configure-sga.py configure _SGA-INSTALL-IP_`
 +
 Die Ergebnisse zeigen aktuelle IP-Informationen für die Appliance an, einschließlich der IP-Adresse des primären Admin-Knotens und Informationen über Admin-, Grid- und Client-Netzwerke.
 
@@ -250,19 +250,20 @@ Connecting to +https://10.224.2.30:8443+ (Checking version and connectivity.)
 ----
 . Wenn Sie einen der Werte in der aktuellen Konfiguration ändern müssen, verwenden Sie den `configure` Unterbefehl, um sie zu aktualisieren. Wenn Sie beispielsweise die IP-Adresse ändern möchten, die die Appliance für die Verbindung zum primären Admin-Node verwendet `172.16.2.99`Geben Sie Folgendes ein:
 +
-`configure-sga.py configure --admin-ip 172.16.2.99 _SGA-INSTALL-IP_`
+`./configure-sga.py configure --admin-ip 172.16.2.99 _SGA-INSTALL-IP_`
 
 . [[Backup-up-Appliance-config]] Wenn Sie die Appliance-Konfiguration in einer JSON-Datei sichern möchten, verwenden Sie die erweiterten und `backup-file` Unterbefehle. Wenn Sie beispielsweise die Konfiguration einer Appliance mit IP-Adresse sichern möchten `_SGA-INSTALL-IP_` Zu einer Datei mit dem Namen `appliance-SG1000.json`, Geben Sie Folgendes ein: +
-`configure-sga.py advanced --backup-file appliance-SG1000.json _SGA-INSTALL-IP_`
+`./configure-sga.py advanced --backup-file appliance-SG1000.json _SGA-INSTALL-IP_`
 +
-Die JSON-Datei, die die Konfigurationsinformationen enthält, wird in das gleiche Verzeichnis geschrieben, aus dem Sie das Skript ausgeführt haben.
+Die JSON-Datei mit den Konfigurationsinformationen wird in den Pfad der angegebenen Ausgabedatei geschrieben, in diesem Fall der relative Pfad für die Datei `appliance-SG1000.json`.
 
 +
 
 CAUTION: Überprüfen Sie, ob der Node-Name der generierten JSON-Datei der Name der Appliance entspricht. Nehmen Sie keine Änderungen an dieser Datei vor, es sei denn, Sie sind ein erfahrener Benutzer und haben ein gründliches Verständnis von StorageGRID APIs.
 
 . Wenn Sie mit der Gerätekonfiguration zufrieden sind, verwenden Sie das `install` Und `monitor` Unterbefehle zum Installieren des Geräts: +
-`configure-sga.py install --monitor _SGA-INSTALL-IP_`
+`./configure-sga.py install --monitor _SGA-INSTALL-IP_` +
+`./configure-sga.py monitor --monitor-storagegrid-install _SGA-INSTALL-IP_`
 . Wenn Sie das Gerät neu starten möchten, geben Sie Folgendes ein: +
-`configure-sga.py reboot _SGA-INSTALL-IP_`
+`./configure-sga.py reboot _SGA-INSTALL-IP_`
 

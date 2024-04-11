@@ -25,13 +25,21 @@ Stellen Sie sicher, dass das Ersatzgerät die folgenden Kriterien erfüllt:
 ** Sie können eine Storage-Node-Appliance nur auf einer neuen Storage Appliance klonen.
 
 
-* Bei Admin-Node- oder Gateway-Node-Appliances müssen die Quell-Node-Appliance und die Ziel-Appliance nicht den gleichen Gerätetyp aufweisen. Bei einer Änderung des Gerätetyps müssen jedoch möglicherweise die Kabel oder SFP-Module ausgetauscht werden.
+* Bei Admin-Node- oder Gateway-Node-Appliances müssen die Quell-Node-Appliance und die Ziel-Appliance nicht das gleiche Appliance-Modell sein. Ein Ändern des Appliance-Modells erfordert jedoch möglicherweise den Austausch der Kabel oder SFP-Module.
 +
 Sie können beispielsweise eine SG1000-Node-Appliance durch ein SG100 ersetzen oder eine SG100-Appliance durch eine SG1000-Appliance ersetzen.
 
-* Bei Storage-Node-Appliances müssen die Quell-Node-Appliance und die Ziel-Appliance nicht denselben Appliance-Typ aufweisen. Die Ziel-Appliance muss jedoch über eine größere Speicherkapazität verfügen als die Quell-Appliance.
+* Bei Storage-Node-Appliances müssen die Quell-Node-Appliance und die Ziel-Appliance nicht den gleichen Appliance-Typ aufweisen. Folgendes gilt jedoch:
++
+** Die Ziel-Appliance muss über eine größere Speicherkapazität verfügen als die Quell-Appliance.
 +
 Beispielsweise kann eine SG5700 Node Appliance durch eine SG6000 Appliance ersetzt werden.
+
+** Die Ziel-Appliance muss eine gleiche oder größere Anzahl von Objekt-Storage-Volumes aufweisen als die Quell-Appliance.
++
+Beispielsweise können Sie eine SG6000 Node-Appliance (16 Objektspeicher-Volumes) nicht durch eine SGF6112-Appliance (12 Objektspeicher-Volumes) ersetzen.
+
+
 
 
 
@@ -56,7 +64,7 @@ NOTE: Die Verwendung des 1-GbE-Admin-Netzwerks für die Übertragung von Klondat
 +
 Der Quell- und die Ziel-Appliance können unterschiedliche Node-Verschlüsselungseinstellungen aufweisen. Die Entschlüsselung und Verschlüsselung der Daten erfolgt automatisch während des Datentransfers und beim Neustart des Ziel-Nodes und Beitritt zum Grid.
 
-* Ermitteln Sie, ob der RAID-Modus auf der Ziel-Appliance von der Standardeinstellung geändert werden soll, damit Sie diese Informationen bei der Erstinstallation der Ziel-Appliance vor dem Klonen angeben können. Auf der Seite *NODES* im Grid Manager können Sie Informationen zum aktuellen RAID-Modus des Quell-Appliance-Knotens anzeigen. Wählen Sie die Registerkarte * Storage* für das Gerät aus.
+* Ermitteln Sie, ob der RAID-Modus auf der Ziel-Appliance von der Standardeinstellung geändert werden soll, damit Sie diese Informationen bei der Erstinstallation der Ziel-Appliance vor dem Klonen angeben können. Auf der Seite *NODES* im Grid Manager können Sie Informationen zum aktuellen RAID-Modus des Quell-Appliance-Knotens anzeigen. Wählen Sie die Registerkarte *Hardware* für das Gerät aus.
 +
 Der Quell- und die Ziel-Appliance können unterschiedliche RAID-Einstellungen aufweisen.
 

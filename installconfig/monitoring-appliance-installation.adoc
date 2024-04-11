@@ -55,6 +55,8 @@ Wenn Sie im Grid Manager auf *Installieren* klicken, wird Stufe 3 abgeschlossen 
 
 
 
+Schließen Sie das Fenster, nachdem alle Installationsschritte abgeschlossen sind.
+
 --
 .Service-Appliance
 --
@@ -86,22 +88,24 @@ In dieser Phase kopiert das Installationsprogramm das Betriebssystem-Image für 
 
 . Fahren Sie mit der Überwachung des Installationsfortschritts fort, bis einer der folgenden Prozesse erfolgt ist:
 +
-** Für alle Appliance-Knoten außer dem primären Admin-Node wird die Install StorageGRID-Phase angehalten, und eine Meldung wird in der eingebetteten Konsole angezeigt. Sie werden aufgefordert, diesen Knoten über den Grid-Manager genehmigen zu lassen. Fahren Sie mit dem nächsten Schritt fort.
+** Für alle Appliance-Knoten außer dem primären Admin-Knoten wird die StorageGRID-Stufe installieren angehalten, und in der integrierten Konsole wird eine Meldung angezeigt, in der Sie aufgefordert werden, diesen Knoten auf dem Admin-Knoten mithilfe des zu genehmigen https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Grid Manager"^]. Fahren Sie mit dem nächsten Schritt fort.
 ** Für die Installation des primären Admin-Knotens der Appliance müssen Sie den Knoten nicht genehmigen. Das Gerät wird neu gestartet. Sie können den nächsten Schritt überspringen.
 +
 
-NOTE: Während der Installation eines primären Administrator-Knotens der Appliance wird eine fünfte Phase angezeigt (siehe Beispielbildschirm mit vier Phasen). Wenn die fünfte Phase länger als 10 Minuten in Bearbeitung ist, aktualisieren Sie die Webseite manuell.
+NOTE: Während der Installation eines primären Admin-Knotens der Appliance wird eine fünfte Phase angezeigt, in der der StorageGRID-Installer geladen wird (der Beispielbildschirm zeigt nur die ersten vier Phasen). Wenn der StorageGRID-Installer (fünfte Phase) länger als 10 Minuten geladen wird, aktualisieren Sie die Webseite manuell.
 
 +
 image::../media/monitor_installation_install_sgws.gif[Dieses Bild wird durch den umgebenden Text erläutert.]
 
 
 
-. Wechseln Sie zum Grid-Manager des Knotens „primärer Administrator“, genehmigen Sie den ausstehenden Grid-Node und schließen Sie den StorageGRID-Installationsprozess ab.
+. https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Wechseln Sie zum Grid-Manager"^] Genehmigen Sie den ausstehenden Grid-Knoten des primären Admin-Knotens, und schließen Sie den StorageGRID-Installationsvorgang ab.
 +
 Wenn Sie im Grid Manager auf *Installieren* klicken, wird Stufe 3 abgeschlossen und Stufe 4, *Installation abschließen*, beginnt. Wenn Phase 4 abgeschlossen ist, wird das Gerät neu gestartet.
 
 
+
+Schließen Sie das Fenster, nachdem alle Installationsschritte abgeschlossen sind.
 
 --
 ====

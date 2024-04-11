@@ -34,7 +34,7 @@ Um einen Appliance-Speicherknoten in einem StorageGRID-System bereitzustellen, g
 
 
 
-NOTE: Wenn Sie mehrere Appliance-Nodes gleichzeitig implementieren müssen, können Sie den Installationsprozess mithilfe des automatisieren `configure-sga.py` Installationsskript für Geräte.
+NOTE: Wenn Sie mehrere Appliance-Nodes gleichzeitig implementieren müssen, können Sie den Installationsvorgang über den Link:../installconfig/Automating-Appliance-Installation-and-Configuration.HTML#Automate-with-configure-sga-py-script automatisieren[`configure-sga.py` Skript für die Appliance-Installation].
 
 * Wenn Sie eine Erweiterung oder Wiederherstellung durchführen, befolgen Sie die entsprechenden Anweisungen:
 +
@@ -101,7 +101,7 @@ link:../commonhardware/appliance-node-cloning-procedure.html["Node-Klonen"].
 
 . Klicken Sie auf der Startseite des StorageGRID-Appliance-Installationsprogramms auf *Installation starten*.
 +
-Der aktuelle Status ändert sich in „`Installation is in progress,`“ und die Seite Monitor Installation wird angezeigt.
+Der aktuelle Status ändert sich in „`Installation läuft,`“ und in link:../installconfig/monitoring-appliance-installation.html["Seite „Monitorinstallation“"] Wird angezeigt.
 
 +
 
@@ -110,6 +110,6 @@ NOTE: Wenn Sie manuell auf die Seite Monitor Installation zugreifen müssen, kli
 . Wenn in Ihrem Grid mehrere Speicherknoten für Geräte enthalten sind, wiederholen Sie diese Schritte für jede Appliance.
 +
 
-NOTE: Wenn Sie mehrere Appliance Storage Nodes gleichzeitig bereitstellen müssen, können Sie den Installationsprozess mithilfe des automatisieren `configure-sga.py` Installationsskript für Geräte.
+NOTE: Wenn Sie mehrere Appliance Storage Nodes gleichzeitig bereitstellen müssen, können Sie den Installationsvorgang über den Link:../installconfig/Automating-Appliance-Installation-and-Configuration.HTML#Automate-with-configure-sga-py-script automatisieren[`configure-sga.py` Skript für die Appliance-Installation].
 
 

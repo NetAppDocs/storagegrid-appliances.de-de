@@ -63,7 +63,7 @@ Wenn *Klonen starten* aktiviert ist, zeigt der *Aktueller Status* das zum Klonen
 . Wählen Sie *Klonen starten* auf dem Quellknoten aus.
 . Überwachen Sie den Klonfortschritt mit dem Installationsprogramm von StorageGRID Appliance auf dem Quell- oder Zielknoten.
 +
-Das Installationsprogramm der StorageGRID Appliance auf den Quell- und den Ziel-Nodes weist denselben Status auf.
+Der StorageGRID-Appliance-Installer auf den Quell- und Zielknoten zeigt einen ähnlichen Status an.
 
 +
 image::../media/cloning_progress.png[Klonvorgang läuft]
@@ -102,9 +102,9 @@ Wenn das Klonen erfolgreich abgeschlossen wurde:
 
 
 
-NOTE: Wenn das Gerät nicht wieder in das Raster integriert wird, wechseln Sie zur Startseite des StorageGRID-Appliance-Installationsprogramms für den Quellknoten, wählen Sie *Erweitert* > *Controller neu starten* und wählen Sie dann *Neustart im Wartungsmodus* aus. Nachdem der Quell-Node im Wartungsmodus neu gebootet wurde, wiederholen Sie den Vorgang des Node-Klonens.
+NOTE: Wenn die Zielanwendung nicht mit dem Raster verbunden ist, gehen Sie zur Startseite des StorageGRID-Geräteinstallationsprogramms für den Quellknoten, wählen Sie *Erweitert* > *Neustart-Controller* und wählen Sie dann *Neustart in den Wartungsmodus* aus. Nachdem der Quell-Node im Wartungsmodus neu gebootet wurde, wiederholen Sie den Vorgang des Node-Klonens.
 
-* Benutzerdaten auf der Quell-Appliance bleiben als Wiederherstellungsoption, wenn bei dem Ziel-Node ein unerwartetes Problem auftritt. Nachdem der Ziel-Node der StorageGRID erneut beigetreten ist, sind die Benutzerdaten auf der Quell-Appliance veraltet und werden nicht mehr benötigt.
+* Benutzerdaten auf der Quell-Appliance bleiben als Wiederherstellungsoption, wenn bei dem Ziel-Node ein unerwartetes Problem auftritt. Nachdem der Zielknoten erfolgreich StorageGRID beigetreten ist, sind Benutzerdaten auf der Quell-Appliance veraltet und werden nicht mehr benötigt.
 +
 Veraltete Benutzerdaten werden überschrieben, wenn Sie die Quell-Appliance als neuen Node in einem anderen Grid installieren oder erweitern.
 

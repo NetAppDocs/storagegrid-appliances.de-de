@@ -49,7 +49,7 @@ Der Node-Name wird diesem Appliance-Node im StorageGRID-System zugewiesen. Sie w
 +
 .. Laden Sie das Installationsarchiv herunter:
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp Downloads: StorageGRID"^]
 
 .. Extrahieren Sie das Archiv.
 .. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *StorageGRID-Software hochladen*.
@@ -57,10 +57,7 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/dow
 +
 image::../media/appliance_installer_rmv_current_software.png[Appliance Installer - Aktuelle Software Entfernen]
 
-.. Klicken Sie auf *Durchsuchen* für das Softwarepaket, das Sie heruntergeladen und extrahiert haben, und klicken Sie dann auf *Durchsuchen* für die Prüfsummendatei.
-+
-image::../media/appliance_installer_upload_sg_software.png[Appliance Installer – SG-Software hochladen]
-
+.. Klicken Sie auf *Browse* für das Softwarepaket, das Sie heruntergeladen und extrahiert haben. Wählen Sie die aus `storagegrid-webscale-images-_version_.deb` Paket.
 .. Wählen Sie *Home*, um zur Startseite zurückzukehren.
 
 
@@ -103,7 +100,7 @@ So installieren Sie StorageGRID auf einem Services Appliance-Node:
 * Sie geben die IP-Adresse des primären Admin-Knotens und den Namen des Appliance-Nodes an oder bestätigen sie.
 * Sie starten die Installation und warten, bis die Software installiert ist.
 +
-Die Installation wird durch die Installationsaufgaben für den Gateway Node der Appliance partway angehalten. Um die Installation fortzusetzen, melden Sie sich beim Grid Manager an, genehmigen alle Grid-Nodes und schließen den StorageGRID-Installationsprozess ab. Für die Installation eines nicht primären Admin-Knotens ist keine Genehmigung erforderlich.
+Die Installation wird durch die Installationsaufgaben für den Gateway Node der Appliance partway angehalten. Um die Installation fortzusetzen, melden Sie sich beim Grid Manager an, genehmigen alle Grid-Nodes und schließen den StorageGRID-Installationsprozess ab.
 
 
 
@@ -162,7 +159,7 @@ Der Name, der hier angezeigt wird, ist der Systemname des Appliance-Node. System
 +
 .. Laden Sie das Installationsarchiv herunter:
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp Downloads: StorageGRID"^]
 
 .. Extrahieren Sie das Archiv.
 .. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *StorageGRID-Software hochladen*.
@@ -170,10 +167,7 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/dow
 +
 image::../media/appliance_installer_rmv_current_software.png[Appliance Installer - Aktuelle Software Entfernen]
 
-.. Klicken Sie auf *Durchsuchen* für das Softwarepaket, das Sie heruntergeladen und extrahiert haben, und klicken Sie dann auf *Durchsuchen* für die Prüfsummendatei.
-+
-image::../media/appliance_installer_upload_sg_software.png[Appliance Installer – SG-Software hochladen]
-
+.. Klicken Sie auf *Browse* für das Softwarepaket, das Sie heruntergeladen und extrahiert haben. Wählen Sie die aus `storagegrid-webscale-images-_version_.deb` Paket.
 .. Wählen Sie *Home*, um zur Startseite zurückzukehren.
 
 
@@ -183,10 +177,7 @@ Wenn die Schaltfläche *Installation starten* nicht aktiviert ist, müssen Sie m
 
 . Klicken Sie auf der Startseite des StorageGRID-Appliance-Installationsprogramms auf *Installation starten*.
 +
-image::../media/appliance_installer_services_appliance_non_pan.png[Appliance Installer Home - Installieren eines nicht-primären Admin-Knotens]
-
-+
-Der aktuelle Status ändert sich in „`Installation is in progress,`“ und die Seite Monitor Installation wird angezeigt.
+Der aktuelle Status ändert sich in „`Installation läuft,`“ und in link:../installconfig/monitoring-appliance-installation.html["Seite „Monitorinstallation“"] Wird angezeigt.
 
 +
 
