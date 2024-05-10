@@ -1,0 +1,43 @@
+---
+permalink: sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html 
+sidebar: sidebar 
+keywords: sg110, sg1100, locate, find, locating, finding, identify, blue led, blue light 
+summary: Die blaue Identifizieren-LED auf der Vorderseite des Geräts kann eingeschaltet werden, um das Gerät in einem Rechenzentrum zu lokalisieren. 
+---
+= Schalten Sie die SG110- oder SG1100-Identifizieren-LED ein und aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die blaue Identifizieren-LED auf der Vorder- und Rückseite des Geräts kann eingeschaltet werden, um das Gerät in einem Rechenzentrum zu lokalisieren.
+
+.Bevor Sie beginnen
+Sie haben die BMC-IP-Adresse der Appliance, die Sie identifizieren möchten.
+
+.Schritte
+. link:../installconfig/accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle des Geräts auf"].
+. Wählen Sie *Server Identify* Aus.
++
+Der aktuelle Status der Identifizieren-LED ist ausgewählt.
+
+. Wählen Sie *EIN* oder *AUS*, und wählen Sie dann *Aktion ausführen*.
++
+Wenn Sie *EIN* auswählen, leuchten die blauen Identifizieren-LEDs auf der Vorderseite (typisch abgebildet) und der Rückseite des Geräts.
+
++
+image::../media/sgf6112_front_panel_service_led_on.png[Vordere Identify-LED - ein]
+
++
+
+NOTE: Wenn eine Blende auf dem Controller installiert ist, kann es schwierig sein, die vordere Identify-LED zu erkennen.
+
++
+Die hintere Identifizieren-LED befindet sich in der Mitte des Geräts unter dem Micro-SD-Steckplatz.
+
+. Schalten Sie die Identifizieren-LEDs nach Bedarf ein und aus.
+
+
+.Verwandte Informationen
+link:locating-sg110-and-sg1100-in-data-center.html["Suchen Sie die Appliance im Datacenter"]

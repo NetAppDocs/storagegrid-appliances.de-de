@@ -15,7 +15,7 @@ Möglicherweise müssen Sie Wartungsmaßnahmen an Ihrem Gerät durchführen. In 
 
 Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass die Appliance bereits als Storage-Node in einem StorageGRID-System bereitgestellt wurde.
 
-*Konfigurationswartungsverfahren* werden über den Appliance Installer, Grid Manager oder die BMC-Schnittstelle durchgeführt. Hierzu gehören folgende Verfahren:
+*Wartungskonfigurationsverfahren* werden über den Appliance Installer, Grid Manager oder die BMC-Schnittstelle durchgeführt. Hierzu gehören folgende Verfahren:
 
 * link:turning-sgf6112-identify-led-on-and-off.html["Schalten Sie die Appliance Identify-LED ein und aus"]
 * link:locating-sgf6112-in-data-center.html["Suchen Sie die Appliance im Datacenter"]

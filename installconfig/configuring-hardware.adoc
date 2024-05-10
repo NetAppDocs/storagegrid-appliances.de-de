@@ -43,7 +43,9 @@ Für SG6000 und SG5700 konfigurieren Sie SANtricity System Manager. Die SANtrici
 Die folgenden Geräte verfügen über eine BMC-Schnittstelle, die konfiguriert werden muss:
 
 * SG100
+* SG110
 * SG1000
+* SG1100
 * SG6000
 * SG6100
 
@@ -61,7 +63,7 @@ Die folgenden Geräte verfügen über eine BMC-Schnittstelle, die konfiguriert w
 
 * Service-Appliances
 +
-** Greifen Sie auf die BMC-Schnittstelle für das SG100 oder SG1000 zu
+** Greifen Sie auf die BMC-Schnittstelle für SG100, SG110, SG1000 und SG1100 zu
 
 
 

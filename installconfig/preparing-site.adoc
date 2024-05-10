@@ -30,6 +30,13 @@ SG100 und SG1000
 
 
  a| 
+SG110 und SG1100
+ a| 
+100 bis 240 Volt Wechselstrom
+
+
+
+ a| 
 SG5760
  a| 
 240-Volt-Wechselspannung
@@ -83,6 +90,32 @@ SGF6112
 39 lb.
 
 (17.7 kg)
+
+|===
+--
+.SG110 und SG1100
+--
+[cols="1a,1a,1a,1a"]
+|===
+| Höhe | Breite | Tiefe | Maximales Gewicht 
+
+
+ a| 
+1.70 Zoll
+
+(4.31 cm)
+ a| 
+18.98 Zoll
+
+(48.2 cm)
+ a| 
+33.11 Zoll
+
+(84.1 cm)
+ a| 
+43.83 lb.
+
+(19.88 kg)
 
 |===
 --

@@ -27,9 +27,19 @@ Wenn Sie mit ConfigBuilder eine JSON-Datei erstellen, können Sie IP-Adressen au
 image::../media/sg100_bmc_management_port.png[BMC Management-Port SG100]
 
 --
+.SG110
+--
+image::../media/sgf6112_cn_bmc_management_port.png[BMC-Managementport SG110]
+
+--
 .SG1000
 --
 image::../media/sg1000_bmc_management_port.png[SG1000 BMC-Management-Port]
+
+--
+.SG1100
+--
+image::../media/sg1100_bmc_management_port.png[BMC-Managementport SG1100]
 
 --
 .SG6000

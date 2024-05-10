@@ -41,5 +41,6 @@ Spezifische Wartungsverfahren für jeden StorageGRID-Gerätetyp finden Sie in de
 * link:../sg6100/index.html["SG6100 Appliance warten"]
 * link:../sg6000/index.html["Warten Sie die SG6000-Appliance"]
 * link:../sg5700/index.html["SG5700 Appliance warten"]
+* link:../sg110-1100/index.html["Wartung von SG110- und SG1100-Appliances"]
 * link:../sg100-1000/index.html["Wartung von SG100 und SG1000 Appliances"]
 

@@ -39,6 +39,7 @@ NOTE: Die LACP Übertragungs-Hash-Richtlinie ist layer2+3.
 Die Abbildungen und Tabellen fassen die Optionen für den Port Bond-Modus und den Network Bond-Modus für jede Appliance zusammen. Weitere Informationen finden Sie im Folgenden:
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Port-Bond-Modi (SG1000 und SG100)"]
+* link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Port-Bond-Modi (SG1100 und SG110)"]
 * link:gathering-installation-information-sg5700.html#port-bond-modes["Port-Bond-Modi (E5700SG)"]
 * link:gathering-installation-information-sg6000.html#port-bond-modes["Port-Bond-Modi (SG6000-CN)"]
 * link:gathering-installation-information-sg6100.html#port-bond-modes["Port-Bond-Modi (SGF6112)"]
@@ -172,6 +173,137 @@ image::../media/sg1000_bonded_management_ports.png[Admin-Netzwerkports (SG1000) 
 SG100:
 
 image::../media/sg100_bonded_management_ports.png[Fest gebundene Admin-Netzwerkports SG100]
+
+--
+
+
+--
+.SG110 und SG1100
+--
+Bond-Modus mit festem Port (Standard)::
++
+--
+Die Abbildungen zeigen, wie die vier Netzwerk-Ports des SG1100 oder SG110 im Fixed-Port-Bond-Modus (Standardkonfiguration) verbunden sind.
+
+SG1100:
+
+image::../media/sg1100_fixed_port.png[SG1100 Fixed Port Bond-Modus]
+
+SG110:
+
+image::../media/sgf6112_fixed_port.png[SG110 fester Port Bond-Modus]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+C
+ a| 
+Die Ports 1 und 3 sind für das Client-Netzwerk verbunden, falls dieses Netzwerk verwendet wird.
+
+
+
+ a| 
+G
+ a| 
+Die Ports 2 und 4 sind für das Grid-Netzwerk verbunden.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der vier Netzwerkanschlüsse zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+[cols="1a,2a,2a"]
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+
+
+ a| 
+Aktiv/Backup (Standard)
+ a| 
+* Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+* Die Ports 1 und 3 werden nicht verwendet.
+* Ein VLAN-Tag ist optional.
+
+ a| 
+* Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+* Die Ports 1 und 3 verwenden eine aktiv-Backup-Verbindung für das Client-Netzwerk.
+* VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+
+
+
+
+ a| 
+LACP (802.3ad)
+ a| 
+* Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+* Die Ports 1 und 3 werden nicht verwendet.
+* Ein VLAN-Tag ist optional.
+
+ a| 
+* Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+* Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
+* VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+
+
+|===
+--
+Bond-Modus für aggregierten Ports::
++
+--
+Diese Abbildungen zeigen, wie die vier Netzwerk-Ports im aggregierten Port Bond-Modus verbunden sind.
+
+SG1100:
+
+image::../media/sg1100_aggregate_ports.png[Aggregierter Port Bond-Modus SG1100]
+
+SG110:
+
+image::../media/sgf6112_aggregate_ports.png[SG110-Gesamtanschlussmodus]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+1
+ a| 
+Alle vier Ports werden in einer einzelnen LACP Bond gruppiert, sodass alle Ports für den Grid-Netzwerk- und Client-Netzwerk-Traffic verwendet werden können.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+[cols="1a,2a,2a"]
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+
+
+ a| 
+Nur LACP (802.3ad
+ a| 
+* Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
+* Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+
+ a| 
+* Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
+* Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+
+
+|===
+--
+Active-Backup Netzwerk-Bond-Modus für Management-Ports::
++
+--
+Diese Abbildungen zeigen, wie die beiden 1-GbE-Management-Ports auf den Appliances im Active-Backup-Netzwerk-Bond-Modus für das Admin-Netzwerk verbunden sind.
+
+SG1100:
+
+image::../media/sg1100_bonded_management_ports.png[Admin Network Ports, verbunden mit SG1100]
+
+SG110:
+
+image::../media/sgf6112_bonded_management_ports.png[Admin Network Ports, verbunden mit SG110]
 
 --
 

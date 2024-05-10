@@ -50,6 +50,47 @@ image::../media/power_cords.gif[Stromkabel]
 
 
 --
+.SG110 und SG1100
+--
+* *Hardware*
++
+SG110 oder SG1100::
++
+--
+image::../media/sgf6112_front_with_ssds.png[Frontantriebsgeräte SG110 und SG1100]
+
+--
+Schienensatz mit Anleitung::
++
+--
+image::../media/rail_kit.gif[Schienensatz]
+
+--
+Frontblende::
++
+--
+image::../media/sgf_6112_front_bezel.png[Frontblende]
+
+--
+
+
+* * Netzkabel*
++
+
+TIP: Ihr Schrank verfügt möglicherweise über spezielle Netzkabel, die Sie anstelle der Netzkabel verwenden, die Sie zur Einheit mit dem Gerät anschließen.
+
++
+Zwei Netzkabel für dein Land::
++
+--
+image::../media/power_cords.gif[Stromkabel]
+
+--
+
+
+
+
+--
 .SG5700
 --
 * *Hardware*

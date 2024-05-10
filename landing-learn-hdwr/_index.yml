@@ -8,7 +8,7 @@ indexpage:
     - title: Weitere Informationen zu StorageGRID
       url: https://docs.netapp.com/us-en/storagegrid-118/primer/index.html
     - title: Quick Start Guide für StorageGRID
-      url: https://docs.netapp.com/us-en/storagegrid-118/quick-start.html
+      url: https://docs.netapp.com/us-en/storagegrid-118/primer/quick-start.html
     - title: Schnellstart für die Installation des Geräts
       url: "../installconfig/index.html"
   - title: Informieren Sie sich über Storage Appliances
@@ -23,3 +23,5 @@ indexpage:
     links:
     - title: SG100- und SG1000-Services-Appliances
       url: "../installconfig/hardware-description-sg100-and-1000.html"
+    - title: Service Appliances für SG110 und SG1100
+      url: "../installconfig/hardware-description-sg110-and-1100.html"

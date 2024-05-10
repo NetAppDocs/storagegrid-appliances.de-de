@@ -32,6 +32,7 @@ Dieser Schritt ist optional. Durch die Optimierung und Automatisierung von Konfi
 . In Schrank oder Rack installieren
 +
 ** link:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html["SG100 und SG1000"]
+** link:installing-appliance-in-cabinet-or-rack-sg110-and-sg1100.html["SG110 und SG1100"]
 ** link:installing-appliance-in-cabinet-or-rack-sg5700.html["SG5700"]
 ** link:installing-hardware-sg6000.html["SG6000"]
 ** link:installing-appliance-in-cabinet-or-rack-sgf6112.html["SG6100"]
@@ -56,8 +57,8 @@ Wenn Sie mehr als eine Appliance konfigurieren und implementieren, automatisiere
 ** link:verifying-port-level-network-connections.html["Überprüfen Sie Netzwerkverbindungen auf Portebene"]
 
 
-. link:accessing-and-configuring-santricity-system-manager.html["Aufrufen und Konfigurieren von SANtricity System Manager"] (SG6000 und SG5700)
-. link:configuring-bmc-interface.html["Konfigurieren Sie die BMC-Schnittstelle"] (SG100, SG1000, SG6000 UND SG6100)
+. link:accessing-and-configuring-santricity-system-manager.html["Aufrufen und Konfigurieren von SANtricity System Manager"] (SG5700 und SG6000)
+. link:configuring-bmc-interface.html["Konfigurieren Sie die BMC-Schnittstelle"] (SG6000, SG6100 und Services Appliances)
 . Führen Sie optionale Einrichtungsschritte durch
 +
 ** link:optional-enabling-node-encryption.html["Aktivieren Sie die Node- oder Laufwerkverschlüsselung"]

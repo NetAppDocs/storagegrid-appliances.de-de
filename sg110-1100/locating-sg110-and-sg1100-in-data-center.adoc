@@ -1,0 +1,43 @@
+---
+permalink: sg110-1100/locating-sg110-and-sg1100-in-data-center.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, appliance, locate, find, locating, finding, identify, blue led, blue light 
+summary: Suchen Sie die Appliance, sodass Sie Hardware-Wartungsarbeiten oder -Upgrades durchführen können. 
+---
+= Suchen Sie SG110 oder SG1100 im Datacenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Suchen Sie die Appliance, sodass Sie Hardware-Wartungsarbeiten oder -Upgrades durchführen können.
+
+.Bevor Sie beginnen
+* Sie haben festgelegt, welches Gerät gewartet werden muss.
+* Um die Appliance in Ihrem Rechenzentrum zu finden, link:turning-sg110-and-sg1100-identify-led-on-and-off.html["Schalten Sie die blaue Identify-LED ein"].
+
+
+.Schritte
+. Finden Sie die Appliance im Rechenzentrum.
++
+** Achten Sie darauf, dass die blaue Identifizieren-LED auf der Vorderseite oder Rückseite des Geräts leuchtet.
++
+Die ID-LED auf der Vorderseite befindet sich hinter der Frontblende und ist möglicherweise schwer zu erkennen, ob die Blende installiert ist.
+
++
+image::../media/sgf6112_front_panel_service_led_on.png[Vordere Identify-LED - ein]
+
++
+Die hintere Identifizieren-LED befindet sich in der Mitte des Geräts unter dem Micro-SD-Steckplatz.
+
+** Überprüfen Sie anhand der an der Vorderseite des Geräts angebrachten Etiketten, ob Sie das richtige Gerät gefunden haben.
+
+
+. Entfernen Sie gegebenenfalls die Frontverkleidung, um Zugang zu den Bedienelementen und Anzeigen auf der Vorderseite zu erhalten.
+
+
+.Nachdem Sie fertig sind
+link:turning-sg110-and-sg1100-identify-led-on-and-off.html["Schalten Sie die blaue Identifizieren-LED aus"] Wenn Sie es verwendet haben, um das Gerät zu finden.
+ ** Drücken Sie den Identifizieren-LED-Schalter auf der Vorderseite des Geräts.
+ ** Verwenden Sie die BMC-Schnittstelle des Geräts.

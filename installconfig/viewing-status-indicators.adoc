@@ -144,6 +144,143 @@ Blau (blinkend): Auf das Laufwerk wird zugegriffen
 
 
 --
+.SG110 und SG1100
+--
+Die Appliance enthält Anzeigen, mit denen Sie den Status des Appliance-Controllers und der SSDs ermitteln können:
+
+* <<appliance_indicators,Gerätesteuchten und -Tasten>>
+* <<general_boot_codes,Allgemeine Startcodes>>
+* <<ssd_indicators,SSD-LEDs>>
+
+
+Verwenden Sie diese Informationen, um zu helfen link:troubleshooting-hardware-installation-sg110-and-sg1100.html["Fehlerbehebung bei der Hardwareinstallation von SG110 und SG1100"].
+
+[[appliance_indicators]]
+Gerätesteuchten und -Tasten::
++
+--
+Die folgende Abbildung zeigt Anzeigen und Tasten an den SG110- und SG1100-Geräten.
+
+image::../media/sgf6112_front_indicators.png[Vordere Anzeigen - SG110 und SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | Anzeige | Status 
+
+
+ a| 
+1
+ a| 
+Ein-/aus-Schalter
+ a| 
+* Blau: Das Gerät ist eingeschaltet.
+* Aus: Das Gerät ist ausgeschaltet.
+
+
+
+
+ a| 
+2
+ a| 
+Reset-Taste
+ a| 
+Mit dieser Taste können Sie den Controller auf einen harten Reset zurücksetzen.
+
+
+
+ a| 
+3
+ a| 
+Schaltfläche „Identifizierung“
+ a| 
+Mit dem BMC kann diese Taste auf Blinken, ein (Vollton) oder aus eingestellt werden.
+
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+
+
+ a| 
+4
+ a| 
+Status-LED
+ a| 
+* Gelb, konstant: Ein Fehler ist aufgetreten.
++
+*Hinweis:* um die Boot-up- und Fehlercodes anzuzeigen, link:accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle auf"].
+
+* Aus: Es sind keine Fehler vorhanden.
+
+
+
+
+ a| 
+5
+ a| 
+PFR
+ a| 
+Diese Leuchte wird von den Geräten SG110 und SG1100 nicht verwendet und bleibt ausgeschaltet.
+
+|===
+--
+
+
+[[general_boot_codes]]
+Allgemeine Startcodes::
++
+--
+Beim Hochfahren oder nach einem harten Reset des Geräts treten folgende Aktionen auf:
+
+. Der BMC (Baseboard Management Controller) protokolliert Codes für die Boot-Sequenz, einschließlich etwaiger Fehler.
+. Der Betriebsschalter leuchtet auf.
+. Wenn während des Startvorgangs Fehler auftreten, leuchtet die Alarm-LED auf.
++
+So zeigen Sie die Starts- und Fehlercodes an: link:accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle auf"].
+
+
+
+--
+
+
+[[ssd_indicators]]
+SSD-LEDs::
++
+--
+Die folgende Abbildung zeigt die SSD-Anzeigen auf den SG110- und SG1100-Geräten.
+
+image::../media/ssd_indicators.png[SSD-Kennzahlen]
+
+[cols="1a,2a,2a"]
+|===
+| LED | Anzeige | Status 
+
+
+ a| 
+1
+ a| 
+Laufwerksstatus/-Fehler
+ a| 
+* Blau (fest): Laufwerk ist online
+* Gelb (konstant): Laufwerksausfall
+* Aus: Steckplatz ist leer
+
+
+
+
+ a| 
+2
+ a| 
+Laufwerk aktiv
+ a| 
+Blau (blinkend): Auf das Laufwerk wird zugegriffen
+
+|===
+--
+
+
+--
 .SG5700
 --
 Die Gerätesteuerung enthält Anzeigen, die Ihnen helfen, den Status des Gerätesteuerung zu bestimmen:

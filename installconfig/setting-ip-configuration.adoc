@@ -21,6 +21,7 @@ Sie müssen entweder auf jedem verbundenen Netzwerk eine statische IP-Adresse f�
 Informationen zum Ändern der Verbindungskonfiguration finden Sie in den folgenden Anweisungen:
 
 * link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Ändern der Link-Konfiguration der Service-Appliance SG100 oder SG1000"]
+* link:../sg110-1100/changing-link-configuration-of-services-appliance.html["Ändern der Verbindungskonfiguration der Service-Appliance SG110 oder SG1100"]
 * link:../sg5700/changing-link-configuration-of-e5700sg-controller.html["Ändern Sie die Link-Konfiguration des E5700SG Controllers"]
 * link:../sg6000/changing-link-configuration-of-sg6000-cn-controller.html["Ändern Sie die Verbindungskonfiguration des SG6000-CN Controllers"]
 * link:../sg6100/changing-link-configuration-of-sgf6112-appliance.html["Ändern der Link-Konfiguration der SG6100 Appliance"]

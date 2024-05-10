@@ -44,11 +44,14 @@ Ersatz-Appliances müssen vom gleichen Typ sein wie der Quell-Node, den sie erse
 
 * Eine Ersatz-Services-Appliance kann sich von dem Admin-Node oder dem Gateway-Node unterscheiden, den er ersetzt.
 +
-** Sie können eine SG100-Quell-Node-Appliance zu einer SG1000-Services-Ziel-Appliance klonen, um dem Admin-Node oder Gateway-Node eine höhere Funktion zuzuweisen.
-** Sie können eine SG1000-Quell-Node-Appliance in einer SG100-Services-Ziel-Appliance klonen, um die SG1000 für eine anspruchsvollere Applikation neu zu implementieren.
+** Sie können eine SG100 Quell-Node-Appliance auf einer SG110-, SG1000- oder SG1100-Services-Ziel-Appliance klonen. Durch das Klonen der SG100 auf eine SG1000- oder SG1100-Services-Ziel-Appliance kann der Admin-Node oder Gateway-Node mehr Funktionen erhalten.
+** Sie können eine SG110-Quell-Node-Appliance auf ein SG1100-Services-Appliance-Ziel klonen, um dem Admin-Node oder Gateway-Node eine höhere Kapazität zu geben.
+** Sie können eine SG1000 Quell-Node-Appliance auf einer SG100-, SG110- oder SG1100-Services-Ziel-Appliance klonen. Durch das Klonen der SG1000 in eine SG100- oder SG110-Services-Ziel-Appliance können Sie die SG1000 für eine anspruchsvollere Applikation implementieren.
+** Sie können eine SG1100 Quell-Node-Appliance in eine SG110 Services-Ziel-Appliance klonen, um die SG1100 für eine anspruchsvollere Applikation neu zu implementieren.
 +
-Beispiel: Wenn eine SG1000-Quell-Node-Appliance als Admin-Node verwendet wird und Sie sie als dedizierten Load-Balancing-Node verwenden möchten.
+Wenn beispielsweise eine SG1100- oder SG1000-Quell-Node-Appliance als Admin-Node verwendet wird und Sie sie als dedizierten Load-Balancing-Node verwenden möchten.
 
+** Wenn Sie eine SG1100-Quell-Node-Appliance durch eine SG110-Services-Ziel-Appliance ersetzen, wird die maximale Geschwindigkeit der Netzwerk-Ports von 100 GbE auf 25 GbE reduziert.
 ** Durch den Austausch einer SG1000-Quell-Node-Appliance durch eine SG100-Services-Ziel-Appliance wird die maximale Geschwindigkeit der Netzwerkports von 100 GbE auf 25 GbE verringert.
 ** Die Services-Appliances haben unterschiedliche Netzwerkanschlüsse. Wenn Sie den Gerätetyp ändern, müssen möglicherweise die Kabel oder SFP-Module ersetzt werden.
 

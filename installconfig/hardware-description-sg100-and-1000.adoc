@@ -39,7 +39,7 @@ Diese Abbildung zeigt die Vorderseite des SG100 und des SG1000 mit entfernter Bl
 
 image::../media/sg1000_front_with_ssds.png[Vorderseite mit SSDs SG100 und SG1000]
 
-Die beiden durch die orangefarbene Umrandung gekennzeichneten Solid State-Laufwerke (SSDs) können zum Speichern des StorageGRID-Betriebssystems verwendet werden und werden aus Redundanzgründen mit RAID 1 gespiegelt. Wenn die SG100- oder SG1000-Services-Appliance als Admin-Node konfiguriert ist, werden diese Laufwerke zum Speichern von Audit-Protokollen, Kennzahlen und Datenbanktabellen verwendet.
+Die beiden durch die orangefarbene Umrandung gekennzeichneten Solid State-Laufwerke (SSDs) werden zur Speicherung des StorageGRID-Betriebssystems verwendet und aus Redundanzgründen mit RAID 1 gespiegelt. Wenn die Service-Appliance SG100 oder SG1000 als Admin-Node konfiguriert ist, können diese Laufwerke zum Speichern von Audit-Protokollen, Kennzahlen und Datenbanktabellen verwendet werden.
 
 Die übrigen Laufwerksschächte sind leer.
 

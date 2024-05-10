@@ -21,8 +21,10 @@ indexpage:
       url: "../commonhardware/appliance-node-cloning-procedure.html"
   - title: Appliance-spezifische Wartung
     links:
-    - title: SG1000 und SG100
+    - title: SG100 und SG1000
       url: "../landing-maintain-sg1000-100/index.html"
+    - title: SG110 und SG1100
+      url: "../landing-maintain-sg1100-110/index.html"
     - title: SG5600
       url: "../sg5600/index.html"
     - title: SG5700

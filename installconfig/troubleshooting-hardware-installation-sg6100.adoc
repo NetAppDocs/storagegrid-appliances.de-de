@@ -533,7 +533,7 @@ Das Installationsprogramm von StorageGRID Appliance ist möglicherweise nicht ve
 
 == Verbindungsprobleme
 
-Wenn Sie keine Verbindung zur Services-Appliance herstellen können, liegt möglicherweise ein Netzwerkproblem vor, oder die Hardwareinstallation wurde möglicherweise nicht erfolgreich abgeschlossen.
+Wenn Sie keine Verbindung zur Appliance herstellen können, liegt möglicherweise ein Netzwerkproblem vor, oder die Hardwareinstallation wurde möglicherweise nicht erfolgreich abgeschlossen.
 
 .Schritte
 . Versuchen Sie, das Gerät mit der IP-Adresse des Geräts zu pingen : +

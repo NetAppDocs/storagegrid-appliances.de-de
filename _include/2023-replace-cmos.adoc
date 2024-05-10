@@ -46,7 +46,7 @@ Setzen Sie den Ersatz-CMOS-Akku in den Sockel auf der Systemplatine ein.
 +
 image::../media/sgf6112_two-slot-riser_alignment_hole.png[Ausrichtungsbohrung auf der großen Riserbaugruppe]
 
-. Suchen Sie den Führungsstift auf der Systemplatine.
+. Suchen Sie den Führungsstift auf der Systemplatine
 +
 image::../media/sgf6112_two-slot-riser_guide-pin.png[Führungsstift auf der Systemplatine für Steckerbaugruppe mit zwei Steckplätzen]
 
@@ -68,7 +68,7 @@ image::../media/sgf6112_two-slot-riser_guide-pin.png[Führungsstift auf der Syst
 .. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
 
 
-. Stellen Sie die BMC-Netzwerkverbindung für die Appliance mithilfe einer der folgenden Optionen wieder her:
+. Stellen Sie die BMC-Netzwerkverbindung für die Appliance wieder her. Es gibt zwei Möglichkeiten:
 +
 ** Verwenden Sie statische IP, Netzmaske und Gateway
 ** Verwenden Sie DHCP, um eine IP, eine Netzmaske und ein Gateway zu erhalten

@@ -16,6 +16,7 @@ Vor der Installation der StorageGRID Appliance sollten Sie wissen, welche Netzwe
 Lesen Sie die Anweisungen für Ihr Gerät, um herauszufinden, welche Informationen Sie benötigen:
 
 * link:gathering-installation-information-sg100-and-sg1000.html["SG100 und SG1000"]
+* link:gathering-installation-information-sg110-and-sg1100.html["SG110 und SG1100"]
 * link:gathering-installation-information-sg5700.html["SG5700"]
 * link:gathering-installation-information-sg6000.html["SG6000"]
 * link:gathering-installation-information-sg6100.html["SG6100"]
@@ -29,7 +30,7 @@ Wenn Sie eine StorageGRID Appliance als Node in einem StorageGRID System impleme
 * *Admin-Netzwerk für StorageGRID*: Das Admin-Netzwerk ist ein geschlossenes Netzwerk, das zur Systemadministration und Wartung verwendet wird. Das Admin-Netzwerk ist in der Regel ein privates Netzwerk und muss nicht zwischen Standorten routingfähig sein. Das Admin-Netzwerk ist optional.
 * *Client-Netzwerk für StorageGRID:* das Client-Netzwerk ist ein offenes Netzwerk, das für den Zugriff auf Client-Anwendungen, einschließlich S3 und Swift, verwendet wird. Das Client-Netzwerk ermöglicht den Zugriff auf das Grid-Protokoll, sodass das Grid-Netzwerk isoliert und gesichert werden kann. Sie können das Client-Netzwerk so konfigurieren, dass über dieses Netzwerk nur über die Ports zugegriffen werden kann, die Sie öffnen möchten. Das Client-Netzwerk ist optional.
 * *Managementnetzwerk für SANtricity* (optional für Speichergeräte, nicht für SG6100 erforderlich): Dieses Netzwerk bietet Zugriff auf SANtricity System Manager, mit dem Sie die Hardwarekomponenten im Appliance- und Speicher-Controller-Shelf überwachen und verwalten können. Dieses Managementnetzwerk kann das gleiche sein wie das Admin-Netzwerk für StorageGRID, oder es kann ein unabhängiges Managementnetzwerk sein.
-* *BMC-Managementnetzwerk* (optional für SG100, SG1000, SG6000 und SG6100): Dieses Netzwerk bietet Zugriff auf den Baseboard Management Controller in den SG100, SG1000, SG6000 und SG6100 Appliances, sodass Sie die Hardwarekomponenten in der Appliance überwachen und verwalten können. Dieses Managementnetzwerk kann das gleiche sein wie das Admin-Netzwerk für StorageGRID, oder es kann ein unabhängiges Managementnetzwerk sein.
+* *BMC-Managementnetzwerk* (optional für SG100, SG110, SG1000, SG1100, SG6000, und SG6100): dieses Netzwerk ermöglicht den Zugriff auf den Baseboard Management Controller in den SG100, SG1000, SG6000 und SG6100 Appliances. so können Sie die Hardwarekomponenten in der Appliance überwachen und verwalten. Dieses Managementnetzwerk kann das gleiche sein wie das Admin-Netzwerk für StorageGRID, oder es kann ein unabhängiges Managementnetzwerk sein.
 +
 Wenn das optionale BMC-Managementnetzwerk nicht verbunden ist, sind einige Support- und Wartungsverfahren schwieriger zu bewältigen. Sie können das BMC-Managementnetzwerk außer zu Supportzwecken unverbunden lassen.
 

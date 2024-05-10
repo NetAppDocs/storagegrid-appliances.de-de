@@ -34,9 +34,19 @@ Für den ersten Zugriff auf das Installationsprogramm der StorageGRID-Appliance 
 image::../media/sg100_admin_network_port.png[Admin-Netzwerk-Port auf dem SG100]
 
 --
+.SG110
+--
+image::../media/sg6100_admin_network_port.png[Admin-Netzwerk-Port auf dem SG110]
+
+--
 .SG1000
 --
 image::../media/sg1000_admin_network_port.png[Admin-Netzwerk-Port auf der SG1000]
+
+--
+.SG1100
+--
+image::../media/sg1100_admin_network_port.png[Admin-Netzwerk-Port auf der SG1100]
 
 --
 .E5700SG
@@ -105,11 +115,25 @@ Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den
 image::../media/sg100_link_local_port.png[SG100 Link-Local-Verbindung]
 
 --
+.SG110
+--
+Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den ganz rechts am RJ-45-Port der Appliance an.
+
+image::../media/sg6100_link_local_port.png[SG110 Link-Local Connection]
+
+--
 .SG1000
 --
 Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den rechtesten RJ-45-Port des Services-Geräts an.
 
 image::../media/sg1000_link_local_port.png[SG1000-Link-Local-Verbindung]
+
+--
+.SG1100
+--
+Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den ganz rechts am RJ-45-Port der Appliance an.
+
+image::../media/sg1100_link_local_port.png[SG1100 Link-Local Connection]
 
 --
 .E5700SG

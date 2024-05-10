@@ -29,6 +29,23 @@ Drücken Sie den Netzschalter während des Einschalters nicht erneut.
 
 
 --
+.SG110 und SG1100
+--
+.Schritte
+. Schließen Sie ein Netzkabel an jede der beiden Netzteile im Gerät an.
+. Schließen Sie diese beiden Netzkabel an zwei verschiedene Stromverteiler (Power Distribution Units, PDUs) im Schrank oder Rack an.
+. Wenn der Netzschalter auf der Vorderseite des Geräts derzeit nicht blau leuchtet, drücken Sie die Taste, um das Gerät einzuschalten.
++
+Drücken Sie den Netzschalter während des Einschalters nicht erneut.
+
++
+Die LED am Netzteil sollte grün leuchten, ohne zu blinken.
+
+. Wenn Fehler auftreten, beheben Sie alle Probleme.
+. Befestigen Sie die Frontverkleidung am Gerät, falls sie entfernt wurde.
+
+
+--
 .SG5700
 --
 .Bevor Sie beginnen
@@ -95,7 +112,7 @@ Drücken Sie den Netzschalter während des Einschalters nicht erneut.
 .Schritte
 . Schließen Sie ein Netzkabel an jede der beiden Netzteile im Gerät an.
 . Schließen Sie diese beiden Netzkabel an zwei verschiedene Stromverteiler (Power Distribution Units, PDUs) im Schrank oder Rack an.
-. Wenn der Betriebsschalter an der Vorderseite des SG6100-CN-Geräts derzeit nicht blau leuchtet, drücken Sie die Taste, um das Gerät einzuschalten.
+. Wenn der Netzschalter auf der Vorderseite des Geräts derzeit nicht blau leuchtet, drücken Sie die Taste, um das Gerät einzuschalten.
 +
 Drücken Sie den Netzschalter während des Einschalters nicht erneut.
 

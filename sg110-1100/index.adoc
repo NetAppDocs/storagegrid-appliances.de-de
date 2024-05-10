@@ -1,0 +1,20 @@
+---
+permalink: sg110-1100/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, service appliance, services appliance, gateway Node, admin node, maintain, maintaining, hardware, procedures, tasks 
+summary: Möglicherweise müssen Sie Wartungsarbeiten am Gerät durchführen. Bei den Verfahren in diesem Abschnitt wird davon ausgegangen, dass die Appliance bereits als Gateway-Node oder Admin-Node in einem StorageGRID-System bereitgestellt wurde. 
+---
+= Wartung von SG110- und SG1100-Appliances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie Wartungsarbeiten am Gerät durchführen. Bei den Verfahren in diesem Abschnitt wird davon ausgegangen, dass die Appliance bereits als Gateway-Node oder Admin-Node in einem StorageGRID-System bereitgestellt wurde.
+
+In diesem Abschnitt finden Sie Verfahren zur Wartung Ihres SG110- oder SG1100-Geräts.
+
+Siehe link:../commonhardware/index.html["Allgemeine Verfahren"] Für Wartungsverfahren, die von allen Geräten verwendet werden.
+
+Siehe link:../installconfig/configuring-hardware.html["Richten Sie die Hardware ein"] Für Wartungsverfahren, die auch während der Erstinstallation und -Konfiguration der Appliance durchgeführt werden.

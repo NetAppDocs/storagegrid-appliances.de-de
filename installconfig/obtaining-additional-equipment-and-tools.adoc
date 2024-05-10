@@ -95,6 +95,44 @@ Ethernet-Kabel:: RJ-45 (Kat. 5/Kat. 5e/Kat. 6/Kat. 6a)
 
 
 --
+.SG110 und SG1100
+--
+Für die Installation und Konfiguration der SG110- und SG1100-Hardware benötigen Sie die folgenden zusätzlichen Geräte.
+
+Optische Kabel und Transceiver::
++
+--
+* Kabel, 1 bis 4 von:
++
+** Twinax/Kupfer
+** Glasfaser/Optisch
+
+
+* Transceiver/Adapter, jeweils 1 bis 4 je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt):
++
+** SG110:
++
+*** 10-GbE SFP+
+*** 25-GbE-SFP28
+
+
+** SG1100:
++
+*** 10-GbE QSFP-to-SFP-Adapter (QSA) und SFP+
+*** 25-GbE QSFP-zu-SFP-Adapter (QSA) und SFP28
+*** 40-GbE QSFP+
+*** 100-GbE-QFSP28
+
+
+
+
+
+
+--
+Ethernet-Kabel:: RJ-45 (Kat. 5/Kat. 5e/Kat. 6/Kat. 6a)
+
+
+--
 .SG5700
 --
 Für die Installation und Konfiguration der SG5700-Hardware benötigen Sie die folgenden zusätzlichen Geräte:

@@ -1,0 +1,40 @@
+---
+section: sg110-1100
+title: Wartung der SG110- und SG1100-Hardware
+url: "/landing-maintain-sg1100-110/index.html"
+entries:
+- title: Überblick
+  pdf-filename: Hardware-Wartung für SG110 und SG1100
+  url: "/sg110-1100/index.html"
+- title: Verfahren zur Wartungskonfiguration
+  pdf-filename: Wartungskonfigurationsverfahren – SG110 und SG1100
+  entries:
+  - title: Die Identifizieren-LED ein- und ausschalten
+    url: "/sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html"
+  - title: Suchen Sie die Appliance im Datacenter
+    url: "/sg110-1100/locating-sg110-and-sg1100-in-data-center.html"
+  - title: Schalten Sie das Gerät aus und wieder ein
+    url: "/sg110-1100/power-sg110-and-sg1100-off-on.html"
+  - title: Verbindungskonfiguration ändern
+    url: "/sg110-1100/changing-link-configuration-of-sg110-and-sg1100-appliance.html"
+- title: Hardware-Wartungsverfahren
+  pdf-filename: Hardware-Wartungsverfahren – SG110 und SG1100
+  entries:
+  - title: Überprüfen Sie die zu ersetzenKomponenten
+    url: "/sg110-1100/verify-component-to-replace.html"
+  - title: Ersetzen Sie ein oder mehrere Netzteile
+    url: "/sg110-1100/replacing-one-or-more-power-supplies-in-sg110-and-sg1100-appliance.html"
+  - title: Ersetzen Sie den Lüfter
+    url: "/sg110-1100/replacing-fan-in-sg110-and-sg1100.html"
+  - title: Laufwerk austauschen
+    url: "/sg110-1100/replacing-drive-in-sg110-and-sg1100.html"
+  - title: Ersetzen Sie die NIC
+    url: "/sg110-1100/replace-nic-in-sg110-and-sg1100.html"
+  - title: Ersetzen Sie die CMOS-Batterie
+    url: "/sg110-1100/replace-cmos-in-sg110-and-sg1100.html"
+  - title: Abdeckung wieder anbringen
+    url: "/sg110-1100/reinstalling-sg110-and-sg1100-cover.html"
+  - title: Ersetzen Sie das Gerät
+    url: "/sg110-1100/replacing-sg110-and-sg1100-appliance.html"
+  - title: Verlegung des Geräts in das Rack
+    url: "/sg110-1100/reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html"

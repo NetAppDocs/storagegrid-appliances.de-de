@@ -18,6 +18,6 @@ Informieren Sie sich über die Neuerungen bei StorageGRID Appliances.
 
 
 
-== SGF6112 All-Flash Appliance
+== Service Appliances für SG110 und SG1100
 
-Die neue StorageGRID SGF6112 Storage Appliance verfügt über ein kompaktes Design mit Computing-Controller und Storage Controller, die in ein 1-HE-Chassis integriert sind. Die Appliance unterstützt 12 SSD-NVMe-Laufwerke mit einer Speicherkapazität von bis zu 15.3 TB pro Laufwerk. Die SSD-Laufwerke befinden sich in einem RAID mit ausfallsicherem Objekt-Storage. Siehe link:installconfig/hardware-description-sg6100.html["SGF6112 Appliance: Überblick"].
+Die neuen Service-Appliances StorageGRID SG110 und SG1100 sind ein evolutionäres Hardware-Update, das eine verbesserte Verwaltungs- und Load-Balancing-Performance bietet. Siehe link:./installconfig/hardware-description-sg110-and-1100.html["SG110 und SG1100 Services Appliance: Überblick"].

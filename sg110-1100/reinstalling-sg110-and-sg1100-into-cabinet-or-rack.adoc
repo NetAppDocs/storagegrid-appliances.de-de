@@ -1,0 +1,86 @@
+---
+permalink: sg110-1100/reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, admin node, admin appliance, install, installing, installation, cabinet, rack 
+summary: Nehmen Sie das SG110 oder SG1100 aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie das Gerät dann nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein. 
+---
+= Verlegung von SG110 und SG1100 in Schrank oder Rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nehmen Sie das SG110 oder SG1100 aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie das Gerät dann nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein.
+
+
+
+== SG110 oder SG1100 aus Schrank oder Rack entfernen
+
+.Bevor Sie beginnen
+* Jedes Kabel, das an den SG110 oder SG1100 angeschlossen ist, muss mit Etiketten gekennzeichnet werden.
+* Das ist schon link:locating-sg110-and-sg1100-in-data-center.html["Die SG110 oder SG1100 physisch befindet"] Wo Sie Wartungsarbeiten im Rechenzentrum durchführen.
+* Das ist schon link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Fahren Sie die SG110 oder SG1100 herunter"].
++
+
+CAUTION: Schalten Sie das Gerät nicht über den Netzschalter aus.
+
+
+
+.Schritte
+. Beschriften Sie die Netzkabel des Geräts, und ziehen Sie sie ab.
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Beschriften Sie die Gerätedatenkabel und alle SFP+- oder SFP28-Transceiver, und trennen Sie sie anschließend.
++
+
+IMPORTANT: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
+. Lösen Sie die beiden unverlierbaren Schrauben an der Gerätevorderseite.
++
+image::../media/sg6060_rack_retaining_screws.png[Befestigungsschrauben SG110 oder SG1100 Rack]
+
+. Schieben Sie das SG110 oder SG1100 aus dem Rack nach vorn, bis die Montageschienen vollständig ausgefahren sind und die Verriegelungen auf beiden Seiten hörbar einrasten.
++
+Die obere Abdeckung des Geräts ist zugänglich.
+
+. Optional: Wenn Sie das Gerät vollständig aus dem Schrank oder Rack entfernen, befolgen Sie die Anweisungen für den Schienensatz, um das Gerät von den Schienen zu entfernen.
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+
+
+
+== Setzen Sie SG110 oder SG1100 wieder in den Schrank oder das Rack ein
+
+.Bevor Sie beginnen
+Sie haben die Geräteabdeckung wieder angebracht.
+
+link:reinstalling-sg110-and-sg1100-cover.html["Setzen Sie die SG110- oder SG1100-Abdeckung wieder ein"]
+
+.Schritte
+. Drücken Sie auf die blaue Schiene, um beide Rackschienen gleichzeitig zu entbinden, und schieben Sie den SG110 oder SG1100 in das Rack, bis er vollständig eingesetzt ist.
++
+Wenn Sie den Controller nicht weiter bewegen können, ziehen Sie die blauen Laschen auf beiden Seiten des Chassis, um den Controller vollständig einzuschieben.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG110 oder SG1100 gleiten auf Schienen]
+
++
+
+NOTE: Bringen Sie die Frontverkleidung erst an, nachdem Sie den Controller eingeschaltet haben.
+
+. Ziehen Sie die unverlierbaren Schrauben an der Vorderseite des Controllers fest, um den Controller im Rack zu befestigen.
++
+image::../media/sg6060_rack_retaining_screws.png[Befestigungsschrauben SG110 oder SG1100 Rack]
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. link:../installconfig/cabling-appliance.html["Schließen Sie die Controller-Datenkabel und alle SFP+- oder SFP28-Transceiver erneut an"].
++
+
+IMPORTANT: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Schließen Sie die Controller-Stromkabel wieder an"].
+
+
+.Nachdem Sie fertig sind
+link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation.html["Starten Sie das Gerät neu"].

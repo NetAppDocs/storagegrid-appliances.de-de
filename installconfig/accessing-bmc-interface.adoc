@@ -14,7 +14,9 @@ summary: 'Sie können auf die BMC-Schnittstelle über die DHCP- oder statische I
 Sie können auf die BMC-Schnittstelle über die DHCP- oder statische IP-Adresse für den BMC-Verwaltungsport auf den folgenden Appliance-Modellen zugreifen:
 
 * SG100
+* SG110
 * SG1000
+* SG1100
 * SG6000
 * SG6100
 
@@ -30,9 +32,19 @@ Sie können auf die BMC-Schnittstelle über die DHCP- oder statische IP-Adresse 
 image::../media/sg100_bmc_management_port.png[SG100 BMC Management-Port]
 
 --
+.SG110
+--
+image::../media/sgf6112_cn_bmc_management_port.png[BMC-Managementport SG110]
+
+--
 .SG1000
 --
 image::../media/sg1000_bmc_management_port.png[SG1000 BMC-Management-Port]
+
+--
+.SG1100
+--
+image::../media/sg1100_bmc_management_port.png[BMC-Managementport SG1100]
 
 --
 .SG6000

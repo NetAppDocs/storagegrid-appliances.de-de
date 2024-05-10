@@ -1,0 +1,69 @@
+---
+permalink: sg110-1100/replacing-drive-in-sg110-and-sg1100.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Die Service Appliances SG110 und SG1100 enthalten zwei SSD-Laufwerke. Die Laufwerke werden aus Redundanzgründen mithilfe von RAID1 gespiegelt. Wenn eines der Laufwerke ausfällt, müssen Sie es so schnell wie möglich ersetzen, um Redundanz sicherzustellen. 
+---
+= Ersetzen Sie die Laufwerke im SG110 oder SG1100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Service Appliances SG110 und SG1100 enthalten zwei SSD-Laufwerke. Die Laufwerke werden aus Redundanzgründen mithilfe von RAID1 gespiegelt. Wenn eines der Laufwerke ausfällt, müssen Sie es so schnell wie möglich ersetzen, um Redundanz sicherzustellen.
+
+.Bevor Sie beginnen
+* Das ist schon link:locating-sg110-and-sg1100-in-data-center.html["Das Gerät befindet sich physisch"].
+* Sie haben überprüft, welches Laufwerk ausgefallen ist, indem Sie feststellen, dass die linke LED des Laufwerks gelb leuchtet oder den Grid Manager für verwenden link:verify-component-to-replace.html["Zeigen Sie die Warnung an, die durch das ausgefallene Laufwerk verursacht wurde"].
++
+
+IMPORTANT: Informationen zur Anzeige von Statusanzeigen zur Überprüfung des Fehlers finden Sie unter.
+
+* Sie haben das Ersatzlaufwerk erhalten.
+* Sie haben einen angemessenen ESD-Schutz erhalten.
+
+
+.Schritte
+. Stellen Sie sicher, dass die linke Fehler-LED des Laufwerks gelb leuchtet, oder verwenden Sie die Laufwerksteckplatz-ID aus der Warnmeldung, um das Laufwerk zu finden.
++
+Die Laufwerke befinden sich in den folgenden Positionen im Gehäuse (Vorderseite des Gehäuses mit entfernter Blende):
+
+
+
+image::../media/sg1100_front_with_ssds.png[Standorte der SG110- und SG1100-Laufwerke]
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.
++
+Alle Verpackungsmaterialien speichern.
+
+. Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
++
+image::../media/h600s_driveremoval.gif[Ausbau Des Laufwerks]
+
++
+Der Griff an den Antriebsfedern öffnet sich teilweise, und das Laufwerk löst sich aus dem Schlitz.
+
+. Öffnen Sie den Griff, schieben Sie das Laufwerk heraus und legen Sie es auf eine statisch freie, Ebene Oberfläche.
+. Drücken Sie die Entriegelungstaste am Ersatzlaufwerk, bevor Sie es in den Laufwerkschacht einsetzen.
++
+Die Verriegelungsfedern öffnen sich.
+
++
+image::../media/h600s_driveinstall.gif[Laufwerksinstallation]
+
+. Setzen Sie das Ersatzlaufwerk in den Steckplatz ein, und schließen Sie dann den Laufwerkgriff.
++
+
+IMPORTANT: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
+
++
+Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
+
++
+Das ersetzte Laufwerk wird automatisch mit gespiegelten Daten vom Arbeitslaufwerk neu erstellt.  Sie können den Status der Neuerstellung mithilfe des Grid Manager überprüfen. Gehen Sie zu *NODES* > `*Appliance Node*` > *Hardware*. Das Feld Speicher-RAID-Modus enthält eine Meldung „Neuaufbau“, bis das Laufwerk vollständig neu erstellt wurde.
+
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

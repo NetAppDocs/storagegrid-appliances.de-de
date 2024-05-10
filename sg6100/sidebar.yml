@@ -6,8 +6,8 @@ entries:
 - title: Überblick
   pdf-filename: SG6100 Hardware-Wartung
   url: "/sg6100/index.html"
-- title: Konfigurationswartungsverfahren
-  pdf-filename: Konfigurationswartungsverfahren – SG6100
+- title: Verfahren zur Wartungskonfiguration
+  pdf-filename: Wartungskonfigurationsverfahren – SG6100
   entries:
   - title: Verwenden Sie die Registerkarte Laufwerke verwalten
     url: "/sg6100/manage-drives-tab.html"

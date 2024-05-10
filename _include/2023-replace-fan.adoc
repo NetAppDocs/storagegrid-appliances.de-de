@@ -15,13 +15,13 @@ Das Foto zeigt einen Ventilator für das Gerät. Der elektrische Anschluss ist m
 
 NOTE: Jede der beiden Netzteile enthält zudem einen Lüfter. Die Netzteillüfter sind in diesem Verfahren nicht enthalten.
 
-image::../media/sgf6112_fan_fru.png[Lüfter SGF6112 FRU]
+image::../media/sgf6112_fan_fru.png[Lüfter-FRU]
 
 .Schritte
 . Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
 . Suchen Sie den Lüfter, den Sie ersetzen müssen.
 +
-Die acht Lüfter befinden sich in den folgenden Positionen im Gehäuse (vordere Hälfte des SGF6112 mit entfernter oberer Abdeckung):
+Die acht Lüfter befinden sich in den folgenden Positionen im Gehäuse (vordere Hälfte des StorageGRID-Geräts mit entfernter oberer Abdeckung):
 
 +
 image::../media/SGF6112-fan-locations.png[Lüfterpositionen]
