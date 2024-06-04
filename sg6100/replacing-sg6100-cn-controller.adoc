@@ -18,7 +18,7 @@ Möglicherweise müssen Sie den SG6100-CN-Controller austauschen, wenn er nicht 
 * Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
 * Der Controller ist physisch zu finden, der im Datacenter ersetzt werden soll.
 +
-link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+link:locating-sgf6112-in-data-center.html["Controller im Datacenter finden"]
 
 
 
@@ -45,7 +45,7 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 .. Geben Sie Ein: `*run-host-command ipmitool lan print*` Zeigt die aktuellen BMC-Konfigurationen für die Appliance an.
 
 
-. Wenn der Controller SG6100-CN ausreichend funktioniert, um ein kontrolliertes Herunterfahren zu ermöglichen, link:power-sg6100-cn-controller-off-on.html#shut-down-sg6100-cn-controller["Fahren Sie den SG6100-CN-Controller herunter"].
+. Wenn der Controller SG6100-CN ausreichend funktioniert, um ein kontrolliertes Herunterfahren zu ermöglichen, link:power-sgf6112-off-on.html["Fahren Sie den SG6100-CN-Controller herunter"].
 . Wenn eine der Netzwerkschnittstellen auf dieser StorageGRID-Appliance für DHCP konfiguriert ist, müssen Sie möglicherweise die permanenten DHCP-Lease-Zuordnungen auf den DHCP-Servern aktualisieren, um auf die MAC-Adressen der Ersatz-Appliance zu verweisen. Das Update stellt sicher, dass der Appliance die erwarteten IP-Adressen zugewiesen werden.
 . Entfernen und ersetzen Sie den SG6100-CN-Controller:
 +

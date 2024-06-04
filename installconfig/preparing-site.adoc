@@ -30,16 +30,16 @@ SG100 und SG1000
 
 
  a| 
-SG5712
- a| 
-120 bis 240 Volt Wechselstrom
-
-
-
- a| 
 SG110 und SG1100
  a| 
 100 bis 240 Volt Wechselstrom
+
+
+
+ a| 
+SG5712
+ a| 
+120 bis 240 Volt Wechselstrom
 
 
 

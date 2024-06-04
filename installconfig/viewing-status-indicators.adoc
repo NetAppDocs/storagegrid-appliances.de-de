@@ -670,17 +670,8 @@ Installation oder Kommunikation mit dem E2800-Controller ist fehlgeschlagen.
 --
 .SG5800
 --
-Die Gerätesteuerung enthält Anzeigen, die Ihnen helfen, den Status des Gerätesteuerung zu bestimmen:
+Die Gerätesteuerung enthält Anzeigen, mit denen Sie den Status des Gerätesteuerung ermitteln können. Verwenden Sie diese Informationen, um zu helfen link:troubleshooting-hardware-installation.html["Fehlerbehebung bei der Installation der SG5800-Hardware"].
 
-* <<status_indicators_SG5800_controller,Statusanzeigen am SG5800-Controller>>
-* <<general_boot_codes_sg5800,Allgemeine Startcodes>>
-* <<boot_codes_SG5800_controller,Boot-Codes des SG5800-Controllers>>
-* <<error_codes_SG5800_controller,Fehlercodes des SG5800-Controllers>>
-
-
-Verwenden Sie diese Informationen, um zu helfen link:troubleshooting-hardware-installation.html["Fehlerbehebung bei der Installation der SG5800-Hardware"].
-
-[[status_indicators_SG5800_controller]]
 Statusanzeigen am SG5800-Controller::
 +
 --
