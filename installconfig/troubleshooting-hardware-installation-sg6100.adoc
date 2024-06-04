@@ -1,10 +1,10 @@
 ---
 permalink: installconfig/troubleshooting-hardware-installation-sg6100.html 
 sidebar: sidebar 
-keywords: storagegrid, sg6100, sgf6112,troubleshoot, troubleshooting, hardware, install, installation, boot codes, boot-up codes, start codes, codes, boot, start, bmc, error codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection 
+keywords: storagegrid, sg6100, sgf6112, troubleshoot, troubleshooting, hardware, install, installation, boot codes, boot-up codes, start codes, codes, boot, start, bmc, error codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection, sg6160, sg5800, e4000 
 summary: Wenn während der Installation Probleme auftreten, können Sie die Fehlerbehebungsinformationen zu Hardware-Setup- und Konnektivitätsproblemen überprüfen. 
 ---
-= Fehlerbehebung bei Hardwareinstallation (SG6100)
+= Fehlerbehebung bei der Hardwareinstallation (SG5800 oder SG6100)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ Wenn während der Installation Probleme auftreten, können Sie die Fehlerbehebun
 
 
 
-== Anzeigen von Startcodes
+== Anzeigen von Startcodes (nur SGF6112 und SG6160)
 
 Wenn Sie das Gerät mit Strom versorgen, protokolliert der BMC eine Reihe von Startcodes. Sie können diese Codes auf einer grafischen Konsole anzeigen, die mit dem BMC-Management-Port verbunden ist.
 
@@ -52,7 +52,7 @@ KVM
  a| 
 Serieller Port
  a| 
-** SERIELLES DB-9-Kabel
+** USB-Kabel
 ** Serielles virtuelles Terminal
 
 
@@ -91,6 +91,10 @@ SOL
 .. Stellen Sie mithilfe der BMC-IP-Adresse und der Anmeldedaten eine Verbindung zum IPMI SOL her.
 +
 `ipmitool -I lanplus -H _BMC_Port_IP_ -U admin -P _Password_ sol activate`
+
++
+
+NOTE: In einigen Fällen kann der Standardbenutzername „root“ anstelle von „admin“ sein.
 
 .. Die Codes auf dem virtuellen seriellen Terminal anzeigen.
 
@@ -131,6 +135,22 @@ Die Update-Prüfungen der Hardware-Subsystem-Firmware wurden abgeschlossen. Die 
 
 
  a| 
+ER
+ a| 
+Nur für die SG6160:
+
+Das System wartet auf die Konnektivität mit den Storage Controllern und die Synchronisierung mit dem Betriebssystem SANtricity.
+
+*Hinweis*: Wenn der Startvorgang nicht über diese Phase hinaus fortschreitet, führen Sie folgende Schritte aus:
+
+.. Vergewissern Sie sich, dass die vier Verbindungskabel zwischen dem SG6100-CN Controller und den beiden Storage Controllern sicher angeschlossen sind.
+.. Ersetzen Sie bei Bedarf ein oder mehrere Kabel, und versuchen Sie es erneut.
+.. Falls das Problem dadurch nicht behoben werden kann, wenden Sie sich an den technischen Support.
+
+
+
+
+ a| 
 HZ
  a| 
 Das System prüft gerade auf vorhandene StorageGRID Installationsdaten.
@@ -154,7 +174,7 @@ StorageGRID wird ausgeführt.
 
 
 
-== Fehlercodes anzeigen
+== Fehlercodes anzeigen (nur SGF6112 und SG6160)
 
 Wenn beim Starten der Appliance ein Hardwarefehler auftritt, meldet der BMC einen Fehlercode. Bei Bedarf können Sie diese Fehlercodes über die BMC-Schnittstelle anzeigen und dann mit dem technischen Support zusammenarbeiten, um das Problem zu lösen.
 
@@ -525,7 +545,7 @@ MRC: ERR_INTERLEAVE_FAILURE
 Das Installationsprogramm von StorageGRID Appliance ist möglicherweise nicht verfügbar, wenn Hardwarefehler oder Verkabelungsfehler eine Ausführung der Appliance verhindern.
 
 .Schritte
-. Überprüfen Sie die LEDs am Gerät sowie die im BMC angezeigten Boot- und Fehlercodes.
+. Überprüfen Sie die LEDs am Gerät und/oder die im BMC angezeigten Start- und Fehlercodes (sofern vorhanden).
 . Wenn Sie Hilfe bei der Behebung eines Problems benötigen, wenden Sie sich an den technischen Support.
 
 
@@ -533,11 +553,41 @@ Das Installationsprogramm von StorageGRID Appliance ist möglicherweise nicht ve
 
 == Verbindungsprobleme
 
-Wenn Sie keine Verbindung zur Appliance herstellen können, liegt möglicherweise ein Netzwerkproblem vor, oder die Hardwareinstallation wurde möglicherweise nicht erfolgreich abgeschlossen.
+
+
+=== Erweiterungs-Shelfs werden im Appliance Installer (SG6160) nicht angezeigt
+
+Wenn Sie Erweiterungs-Shelfs installiert haben und diese nicht im Installationsprogramm der StorageGRID Appliance angezeigt werden, sollten Sie überprüfen, ob die Shelfs vollständig installiert und eingeschaltet wurden.
+
+.Über diese Aufgabe
+Sie können überprüfen, ob die Erweiterungs-Shelfs mit der Appliance verbunden sind, indem Sie die folgenden Informationen im Installationsprogramm der StorageGRID Appliance anzeigen:
+
+* Die *Home* Seite enthält eine Nachricht über Erweiterungsregale.
++
+image::../media/expansion_shelf_home_page_msg.png[Erweiterungs-Shelfs Msg]
+
+* Die Seite *Erweitert* > *RAID-Modus* zeigt anhand der Anzahl der Laufwerke an, ob das Gerät Erweiterungseinschübe enthält oder nicht.
+
+
+Wenn die Seiten des Installationsprogramms für StorageGRID-Geräte nicht angeben, dass Erweiterungs-Shelfs vorhanden sind, gehen Sie wie folgt vor.
+
+.Schritte
+. Vergewissern Sie sich, dass alle erforderlichen Kabel fest angeschlossen sind. Siehe link:cabling-appliance.html["Kabelgerät"].
+. Stellen Sie sicher, dass Sie die Erweiterungs-Shelfs eingeschaltet haben. Siehe link:connecting-power-cords-and-applying-power.html["Stromkabel anschließen und Strom anschließen (SG6100)"].
+. Wenn Sie Hilfe bei der Behebung eines Problems benötigen, wenden Sie sich an den technischen Support.
+
+
+
+
+=== Verbindung zum Gerät nicht möglich
+
+Wenn Sie keine Verbindung zur Storage Appliance herstellen können, liegt möglicherweise ein Netzwerkproblem vor oder die Hardwareinstallation wurde möglicherweise nicht erfolgreich abgeschlossen.
 
 .Schritte
 . Versuchen Sie, das Gerät mit der IP-Adresse des Geräts zu pingen : +
-`*ping _appliance_IP_*`
++
+`*ping _appliance/controller_IP_*`
+
 . Wenn Sie keine Antwort vom Ping erhalten, bestätigen Sie, dass Sie die richtige IP-Adresse verwenden.
 +
 Sie können die IP-Adresse der Appliance im Grid-Netzwerk, im Admin-Netzwerk oder im Client-Netzwerk verwenden.
@@ -548,7 +598,7 @@ Sie können die IP-Adresse der Appliance im Grid-Netzwerk, im Admin-Netzwerk ode
 Falls das Problem dadurch nicht behoben werden kann, wenden Sie sich an den technischen Support.
 
 . Wenn der Ping erfolgreich war, öffnen Sie einen Webbrowser.
-. Geben Sie die URL für das StorageGRID-Appliance-Installationsprogramm ein: +
+. Geben Sie die URL für das Installationsprogramm der StorageGRID Appliance oder des SANtricity System Managers ein: +
 `*https://_appliances_controller_IP_:8443*`
 +
 Die Startseite wird angezeigt.

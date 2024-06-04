@@ -4,23 +4,23 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, storage node, storage appliance, install, installing, installation, cabinet, rack 
 summary: Entfernen Sie das SGF6112 aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie das Gerät dann nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein. 
 ---
-= Verlegung des SGF6112 in Schrank oder Rack
+= Verlegung von SGF6112 oder SG6100-CN in Schrank oder Rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Entfernen Sie das SGF6112 aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie das Gerät dann nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein.
+Nehmen Sie das SGF6112 oder SG6100-CN aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie das Gerät dann nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein.
 
 
 
-== SGF6112 aus Schrank oder Rack entfernen
+== Entfernen Sie SGF6112 oder SG6100-CN aus dem Schrank oder Rack
 
 .Bevor Sie beginnen
-* Jedes Kabel, das mit dem SGF6112 verbunden ist, ist mit Etiketten versehen.
-* Das ist schon link:locating-sgf6112-in-data-center.html["Die SGF6112 befindet sich in physischer Lage"] Wo Sie Wartungsarbeiten im Rechenzentrum durchführen.
-* Das ist schon link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Fahren Sie die SGF6112 herunter"].
+* Jedes Kabel, das mit dem SGF6112 oder SG6100-CN verbunden ist, ist mit Etiketten gekennzeichnet.
+* Das ist schon link:locating-sgf6112-in-data-center.html["Physische Lage des SGF6112 oder SG6100-CN"] Wo Sie Wartungsarbeiten im Rechenzentrum durchführen.
+* Das ist schon link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Fahren Sie die SGF6112 oder SG6100-CN herunter"].
 +
 
 CAUTION: Schalten Sie das Gerät nicht über den Netzschalter aus.
@@ -37,9 +37,9 @@ NOTE: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen,
 
 . Lösen Sie die beiden unverlierbaren Schrauben an der Gerätevorderseite.
 +
-image::../media/sg6060_rack_retaining_screws.png[SGF6112-Rack-Befestigungsschrauben]
+image::../media/sg6060_rack_retaining_screws.png[Befestigungsschrauben für SGF6112 oder SG6100-CN Rack]
 
-. Schieben Sie das SGF6112 aus dem Rack nach vorn, bis die Montageschienen vollständig ausgefahren sind und die Verriegelungen auf beiden Seiten hörbar einrasten.
+. Schieben Sie das SGF6112 oder SG6100-CN aus dem Rack nach vorne, bis die Montageschienen vollständig ausgefahren sind und die Verriegelungen auf beiden Seiten hörbar einrasten.
 +
 Die obere Abdeckung des Geräts ist zugänglich.
 
@@ -50,7 +50,7 @@ Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, 
 
 
 
-== Setzen Sie SGF6112 wieder in den Schrank oder das Rack ein
+== Setzen Sie SGF6112 oder SG6100-CN wieder in den Schrank oder das Rack ein
 
 .Bevor Sie beginnen
 Das ist schon link:reinstalling-sgf6112-cover.html["Die Geräteabdeckung wieder anbringen"].

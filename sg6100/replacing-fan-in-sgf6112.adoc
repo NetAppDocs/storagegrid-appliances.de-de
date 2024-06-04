@@ -1,22 +1,22 @@
 ---
 permalink: sg6100/replacing-fan-in-sgf6112.html 
 sidebar: sidebar 
-keywords: storagegrid, sgf6112, storage appliance, Replacing, replace, fan, remove, removing, removal, install, installing 
-summary: Das SGF6112-Gerät verfügt über acht Lüfter. Wenn einer der Lüfter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät ordnungsgemäß gekühlt wird. 
+keywords: storagegrid, sgf6112, sg6100-cn, sg6160, storage appliance, Replacing, replace, fan, remove, removing, removal, install, installing 
+summary: Die Appliance SGF6112 und der Controller SG6100-CN verfügen über acht Lüfter. Wenn einer der Lüfter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät ordnungsgemäß gekühlt wird. 
 ---
-= Ersetzen Sie den Lüfter in einem SGF6112
+= Lüfter in SGF6112 oder SG6100-CN (SG6160) austauschen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Das SGF6112-Gerät verfügt über acht Lüfter. Wenn einer der Lüfter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät ordnungsgemäß gekühlt wird.
+Die Appliance SGF6112 und der Controller SG6100-CN verfügen über acht Lüfter. Wenn einer der Lüfter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät ordnungsgemäß gekühlt wird.
 
 .Bevor Sie beginnen
 * Sie haben den richtigen Ersatzlüfter.
 * Das ist schon link:verify-component-to-replace.html["Die Position des auszutauenden Lüfters ermittelt"].
-* Das ist schon link:locating-sgf6112-in-data-center.html["Befindet sich das SGF6112-Gerät physisch"] Wo Sie den Lüfter im Rechenzentrum austauschen.
+* Das ist schon link:locating-sgf6112-in-data-center.html["Physische Lage der SGF6112 Appliance oder des SG6100-CN Controllers"] Wo Sie den Lüfter im Rechenzentrum austauschen.
 +
 
 NOTE: A link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Kontrolliertes Herunterfahren des Geräts"] Ist erforderlich, bevor Sie das Gerät aus dem Rack entfernen.
@@ -29,7 +29,7 @@ NOTE: A link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Kontroll
 Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Lüfteraustausch starten oder den Lüfter während eines geplanten Wartungsfensters austauschen, wenn Serviceunterbrechungen akzeptabel sind. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
 
 
-CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Lüfter während eines geplanten Wartungsfensters ersetzen. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
+CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Lüfter während eines geplanten Wartungsfensters ersetzen, da während dieses Vorgangs vorübergehend der Zugriff auf diese Objekte verloren geht. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
 
 Auf den Geräteknoten kann nicht zugegriffen werden, wenn Sie den Lüfter austauschen.
 

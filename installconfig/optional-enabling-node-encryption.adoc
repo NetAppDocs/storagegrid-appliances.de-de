@@ -91,7 +91,14 @@ Wenn sich der Appliance-Node im Wartungsmodus befindet, können Sie den Verschl�
 
 == Laufwerkverschlüsselung
 
-Die Laufwerkverschlüsselung wird während des Schreib- und Lesevorgangs auf der SED-Hardware (Self-Encrypting Drive) verwaltet. Der Zugriff auf Daten auf diesen Laufwerken wird über eine benutzerdefinierte Passphrase gesteuert. Laufwerksverschlüsselung wird für Direct-Attached Solid State Drives (SSDs) verwendet, die für die Cache-Speicherung in StorageGRID Appliances verwendet werden.
+Die Laufwerkverschlüsselung wird während des Schreib- und Lesevorgangs auf der SED-Hardware (Self-Encrypting Drive) verwaltet. Der Zugriff auf Daten auf diesen Laufwerken wird über eine benutzerdefinierte Passphrase gesteuert.
+
+Laufwerkverschlüsselung kann für alle SED-SSDs verwendet werden, die in SG100, SG1000, SG110, SG1100, SGF6112 installiert sind. oder SG6100-CN Computing-Node oder Controller.
+
+* Für Service-Appliances sind die SSDs die Node-Root-Festplatten.
+* In einem SG6100-CN Controller werden die SSDs für das Caching verwendet.
+* In einer SGF6112 sind die SSDs die Node-Root-Festplatten und werden für den primären Storage von Objektdaten verwendet.
+
 
 Verschlüsselte SEDs werden automatisch gesperrt, wenn das Gerät ausgeschaltet wird oder wenn das Laufwerk aus dem Gerät entfernt wird. Eine verschlüsselte SED bleibt gesperrt, nachdem die Stromversorgung wiederhergestellt wurde, bis die korrekte Passphrase eingegeben wurde. Damit auf Laufwerke zugegriffen werden kann, ohne die Passphrase manuell erneut einzugeben, wird die Passphrase auf der StorageGRID-Appliance gespeichert, um verschlüsselte Laufwerke zu entsperren, die beim Neustart der Appliance in der Appliance verbleiben. Laufwerke, die mit einer SED-Passphrase verschlüsselt sind, können von jedem, der die Passphrase kennt, aufgerufen werden.
 

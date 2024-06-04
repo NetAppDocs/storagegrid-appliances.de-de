@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, power off, turn off, shut off, shutdown, shut down, power on, turn on, start 
 summary: Sie können das SGF6112-Gerät herunterfahren und wieder einschalten, um Wartungsarbeiten durchzuführen. 
 ---
-= Schalten Sie das SGF6112-Gerät aus und wieder ein
+= Schalten Sie das SGF6112-Gerät oder den SG6100-CN-Controller aus und ein
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sie können das SGF6112-Gerät herunterfahren und wieder einschalten, um Wartungsarbeiten durchzuführen.
+Sie können das SGF6112-Gerät oder den SG6100-CN-Controller herunterfahren und wieder einschalten, um Wartungsarbeiten durchzuführen.
 
 
 
-== Fahren Sie die SGF6112-Appliance herunter
+== Fahren Sie die SGF6112-Appliance oder den SG6100-CN-Controller herunter
 
 Fahren Sie die Appliance herunter, um eine Hardwarewartung durchzuführen.
 
@@ -61,7 +61,7 @@ Dieser Befehl kann bis zu 10 Minuten in Anspruch nehmen.
 
 
 
-== Schalten Sie SGF6112 ein, und überprüfen Sie den Betrieb
+== Schalten Sie SGF6112 oder SG6100-CN ein, und überprüfen Sie den Betrieb
 
 Schalten Sie den Controller nach dem Abschluss der Wartung ein.
 
@@ -71,14 +71,13 @@ Schalten Sie den Controller nach dem Abschluss der Wartung ein.
 
 
 .Schritte
-. Schalten Sie das Gerät ein.
+. Schalten Sie das Gerät ein:
++
+** Option 1: Drücken Sie den Netzschalter an der Vorderseite des Controllers.
 +
 Möglicherweise müssen Sie die Blende entfernen, um auf den Netzschalter zugreifen zu können. Wenn dies der Fall ist, müssen Sie sie anschließend wieder einbauen.
 
-. Überwachen Sie die Controller-LEDs und die Startcodes mit einer der folgenden Methoden:
-+
-** Drücken Sie den Netzschalter an der Vorderseite des Controllers.
-** Verwenden Sie die BMC-Schnittstelle des Controllers:
+** Option 2: Verwenden Sie die BMC-Schnittstelle des Controllers:
 +
 ... link:../installconfig/accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle des Controllers auf"].
 ... Wählen Sie *Power Control*.

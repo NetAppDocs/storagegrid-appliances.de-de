@@ -149,6 +149,23 @@ Ethernet-Kabel:: Mechanisierter Lift für SG5760
 
 
 --
+.SG5800
+--
+Für die Installation und Konfiguration der SG5800-Hardware benötigen Sie die folgenden zusätzlichen Geräte:
+
+Kabel und SFP-Transceiver::
++
+--
+* Kabel für die 10/25-GbE-Ports, die Sie verwenden möchten
+* Optional: SFP28 Transceiver, wenn Sie 25-GbE Verbindungsgeschwindigkeit und optische Kabel nutzen möchten
+* Optional: SFP+ Transceiver, wenn Sie 10-GbE-Verbindungsgeschwindigkeit und optische Kabel nutzen möchten
+
+
+--
+Ethernet-Kabel:: Mechanischer Lift für SG5860
+
+
+--
 .SG6000
 --
 Für die Installation und Konfiguration der SG6000-Hardware benötigen Sie die folgenden zusätzlichen Geräte:
@@ -178,9 +195,9 @@ Optionale Werkzeuge:: Mechanisierter Lift für 60-Laufwerk-Shelfs
 --
 .SG6100
 --
-Für die Installation und Konfiguration der SGF6112-Hardware benötigen Sie die folgenden zusätzlichen Geräte.
+Für die Installation und Konfiguration der SG6100-Hardware benötigen Sie die folgenden zusätzlichen Geräte:
 
-Optische Kabel und Transceiver::
+Kabel und Transceiver::
 +
 --
 * Kabel, 1 bis 4 von:
@@ -189,16 +206,18 @@ Optische Kabel und Transceiver::
 ** Glasfaser/Optisch
 
 
-* Transceiver/Adapter, jeweils 1 bis 4 je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt):
+* Transceiver/Adapter, jeweils 1 bis 8 je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt):
 +
 ** 10-GbE SFP+
 ** 25-GbE-SFP28
+** 100-GbE-QSFP28
 
 
 
 
 --
 Ethernet-Kabel:: RJ-45 (Kat. 5/Kat. 5e/Kat. 6/Kat. 6a)
+Optionale Werkzeuge:: Mechanisierter Lift für 60-Laufwerk-Shelfs
 
 
 --

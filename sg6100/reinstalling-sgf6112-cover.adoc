@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, sgf6112, storage node, storage appliance, cover, install, installing, installation, reinstall, reinstalling, reinstallation 
 summary: Entfernen Sie die Geräteabdeckung, um zu Wartungszwecken Zugang zu den internen Komponenten zu erhalten, und bringen Sie die Abdeckung wieder an, wenn Sie fertig sind. 
 ---
-= SGF6112-Abdeckung austauschen
+= Ersetzen Sie die Abdeckung SGF6112 oder SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

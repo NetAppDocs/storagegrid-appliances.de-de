@@ -1,0 +1,94 @@
+---
+permalink: sg6100/reinstalling-sg6100-cn-controller-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6000-cn, remove, removing, removal 
+summary: Entfernen Sie den SG6100-CN-Controller aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie dann den Controller nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein. 
+---
+= Verlegung des SG6100-CN-Controllers in Schrank oder Rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entfernen Sie den SG6100-CN-Controller aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie dann den Controller nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein.
+
+
+
+== Entfernen Sie den SG6100-CN-Controller aus dem Schrank oder Rack
+
+Entfernen Sie den SG6100-CN-Controller aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder den Controller an einen anderen Ort zu bringen.
+
+.Bevor Sie beginnen
+* Jedes Kabel, das an den SG6100-CN-Controller angeschlossen ist, ist mit Etiketten gekennzeichnet.
+* Sie haben den SG6100-CN-Controller an einem physischen Standort, an dem Sie Wartungsarbeiten im Datacenter durchführen.
++
+link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+
+* Das ist schon link:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Fahren Sie den SG6100-CN-Controller herunter"].
++
+
+CAUTION: Fahren Sie den Controller nicht mit dem Netzschalter herunter.
+
+
+
+.Schritte
+. Kennzeichnen und trennen Sie die Controller-Stromkabel.
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Beschriften und trennen Sie dann die Controller-Datenkabel und alle SFP+ oder SFP28-Transceiver.
++
+
+CAUTION: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
+. Lösen Sie die beiden unverlierbaren Schrauben an der Vorderseite des Controllers.
++
+image::../media/sg6060_rack_retaining_screws.png[SG6160 Rack-Befestigungsschrauben]
+
+. Schieben Sie den SG6100-CN-Controller nach vorne aus dem Rack, bis die Montageschienen vollständig ausgefahren sind und die Verriegelungen auf beiden Seiten hörbar einrasten.
++
+Die obere Abdeckung des Controllers ist zugänglich.
+
+. Optional: Wenn Sie den Controller vollständig aus dem Schrank oder Rack entfernen, befolgen Sie die Anweisungen für den Schienensatz, um den Controller aus den Schienen zu entfernen.
+
+
+
+
+== Setzen Sie den SG6100-CN-Controller wieder in den Schrank oder das Rack ein
+
+Setzen Sie den Controller nach Abschluss der Hardwarewartung in ein Rack oder Rack ein.
+
+.Bevor Sie beginnen
+Sie haben die Controller-Abdeckung wieder installiert.
+
+link:reinstalling-sg6000-cn-controller-cover.html["Setzen Sie die SG6100-CN-Controllerabdeckung wieder ein"]
+
+.Schritte
+. Durch Drücken der blauen Schiene werden beide Rack-Schienen gleichzeitig freigegeben, und der SG6000-CN Controller in das Rack schieben, bis er vollständig eingesetzt ist.
++
+Wenn Sie den Controller nicht weiter bewegen können, ziehen Sie die blauen Laschen auf beiden Seiten des Chassis, um den Controller vollständig einzuschieben.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6100 Gleitschienen]
+
++
+
+NOTE: Bringen Sie die Frontverkleidung erst an, nachdem Sie den Controller eingeschaltet haben.
+
+. Ziehen Sie die unverlierbaren Schrauben an der Vorderseite des Controllers fest, um den Controller im Rack zu befestigen.
++
+image::../media/sg6060_rack_retaining_screws.png[SG6160 Rack-Befestigungsschrauben]
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Schließen Sie die Controller-Datenkabel und alle SFP+- oder SFP28-Transceiver wieder an.
++
+
+CAUTION: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
++
+link:../installconfig/cabling-appliance.html["Kabelgerät"]
+
+. Schließen Sie die Controller-Stromkabel wieder an.
++
+link:../installconfig/connecting-power-cords-and-applying-power.html["Stromkabel anschließen und Strom anschließen (SG6100)"]
+
+

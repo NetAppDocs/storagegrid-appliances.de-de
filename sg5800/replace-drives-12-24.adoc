@@ -1,0 +1,139 @@
+---
+permalink: sg5800/replace-drives-12-24.html 
+sidebar: sidebar 
+keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, E-Series, eseries. sg5812 
+summary: Sie können ein Laufwerk im SG5812 austauschen. 
+---
+= Das Laufwerk in SG5812 austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Laufwerk in einem SG5812 ersetzen.
+
+.Über diese Aufgabe
+StorageGRID Grid Manager überwacht den Appliance-Status und gibt bei Laufwerksausfällen Warnmeldungen aus.  Wenn der Grid Manager eine Warnmeldung ausgibt, oder Sie können den Recovery Guru im SANtricity System Manager verwenden, um weitere Informationen über das jeweilige Laufwerk zu erhalten, das ausgefallen ist.  Wenn ein Laufwerk ausfällt, leuchtet die gelbe Warn-LED. Sie können ein ausgefallenes Laufwerk im laufenden Betrieb austauschen, während das Speicher-Array I/O-Vorgänge empfängt
+
+.Bevor Sie beginnen
+* Überprüfen Sie die Anforderungen für die Laufwerksverwaltung
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+
+
+
+
+
+
+== Schritt 1: Vorbereitung auf den Austausch des Laufwerks
+
+Bereiten Sie sich auf den Austausch eines Laufwerks vor, indem Sie den Recovery Guru in SANtricity System Manager prüfen und alle erforderlichen Schritte ausführen. Dann können Sie die ausgefallene Komponente finden.
+
+.Schritte
+. Wenn der Recovery Guru im SANtricity System Manager Sie über einen _bevorstehenden Laufwerksausfall informiert hat_, aber es ist noch nicht ausgefallen, befolgen Sie die Anweisungen im Recovery Guru zum Fehlschlagen des Laufwerks.
+. Überprüfen Sie bei Bedarf mit SANtricity System Manager, ob Sie ein geeignetes Ersatzlaufwerk besitzen.
++
+.. Wählen Sie *Hardware*.
+.. Wählen Sie in der Shelf-Grafik das ausgefallene Laufwerk aus.
+.. Klicken Sie auf das Laufwerk, um das Kontextmenü anzuzeigen, und wählen Sie dann *Einstellungen anzeigen*.
+.. Vergewissern Sie sich, dass die Kapazität des Ersatzlaufwerks dem des Ersatzlaufwerks entspricht oder höher ist als das ersetzte Laufwerk und dass es die Funktionen besitzt, die Sie erwarten.
++
+Versuchen Sie beispielsweise nicht, ein Festplattenlaufwerk (HDD) durch eine Solid-State-Festplatte (SSD) zu ersetzen. Ebenso sollte das Ersatzlaufwerk auch sicher sein, wenn Sie ein sicheres Laufwerk ersetzen.
+
+
+
+. Verwenden Sie bei Bedarf SANtricity System Manager, um das Laufwerk innerhalb des Storage-Arrays zu finden. Wählen Sie im Kontextmenü des Laufwerks auf der Seite Hardware die Option *Locator einschalten*.
++
+Die Warn-LED des Laufwerks (gelb) blinkt, damit Sie feststellen können, welches Laufwerk ersetzt werden soll.
+
++
+
+NOTE: Wenn Sie ein Laufwerk in einem Shelf ersetzen, das über eine Blende verfügt, müssen Sie die Blende entfernen, um die Laufwerk-LEDs zu sehen.
+
+
+
+
+
+== Schritt 2: Entfernen Sie ausgefallenes Laufwerk
+
+Entfernen Sie ein ausgefallenes Laufwerk, um es durch ein neues zu ersetzen.
+
+.Schritte
+. Packen Sie das Ersatzlaufwerk aus, und stellen Sie es auf eine flache, statische Oberfläche in der Nähe des Regals ein.
++
+Alle Verpackungsmaterialien speichern.
+
+. Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
+. Öffnen Sie den Nockengriff, und schieben Sie den Antrieb leicht heraus.
+. Warten Sie 30 Sekunden.
+. Entfernen Sie das Laufwerk mithilfe beider Hände aus dem Regal.
+. Setzen Sie das Laufwerk auf eine antistatische, gepolsterte Oberfläche, die von Magnetfeldern entfernt ist.
+. Warten Sie 30 Sekunden, bis die Software erkennt, dass das Laufwerk entfernt wurde.
++
+
+NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindestens 30 Sekunden, und installieren Sie es erneut. Informationen zum Recovery-Verfahren finden Sie in der Storage Management Software.
+
+
+
+
+
+== Schritt 3: Neues Laufwerk installieren
+
+Installieren Sie ein neues Laufwerk, um das ausgefallene zu ersetzen.
+
+
+CAUTION: Installieren Sie das Ersatzlaufwerk so schnell wie möglich nach dem Entfernen des ausgefallenen Laufwerks. Andernfalls besteht die Gefahr, dass die Ausrüstung überhitzt.
+
+.Schritte
+. Öffnen Sie den Nockengriff.
+. Setzen Sie das Ersatzlaufwerk mit zwei Händen in den offenen Schacht ein, und drücken Sie es fest, bis das Laufwerk anhält.
+. Schließen Sie den Nockengriff langsam, bis der Antrieb vollständig in der Mittelplatine sitzt und der Griff einrastet.
++
+Die grüne LED am Laufwerk leuchtet, wenn das Laufwerk ordnungsgemäß eingesetzt wird.
+
++
+
+NOTE: Je nach Konfiguration rekonstruiert der Controller möglicherweise automatisch Daten auf dem neuen Laufwerk. Wenn im Shelf Hot-Spare-Laufwerke verwendet werden, muss der Controller möglicherweise eine vollständige Rekonstruktion des Hot Spare durchführen, bevor er die Daten auf das ausgetauschte Laufwerk kopieren kann. Durch diesen Rekonstruktionsprozess wird die Zeit erhöht, die zum Abschluss dieses Vorgangs erforderlich ist.
+
+
+
+
+
+== Schritt 4: Vollständige Laufwerksaustausch
+
+Führen Sie den Austausch des Laufwerks durch, um sicherzustellen, dass das neue Laufwerk ordnungsgemäß funktioniert.
+
+.Schritte
+. Überprüfen Sie die ein/aus-LED und die Warn-LED am ausgetauschten Laufwerk. (Wenn Sie das erste Laufwerk einsetzen, leuchtet die Warn-LED möglicherweise auf. Die LED sollte jedoch innerhalb einer Minute ausgeschaltet werden.)
++
+** Die ein/aus-LED leuchtet oder blinkt, und die Warn-LED leuchtet nicht: Zeigt an, dass das neue Laufwerk ordnungsgemäß funktioniert.
+** Die ein/aus-LED leuchtet auf: Zeigt an, dass das Laufwerk möglicherweise nicht ordnungsgemäß installiert ist. Entfernen Sie das Laufwerk, warten Sie 30 Sekunden, und installieren Sie es dann wieder.
+** Die Warnungs-LED leuchtet: Zeigt an, dass das neue Laufwerk möglicherweise defekt ist. Tauschen Sie es durch ein anderes neues Laufwerk aus.
+
+
+. Wenn der Recovery Guru im SANtricity System Manager immer noch ein Problem zeigt, wählen Sie *recheck* aus, um sicherzustellen, dass das Problem behoben wurde.
+. Wenn der Recovery Guru angibt, dass die Laufwerksrekonstruktion nicht automatisch gestartet wurde, muss die Rekonstruktion manuell gestartet werden wie folgt:
++
+
+NOTE: Führen Sie diesen Vorgang nur aus, wenn Sie vom technischen Support oder dem Recovery Guru dazu aufgefordert werden.
+
++
+.. Wählen Sie *Hardware*.
+.. Klicken Sie auf das Laufwerk, das Sie ersetzt haben.
+.. Wählen Sie im Kontextmenü des Laufwerks die Option *rekonstruieren*.
+.. Bestätigen Sie, dass Sie diesen Vorgang ausführen möchten.
++
+Nach Abschluss der Laufwerkswiederherstellung befindet sich die Volume-Gruppe in einem optimalen Zustand.
+
+
+
+. Bringen Sie die Blende bei Bedarf wieder an.
+. Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
+
+
+.Was kommt als Nächstes?
+Der Austausch des Laufwerks ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

@@ -1,0 +1,273 @@
+---
+permalink: sg6100/replace-battery-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Batterie im Speicher-Controller-Shelf austauschen (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die betroffene Batterie in Ihrem E4000 Controller austauschen, wenn der Recovery Guru im SANtricity System Manager den Status „Akku ausgefallen“ oder „Akku ersetzt erforderlich“ anzeigt. Um Ihre Daten zu schützen, muss die Batterie so schnell wie möglich ausgetauscht werden.
+
+Sehen Sie sich im SANtricity System Manager die Details im Recovery Guru an, um zu überprüfen, ob ein Problem mit einer Batterie vorliegt, und um sicherzustellen, dass keine weiteren Punkte zuerst behoben werden müssen.
+
+.Bevor Sie beginnen
+Wenn Sie einen fehlerhaften Akku austauschen möchten, müssen Sie Folgendes haben:
+
+* Eine Ersatzbatterie.
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* Zugriff auf den SANtricity System Manager:
++
+** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Controller-Informationen befinden sich auf dem https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
+
+
+* Überprüfen Sie, ob keine Volumes verwendet werden oder ob auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
+
+
+
+
+== Schritt 1: Bereiten Sie den Batteriewechsel vor
+
+Sie müssen den betroffenen Controller offline schalten, damit Sie den fehlerhaften Akku sicher entfernen können. Der Controller, den Sie nicht in den Offline-Modus versetzen, muss den Status „Online“ (im optimalen Status) aufweisen.
+
+.Schritte
+. Sehen Sie sich im SANtricity System Manager die Details im Recovery Guru an, um zu überprüfen, ob ein Problem mit einer Batterie vorliegt, und um sicherzustellen, dass keine weiteren Punkte zuerst behoben werden müssen.
+. Stellen Sie im Bereich Details des Recovery Guru fest, welche Batterie ersetzt werden soll.
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit dem SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie *Support › Support Center › Diagnose*.
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+** Alternativ können Sie die Konfigurationsdatenbank mit dem folgenden CLI-Befehl sichern:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
+. Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei zum Beheben des Problems verwenden. Das System speichert Bestands-, Status- und Performancedaten Ihres Speicherarrays in einer einzelnen Datei.
++
+.. Wählen Sie *Support › Support Center › Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads Ihres Browsers mit dem Namen Support-Data.7z gespeichert.
+
+
+
+. Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
++
+** Über den SANtricity System Manager:
++
+... Wählen Sie *Hardware*.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+... Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
+... Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+
+NOTE: Wenn Sie mit dem Controller auf SANtricity System Manager zugreifen, den Sie offline schalten möchten, wird eine Meldung vom SANtricity System Manager nicht verfügbar angezeigt. Wählen Sie *mit einer alternativen Netzwerkverbindung verbinden* aus, um automatisch über den anderen Controller auf SANtricity System Manager zuzugreifen.
+
+
+
+** Alternativ können Sie die Controller mit den folgenden CLI-Befehlen offline schalten:
++
+*Für Controller A*: `set controller [a] availability=offline`
+
++
+*Für Controller B*: `set controller [b] availability=offline`
+
+
+
+. Warten Sie, bis der Status des Controllers von SANtricity System Manager in „Offline“ aktualisiert wird.
+. Wählen Sie *erneut prüfen* aus dem Recovery Guru, und bestätigen Sie, dass das Feld *Okay to remove* im Bereich *Details* *Ja* anzeigt. Dies zeigt an, dass es sicher ist, mit dem Ausbau des Controller-Kanisters fortzufahren.
+
+
+
+
+== Schritt 2: Entfernen Sie den E4000-Controllerbehälter
+
+Sie müssen den Controller-Behälter aus dem Controller-Regal entfernen, damit Sie den Akku entfernen können.
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+
+
+.Schritte
+. Trennen Sie alle Kabel vom Controller-Behälter.
++
+
+CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+. Wenn die Host-Ports am Controller-Behälter SFP+-Transceiver verwenden, lassen Sie sie nicht installiert.
+. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
+. Drücken Sie die Verriegelung am Nockengriff, bis er sich löst, öffnen Sie den Nockengriff vollständig, um den Controller-Aktivkohlebehälter aus der Mittelplatine zu lösen, und ziehen Sie dann mit zwei Händen den Controller-Aktivkohlebehälter halb aus dem Gehäuse.
+
+
+
+
+== Schritt 3: Setzen Sie die neue Batterie ein
+
+Sie müssen die fehlerhafte Batterie entfernen und austauschen.
+
+.Schritte
+. Packen Sie die neue Batterie aus, und legen Sie sie auf eine Ebene, antistatische Oberfläche.
++
+
+NOTE: Zur sicheren Einhaltung der IATA-Vorschriften werden Ersatzbatterien mit einem Ladestatus von 30 Prozent oder weniger (SoC) ausgeliefert. Wenn Sie die Stromversorgung wieder einschalten, beachten Sie, dass das Schreib-Caching erst wieder aufgenommen wird, wenn der Ersatzakku vollständig geladen ist und der erste Lernzyklus abgeschlossen wurde.
+
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Entfernen Sie den Controller-Aktivkohlebehälter aus dem Gehäuse.
+. Drehen Sie den Controller-Behälter um und legen Sie ihn auf eine Ebene, stabile Oberfläche.
+. Öffnen Sie die Abdeckung, indem Sie die blauen Tasten an den Seiten des Controller-Kanisters drücken, um die Abdeckung zu lösen, und drehen Sie dann die Abdeckung nach oben und von dem Controller-Kanister.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Öffnen Sie die Abdeckung des Controller-Moduls.]
+
+. Die Batterie im Controller-Behälter suchen.
+. Entfernen Sie die defekte Batterie aus dem Controller-Behälter:
++
+.. Drücken Sie die blaue Taste an der Seite des Reglerbehälters.
+.. Schieben Sie den Akku nach oben, bis er die Halteklammern freigibt, und heben Sie den Akku aus dem Controller-Behälter.
+.. Ziehen Sie den Akku aus dem Controller-Behälter.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Entfernen Sie die NVMEM-Batterie.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[Legendensymbol 01]
+| Akkufreigabelasche 
+
+
+ a| 
+image::../media/legend_icon_02.png[Legende Symbol 02]
+| Batterieanschluss 
+|===
+
+
+. Entfernen Sie den Ersatzakku aus der Verpackung. Setzen Sie den Ersatzakku ein:
++
+.. Stecken Sie den Batteriestecker wieder in die Buchse am Controller-Aktivkohlebehälter.
++
+Vergewissern Sie sich, dass der Stecker in der Akkubuchse auf der Hauptplatine einrastet.
+
+.. Richten Sie die Batterie an den Haltehalterungen an der Blechseitenwand aus.
+.. Schieben Sie den Akku nach unten, bis die Akkuverriegelung einrastet und in die Öffnung an der Seitenwand einrastet.
+
+
+. Setzen Sie die Abdeckung des Controller-Aktivkohlebehälters wieder ein, und verriegeln Sie sie.
+
+
+
+
+== Schritt 4: Montieren Sie den Controller-Behälter wieder
+
+Nachdem Sie Komponenten im Controller-Aktivkohlebehälter ausgetauscht haben, setzen Sie ihn wieder in das Gehäuse ein.
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Wenn Sie dies noch nicht getan haben, bringen Sie die Abdeckung des Controller-Kanisters wieder an.
+. Drehen Sie den Controller-Behälter um und richten Sie das Ende an der Öffnung im Gehäuse aus.
+. Richten Sie das Ende des Controller-Aktivkohlebehälters an der Öffnung im Gehäuse aus, und drücken Sie den Controller-Aktivkohlebehälter vorsichtig halb in das System.
++
+
+NOTE: Setzen Sie den Controller-Aktivkohlebehälter erst dann vollständig in das Gehäuse ein, wenn Sie dazu aufgefordert werden.
+
+. Das System nach Bedarf neu einsetzen.
+. Schließen Sie den Wiedereinbau des Reglerbehälters ab:
++
+.. Den Nockengriff in geöffneter Position halten, den Controller-Behälter fest einschieben, bis er vollständig in die Mittelplatine einrastet, und dann den Nockengriff in die verriegelte Position schließen.
++
+
+NOTE: Setzen Sie den Controller-Aktivkohlebehälter nicht zu stark in das Gehäuse ein, um eine Beschädigung der Anschlüsse zu vermeiden.
+
++
+Der Controller beginnt zu booten, sobald er im Gehäuse sitzt.
+
+.. Wenn Sie dies noch nicht getan haben, installieren Sie das Kabelverwaltungsgerät neu.
+.. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
+
+
+
+
+
+
+== Schritt 5: Kompletter Batteriewechsel
+
+Schalten Sie den Controller online.
+
+.Schritte
+. Stellen Sie den Controller mit SANtricity System Manager online.
++
+** Über den SANtricity System Manager:
++
+... Wählen Sie *Hardware*.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück von Regal anzeigen*.
+... Wählen Sie den Controller aus, den Sie online platzieren möchten.
+... Wählen Sie im Kontextmenü * Online platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+Das System stellt den Controller online.
+
+
+
+** Alternativ können Sie den Controller mithilfe der folgenden CLI-Befehle wieder online schalten:
++
+*Für Controller A*: `set controller [a] availability=online`;
+
++
+*Für Controller B*: `set controller [b] availability=online`;
+
+
+
+. Wenn der Controller wieder online ist, überprüfen Sie die Warn-LEDs des Controller-Shelfs.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind, und überprüfen Sie, ob die Batterie und der Controller-Behälter richtig installiert sind. Gegebenenfalls den Controller-Behälter und die Batterie ausbauen und wieder einbauen.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+Falls nötig, erfassen Sie mit SANtricity System Manager Support-Daten für Ihr Storage Array.
+
+. Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
++
+.. Wählen Sie *Storage › Volumes*. Überprüfen Sie auf der Seite * All Volumes*, ob die Volumes an die bevorzugten Eigentümer verteilt werden. Wählen Sie *Mehr › Eigentümerschaft ändern*, um die Eigentümer des Volumes anzuzeigen.
+.. Wenn alle Volumes im Besitz des bevorzugten Eigentümers sind, fahren Sie mit Schritt 4 fort.
+.. Wenn keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Gehen Sie zu *Mehr › Volumes neu verteilen*.
+.. Wenn nach der automatischen Verteilung oder manuellen Verteilung nur einige der Volumes an ihre bevorzugten Besitzer zurückgegeben werden, müssen Sie den Recovery Guru auf Probleme bei der Host-Konnektivität prüfen.
+.. Wenn kein Recovery Guru vorhanden ist oder wenn die Volumes nach der Durchführung der Recovery Guru-Schritte immer noch nicht an ihre bevorzugten Besitzer zurückgegeben werden, wenden Sie sich an den Support.
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie *Support › Support Center › Diagnose*.
+.. Wählen Sie Support-Daten Erfassen.
+.. Klicken Sie Auf Erfassen.
++
+Die Datei wird im Ordner Downloads Ihres Browsers mit dem Namen Support-Data.7z gespeichert.
+
+
+
+
+
+.Was kommt als Nächstes?
+Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

@@ -1,0 +1,30 @@
+---
+permalink: sg5800/upgrading-santricity-os-on-storage-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
+summary: Um die optimale Funktion des Storage Controllers sicherzustellen, müssen Sie auf die neueste Wartungsversion des SANtricity-Betriebssystems aktualisieren, das für Ihre StorageGRID Appliance geeignet ist. 
+---
+= Upgrade des SANtricity Betriebssystems auf SG5800 Storage Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die optimale Funktion des Storage Controllers sicherzustellen, müssen Sie auf die neueste Wartungsversion des SANtricity-Betriebssystems aktualisieren, das für Ihre StorageGRID Appliance geeignet ist.
+
+Ermitteln Sie die neueste SANtricity Betriebssystemversion, die sich in Absprache zur Verwendung auf Ihrer StorageGRID Appliance qualifiziert hat https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"] Und bei Bedarf herunterladen.
+
+Laden Sie die neue Datei für die SANtricity OS Software von herunter https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^].
+
+Verwenden Sie eines der folgenden Verfahren, das auf der derzeit installierten Version von SANtricity OS basiert:
+
+* Wenn der Storage-Controller SANtricity OS 08.42.20.00 (11.42) oder eine neuere Version verwendet, führen Sie das Upgrade mit dem Grid Manager durch.
++
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager"]
+
+* Wenn der Storage-Controller eine SANtricity OS-Version verwendet, die älter als 08.42.20.00 ist (11.42), führen Sie das Upgrade im Wartungsmodus durch.
++
+link:upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html["Upgrade von SANtricity OS auf E4000 Controller im Wartungsmodus"]
+
+

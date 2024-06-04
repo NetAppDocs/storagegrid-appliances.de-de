@@ -23,7 +23,7 @@ Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass
 * link:changing-link-configuration-of-sgf6112-appliance.html["Ändern Sie die Link-Konfiguration der Appliance"]
 
 
-*Hardware-Wartungsverfahren* erfordern die physische Manipulation bestimmter SGF6112-Komponenten.
+*Hardware-Wartungsverfahren* erfordern die physische Manipulation bestimmter SGF6112- oder SG6160-Komponenten.
 
 
 

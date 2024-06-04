@@ -30,6 +30,13 @@ SG100 und SG1000
 
 
  a| 
+SG5712
+ a| 
+120 bis 240 Volt Wechselstrom
+
+
+
+ a| 
 SG110 und SG1100
  a| 
 100 bis 240 Volt Wechselstrom
@@ -38,6 +45,20 @@ SG110 und SG1100
 
  a| 
 SG5760
+ a| 
+240-Volt-Wechselspannung
+
+
+
+ a| 
+SG5812
+ a| 
+120 bis 240 V AC
+
+
+
+ a| 
+SG5860
  a| 
 240-Volt-Wechselspannung
 
@@ -61,6 +82,13 @@ SG6060
 SGF6112
  a| 
 100 bis 240 Volt Wechselstrom
+
+
+
+ a| 
+SG6160
+ a| 
+240-Volt-Wechselspannung
 
 |===
 . Beziehen Sie einen 19-Zoll-Schrank (48.3 cm) für die folgenden Regale (ohne Kabel).
@@ -172,6 +200,59 @@ SG5760
 
 |===
 --
+.SG5800
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Appliance-Modell | Höhe | Breite | Tiefe | Maximales Gewicht 
+
+
+ a| 
+SG5812
+
+(12 Festplatten)
+ a| 
+3.4 Zoll
+
+(8.6 cm)
+ a| 
+17.6 Zoll
+
+(44.8 cm)
+ a| 
+21.1 Zoll
+
+(53.6 cm)
+ a| 
+64.92 lb
+
+(29.45 kg)
+
+
+
+ a| 
+SG5860
+
+(60 Festplatten)
+ a| 
+7.0 Zoll
+
+(17.8 cm)
+ a| 
+17.6 Zoll
+
+(44.8 cm)
+ a| 
+37.8 Zoll
+
+(92.2 cm)
+ a| 
+253.0 lb.
+
+(114.76 kg)
+
+|===
+--
 .SG6000
 --
 [cols="2a,1a,1a,1a,1a"]
@@ -265,19 +346,21 @@ SG6000-CN Computing-Controller
 --
 .SG6100
 --
-[cols="1a,1a,1a,1a"]
+[cols="1a,1a,1a,1a,1a"]
 |===
-| Höhe | Breite | Tiefe | Maximales Gewicht 
+| Appliance-Modell/Shelf-Typ | Höhe | Breite | Tiefe | Maximales Gewicht 
 
 
+ a| 
+SGF6112-Appliance
  a| 
 1.70 Zoll
 
 (4.31 cm)
  a| 
-18.98 Zoll
+17.32 Zoll
 
-(48.2 cm)
+(44.0 cm)
  a| 
 33.11 Zoll
 
@@ -287,17 +370,80 @@ SG6000-CN Computing-Controller
 
 (19.88 kg)
 
+
+
+ a| 
+SG6100-CN Computing-Controller (SG6160)
+ a| 
+1.70 Zoll
+
+(4.32 cm)
+ a| 
+17.32 Zoll
+
+(44.0 cm)
+ a| 
+33.11 Zoll
+
+(84.1 cm)
+ a| 
+40.98 lb.
+
+(18.59 kg)
+
+
+
+ a| 
+E4060 Controller-Shelf (SG6160)
+ a| 
+6.87 Zoll
+
+(17.45 cm)
+ a| 
+17.64 Zoll
+
+(44.8 cm)
+ a| 
+36.3 Zoll
+
+(97.16 cm)
+ a| 
+223.58 lb.
+
+(101.42 kg)
+
+
+
+ a| 
+Erweiterungs-Shelf (SG6160) – optional
+ a| 
+6.87 Zoll
+
+(17.45 cm)
+ a| 
+17.64 Zoll
+
+(44.8 cm)
+ a| 
+36.3 Zoll
+
+(97.16 cm)
+ a| 
+223.58 lb.
+
+(101.42 kg)
+
 |===
 --
 ====
 . Entscheiden Sie, wo Sie das Gerät installieren möchten.
 +
 
-CAUTION: Installieren Sie bei der Installation des E2860 Controller-Shelfs oder optionaler Erweiterungs-Shelfs die Hardware von unten nach oben im Rack oder Schrank, um zu vermeiden, dass das System umkippt. Installieren Sie den SG6000-CN Controller über dem E2860 Controller-Shelf und Erweiterungs-Shelfs, um sicherzustellen, dass sich die schwersten Geräte unten im Rack oder Rack befinden.
+CAUTION: Bei der Installation des E2860 oder E4000 Controller-Shelf oder der optionalen Erweiterungs-Shelfs installieren Sie die Hardware von unten nach oben an dem Rack oder Schrank, um ein Umkippen der Geräte zu verhindern. Um sicherzustellen, dass sich die schwerste Ausrüstung unten im Schrank oder Rack befindet, installieren Sie den SG6000-CN- oder SG6100-CN-Controller über dem E2860- oder E4000-Controller-Shelf und den Erweiterungs-Shelfs.
 
 +
 
-NOTE: Stellen Sie vor der Installation sicher, dass die mit einem SG6000-Gerät gelieferten 0,5-m-Glasfaserkabel oder die von Ihnen gelieferten Kabel lang genug für das geplante Layout sind.
+NOTE: Vergewissern Sie sich vor der Installation, dass die mit einer SG6000- oder SG6100-Appliance gelieferten Kabel bzw. die von Ihnen gelieferten Kabel lang genug für das geplante Layout sind.
 
 . Installieren Sie alle erforderlichen Netzwerk-Switches. Siehe link:https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool"^] Informationen zur Kompatibilität.
 

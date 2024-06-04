@@ -668,6 +668,95 @@ Installation oder Kommunikation mit dem E2800-Controller ist fehlgeschlagen.
 
 
 --
+.SG5800
+--
+Die Gerätesteuerung enthält Anzeigen, die Ihnen helfen, den Status des Gerätesteuerung zu bestimmen:
+
+* <<status_indicators_SG5800_controller,Statusanzeigen am SG5800-Controller>>
+* <<general_boot_codes_sg5800,Allgemeine Startcodes>>
+* <<boot_codes_SG5800_controller,Boot-Codes des SG5800-Controllers>>
+* <<error_codes_SG5800_controller,Fehlercodes des SG5800-Controllers>>
+
+
+Verwenden Sie diese Informationen, um zu helfen link:troubleshooting-hardware-installation.html["Fehlerbehebung bei der Installation der SG5800-Hardware"].
+
+[[status_indicators_SG5800_controller]]
+Statusanzeigen am SG5800-Controller::
++
+--
+Nach dem Start des StorageGRID-Appliance-Installationsprogramms sollten Sie die Statusanzeigen des SG5800-Controllers regelmäßig überprüfen.
+
+Die folgende Abbildung zeigt die Statusanzeigen des SG5800 Controllers.
+
+image::../media/sg5800_leds.png[Statusanzeigen am SG5800-Controller]
+
+[cols="1a,2a,2a"]
+|===
+| Legende | Anzeige | Beschreibung 
+
+
+ a| 
+1
+ a| 
+Warnungs-LED
+ a| 
+Gelb: Der Controller ist fehlerhaft und erfordert eine Bedienerwarnung, oder das Installationsskript wurde nicht gefunden.
+
+Aus: Der Controller funktioniert ordnungsgemäß.
+
+
+
+ a| 
+2
+ a| 
+Warn-LEDs für den Erweiterungsport
+ a| 
+Gelb: Diese LEDs sind immer gelb (keine Verbindung hergestellt), da das Gerät die Erweiterungs-Ports nicht nutzt.
+
+
+
+ a| 
+3
+ a| 
+Status-LEDs für Host-Port-Link
+ a| 
+Grün: Die Verbindung ist aktiviert.
+
+Aus: Die Verbindung ist ausgefallen.
+
+
+
+ a| 
+4
+ a| 
+Status-LEDs für Ethernet Link
+ a| 
+Grün: Es wird eine Verbindung hergestellt.
+
+Aus: Keine Verbindung hergestellt.
+
+
+
+ a| 
+5
+ a| 
+LEDs für Ethernet-Aktivität
+ a| 
+Grün: Die Verbindung zwischen dem Management-Port und dem Gerät, mit dem er verbunden ist (z. B. ein Ethernet-Switch) ist aktiviert.
+
+Aus: Es besteht keine Verbindung zwischen dem Controller und dem angeschlossenen Gerät.
+
+Blinkt grün: Es gibt Ethernet-Aktivität.
+
+|===
+--
+
+
+.Verwandte Informationen
+* https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
+
+
+--
 .SG6000
 --
 Die SG6000 Appliance-Controller enthalten Anzeigen, die Ihnen helfen, den Status des Appliance-Controllers zu bestimmen:
@@ -809,7 +898,7 @@ Verwenden Sie diese Informationen, um zu helfen link:troubleshooting-hardware-in
 Gerätesteuchten und -Tasten::
 +
 --
-Die folgende Abbildung zeigt Anzeigen und Tasten am SGF6112-Gerät.
+Die folgende Abbildung zeigt Anzeigen und Tasten an den SG6100-Geräten.
 
 image::../media/sgf6112_front_indicators.png[Vordere Anzeigen - SGF6112]
 
@@ -871,7 +960,7 @@ Status-LED
  a| 
 PFR
  a| 
-Diese Leuchte wird vom SGF6112-Gerät nicht verwendet und bleibt ausgeschaltet.
+Diese Leuchte wird von SG6100-Geräten nicht verwendet und bleibt ausgeschaltet.
 
 |===
 --
@@ -898,7 +987,7 @@ So zeigen Sie die Starts- und Fehlercodes an: link:accessing-bmc-interface.html[
 SSD-LEDs::
 +
 --
-Die folgende Abbildung zeigt die SSD-Anzeigen auf der SGF6112-Appliance.
+Die folgende Abbildung zeigt die SSD-Anzeigen auf der SGF6112- oder SG6160-Appliance.
 
 image::../media/ssd_indicators.png[SSD-Kennzahlen]
 
@@ -917,7 +1006,7 @@ Laufwerksstatus/-Fehler
 * Aus: Steckplatz ist leer
 
 
-*Hinweis:* Wenn eine neue funktionierende SSD in einen funktionierenden SGF6112 StorageGRID-Knoten eingesteckt wird, sollten die LEDs auf der SSD zunächst blinken, aber aufhören zu blinken, sobald das System feststellt, dass das Laufwerk über genügend Kapazität verfügt und funktionsfähig ist.
+*Hinweis:* Wenn eine neue funktionsfähige SSD in einen funktionierenden SGF6112 oder SG6160 StorageGRID-Knoten eingesetzt wird, sollten die LEDs der SSD zunächst blinken, hören aber auf zu blinken, sobald das System feststellt, dass das Laufwerk über genügend Kapazität verfügt und funktionsfähig ist.
 
 
 
@@ -930,6 +1019,10 @@ Blau (blinkend): Auf das Laufwerk wird zugegriffen
 
 |===
 --
+
+
+.Verwandte Informationen
+* https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
 
 
 --

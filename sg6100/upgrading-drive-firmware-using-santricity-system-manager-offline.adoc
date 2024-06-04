@@ -1,0 +1,155 @@
+---
+permalink: sg6100/upgrading-drive-firmware-using-santricity-system-manager-offline.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
+---
+= Aktualisieren Sie die Firmware des SG6100 Laufwerks mithilfe von SANtricity System Manager im Offline-Verfahren (SG6160).
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verwenden Sie die Offline-Methode von SANtricity System Manager, um die Firmware auf den Laufwerken in Ihrer Appliance zu aktualisieren, um sicherzustellen, dass Sie über die neuesten Funktionen und Fehlerbehebungen verfügen.
+
+
+NOTE: Dieses Verfahren gilt *nicht* für die NVMe SSDs im SG6100-CN, die während StorageGRID-Software-Upgrades aktualisiert werden. Nur Laufwerke im E4000 können mit diesem Verfahren aktualisiert werden.
+
+.Bevor Sie beginnen
+* Die Storage Appliance hat einen optimalen Status.
+* Alle Laufwerke haben einen optimalen Status.
+* Das ist schon link:../commonhardware/placing-appliance-into-maintenance-mode.html["Versetzen Sie die StorageGRID Appliance in den Wartungsmodus"].
++
+
+NOTE: Während sich die Appliance im Wartungsmodus befindet, wird die I/O-Aktivität (Eingabe/Ausgabe) für den Storage Controller angehalten, um störende Storage-Vorgänge zu sichern.
+
+
+
+
+CAUTION: Aktualisieren Sie nicht gleichzeitig die Laufwerk-Firmware auf mehr als einer StorageGRID Appliance. Dies kann je nach Bereitstellungsmodell und ILM-Richtlinie zu einer Nichtverfügbarkeit von Daten führen.
+
+.Über diese Aufgabe
+Die Laufwerke werden parallel aktualisiert, während sich die Appliance im Wartungsmodus befindet. Wenn der Pool oder die Volume-Gruppe keine Redundanz unterstützt oder herabgesetzt ist, müssen Sie die Offline-Methode verwenden, um die Laufwerk-Firmware zu aktualisieren. Sie sollten auch die Offline-Methode für alle Laufwerke verwenden, die mit dem Flash-Lese-Cache oder einem Pool oder einer Volume-Gruppe verbunden sind, die derzeit heruntergestuft ist. Die Offline-Methode aktualisiert die Firmware nur, wenn alle I/O-Aktivitäten auf den zu aktualisierenden Laufwerken angehalten werden. Um die I/O-Aktivität zu beenden, versetzen Sie den Node in den Wartungsmodus.
+
+Die Offline-Methode ist schneller als die Online-Methode und wird deutlich schneller sein, wenn viele Laufwerke in einer einzigen Appliance Upgrades erfordern. Allerdings müssen Nodes außer Betrieb genommen werden. Dies erfordert unter Umständen ein Wartungsfenster und ein Monitoring des Fortschritts. Wählen Sie die Methode aus, die am besten zu Ihren betrieblichen Verfahren passt und die Anzahl der Laufwerke, die aktualisiert werden müssen.
+
+.Schritte
+. Vergewissern Sie sich, dass das Gerät in ist link:../commonhardware/placing-appliance-into-maintenance-mode.html["Wartungsmodus"].
+. Greifen Sie mit einer der folgenden Methoden auf SANtricity System Manager zu:
++
+** Verwenden Sie das StorageGRID-Appliance-Installationsprogramm, und wählen Sie *Erweitert* > *SANtricity-Systemmanager*
+** Verwenden Sie den Grid-Manager, und wählen Sie *NODES* > *_Storage Node_* > *SANtricity System Manager* aus
+** Verwenden Sie SANtricity System Manager, indem Sie zur Storage Controller-IP navigieren:
++
+`*https://_Storage_Controller_IP_*`
+
+
+
+. Geben Sie bei Bedarf den Benutzernamen und das Kennwort des SANtricity System Manager-Administrators ein.
+. Überprüfen Sie die Version der Laufwerk-Firmware, die derzeit in der Speicher-Appliance installiert ist:
++
+.. Wählen Sie im SANtricity System Manager *SUPPORT* > *Upgrade-Center* aus.
+.. Wählen Sie unter Laufwerk-Firmware-Upgrade die Option *Upgrade starten* aus.
++
+Auf der Seite Laufwerksfirmware aktualisieren werden die aktuell installierten Laufwerksfirmware-Dateien angezeigt.
+
+.. Beachten Sie die aktuellen Versionen der Laufwerk-Firmware und die Laufwerkskennungen in der Spalte Aktueller Laufwerk-Firmware.
++
+image::../media/storagegrid_update_drive_firmware.png[Aktualisieren Sie Die Laufwerk-Firmware]
+
++
+In diesem Beispiel:
+
++
+*** Die Version der Laufwerk-Firmware lautet *MS02*.
+*** Die Laufwerk-ID lautet *KPM51VUG800G*.
+
+
+.. Wählen Sie in der Spalte „verbundene Laufwerke“ die Option *Laufwerke anzeigen* aus, um anzuzeigen, wo diese Laufwerke in Ihrem Speichergerät installiert sind.
+.. Schließen Sie das Fenster Upgrade Drive Firmware.
+
+
+. Laden Sie das verfügbare Laufwerk-Firmware-Upgrade herunter, und bereiten Sie es vor:
++
+.. Wählen Sie unter Laufwerk-Firmware-Upgrade *NetApp Support* aus.
+.. Wählen Sie auf der NetApp Support-Website die Registerkarte *Downloads* aus und wählen Sie dann *E-Series Festplatten-Firmware* aus.
++
+Die Seite E-Series Festplatten-Firmware wird angezeigt.
+
+.. Suchen Sie nach jedem in Ihrer Speicheranwendung installierten *Drive Identifier*, und stellen Sie sicher, dass jeder Laufwerkkennung die neueste Firmware-Version hat.
++
+*** Wenn die Firmware-Version kein Link ist, hat diese Laufwerkkennung die neueste Firmware-Version.
+*** Wenn eine oder mehrere Laufwerk-Teilenummern für eine Laufwerksidentifikation aufgeführt sind, ist für diese Laufwerke ein Firmware-Upgrade verfügbar. Sie können einen beliebigen Link auswählen, um die Firmware-Datei herunterzuladen.
++
+image::../media/storagegrid_drive_firmware_download.png[Seite E-Series Festplatten-Firmware]
+
+
+
+.. Wenn eine spätere Firmware-Version aufgeführt wird, wählen Sie den Link im Firmware-Rev. Aus (Download) Spalte zum Herunterladen einer `.zip` Archiv mit der Firmware-Datei.
+.. Extrahieren Sie die von der Support-Website heruntergeladenen Archivdateien der Laufwerk-Firmware (entpacken).
+
+
+. Installieren Sie das Laufwerk-Firmware-Upgrade:
++
+.. Wählen Sie im SANtricity System Manager unter Upgrade der Laufwerk-Firmware die Option *Upgrade starten* aus.
+.. Wählen Sie *Durchsuchen* aus, und wählen Sie die neuen Laufwerk-Firmware-Dateien aus, die Sie von der Support-Website heruntergeladen haben.
++
+Die Firmware-Dateien des Laufwerks haben einen ähnlichen Dateinamen wie `D_HUC101212CSS600_30602291_MS01_2800_0002.dlp`.
+
++
+Sie können bis zu vier Laufwerk-Firmware-Dateien auswählen, jeweils eine. Wenn mehrere Firmware-Dateien eines Laufwerks mit demselben Laufwerk kompatibel sind, wird ein Dateikonflikt angezeigt. Legen Sie fest, welche Laufwerk-Firmware-Datei Sie für das Upgrade verwenden möchten, und entfernen Sie die andere.
+
+.. Wählen Sie *Weiter*.
++
+*Select Drives* listet die Laufwerke auf, die Sie mit den ausgewählten Firmware-Dateien aktualisieren können.
+
++
+Es werden nur kompatible Laufwerke angezeigt.
+
++
+Die ausgewählte Firmware für das Laufwerk wird in der Spalte *vorgeschlagene Firmware* angezeigt. Wenn Sie diese Firmware ändern müssen, wählen Sie *Zurück*.
+
+.. Wählen Sie *Alle Laufwerke offline aktualisieren (parallel)* – aktualisiert die Laufwerke, die einen Firmware-Download unterstützen können, nur während alle I/O-Aktivitäten auf allen Volumes angehalten werden, die die Laufwerke verwenden.
++
+
+CAUTION: Sie müssen das Gerät in den Wartungsmodus versetzen, bevor Sie diese Methode verwenden. Sie sollten die Methode *Offline* verwenden, um die Laufwerksfirmware zu aktualisieren.
+
++
+
+CAUTION: Wenn Sie die Offline-Aktualisierung (parallel) verwenden möchten, fahren Sie nur dann fort, wenn Sie sicher sind, dass sich das Gerät im Wartungsmodus befindet. Wenn die Appliance nicht in den Wartungsmodus versetzt wird, bevor ein Offline-Update der Laufwerk-Firmware initiiert wird, kann dies zu einem Datenverlust führen.
+
+.. Wählen Sie in der ersten Spalte der Tabelle das Laufwerk oder die Laufwerke aus, die aktualisiert werden sollen.
++
+Als Best Practice wird empfohlen, alle Laufwerke desselben Modells auf dieselbe Firmware-Version zu aktualisieren.
+
+.. Wählen Sie *Start* und bestätigen Sie, dass Sie das Upgrade durchführen möchten.
++
+Wenn Sie das Upgrade beenden möchten, wählen Sie *Stopp*. Alle derzeit ausgeführten Firmware-Downloads abgeschlossen. Alle nicht gestarteten Firmware-Downloads werden abgebrochen.
+
++
+
+CAUTION: Das Anhalten der Laufwerk-Firmware-Aktualisierung kann zu Datenverlust oder nicht verfügbaren Laufwerken führen.
+
+.. (Optional) um eine Liste der aktualisierten Versionen anzuzeigen, wählen Sie *Protokoll speichern*.
++
+Die Protokolldatei wird im Download-Ordner für Ihren Browser mit dem Namen gespeichert `latest-upgrade-log-timestamp.txt`.
+
++
+link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html["Beheben Sie bei Bedarf Fehler bei der Aktualisierung der Treiber-Firmware"].
+
+
+
+. Führen Sie nach erfolgreichem Abschluss des Verfahrens alle weiteren Wartungsmaßnahmen durch, während sich der Node im Wartungsmodus befindet. Wenn Sie fertig sind oder Fehler aufgetreten sind und neu gestartet werden möchten, gehen Sie zum StorageGRID-Installationsprogramm und wählen Sie *Erweitert* > *Neustart-Controller* aus. Wählen Sie dann eine der folgenden Optionen aus:
++
+** *Neustart in StorageGRID*.
+** *Neustart im Wartungsmodus*. Booten Sie den Controller neu, und belassen Sie den Node im Wartungsmodus. Wählen Sie diese Option aus, wenn während des Verfahrens Fehler auftreten und Sie von vorne beginnen möchten. Nachdem der Node das Neubooten in den Wartungsmodus abgeschlossen hat, starten Sie den entsprechenden Schritt während des ausgefallenen Verfahrens neu.
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite Knoten sollte ein normaler Status angezeigt werden (grünes Häkchen-Symbol image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+
++
+image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+
+
+

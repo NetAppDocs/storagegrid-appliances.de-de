@@ -1,0 +1,64 @@
+---
+permalink: sg6100/replace-drive-sg6100-cn.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6160, sg6100, service appliance, services appliance, gateway Node, admin node, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Die SG6160 Appliance enthält zwei SSD-Laufwerke im SG6100-CN Controller, die als Lese-Cache fungieren. Wenn eines dieser Laufwerke ausfällt, müssen Sie es so schnell wie möglich austauschen, um die potenziellen Auswirkungen auf die Performance zu minimieren. 
+---
+= Ersetzen Sie das Laufwerk im SG6100-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die SG6160 Appliance enthält zwei SSD-Laufwerke im SG6100-CN Controller, die als Lese-Cache fungieren. Wenn eines dieser Laufwerke ausfällt, müssen Sie es so schnell wie möglich austauschen, um die potenziellen Auswirkungen auf die Performance zu minimieren.
+
+.Bevor Sie beginnen
+* Das ist schon link:locating-sgf6112-in-data-center.html["Das Gerät befindet sich physisch"].
+* Sie haben überprüft, welches Laufwerk ausgefallen ist, indem Sie darauf achten, dass die linke LED gelb leuchtet oder Grid Manager für verwenden link:verify-component-to-replace.html["Zeigen Sie die Warnung an, die durch das ausgefallene Laufwerk verursacht wurde"].
+* Sie haben das Ersatzlaufwerk erhalten.
+* Sie haben einen angemessenen ESD-Schutz erhalten.
+
+
+.Schritte
+. Stellen Sie sicher, dass die linke Fehler-LED des Laufwerks gelb leuchtet, oder verwenden Sie die Laufwerksteckplatz-ID aus der Warnmeldung, um das Laufwerk zu finden.
++
+Die Laufwerke befinden sich in den folgenden Positionen im Gehäuse (Vorderseite des Gehäuses mit entfernter Blende).
+
++
+image::../media/sg6160_front_with_ssds.png[SSD-Standort in SG6160]
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.
++
+Alle Verpackungsmaterialien speichern.
+
+. Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
++
+image::../media/h600s_driveremoval.gif[Ausbau Des Laufwerks]
+
++
+Der Griff an den Antriebsfedern öffnet sich teilweise, und das Laufwerk löst sich aus dem Schlitz.
+
+. Öffnen Sie den Griff, schieben Sie das Laufwerk heraus und legen Sie es auf eine statisch freie, Ebene Oberfläche.
+. Drücken Sie die Entriegelungstaste am Ersatzlaufwerk, bevor Sie es in den Laufwerkschacht einsetzen.
++
+Die Verriegelungsfedern öffnen sich.
+
++
+image::../media/h600s_driveinstall.gif[Laufwerksinstallation]
+
+. Setzen Sie das Ersatzlaufwerk in den Steckplatz ein, und schließen Sie dann den Laufwerkgriff.
++
+
+CAUTION: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
+
++
+Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
+
++
+Wenn beide SSD-Laufwerke normal funktionieren, stellt das System die Lese-Cache-Funktion automatisch wieder her. Das können Sie https://docs.netapp.com/us-en/storagegrid-118/monitor/running-diagnostics.html["Führen Sie eine Diagnose aus"^] Um die Trefferquote des Lese-Caches zu überwachen. Da der Cache gerade neu aufgebaut wurde, war die Trefferrate anfänglich möglicherweise niedrig, sollte sich aber im Laufe der Zeit erhöhen, da der Cache von den Clients, die auf Objektdaten zugreifen, wieder aufgefüllt wird.
+
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

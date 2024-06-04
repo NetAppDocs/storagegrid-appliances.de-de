@@ -326,7 +326,7 @@ Ports zur Laufwerkserweiterung
  a| 
 12 GB/s SAS
  a| 
-Nicht verwendet. StorageGRID Appliances unterstützen keine Erweiterungs-Festplatten-Shelfs.
+Nicht verwendet.
 
 
 
@@ -421,7 +421,7 @@ Management-Ports 1 und 2
 * Port 1-Optionen:
 +
 ** Stellen Sie eine Verbindung zu einem Managementnetzwerk her, um direkten TCP/IP-Zugriff auf SANtricity System Manager zu ermöglichen
-** Lassen Sie die Kabel, um einen Switch-Port und eine IP-Adresse zu speichern.  Greifen Sie über die Grid Manager- oder Speicher Grid Appliance Installer-UIs auf den SANtricity System Manager zu.
+** Lassen Sie die Kabel, um einen Switch-Port und eine IP-Adresse zu speichern.  Zugriff auf SANtricity System Manager über den Grid-Manager oder das Storage Grid-Appliance-Installationsprogramm
 
 
 

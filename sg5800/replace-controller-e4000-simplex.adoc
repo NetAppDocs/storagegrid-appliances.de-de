@@ -1,0 +1,391 @@
+---
+permalink: sg5800/replace-controller-e4000-simplex.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, storage node, storage appliance, Replacing, replace, e4000, controller, remove, removing, removal, install, installing, installation 
+summary: Möglicherweise müssen Sie den E4000-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist. 
+---
+= E4000-Controller (SG5800) austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie den E4000-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+* Ein Ersatz-Controller mit der gleichen Teilenummer wie der Controller, den Sie ersetzen möchten.
++
+
+NOTE: Verlassen Sie sich beim Austausch eines Controllers in der StorageGRID Appliance nicht auf die Anweisungen zur E-Series, da die Vorgehensweisen nicht identisch sind.
+
+* Ein ESD-Armband, oder Sie haben antistatische Vorkehrungen getroffen.
+* Etiketten zur Kennzeichnung aller Kabel, die mit dem Controller verbunden sind.
+* Bestimmte Zugriffsberechtigungen.
+* Sie müssen mit einem beim Grid Manager angemeldet sein https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Zugriff auf den SANtricity System Manager:
++
+** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Controller-Informationen befinden sich auf dem https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
+
+
+
+
+.Über diese Aufgabe
+Sie können auf zwei Arten feststellen, ob ein ausgefallener Controller-Behälter besteht:
+
+* Eine Grid Manager-Warnmeldung weist auf den Ausfall eines Storage Controllers hin; der Grid Manager oder der Recovery Guru in SANtricity System Manager weist Sie darauf hin, den Controller zu ersetzen.
+* Die gelbe Warn-LED am Controller leuchtet und gibt an, dass der Controller einen Fehler aufweist.
+
+
+Auf den Appliance-Speicherknoten kann nicht zugegriffen werden, wenn Sie den Controller austauschen. Wenn der Controller der Serie E4000 ausreichend funktioniert, können Sie dies tun link:../commonhardware/placing-appliance-into-maintenance-mode.html["Versetzen Sie das SG5800 Gerät in den Wartungsmodus"].
+
+
+
+== Schritt 1: Vorbereitung auf den Austausch der Steuerung
+
+Bereiten Sie sich darauf vor, einen Controller-Behälter zu ersetzen, indem Sie den Sicherheitsschlüssel des Laufwerks speichern, die Konfiguration sichern und Support-Daten sammeln. Dann können Sie die Host-I/O-Vorgänge beenden und das Controller-Shelf herunterfahren.
+
+.Schritte
+. Notieren Sie sich, falls möglich, welche Version der SANtricity OS Software derzeit auf dem Controller installiert ist. Öffnen Sie den SANtricity-System-Manager, und wählen Sie *Support › Upgrade-Center › Software- und Firmware-Bestandsaufnahme anzeigen*.
+. Notieren Sie, welche Version von NVSRAM derzeit installiert ist.
+. Wenn die Laufwerksicherheit aktiviert ist, stellen Sie sicher, dass ein gespeicherter Schlüssel existiert und dass Sie den Passphrase kennen, der für die Installation erforderlich ist.
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* – Wenn alle Laufwerke im Speicher-Array sicherheitsaktiviert sind, kann der neue Controller erst dann auf das Speicher-Array zugreifen, wenn Sie die gesicherten Laufwerke über die CLI entsperren. Weitere Informationen zur CLI finden Sie im https://docs.netapp.com/us-en/e-series-cli/index.html["Dokumentation zur E-Series"].
+
++
+Zum Speichern des Schlüssels (je nach Status des Controllers ist möglicherweise nicht möglich):
+
++
+.. Wählen Sie im SANtricity System Manager *Einstellungen › System*.
+.. Wählen Sie unter * Drive Security Key Management* die Option *Back Up Key* aus.
+.. Geben Sie in den Feldern *Passphrase definieren/Passphrase erneut eingeben* einen Passphrase für diese Sicherungskopie ein und bestätigen Sie diesen.
+.. Klicken Sie Auf *Backup*.
+.. Notieren Sie Ihre Schlüsseldaten an einem sicheren Ort und klicken Sie dann auf *Schließen*.
+
+
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... *Wählen Sie Support › Support Center › Diagnose*.
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+** Alternativ können Sie die Konfigurationsdatenbank mit dem folgenden CLI-Befehl sichern:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei zum Beheben des Problems verwenden. Das System speichert Bestands-, Status- und Performancedaten Ihres Speicherarrays in einer einzelnen Datei.
+
++
+.. *Wählen Sie Support › Support Center › Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+
+
+== Schritt 2: Stellen Sie den Controller offline
+
+Versetzen Sie den Controller in den Offline-Modus und vergewissern Sie sich, dass alle Vorgänge abgeschlossen sind.
+
+.Schritte
+. Wenn die StorageGRID Appliance in einem StorageGRID System ausgeführt wird, link:../commonhardware/placing-appliance-into-maintenance-mode.html["Schalten Sie das Gerät in den Wartungsmodus"].
+. Wenn der E4000-Controller ausreichend funktioniert, um ein kontrolliertes Herunterfahren zu ermöglichen, vergewissern Sie sich, dass alle Vorgänge abgeschlossen sind.
++
+.. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
++
+Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, wenn Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
+
+.. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.
+.. Bestätigen Sie, dass alle Vorgänge abgeschlossen wurden, bevor Sie mit dem nächsten Schritt fortfahren.
+
+
+. Schalten Sie beide Netzschalter am Controller Shelf aus.
+. Warten Sie, bis alle LEDs am Controller-Shelf ausgeschaltet sind.
+
+
+
+
+== Schritt 3: Entfernen Sie den E4000-Controllerbehälter
+
+Entfernen Sie einen E4000-Controllerbehälter.
+
+.Schritte
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie jedes Kabel, das am Controller-Behälter befestigt ist.
+. Trennen Sie alle Kabel vom Controller-Behälter.
++
+
+CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+. Drücken Sie die Verriegelung am Nockengriff, bis er sich löst, öffnen Sie den Nockengriff vollständig, um den Controller-Aktivkohlebehälter aus der Mittelplatine zu lösen, und ziehen Sie dann den Controller-Aktivkohlebehälter mit zwei Händen aus dem Gehäuse.
+. Stellen Sie den Controller auf eine flache, statische Oberfläche, wobei die abnehmbare Abdeckung nach oben zeigt.
+. Öffnen Sie die Abdeckung, indem Sie die blauen Tasten an den Seiten des Controller-Kanisters drücken, um die Abdeckung zu lösen, und drehen Sie dann die Abdeckung nach oben und von dem Controller-Kanister.
+
+
+
+
+== Schritt 4: Bestimmen Sie die Teile, die an den Ersatz-Controller übergeben werden sollen
+
+Möglicherweise sind Teile Ihres Ersatzcontrollers bereits vorinstalliert. Bestimmen Sie, welche Teile in den Behälter des Ersatzcontrollers übertragen werden müssen.
+
+. Setzen Sie den Ersatzcontroller mit der abnehmbaren Abdeckung nach oben auf eine flache, antistatische Oberfläche.
+. Öffnen Sie die Abdeckung, indem Sie die blauen Tasten an den Seiten des Controller-Kanisters drücken, um die Abdeckung zu lösen, und drehen Sie dann die Abdeckung nach oben und von dem Controller-Kanister.
+. Stellen Sie fest, ob der Ersatzcontroller eine Batterie und/oder DIMMs enthält. Wenn dies der Fall ist, bringen Sie die Controllerabdeckung wieder an, und fahren Sie mit fort <<step8_replace_controller,Schritt 8: Controller austauschen>>. Ansonsten:
++
+** Wenn der Ersatzcontroller keine Batterie oder kein DIMM enthält, fahren Sie mit fort <<step5_remove_battery,Schritt 5: Entfernen Sie die Batterie>>.
+** Wenn der Ersatzcontroller eine Batterie, aber kein DIMM enthält, fahren Sie mit fort <<step6_remove_dimm,Schritt 6: Verschieben Sie die DIMMs>>.
+
+
+
+
+
+
+== Schritt 5: Entfernen Sie die Batterie
+
+Den Akku aus dem außer Betrieb genommenen Controller herausgenommen und in den Ersatzcontroller einsetzen.
+
+.Schritte
+. Entfernen Sie die Batterie aus dem Controller-Behälter:
++
+.. Drücken Sie die blaue Taste an der Seite des Reglerbehälters.
+.. Schieben Sie den Akku nach oben, bis er die Halteklammern freigibt, und heben Sie den Akku aus dem Controller-Behälter.
+.. Ziehen Sie den Batteriestecker, indem Sie den Clip an der Vorderseite des Batteriesteckers zusammendrücken, um den Stecker aus der Steckdose zu lösen, und ziehen Sie dann das Batteriekabel aus der Steckdose.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Entfernen Sie die NVMEM-Batterie.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[Legendensymbol 01]
+| Akkufreigabelasche 
+
+
+ a| 
+image::../media/legend_icon_02.png[Legende Symbol 02]
+| Batterieanschluss 
+|===
+
+
+. Setzen Sie die Batterie in den Behälter des Ersatzcontrollers ein:
++
+.. Richten Sie die Batterie an den Haltehalterungen an der Blechseitenwand aus, aber schließen Sie sie nicht an. Sie schließen es an, sobald die restlichen Komponenten in den Ersatzbehälter des Controllers verschoben wurden.
+
+
+. Wenn der Ersatzcontroller über vorinstallierte DIMMs verfügt, fahren Sie mit fort <<step7_install_battery,Schritt 7: Setzen Sie die Batterie ein>>. Fahren Sie andernfalls mit dem nächsten Schritt fort.
+
+
+
+
+== Schritt 6: Verschieben Sie die DIMMs
+
+Entfernen Sie die DIMMs aus dem Aktivkohlebehälter des Controllers, und setzen Sie sie in den Ersatzbehälter des Controllers ein.
+
+.Schritte
+. Suchen Sie die DIMMs auf dem Controller-Aktivkohlebehälter.
++
+
+NOTE: Notieren Sie sich die Position des DIMM-Moduls in den Sockeln, damit Sie das DIMM an der gleichen Stelle in den Ersatz-Controller-Behälter und in der richtigen Ausrichtung einsetzen können.
+Entfernen Sie die DIMMs aus dem Aktivkohlebehälter:
+
++
+.. Entfernen Sie das DIMM-Modul aus dem Steckplatz, indem Sie die beiden DIMM-Auswurfhalterungen auf beiden Seiten des DIMM langsam auseinander drücken.
++
+Das DIMM dreht sich ein wenig nach oben.
+
+.. Drehen Sie das DIMM-Modul so weit wie möglich, und schieben Sie es dann aus dem Sockel.
++
+
+NOTE: Halten Sie das DIMM vorsichtig an den Rändern, um Druck auf die Komponenten auf der DIMM-Leiterplatte zu vermeiden.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[DIMMs entfernen.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[Legendensymbol 01]
+| DIMM-Auswerferlaschen 
+
+
+ a| 
+image::../media/legend_icon_02.png[Legende Symbol 02]
+| DIMMS 
+|===
+
+
+. Vergewissern Sie sich, dass die Batterie nicht in den Behälter des Ersatzcontrollers eingesteckt ist.
+. Installieren Sie die DIMMs in der Ersatzsteuerung an derselben Stelle, an der sie sich im außer Betrieb genommenen Controller befanden:
++
+.. Drücken Sie vorsichtig, aber fest auf die Oberseite des DIMM, bis die Auswurfklammern über den Kerben an den Enden des DIMM einrasten.
++
+Das DIMM passt eng in den Steckplatz, sollte aber leicht einpassen. Falls nicht, richten Sie das DIMM-Modul mit dem Steckplatz aus und setzen Sie es wieder ein.
+
++
+
+NOTE: Prüfen Sie das DIMM visuell, um sicherzustellen, dass es gleichmäßig ausgerichtet und vollständig in den Steckplatz eingesetzt ist.
+
+
+
+. Wiederholen Sie diese Schritte für das andere DIMM.
+. Wenn der Ersatzcontroller über einen vorinstallierten Akku verfügt, mit fortfahren <<step8_replace_controller,Schritt 8: Controller austauschen>>. Fahren Sie andernfalls mit dem nächsten Schritt fort.
+
+
+
+
+== Schritt 7: Setzen Sie die Batterie ein
+
+Setzen Sie den Akku in den Behälter des Ersatzcontrollers ein.
+
+.Schritte
+. Stecken Sie den Batteriestecker wieder in die Buchse am Controller-Aktivkohlebehälter.
++
+Vergewissern Sie sich, dass der Stecker in der Akkubuchse auf der Hauptplatine einrastet.
+
+. Richten Sie die Batterie an den Haltehalterungen an der Blechseitenwand aus.
+. Schieben Sie den Akku nach unten, bis die Akkuverriegelung einrastet und in die Öffnung an der Seitenwand einrastet.
+. Setzen Sie die Abdeckung des Controller-Aktivkohlebehälters wieder ein, und verriegeln Sie sie.
+
+
+
+
+== Schritt 8: Controller austauschen
+
+Installieren Sie den Ersatz-Controller, und überprüfen Sie, ob der Node wieder mit dem Raster verbunden ist.
+
+.Schritte
+. Setzen Sie den Ersatzcontroller in das Gerät ein.
++
+.. Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.
+.. Schieben Sie den Steuerknebel in die geöffnete Stellung, und schieben Sie ihn bis zum Gerät.
+.. Bewegen Sie den Nockengriff nach links, um die Steuerung zu verriegeln.
+.. Ersetzen Sie die Kabel.
+.. Schalten Sie das Controller-Shelf ein.
+.. Warten Sie, bis der E4000-Controller neu gestartet wird.
+.. Legen Sie fest, wie Sie dem Ersatz-Controller eine IP-Adresse zuweisen.
++
+
+NOTE: Die Schritte zum Zuweisen einer IP-Adresse zum Ersatz-Controller hängen davon ab, ob Sie den Verwaltungsport mit einem Netzwerk mit einem DHCP-Server verbunden haben und ob alle Laufwerke gesichert sind.
+
++
+Wenn Management-Port 1 mit einem Netzwerk über einen DHCP-Server verbunden ist, erhält der neue Controller seine IP-Adresse vom DHCP-Server. Dieser Wert kann sich von der IP-Adresse des ursprünglichen Controllers unterscheiden.
+
+
+
+. Wenn das Speicher-Array über sichere Laufwerke verfügt, importieren Sie den Sicherheitsschlüssel des Laufwerks. Andernfalls fahren Sie mit dem nächsten Schritt fort. Befolgen Sie die unten beschriebenen Verfahren für ein Speicher-Array mit allen sicheren Laufwerken oder einer Kombination von sicheren und unsicheren Laufwerken.
++
+
+NOTE: _Unsichere Laufwerke_ sind nicht zugewiesene Laufwerke, globale Hot-Spare-Laufwerke oder Laufwerke, die Teil einer Volume-Gruppe oder eines Pools sind, der nicht durch die Drive Security-Funktion gesichert ist. Sichere Laufwerke sind zugewiesene Laufwerke, die über Drive Security Teil einer sicheren Volume-Gruppe oder eines Festplattenpools sind.
+
++
+** *Nur gesicherte Laufwerke (keine unsicheren Laufwerke)*:
++
+... Rufen Sie die Befehlszeilenschnittstelle (CLI) des Speicher-Arrays auf. Weitere Informationen zur CLI finden Sie im https://docs.netapp.com/us-en/e-series-cli/index.html["Dokumentation zur E-Series"].
+... Laden Sie den entsprechenden Simplex-NVSRAM auf den Controller.
++
+Beispiel: `download storageArray NVSRAM file=\"N4000-881834-SG4.dlp\" forceDownload=TRUE;`
+
+... Vergewissern Sie sich nach dem Laden von simplex NVSRAM, dass der Controller *optimal* ist.
+... Bei Verwendung eines externen Security Key Managements https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["Einrichtung der externen Schlüsselverwaltung auf dem Controller"].
+... Wenn Sie die interne Sicherheitsschlüsselverwaltung verwenden, geben Sie den folgenden Befehl ein, um den Sicherheitsschlüssel zu importieren:
++
+[listing]
+----
+import storageArray securityKey file="C:/file.slk"
+passPhrase="passPhrase";
+----
++
+Wo?
+
++
+**** `C:/file.slk` Steht für den Speicherort und den Namen des Laufwerksicherheitsschlüssels
+**** `passPhrase` Ist der Passphrase, der zum Entsperren der Datei benötigt wird Nachdem der Sicherheitsschlüssel importiert wurde, wird der Controller neu gestartet und der neue Controller nimmt die gespeicherten Einstellungen für das Speicher-Array an.
+
+
+... Gehen Sie zum nächsten Schritt, um zu bestätigen, dass der neue Controller optimal ist.
+
+
+** *Mischung aus sicheren und unsicheren Laufwerken*:
++
+... Sammeln Sie das Support-Bundle, und öffnen Sie das Speicher-Array-Profil.
+... Suchen und notieren Sie alle nicht sicheren Antriebe, die im Support Bundle zu finden sind.
+... Schaltet das System aus.
+... Entfernen Sie die unsicheren Laufwerke.
+... Ersetzen Sie den Controller.
+... Schalten Sie das System ein, und warten Sie, bis die sieben Segmente angezeigt werden, um die Nummer des Fachs anzuzeigen.
+... Wählen Sie im SANtricity System Manager *Einstellungen › System*.
+... Wählen Sie im Abschnitt Sicherheitsschlüsselverwaltung die Option *Schlüssel erstellen/ändern* aus, um einen neuen Sicherheitsschlüssel zu erstellen.
+... Wählen Sie * Sichere Laufwerke entsperren* aus, um den gespeicherten Sicherheitsschlüssel zu importieren.
+... Führen Sie die aus `set allDrives nativeState` CLI-Befehl.
+... Der Controller wird automatisch neu gestartet.
+... Warten Sie, bis der Controller gestartet wird, und warten Sie, bis die sieben-Segment-Anzeige die Nummer des Fachs oder eine blinkende L5 anzeigt.
+... Schaltet das System aus.
+... Installieren Sie die unsicheren Laufwerke neu.
+... Setzt den Controller mithilfe von SANtricity System Manager zurück.
+... Schalten Sie das System ein, und warten Sie, bis die sieben Segmente angezeigt werden, um die Nummer des Fachs anzuzeigen.
+... Gehen Sie zum nächsten Schritt, um zu bestätigen, dass der neue Controller optimal ist.
+
+
+
+
+. Wenn Sie das Gerät während dieses Vorgangs in den Wartungsmodus versetzt haben, schalten Sie es wieder in den normalen Betriebsmodus ein. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *Controller neu starten* aus, und wählen Sie dann *Neustart in StorageGRID* aus.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
+. Überwachen Sie während des Neubootens den Status des Node, um zu bestimmen, wann er sich wieder im Raster angeschlossen hat.
++
+Das Gerät wird neu gestartet und wieder in das Raster integriert. Dieser Vorgang kann bis zu 20 Minuten dauern.
+
+. Vergewissern Sie sich, dass das Neubooten abgeschlossen ist und dass der Node wieder dem Raster beigetreten ist. Überprüfen Sie im Grid Manager, ob auf der Seite Knoten ein normaler Status angezeigt wird (grünes Häkchen-Symbol image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
++
+image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+. Vergewissern Sie sich im SANtricity System Manager, dass der neue Controller optimal ist.
++
+.. Wählen Sie *Hardware*.
+.. Wählen Sie für das Controller-Shelf *Zurück von Regal anzeigen* aus.
+.. Wählen Sie den ausgetauschten Controllerbehälter aus.
+.. Wählen Sie *Anzeigeeinstellungen*.
+.. Vergewissern Sie sich, dass der *Status* des Controllers optimal ist.
+.. Wenn der Status nicht optimal ist, markieren Sie den Controller und wählen Sie *Online platzieren*.
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie *Support › Support Center › Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+.Was kommt als Nächstes?
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

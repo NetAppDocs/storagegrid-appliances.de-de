@@ -11,7 +11,7 @@ entries:
   url: "/commonhardware/changing-mtu-setting.html"
 - title: Überprüfen Sie die DNS-Server-Konfiguration
   url: "/commonhardware/checking-dns-server-configuration.html"
-- title: Aktualisieren Sie die MAC-Adressenverweise
+- title: Aktualisieren der MAC-Adressenreferenzen (SG100, SG1000, SGF6024 und SG6060)
   url: "/commonhardware/locate-mac-address.html"
 - title: Überwachung der Node-Verschlüsselung im Wartungsmodus
   url: "/commonhardware/monitoring-node-encryption-in-maintenance-mode.html"

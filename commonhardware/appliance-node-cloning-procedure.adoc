@@ -15,7 +15,7 @@ Der Klonprozess kann mehrere Tage dauern, bis die Daten zwischen dem Quell-Node 
 
 .Bevor Sie beginnen
 * Sie haben das kompatible Zielgerät in einem Schrank oder Rack installiert, alle Kabel angeschlossen und mit Strom versorgt.
-* Sie haben überprüft, ob die Installationsversion des StorageGRID-Geräts auf der Ersatz-Appliance mit der Softwareversion Ihres StorageGRID-Systems übereinstimmt. Bei Bedarf aktualisieren und verkleinern Sie die StorageGRID-Appliance-Installationsfirmware.
+* Sie haben überprüft, ob die Installationsversion des StorageGRID-Geräts auf der Ersatz-Appliance mit der Softwareversion Ihres StorageGRID-Systems übereinstimmt. Bei Bedarf können Sie die StorageGRID-Appliance-Installationsfirmware aktualisieren oder herunterstufen.
 * Sie haben die Ziel-Appliance konfiguriert, einschließlich der Konfiguration von StorageGRID-Verbindungen, SANtricity System Manager (nur Storage Appliances) und der BMC-Schnittstelle.
 +
 ** Verwenden Sie beim Konfigurieren von StorageGRID-Verbindungen die temporären IP-Adressen.

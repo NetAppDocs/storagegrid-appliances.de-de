@@ -74,9 +74,19 @@ NOTE: Wenn eine IP-Adresse nicht über DHCP zugewiesen werden konnte, wird 0.0.0
 
 
 --
+.SG5800
+--
+image::../media/sg5800_admin_network_port.png[Admin-Netzwerk-Port am SG5800 Controller]
+
+--
 .SG6000-CN
 --
 image::../media/sg6000_cn_admin_network_port.png[Admin-Netzwerk-Port am SG6000-CN Controller]
+
+--
+.SG6100-CN
+--
+image::../media/sg6100_cn_admin_network_port.png[Admin-Netzwerk-Port am SG6000-CN Controller]
 
 --
 .SGF6112
@@ -143,11 +153,25 @@ Verbinden Sie den Service-Laptop über ein Ethernet-Kabel mit dem Management-Por
 image::../media/e5700sg_mgmt_port_2.gif[Position des Management Port 2 auf dem E5700SG Controller]
 
 --
+.SG5800
+--
+Verbinden Sie den Service-Laptop mit dem Management-Port 1 des SG5800-Controllers über ein Ethernet-Kabel.
+
+image::../media/sg5800_mgmt_port.png[Standort des Management-Ports 1 auf dem SG5800-Controller]
+
+--
 .SG6000-CN
 --
 Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den rechtesten RJ-45-Anschluss des SG6000-CN Controllers an.
 
 image::../media/sg6000_cn_link_local_port.png[Standort des Management-Ports für SG6000-CN]
+
+--
+.SG6100-CN
+--
+Verbinden Sie einen Service-Laptop über ein Ethernet-Kabel direkt mit dem am rechten RJ-45-Port des SG6100-CN-Controllers.
+
+image::../media/sg6100_cn_link_local_port.png[Standort des Management-Ports für SG6100-CN]
 
 --
 .SGF6112

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112 
 summary: Wenn Sie sich nicht sicher sind, welche Hardwarekomponente in Ihrem Gerät ausgetauscht werden soll, gehen Sie wie folgt vor, um die Komponente und den Standort des Geräts im Rechenzentrum zu identifizieren. 
 ---
-= Prüfen Sie, ob die Komponente im SGF6112 ausgetauscht werden soll
+= Prüfen Sie, ob die Komponente im SGF6112 oder SG6100-CN ersetzt werden soll
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

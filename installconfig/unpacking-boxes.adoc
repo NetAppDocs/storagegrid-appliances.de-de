@@ -166,6 +166,80 @@ image::../media/fc_cable_and_sfp.gif[Optische Kabel und SFPs]
 
 
 --
+.SG5800
+--
+* *Hardware*
++
+SG5812 Appliance mit 12 installierten Laufwerken::
++
+--
+image::../media/de212c_table_size.gif[SG5812 2-HE-Appliance]
+
+--
+SG5860 Appliance ohne installierte Laufwerke::
++
+--
+image::../media/de460c_table_size.gif[SG5860 4-HE-Appliance]
+
+--
+Frontverkleidung für das Gerät::
++
+--
+image::../media/sg5700_front_bezels.gif[Rahmen SG5812 und SG5860]
+
+
+NOTE: Ihre Bezel könnten anders aussehen.
+
+--
+Schienensatz mit Anleitung::
++
+--
+image::../media/rail_kit.gif[Schienensatz]
+
+--
+SG5860: 60 NL-SAS-Laufwerke::
++
+--
+image::../media/sg5760_drive.gif[Laufwerk]
+
+--
+SG5860: Griffe::
++
+--
+image::../media/handles.gif[SG5860 Griffe]
+
+--
+SG5860: Rückenhalterungen und Käfigmuttern für Rack-Montage mit Vierkantloch::
++
+--
+image::../media/back_brackets_table_size.gif[Rückenhalterungen und Käfigmuttern für SG5860]
+
+--
+
+
+* *Kabel und Anschlüsse*
++
+
+TIP: Ihr Schrank verfügt möglicherweise über spezielle Netzkabel, die Sie anstelle der Netzkabel verwenden, die Sie zur Einheit mit dem Gerät anschließen.
+
++
+Zwei Netzkabel für dein Land::
++
+--
+image::../media/power_cords.gif[Stromkabel]
+
+--
+Zwei 25 GbE SFP28-Kabel für Controller Interconnect (iSCSI)::
++
+--
+image::../media/sg5800_25gbe_sfp28_cable.png[25 GbE SFP28 Kabel]
+
+--
+
+
+
+
+--
 .SG6000
 --
 * *Hardware SG6060*
@@ -323,7 +397,108 @@ image::../media/sas_cable.gif[SAS-Kabel]
 --
 .SG6100
 --
-* *Hardware*
+* *SG6160 Hardware*
++
+SG6100-CN-Controller::
++
+--
+image::../media/sg6000_cn_front_without_bezel.gif[SG6100-CN-Controller]
+
+--
+E4000 Controller Shelf ohne installierte Laufwerke::
++
+--
+image::../media/de460c_table_size.gif[SG5860 4-HE-Appliance]
+
+--
+Zwei Frontrahmen::
++
+--
+image::../media/sg6000_front_bezels_for_table.gif[Vorderrahmen]
+
+
+NOTE: Ihre Bezel könnten anders aussehen.
+
+--
+Zwei Schienensätze mit Anweisungen::
++
+--
+image::../media/rail_kit.gif[Schienensatz]
+
+--
+60 NL-SAS-Laufwerke::
++
+--
+image::../media/sg5760_drive.gif[Laufwerk]
+
+--
+Vier Griffe::
++
+--
+image::../media/handles.gif[SG5860 Griffe]
+
+--
+Rückhalterungen und Käfigmuttern für Rack-Montage mit Vierkantloch::
++
+--
+image::../media/back_brackets_table_size.gif[Rückenhalterungen und Käfigmuttern für SG5860]
+
+--
+Ein Breakout-Kabel mit 100 GbE auf 4x25 GbE::
++
+--
+image::../media/sg6100_4x25gbe_spf28_cable.png[Breakout-Kabel mit 100 GbE auf 4x25 GbE]
+
+--
+Vier Netzkabel für Ihr Land::
++
+--
+image::../media/power_cords.gif[Stromkabel]
+
+--
+
+
+* *SG6160 Erweiterungs-Shelf*
++
+Erweiterungs-Shelf ohne Laufwerke installiert::
++
+--
+image::../media/de460c_table_size.gif[SG5860 4-HE-Appliance]
+
+--
+Frontblende::
++
+--
+image::../media/front_bezel_for_table_de460c.gif[Frontblende DE460C]
+
+--
+60 NL-SAS-Laufwerke::
++
+--
+image::../media/sg5760_drive.gif[Laufwerk]
+
+--
+Ein Schienensatz mit Anweisungen::
++
+--
+image::../media/rail_kit.gif[Schienensatz]
+
+--
+Vier Griffe::
++
+--
+image::../media/handles.gif[SG5860 Griffe]
+
+--
+Rückhalterungen und Käfigmuttern für Rack-Montage mit Vierkantloch::
++
+--
+image::../media/back_brackets_table_size.gif[Rückenhalterungen und Käfigmuttern für SG5860]
+
+--
+
+
+* *SGF6112 Hardware*
 +
 SGF6112::
 +

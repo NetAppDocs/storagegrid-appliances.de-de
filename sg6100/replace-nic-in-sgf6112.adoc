@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, Replacing, replace, NIC, network interface card 
 summary: 'Möglicherweise müssen Sie eine Netzwerkschnittstellenkarte \(NIC\) im SGF6112 ersetzen, wenn sie nicht optimal funktioniert oder ausgefallen ist.' 
 ---
-= Ersetzen Sie die NIC im SGF6112
+= Ersetzen Sie die interne NIC im SGF6112 oder SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Möglicherweise müssen Sie eine Netzwerkschnittstellenkarte (NIC) in der SGF6112 austauschen, wenn sie nicht optimal funktioniert oder ausgefallen ist.
+Möglicherweise müssen Sie eine interne Netzwerkschnittstellenkarte (NIC) im SGF6112 oder SG6100-CN ersetzen, wenn sie nicht optimal funktioniert oder ausgefallen ist.
 
 Mit diesen Verfahren können Sie:
 
@@ -21,12 +21,12 @@ Mit diesen Verfahren können Sie:
 
 
 
-== Entfernen Sie die NIC
+== Entfernen Sie die interne NIC
 
 .Bevor Sie beginnen
 * Sie haben die richtige Ersatz-NIC.
 * Sie haben die festgelegt link:verify-component-to-replace.html["Position der zu ersetzenden NIC"].
-* Das ist schon link:locating-sgf6112-in-data-center.html["Befindet sich das SGF6112-Gerät physisch"] Wo Sie die NIC im Rechenzentrum ersetzen.
+* Das ist schon link:locating-sgf6112-in-data-center.html["Physische Lage der SGF6112 Appliance oder des SG6100-CN Controllers"] Wo Sie die NIC im Rechenzentrum ersetzen.
 +
 
 NOTE: A link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Kontrolliertes Herunterfahren des Geräts"] Ist erforderlich, bevor Sie das Gerät aus dem Rack entfernen.
@@ -38,7 +38,7 @@ NOTE: A link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Kontroll
 Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Speicher-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch der Netzwerkschnittstellenkarte (NIC) starten oder die NIC während eines geplanten Wartungsfensters austauschen, wenn Serviceunterbrechungen akzeptabel sind. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
 
 
-CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie die NIC während eines geplanten Wartungsfensters ersetzen. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
+CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie die NIC während eines geplanten Wartungsfensters ersetzen, da während dieses Vorgangs vorübergehend der Zugriff auf diese Objekte verloren geht. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
 
 .Schritte
 . Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
@@ -118,7 +118,7 @@ image::../media/one-slot-assembly-sgf6112.png[NIC in Riser-Baugruppe mit einem S
 
 
 
-== Installieren Sie die NIC neu
+== Installieren Sie die interne NIC neu
 
 Installieren Sie die Ersatz-NIC an derselben Stelle wie die entfernte.
 

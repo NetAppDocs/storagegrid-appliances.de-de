@@ -1,0 +1,97 @@
+---
+permalink: sg5800/replace-controller-sg5800.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= SG5800-Controller austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie den SG5800-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
+
+.Bevor Sie beginnen
+* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
+* Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
+
+
+.Über diese Aufgabe
+Auf den Appliance-Speicherknoten kann nicht zugegriffen werden, wenn Sie den Controller austauschen. Wenn der SG5800-Controller ausreichend funktioniert, können Sie zu Beginn dieses Verfahrens ein kontrolliertes Herunterfahren durchführen.
+
+
+NOTE: Wenn Sie den Controller vor dem Installieren der StorageGRID-Software ersetzen, können Sie nach Abschluss dieses Verfahrens möglicherweise nicht sofort auf den StorageGRID Appliance Installer zugreifen. Sie können zwar von anderen Hosts im selben Subnetz wie die Appliance auf den StorageGRID-Appliance-Installer zugreifen, aber der Zugriff darauf ist von Hosts in anderen Subnetzen nicht möglich. Diese Bedingung sollte sich innerhalb von 15 Minuten lösen (wenn Einträge im ARP-Cache für die ursprüngliche Controller-Zeit erforderlich sind), oder Sie können den Zustand sofort löschen, indem Sie alle alten ARP-Cacheeinträge manuell vom lokalen Router oder Gateway löschen.
+
+.Schritte
+. Fahren Sie den SG5800-Controller herunter.
++
+.. Melden Sie sich beim Grid-Node an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@grid_node_IP`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Fahren Sie den SG5800-Controller herunter:
++
+*`shutdown -h now`*
+
+.. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
++
+Die grüne Cache-Aktivitäts-LED auf der Rückseite des E4000-Controllers leuchtet, wenn zwischengespeicherte Daten auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
+
+
+
+. Schalten Sie den Strom aus.
++
+.. Wählen Sie auf der Startseite von SANtricity System Manager die Option laufende Vorgänge anzeigen aus.
+.. Vergewissern Sie sich, dass alle Vorgänge abgeschlossen sind.
+.. Schalten Sie beide Netzschalter am Gerät aus.
+.. Warten Sie, bis alle LEDs ausgeschaltet sind.
+
+
+. Wenn die mit dem Controller verbundenen StorageGRID-Netzwerke DHCP-Server verwenden:
++
+.. Beachten Sie die MAC-Adressen für die Ports am Ersatz-Controller (auf Etiketten am Controller).
+.. Bitten Sie den Netzwerkadministrator, die IP-Adresseinstellungen für den ursprünglichen Controller zu aktualisieren, um die MAC-Adressen für den Ersatz-Controller zu reflektieren.
++
+
+NOTE: Sie müssen sicherstellen, dass die IP-Adressen für den ursprünglichen Controller aktualisiert wurden, bevor Sie den Ersatz-Controller mit Strom versorgen. Andernfalls erhält der Controller neue DHCP-IP-Adressen, wenn er gebootet wird und kann möglicherweise nicht die Verbindung mit StorageGRID wiederherstellen. Dieser Schritt gilt für alle StorageGRID-Netzwerke, die mit dem Controller verbunden sind.
+
+
+
+. Entfernen Sie den Controller aus dem Gerät:
++
+.. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+.. Beschriften Sie die Kabel, und trennen Sie dann die Kabel und SFPs.
++
+
+NOTE: Um Leistungseinbußen zu vermeiden, drehen Sie die Kabel nicht, falten Sie sie nicht, und ziehen Sie sie nicht an.
+Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff so lange drücken, bis sie sich löst, und öffnen Sie dann den Nockengriff nach rechts.
+
+.. Schieben Sie den Regler mit zwei Händen und dem Nockengriff aus dem Gerät.
++
+
+NOTE: Verwenden Sie immer zwei Hände, um das Gewicht der Steuerung zu unterstützen.
+
+
+
+. Setzen Sie den Ersatzcontroller in das Gerät ein.
++
+.. Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.
+.. Schieben Sie den Steuerknebel in die geöffnete Stellung, und schieben Sie ihn bis zum Gerät.
+.. Bewegen Sie den Nockengriff nach links, um die Steuerung zu verriegeln.
+.. Ersetzen Sie die Kabel.
+
+
+. Schalten Sie das Gerät ein, und überwachen Sie die Controller-LEDs.
+. Vergewissern Sie sich, dass der Appliance Storage Node im Grid Manager angezeigt wird und keine Alarme angezeigt werden.
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"] Seite für weitere Informationen.

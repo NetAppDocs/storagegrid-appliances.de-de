@@ -1,0 +1,64 @@
+---
+permalink: sg5800/changing-link-configuration-of-sg5800-controller.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Ändern der Link-Konfiguration des SG5800 Controllers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ethernet-Link-Konfiguration des SG5800 Controllers ändern. Sie können den Port Bond-Modus, den Netzwerk-Bond-Modus und die Verbindungsgeschwindigkeit ändern.
+
+.Bevor Sie beginnen
+link:../commonhardware/placing-appliance-into-maintenance-mode.html["Den SG5800 Controller in den Wartungsmodus versetzen"].
+
+
+NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.
+
+.Über diese Aufgabe
+Es gibt folgende Optionen zum Ändern der Ethernet-Link-Konfiguration des SG5800 Controllers:
+
+* Ändern des *Port Bond Modus* von Fixed zu Aggregate oder von Aggregat zu Fixed
+* Ändern des *Netzwerk-Bond-Modus* von Active-Backup zu LACP oder von LACP zu Active-Backup
+* Aktivieren oder Deaktivieren von VLAN-Tagging oder Ändern des Werts einer VLAN-Tag-Nummer
+* Ändern der Verbindungsgeschwindigkeit von 10-GbE auf 25-GbE oder von 25-GbE auf 10-GbE
+
+
+.Schritte
+. Wählen Sie im Menü die Option *Netzwerke konfigurieren* > *Link-Konfiguration* aus.
++
+image::../media/link_configuration_option.gif[Verbindungskonfiguration]
+
+. [[change_Link_Configuration_sg5800, Start=2]]die gewünschten Änderungen an der Verbindungskonfiguration vornehmen.
++
+Weitere Informationen zu den Optionen finden Sie unter link:../installconfig/configuring-network-links.html["Netzwerkverbindungen konfigurieren"].
+
+. Wenn Sie mit Ihrer Auswahl zufrieden sind, klicken Sie auf *Speichern*.
++
+
+NOTE: Wenn Sie Änderungen am Netzwerk oder an der Verbindung vorgenommen haben, über die Sie verbunden sind, können Sie die Verbindung verlieren. Wenn die Verbindung nicht innerhalb von 1 Minute wiederhergestellt wird, geben Sie die URL für den StorageGRID-Appliance-Installer erneut ein. Verwenden Sie dazu eine der anderen IP-Adressen, die der Appliance zugewiesen sind: +
+`*https://_SG5800_Controller_IP_:8443*`
+
++
+Wenn Sie Änderungen an den VLAN-Einstellungen vorgenommen haben, hat sich das Subnetz für die Appliance möglicherweise geändert. Wenn Sie die IP-Adressen für die Appliance ändern müssen, befolgen Sie die link:../installconfig/setting-ip-configuration.html["Konfigurieren Sie die StorageGRID-IP-Adressen"] Anweisungen.
+
+. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Netzwerke konfigurieren* > *Ping-Test* aus.
+. Verwenden Sie das Ping-Test-Tool, um die Verbindung zu IP-Adressen in allen Netzwerken zu überprüfen, die möglicherweise von den in vorgenommenen Änderungen der Verbindungskonfiguration betroffen sind  <<change_link_configuration_sg5700,Verbindungskonfiguration ändern>> Schritt:
++
+Zusätzlich zu allen anderen Tests, die Sie durchführen möchten, bestätigen Sie, dass Sie die Grid-IP-Adresse des primären Admin-Knotens und die Grid-IP-Adresse von mindestens einem anderen Speicherknoten pingen können. Korrigieren Sie ggf. alle Probleme mit der Verbindungskonfiguration.
+
+. Sobald Sie zufrieden sind, dass die Änderungen an der Link-Konfiguration funktionieren, booten Sie den Node neu. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *Controller neu starten* aus, und wählen Sie dann *Neustart in StorageGRID* aus.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite *NODES* sollte ein normaler Status (grünes Häkchen-Symbol) angezeigt werden image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+
++
+image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+

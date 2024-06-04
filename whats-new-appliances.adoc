@@ -18,6 +18,18 @@ Informieren Sie sich über die Neuerungen bei StorageGRID Appliances.
 
 
 
+== SG5812 und SG5860 Appliances
+
+Die neuen StorageGRID Appliances SG5812 und SG5860 sind integrierte Storage- und Computing-Plattformen, die als Storage-Nodes in einem StorageGRID Grid betrieben werden. Siehe https://docs.netapp.com/us-en/storagegrid-appliances/installconfig/hardware-description-sg5800.html["SG5800 Appliances: Überblick"] Um mehr zu erfahren.
+
+
+
+== SG6160 Appliance
+
+Die neue StorageGRID SG6160 Appliance umfasst einen Computing-Controller und ein Storage-Controller-Shelf mit zwei Storage-Controllern und 60 Laufwerken sowie zwei NVMe-SSD-Laufwerke für das Caching. Optional können der SG6160 auch Erweiterungs-Shelfs mit 60 Laufwerken hinzugefügt werden. Siehe link:installconfig/hardware-description-sg6100.html["SGF6100 Appliances: Überblick"] Um mehr zu erfahren.
+
+
+
 == Service Appliances für SG110 und SG1100
 
 Die neuen Service-Appliances StorageGRID SG110 und SG1100 sind ein evolutionäres Hardware-Update, das eine verbesserte Verwaltungs- und Load-Balancing-Performance bietet. Siehe link:./installconfig/hardware-description-sg110-and-1100.html["SG110 und SG1100 Services Appliance: Überblick"].

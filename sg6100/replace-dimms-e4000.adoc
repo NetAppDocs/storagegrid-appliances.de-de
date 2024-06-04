@@ -1,0 +1,277 @@
+---
+permalink: sg6100/replace-dimms-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Austausch der DIMMs im Speicher-Controller-Shelf (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein DIMM im E4000 ersetzen, wenn ein Speicherfehler vorliegt oder wenn ein DIMM-Fehler vorliegt.
+
+.Über diese Aufgabe
+Zum Austauschen eines DIMM müssen Sie die Cache-Größe des Controllers überprüfen, den Controller offline schalten, den Controller entfernen, die DIMMs entfernen und die neuen DIMMs in den Controller installieren. Anschließend können Sie Ihren Controller wieder online schalten und überprüfen, ob das Speicher-Array ordnungsgemäß funktioniert.
+
+.Bevor Sie beginnen
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatz-DIMM.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Ein flacher, statischer freier Arbeitsbereich.
+** Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+** Zugriff auf den SANtricity System Manager:
++
+*** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Controller-Informationen befinden sich auf dem https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+*** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
+
+
+
+
+
+
+
+
+== Schritt 1: Bestimmen Sie, ob Sie ein DIMM ersetzen müssen
+
+Überprüfen Sie die Cache-Größe Ihres Controllers, bevor Sie das DIMMS ersetzen.
+
+.Schritte
+. Rufen Sie das Speicher-Array-Profil für den Controller auf. Gehen Sie im SANtricity-Systemmanager zu *Support* › *Supportcenter*. Wählen Sie auf der Seite Support Resources die Option *Storage Array Profile*.
+. Scrollen Sie nach unten oder verwenden Sie das Suchfeld, um die *Daten-Cache-Modul*-Informationen zu finden.
+. Wenn eine der folgenden Optionen vorhanden ist, notieren Sie sich die Position des DIMM-Moduls, und fahren Sie mit den verbleibenden Verfahren in diesem Abschnitt fort, um die DIMMs auf dem Controller zu ersetzen:
++
+.. Ein ausgefallenes DIMM oder ein DIMM-Reporting *Data Cache Module* als nicht optimal.
+.. Ein DIMM mit einer nicht übereinstimmenden * Data Cache Module* Kapazität.
+
+
+
+
+
+
+== Schritt 2: Controller offline schalten
+
+Platzieren Sie den Controller offline, damit Sie die DIMMs sicher entfernen und austauschen können.
+
+.Schritte
+. Sehen Sie sich im SANtricity System Manager die Details im Recovery Guru an, um zu überprüfen, ob ein Problem mit falsch abgestimmter Speicher vorliegt, und um sicherzustellen, dass keine weiteren Punkte zuerst behoben werden müssen.
+. Bestimmen Sie im Bereich Details des Recovery Guru, welches DIMM ersetzt werden soll.
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit dem SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie *Support › Support Center › Diagnose*.
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Download-Ordner Ihres Browsers mit dem Namen, *KonfigurationDaten-
+<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
++
+.. Wählen Sie *Hardware*.
+.. Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+.. Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
+.. Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+
+NOTE: Wenn Sie mit dem Controller auf SANtricity System Manager zugreifen, den Sie offline schalten möchten, wird eine Meldung vom SANtricity System Manager nicht verfügbar angezeigt. Wählen Sie *mit einer alternativen Netzwerkverbindung verbinden* aus, um automatisch über den anderen Controller auf SANtricity System Manager zuzugreifen.
+
+
+
+. Warten Sie, bis der Status des Controllers von SANtricity System Manager in „Offline“ aktualisiert wird.
++
+
+NOTE: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
+
+. Wählen Sie im Recovery Guru *erneut prüfen* aus, und bestätigen Sie, dass das Feld OK to remove im Detailbereich angezeigt wird
+Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.
+
+
+
+
+== Schritt 3: Controller-Behälter entfernen
+
+Entfernen Sie den Controller-Aktivkohlebehälter aus dem System, und entfernen Sie dann die Abdeckung des Controller-Aktivkohlebehälters.
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Lösen Sie den Klettverschluss, mit dem die Kabel an das Kabelverwaltungsgerät gebunden sind, und ziehen Sie anschließend die Systemkabel und SFPs (falls erforderlich) vom Controller-Aktivkohlebehälter ab, um zu verfolgen, wo die Kabel angeschlossen wurden.
++
+Lassen Sie die Kabel im Kabelverwaltungs-Gerät so, dass bei der Neuinstallation des Kabelverwaltungsgeräts die Kabel organisiert sind.
+
+. Entfernen Sie die Kabelführungs-Geräte von der linken und rechten Seite des Controller-Kanisters, und legen Sie sie beiseite.
+. Drücken Sie die Verriegelung am Nockengriff, bis er sich löst, öffnen Sie den Nockengriff vollständig, um den Controller-Aktivkohlebehälter aus der Mittelplatine zu lösen, und ziehen Sie dann den Controller-Aktivkohlebehälter mit zwei Händen aus dem Gehäuse.
+. Drehen Sie den Controller-Behälter um und legen Sie ihn auf eine Ebene, stabile Oberfläche.
+. Öffnen Sie die Abdeckung, indem Sie die blauen Tasten an den Seiten des Controller-Kanisters drücken, um die Abdeckung zu lösen, und drehen Sie dann die Abdeckung nach oben und von dem Controller-Kanister.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Öffnen Sie die Abdeckung des Controller-Aktivkohlebehälters.]
+
+
+
+
+
+== Schritt 4: Ersetzen Sie die DIMMs
+
+Suchen Sie das DIMM im Controller, entfernen Sie es, und ersetzen Sie es.
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Sie müssen ein sauberes System herunterfahren, bevor Sie Systemkomponenten ersetzen, um nicht geschriebene Daten im nichtflüchtigen Speicher (NVMEM) zu verlieren. Die LED befindet sich auf der Rückseite des Controller-Kanisters.
+. Wenn die NVMEM-LED nicht blinkt, befindet sich kein Inhalt in der NVMEM. Sie können die folgenden Schritte überspringen und mit der nächsten Aufgabe bei diesem Verfahren fortfahren.
+. Wenn die NVMEM-LED blinkt, befinden sich Daten in der NVMEM und Sie müssen die Batterie trennen, um den Speicher zu löschen:
++
+.. Entfernen Sie die Batterie aus dem Controller-Behälter, indem Sie die blaue Taste an der Seite des Controller-Behälters drücken.
+.. Schieben Sie den Akku nach oben, bis er die Halteklammern freigibt, und heben Sie den Akku aus dem Controller-Behälter.
+.. Suchen Sie das Batteriekabel, drücken Sie auf die Klammer am Akkustecker, um den Sicherungsclip aus der Steckdose zu lösen, und ziehen Sie dann das Akkukabel aus der Steckdose.
+.. Vergewissern Sie sich, dass die NVMEM-LED nicht mehr leuchtet.
+.. Schließen Sie den Batterieanschluss wieder an, und überprüfen Sie die LED auf der Rückseite des Controllers erneut.
+.. Ziehen Sie das Batteriekabel ab.
+
+
+. Suchen Sie die DIMMs auf dem Controller-Aktivkohlebehälter.
+. Achten Sie auf die Ausrichtung und Position des DIMM im Sockel, damit Sie das Ersatz-DIMM in die richtige Ausrichtung einsetzen können.
+. Werfen Sie das DIMM aus dem Steckplatz, indem Sie die beiden DIMM-Auswerferlaschen auf beiden Seiten des DIMM langsam auseinander drücken und dann das DIMM aus dem Steckplatz schieben.
++
+Das DIMM dreht sich ein wenig nach oben.
+
+. Drehen Sie das DIMM-Modul so weit wie möglich, und schieben Sie es dann aus dem Sockel.
++
+
+NOTE: Halten Sie das DIMM vorsichtig an den Rändern, um Druck auf die Komponenten auf der DIMM-Leiterplatte zu vermeiden.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[DIMMs entfernen.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[Legendensymbol 01]
+| DIMM-Auswerferlaschen 
+
+
+ a| 
+image::../media/legend_icon_02.png[Legende Symbol 02]
+| DIMMS 
+|===
+. Entfernen Sie das Ersatz-DIMM aus dem antistatischen Versandbeutel, halten Sie das DIMM an den Ecken und richten Sie es am Steckplatz aus.
++
+Die Kerbe zwischen den Stiften am DIMM sollte mit der Lasche im Sockel aufliegen.
+
+. Setzen Sie das DIMM-Modul in den Steckplatz ein.
++
+Das DIMM passt eng in den Steckplatz, sollte aber leicht einpassen. Falls nicht, richten Sie das DIMM-Modul mit dem Steckplatz aus und setzen Sie es wieder ein.
+
++
+
+NOTE: Prüfen Sie das DIMM visuell, um sicherzustellen, dass es gleichmäßig ausgerichtet und vollständig in den Steckplatz eingesetzt ist.
+
+. Drücken Sie vorsichtig, aber fest auf die Oberseite des DIMM, bis die Auswurfklammern über den Kerben an den Enden des DIMM einrasten.
+. Batterie wieder anschließen:
++
+.. Schließen Sie die Batterie an.
+.. Vergewissern Sie sich, dass der Stecker in der Akkusteckdose auf der Hauptplatine einrastet.
+.. Richten Sie die Batterie an den Haltehalterungen an der Blechseitenwand aus.
+.. Schieben Sie den Akku nach unten, bis die Akkuverriegelung einrastet und in die Öffnung an der Seitenwand einrastet.
+
+
+. Setzen Sie die Abdeckung des Controller-Aktivkohlebehälters wieder ein.
+
+
+
+
+== Schritt 5: Setzen Sie den Controller-Behälter wieder ein
+
+Setzen Sie den Controller-Aktivkohlebehälter wieder in das Gehäuse ein.
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Wenn Sie dies noch nicht getan haben, bringen Sie die Abdeckung des Controller-Kanisters wieder an.
+. Drehen Sie den Controller-Behälter um und richten Sie das Ende an der Öffnung im Gehäuse aus.
+. Schieben Sie den Controller-Aktivkohlebehälter vorsichtig zur Hälfte in das System. Richten Sie das Ende des Controller-Aktivkohlebehälters an der Öffnung im Gehäuse aus, und drücken Sie den Controller-Aktivkohlebehälter vorsichtig halb in das System.
++
+
+NOTE: Setzen Sie den Controller-Aktivkohlebehälter erst dann vollständig in das Gehäuse ein, wenn Sie dazu aufgefordert werden.
+
+. Das System nach Bedarf neu einsetzen.
+. Schließen Sie den Wiedereinbau des Reglerbehälters ab:
++
+.. Den Nockengriff in geöffneter Position halten, den Controller-Behälter fest einschieben, bis er vollständig in die Mittelplatine einrastet, und dann den Nockengriff in die verriegelte Position schließen.
++
+
+NOTE: Setzen Sie den Controller-Aktivkohlebehälter nicht zu stark in das Gehäuse ein, um eine Beschädigung der Anschlüsse zu vermeiden.
+
++
+Der Controller beginnt zu booten, sobald er im Gehäuse sitzt.
+
+.. Wenn Sie dies noch nicht getan haben, installieren Sie das Kabelverwaltungsgerät neu.
+.. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
+
+
+. Starten Sie den Controller-Behälter neu.
+
+
+
+
+== Schritt 6: Kompletter Austausch der DIMMs
+
+Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.
+
+.Schritte
+. Platzieren Sie den Controller in den Online-Modus
++
+.. Wechseln Sie in System Manager zur Seite Hardware.
+.. Wählen Sie *Controller & Komponenten*.
+.. Wählen Sie den Controller mit den ersetzten DIMMs aus.
+.. Wählen Sie in der Dropdown-Liste * Online platzieren* aus.
+
+
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs.
++
+Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
+
++
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn der Controller wieder online ist, vergewissern Sie sich, dass sein Status optimal ist, und überprüfen Sie die Warn-LEDs des Controller-Shelfs.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.
+HINWEIS: Wenn Sie das Problem nicht lösen können, wenden Sie sich an den technischen Support.
+
+. Klicken Sie auf *Hardware › Support › Upgrade Center*, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist.
++
+Installieren Sie bei Bedarf die neueste Version.
+
+. Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
++
+.. Wählen Sie *Storage › Volumes*. Überprüfen Sie auf der Seite * All Volumes*, ob die Volumes an die bevorzugten Eigentümer verteilt werden. Wählen Sie *Mehr › Eigentümerschaft ändern*, um die Eigentümer des Volumes anzuzeigen.
+.. Wenn alle Volumes Eigentum des bevorzugten Eigentümers sind, fahren Sie mit Schritt 6 fort.
+.. Wenn keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Gehen Sie zu *Mehr › Volumes neu verteilen*.
+.. Wenn kein Recovery Guru zur Verfügung steht oder bei Durchführung der Schritte des Recovery Guru erfolgt, werden die Volumes immer noch nicht an den von ihnen bevorzugten Eigentümer zurückgegeben.
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie *Support › Support Center › Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+

@@ -41,8 +41,9 @@ Die Abbildungen und Tabellen fassen die Optionen für den Port Bond-Modus und de
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Port-Bond-Modi (SG1000 und SG100)"]
 * link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Port-Bond-Modi (SG1100 und SG110)"]
 * link:gathering-installation-information-sg5700.html#port-bond-modes["Port-Bond-Modi (E5700SG)"]
+* link:gathering-installation-information-sg5800.html#port-bond-modes["Port-Bond-Modi (SG5800)"]
 * link:gathering-installation-information-sg6000.html#port-bond-modes["Port-Bond-Modi (SG6000-CN)"]
-* link:gathering-installation-information-sg6100.html#port-bond-modes["Port-Bond-Modi (SGF6112)"]
+* link:gathering-installation-information-sg6100.html#port-bond-modes["Port-Bond-Modi (SGF6112 und SG6100-CN)"]
 
 
 [role="tabbed-block"]
@@ -422,6 +423,111 @@ image::../media/e5700sg_bonded_management_ports.gif[E5700SG Bonded Management Po
 
 
 --
+.SG5800
+--
+Bond-Modus mit festem Port (Standard)::
++
+--
+Die Abbildung zeigt, wie die vier 10/25-GbE-Ports im Bond-Modus mit festen Ports (Standardkonfiguration) verbunden sind.
+
+image::../media/sg5800_fixed_port.png[Abbildung, die zeigt, wie die 10/25-GbE-Ports auf dem SG5800-Controller im festen Modus verbunden sind]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+C
+ a| 
+Die Ports 1 und 3 sind für das Client-Netzwerk verbunden, falls dieses Netzwerk verwendet wird.
+
+
+
+ a| 
+G
+ a| 
+Die Ports 2 und 4 sind für das Grid-Netzwerk verbunden.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der vier 10/25-GbE-Ports zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+[cols="1a,2a,2a"]
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+
+
+ a| 
+Aktiv/Backup (Standard)
+ a| 
+* Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+* Die Ports 1 und 3 werden nicht verwendet.
+* Ein VLAN-Tag ist optional.
+
+ a| 
+* Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+* Die Ports 1 und 3 verwenden eine aktiv-Backup-Verbindung für das Client-Netzwerk.
+* VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+
+
+
+
+ a| 
+LACP (802.3ad)
+ a| 
+* Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+* Die Ports 1 und 3 werden nicht verwendet.
+* Ein VLAN-Tag ist optional.
+
+ a| 
+* Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+* Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
+* VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+
+
+|===
+--
+Bond-Modus für aggregierten Ports::
++
+--
+Diese Abbildung zeigt, wie die vier 10/25-GbE-Ports im Bond-Modus für aggregierte Ports verbunden sind.
+
+image::../media/sg5800_aggregate_port.png[Abbildung: Verbindungen der 10/25-GbE-Ports auf dem SG5800 Controller im Aggregatmodus]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+1
+ a| 
+Alle vier Ports werden in einer einzelnen LACP Bond gruppiert, sodass alle Ports für den Grid-Netzwerk- und Client-Netzwerk-Traffic verwendet werden können.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der vier 10/25-GbE-Ports zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+[cols="1a,2a,2a"]
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+
+
+ a| 
+Nur LACP (802.3ad
+ a| 
+* Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
+* Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+
+ a| 
+* Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
+* Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+
+
+|===
+--
+
+
+--
 .SG6000
 --
 Bond-Modus mit festem Port (Standard)::
@@ -535,14 +641,20 @@ image::../media/sg6000_cn_bonded_managemente_ports.png[Anschluss Der Admin-Netzw
 
 
 --
-.SGF6112
+.SG6100
 --
 Bond-Modus mit festem Port (Standard)::
 +
 --
 Die Abbildung zeigt, wie die vier Netzwerk-Ports im Bond-Modus mit festen Ports verbunden sind (Standardkonfiguration).
 
+*SGF6112*:
+
 image::../media/sgf6112_fixed_port.png[SGF6112 Bond-Modus mit festem Port]
+
+*SG6100*:
+
+image::../media/sg6100_cn_fixed_port.png[SG6100-CN Bond-Modus mit festem Port]
 
 [cols="1a,3a"]
 |===
@@ -604,7 +716,13 @@ Bond-Modus für aggregierten Ports::
 --
 Die Abbildung zeigt, wie die vier Netzwerk-Ports im aggregierten Port-Bond-Modus verbunden sind.
 
+*SGF6112*:
+
 image::../media/sgf6112_aggregate_ports.png[SGF6112 aggregierter Port Bond-Modus]
+
+*SG6100*:
+
+image::../media/sg6100_cn_aggregate_ports.png[SG6100-CN aggregierter Port Bond-Modus]
 
 [cols="1a,3a"]
 |===
@@ -640,9 +758,15 @@ Nur LACP (802.3ad
 Active-Backup Netzwerk-Bond-Modus für Management-Ports::
 +
 --
-Diese Abbildung zeigt, wie die beiden 1-GbE-Management-Ports auf dem SGF6112 im Active-Backup-Netzwerk-Bond-Modus für das Admin-Netzwerk verbunden sind.
+Diese Abbildung zeigt, wie die beiden 1-GbE-Management-Ports im Active-Backup-Netzwerk-Bond-Modus für das Admin-Netzwerk verbunden sind.
+
+*SGF6112*:
 
 image::../media/sgf6112_bonded_management_ports.png[Admin Network Ports, verbunden mit SGF6112]
+
+*SG6100*:
+
+image::../media/sg6100_cn_bonded_management_ports.png[Admin Network Ports, verbunden mit SG6100-CN]
 
 --
 
@@ -673,12 +797,12 @@ Das erste Mal, wenn Sie diese Seite aufrufen:
 Die Netzwerk-Switches, die Sie für das Grid-Netzwerk und das Client-Netzwerk verwenden, müssen ebenfalls für diese Geschwindigkeit konfiguriert sein. Für die konfigurierte Verbindungsgeschwindigkeit müssen Sie die entsprechenden Adapter oder Transceiver verwenden. Verwenden Sie die automatische Verbindungsgeschwindigkeit, wenn möglich, da diese Option sowohl die Verbindungsgeschwindigkeit als auch den FEC-Modus (Forward Error Correction) mit dem Link-Partner verhandelt.
 
 +
-Wenn Sie die 25-GbE-Verbindungsgeschwindigkeit für die SG6000- oder SG5700-Netzwerkports verwenden möchten:
+Falls Sie die 25-GbE-Verbindungsgeschwindigkeit für die SG6100-, SG6000-, SG5800- oder SG5700-Netzwerkports verwenden möchten:
 
 +
 ** Verwenden Sie SFP28 Transceiver und SFP28 Twinax-Kabel oder optische Kabel.
 ** Wählen Sie für den SG5700 *25GbE* aus der Dropdown-Liste *Link Speed* aus.
-** Wählen Sie für den SG6000 aus der Dropdown-Liste *Verbindungsgeschwindigkeit* die Option *Auto* aus.
+** Wählen Sie für den SG5800, SG6000 oder SG6100 aus der Dropdown-Liste *Verbindungsgeschwindigkeit* die Option *Auto* aus.
 
 
 . Aktivieren oder deaktivieren Sie die StorageGRID-Netzwerke, die Sie verwenden möchten.

@@ -1,0 +1,85 @@
+---
+permalink: installconfig/sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
+summary: Sie installieren einen Satz Schienen für das E4000-Controller-Shelf in Ihrem Schrank oder Rack und schieben das Controller-Shelf dann auf die Schienen. Bei Installation der Erweiterungs-Shelfs für 60 Laufwerke gilt dasselbe Verfahren. 
+---
+= Installation von Shelfs mit 60 Laufwerken (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie installieren einen Satz Schienen für das E4000-Controller-Shelf in Ihrem Schrank oder Rack und schieben das Controller-Shelf dann auf die Schienen. Bei Installation der Erweiterungs-Shelfs für 60 Laufwerke gilt dasselbe Verfahren.
+
+.Bevor Sie beginnen
+* Sie haben die geprüft https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Sicherheitshinweise"^] Im Lieferumfang enthaltene Dokumentation und Informationen zu den Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware.
+* Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
+
+
+
+CAUTION: Um eine Beschädigung der Hardware zu vermeiden, verschieben Sie niemals das Shelf, wenn Laufwerke installiert sind. Vor dem Verschieben des Shelfs müssen alle Laufwerke entfernt werden.
+
+
+CAUTION: Wenn Sie das E4000-Controller-Shelf oder optionale Erweiterungs-Shelfs installieren, installieren Sie die Hardware von unten nach oben im Rack oder Schrank, um ein Umkippen der Ausrüstung zu verhindern. Um sicherzustellen, dass sich das schwerste Gerät unten im Schrank oder Rack befindet, installieren Sie den SG6100-CN-Controller über dem E4000-Controller-Shelf und den Erweiterungseinschüben.
+
+
+CAUTION: Vergewissern Sie sich vor der Installation, dass die mit der Appliance gelieferten Kabel oder die von Ihnen gelieferten Kabel lang genug für das geplante Layout sind.
+
+.Schritte
+. Befolgen Sie die Anweisungen für den Schienensatz, um die Schienen in Ihrem Schrank oder Rack zu installieren.
++
+Bei Vierkantlochschränken zuerst die mitgelieferten Käfigmuttern einbauen, um die Vorder- und Rückseite des Regals mit Schrauben zu sichern.
+
+. Entfernen Sie den äußeren Verpackungskasten für das Gerät. Falten Sie dann die Klappen auf dem inneren Kasten nach unten.
+. Wenn Sie das Gerät mit der Hand anheben, befestigen Sie die vier Griffe an den Seiten des Gehäuses.
++
+Drücken Sie auf jeden Griff nach oben, bis er einrastet.
+
++
+image::../media/lift_handles.gif[Hebe Griffe]
+
+. Setzen Sie die Rückseite des Regals (das Ende mit den Anschlüssen) auf die Schienen.
+. Das Regal von unten halten und in den Schrank schieben. Wenn Sie die Griffe verwenden, lösen Sie mit den Daumenverriegelungen jeweils einen Griff, während Sie das Regal einschieben.
++
+Um die Griffe zu entfernen, ziehen Sie den Entriegelungshebel nach unten und ziehen Sie dann aus dem Shelf heraus.
+
+. Befestigen Sie das Regal an der Vorderseite des Schranks.
++
+Bringen Sie die Schrauben an beiden Seiten in die ersten und dritten Löcher von der Oberseite des Regals ein.
+
+. Befestigen Sie das Regal an der Rückseite des Gehäuses.
++
+Legen Sie zwei hintere Halterungen an jeder Seite des oberen hinteren Bereichs des Regals an. Bringen Sie die Schrauben in die ersten und dritten Löcher jeder Halterung ein.
+
++
+image::../media/mount_hardware.gif[Montieren Sie Die Hardware]
+
+. Wiederholen Sie diese Schritte für alle Erweiterungs-Shelfs.
+. Installieren Sie 12 NL-SAS-Laufwerke in jedem der fünf Laufwerkseinschübe.
++
+.. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+.. Lösen Sie die Hebel an der oberen Antriebsschublade, und schieben Sie die Schublade mit den Hebeln heraus.
+.. Heben Sie jeden Antriebsgriff in eine vertikale Position.
+.. Positionieren Sie jedes Laufwerk vorsichtig in seinen Steckplatz, und senken Sie den angehobenen Laufwerkgriff ab, bis er einrastet.
++
+image::../media/install_drives_in_e2860.gif[Installieren Sie Laufwerke]
+
+.. Setzen Sie 12 NL-SAS-Laufwerke in die obere Schublade ein.
+.. Schieben Sie die Schublade wieder nach innen, indem Sie die Mitte drücken und beide Hebel vorsichtig schließen.
++
+
+CAUTION: Drücken Sie die Schublade nicht mehr, wenn Sie sich binden. Schieben Sie die Schublade mit den Freigabehebel an der Vorderseite der Schublade nach außen. Setzen Sie dann die Schublade vorsichtig wieder in den Schlitz ein.
+
+.. Wiederholen Sie diese Schritte, um NL-SAS-Laufwerke in die anderen vier Schubladen zu installieren.
++
+
+CAUTION: Sie müssen alle 60 Laufwerke installieren, um den korrekten Betrieb zu gewährleisten.
+
+.. Bringen Sie die Frontverkleidung am Shelf an, sofern eine vorhanden ist.
+
+
+. Wenn Sie Erweiterungs-Shelfs haben, wiederholen Sie diese Schritte, um 12 NL-SAS-Laufwerke in jedem Fach jedes Erweiterungs-Shelfs zu installieren.
+. Fahren Sie mit den Anweisungen zur Installation des SG6100-CN in einem Schrank oder Rack fort.
+

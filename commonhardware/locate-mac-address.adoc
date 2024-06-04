@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, mac, mac address 
 summary: In einigen Fällen müssen Sie möglicherweise die MAC-Adressenreferenzen nach dem Austausch einer Appliance aktualisieren. 
 ---
-= Aktualisieren Sie die MAC-Adressenverweise
+= Aktualisieren der MAC-Adressenreferenzen (SG100, SG1000, SGF6024 und SG6060)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

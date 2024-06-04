@@ -34,7 +34,7 @@ Je nachdem, welche Gerätetypen Sie konfigurieren, ist möglicherweise eine zus�
 
 === SANtricity System Manager
 
-Für SG6000 und SG5700 konfigurieren Sie SANtricity System Manager. Die SANtricity-Software wird verwendet, um die Hardware für diese Appliances zu überwachen.
+Für SG6160, SG6000, SG5800 und SG5700 wird SANtricity System Manager konfiguriert. Die SANtricity-Software wird verwendet, um die Hardware für diese Appliances zu überwachen.
 
 
 
@@ -56,9 +56,9 @@ Die folgenden Geräte verfügen über eine BMC-Schnittstelle, die konfiguriert w
 
 * Storage Appliances
 +
-** Konfigurieren Sie SANtricity System Manager (SG5700 und SG6000) für die Hardware-Überwachung
+** Konfigurieren Sie SANtricity System Manager (SG5700, SG5800, SG6000 und SG6100) die Software, die Sie für die Überwachung der Hardware verwenden
 ** Ändern Sie den RAID-Modus
-** Greifen Sie auf die BMC-Schnittstelle für den SG6000-CN-Controller zu
+** Greifen Sie auf die BMC-Schnittstelle für den Controller SG6000-CN oder SG6100-CN zu
 
 
 * Service-Appliances

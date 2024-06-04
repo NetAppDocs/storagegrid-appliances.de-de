@@ -293,7 +293,7 @@ Bitte auswählen:
 
 
  a| 
-VLAN-Tag (bei aktiviertem VLAN-Tagging)
+VLAN Tag (wenn VLAN Tagging aktiviert ist)
  a| 
 Geben Sie einen Wert zwischen 0 und 4095 ein:
 
@@ -369,7 +369,7 @@ Bitte auswählen:
 
 
  a| 
-VLAN-Tag (bei aktiviertem VLAN-Tagging)
+VLAN-Tag (wenn VLAN-Tagging aktiviert ist)
  a| 
 Geben Sie einen Wert zwischen 0 und 4095 ein:
 

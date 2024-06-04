@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112, manage drives tab, locate drive, fail drive, logically replace drive 
 summary: Über die Registerkarte Laufwerke managen im Grid Manager können Sie Fehlerbehebungs- und Wartungsaufgaben für die Laufwerke in der SGF6112-Appliance durchführen. 
 ---
-= Verwenden Sie die Registerkarte Laufwerke verwalten
+= Verwenden Sie die Registerkarte Laufwerke managen (SGF6112).
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -14,15 +14,14 @@ summary: 'Bei Storage-Controllern, die derzeit SANtricity OS 08.42.20.00 \(11.42
 Bei Storage-Controllern, die derzeit SANtricity OS 08.42.20.00 (11.42) oder eine neuere Version verwenden, müssen Sie zum Anwenden eines Upgrades den Grid-Manager verwenden.
 
 .Bevor Sie beginnen
-* Sie haben den konsultiert https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um sicherzustellen, dass die für das Upgrade verwendete SANtricity OS-Version mit Ihrer Appliance kompatibel ist.
+* Wenn Sie die SANtricity OS Version nicht von erhalten haben, auf die Sie ein Upgrade durchführen möchten https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^], Sie haben konsultiert https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^] Oder im https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um sicherzustellen, dass die für das Upgrade verwendete SANtricity OS-Version mit Ihrer Appliance kompatibel ist.
 * Sie haben die https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Berechtigung für Wartung oder Root-Zugriff"^].
 * Sie sind mit einem bei Grid Manager angemeldet https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Sie haben die Provisionierungs-Passphrase.
-* Sie haben Zugriff auf https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^].
 
 
 .Über diese Aufgabe
-Andere Software-Updates (StorageGRID Software-Upgrade oder Hotfix) können erst nach Abschluss des SANtricity OS Upgrades durchgeführt werden. Wenn Sie versuchen, vor Abschluss des SANtricity OS-Upgrades einen Hotfix oder ein StorageGRID-Software-Upgrade zu starten, werden Sie zur Upgrade-Seite von SANtricity OS umgeleitet.
+Andere Software-Updates (StorageGRID Software-Upgrade oder Hotfix) können nicht ausgeführt werden, während ein SANtricity-Betriebssystem-Upgrade durchgeführt wird. Wenn Sie versuchen, vor Abschluss des SANtricity OS-Upgrades einen Hotfix oder ein StorageGRID-Software-Upgrade zu starten, werden Sie zur Upgrade-Seite von SANtricity OS umgeleitet.
 
 Das Verfahren ist erst abgeschlossen, wenn das SANtricity OS Upgrade erfolgreich auf alle zutreffenden Nodes angewendet wurde, die für das Upgrade ausgewählt wurden. Das SANtricity Betriebssystem kann länger als 30 Minuten dauern, bis das Betriebssystem auf jedem Node (sequenziell) und bis zu 90 Minuten zum Neustart jeder StorageGRID Storage Appliance benötigt wird. Alle Nodes in Ihrem Grid, die SANtricity OS nicht verwenden, sind von diesem Verfahren nicht betroffen.
 

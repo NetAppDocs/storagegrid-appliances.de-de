@@ -31,7 +31,7 @@ CAUTION: Wenn Sie das Arbeitslaufwerk entfernen, wird der Appliance-Node herunte
 
 
 .Schritte
-. Stellen Sie sicher, dass die linke LED des zu ersetzenden Laufwerks gelb blinkt. Wenn im Grid Manager oder BMC UIs ein Laufwerkproblem gemeldet wurde, beziehen sich HDD02 oder HDD2 auf das Laufwerk im oberen Steckplatz und HDD03 oder HDD3 auf das Laufwerk im unteren Steckplatz.
+. Stellen Sie sicher, dass die linke LED des zu ersetzenden Laufwerks gelb blinkt. Wenn im Grid Manager oder der BMC-Benutzeroberfläche ein Laufwerkproblem gemeldet wurde, beziehen sich HDD02 oder HDD2 auf das Laufwerk im oberen Steckplatz und HDD03 oder HDD3 auf das Laufwerk im unteren Steckplatz.
 +
 Sie können den Status der SSDs auch mit Grid Manager überwachen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Appliance Node*` > *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld Speicher-RAID-Modus eine Meldung darüber, welches Laufwerk ausgefallen ist.
 

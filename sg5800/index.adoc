@@ -1,0 +1,20 @@
+---
+permalink: sg5800/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= SG5800 Appliance warten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie die SANtricity OS Software auf dem E4000-Controller aktualisieren, die Ethernet-Link-Konfiguration des SG5800-Controllers ändern, den E4000-Controller oder den SG5800-Controller austauschen oder bestimmte Komponenten austauschen. Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass die Appliance bereits als Storage-Node in einem StorageGRID-System bereitgestellt wurde.
+
+In diesem Abschnitt finden Sie spezifische Verfahren zur Wartung Ihrer SG5800 Appliance.
+
+Siehe link:../commonhardware/index.html["Allgemeine Verfahren"] Für Wartungsverfahren, die von allen Geräten verwendet werden.
+
+Siehe link:../installconfig/configuring-hardware.html["Richten Sie die Hardware ein"] Für Wartungsverfahren, die auch während der Erstinstallation und -Konfiguration der Appliance durchgeführt werden.

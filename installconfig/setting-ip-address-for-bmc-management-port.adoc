@@ -11,7 +11,7 @@ summary: Bevor Sie auf die BMC-Schnittstelle zugreifen können, müssen Sie die 
 
 
 [role="lead"]
-Bevor Sie auf die BMC-Schnittstelle zugreifen können, konfigurieren Sie die IP-Adresse für den BMC-Verwaltungsport auf den SGF6112-, SG6000-CN-Controllern oder Service-Appliances.
+Bevor Sie auf die BMC-Schnittstelle zugreifen können, konfigurieren Sie die IP-Adresse für den BMC-Verwaltungsport auf den SGF6112-, SG6000-CN-Controller-, SG6100-CN-Controller- oder Service-Appliances.
 
 Wenn Sie mit ConfigBuilder eine JSON-Datei erstellen, können Sie IP-Adressen automatisch konfigurieren. Siehe link:automating-appliance-installation-and-configuration.html["Automatisierung der Appliance-Installation und -Konfiguration"].
 
@@ -49,7 +49,13 @@ image::../media/sg6000_cn_bmc_management_port.gif[BMC-Management-Port am SG6000-
 --
 .SG6100
 --
+_SGF6112_:
+
 image::../media/sgf6112_cn_bmc_management_port.png[BMC-Management-Port SGF6112]
+
+SG6100-CN_:
+
+image::../media/sg6100_cn_bmc_management_port.png[BMC-Management-Port SG610-CN]
 
 --
 ====

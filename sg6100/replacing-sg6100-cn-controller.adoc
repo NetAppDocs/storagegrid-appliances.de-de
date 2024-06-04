@@ -1,0 +1,106 @@
+---
+permalink: sg6100/replacing-sg6100-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, Replacing, replace, sg6100-cn, controller, remove, removing, removal, install, installing, installation 
+summary: Möglicherweise müssen Sie den SG6100-CN-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist. 
+---
+= SG6100-CN-Controller austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie den SG6100-CN-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
+
+.Bevor Sie beginnen
+* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
+* Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
+* Der Controller ist physisch zu finden, der im Datacenter ersetzt werden soll.
++
+link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+
+
+
+.Über diese Aufgabe
+Auf den Appliance-Storage-Node kann nicht zugegriffen werden, wenn Sie den SG6100-CN-Controller austauschen. Wenn der SG6100-CN-Controller ausreichend funktioniert, können Sie zu Beginn dieses Verfahrens eine kontrollierte Abschaltung durchführen.
+
+
+NOTE: Wenn Sie den Controller vor dem Installieren der StorageGRID-Software ersetzen, können Sie nach Abschluss dieses Verfahrens möglicherweise nicht sofort auf den StorageGRID Appliance Installer zugreifen. Sie können zwar von anderen Hosts im selben Subnetz wie die Appliance auf das Installationsprogramm der StorageGRID-Appliance zugreifen, können jedoch nicht von Hosts in anderen Subnetzen darauf zugreifen. Diese Bedingung sollte sich innerhalb von 15 Minuten lösen (wenn Einträge im ARP-Cache für die ursprüngliche Controller-Zeit erforderlich sind), oder Sie können den Zustand sofort löschen, indem Sie alle alten ARP-Cacheeinträge manuell vom lokalen Router oder Gateway löschen.
+
+.Schritte
+. Zeigt die aktuellen Konfigurationen des Geräts an und zeichnet sie auf.
++
+.. Melden Sie sich bei der zu ersetzenden Appliance an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Geben Sie Ein: `*run-host-command ipmitool lan print*` Zeigt die aktuellen BMC-Konfigurationen für die Appliance an.
+
+
+. Wenn der Controller SG6100-CN ausreichend funktioniert, um ein kontrolliertes Herunterfahren zu ermöglichen, link:power-sg6100-cn-controller-off-on.html#shut-down-sg6100-cn-controller["Fahren Sie den SG6100-CN-Controller herunter"].
+. Wenn eine der Netzwerkschnittstellen auf dieser StorageGRID-Appliance für DHCP konfiguriert ist, müssen Sie möglicherweise die permanenten DHCP-Lease-Zuordnungen auf den DHCP-Servern aktualisieren, um auf die MAC-Adressen der Ersatz-Appliance zu verweisen. Das Update stellt sicher, dass der Appliance die erwarteten IP-Adressen zugewiesen werden.
+. Entfernen und ersetzen Sie den SG6100-CN-Controller:
++
+.. Beschriften Sie die Kabel, und ziehen Sie sie ab.
++
+
+CAUTION: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
+.. Entfernen Sie den fehlerhaften Controller aus dem Schrank oder Rack.
+.. Setzen Sie den Ersatzcontroller in den Schrank oder Rack ein.
+.. Ersetzen Sie die Kabel.
+.. Schalten Sie den Controller ein und überwachen Sie die Controller-LEDs.
+
+
+. Wenn die Hardwareverschlüsselung für die SED-Laufwerke auf der Appliance, die Sie ausgetauscht haben, aktiviert war, müssen Sie dies tun https://docs.netapp.com/us-en/storagegrid-appliances/installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["Geben Sie die Passphrase für die Laufwerkverschlüsselung ein"] So greifen Sie auf die verschlüsselten Laufwerke zu, wenn die Ersatz-Appliance zum ersten Mal gestartet wird.
+. Wenn die Appliance, bei der Sie den Controller ausgetauscht haben, zur Verschlüsselung von Daten einen Schlüsselverwaltungsserver (KMS) verwendet hat, ist möglicherweise eine zusätzliche Konfiguration erforderlich, bevor der Node dem Grid beitreten kann. Wenn der Node nicht automatisch dem Grid hinzugefügt wird, stellen Sie sicher, dass die folgenden Konfigurationseinstellungen auf den neuen Controller übertragen wurden, und konfigurieren Sie manuell alle Einstellungen, für die nicht die erwartete Konfiguration vorhanden ist:
++
+** link:../installconfig/configuring-network-links.html["Netzwerkverbindungen konfigurieren"]
+** link:../installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"]
+** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
+
+
+. Melden Sie sich bei der Appliance mit dem ausgetauschten Controller an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+. Stellen Sie die BMC-Netzwerkverbindung für die Appliance wieder her. Es gibt zwei Möglichkeiten:
++
+** Verwenden Sie statische IP, Netzmaske und Gateway
+** Verwenden Sie DHCP, um eine IP, eine Netzmaske und ein Gateway zu erhalten
++
+... Geben Sie zum Wiederherstellen der BMC-Konfiguration für die Verwendung einer statischen IP, Netzmaske und eines Gateways die folgenden Befehle ein:
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Geben Sie den folgenden Befehl ein, um die BMC-Konfiguration so wiederherzustellen, dass DHCP zum Abrufen einer IP, einer Netmask und eines Gateways verwendet wird:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Stellen Sie nach dem Wiederherstellen der BMC-Netzwerkverbindung eine Verbindung zur BMC-Schnittstelle her, um die zusätzlich angewendete benutzerdefinierte BMC-Konfiguration zu prüfen und wiederherzustellen. Sie sollten beispielsweise die Einstellungen für SNMP-Trap-Ziele und E-Mail-Benachrichtigungen bestätigen. Siehe link:../installconfig/configuring-bmc-interface.html["Konfigurieren Sie die BMC-Schnittstelle"].
+. Vergewissern Sie sich, dass der Appliance-Node im Grid Manager angezeigt wird und keine Meldungen angezeigt werden.
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

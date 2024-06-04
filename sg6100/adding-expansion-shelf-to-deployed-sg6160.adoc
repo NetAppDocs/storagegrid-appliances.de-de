@@ -1,0 +1,204 @@
+---
+permalink: sg6100/adding-expansion-shelf-to-deployed-sg6160.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, sg6160, expansion shelf, expansion, drive, disk, install, installing, installation, add, adding, expand 
+summary: Zur Erhöhung der Storage-Kapazität können Sie ein oder zwei Erweiterungs-Shelfs zu einem SG6160 hinzufügen, das in einem StorageGRID System bereitgestellt wird. 
+---
+= Erweiterungs-Shelf zu implementiertem SG6160 hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zur Erhöhung der Storage-Kapazität können Sie einem SG6160, das bereits in einem StorageGRID System bereitgestellt ist, ein oder zwei Erweiterungs-Shelves hinzufügen.
+
+.Bevor Sie beginnen
+* Sie müssen über eine Passphrase für die Bereitstellung verfügen.
+* Sie müssen StorageGRID 11.8 oder höher ausführen.
+* Sie haben das Erweiterungs-Shelf und zwei SAS-Kabel für jedes Erweiterungs-Shelf.
+* Dort befinden sich die Storage Appliance physisch, wo das Erweiterungs-Shelf im Datacenter hinzugefügt wird.
++
+link:locating-sgf6112-in-data-center.html["Controller im Datacenter finden"]
+
+
+
+.Über diese Aufgabe
+Um ein Erweiterungs-Shelf hinzuzufügen, führen Sie die folgenden grundlegenden Schritte aus:
+
+* Installieren Sie die Hardware in den Schrank oder Rack.
+* Den SG6160 in den Wartungsmodus versetzen.
+* Schließen Sie das Erweiterungs-Shelf an das E4000-Controller-Shelf oder an ein anderes Erweiterungs-Shelf an.
+* Starten Sie die Erweiterung mithilfe des Installationsprogramms für die StorageGRID-Appliance.
+* Warten Sie, bis die neuen Volumes konfiguriert sind.
+
+
+Das Abschließen des Vorgangs für ein oder zwei Erweiterungs-Shelfs sollte eine Stunde oder weniger pro Appliance-Node dauern. Zur Minimierung der Ausfallzeiten weisen Sie nach den folgenden Schritten darauf hin, die neuen Erweiterungs-Shelfs und Laufwerke zu installieren, bevor Sie das SG6160 in den Wartungsmodus versetzen. Die verbleibenden Schritte sollten etwa 20 bis 30 Minuten pro Appliance-Node in Anspruch nehmen.
+
+.Schritte
+. Befolgen Sie die Anweisungen für link:../installconfig/sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html["Installieren von Shelfs mit 60 Laufwerken in einem Schrank oder Rack"].
+. Vom Grid Manager link:../commonhardware/placing-appliance-into-maintenance-mode.html["Setzen Sie den SG6100-CN Controller in den Wartungsmodus"].
+. Verbinden Sie jedes Erweiterungs-Shelf wie in der Abbildung gezeigt mit dem E4000 Controller-Shelf.
++
+Diese Zeichnung zeigt zwei Erweiterungs-Shelfs. Wenn nur einer vorhanden ist, verbinden Sie IOM A mit Controller A und verbinden Sie IOM B mit Controller B
+
++
+image::../media/expansion_shelves_connections_sg6160.png[SG6160 Erweiterungs-Shelf-Verbindungen]
+
++
+[cols="1a,2a"]
+|===
+| Legende | Beschreibung 
+
+
+ a| 
+1
+ a| 
+SG6100-CN
+
+
+
+ a| 
+2
+ a| 
+E4000 Controller Shelf
+
+
+
+ a| 
+3
+ a| 
+Controller A
+
+
+
+ a| 
+4
+ a| 
+Controller B
+
+
+
+ a| 
+5
+ a| 
+Erweiterungs-Shelf 1
+
+
+
+ a| 
+6
+ a| 
+IOM A für Erweiterungs-Shelf 1
+
+
+
+ a| 
+7
+ a| 
+IOM B für Erweiterungs-Shelf 1
+
+
+
+ a| 
+8
+ a| 
+Erweiterungs-Shelf 2
+
+
+
+ a| 
+9
+ a| 
+IOM A für Erweiterungs-Shelf 2
+
+
+
+ a| 
+10
+ a| 
+IOM B für Erweiterungs-Shelf 2
+
+|===
+. Schließen Sie die Stromkabel an, und setzen Sie Strom auf die Erweiterungs-Shelves.
++
+.. Schließen Sie ein Netzkabel an jede der beiden Netzteile in jedem Erweiterungs-Shelf an.
+.. Verbinden Sie die beiden Netzkabel jedes Erweiterungs-Shelf mit zwei verschiedenen PDUs im Schrank oder Rack.
+.. Schalten Sie die beiden Netzschalter für jedes Erweiterungs-Shelf ein.
++
+*** Schalten Sie die Netzschalter während des Einschalters nicht aus.
+*** Die Lüfter in den Erweiterungsregalen sind beim ersten Start möglicherweise sehr laut. Das laute Geräusch beim Anfahren ist normal.
+
+
+
+
+. Überwachen Sie die Startseite des Installationsprogramms für StorageGRID-Geräte.
++
+Die Erweiterungs-Shelfs wurden in etwa fünf Minuten eingeschaltet und vom System erkannt. Auf der Startseite wird die Anzahl der neu erkannten Erweiterungs-Shelves angezeigt, und die Schaltfläche Expansion starten ist aktiviert.
+
++
+Der Screenshot zeigt Beispiele für Meldungen, die auf der Startseite angezeigt werden können, je nach Anzahl der vorhandenen oder neuen Erweiterungs-Shelfs, wie folgt:
+
++
+** Das oben auf der Seite eingekreiste Banner zeigt die Gesamtzahl der erkannten Erweiterungs-Shelfs an.
++
+*** Das Banner zeigt die Gesamtzahl der Erweiterungs-Shelfs an, unabhängig davon, ob die Shelfs konfiguriert und implementiert oder neu und nicht konfiguriert sind.
+*** Wenn keine Erweiterungs-Shelfs erkannt werden, wird das Banner nicht angezeigt.
+
+
+** Die Nachricht, die unten auf der Seite eingekreist wurde, zeigt an, dass eine Erweiterung bereit ist, gestartet zu werden.
++
+*** Die Meldung gibt die Anzahl der neu erkannten Erweiterungs-Shelfs StorageGRID an. „`Attached`“ gibt an, dass das Shelf erkannt wird. „`Unconfigured`“ gibt an, dass das Shelf neu und noch nicht mit dem Installationsprogramm für StorageGRID Appliance konfiguriert ist.
++
+
+NOTE: Bereits bereitgestellte Erweiterungs-Shelfs sind in dieser Meldung nicht enthalten. Sie werden in die Zählung in das Banner oben auf der Seite aufgenommen.
+
+*** Die Meldung wird nicht angezeigt, wenn keine neuen Erweiterungseinschübe erkannt werden.
++
+image::../media/appl_installer_home_expansion_shelf_ready_to_install.png[Installation Von Erweiterungs-Shelf]
+
+
+
+
+
+. Lösen Sie bei Bedarf alle in den Meldungen auf der Startseite beschriebenen Probleme.
++
+Verwenden Sie beispielsweise den SANtricity System Manager, um alle Probleme mit der Storage-Hardware zu beheben.
+
+. Überprüfen Sie, ob die Anzahl der auf der Startseite angezeigten Erweiterungs-Shelfs mit der Anzahl der hinzuzufügenden Erweiterungs-Shelfs übereinstimmt.
++
+
+NOTE: Wenn die neuen Erweiterungs-Shelfs nicht erkannt wurden, überprüfen Sie, ob sie ordnungsgemäß verkabelt und eingeschaltet sind.
+
+. [[Start_Expansion]]Klicken Sie auf *Erweiterung starten*, um die Erweiterungs-Shelfs zu konfigurieren und für den Objekt-Storage verfügbar zu machen.
+. Überwachen Sie den Fortschritt der Erweiterungs-Shelf-Konfiguration.
++
+Fortschrittsbalken werden auf der Webseite angezeigt, genau wie bei der Erstinstallation.
+
++
+image::../media/monitor_expansion_for_new_appliance_shelf.png[Überwachung Der Erweiterungs-Shelf-Konfiguration]
+
++
+Nach Abschluss der Konfiguration wird das Gerät automatisch neu gestartet, um den Wartungsmodus zu beenden und wieder in das Raster einzusteigen. Dieser Vorgang kann bis zu 20 Minuten dauern.
+
++
+
+NOTE: Um die Konfiguration des Erweiterungs-Shelfs erneut zu versuchen, falls dies fehlschlägt, wechseln Sie zum Installationsprogramm der StorageGRID-Appliance, wählen Sie *Erweitert* > *Controller neu starten* und wählen Sie dann *Neustart im Wartungsmodus* aus. Nachdem der Node neu gebootet wurde, versuchen Sie den erneut <<start_expansion,Konfiguration des Erweiterungs-Shelfs>>.
+
++
+Wenn der Neustart abgeschlossen ist, sieht die Registerkarte *Tasks* wie der folgende Screenshot aus:
+
++
+image::../media/appliance_installer_reboot_complete.png[Neustart Abgeschlossen]
+
+. Überprüfen Sie den Status des Appliance Storage Node und der neuen Erweiterungs-Shelfs.
++
+.. Wählen Sie im Grid Manager *NODES* aus, und überprüfen Sie, ob der Storage Node der Appliance über ein grünes Häkchen verfügt.
++
+Das grüne Häkchen bedeutet, dass keine Meldungen aktiv sind und der Node mit dem Raster verbunden ist. Eine Beschreibung der Knotensymbole finden Sie unter https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Überwachen Sie die Status der Node-Verbindung"^].
+
+.. Wählen Sie die Registerkarte *Storage* aus, und bestätigen Sie, dass in der Objektspeichertabelle für jedes hinzugefügte Erweiterungs-Shelf 16 neue Objektspeichern angezeigt werden.
+.. Vergewissern Sie sich, dass jedes neue Erweiterungs-Shelf den Shelf-Status „Nominal“ sowie den Konfigurationsstatus von „konfiguriert“ aufweist.
+
+
+

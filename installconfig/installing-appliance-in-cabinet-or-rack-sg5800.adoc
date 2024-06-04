@@ -1,0 +1,93 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg5800.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, sg5812, sg5860, install, cabinet, rack, rails, drives 
+summary: Sie installieren eine Reihe von Schienen in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen. Wenn Sie ein SG5760 besitzen, installieren Sie die Laufwerke nach der Installation des Geräts. 
+---
+= In Schrank oder Rack installieren (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie installieren eine Reihe von Schienen in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen. Wenn Sie über ein SG5860 verfügen, installieren Sie die Laufwerke nach der Installation des Geräts.
+
+.Bevor Sie beginnen
+* Sie haben die geprüft https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Sicherheitshinweise"^] Im Lieferumfang enthaltene Dokumentation und Informationen zu den Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware.
+* Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
+
+
+
+
+== SG5812 installieren
+
+Führen Sie die folgenden Schritte aus, um ein SG5812-Gerät in ein Rack oder einen Schrank zu installieren.
+
+
+CAUTION: Um den SG5812 sicher zu bewegen, sind zwei Personen oder ein mechanisierter Aufzug erforderlich.
+
+
+CAUTION: Installieren Sie die Hardware von der Unterseite des Racks oder Racks bis zu, um ein Umkippen des Geräts zu verhindern.
+
+.Schritte
+. Befolgen Sie die Anweisungen für den Schienensatz, um die Schienen zu installieren.
+. Setzen Sie die Rückseite des Geräts (das Ende mit den Anschlüssen) auf die Schienen.
+. Schieben Sie das Gerät vorsichtig bis zum Ende in den Schrank oder das Rack.
+. Befestigen Sie das Gerät gemäß den Anweisungen im Schienensatz am Schrank oder Rack.
+. Befestigen Sie die Blende an der Vorderseite.
+
+
+
+
+== SG5860 einbauen
+
+Gehen Sie wie folgt vor, um ein SG5860-Gerät und alle Erweiterungseinschübe in ein Rack oder einen Schrank zu installieren.
+
+
+CAUTION: Installieren Sie die Hardware von der Unterseite des Racks oder Racks bis zu, um ein Umkippen des Geräts zu verhindern.
+
+
+CAUTION: Um einen leeren SG5860 sicher zu bewegen, sind vier Personen oder ein mechanisierter Lift erforderlich.
+
+
+CAUTION: Um eine Beschädigung der Hardware zu vermeiden, sollten Sie das SG5860 niemals verschieben, wenn Laufwerke installiert sind. Vor dem Verschieben des Shelfs müssen alle Laufwerke entfernt werden.
+
+.Schritte
+. Befolgen Sie die Anweisungen für den Schienensatz, um die Schienen in Ihrem Schrank oder Rack zu installieren.
+. Bereiten Sie das Gerät vor:
++
+.. Entfernen Sie den äußeren Verpackungskasten.
+.. Klappen Sie die Klappen auf dem inneren Kasten nach unten.
+.. Wenn Sie den SG5860 von Hand anheben, bringen Sie die vier Griffe an den Seiten des Gehäuses an.
++
+Sie entfernen diese Griffe, während Sie das Gerät auf die Schienen schieben.
+
+
+
+. Wenn Ihr Schrank quadratische Löcher hat, bringen Sie die Käfigmuttern an, damit Sie die Vorder- und Rückseite des Regals mit Schrauben befestigen können.
+. Setzen Sie die Rückseite des Geräts (das Ende mit den Anschlüssen) auf die Schienen.
+. Halten Sie das Gerät von unten ab, und schieben Sie es in das Rack oder den Schrank.
++
+Verwenden Sie die Daumenverriegelungen, um die Griffe zu lösen, während Sie das Gerät einschieben.
+
+. Befestigen Sie das Gerät an der Vorderseite des Racks, indem Sie auf jeder Seite zwei Schrauben in die erste und dritte Bohrung (von oben nach unten) einsetzen.
+. Befestigen Sie das Gerät mit den Halterungen an der Rückseite des Racks oder Schranks.
+. Installieren Sie 12 Laufwerke in jedem der fünf Laufwerkseinschübe.
++
+Sie müssen alle 60 Laufwerke installieren, um den korrekten Betrieb zu gewährleisten.
+
++
+.. Setzen Sie das ESD-Armband auf, und entfernen Sie die Antriebe aus der Verpackung.
+.. Lösen Sie die Hebel an der oberen Antriebsschublade, und schieben Sie die Schublade mit den Hebeln heraus.
+.. Heben Sie den Laufwerkgriff senkrecht an, und richten Sie die Tasten am Laufwerk an den Kerben in der Schublade aus.
++
+image::../media/appliance_drive_insertion.gif[Installieren Sie das Laufwerk in einer Appliance mit 60 Laufwerken]
+
+.. Drücken Sie vorsichtig auf die Oberseite des Laufwerks, und drehen Sie den Laufwerkgriff nach unten, bis das Laufwerk einrastet.
+.. Schieben Sie nach dem Einbau der ersten 12 Laufwerke die Schublade wieder nach innen, indem Sie die Mitte drücken und beide Hebel vorsichtig schließen.
+.. Wiederholen Sie diese Schritte für die anderen vier Schubladen.
+
+
+. Bringen Sie die Frontverkleidung an, sofern eine vorhanden ist.
+

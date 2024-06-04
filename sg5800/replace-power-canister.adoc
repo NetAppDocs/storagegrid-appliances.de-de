@@ -1,0 +1,146 @@
+---
+permalink: sg5800/replace-power-canister.html 
+sidebar: sidebar 
+keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
+summary: Ersetzen Sie ein Controller-Shelf oder Festplatten-Shelf für 60 Laufwerke, das zwei Stromankanister für Redundanz enthält. 
+---
+= Den Aktivkohlebehälter in SG5860 austauschen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Strombehälter in einem SG5860 austauschen.
+
+.Über diese Aufgabe
+Jede Appliance verfügt über zwei Stromzangen für Redundanz. Wenn ein Netzbehälter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Regal über eine redundante Stromquelle verfügt.
+
+Sie können einen Strombehälter austauschen, während das Gerät eingeschaltet ist und Host-E/A-Vorgänge ausführt. solange der zweite Strombehälter im Regal einen optimalen Status hat und im Detailbereich des Wiederherstellungs-Gurus im SANtricity-System-Manager das Feld *OK zum Entfernen* angezeigt wird *Ja*.
+
+Während Sie diese Aufgabe ausführen, versorgt der andere Netzbehälter beide Lüfter mit Strom, um sicherzustellen, dass das Gerät nicht überhitzt.
+
+.Bevor Sie beginnen
+* Überprüfen Sie die Details im Recovery Guru, um zu bestätigen, dass ein Problem mit dem Power Canister vorliegt, und wählen Sie *recheck* aus dem Recovery Guru aus, um sicherzustellen, dass keine weiteren Punkte zuerst angesprochen werden müssen.
+* Überprüfen Sie, ob die gelbe Warn-LED am Netzbehälter leuchtet und dass der Behälter über einen Fehler verfügt. Wenden Sie sich an den technischen Support, wenn die Warn-LEDs für beide Strombehälter im Regal gelb leuchten.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatzbehälter, der für Ihr Gerät unterstützt wird.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+
+
+
+
+
+
+== Schritt 1: Bereiten Sie sich auf den Austausch des Stromkanisters vor
+
+Bereiten Sie den Austausch eines Aktivkohlebehälters vor.
+
+.Schritte
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Bestimmen Sie aus dem SANtricity-System-Manager, welcher Stromversorgungsbehälter ausgefallen ist.
++
+.. Wählen Sie *Hardware*.
+.. Schau dir die Macht an image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] Symbol rechts neben den Dropdown-Listen *Shelf*, um zu bestimmen, welches Regal den defekten Strombehälter hat.
++
+Wenn eine Komponente ausgefallen ist, ist dieses Symbol rot.
+
+.. Wenn Sie das Regal mit einem roten Symbol finden, wählen Sie *Zurück vom Regal anzeigen*.
+.. Wählen Sie entweder den Netzbehälter oder das rote Power-Symbol.
+.. Prüfen Sie auf der Registerkarte *Netzteile* den Status der Strombehälter, um festzustellen, welcher Netzbehälter ersetzt werden muss.
++
+Eine Komponente mit dem Status *failed* muss ersetzt werden.
+
++
+
+CAUTION: Wenn der zweite Leistungsbehälter im Regal keinen *optimalen*-Status hat, versuchen Sie nicht, den defekten Strombehälter zu tauschen. Wenden Sie sich stattdessen an den technischen Support, um Hilfe zu erhalten.
+
++
+
+NOTE: Zudem finden Sie im Bereich Details des Recovery Guru Informationen zum fehlgeschlagenen Strombehälter. Alternativ können Sie die für das Shelf angezeigten Informationen überprüfen oder das Ereignisprotokoll unter Support prüfen und nach Komponententyp filtern.
+
+
+
+. Suchen Sie auf der Rückseite des Speicherarrays die Warn-LEDs, um den zu entfernenden Netzbehälter zu finden.
++
+Sie müssen den Netzbehälter austauschen, dessen Warn-LED leuchtet.
+
+
+
+
+
+== Schritt 2: Entfernen Sie den defekten Netzbehälter
+
+Entfernen Sie einen defekten Netzbehälter, so dass Sie ihn durch einen neuen ersetzen können.
+
+.Schritte
+. Setzen Sie den antistatischen Schutz auf.
+. Packen Sie den neuen Leistungsbehälter aus, und stellen Sie ihn auf eine Ebene Fläche in der Nähe des Regals ein.
++
+Bewahren Sie alle Verpackungsmaterialien auf, wenn Sie den defekten Netzbehälter zurücksenden.
+
+. Schalten Sie den Netzschalter am Netzbehälter aus, den Sie entfernen müssen.
+. Öffnen Sie den Netzkabelhalter des Netzheizers, den Sie entfernen müssen, und ziehen Sie dann das Netzkabel vom Netzbehälter ab.
+. Drücken Sie die orangefarbene Verriegelung am Handgriff des Netzkanüsters, und öffnen Sie dann den Nockengriff, um den Netzbehälter vollständig aus der Mittelebene zu lösen.
+. Schieben Sie den Netzbehälter mit dem Nockengriff aus dem Regal.
++
+
+CAUTION: Wenn Sie einen Netzbehälter entfernen, verwenden Sie immer zwei Hände, um sein Gewicht zu stützen.
+
+
+
+
+
+== Schritt 3: Installieren Sie einen neuen Leistungsbehälter
+
+Installieren Sie einen neuen Netzbehälter, um den defekten auszutauschen.
+
+.Schritte
+. Stellen Sie sicher, dass sich der ein-/Ausschalter des neuen Leistungskannisters in der Stellung aus befindet.
+. Halten und richten Sie die Kanten des Leistungskanisters mit beiden Händen an der Öffnung im Systemgehäuse aus, und schieben Sie dann den Netzbehälter vorsichtig mit dem Nockengriff in das Gehäuse, bis er einrastet.
++
+
+CAUTION: Verwenden Sie keine übermäßige Kraft, wenn Sie den Netzbehälter in das System schieben, da der Anschluss beschädigt werden kann.
+
+. Schließen Sie den Nockengriff, so dass die Verriegelung in die verriegelte Position einrastet und der Leistungsbehälter vollständig sitzt.
+. Schließen Sie das Netzkabel wieder an den Netzbehälter an, und befestigen Sie das Netzkabel mithilfe der Netzkabelhalterung am Netzheizbehälter.
+. Schalten Sie den Strom zum neuen Power-Behälter ein.
+
+
+
+
+== Schritt 4: Vollständiger Netzbehälter Austausch
+
+Überprüfen Sie, ob der neue Strombehälter ordnungsgemäß funktioniert, sammeln Sie Support-Daten und setzen Sie den normalen Betrieb fort.
+
+.Schritte
+. Überprüfen Sie am neuen Netzbehälter, ob die grüne LED für die Stromversorgung leuchtet und die gelbe Warn-LED NICHT LEUCHTET.
+. Wählen Sie im Recovery Guru im SANtricity System Manager *recheck* aus, um sicherzustellen, dass das Problem behoben wurde.
+. Wenn noch ein nicht geschildeter Strombehälter gemeldet wird, wiederholen Sie die Schritte in <<Schritt 2: Entfernen Sie den defekten Netzbehälter>> Und ein <<Schritt 3: Installieren Sie einen neuen Leistungsbehälter>>. Wenn das Problem weiterhin besteht, wenden Sie sich an den technischen Support.
+. Entfernen Sie den antistatischen Schutz.
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
+
+
+.Was kommt als Nächstes?
+Der Austausch des Netzkanals ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

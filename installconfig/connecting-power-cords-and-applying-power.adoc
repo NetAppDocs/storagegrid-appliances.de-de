@@ -68,6 +68,27 @@ CAUTION: *Gefahr eines elektrischen Schlags* -- bevor Sie die Netzkabel anschlie
 
 
 --
+.SG5800
+--
+.Bevor Sie beginnen
+Vor dem Anschließen an die Stromversorgung müssen beide Netzschalter des Geräts ausgeschaltet sein.
+
+
+CAUTION: *Gefahr eines elektrischen Schlags* -- bevor Sie die Netzkabel anschließen, stellen Sie sicher, dass die beiden Netzschalter am Gerät ausgeschaltet sind.
+
+.Schritte
+. Stellen Sie sicher, dass die beiden Netzschalter am Gerät aus sind.
+. Schließen Sie die beiden Netzkabel an das Gerät an.
+. Verbinden Sie die beiden Netzkabel mit verschiedenen Stromverteilereinheiten (Power Distribution Units, PDUs) im Schrank oder Rack.
+. Schalten Sie die beiden Netzschalter am Gerät ein.
++
+** Schalten Sie die Netzschalter während des Einschalters nicht aus.
+** Die Fans sind beim ersten Start sehr laut. Das laute Geräusch beim Anfahren ist normal.
+
+
+
+
+--
 .SG6000
 --
 .Schritte
@@ -109,18 +130,49 @@ Drücken Sie den Netzschalter während des Einschalters nicht erneut.
 --
 .SG6100
 --
+*SGF6112*:
+
 .Schritte
 . Schließen Sie ein Netzkabel an jede der beiden Netzteile im Gerät an.
 . Schließen Sie diese beiden Netzkabel an zwei verschiedene Stromverteiler (Power Distribution Units, PDUs) im Schrank oder Rack an.
 . Wenn der Netzschalter auf der Vorderseite des Geräts derzeit nicht blau leuchtet, drücken Sie die Taste, um das Gerät einzuschalten.
+. Drücken Sie den Netzschalter während des Einschalters nicht erneut.
+. Die LED am Netzteil sollte grün leuchten, ohne zu blinken.
+. Wenn Fehler auftreten, beheben Sie alle Probleme.
+. Befestigen Sie die Frontverkleidung am Gerät, falls sie entfernt wurde.
+
+
+*SG6160*:
+
+.Schritte
+. Vergewissern Sie sich, dass beide Controller im Storage-Controller-Shelf deaktiviert sind.
++
+
+CAUTION: *Gefahr eines elektrischen Schlags* -- vor dem Anschließen der Netzkabel sicherstellen, dass die Netzschalter für jeden der beiden Speicher-Controller ausgeschaltet sind.
+
+. Wenn Sie über Erweiterungs-Shelfs verfügen, bestätigen Sie, dass beide IOM-Netzschalter aus sind.
++
+
+CAUTION: *Gefahr eines elektrischen Schlags* -- bevor Sie die Netzkabel anschließen, stellen Sie sicher, dass die beiden Netzschalter für jedes Erweiterungs-Regal ausgeschaltet sind.
+
+. Schließen Sie jedes der beiden Netzteile des SG6100-CN-Controllers über ein Netzkabel an.
+. Schließen Sie diese beiden Netzkabel an zwei verschiedene Stromverteiler (Power Distribution Units, PDUs) im Schrank oder Rack an.
+. Schließen Sie ein Netzkabel an jede der beiden Netzteile im Storage Controller Shelf an.
+. Wenn Sie über Erweiterungs-Shelfs verfügen, schließen Sie ein Netzkabel an jede der beiden Netzteile in jedem Erweiterungs-Shelf an.
+. Verbinden Sie die beiden Netzkabel jedes Storage Shelf (einschließlich der optionalen Erweiterungs-Shelfs) mit zwei verschiedenen PDUs im Rack oder Rack.
+. Wenn der Betriebsschalter an der Vorderseite des SG6100-CN-Controllers derzeit nicht blau leuchtet, drücken Sie die Taste, um den Controller einzuschalten.
 +
 Drücken Sie den Netzschalter während des Einschalters nicht erneut.
 
+. Schalten Sie die beiden Netzschalter auf der Rückseite des Storage Controller Shelf ein. Wenn Sie über Erweiterungs-Shelfs verfügen, schalten Sie die beiden Netzschalter für jedes Shelf ein.
 +
-Die LED am Netzteil sollte grün leuchten, ohne zu blinken.
+** Schalten Sie die Netzschalter während des Einschalters nicht aus.
+** Die Lüfter im Storage Controller Shelf und optionale Erweiterungs-Shelfs sind beim ersten Starten möglicherweise sehr laut. Das laute Geräusch beim Anfahren ist normal.
 
+
+. Überprüfen Sie nach dem Hochfahren der Komponenten, ob der Betriebsschalter an der Vorderseite des SG6100-CN-Controllers leuchtet.
 . Wenn Fehler auftreten, beheben Sie alle Probleme.
-. Befestigen Sie die Frontverkleidung am Gerät, falls sie entfernt wurde.
+. Bringen Sie die Frontverkleidung am SG6100-CN-Controller an, falls sie entfernt wurde.
 
 
 --

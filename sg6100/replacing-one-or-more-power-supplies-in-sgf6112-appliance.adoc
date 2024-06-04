@@ -2,16 +2,16 @@
 permalink: sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6100, sgf6112, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
-summary: Appliances der SG6100 Serie verfügen aus Redundanzgründen über zwei Netzteile. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät über eine redundante Stromversorgung verfügt. Beide Netzteile, die im Gerät betrieben werden, müssen das gleiche Modell und die gleiche Nennleistung aufweisen. 
+summary: Die SGF6112 Appliance und der SG6100-CN Computing-Node verfügen aus Redundanzgründen über zwei Netzteile. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät über eine redundante Stromversorgung verfügt. Beide Netzteile, die im Gerät betrieben werden, müssen das gleiche Modell und die gleiche Nennleistung aufweisen. 
 ---
-= Ersetzen Sie ein oder beide Netzteile im SGF6112
+= Ersetzen Sie ein oder beide Netzteile im SGF6112 oder SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die SGF6112 Appliance verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät über eine redundante Stromversorgung verfügt. Beide Netzteile, die im Gerät betrieben werden, müssen das gleiche Modell und die gleiche Nennleistung aufweisen.
+Die SGF6112 Appliance und der SG6100-CN Computing-Node verfügen aus Redundanzgründen über zwei Netzteile. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät über eine redundante Stromversorgung verfügt. Beide Netzteile, die im Gerät betrieben werden, müssen das gleiche Modell und die gleiche Nennleistung aufweisen.
 
 .Bevor Sie beginnen
 * Das ist schon link:locating-sgf6112-in-data-center.html["Das Gerät befindet sich physisch"] Bei zu ersetzenden Netzteilen.
@@ -30,9 +30,9 @@ Die SGF6112 Appliance verfügt über zwei Netzteile für Redundanz. Wenn eines d
 
 
 .Über diese Aufgabe
-Die Abbildung zeigt die beiden Netzteile für den SGF6112. Die Netzteile sind von der Rückseite des Geräts zugänglich.
+Die Abbildung zeigt die beiden Netzteile für die SGF6112 Appliance oder den SG6100-CN Computing-Node. Die Netzteile sind von der Rückseite des Geräts zugänglich.
 
-image::../media/sgf6112_power_supplies.png[Rückseite des SGF6112 mit zwei Netzteilen]
+image::../media/sgf6112_power_supplies.png[Rückseite SGF6112 oder SG6100-CN mit zwei Netzteilen]
 
 .Schritte
 . Wenn Sie nur ein Netzteil ersetzen, müssen Sie das Gerät nicht herunterfahren. Wechseln Sie zum <<Unplug_the_power_cord,Ziehen Sie das Netzkabel ab>> Schritt: Wenn Sie beide Netzteile gleichzeitig ersetzen, gehen Sie folgendermaßen vor, bevor Sie die Netzkabel abziehen:
@@ -40,7 +40,7 @@ image::../media/sgf6112_power_supplies.png[Rückseite des SGF6112 mit zwei Netzt
 .. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Schalten Sie das Gerät aus"].
 +
 
-CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt und beide Netzteile gleichzeitig austauschen, müssen Sie die Netzteile während eines geplanten Wartungsfensters austauschen. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
+CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt und beide Netzteile gleichzeitig austauschen, müssen Sie die Netzteile während eines geplanten Wartungsfensters austauschen, da bei diesem Vorgang der Zugriff auf diese Objekte vorübergehend unterbrochen werden kann. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
 
 
 

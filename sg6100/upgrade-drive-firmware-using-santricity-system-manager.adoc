@@ -1,0 +1,16 @@
+---
+permalink: sg6100/upgrading-drive-firmware-using-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6160, storage node, storage appliance, upgrade, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
+---
+= Aktualisieren Sie die Firmware des SG6160-Laufwerks mithilfe von SANtricity System Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aktualisieren Sie die Firmware auf den Laufwerken in Ihrer Appliance, um sicherzustellen, dass Sie über die neuesten Funktionen und Fehlerbehebungen verfügen.
+
+Ungelöste Direktive in <stdin> - beinhaltet:../_include/upgrading-drive-Firmware-using-santricity-System-Manager.adoc[]

@@ -1,0 +1,166 @@
+---
+permalink: sg6100/replace-power-supply-e4000.html 
+sidebar: sidebar 
+keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
+summary: Überprüfen Sie die Typen und Anforderungen des E4000-Behälters. 
+---
+= Austauschen der Stromversorgung im Storage-Controller-Shelf (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Netzteil in einem E4000 austauschen.
+
+.Über diese Aufgabe
+Wenn Sie ein Netzteil austauschen möchten, beachten Sie die folgenden Anforderungen.
+
+* Sie müssen ein Ersatz-Netzteil haben, das für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+* Sie haben ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen getroffen.
++
+
+NOTE: Mischen Sie Netzteileinheiten der verschiedenen Spannungsarten nicht. Immer ersetzen wie für „Gefällt mir“.
+
+
+
+.Bevor Sie beginnen
+* Prüfen Sie die Details im Recovery Guru, um zu bestätigen, dass ein Problem mit der Stromversorgung vorliegt. Wählen Sie *recheck* aus dem Recovery Guru, um sicherzustellen, dass keine weiteren Punkte zuerst angesprochen werden müssen.
+* Stellen Sie sicher, dass die gelbe Warn-LED am Netzteil leuchtet und anzeigt, dass ein Fehler im Netzteil oder dem integrierten Lüfter vorliegt. Wenden Sie sich an den technischen Support, um Unterstützung zu erhalten, wenn die beiden Netzteile im Shelf ihre gelbe Warn-LEDs leuchten.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatz-Netzteil, das für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Zugriff auf den SANtricity System Manager:
++
+*** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Controller-Informationen befinden sich auf dem https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+*** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
+
+
+
+
+
+
+
+
+== Schritt 1: Vorbereitung auf den Austausch der Stromversorgung
+
+Bereiten Sie den Austausch eines Netzteils in einem Controller-Shelf mit 12 Laufwerken oder 24 Laufwerken vor.
+
+.Schritte
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie *Support > Support Center > Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Bestimmen Sie aus SANtricity System Manager, welches Netzteil ausgefallen ist.
++
+Sie finden diese Informationen im Bereich Details des Recovery Guru oder können die für das Shelf angezeigten Informationen einsehen.
+
++
+.. Wählen Sie *Hardware*.
+.. Schau dir die Macht an image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] Und Fan image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Symbole rechts neben den Dropdown-Listen *Shelf*, um festzustellen, welches Regal die ausgefallene Stromversorgung hat.
++
+Wenn eine Komponente ausgefallen ist, sind entweder oder beide Symbole rot.
+
+.. Wenn Sie das Regal mit einem roten Symbol finden, wählen Sie *Zurück vom Regal anzeigen*.
+.. Wählen Sie eine der beiden Netzteile aus.
+.. Auf den Registerkarten *Netzteile* und *Lüfter* können Sie anhand der Status der Power-Fan-Kanister, der Netzteile und der Lüfter bestimmen, welches Netzteil ausgetauscht werden muss.
++
+Eine Komponente mit dem Status *failed* muss ersetzt werden.
+
++
+
+CAUTION: Wenn der zweite Netzteilbehälter im Regal keinen *optimalen*-Status aufweist, versuchen Sie nicht, das ausgefallene Netzteil im laufenden Betrieb zu ersetzen. Wenden Sie sich stattdessen an den technischen Support, um Hilfe zu erhalten.
+
+
+
+. Suchen Sie auf der Rückseite des Speicherarrays die Warn-LEDs, um das zu entfernende Netzteil zu ermitteln.
++
+Sie müssen das Netzteil, für das die Warn-LED leuchtet, ersetzen.
+
+
+
+
+
+== Schritt 2: Entfernen Sie das defekte Netzteil
+
+Entfernen Sie ein ausgefallenes Netzteil, damit Sie es durch ein neues ersetzen können.
+
+.Schritte
+. Packen Sie das neue Netzteil aus, und stellen Sie es auf eine Ebene Fläche in der Nähe des Laufwerks-Shelfs ein.
++
+Bewahren Sie alle Verpackungsmaterialien auf, wenn Sie das defekte Netzteil zurücksenden.
+
+. Schalten Sie das Netzteil aus und trennen Sie die Netzkabel:
++
+.. Schalten Sie den Netzschalter am Netzteil aus.
+.. Öffnen Sie die Netzkabelhalterung, und ziehen Sie dann das Netzkabel vom Netzteil ab.
+.. Ziehen Sie das Netzkabel von der Stromversorgung ab.
+
+
+. Drücken Sie die Verriegelung am Handgriff der Stromversorgungs-Nockenwelle, und öffnen Sie dann den Nockengriff, um das Netzteil vollständig von der Mittelebene zu lösen.
+. Schieben Sie die Stromversorgung mit dem Nockengriff aus dem System heraus.
++
+
+CAUTION: Wenn Sie ein Netzteil entfernen, verwenden Sie immer zwei Hände, um sein Gewicht zu stützen.
+
+
+
+
+
+== Schritt 3: Neues Netzteil installieren
+
+Installieren Sie ein neues Netzteil, um das fehlerhafte Netzteil auszutauschen.
+
+.Schritte
+. Stellen Sie sicher, dass sich der ein-/Ausschalter des neuen Netzteils in der Stellung *aus* befindet.
+. Halten und richten Sie die Kanten des Netzteils mit beiden Händen an der Öffnung im Systemgehäuse aus, und drücken Sie dann vorsichtig das Netzteil mithilfe des Nockengriffs in das Gehäuse.
++
+Die Netzteile sind codiert und können nur auf eine Weise installiert werden.
+
++
+
+CAUTION: Beim Einschieben des Netzteils in das System keine übermäßige Kraft verwenden, da der Anschluss beschädigt werden kann.
+
+. Schließen Sie den Nockengriff, so dass die Verriegelung in die verriegelte Position einrastet und das Netzteil vollständig eingesetzt ist.
+. Schließen Sie die Verkabelung des Netzteils wieder an:
++
+.. Schließen Sie das Netzkabel wieder an das Netzteil und die Stromversorgung an.
+.. Befestigen Sie das Netzkabel mithilfe der Netzkabelhalterung am Netzteil.
+
+
+. Schalten Sie den Strom zum neuen Netzteilbehälter ein.
+
+
+
+
+== Schritt 4: Vollständige Netzteilaustausch
+
+Überprüfen Sie, ob das neue Netzteil ordnungsgemäß funktioniert, sammeln Sie Support-Daten und setzen Sie den normalen Betrieb fort.
+
+.Schritte
+. Überprüfen Sie beim neuen Netzteil, ob die grüne LED für die Stromversorgung leuchtet und die gelbe Warn-LED LEUCHTET NICHT.
+. Wählen Sie im Recovery Guru im SANtricity System Manager *recheck* aus, um sicherzustellen, dass das Problem behoben wurde.
+. Wenn noch ein ausgefallenes Netzteil gemeldet wird, wiederholen Sie die Schritte in <<Schritt 2: Entfernen Sie das defekte Netzteil>>, Und in <<Schritt 3: Neues Netzteil installieren>>. Wenn das Problem weiterhin besteht, wenden Sie sich an den technischen Support.
+. Entfernen Sie den antistatischen Schutz.
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie *Support > Support Center > Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
+
+
+.Was kommt als Nächstes?
+Der Austausch des Netzteils ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

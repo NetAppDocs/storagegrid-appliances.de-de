@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112, locate, find, locating, finding, identify, blue led, blue light 
 summary: Die blaue Identifizieren-LED auf der Vorderseite des Geräts kann eingeschaltet werden, um das Gerät in einem Rechenzentrum zu lokalisieren. 
 ---
-= Schalten Sie die SGF6112-Appliance Identify-LED ein und aus
+= Schalten Sie die LED zur Identifizierung der SGF6112-Appliance oder des SG6100-CN-Controllers ein und aus
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
