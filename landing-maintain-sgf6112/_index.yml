@@ -37,7 +37,7 @@ indexpage:
       url: "../sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html"
     - title: Ersetzen der Stromversorgung im Storage-Controller-Shelf oder Erweiterungs-Shelf
         (SG6160)
-      url: "/sg6100/replace-6100-cn-power-canister.html"
+      url: "../sg6100/replace-6100-cn-power-canister.html"
     - title: Lüfter in SGF6112 oder SG6100-CN (SG6160) austauschen
       url: "../sg6100/replacing-fan-in-sgf6112.html"
     - title: Austausch des Lüfters im Storage-Controller-Shelf oder Erweiterungs-Shelf
@@ -51,14 +51,15 @@ indexpage:
         (SG6160)
       url: "../sg6100/replace-6160-drives-60.html"
     - title: Austausch der internen NIC (SGF6112 und SG6160)
-      url: "/sg6100/replace-nic-in-sgf6112.html"
+      url: "../sg6100/replace-nic-in-sgf6112.html"
     - title: Austausch externer NIC (SG6160)
-      url: "/sg6100/replace-ocp-nic-in-sg6100-cn.html"
+      url: "../sg6100/replace-ocp-nic-in-sg6100-cn.html"
     - title: DIMMs ersetzen (SG6160)
-      url: "/sg6100/replace-dimms-e4000.html"
+      url: "../sg6100/replace-dimms-e4000.html"
     - title: Batterien austauschen (SG6160)
-      url: "/sg6100/replace-battery-e4000.html"
+      url: "../sg6100/replace-battery-e4000.html"
     - title: Abdeckung wieder anbringen
+      url: "../sg6100/reinstalling-sgf6112-cover.html"
     - title: Ersetzen Sie die CMOS-Batterie
       url: "../sg6100/replace-cmos-in-sgf6112.html"
     - title: Erweiterungs-Shelf zu implementiertem SG6160 hinzufügen
