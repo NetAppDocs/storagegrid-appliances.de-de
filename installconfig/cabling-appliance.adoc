@@ -1060,7 +1060,7 @@ Stellt eine Verbindung mit dem Netzwerk her, in dem Sie auf SANtricity System Ma
 +
 Obwohl diese Verbindung optional ist, wird empfohlen, den Support zu erleichtern.
 
-. Verbinden Sie die beiden Interconnect Ports an jedem Storage Controller mit dem 100-GbE-Port des SG6100-CN Controllers. Verwenden Sie dazu ein 100-GbE-GSFP28- auf 4x25-GbE-SFP28-Kabel.
+. Verbinden Sie die beiden Interconnect Ports an jedem Storage Controller mit dem 100-GbE-Port des SG6100-CN Controllers. Verwenden Sie dazu ein 100-GbE QSFP28 zu 4x25-GbE SFP28-Kabel.
 . Verbinden Sie die Netzwerk-Ports des Geräts mit den entsprechenden Netzwerk-Switches über Twinax-Kabel oder optische Kabel und Transceiver.
 +
 [cols="2a,2a"]
