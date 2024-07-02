@@ -1,0 +1,46 @@
+---
+permalink: installconfig/installing-hardware-sg6100.html 
+sidebar: sidebar 
+keywords: install, sg6100, sg6112, expansion shelf, cabinet, rack, drives 
+summary: Beim SG6160 und SGF6112 installieren Sie Schienen in Ihrem Schrank oder Rack und schieben das Controller-Shelf, alle Erweiterungseinschübe und den Compute-Controller auf die Schienen. 
+---
+= In Schrank oder Rack installieren (SG6100)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim SG6160 und SGF6112 installieren Sie Schienen in Ihrem Schrank oder Rack und schieben das Controller-Shelf, alle Erweiterungseinschübe und den Compute-Controller auf die Schienen.
+
+[cols="1a,2a,2a"]
+|===
+| Modell | Installieren | Zur Information 
+
+
+ a| 
+SG6160
+ a| 
+Controller Shelf mit 60 Laufwerken und Erweiterungs-Shelfs mit 60 Laufwerken
+ a| 
+link:sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html["Installation von Shelfs mit 60 Laufwerken"]
+
+
+
+ a| 
+SG6112
+ a| 
+Appliance-Shelf für 12 Laufwerke
+ a| 
+link:installing-appliance-in-cabinet-or-rack-sgf6112.html["Installation von Shelfs mit 12 Laufwerken"]
+
+
+
+ a| 
+SG6160
+ a| 
+SG6100-CN Computing-Controller
+ a| 
+link:sg6100-cn-installing-into-cabinet-or-rack.html["Installieren Sie den SG6100-CN-Controller"]
+
+|===
