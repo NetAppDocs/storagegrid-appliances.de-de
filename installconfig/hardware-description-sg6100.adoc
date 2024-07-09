@@ -80,6 +80,7 @@ Computing-Controller:: Der SG6100-CN Controller ist ein Server mit einer Höhene
 * 256 GB RAM
 * Bis zu 4 × 25 GbE aggregierte Ethernet-Bandbreite (oder bis zu 4 x 100 GbE mit optionaler 100G NIC SKU)
 * 1 x 100-GbE-Interconnect
+* Zwei NVMe SSDs für Lese-Cache
 * Baseboard Management Controller (BMC) der das Hardware-Management vereinfacht
 * Redundante Netzteile und Lüfter
 

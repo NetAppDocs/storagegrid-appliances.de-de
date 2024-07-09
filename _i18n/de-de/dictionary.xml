@@ -4134,7 +4134,6 @@ Weitere Informationen zum Verwalten von Objekten mit Information Lifecycle Manag
   <block id="d751b295bd431b789da8da77d91a8a1d" category="doc">Wartung der SG1100- und SG110-Services-Appliance-Hardware</block>
   <block id="70bca0055a2d38054af0059da4e459ed" category="inline-link-macro">SG110 und SG1100</block>
   <block id="9310c6e3b94e3baa60a2b31f7b80cc71" category="list-text"><block ref="9310c6e3b94e3baa60a2b31f7b80cc71" category="inline-link-macro-rx"></block></block>
-  <block id="e3654db4a646d23dc2d3d64204192d91" category="list-text"><block ref="e010cba544d581fc50562d9eaf281bf3" category="inline-link-macro-rx"></block> (SG6000, SG6100 und Services Appliances)</block>
   <block id="aadf1dcd60cf75ec60913a8a677fcd35" category="list-text">Beim SG110 ein bis vier SFP+- oder SFP28-Transceiver, wenn Sie optische Kabel für die Ports verwenden möchten.</block>
   <block id="11a92f98e01c18d06291aad0e993ba9b" category="list-text">Beim SG1100 ein bis vier QSFP+- oder QSFP28-Transceiver, wenn Sie optische Kabel für die Ports verwenden möchten.</block>
   <block id="7be200e96b3561254643e0c9ae88d200" category="paragraph">SG110-Port-Verbindungen:</block>
@@ -4577,7 +4576,6 @@ Entfernen Sie die DIMMs aus dem Aktivkohlebehälter:</block>
   <block id="ebc31fad1cf84954196a7706294df684" category="paragraph">Dieses Verfahren gilt für DCM- und DCM2-Laufwerkseinschübe.</block>
   <block id="e813fd422366d0dc5a37186d7430e09a" category="list-text">Überprüfen Sie die Anforderungen für die Laufwerksverwaltung.</block>
   <block id="f1563c8d87cc2966328e9cb0166c5704" category="list-text">Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.</block>
-  <block id="12cb93ac5470b7b9ed9a176553005bef" category="list-text">Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)</block>
   <block id="d9de1ae5a4126bb7bbc28768a5dd593d" category="section-title">Schritt 1: Vorbereitung auf den Austausch des Laufwerks</block>
   <block id="38ee00be25940e25c51d24be5c9b1598" category="paragraph">Bereiten Sie sich auf den Austausch eines Laufwerks vor, indem Sie den Recovery Guru in SANtricity System Manager prüfen und alle erforderlichen Schritte ausführen. Dann können Sie die ausgefallene Komponente finden.</block>
   <block id="fd781fa19cba325b3cc9ca7a79f8d928" category="list-text">Wenn der Recovery Guru im SANtricity System Manager Sie über einen _bevorstehenden Laufwerksausfall informiert hat_, aber es ist noch nicht ausgefallen, befolgen Sie die Anweisungen im Recovery Guru zum Fehlschlagen des Laufwerks.</block>
@@ -5180,8 +5178,6 @@ Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff s
   <block id="f887919b93b68994cd6d9e7819b5afeb" category="list-text">Wählen Sie für den SG5800, SG6000 oder SG6100 aus der Dropdown-Liste *Verbindungsgeschwindigkeit* die Option *Auto* aus.</block>
   <block id="dcba35698266a429ba97a9df72d33ecb" category="summary">Die SG5800 StorageGRID Appliance ist eine integrierte Storage- und Computing-Plattform, die als Storage-Node in einem StorageGRID Grid ausgeführt wird. Die Appliance kann in einer hybriden Grid-Umgebung verwendet werden, in der Appliance Storage Nodes und virtuelle \(softwarebasierte\) Storage-Nodes kombiniert werden.</block>
   <block id="64b3db60a66ac8bd04ca4a159cac1af8" category="doc">SG5800 Appliances: Überblick</block>
-  <block id="40b657fa8f8023ed6227dc3d31464c39" category="paragraph">Die SG5800 StorageGRID Appliance ist eine integrierte Storage- und Computing-Plattform, die als Storage-Node in einem StorageGRID Grid ausgeführt wird.</block>
-  <block id="9f075e4e966103728835fe79072cf374" category="paragraph">Die Appliance der StorageGRID SG5800 Serie bietet folgende Funktionen:</block>
   <block id="bc0affc4503a133a51781ca78ac8bdaa" category="paragraph">Die SG5800 Appliance ist in zwei Modellen erhältlich: Dem SG5812 und dem SG5860.</block>
   <block id="1d59ebac544f15dc4241a8a4af7a618d" category="section-title">SG5800 Komponenten</block>
   <block id="5581a20a3b85686c910dfa4dab223387" category="paragraph">Die SG5800 Modelle umfassen die folgenden Komponenten:</block>
@@ -5217,7 +5213,6 @@ Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff s
 ** Verbinden Sie sich mit einem Managementnetzwerk, um direkten TCP/IP-Zugriff auf den SANtricity-Systemmanager zu ermöglichen
 ** Lassen Sie unverdrahtet, um einen Switch-Port und eine IP-Adresse zu speichern.  Zugriff auf SANtricity System Manager über den Grid-Manager oder das Storage Grid-Appliance-Installationsprogramm</block>
   <block id="fefcafe2d4912066a784d5c93bc050e1" category="paragraph">*Hinweis*: Einige optionale SANtricity-Funktionen, wie NTP Sync für genaue Protokollzeitstempel, sind nicht verfügbar, wenn Sie den Management-Port nicht drahtgebunden lassen möchten.</block>
-  <block id="57daf9148064308c448c842290992c39" category="paragraph">*Hinweis*: StorageGRID 11.8 oder höher und SANtricity 11.8 oder höher sind erforderlich, wenn Sie das Management ohne Kabel verlassen.</block>
   <block id="b155aed19819ab0c2d1e71fc3d32850b" category="paragraph">Schließen Sie den E4000-Controller an den SG5800-Controller an.</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp Support Website</block>
   <block id="f5c45bcc73f02c7f2b1398ee78576a7a" category="list-text">Wechseln Sie zum<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block>.</block>
@@ -5427,9 +5422,6 @@ Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.</b
   <block id="b362454c1b783a548faa935e3a1610de" category="paragraph">Wenn Sie keine weiteren Wartungsmaßnahmen im Gerät durchführen müssen, setzen Sie das Gerät wieder in das Rack ein, wenn es entfernt wurde, schließen Sie die Kabel an, und schalten Sie das Gerät mit Strom aus.</block>
   <block id="787d8857ce0db09ecbf6fe82bbf45a25" category="doc">Schalten Sie die LED zur Identifizierung der SGF6112-Appliance oder des SG6100-CN-Controllers ein und aus</block>
   <block id="77291750fe959fd9ce173862b4055564" category="doc">Suchen Sie die SGF6112 Appliance oder den SG6100-CN Controller im Datacenter</block>
-  <block id="71070479646e1da5a663f4b00abb5235" category="paragraph"><block ref="106db197e8d447cef2c47289a65f4849" category="inline-link-macro-rx"></block> Verwenden Sie eine der folgenden Methoden, wenn Sie das Gerät zum Auffinden verwendet haben:
- ** Drücken Sie den Identifizieren-LED-Schalter auf der Vorderseite des Geräts.
- ** Verwenden Sie die BMC-Schnittstelle des Geräts.</block>
   <block id="f40a968e022f47cf01d4d58ef9437f0c" category="summary">Die Appliance SGF6112 und der Controller SG6100-CN verfügen über acht Lüfter. Wenn einer der Lüfter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät ordnungsgemäß gekühlt wird.</block>
   <block id="35354d3f59ef76da6c3d8d0aafc491e7" category="doc">Lüfter in SGF6112 oder SG6100-CN (SG6160) austauschen</block>
   <block id="dff98198bff06709975037453d00df52" category="list-text">Das ist schon <block ref="8a600a3d3695735e4213dc5c6fac3a3e" category="inline-link-macro-rx"></block> Wo Sie den Lüfter im Rechenzentrum austauschen.</block>
@@ -5512,4 +5504,17 @@ Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.</b
   <block id="7c964abbff6a7b0bbf38565776b7d0b7" category="inline-link-macro">Installieren Sie den SG6100-CN-Controller</block>
   <block id="0d86c1e5e36df2d42690db9bf7459e93" category="paragraph"><block ref="0d86c1e5e36df2d42690db9bf7459e93" category="inline-link-macro-rx"></block></block>
   <block id="c587a2e85b76aabe41b2ff8e991a2c31" category="sidebar">Installieren Sie SG6100 im Schrank oder Rack</block>
+  <block id="8a1c3c9cb6907d54c29c5857f2f86c34" category="paragraph">Bei den StorageGRID Appliances der SG5800 Serie handelt es sich um integrierte Storage- und Computing-Plattformen, die als Storage-Nodes in einem StorageGRID Grid betrieben werden.</block>
+  <block id="ce9252228bd4540f9b37b3a78a50b7d7" category="paragraph">StorageGRID Appliances der SG5800 Serie bieten folgende Funktionen:</block>
+  <block id="0c83dd3ac0dc38df69e11e248214a5fe" category="list-text">E-Series SANtricity System Manager für Hardware-Management und -Überwachung</block>
+  <block id="3127ae9dd7481eac7423d4d4aca523f1" category="paragraph">*Hinweis*: StorageGRID 11.8 oder höher und SANtricity 11.8 oder höher sind erforderlich, wenn Sie den Verwaltungsport nicht verdrahtet verlassen.</block>
+  <block id="e6f818c1056fce47a0d96a7d0f54d3da" category="list-text">Zwei NVMe SSDs für Lese-Cache</block>
+  <block id="53b6162c6d4ba02de60c3ea016e48c8f" category="list-text"><block ref="e010cba544d581fc50562d9eaf281bf3" category="inline-link-macro-rx"></block> (SG6100, SG6000 und Services Appliances)</block>
+  <block id="752e943e864c331f809892c284e5fb33" category="list-text">Ändern der Verbindungsgeschwindigkeit von oder auf Auto (empfohlen), 10-GbE oder 25-GbE.</block>
+  <block id="4918ef1e8a9f60c807f69545e97d3b6f" category="paragraph">Laufwerke, die zu Volumes gehören, die keine Redundanz haben, müssen mit dem aktualisiert werden <block ref="179e42b86c56e7fde01fd62621c30190" category="inline-link-macro-rx"></block>.</block>
+  <block id="8770dfe1902bd96b773d5b6fc8f4cf06" category="list-text">Sie müssen den SG5800-Controller in , setzen <block ref="66517df9b2a708b9947fc0143b4273f5" category="inline-link-macro-rx"></block>, wodurch alle E/A-Vorgänge zum E4000-Controller angehalten werden.</block>
+  <block id="94ac91ca1245e36b962d4e80494dde09" category="paragraph"><block ref="106db197e8d447cef2c47289a65f4849" category="inline-link-macro-rx"></block> Verwenden Sie eine der folgenden Methoden, wenn Sie das Gerät zum Auffinden verwendet haben:</block>
+  <block id="32560f7f516484a70333e63586d49ee8" category="list-text">Drücken Sie den Identifizieren-LED-Schalter an der Vorderseite des Geräts.</block>
+  <block id="84f9f6b07fa3b7c2043dcb10969d9836" category="list-text">Verwenden Sie die BMC-Schnittstelle des Geräts.</block>
+  <block id="c3767fd24594af27204c85f38e6485de" category="admonition">Während sich die Appliance im Wartungsmodus befindet, werden die I/O-Aktivitäten (Input/Output) an die Storage Controller angehalten, um störende Storage-Vorgänge zu sichern.</block>
 </blocks>

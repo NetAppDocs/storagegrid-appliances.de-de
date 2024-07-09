@@ -19,8 +19,8 @@ Für Storage-Controller, die derzeit SANtricity OS verwenden, die älter als 08.
 NOTE: Für Storage-Controller, die derzeit SANtricity OS mit einem neueren Betriebssystem als 08.42.20.00 (11.42) verwenden, wird empfohlen, dies zu tun link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Verwenden Sie den Grid Manager, um ein Upgrade anzuwenden"]. Sie können das Verfahren für den Wartungsmodus jedoch verwenden, wenn Sie es bevorzugen oder vom technischen Support dazu angewiesen wurden.
 
 .Bevor Sie beginnen
-* Sie haben den konsultiert https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um sicherzustellen, dass die für das Upgrade verwendete SANtricity OS-Version mit Ihrer Appliance kompatibel ist.
-* Sie müssen den SG5800 Controller in einsetzen link:../commonhardware/placing-appliance-into-maintenance-mode.html["Wartungsmodus"], Die die Verbindung zum E4000-Controller unterbricht.
+* Wenn Sie die SANtricity OS Version nicht von erhalten haben, auf die Sie ein Upgrade durchführen möchten https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^], Sie haben konsultiert https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^] Oder im https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um sicherzustellen, dass die für das Upgrade verwendete SANtricity OS-Version mit Ihrer Appliance kompatibel ist.
+* Sie müssen den SG5800-Controller in , setzen link:../commonhardware/placing-appliance-into-maintenance-mode.html["Wartungsmodus"], wodurch alle E/A-Vorgänge zum E4000-Controller angehalten werden.
 +
 
 NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.

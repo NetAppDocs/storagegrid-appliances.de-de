@@ -59,7 +59,7 @@ Wenn Sie mehr als eine Appliance konfigurieren und implementieren, automatisiere
 
 
 . link:accessing-and-configuring-santricity-system-manager.html["Aufrufen und Konfigurieren von SANtricity System Manager"] (SG6160, SG5700, SG5800 UND SG6000)
-. link:configuring-bmc-interface.html["Konfigurieren Sie die BMC-Schnittstelle"] (SG6000, SG6100 und Services Appliances)
+. link:configuring-bmc-interface.html["Konfigurieren Sie die BMC-Schnittstelle"] (SG6100, SG6000 und Services Appliances)
 . Führen Sie optionale Einrichtungsschritte durch
 +
 ** link:optional-enabling-node-encryption.html["Aktivieren Sie die Node- oder Laufwerkverschlüsselung"]

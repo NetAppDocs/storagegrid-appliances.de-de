@@ -26,9 +26,7 @@ Die Laufwerke werden nacheinander aktualisiert, während die Appliance I/O-Vorg�
 
 [NOTE]
 ====
-Laufwerke, die zu Volumes ohne Redundanz gehören, müssen mithilfe des aktualisiert werden link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["Offline-Methode"]. Die Offline-Methode sollte für alle Pools oder Volume-Gruppen verwendet werden, die derzeit heruntergestuft sind.
-
-Sie müssen den verwenden link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["Offline-Methode"] Beim Upgrade von SSD-Laufwerken.
+Laufwerke, die zu Volumes gehören, die keine Redundanz haben, müssen mit dem aktualisiert werden link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["Offline-Methode"].
 
 ====
 .Schritte

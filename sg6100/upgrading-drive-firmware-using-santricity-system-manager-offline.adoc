@@ -22,7 +22,7 @@ NOTE: Dieses Verfahren gilt *nicht* für die NVMe SSDs im SG6100-CN, die währen
 * Das ist schon link:../commonhardware/placing-appliance-into-maintenance-mode.html["Versetzen Sie die StorageGRID Appliance in den Wartungsmodus"].
 +
 
-NOTE: Während sich die Appliance im Wartungsmodus befindet, wird die I/O-Aktivität (Eingabe/Ausgabe) für den Storage Controller angehalten, um störende Storage-Vorgänge zu sichern.
+NOTE: Während sich die Appliance im Wartungsmodus befindet, werden die I/O-Aktivitäten (Input/Output) an die Storage Controller angehalten, um störende Storage-Vorgänge zu sichern.
 
 
 

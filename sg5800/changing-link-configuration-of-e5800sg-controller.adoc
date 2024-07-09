@@ -25,7 +25,7 @@ Es gibt folgende Optionen zum Ändern der Ethernet-Link-Konfiguration des SG5800
 * Ändern des *Port Bond Modus* von Fixed zu Aggregate oder von Aggregat zu Fixed
 * Ändern des *Netzwerk-Bond-Modus* von Active-Backup zu LACP oder von LACP zu Active-Backup
 * Aktivieren oder Deaktivieren von VLAN-Tagging oder Ändern des Werts einer VLAN-Tag-Nummer
-* Ändern der Verbindungsgeschwindigkeit von 10-GbE auf 25-GbE oder von 25-GbE auf 10-GbE
+* Ändern der Verbindungsgeschwindigkeit von oder auf Auto (empfohlen), 10-GbE oder 25-GbE.
 
 
 .Schritte

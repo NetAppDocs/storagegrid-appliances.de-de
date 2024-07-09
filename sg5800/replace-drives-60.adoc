@@ -24,7 +24,12 @@ Dieses Verfahren gilt für DCM- und DCM2-Laufwerkseinschübe.
 +
 ** Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
 ** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+** Zugriff auf den SANtricity System Manager:
++
+*** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Controller-Informationen befinden sich auf dem https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+*** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
+
+
 
 
 
