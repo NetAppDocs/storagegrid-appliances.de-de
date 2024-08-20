@@ -15,11 +15,17 @@ indexpage:
     links:
     - title: Ersetzen Sie das Gerät
       url: "../sg100-1000/replacing-services-appliance.html"
+    - title: Verlegung des SG100 oder SG1000 in ein Rack
+      url: "../sg100-1000/reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html"
   - title: Hardware-Verfahren
     links:
+    - title: Abdeckung wieder anbringen
+      url: "../sg100-1000/reinstalling-sg100-and-sg1000-controller-cover.html"
     - title: Ersetzen Sie das Netzteil
       url: "../sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
     - title: Ersetzen Sie den Lüfter
       url: "../sg100-1000/replacing-fan-in-services-appliance.html"
     - title: Laufwerk austauschen
       url: "../sg100-1000/replacing-drive-in-services-appliance.html"
+    - title: Ersetzen Sie die CMOS-Batterie
+      url: "../sg100-1000/replace-cmos-in-sg100-and-sg1000.html"

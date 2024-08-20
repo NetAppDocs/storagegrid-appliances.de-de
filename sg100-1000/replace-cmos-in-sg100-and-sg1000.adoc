@@ -1,0 +1,117 @@
+---
+permalink: sg100-1000/replace-cmos-in-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, admin node, admin appliance, replacing, replace, CMOS, battery 
+summary: Gehen Sie wie folgt vor, um die CMOS-Knopfzellenbatterie auf der Systemplatine auszutauschen. 
+---
+= Ersetzen Sie die CMOS-Batterie in einem SG100 oder SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gehen Sie wie folgt vor, um die CMOS-Knopfzellenbatterie auf der Systemplatine auszutauschen.
+
+Mit diesen Verfahren können Sie:
+
+* Entfernen Sie die CMOS-Batterie
+* Setzen Sie die CMOS-Batterie wieder ein
+
+
+
+
+== Entfernen Sie die CMOS-Batterie
+
+.Bevor Sie beginnen
+* Sie haben link:verify-component-to-replace-sg100-and-sg1000.html["SG100 oder SG1000 geprüft, wo die CMOS-Batterie ausgetauscht werden muss"].
+* Sie haben link:locating-controller-in-data-center.html["Standort der SG100- oder SG1000-Appliance"] die Stelle, an der Sie die CMOS-Batterie im Rechenzentrum austauschen.
++
+
+NOTE: Vor dem Entfernen des Geräts aus dem Rack ist ein link:shut-down-sg100-and-sg1000.html["Kontrolliertes Herunterfahren des Geräts"] erforderlich.
+
+* Sie haben alle Kabel und getrennt link:reinstalling-sg100-and-sg1000-controller-cover.html["Die Geräteabdeckung entfernt"].
+
+
+.Über diese Aufgabe
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Speicher-Nodes mit dem Stromnetz verbunden sind, bevor Sie den Austausch der CMOS-Batterie starten, oder tauschen Sie die Batterie während eines geplanten Wartungsfensters aus, wenn Serviceunterbrechungen akzeptabel sind. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
+
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Suchen Sie die Steckerbaugruppe mit zwei Steckplätzen an der Rückseite des Geräts.
++
+image::../media/sg6060_riser_assembly_location.jpg[Position der Riser-Baugruppe]
+
+. Fassen Sie die Riserbaugruppe durch die blau markierten Löcher und heben Sie sie vorsichtig nach oben. Bewegen Sie die Riser-Baugruppe zur Vorderseite des Gehäuses, während Sie sie anheben, damit die externen Anschlüsse der installierten Adapter das Gehäuse löschen können.
+. Platzieren Sie die Riserkarte auf einer flachen antistatischen Oberfläche mit der Metallrahmen-Seite nach unten.
+. Suchen Sie den CMOS-Akku auf der Systemplatine in der Position unter der entfernten Riserbaugruppe.
+. Drücken Sie den Halteclip mit dem Finger oder einem Kunststoffhebelwerkzeug von der Batterie weg, um ihn aus der Steckdose zu fecken.
+. Entfernen Sie die Batterie, und entsorgen Sie sie ordnungsgemäß.
+
+
+
+
+== Setzen Sie die CMOS-Batterie wieder ein
+
+Setzen Sie den Ersatz-CMOS-Akku in den Sockel auf der Systemplatine ein.
+
+.Bevor Sie beginnen
+* Sie haben die richtige Ersatz-CMOS-Batterie (CR2032).
+* Sie haben die fehlerhafte CMOS-Batterie entfernt.
+
+
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Entfernen Sie den CMOS-Akku aus der Verpackung.
+. Drücken Sie den Ersatzakku mit der positiven (+) Seite nach oben in den leeren Sockel auf der Systemplatine, bis der Akku einrastet.
+. Suchen Sie die Ausrichtbohrung an der Riserbaugruppe (eingekreist), die mit einem Führungsstift auf der Systemplatine ausgerichtet ist, um die korrekte Positionierung der Riserbaugruppe zu gewährleisten.
++
+image::../media/sg6060_riser_alignment_hole.jpg[Ausrichtungsbohrung auf der Steigleitung]
+
+. Positionieren Sie die Riserbaugruppe im Gehäuse, und stellen Sie sicher, dass sie am Anschluss und Führungsstift auf der Systemplatine ausgerichtet ist. Setzen Sie dann die Riserbaugruppe ein.
+. Drücken Sie die Riserbaugruppe vorsichtig entlang der Mittellinie neben den blau markierten Löchern, bis sie vollständig sitzt.
+. Wenn Sie keine weiteren Wartungsmaßnahmen im Gerät durchführen müssen, setzen Sie die Geräteabdeckung wieder ein, bringen Sie das Gerät wieder in das Rack ein, schließen Sie die Kabel an und schalten Sie das Gerät mit Strom aus.
+. Wenn die Laufwerkverschlüsselung für die SED-Laufwerke auf der ersetzten Appliance aktiviert war, müssen Sie dies tun link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["Geben Sie die Passphrase für die Laufwerkverschlüsselung ein"] So greifen Sie auf die verschlüsselten Laufwerke zu, wenn die Ersatz-Appliance zum ersten Mal gestartet wird.
+. Wenn die von Ihnen ersetzte Appliance einen Verschlüsselungsmanagement-Server (KMS) zum Management der Schlüssel für die Node-Verschlüsselung verwendet hat, ist möglicherweise eine zusätzliche Konfiguration erforderlich, bevor der Node dem Grid beitreten kann. Wenn der Node nicht automatisch in das Raster integriert wird, stellen Sie sicher, dass diese Konfigurationseinstellungen auf die neue Appliance übertragen wurden, und konfigurieren Sie manuell alle Einstellungen, die nicht über die erwartete Konfiguration verfügen:
++
+** link:../installconfig/accessing-storagegrid-appliance-installer.html["Konfigurieren Sie StorageGRID-Verbindungen"]
+** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
+
+
+. Melden Sie sich bei der Appliance an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+. Stellen Sie die BMC-Netzwerkverbindung für die Appliance wieder her. Es gibt zwei Möglichkeiten:
++
+** Verwenden Sie statische IP, Netzmaske und Gateway
+** Verwenden Sie DHCP, um eine IP, eine Netzmaske und ein Gateway zu erhalten
++
+... Geben Sie zum Wiederherstellen der BMC-Konfiguration für die Verwendung einer statischen IP, Netzmaske und eines Gateways die folgenden Befehle ein:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Geben Sie den folgenden Befehl ein, um die BMC-Konfiguration so wiederherzustellen, dass DHCP zum Abrufen einer IP, einer Netmask und eines Gateways verwendet wird:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Stellen Sie nach dem Wiederherstellen der BMC-Netzwerkverbindung eine Verbindung zur BMC-Schnittstelle her, um die zusätzlich angewendete benutzerdefinierte BMC-Konfiguration zu prüfen und wiederherzustellen. Sie sollten beispielsweise die Einstellungen für SNMP-Trap-Ziele und E-Mail-Benachrichtigungen bestätigen. Siehe link:../installconfig/configuring-bmc-interface.html["Konfigurieren Sie die BMC-Schnittstelle"].
+. Vergewissern Sie sich, dass der Appliance-Node im Grid Manager angezeigt wird und keine Meldungen angezeigt werden.
+

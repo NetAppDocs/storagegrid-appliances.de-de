@@ -20,11 +20,19 @@ entries:
 - title: Hardware-Verfahren
   pdf-filename: Hardware-Verfahren - SG100 und SG1000
   entries:
+  - title: Überprüfen Sie die zu ersetzenKomponenten
+    url: "/sg100-1000/verify-component-to-replace-sg100-and-sg1000.html"
+  - title: Abdeckung wieder anbringen
+    url: "/sg100-1000/reinstalling-sg100-and-sg1000-controller-cover.html"
   - title: Ersetzen Sie ein oder beide Netzteile
     url: "/sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
   - title: Ersetzen Sie den Lüfter
     url: "/sg100-1000/replacing-fan-in-services-appliance.html"
   - title: Laufwerk austauschen
     url: "/sg100-1000/replacing-drive-in-services-appliance.html"
+  - title: Ersetzen Sie die CMOS-Batterie
+    url: "/sg100-1000/replace-cmos-in-sg100-and-sg1000.html"
   - title: Ersetzen Sie das Gerät
     url: "/sg100-1000/replacing-services-appliance.html"
+  - title: Verlegung des Geräts in das Rack
+    url: "/sg100-1000/reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html"

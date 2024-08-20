@@ -2650,7 +2650,6 @@ Verwenden Sie in der Grid-Management-API den privaten Endpunkt:<block ref="d6808
   <block id="c7c19b3cb79ee9f5fdbc22cfac916b00" category="paragraph">Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite Knoten sollte ein normaler Status angezeigt werden (grünes Häkchen-Symbol <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block> Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.</block>
   <block id="5d4d9bbd71eda7ec2ba074c8e6717b0b" category="list-text">Sie haben die Seriennummer der Speicher-Appliance, bei der die Komponente ausgetauscht werden muss.</block>
   <block id="fe96bb389ae099a3c5dcdd5b5427e3bc" category="list-text">Sie sind mit einem bei Grid Manager angemeldet<block ref="a18f1d7592d98ae161543980d36b8697" category="inline-link-rx"></block>.</block>
-  <block id="7aa733436808f3ef7dbb843f0bfd7537" category="paragraph">Gehen Sie wie folgt vor, um das Gerät mit fehlerhafter Hardware zu identifizieren und zu ermitteln, welche der austauschbaren Hardwarekomponenten nicht ordnungsgemäß funktionieren. Folgende Komponenten können ersetzt werden:</block>
   <block id="620e2edf2db0c3c3cad57aeb246c6bfe" category="list-text">Netzteile</block>
   <block id="4604f841b0b16d3013cac1e2078e5b1b" category="list-text">Lüfter</block>
   <block id="3907a0fffff4b13006f3069d9186c0d5" category="list-text">Solid State-Laufwerke (SSDs)</block>
@@ -5517,4 +5516,58 @@ Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.</b
   <block id="32560f7f516484a70333e63586d49ee8" category="list-text">Drücken Sie den Identifizieren-LED-Schalter an der Vorderseite des Geräts.</block>
   <block id="84f9f6b07fa3b7c2043dcb10969d9836" category="list-text">Verwenden Sie die BMC-Schnittstelle des Geräts.</block>
   <block id="c3767fd24594af27204c85f38e6485de" category="admonition">Während sich die Appliance im Wartungsmodus befindet, werden die I/O-Aktivitäten (Input/Output) an die Storage Controller angehalten, um störende Storage-Vorgänge zu sichern.</block>
+  <block id="a5c480dfbb1146eeb42a0bcc0d8bbbb4" category="paragraph">Gehen Sie wie folgt vor, um das Gerät mit fehlerhafter Hardware zu identifizieren und zu ermitteln, welche der austauschbaren Hardwarekomponenten nicht ordnungsgemäß funktionieren. Folgende Komponenten können ausgetauscht werden:</block>
+  <block id="a26cdf0f1745cbb76eb5328668e38b6f" category="image-alt">Position der Riser-Baugruppe</block>
+  <block id="48588d23b204532125483be8736cc62b" category="list-text">Drücken Sie den Halteclip mit dem Finger oder einem Kunststoffhebelwerkzeug von der Batterie weg, um ihn aus der Steckdose zu fecken.</block>
+  <block id="65dc474701428334be6aca7529908454" category="image-alt">Ausrichtungsbohrung auf der Steigleitung</block>
+  <block id="665f25079cb5accd5eb43f2913b6c37f" category="doc">Ersetzen Sie die SG100- oder SG1000-Geräteabdeckung</block>
+  <block id="f1d6d43707540812eb946d45ccef5ec4" category="section-title">Entfernen Sie die SG100- oder SG1000-Geräteabdeckung</block>
+  <block id="64e8eab7438cec59cd0671f1a5e3dbb6" category="paragraph">Entfernen Sie die Geräteabdeckung, um zu Wartungszwecken Zugang zu den internen Komponenten zu erhalten.</block>
+  <block id="b1d5df074b99621759036a9121b85e98" category="paragraph">Nehmen Sie das Gerät aus dem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen.</block>
+  <block id="511c877284f772f66774598abeeea6f5" category="inline-link-macro">Entfernen Sie die SG100- oder SG1000-Appliance aus dem Schrank oder Rack</block>
+  <block id="2285eddd6702074129ac0f1ecda4b2f4" category="paragraph"><block ref="2285eddd6702074129ac0f1ecda4b2f4" category="inline-link-macro-rx"></block></block>
+  <block id="b0e7c1ff76e24cb7116c6fb8b809271c" category="image-alt">Abdeckungsverriegelung offen</block>
+  <block id="827c9e961d14d7b5f5337e655b29df10" category="section-title">Setzen Sie die SG100- oder SG1000-Geräteabdeckung wieder ein</block>
+  <block id="e1095c022f98a1bb69eb7e440dbb0ced" category="paragraph">Setzen Sie die Geräteabdeckung wieder ein, wenn die interne Hardwarewartung abgeschlossen ist.</block>
+  <block id="7b6a35b28349993ccb044f99d3cb9c05" category="image-alt">Führungsstift der Abdeckungsverriegelung</block>
+  <block id="77e20811baef645173a9afd272aed5f2" category="inline-link-macro">Setzen Sie das Gerät wieder in den Schrank oder das Rack ein.</block>
+  <block id="fee143211358506f5958deb39267a94d" category="paragraph"><block ref="fee143211358506f5958deb39267a94d" category="inline-link-macro-rx"></block></block>
+  <block id="8d74142d0d3a9120da2ba9c70236cdd6" category="summary">Nehmen Sie das SG100 oder SG1000 aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie das Gerät dann nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein.</block>
+  <block id="a5b8a777a1b08a83ca76ba17d2003033" category="doc">Verlegung von SG100 oder SG1000 in Schrank oder Rack</block>
+  <block id="5fc59c0417d710999eccabc5f2b53e54" category="paragraph">Nehmen Sie das SG100- oder SG1000-Gerät aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen. Setzen Sie das Gerät dann nach Abschluss der Hardwarewartung in einen Schrank oder ein Rack ein.</block>
+  <block id="4faf0e30b4acd7fb71c04eecc674f9bb" category="section-title">Entfernen Sie SG100 oder SG1000 aus dem Schrank oder Rack</block>
+  <block id="1e2dad3dc1303cb9c34342a08ac369c2" category="paragraph">Nehmen Sie das SG100 oder SG1000 aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen.</block>
+  <block id="fd4bc1e04629aac76e335abbe4b95110" category="list-text">Jedes Kabel, das an das SG100- oder SG1000-Gerät angeschlossen ist, ist mit Etiketten gekennzeichnet.</block>
+  <block id="00265604d07e83e9fa37acfb58aea0a6" category="list-text">Sie haben einen physischen Standort für die SG100 oder SG1000 Appliance, an dem Sie Wartungsarbeiten im Datacenter durchführen.</block>
+  <block id="e062f7e106df68638e79abdb18fac222" category="paragraph"><block ref="e062f7e106df68638e79abdb18fac222" category="inline-link-macro-rx"></block></block>
+  <block id="0fcf830f0c15b1400c1db9718be45ada" category="inline-link-macro">Fahren Sie die SG100- oder SG1000-Appliance herunter</block>
+  <block id="5c1320f429c4112c2bba2f8f6cb8fa01" category="list-text">Sie haben <block ref="f1505d4606b132b8853f29fe0a332652" category="inline-link-macro-rx"></block>.</block>
+  <block id="9b0bec7300d43ef7de3808046f83438c" category="list-text">Schieben Sie das Gerät nach vorne aus dem Rack, bis die Montageschienen vollständig ausgefahren sind und die Verriegelungen auf beiden Seiten hörbar einrasten.</block>
+  <block id="72c93dbd5f5d24a30424f10682ce2429" category="section-title">Setzen Sie SG100 oder SG1000 wieder in den Schrank oder das Rack ein</block>
+  <block id="605201180c8af58706d2950dc2815425" category="paragraph">Setzen Sie das Gerät nach Abschluss der Hardwarewartung wieder in einen Schrank oder ein Rack ein.</block>
+  <block id="185e5b18a157d76176305c8be330d521" category="inline-link-macro">Setzen Sie die SG100- oder SG1000-Abdeckung wieder ein</block>
+  <block id="134ec335795fdd11457bc3cf0025baf5" category="paragraph"><block ref="134ec335795fdd11457bc3cf0025baf5" category="inline-link-macro-rx"></block></block>
+  <block id="e3cda821d00824f87e103cfa79fa642c" category="list-text">Drücken Sie gleichzeitig auf die blaue Schiene, um beide Rackschienen zu entbinden, und schieben Sie das Gerät in das Rack, bis es vollständig eingesetzt ist.</block>
+  <block id="684fc7e3b4be959ee39744c82078ef0c" category="image-alt">Rack-Befestigungsschrauben</block>
+  <block id="c934d158cd3ec0bfbf3cbdd7b7827955" category="list-text">Schließen Sie die Netzkabel des Geräts wieder an.</block>
+  <block id="05c9535932e03bb8444cfbfc967af3e2" category="inline-link-macro">Stromkabel anschließen und Strom anschließen (SG100 oder SG1000)</block>
+  <block id="a76302d15eb6041c12b94bdbf80ddf79" category="paragraph"><block ref="a76302d15eb6041c12b94bdbf80ddf79" category="inline-link-macro-rx"></block></block>
+  <block id="bbbfb5089b20d2a9a438d1f300dc3951" category="paragraph">Das Gerät kann neu gestartet werden.</block>
+  <block id="1aab7af93e422001302d3d72d844aa68" category="doc">Ersetzen Sie die CMOS-Batterie in einem SG100 oder SG1000</block>
+  <block id="2de23f109c4b7a2ebaf85dfa94d803d2" category="inline-link-macro">SG100 oder SG1000 geprüft, wo die CMOS-Batterie ausgetauscht werden muss</block>
+  <block id="d31100686fc52b53392732b7d3ae0dbb" category="list-text">Sie haben <block ref="fcfad0bf3ec87a01189dcc7ef62e31e5" category="inline-link-macro-rx"></block>.</block>
+  <block id="76dc6b7b32167d9bd3a9ee4280cd472c" category="inline-link-macro">Standort der SG100- oder SG1000-Appliance</block>
+  <block id="295f39bc37ea49d39fdef10ffc386a4d" category="list-text">Sie haben <block ref="1c34acfb2667f43feb9d3c66f2b8ed39" category="inline-link-macro-rx"></block> die Stelle, an der Sie die CMOS-Batterie im Rechenzentrum austauschen.</block>
+  <block id="7d406e9712f1c209336e5e697cc447ef" category="admonition">Vor dem Entfernen des Geräts aus dem Rack ist ein <block ref="db7c721060dced196b796faf173aec6a" category="inline-link-macro-rx"></block> erforderlich.</block>
+  <block id="126a827d213a0e5e13049b3f4047c548" category="list-text">Sie haben alle Kabel und getrennt <block ref="b4ae088a94cfd6b68a1d3b21b7e66f50" category="inline-link-macro-rx"></block>.</block>
+  <block id="20015455ab5d561bb2f053becbe04427" category="doc">Prüfen Sie, ob die Komponente im SG100 oder SG1000 ersetzt werden soll</block>
+  <block id="155f05305b468da8a62a625c5bb46d08" category="paragraph"><block ref="155f05305b468da8a62a625c5bb46d08" category="inline-link-macro-rx"></block></block>
+  <block id="a3920e91582773914df89ce69b0b4103" category="doc">Ersetzen Sie die SG6000-CN CMOS-Batterie</block>
+  <block id="b3b2dfaac1200c3b68a403bd40179bdf" category="list-text">Sie haben <block ref="1ec8c115f0c3870ab94b38ffe7b9d363" category="inline-link-macro-rx"></block>.</block>
+  <block id="52f39f79f4d9a5685bc2024f2a087065" category="list-text">Sie haben <block ref="f706bf55d44d59c0b4f06acfce2f61ee" category="inline-link-macro-rx"></block> die Stelle, an der Sie die CMOS-Batterie im Rechenzentrum austauschen.</block>
+  <block id="a1294f5ec4aea9551adb3b8c8723fea7" category="admonition">Vor dem Entfernen des Geräts aus dem Rack ist ein <block ref="01cb3624578c0b6333a3e47dc48ec415" category="inline-link-macro-rx"></block> erforderlich.</block>
+  <block id="27a168d0228d72534f07ee949d2796ff" category="list-text">Sie haben alle Kabel und getrennt <block ref="15196f495d147a32d6ddc13b14aad025" category="inline-link-macro-rx"></block>.</block>
+  <block id="10fa39edb4e5d5fc91498d5271535f37" category="doc">Prüfen Sie, ob die Komponente im SG6000-CN ausgetauscht werden soll</block>
+  <block id="ca37341c514b082d1be600ae89827bce" category="sidebar">Verlegung des SG100 oder SG1000 in ein Rack</block>
+  <block id="530a7cab0d75789e4984b34660953995" category="sidebar">Ersetzen Sie die CMOS-Batterie im SG6000-CN-Controller</block>
 </blocks>

@@ -1,0 +1,63 @@
+---
+permalink: sg100-1000/reinstalling-sg100-and-sg1000-controller-cover.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, cover, install, installing, installation, reinstall, reinstalling, reinstallation, remove, removing, removal 
+summary: Entfernen Sie die Geräteabdeckung, um zu Wartungszwecken Zugang zu den internen Komponenten zu erhalten, und bringen Sie die Abdeckung wieder an, wenn Sie fertig sind. 
+---
+= Ersetzen Sie die SG100- oder SG1000-Geräteabdeckung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entfernen Sie die Geräteabdeckung, um zu Wartungszwecken Zugang zu den internen Komponenten zu erhalten, und bringen Sie die Abdeckung wieder an, wenn Sie fertig sind.
+
+
+
+== Entfernen Sie die SG100- oder SG1000-Geräteabdeckung
+
+Entfernen Sie die Geräteabdeckung, um zu Wartungszwecken Zugang zu den internen Komponenten zu erhalten.
+
+.Bevor Sie beginnen
+Nehmen Sie das Gerät aus dem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen.
+
+link:reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html["Entfernen Sie die SG100- oder SG1000-Appliance aus dem Schrank oder Rack"]
+
+.Schritte
+. Stellen Sie sicher, dass die Verriegelung der Geräteabdeckung nicht verriegelt ist. Falls erforderlich, drehen Sie die blaue Kunststoffverriegelung um eine Vierteldrehung in die Entsperrungsrichtung, wie auf der Verriegelung gezeigt.
+. Drehen Sie den Riegel nach oben und zurück in Richtung der Rückseite des Gerätegehäuses, bis er anhält. Heben Sie dann die Abdeckung vorsichtig vom Gehäuse ab und legen Sie sie beiseite.
++
+image::../media/sg6060_cover_latch_open.jpg[Abdeckungsverriegelung offen]
+
++
+
+CAUTION: Wickeln Sie das Gurtende eines ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende an einem Metallboden, um eine statische Entladung bei Arbeiten im Inneren des Geräts zu verhindern.
+
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+
+
+
+== Setzen Sie die SG100- oder SG1000-Geräteabdeckung wieder ein
+
+Setzen Sie die Geräteabdeckung wieder ein, wenn die interne Hardwarewartung abgeschlossen ist.
+
+.Bevor Sie beginnen
+Sie haben alle Wartungsarbeiten im Gerät durchgeführt.
+
+.Schritte
+. Halten Sie bei geöffneter Abdeckungsverriegelung die Abdeckung über dem Gehäuse und richten Sie die Öffnung in der oberen Abdeckung an dem Stift im Gehäuse aus. Wenn die Abdeckung ausgerichtet ist, senken Sie sie auf das Gehäuse ab.
++
+image::../media/sg6060_cover_latch_alignment_pin.jpg[Führungsstift der Abdeckungsverriegelung]
+
+. Drehen Sie die Verriegelung nach vorne und unten, bis sie anhält und die Abdeckung vollständig im Gehäuse sitzt. Stellen Sie sicher, dass an der Vorderkante der Abdeckung keine Lücken vorhanden sind.
++
+Wenn die Abdeckung nicht vollständig eingesetzt ist, können Sie das Gerät möglicherweise nicht in das Rack schieben.
+
+. Optional: Drehen Sie die blaue Kunststoffverriegelung um eine Vierteldrehung in die Schlossrichtung, wie auf der Verriegelung gezeigt, um sie zu verriegeln.
+
+
+.Nachdem Sie fertig sind
+link:reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html["Setzen Sie das Gerät wieder in den Schrank oder das Rack ein."]

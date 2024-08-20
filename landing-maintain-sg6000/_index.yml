@@ -37,3 +37,5 @@ indexpage:
       url: "../sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
     - title: Fibre-Channel-HBA austauschen
       url: "../sg6000/reinstalling-fibre-channel-hba.html"
+    - title: Ersetzen Sie die CMOS-Batterie
+      url: "../sg6000/replace-cmos-in-sg6000cn.html"

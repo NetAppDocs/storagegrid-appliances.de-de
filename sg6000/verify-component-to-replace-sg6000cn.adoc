@@ -1,10 +1,10 @@
 ---
-permalink: sg110-1100/verify-component-to-replace.html 
+permalink: sg6000/verify-component-to-replace-sg6000cn.html 
 sidebar: sidebar 
-keywords: sg110, sg1100 
+keywords: sg6000-cn 
 summary: Wenn Sie sich nicht sicher sind, welche Hardwarekomponente in Ihrem Gerät ausgetauscht werden soll, gehen Sie wie folgt vor, um die Komponente und den Standort des Geräts im Rechenzentrum zu identifizieren. 
 ---
-= Prüfen Sie, ob die Komponente im SG110 oder SG1100 ausgetauscht werden soll
+= Prüfen Sie, ob die Komponente im SG6000-CN ausgetauscht werden soll
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -68,4 +68,4 @@ Um die Appliance im Rechenzentrum zu lokalisieren, können Sie die BMC-IP-Adress
 
 
 .Verwandte Informationen
-link:turning-sg110-and-sg1100-identify-led-on-and-off.html["Schalten Sie die Appliance Identify-LED ein"]
+link:turning-controller-identify-led-on-and-off.html["Schalten Sie die Appliance Identify-LED ein"]
