@@ -10,8 +10,9 @@ entries:
   pdf-filename: Wartungskonfigurationsverfahren - SG5700
   entries:
   - title: Upgrade von SANtricity OS auf Storage Controller
-    url: "/sg5700/upgrading-santricity-os-on-storage-controller.html"
     entries:
+    - title: Allgemeines zum Upgrade von SANtricity OS auf einem SG5700 Storage-Controller
+      url: "/sg5700/upgrading-santricity-os-on-storage-controller.html"
     - title: Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager
       url: "/sg5700/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html"
     - title: Aktualisieren Sie SANtricity OS auf einem E2800 Controller mithilfe des

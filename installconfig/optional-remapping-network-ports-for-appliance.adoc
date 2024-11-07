@@ -14,11 +14,10 @@ summary: Optional können Sie die internen Ports auf einem Appliance-Node versch
 Optional können Sie die internen Ports auf einem Appliance-Node verschiedenen externen Ports neu zuordnen. Aufgrund eines Firewall-Problems müssen Sie möglicherweise Ports neu zuordnen.
 
 .Bevor Sie beginnen
-* Sie haben zuvor auf das Installationsprogramm für StorageGRID-Geräte zugegriffen.
-
+Sie haben zuvor auf das Installationsprogramm für StorageGRID-Geräte zugegriffen.
 
 .Über diese Aufgabe
-Für Load Balancer-Endpunkte können keine neu zugeordneten Ports verwendet werden. Wenn Sie einen neu zugeordneten Port entfernen müssen, führen Sie die Schritte unter aus https://docs.netapp.com/us-en/storagegrid-118/maintain/removing-port-remaps.html["Entfernen Sie die Port-Remaps"^].
+Für Load Balancer-Endpunkte können keine neu zugeordneten Ports verwendet werden. Wenn Sie einen neu zugeordneten Port entfernen müssen, befolgen Sie die Schritte in https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Entfernen Sie die Port-Remaps"^].
 
 .Schritte
 . Wählen Sie im Installationsprogramm des StorageGRID-Geräts die Option *Netzwerk konfigurieren* > *Ports neu zusammenfassen*.

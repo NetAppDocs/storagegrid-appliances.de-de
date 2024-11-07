@@ -20,7 +20,7 @@ Nehmen Sie das SG110 oder SG1100 aus einem Schrank oder Rack, um auf die obere A
 .Bevor Sie beginnen
 * Jedes Kabel, das an den SG110 oder SG1100 angeschlossen ist, muss mit Etiketten gekennzeichnet werden.
 * Das ist schon link:locating-sg110-and-sg1100-in-data-center.html["Die SG110 oder SG1100 physisch befindet"] Wo Sie Wartungsarbeiten im Rechenzentrum durchführen.
-* Das ist schon link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Fahren Sie die SG110 oder SG1100 herunter"].
+* Sie haben link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["Fahren Sie die SG110 oder SG1100 herunter"].
 +
 
 CAUTION: Schalten Sie das Gerät nicht über den Netzschalter aus.
@@ -83,4 +83,4 @@ IMPORTANT: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdr
 
 
 .Nachdem Sie fertig sind
-link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation.html["Starten Sie das Gerät neu"].
+link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation["Starten Sie das Gerät neu"].

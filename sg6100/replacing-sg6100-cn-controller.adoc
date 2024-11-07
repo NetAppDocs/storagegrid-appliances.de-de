@@ -14,7 +14,7 @@ summary: Möglicherweise müssen Sie den SG6100-CN-Controller austauschen, wenn 
 Möglicherweise müssen Sie den SG6100-CN-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
 
 .Bevor Sie beginnen
-* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
+* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller. Überprüfen Sie die an der Vorderseite der Controller angebrachten Tags, um sicherzustellen, dass die Teilenummern übereinstimmen.
 * Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
 * Der Controller ist physisch zu finden, der im Datacenter ersetzt werden soll.
 +
@@ -65,7 +65,7 @@ CAUTION: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdreh
 +
 ** link:../installconfig/configuring-network-links.html["Netzwerkverbindungen konfigurieren"]
 ** link:../installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
 
 
 . Melden Sie sich bei der Appliance mit dem ausgetauschten Controller an:

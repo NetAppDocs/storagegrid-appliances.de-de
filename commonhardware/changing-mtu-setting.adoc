@@ -32,7 +32,7 @@ Wenn das Client- oder Admin-Netzwerk während der ersten Installation nicht im I
 Sie haben die `Passwords.txt` Datei zum Verwenden des Tools zum Ändern der IP-Adresse.
 
 .Schritte
-Greifen Sie auf das Change IP-Tool zu und aktualisieren Sie die MTU-Einstellungen, wie in beschrieben https://docs.netapp.com/us-en/storagegrid-118/maintain/changing-nodes-network-configuration.html["Ändern der Node-Netzwerkkonfiguration"^].
+Greifen Sie auf das Tool IP ändern zu und aktualisieren Sie die MTU-Einstellungen wie unter beschrieben https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html["Ändern der Node-Netzwerkkonfiguration"^].
 
 
 

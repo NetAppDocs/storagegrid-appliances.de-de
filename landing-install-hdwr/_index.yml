@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Appliance-Hardware installieren
+  summary: Installieren Sie die Appliance-Hardware an Ihrem Standort.
+  keywords: storagegrid install hardware, storagegrid install appliance
+  lead: Installieren Sie die Appliance-Hardware an Ihrem Standort.
   tiles:
   - title: Storage Appliance in Schrank oder Rack installieren
     links:

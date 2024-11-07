@@ -1,5 +1,5 @@
 ---
-permalink: sg6100/replace-ocp-nic-in-sg6100-cn.html 
+permalink: sg6100/replace-ocp-nic-sg6100-cn.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6100, storage node, storage appliance, Replacing, replace, NIC, network interface card 
 summary: 'Möglicherweise müssen Sie eine Netzwerkschnittstellenkarte \(NIC\) im SG6100-CN ersetzen, wenn sie nicht optimal funktioniert oder ausgefallen ist.' 
@@ -28,17 +28,17 @@ image::../media/sg6100_cn_ocp_nic_location.png[NIC-Blende.]
 * Das ist schon link:locating-sgf6112-in-data-center.html["Der SG6100-CN-Controller befindet sich physisch"] Wo Sie die NIC im Rechenzentrum ersetzen.
 +
 
-NOTE: Hot-Swapping wird für dieses Verfahren *nicht* unterstützt. A link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Kontrolliertes Herunterfahren des Geräts"] Ist erforderlich, bevor Sie die Kabel trennen und die NIC entfernen.
+NOTE: Hot-Swapping wird für dieses Verfahren *nicht* unterstützt. Vor dem Trennen der Kabel und Entfernen der NIC ist ein link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Kontrolliertes Herunterfahren des Geräts"]erforderlich.
 
 * Sie haben alle Kabel, einschließlich der beiden Netzkabel des SG6100-CN, getrennt.
 * *Optional*: Sie haben den Controller aus dem Rack entfernt, wenn dies durch lokale Vorschriften erforderlich ist. Das Entfernen ist nicht erforderlich, da die NIC von außen zugänglich ist.
 
 
 .Über diese Aufgabe
-Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Speicher-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch der Netzwerkschnittstellenkarte (NIC) gestartet haben, oder ersetzen Sie die NIC während eines geplanten Wartungsfensters, wenn Serviceunterbrechungen akzeptabel sind. Siehe Informationen zu link:https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Verbindungsstatus des Knotens wird montierend dargestellt"].
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Speicher-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch der Netzwerkschnittstellenkarte (NIC) gestartet haben, oder ersetzen Sie die NIC während eines geplanten Wartungsfensters, wenn Serviceunterbrechungen akzeptabel sind. Siehe Informationen über link:https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Verbindungsstatus des Knotens wird montierend dargestellt"].
 
 
-CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie die NIC während eines geplanten Wartungsfensters ersetzen, da während dieses Vorgangs vorübergehend der Zugriff auf diese Objekte verloren geht. Siehe Informationen zu link:https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"].
+CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie die NIC während eines geplanten Wartungsfensters ersetzen, da während dieses Vorgangs vorübergehend der Zugriff auf diese Objekte verloren geht. Siehe Informationen über link:https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"].
 
 
 

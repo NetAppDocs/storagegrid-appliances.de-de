@@ -1,24 +1,26 @@
 ---
-permalink: sg6100/manage-drives-tab.html 
+permalink: commonhardware/manage-drives-tab.html 
 sidebar: sidebar 
-keywords: sgf6112, manage drives tab, locate drive, fail drive, logically replace drive 
-summary: Über die Registerkarte Laufwerke managen im Grid Manager können Sie Fehlerbehebungs- und Wartungsaufgaben für die Laufwerke in der SGF6112-Appliance durchführen. 
+keywords: sgf6112, sg110, sg1100, sg6160, manage drives tab, locate drive, fail drive, logically replace drive 
+summary: Auf der Registerkarte Laufwerke verwalten im Grid Manager können Sie Fehlerbehebungs- und Wartungsaufgaben für Laufwerke für Geräte durchführen, die diese Funktion unterstützen. 
 ---
-= Verwenden Sie die Registerkarte Laufwerke managen (SGF6112).
+= Verwenden Sie die Registerkarte Laufwerke managen (SG110, SG1100, SGF6112 und SG6160).
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Über die Registerkarte Laufwerke managen im Grid Manager können Sie Fehlerbehebungs- und Wartungsaufgaben für die Laufwerke in der SGF6112-Appliance durchführen.
+Auf der Registerkarte Laufwerke verwalten im Grid Manager können Sie Fehlerbehebungs- und Wartungsaufgaben für Laufwerke für Geräte durchführen, die diese Funktion unterstützen.
 
 .Bevor Sie beginnen
-* Sie sind mit einem bei Grid Manager angemeldet https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
-
+Sie sind im Grid Manager mit einem angemeldet https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 
 .Über diese Aufgabe
-Wenn Sie über eine SGF6112-Appliance und entweder den verfügen https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Zugriffsberechtigung für den Administrator der Storage-Appliance oder den Root-Zugriff"^], Auf der Seite mit den Gerätedetails wird die Registerkarte Laufwerke verwalten angezeigt.
+Wenn Sie über eine Appliance verfügen, die diese Funktion unterstützt, wird auf der Seite mit den Gerätedetails die https://docs.netapp.com/us-en/storagegrid/admin/admin-group-permissions.html["Zugriffsberechtigung für den Administrator der Storage-Appliance oder den Root-Zugriff"^] Registerkarte , Laufwerke verwalten angezeigt.
+
+
+NOTE: Für StorageGRID 11.8 wird die Registerkarte Laufwerke verwalten nur für die SGF6112-Appliance unterstützt.
 
 Die Registerkarte Laufwerke managen enthält die folgenden Ansichten:
 

@@ -108,6 +108,39 @@ SG6000-CN Computing Controller mit abnehmbarer Frontblende
 E2860 Controller-Shelf mit entfernter Frontblende (optionales Erweiterungs-Shelf erscheint identisch)
 
 |===
+Diese Abbildung zeigt die Position des Netzteils und die Identifizieren-LEDs auf der Rückseite des SG6000-CN Computing-Controllers, der im SG6060 und SG6060X verwendet wird. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Geräteanschlüssen. Diese LEDs können je nach Gerätelodell variieren.
+
+image::../media/q2023_rear_leds.png[LEDs auf der Rückseite SG6000-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+|===
 
 
 === SG6060 – Rückansicht
@@ -259,7 +292,7 @@ NOTE: Die StorageGRID-Software ist auf der Appliance nicht vorinstalliert. Diese
 
 ==== SG6000-CN-Anschlüsse
 
-image::../media/sg6000_cn_rear_connectors.gif[SG6000-CN rückseitige Anschlüsse]
+image::../media/sg6000_cn_rear_connectors.png[SG6000-CN rückseitige Anschlüsse]
 
 [cols="1a,2a,2a,3a"]
 |===

@@ -19,21 +19,21 @@ Die Appliance SGF6112 und der Controller SG6100-CN verfügen über acht Lüfter.
 * Das ist schon link:locating-sgf6112-in-data-center.html["Physische Lage der SGF6112 Appliance oder des SG6100-CN Controllers"] Wo Sie den Lüfter im Rechenzentrum austauschen.
 +
 
-NOTE: A link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Kontrolliertes Herunterfahren des Geräts"] Ist erforderlich, bevor Sie das Gerät aus dem Rack entfernen.
+NOTE: Vor dem Entfernen des Geräts aus dem Rack ist ein link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Kontrolliertes Herunterfahren des Geräts"] erforderlich.
 
 * Sie haben alle Kabel und getrennt link:reinstalling-sgf6112-cover.html["Die Geräteabdeckung entfernt"].
 * Sie haben bestätigt, dass die anderen Lüfter installiert sind und ausgeführt werden.
 
 
 .Über diese Aufgabe
-Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Lüfteraustausch starten oder den Lüfter während eines geplanten Wartungsfensters austauschen, wenn Serviceunterbrechungen akzeptabel sind. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Lüfteraustausch starten oder den Lüfter während eines geplanten Wartungsfensters austauschen, wenn Serviceunterbrechungen akzeptabel sind. Siehe die Informationen über https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
 
 
-CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Lüfter während eines geplanten Wartungsfensters ersetzen, da während dieses Vorgangs vorübergehend der Zugriff auf diese Objekte verloren geht. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
+CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Lüfter während eines geplanten Wartungsfensters ersetzen, da während dieses Vorgangs vorübergehend der Zugriff auf diese Objekte verloren geht. Siehe Informationen über https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
 
 Auf den Geräteknoten kann nicht zugegriffen werden, wenn Sie den Lüfter austauschen.
 
-Das Foto zeigt einen Ventilator für das Gerät. Der elektrische Anschluss ist markiert. Die Kühllüfter sind zugänglich, nachdem Sie die obere Abdeckung aus dem Gerät nehmen.
+Die Abbildung zeigt einen Lüfter für das Gerät, dessen elektrischer Anschluss markiert ist. Die Kühllüfter sind zugänglich, nachdem Sie die obere Abdeckung aus dem Gerät nehmen.
 
 
 NOTE: Jede der beiden Netzteile enthält zudem einen Lüfter. Die Netzteillüfter sind in diesem Verfahren nicht enthalten.
@@ -49,11 +49,8 @@ Die acht Lüfter befinden sich in den folgenden Positionen im Gehäuse (vordere 
 +
 image::../media/SGF6112-fan-locations.png[Lüfterpositionen]
 
-
-
++
 |===
-
-
 |  | Lüftereinheit 
 
 

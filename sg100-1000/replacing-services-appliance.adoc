@@ -14,7 +14,7 @@ summary: Möglicherweise müssen Sie das Gerät austauschen, wenn es nicht optim
 Möglicherweise müssen Sie das Gerät austauschen, wenn es nicht optimal funktioniert oder es ausgefallen ist.
 
 .Bevor Sie beginnen
-* Sie haben ein Ersatzgerät mit der gleichen Teilenummer wie das Gerät, das Sie austauschen.
+* Sie haben ein Ersatzgerät mit der gleichen Teilenummer wie das Gerät, das Sie austauschen. Überprüfen Sie die an der Vorderseite der Geräte angebrachten Etiketten, um sicherzustellen, dass die Teilenummern übereinstimmen.
 * Sie verfügen über Etiketten, um jedes Kabel zu identifizieren, das mit dem Gerät verbunden ist.
 * Das ist schon link:locating-controller-in-data-center.html["Das Gerät befindet sich physisch"].
 
@@ -112,6 +112,6 @@ Befolgen Sie die Anweisungen zum Austausch dieser Komponenten.
 Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
 
 .Verwandte Informationen
-link:../installconfig/viewing-status-indicators.html["Statusanzeigen anzeigen anzeigen anzeigen"]
+* link:../installconfig/viewing-status-indicators.html["Statusanzeigen anzeigen anzeigen anzeigen"]
+* link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html#view-boot-codes["Anzeigen von Startcodes für die Appliance"]
 
-link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html#view-boot-codes["Anzeigen von Startcodes für die Appliance"]

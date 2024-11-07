@@ -50,7 +50,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 . Stellen Sie aus dem SANtricity-System-Manager fest, welcher Lüfterbehälter ausgefallen ist.
 +
 .. Wählen Sie *Hardware*.
-.. Schauen Sie sich den Ventilator an image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Symbol rechts neben den Dropdown-Listen *Shelf*, um festzustellen, welches Regal den fehlgeschlagenen Lüfterbehälter hat.
+.. Sehen Sie sich das Lüftersymbol image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Lüftersymbol"]rechts neben der Dropdown-Liste *Regal* an, um festzustellen, welches Regal den defekten Lüfterbehälter hat.
 +
 Wenn eine Komponente ausgefallen ist, ist dieses Symbol rot.
 

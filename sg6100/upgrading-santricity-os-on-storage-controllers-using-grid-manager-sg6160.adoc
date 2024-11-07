@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
 summary: 'Für Storage-Controller, die derzeit SANtricity OS 08.42.20.00\(11.42 \) oder höher verwenden, können Sie ein Upgrade mit dem Grid Manager oder dem Wartungsmodus durchführen.' 
 ---
-= Aktualisieren Sie das SANtricity Betriebssystem auf SG6160 Storage Controllern mithilfe des Grid Manager
+= Aktualisieren Sie das SANtricity Betriebssystem auf SG6100 Storage Controllern mithilfe des Grid Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,8 +15,8 @@ Für Storage-Controller, die derzeit SANtricity OS 08.42.20.00 (11.42) oder höh
 
 .Bevor Sie beginnen
 * Wenn Sie die SANtricity OS Version nicht von erhalten haben, auf die Sie ein Upgrade durchführen möchten https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^], Sie haben konsultiert https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^] Oder im https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um sicherzustellen, dass die für das Upgrade verwendete SANtricity OS-Version mit Ihrer Appliance kompatibel ist.
-* Sie haben die https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Berechtigung für Wartung oder Root-Zugriff"^].
-* Sie sind mit einem bei Grid Manager angemeldet https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie haben die https://docs.netapp.com/us-en/storagegrid/admin/admin-group-permissions.html["Berechtigung für Wartung oder Root-Zugriff"^].
+* Sie sind im Grid Manager mit einem angemeldet https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Sie haben die Provisionierungs-Passphrase.
 
 
@@ -32,7 +32,7 @@ CAUTION: Die folgenden Schritte sind nur anwendbar, wenn Sie den Grid Manager zu
 NOTE: Mit diesem Verfahren wird der NVSRAM automatisch auf die neueste Version aktualisiert, die mit dem Upgrade des SANtricity-Betriebssystems verknüpft ist. Sie müssen keine separate NVSRAM-Aktualisierungsdatei anwenden.
 
 
-NOTE: Stellen Sie sicher, dass Sie den aktuellen StorageGRID-Hotfix installieren, bevor Sie mit diesem Vorgang beginnen. Siehe https://docs.netapp.com/us-en/storagegrid-118/maintain/storagegrid-hotfix-procedure.html["StorageGRID Hotfix Verfahren"^] Entsprechende Details.
+NOTE: Stellen Sie sicher, dass Sie den aktuellen StorageGRID-Hotfix installieren, bevor Sie mit diesem Vorgang beginnen. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["StorageGRID Hotfix Verfahren"^].
 
 .Schritte
 . [[Download-santricity-os]] Laden Sie die neue SANtricity OS Softwaredatei von herunter https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^].
@@ -195,6 +195,6 @@ NOTE: Verwenden Sie für alle Nodes, für die der Status als Warnung angezeigt w
 
 
 .Verwandte Informationen
-https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]
+* https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]
+* link:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6160.html["Führen Sie ein Upgrade des SANtricity OS auf SG6100 Controllern mithilfe des Wartungsmodus durch"]
 
-link:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6160.html["Führen Sie ein Upgrade des SANtricity OS auf dem SG6160 Controller mithilfe des Wartungsmodus durch"]

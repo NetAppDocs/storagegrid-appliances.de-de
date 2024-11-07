@@ -196,7 +196,7 @@ image::../media/appliance_installer_reboot_complete.png[Neustart Abgeschlossen]
 +
 .. Wählen Sie im Grid Manager *NODES* aus, und überprüfen Sie, ob der Storage Node der Appliance über ein grünes Häkchen verfügt.
 +
-Das grüne Häkchen bedeutet, dass keine Meldungen aktiv sind und der Node mit dem Raster verbunden ist. Eine Beschreibung der Knotensymbole finden Sie unter https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Überwachen Sie die Status der Node-Verbindung"^].
+Das grüne Häkchen bedeutet, dass keine Meldungen aktiv sind und der Node mit dem Raster verbunden ist. Eine Beschreibung der Knotensymbole finden Sie unter https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Überwachen Sie die Status der Node-Verbindung"^].
 
 .. Wählen Sie die Registerkarte *Storage* aus, und bestätigen Sie, dass in der Objektspeichertabelle für jedes hinzugefügte Erweiterungs-Shelf 16 neue Objektspeichern angezeigt werden.
 .. Vergewissern Sie sich, dass jedes neue Erweiterungs-Shelf den Shelf-Status „Nominal“ sowie den Konfigurationsstatus von „konfiguriert“ aufweist.

@@ -199,6 +199,39 @@ Optionen:
 
 
 |===
+Diese Abbildung zeigt die Position des Netzteils und die Identifizieren-LEDs auf der Rückseite des SGF6112. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Geräteanschlüssen. Diese LEDs können je nach Gerätelodell variieren.
+
+image::../media/q2024_rear_leds.png[Hintere LEDs SGF6112]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+|===
 
 
 === SG6160 – Vorderansicht
@@ -290,6 +323,8 @@ NOTE: Die StorageGRID-Software ist auf der Appliance nicht vorinstalliert. Diese
 * Stellt eine Verbindung zu den E-Series Storage Controllern her und arbeitet als Initiator.
 
 
+Diese Abbildung zeigt Ports auf der Rückseite des SG6100-CN Computing-Controllers.
+
 image::../media/sg6100_cn_rear_connectors.png[Rückseitige SG6100-CN-Steckverbinder]
 
 [cols="1a,2a,2a,3a"]
@@ -302,7 +337,9 @@ image::../media/sg6100_cn_rear_connectors.png[Rückseitige SG6100-CN-Steckverbin
  a| 
 Netzwerkanschlüsse 1-4
  a| 
-10-GbE, 25-GbE oder 100-GbE, basierend auf Kabel- oder SFP-Transceiver-Typ, Switch-Geschwindigkeit und konfigurierter Verbindungsgeschwindigkeit
+* 10/25-GbE basierend auf Kabel- oder SFP-Transceiver-Typ (SFP28- und SFP+-Module werden unterstützt), Switch-Geschwindigkeit und konfigurierter Link-Geschwindigkeit.
+* Mit optionaler 100G NIC SKU (nur SG6160), 10/25/40/100-GbE basierend auf Kabel- oder Transceiver-Typ, Switch-Geschwindigkeit und konfigurierter Verbindungsgeschwindigkeit. QSFP56 (beschränkt auf 100 GbE/Port), QSFP28 (100 GbE) und QSFP+ (40 GbE) werden nativ unterstützt. Optionale SFP+ (10 GbE) oder SFP28 (25 GbE) Transceiver können mit einem QSA verwendet werden (separat erhältlich).
+
  a| 
 Stellen Sie eine Verbindung zum Grid-Netzwerk und dem Client-Netzwerk für StorageGRID her.
 
@@ -369,6 +406,39 @@ Interconnect-Port
 100-GBitE
  a| 
 Schließen Sie den SG6100-CN-Controller an die E4000-Controller an.
+
+|===
+Diese Abbildung zeigt die Position des Netzteils und die Identifizieren-LEDs auf der Rückseite des SG6100-CN Computing-Controllers. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Geräteanschlüssen. Diese LEDs können je nach Gerätelodell variieren.
+
+image::../media/q2023_rear_leds.png[Hintere LEDs SG6100-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
 
 |===
 

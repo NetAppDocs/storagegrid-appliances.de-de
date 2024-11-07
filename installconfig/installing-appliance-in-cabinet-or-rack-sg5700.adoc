@@ -14,7 +14,7 @@ summary: Sie installieren eine Reihe von Schienen in Ihrem Schrank oder Rack und
 Sie installieren eine Reihe von Schienen in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen. Wenn Sie ein SG5760 besitzen, installieren Sie die Laufwerke nach der Installation des Geräts.
 
 .Bevor Sie beginnen
-* Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
+* Sie haben die geprüft https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Sicherheitshinweise"^] Im Lieferumfang enthaltene Dokumentation und Informationen zu den Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware.
 * Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
 
 

@@ -37,10 +37,10 @@ image::../media/sgf6112_power_supplies.png[Rückseite SGF6112 oder SG6100-CN mit
 .Schritte
 . Wenn Sie nur ein Netzteil ersetzen, müssen Sie das Gerät nicht herunterfahren. Wechseln Sie zum <<Unplug_the_power_cord,Ziehen Sie das Netzkabel ab>> Schritt: Wenn Sie beide Netzteile gleichzeitig ersetzen, gehen Sie folgendermaßen vor, bevor Sie die Netzkabel abziehen:
 +
-.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Schalten Sie das Gerät aus"].
+.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Schalten Sie das Gerät aus"].
 +
 
-CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt und beide Netzteile gleichzeitig austauschen, müssen Sie die Netzteile während eines geplanten Wartungsfensters austauschen, da bei diesem Vorgang der Zugriff auf diese Objekte vorübergehend unterbrochen werden kann. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
+CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt und beide Netzteile gleichzeitig austauschen, müssen Sie die Netzteile während eines geplanten Wartungsfensters austauschen, da bei diesem Vorgang der Zugriff auf diese Objekte vorübergehend unterbrochen werden kann. Siehe Informationen über https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
 
 
 

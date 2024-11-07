@@ -1,0 +1,33 @@
+= 
+:allow-uri-read: 
+
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+|===

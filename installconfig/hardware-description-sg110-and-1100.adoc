@@ -43,6 +43,39 @@ Die beiden durch die orangefarbene Umrandung gekennzeichneten Solid State-Laufwe
 
 Die übrigen Laufwerksschächte sind leer.
 
+Diese Abbildung zeigt die Position des Netzteils und die Identifizieren-LEDs auf der Rückseite des SG110 und des SG1100. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Geräteanschlüssen. Diese LEDs können je nach Gerätelodell variieren.
+
+image::../media/q2024_rear_leds.png[Hintere LEDs SG110 und SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+|===
 
 
 == SG110-Steckverbinder
@@ -215,13 +248,13 @@ In den folgenden Beispielen wird beschrieben, wie Sie die Funktionen der Applian
 * Verwenden Sie zwei SG110- oder zwei SG1100-Appliances, um Gateway-Services bereitzustellen, indem Sie sie als Gateway-Nodes konfigurieren.
 +
 
-IMPORTANT: Stellen Sie die Service-Appliances SG110 und SG1100 nicht am selben Standort bereit. Das kann zu einer unvorhersehbaren Performance führen.
+IMPORTANT: Wenn Service-Appliances mit unterschiedlichen Performance-Leveln am selben Standort, wie z. B. SG100 oder SG110 mit SG1000 oder SG1100, kombiniert werden, kann dies bei Verwendung mehrerer Nodes in einer Hochverfügbarkeitsgruppe oder beim Lastausgleich der Client-Last über mehrere Service-Appliances hinweg zu unvorhersehbaren und inkonsistenten Ergebnissen führen
 
 * Verwenden Sie zwei SG110 oder zwei SG1100 Appliances, um Redundanz einiger Grid-Administrationsdienste bereitzustellen. Konfigurieren Sie dazu jedes Gerät als Admin-Nodes.
 * Verwenden Sie zwei SG110 oder zwei SG1100-Appliances, um hochverfügbare Load Balancing- und Traffic-Shaping-Services bereitzustellen, auf die über eine oder mehrere virtuelle IP-Adressen zugegriffen wird. Konfigurieren Sie die Appliances als beliebige Kombination aus Admin-Nodes oder Gateway-Nodes und fügen Sie beide Nodes derselben HA-Gruppe hinzu.
 +
 
-IMPORTANT: Wenn Sie Admin-Nodes und Gateway-Nodes in derselben HA-Gruppe verwenden, erfolgt kein Failover für den nur-Admin-Node-Port. Siehe Anweisungen für https://docs.netapp.com/us-en/storagegrid-118/admin/configure-high-availability-group.html["Konfigurieren von HA-Gruppen"^].
+IMPORTANT: Wenn Sie Admin-Nodes und Gateway-Nodes in derselben HA-Gruppe verwenden, erfolgt kein Failover für den nur-Admin-Node-Port. Siehe die Anleitung für https://docs.netapp.com/us-en/storagegrid/admin/configure-high-availability-group.html["Konfigurieren von HA-Gruppen"^].
 
 
 

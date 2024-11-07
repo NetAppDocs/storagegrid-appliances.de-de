@@ -29,9 +29,10 @@ IMPORTANT: Informationen zur Anzeige von Statusanzeigen zur Überprüfung des Fe
 +
 Die Laufwerke befinden sich in den folgenden Positionen im Gehäuse (Vorderseite des Gehäuses mit entfernter Blende):
 
-
-
++
 image::../media/sg1100_front_with_ssds.png[Standorte der SG110- und SG1100-Laufwerke]
+
+
 
 . Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
 . Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.

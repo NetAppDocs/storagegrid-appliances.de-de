@@ -38,8 +38,8 @@ NOTE: Wenn Sie mehrere Appliance-Nodes gleichzeitig implementieren müssen, kön
 
 * Wenn Sie eine Erweiterung oder Wiederherstellung durchführen, befolgen Sie die entsprechenden Anweisungen:
 +
-** Informationen zum Hinzufügen eines Appliance-Storage-Knotens zu einem vorhandenen StorageGRID-System finden Sie in den Anweisungen für https://docs.netapp.com/us-en/storagegrid-118/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["Grid-Nodes werden hinzugefügt"^].
-** Informationen zum Bereitstellen eines Appliance Storage Node als Teil eines Wiederherstellungsvorgangs finden Sie in den Anweisungen https://docs.netapp.com/us-en/storagegrid-118/maintain/recovering-storagegrid-appliance-storage-node.html["Wiederherstellen eines Appliance Storage Node"^].
+** Informationen zum Hinzufügen eines Appliance-Speicherknoten zu einem vorhandenen StorageGRID-System finden Sie in den Anweisungen für https://docs.netapp.com/us-en/storagegrid/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["Grid-Nodes werden hinzugefügt"^].
+** Informationen zum Bereitstellen eines Appliance Storage Node als Teil eines Wiederherstellungsvorgangs finden Sie in den Anweisungen https://docs.netapp.com/us-en/storagegrid/maintain/recovering-storagegrid-appliance-storage-node.html["Wiederherstellen eines Appliance Storage Node"^].
 
 
 
@@ -50,8 +50,14 @@ NOTE: Wenn Sie mehrere Appliance-Nodes gleichzeitig implementieren müssen, kön
 +
 Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
 
+. Wählen Sie den *Knotentyp* aus. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/storagegrid/primer/what-storage-node-is.html#types-of-storage-nodes["Typen von Storage-Nodes"].
 +
-image::../media/appliance_installer_home_start_installation_enabled.gif[Homepage des Appliance Installer für andere Node-Typen (außer Admin-Nodes)]
+
+NOTE: Nur Metadaten können nur während der Appliance-Bereitstellung ausgewählt werden. Wenn nur Metadaten als Storage-Node-Typ ausgewählt ist, kann er nach der Bereitstellung der Appliance nicht geändert werden.
+
+. Geben Sie im Feld *Node Name* den Systemnamen ein, den Sie für diesen Appliance-Knoten verwenden möchten, und klicken Sie auf *Save*.
++
+Der Name, der hier angezeigt wird, ist der Systemname des Appliance-Node. Systemnamen sind für interne StorageGRID-Vorgänge erforderlich und können nicht geändert werden.
 
 . Legen Sie im Abschnitt * Primary Admin Node Connection* fest, ob Sie die IP-Adresse für den primären Admin Node angeben müssen.
 +
@@ -86,10 +92,6 @@ Automatische Erkennung aller verbundenen primären Admin-Nodes
 
 
 |===
-. Geben Sie im Feld *Node Name* den Systemnamen ein, den Sie für diesen Appliance-Knoten verwenden möchten, und klicken Sie auf *Save*.
-+
-Der Name, der hier angezeigt wird, ist der Systemname des Appliance-Node. Systemnamen sind für interne StorageGRID-Vorgänge erforderlich und können nicht geändert werden.
-
 . Bestätigen Sie im Abschnitt *Installation*, dass der aktuelle Status „bereit zum Starten der Installation von ist `_node name_` In das Grid mit primärem Admin-Node `_admin_ip_` " Und dass die Schaltfläche *Installation starten* aktiviert ist.
 +
 Wenn die Schaltfläche *Installation starten* nicht aktiviert ist, müssen Sie möglicherweise die Netzwerkkonfiguration oder die Porteinstellungen ändern. Anweisungen hierzu finden Sie in der Wartungsanleitung Ihres Geräts.

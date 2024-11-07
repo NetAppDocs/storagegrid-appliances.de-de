@@ -57,7 +57,7 @@ CAUTION: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
 Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
 
 +
-Wenn beide SSD-Laufwerke normal funktionieren, stellt das System die Lese-Cache-Funktion automatisch wieder her. Das können Sie https://docs.netapp.com/us-en/storagegrid-118/monitor/running-diagnostics.html["Führen Sie eine Diagnose aus"^] Um die Trefferquote des Lese-Caches zu überwachen. Da der Cache gerade neu aufgebaut wurde, war die Trefferrate anfänglich möglicherweise niedrig, sollte sich aber im Laufe der Zeit erhöhen, da der Cache von den Clients, die auf Objektdaten zugreifen, wieder aufgefüllt wird.
+Wenn beide SSD-Laufwerke normal funktionieren, stellt das System die Lese-Cache-Funktion automatisch wieder her. Sie können https://docs.netapp.com/us-en/storagegrid/monitor/running-diagnostics.html["Führen Sie eine Diagnose aus"^] die Trefferquote des Lese-Caches überwachen. Da der Cache gerade neu aufgebaut wurde, war die Trefferrate anfänglich möglicherweise niedrig, sollte sich aber im Laufe der Zeit erhöhen, da der Cache von den Clients, die auf Objektdaten zugreifen, wieder aufgefüllt wird.
 
 
 

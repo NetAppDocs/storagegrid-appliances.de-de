@@ -18,13 +18,36 @@ Wenn Sie mit ConfigBuilder eine JSON-Datei erstellen, können Sie den RAID-Modus
 .Über diese Aufgabe
 Wenn die Appliance unterstützt, können Sie eine der folgenden Optionen für die Volume-Konfiguration auswählen:
 
-* *Dynamic Disk Pools (DDP)*: Dieser Modus verwendet zwei Paritätslaufwerke für je acht Datenlaufwerke. Dies ist der Standard- und empfohlene Modus für alle Appliances. Im Vergleich zu RAID 6 erzielt DDP eine bessere System-Performance, kürzere Wiederherstellungszeiten nach Laufwerksausfällen und ein vereinfachtes Management. DDP bietet auch Schutz vor Schubladenverlusten in SG5760, SG5860 und SG6160 Appliances.
+
+NOTE: Die Volume-Größe ist nicht konsistent für alle DDP- und RAID-Typen. Unterschiede in der Funktionsweise von DDP und RAID6 verursachen unterschiedliche Volume-Größen.
+
+* *Dynamic Disk Pools (DDP)*: Dieser Modus verwendet zwei Paritätslaufwerke für je acht Datenlaufwerke. Dies ist der Standard- und empfohlene Modus für alle Appliances.
++
+** Im Vergleich zu RAID 6 erzielt DDP eine bessere System-Performance, kürzere Wiederherstellungszeiten nach Laufwerksausfällen und ein vereinfachtes Management.
+** Pro Storage Appliance oder Erweiterungs-Shelf wird ein Festplatten-Pool erstellt.
+** DDP bietet in SG5760, SG5860 und SG6160 Appliances Schutz vor Schubladenverlusten.
 +
 
-NOTE: Aufgrund der beiden SSDs bietet DDP in SG6060 Appliances keinen Schubladenschutz. Der Schutz vor Schubladenverlusten ist in allen Erweiterungs-Shelfs, die zu einem SG6060 hinzugefügt werden, wirksam.
+NOTE: Aufgrund der beiden SSDs bietet DDP in SG6060 Appliances keine Schubladensicherung. Der Schutz vor Schubladenverlusten ist in allen Erweiterungs-Shelfs, die zu einem SG6060 hinzugefügt werden, wirksam.
 
-* *DDP16*: In diesem Modus werden für alle 16 Datenlaufwerke zwei Paritätslaufwerke verwendet. Dies führt im Vergleich zu DDP zu einer höheren Storage-Effizienz. Im Vergleich zu RAID 6 bietet DDP16 eine bessere Systemperformance, kürzere Wiederherstellungszeiten nach Laufwerksausfällen, benutzerfreundliches Management und vergleichbare Storage-Effizienz. Um den DDP16-Modus zu verwenden, muss Ihre Konfiguration mindestens 20 Laufwerke enthalten. DDP16 bietet keinen Schubladenschutz.
+
+
+* *DDP16*: In diesem Modus werden für alle 16 Datenlaufwerke zwei Paritätslaufwerke verwendet. Dies führt im Vergleich zu DDP zu einer höheren Storage-Effizienz.
++
+** Im Vergleich zu RAID 6 bietet DDP16 eine bessere Systemperformance, kürzere Wiederherstellungszeiten nach Laufwerksausfällen, einfaches Management und eine vergleichbare Storage-Effizienz.
+** Um den DDP16-Modus zu verwenden, muss Ihr Speichergerät mindestens 20 Laufwerke enthalten.
+** Pro Storage Appliance oder Erweiterungs-Shelf wird ein Festplatten-Pool erstellt.
+** DDP16 bietet keinen Schutz vor Schubladenverlust.
+
+
 * *RAID 6*: Dieser Modus verwendet zwei Paritätslaufwerke pro 16 oder mehr Datenlaufwerken. Es handelt sich um ein Hardware-Sicherungsschema, das Paritätsstreifen auf jeder Festplatte verwendet und zwei Festplattenausfälle innerhalb des RAID-Satzes zulässt, bevor Daten verloren gehen. Für die Verwendung des RAID 6-Modus muss Ihre Konfiguration mindestens 20 Laufwerke enthalten. Obwohl RAID 6 die Storage-Effizienz der Appliance im Vergleich zu DDP steigern kann, wird dies in den meisten StorageGRID Umgebungen nicht empfohlen.
++
+** RAID 6 bietet ein globales Hot Spare pro Erweiterungs-Shelf. Ein SG6160 mit zwei Erweiterungseinschüben verfügt beispielsweise über drei Hot Spares.
+** Auf einer Storage Appliance mit 60 Laufwerken erstellt StorageGRID drei Volume-Gruppen mit jeweils mindestens 18 Laufwerken (16+2) und einer maximalen Größe von 21 Laufwerken (19+2).
+** Auf der SGF6024 besteht eine RAID 6-Volume-Gruppe aus 23 Laufwerken mit einem Hot Spare.
+** RAID 6-Volumes sind etwas größer, wodurch in vielen Fällen das Klonen von Nodes aus DDP16 möglich ist. Die Volume-Größe kann in einer RAID 6 Konfiguration zwischen den Volume-Gruppen variieren.
+
+
 
 
 
@@ -37,7 +60,7 @@ CAUTION: Wenn bereits Volumes konfiguriert wurden oder bereits StorageGRID insta
 .Bevor Sie beginnen
 * Sie haben ein SG5760 mit 60 Laufwerken. Wenn SG5712 vorhanden ist, müssen Sie den DDP-Standardmodus verwenden.
 * Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.
-* Der Client verfügt über eine https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Der Kunde hat einen https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 
 
 .Schritte
@@ -57,7 +80,7 @@ Wo `_E5700SG_Controller_IP_` Gibt eine der IP-Adressen für den E5700SG-Controll
 .Bevor Sie beginnen
 * Sie haben eine SG5860 mit 60 Laufwerken. Bei einer SG5812 müssen Sie den DDP-Standardmodus verwenden.
 * Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.
-* Der Client verfügt über eine https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Der Kunde hat einen https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 
 
 .Schritte
@@ -76,7 +99,7 @@ Wo `_SG5800_Controller_IP_` Ist eine der IP-Adressen für den SG5800-Controller.
 --
 .Bevor Sie beginnen
 * Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.
-* Der Client verfügt über eine  https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Der Kunde hat einen  https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 
 
 .Schritte
@@ -100,7 +123,7 @@ Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
 --
 .Bevor Sie beginnen
 * Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.
-* Der Client verfügt über eine  https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Der Kunde hat einen  https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 
 
 .Schritte

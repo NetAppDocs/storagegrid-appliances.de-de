@@ -16,7 +16,7 @@ Bevor Sie auf die BMC-Schnittstelle zugreifen können, konfigurieren Sie die IP-
 Wenn Sie mit ConfigBuilder eine JSON-Datei erstellen, können Sie IP-Adressen automatisch konfigurieren. Siehe link:automating-appliance-installation-and-configuration.html["Automatisierung der Appliance-Installation und -Konfiguration"].
 
 .Bevor Sie beginnen
-* Der Management-Client verwendet ein https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Der Management-Client verwendet einen https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Sie verwenden jeden Management-Client, der eine Verbindung zu einem StorageGRID-Netzwerk herstellen kann.
 * Der BMC-Management-Port ist mit dem Managementnetzwerk verbunden, das Sie verwenden möchten.
 +

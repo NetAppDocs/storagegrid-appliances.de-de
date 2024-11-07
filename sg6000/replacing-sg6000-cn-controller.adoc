@@ -14,7 +14,7 @@ summary: Möglicherweise müssen Sie den SG6000-CN-Controller austauschen, wenn 
 Möglicherweise müssen Sie den SG6000-CN-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
 
 .Bevor Sie beginnen
-* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
+* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller. Überprüfen Sie die an der Vorderseite der Controller angebrachten Tags, um sicherzustellen, dass die Teilenummern übereinstimmen.
 * Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
 * Der Controller ist physisch zu finden, der im Datacenter ersetzt werden soll.
 +
@@ -78,7 +78,7 @@ NOTE: In einigen Phasen des Installationsprozesses ist möglicherweise keine Ver
 +
 ** link:../installconfig/configuring-network-links.html["Netzwerkverbindungen konfigurieren"]
 ** link:../installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
 
 
 . Melden Sie sich bei der Appliance mit dem ausgetauschten Controller an:
@@ -122,8 +122,7 @@ NOTE: In einigen Phasen des Installationsprozesses ist möglicherweise keine Ver
 Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
 
 .Verwandte Informationen
-link:../installconfig/sg6000-cn-installing-into-cabinet-or-rack.html["Installieren Sie SG6000-CN im Schrank oder Rack"]
+* link:../installconfig/sg6000-cn-installing-into-cabinet-or-rack.html["Installieren Sie SG6000-CN im Schrank oder Rack"]
+* link:../installconfig/viewing-status-indicators.html["Statusanzeigen anzeigen anzeigen anzeigen"]
+* link:../installconfig/troubleshooting-hardware-installation.html#view-boot-codes["Anzeigen von Boot-Codes für SG6000-CN-Controller"]
 
-link:../installconfig/viewing-status-indicators.html["Statusanzeigen anzeigen anzeigen anzeigen"]
-
-link:../installconfig/troubleshooting-hardware-installation.html#view-boot-codes["Anzeigen von Boot-Codes für SG6000-CN-Controller"]

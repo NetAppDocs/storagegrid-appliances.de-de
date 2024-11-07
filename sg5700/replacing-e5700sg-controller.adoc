@@ -114,4 +114,4 @@ Der endgültige Zustand ist `HA`.
 Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
 
 .Verwandte Informationen
-http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]
+https://docs.netapp.com/us-en/e-series-family/index.html["Dokumentation zur NetApp E-Series"^]

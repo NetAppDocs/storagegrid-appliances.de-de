@@ -14,7 +14,7 @@ summary: Möglicherweise müssen Sie das Gerät austauschen, wenn es nicht optim
 Möglicherweise müssen Sie das Gerät austauschen, wenn es nicht optimal funktioniert oder es ausgefallen ist.
 
 .Bevor Sie beginnen
-* Sie haben ein Ersatzgerät mit der gleichen Teilenummer wie das Gerät, das Sie austauschen.
+* Sie haben ein Ersatzgerät mit der gleichen Teilenummer wie das Gerät, das Sie austauschen. Überprüfen Sie die an der Vorderseite der Geräte angebrachten Etiketten, um sicherzustellen, dass die Teilenummern übereinstimmen.
 * Sie verfügen über Etiketten, um jedes Kabel zu identifizieren, das mit dem Gerät verbunden ist.
 * Das ist schon link:locating-sg110-and-sg1100-in-data-center.html["Das Gerät befindet sich physisch"].
 
@@ -42,7 +42,7 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 .. Geben Sie Ein: `*run-host-command ipmitool lan print*` Zeigt die aktuellen BMC-Konfigurationen für die Appliance an.
 
 
-. link:power-sg110-and-sg1100-off-on.html#shut-down-the-sgf6112-appliance["Schalten Sie das Gerät aus"].
+. link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["Schalten Sie das Gerät aus"].
 . Wenn eine der Netzwerkschnittstellen auf dieser StorageGRID-Appliance für DHCP konfiguriert ist, müssen Sie die permanenten DHCP-Lease-Zuordnungen auf den DHCP-Servern aktualisieren, um auf die MAC-Adressen der Ersatz-Appliance zu verweisen. Dadurch wird sichergestellt, dass der Appliance die erwarteten IP-Adressen zugewiesen werden.
 +
 Wenden Sie sich an Ihren Netzwerk- oder DHCP-Server-Administrator, um die permanenten DHCP-Lease-Zuweisungen zu aktualisieren. Der Administrator kann die MAC-Adressen der Ersatz-Appliance anhand der DHCP-Serverprotokolle ermitteln oder die MAC-Adresstabellen in den Switches überprüfen, mit denen die Ethernet-Ports der Appliance verbunden sind.
@@ -93,7 +93,7 @@ CAUTION: Wenn Sie die Daten auf den Laufwerken aufbewahren möchten, müssen Sie
 
 
 . Schalten Sie das Gerät ein.
-. Wenn die Hardwareverschlüsselung für die SED-Laufwerke auf der Appliance, die Sie ausgetauscht haben, aktiviert war, müssen Sie dies tun link:optional-enabling-node-encryption.html#access-an-encrypted-drive["Geben Sie die Passphrase für die Laufwerkverschlüsselung ein"] So greifen Sie auf die verschlüsselten Laufwerke zu, wenn die Ersatz-Appliance zum ersten Mal gestartet wird.
+. Wenn die Hardwareverschlüsselung für die SED-Laufwerke auf der Appliance, die Sie ausgetauscht haben, aktiviert war, müssen Sie dies tun link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["Geben Sie die Passphrase für die Laufwerkverschlüsselung ein"] So greifen Sie auf die verschlüsselten Laufwerke zu, wenn die Ersatz-Appliance zum ersten Mal gestartet wird.
 . Warten Sie, bis die Appliance wieder mit dem Raster verbunden ist. Wenn die Appliance nicht erneut dem Raster angeschlossen wird, befolgen Sie die Anweisungen auf der Startseite des StorageGRID-Geräteinstallationsprogramms, um Probleme zu beheben.
 +
 
@@ -102,7 +102,7 @@ WARNING: Um Datenverluste zu vermeiden, wenn das Appliance Installer anzeigt, da
 . Wenn die von Ihnen ersetzte Appliance einen Verschlüsselungsmanagement-Server (KMS) zum Management der Schlüssel für die Node-Verschlüsselung verwendet hat, ist möglicherweise eine zusätzliche Konfiguration erforderlich, bevor der Node dem Grid beitreten kann. Wenn der Node nicht automatisch in das Raster integriert wird, stellen Sie sicher, dass diese Konfigurationseinstellungen auf die neue Appliance übertragen wurden, und konfigurieren Sie manuell alle Einstellungen, die nicht über die erwartete Konfiguration verfügen:
 +
 ** link:../installconfig/accessing-storagegrid-appliance-installer.html["Konfigurieren Sie StorageGRID-Verbindungen"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
 
 
 . Melden Sie sich bei der ersetzten Appliance an:
@@ -141,8 +141,8 @@ WARNING: Um Datenverluste zu vermeiden, wenn das Appliance Installer anzeigt, da
 
 
 .Verwandte Informationen
-link:../installconfig/viewing-status-indicators.html["Statusanzeigen anzeigen anzeigen anzeigen"]
+* link:../installconfig/viewing-status-indicators.html["Statusanzeigen anzeigen anzeigen anzeigen"]
+* link:../installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html#view-error-codes["Anzeigen von Startcodes für die Appliance"]
 
-link:../installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html#view-error-codes["Anzeigen von Startcodes für die Appliance"]
 
 Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.

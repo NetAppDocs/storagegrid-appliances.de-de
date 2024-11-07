@@ -33,7 +33,7 @@ NOTE: Mischen Sie Netzteileinheiten der verschiedenen Spannungsarten nicht. Imme
 ** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 ** Zugriff auf den SANtricity System Manager:
 +
-*** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Controller-Informationen befinden sich auf dem https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+*** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Informationen zum Controller finden Sie auf der https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
 *** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
 
 
@@ -64,7 +64,7 @@ Sie finden diese Informationen im Bereich Details des Recovery Guru oder können
 
 +
 .. Wählen Sie *Hardware*.
-.. Schau dir die Macht an image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] Und Fan image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Symbole rechts neben den Dropdown-Listen *Shelf*, um festzustellen, welches Regal die ausgefallene Stromversorgung hat.
+.. Schauen Sie sich die Stromimage:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ein/aus-Symbol"]- und Lüftersymbole image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Lüftersymbol"]rechts neben der Dropdown-Liste *Shelf* an, um festzustellen, welches Shelf das ausgefallene Netzteil hat.
 +
 Wenn eine Komponente ausgefallen ist, sind entweder oder beide Symbole rot.
 

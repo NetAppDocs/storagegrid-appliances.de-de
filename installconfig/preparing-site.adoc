@@ -46,49 +46,167 @@ SG5712
  a| 
 SG5760
  a| 
-240-Volt-Wechselspannung
+240 Volt Wechselstrom
 
 
 
  a| 
 SG5812
  a| 
-120 bis 240 V AC
+120 bis 240 Volt Wechselstrom
 
 
 
  a| 
 SG5860
  a| 
-240-Volt-Wechselspannung
+240 Volt Wechselstrom
 
 
 
  a| 
 SGF6024
  a| 
-120-Volt-Wechselspannung
+120 Volt Wechselstrom
 
 
 
  a| 
 SG6060
  a| 
-240-Volt-Wechselspannung
+240 Volt Wechselstrom
 
 
 
  a| 
 SGF6112
  a| 
-100 bis 240 Volt Wechselstrom
+240 Volt Wechselstrom
 
 
 
  a| 
 SG6160
  a| 
-240-Volt-Wechselspannung
+240 Volt Wechselstrom
+
+|===
+. Vergewissern Sie sich, dass Ihr Standort die Energieanforderungen für Ihr Gerät erfüllt:
++
+
+NOTE: Die Netzteile in StorageGRID Appliances haben selbst in Zeiten des maximalen Stromverbrauchs eine deutlich höhere Nennleistung als die von StorageGRID Appliance verwendete Hardware. NetApp empfiehlt, mithilfe der Zahlen in der folgenden Tabelle zu bestimmen, ob ein vorgeschlagenes Rack-Layout, das StorageGRID Appliances enthält, mit Ihrem Rack-Leistungsbudget kompatibel ist.
+
++
+[cols="1a,1a,1a"]
+|===
+| Modell | Durchschnittlich benötigte Leistung (W) | Maximal benötigte Leistung (W) 
+
+
+ a| 
+SG100
+ a| 
+273
+ a| 
+400
+
+
+
+ a| 
+SG1000
+ a| 
+337
+ a| 
+600
+
+
+
+ a| 
+SG110
+ a| 
+352
+ a| 
+500
+
+
+
+ a| 
+SG1100
+ a| 
+422
+ a| 
+700
+
+
+
+ a| 
+SG5712
+ a| 
+578
+ a| 
+700
+
+
+
+ a| 
+SG5760
+ a| 
+1394
+ a| 
+1800
+
+
+
+ a| 
+SG5812
+ a| 
+449
+ a| 
+600
+
+
+
+ a| 
+SG5860
+ a| 
+1048
+ a| 
+1300
+
+
+
+ a| 
+SGF6024
+ a| 
+1027
+ a| 
+1900
+
+
+
+ a| 
+SG6060
+ a| 
+1484
+ a| 
+2300
+
+
+
+ a| 
+SGF6112
+ a| 
+446
+ a| 
+700
+
+
+
+ a| 
+SG6160
+ a| 
+1312
+ a| 
+1800
 
 |===
 . Beziehen Sie einen 19-Zoll-Schrank (48.3 cm) für die folgenden Regale (ohne Kabel).

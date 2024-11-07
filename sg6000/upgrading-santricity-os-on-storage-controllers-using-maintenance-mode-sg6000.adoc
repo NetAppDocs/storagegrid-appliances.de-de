@@ -36,7 +36,7 @@ CAUTION: Wenn Sie mehrere StorageGRID Appliances gleichzeitig aktualisieren, kan
 
 CAUTION: Das NVSRAM bezieht sich auf die StorageGRID Appliance. Verwenden Sie den Standard-NVSRAM-Download nicht.
 
-. Folgen Sie den Anweisungen im Handbuch „ _Upgrade SANtricity OS_“ oder der Online-Hilfe von SANtricity System Manager, um die Firmware und NVSRAM zu aktualisieren.
+. Befolgen Sie die Anweisungen in der https://docs.netapp.com/us-en/e-series-santricity/sm-support/upgrade-controller-software-and-firmware.html["_Upgrade von SANtricity OS_ Guide"^] oder der Online-Hilfe des SANtricity System Managers, um die Firmware und den NVSRAM zu aktualisieren.
 +
 
 NOTE: Aktivieren Sie die Upgrade-Dateien sofort. Die Aktivierung darf nicht verzögert werden.
@@ -59,6 +59,6 @@ image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden
 
 
 .Verwandte Informationen
-https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool"^]
+* https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool"^]
+* link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html["Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager"]
 
-link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html["Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager"]

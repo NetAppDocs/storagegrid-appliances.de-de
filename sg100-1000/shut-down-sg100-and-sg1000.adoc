@@ -14,8 +14,7 @@ summary: Fahren Sie die Service-Appliance herunter, um Hardware-Wartungsarbeiten
 Fahren Sie die Service-Appliance herunter, um Hardware-Wartungsarbeiten durchzuführen.
 
 .Bevor Sie beginnen
-* Sie haben körperlich link:locating-controller-in-data-center.html["Befindet sich im Service-Gerät"] Wartungsbedarf im Rechenzentrum.
-
+Sie haben körperlich link:locating-controller-in-data-center.html["Befindet sich im Service-Gerät"] Wartungsbedarf im Rechenzentrum.
 
 .Über diese Aufgabe
 Um Serviceunterbrechungen zu vermeiden, sollten Sie die Service Appliance während eines geplanten Wartungsfensters herunterfahren, wenn Serviceunterbrechungen akzeptabel sind.

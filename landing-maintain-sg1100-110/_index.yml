@@ -1,9 +1,13 @@
 ---
 indexpage:
+  title: Wartung der SG1100- und SG110-Services-Appliance-Hardware
+  summary: Warten Sie die Hardware für Ihre Service Appliance SG1100 und SG110.
+  keywords: maintain storagegrid sg110, maintain storagegrid sg1100
+  lead: Warten Sie die Hardware für Ihre Service Appliance SG1100 und SG110.
   tiles:
   - title: Häufig ausgeführte Prozeduren
     links:
-    - title: Die Position-LED ein- oder ausschalten
+    - title: Die Identifizieren-LED ein- oder ausschalten
       url: "../sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html"
     - title: Suchen Sie die Appliance im Datacenter
       url: "../sg110-1100/locating-sg110-and-sg1100-in-data-center.html"

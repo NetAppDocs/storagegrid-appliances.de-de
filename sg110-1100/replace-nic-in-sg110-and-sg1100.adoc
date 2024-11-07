@@ -29,16 +29,13 @@ Mit diesen Verfahren können Sie:
 * Das ist schon link:locating-sg110-and-sg1100-in-data-center.html["Das SG110- oder SG1100-Gerät befindet sich in einem physischen Standort"] Wo Sie die NIC im Rechenzentrum ersetzen.
 +
 
-NOTE: A link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Kontrolliertes Herunterfahren des Geräts"] Ist erforderlich, bevor Sie das Gerät aus dem Rack entfernen.
+NOTE: A link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["Kontrolliertes Herunterfahren des Geräts"] Ist erforderlich, bevor Sie das Gerät aus dem Rack entfernen.
 
 * Sie haben alle Kabel und getrennt link:reinstalling-sg110-and-sg1100-cover.html["Die Geräteabdeckung entfernt"].
 
 
 .Über diese Aufgabe
-Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Speicher-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch der Netzwerkschnittstellenkarte (NIC) starten oder die NIC während eines geplanten Wartungsfensters austauschen, wenn Serviceunterbrechungen akzeptabel sind. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
-
-
-CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie die NIC während eines geplanten Wartungsfensters ersetzen, da während dieses Vorgangs vorübergehend der Zugriff auf diese Objekte verloren geht. Siehe Informationen zu https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"^].
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Speicher-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch der Netzwerkschnittstellenkarte (NIC) starten oder die NIC während eines geplanten Wartungsfensters austauschen, wenn Serviceunterbrechungen akzeptabel sind. Siehe die Informationen über https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
 
 .Schritte
 . Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
@@ -47,7 +44,7 @@ CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eine
 Die drei NICs im Gerät befinden sich in zwei Riserbaugruppen an den Positionen im Gehäuse, die auf dem Foto gezeigt werden (Rückseite des Geräts mit entfernter oberer Abdeckung):
 
 +
-image::../media/sgf6112-nic-positions.jpg[NIC-Positionen]
+image::../media/sgf6112-nic-positions.png[NIC-Positionen]
 
 +
 [cols="1a,2a,4a"]

@@ -14,10 +14,51 @@ summary: Wenn Sie möchten, dass E-Mail-Benachrichtigungen bei Auftreten von War
 Wenn Sie möchten, dass E-Mail-Benachrichtigungen bei Auftreten von Warnungen gesendet werden, verwenden Sie die BMC-Schnittstelle, um SMTP-Einstellungen, Benutzer, LAN-Ziele, Warnungsrichtlinien und Ereignisfilter zu konfigurieren.
 
 
-NOTE: BMC-Einstellungen, die durch dieses Verfahren vorgenommen werden, bleiben möglicherweise nicht erhalten, wenn der SG6000-CN-Controller oder die Services-Appliance ausfällt und ersetzt werden muss. Stellen Sie sicher, dass Sie über eine Aufzeichnung aller Einstellungen verfügen, die Sie angewendet haben, so dass sie nach einem Hardware-Austausch bei Bedarf leicht wieder angewendet werden können.
+NOTE: Die bei diesem Verfahren vorgenommenen BMC-Einstellungen bleiben möglicherweise nicht erhalten, wenn ein Controller oder eine Appliance ausfällt und ersetzt werden muss. Stellen Sie sicher, dass Sie über eine Aufzeichnung aller Einstellungen verfügen, die Sie angewendet haben, so dass sie nach einem Hardware-Austausch bei Bedarf leicht wieder angewendet werden können.
 
+[role="tabbed-block"]
+====
+.StorageGRID 11.9 und höher
+--
 .Bevor Sie beginnen
-Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
+Sie wissen, wie es geht link:../installconfig/accessing-bmc-interface.html["Rufen Sie das BMC-Dashboard auf"].
+
+.Über diese Aufgabe
+Verwenden Sie in der BMC-Oberfläche die Optionen *Benutzerverwaltung* und *Plattformereignisfilter* auf der Seite Einstellungen, um E-Mail-Benachrichtigungen zu konfigurieren.
+
+Diese Anweisungen zeigen die neueste Version der BMC-Firmware, die für einige StorageGRID-Appliances verfügbar ist. Ihre StorageGRID-Appliance verfügt möglicherweise über eine BMC-Firmware-Version, die sich leicht unterscheidet.
+
+* Die BMC-Firmware wird während StorageGRID-Software-Upgrades aktualisiert. Wenn Sie nicht die neueste Version der StorageGRID-Software ausführen, können Sie Ihr Gerät auf die neueste StorageGRID-Version aktualisieren, um diezu installieren https://docs.netapp.com/us-en/storagegrid/upgrade/how-your-system-is-affected-during-upgrade.html#appliance-firmware-is-upgraded["Die neueste für Ihre Appliance verfügbare BMC-Firmware-Version"].
+* Wenn Ihr BMC vor oder nach einer StorageGRID-Aktualisierung anders angezeigt wird:
++
+** Siehe Anweisungen auf der Registerkarte StorageGRID 11.8.
+** link:../commonhardware/use-bmc.html["Verwenden Sie den StorageGRID BMC"] Möglicherweise verfügen Sie auch über Informationen, die Ihnen bei der Anpassung dieser Anweisungen für Ihre BMC-Version helfen.
+
+
+
+
+.Schritte
+. Konfigurieren Sie E-Mail-Benachrichtigungen als ein oder mehrere LAN-Ziele.
++
+.. Wählen Sie im BMC-Dashboard *Einstellungen* > *Plattformereignisfilter* > *LAN-Ziele*.
+.. Wählen Sie unter Zieltyp *E-Mail*.
+.. Wählen Sie einen BMC-Benutzernamen aus, um die E-Mail-Benachrichtigung aus der Liste der BMC-Benutzer zu erhalten. Die E-Mail-Benachrichtigung wird an die für diesen Benutzer konfigurierte E-Mail-Adresse gesendet. HINWEIS: Um BMC-Benutzer zu konfigurieren, wählen Sie *Einstellungen* > *Benutzerverwaltung*. Weitere Informationen finden Sie im Abschnitt Benutzerverwaltung des https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["BMC-Benutzerhandbuch"^].
+.. Geben Sie einen E-Mail-Betreff und eine E-Mail-Nachricht für die E-Mail-Benachrichtigung ein.
++
+
+NOTE: E-Mail-Betreff und E-Mail-Nachricht werden nicht für E-Mail-Benutzer im AMI-Format verwendet.
+
+.. Wählen Sie *Speichern*.
+
+
+. Informationen zur Verwendung des BMC zum Konfigurieren von Warnungsrichtlinien und Ereignisfiltern finden Sie im Abschnitt Plattformereignisfilter der https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["BMC-Benutzerhandbuch"^].
+
+
+--
+.StorageGRID 11.8
+--
+.Bevor Sie beginnen
+Sie wissen, wie es geht link:../installconfig/accessing-bmc-interface.html["Rufen Sie das BMC-Dashboard auf"].
 
 .Über diese Aufgabe
 In der BMC-Schnittstelle verwenden Sie die Optionen *SMTP-Einstellungen*, *Benutzerverwaltung* und *Platform Event Filters* auf der Seite Einstellungen, um E-Mail-Benachrichtigungen zu konfigurieren.
@@ -25,7 +66,7 @@ In der BMC-Schnittstelle verwenden Sie die Optionen *SMTP-Einstellungen*, *Benut
 image::../media/bmc_settings_menu.png[BMC-Einstellungsmenü]
 
 .Schritte
-. link:configuring-snmp-settings-for-bmc.html["Konfigurieren Sie die SNMP-Einstellungen für BMC"].
+. Konfigurieren Sie die SMTP-Einstellungen für BMC.
 +
 .. Wählen Sie *Einstellungen* > *SMTP-Einstellungen*.
 .. Geben Sie für die Absender-E-Mail-ID eine gültige E-Mail-Adresse ein.
@@ -82,3 +123,6 @@ Die für einen Benutzer konfigurierte E-Mail-Adresse ist die Adresse, an die BMC
 
 
 
+
+--
+====

@@ -22,7 +22,7 @@ Dieser Schritt ist optional. Durch die Optimierung und Automatisierung von Konfi
 . link:preparing-site.html["Standort vorbereiten"]
 . link:unpacking-boxes.html["Packen Sie die Kartons aus"]
 . link:obtaining-additional-equipment-and-tools.html["Beschaffen Sie sich zusätzliche Geräte und Werkzeuge"]
-. https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Überprüfen Sie die Anforderungen des Webbrowsers"^]
+. https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Überprüfen Sie die Anforderungen des Webbrowsers"^]
 . link:reviewing-appliance-network-connections.html["Erfassung von Netzwerkinformationen"]
 
 

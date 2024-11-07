@@ -41,7 +41,7 @@ NOTE: Wenn Sie Änderungen am Netzwerk oder an der Verbindung vorgenommen haben,
 `*https://_Appliance_Controller_IP_:8443*`
 
 +
-Wenn Sie Änderungen an den VLAN-Einstellungen vorgenommen haben, hat sich das Subnetz für die Appliance möglicherweise geändert. Wenn Sie die IP-Adressen für die Appliance ändern müssen, befolgen Sie die https://docs.netapp.com/us-en/storagegrid-118/maintain/configuring-ip-addresses.html["Konfigurieren Sie IP-Adressen"^] Anweisungen.
+Wenn Sie Änderungen an den VLAN-Einstellungen vorgenommen haben, hat sich das Subnetz für die Appliance möglicherweise geändert. Wenn Sie die IP-Adressen für das Gerät ändern müssen, befolgen Sie die https://docs.netapp.com/us-en/storagegrid/maintain/configuring-ip-addresses.html["Konfigurieren Sie IP-Adressen"^] Anweisungen.
 
 +
 link:../installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"]

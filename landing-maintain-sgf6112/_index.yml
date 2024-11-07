@@ -1,13 +1,17 @@
 ---
 indexpage:
+  title: Hardware der SG6100 Storage Appliance warten
+  summary: Warten Sie die Hardware Ihrer SG6100 Storage Appliance.
+  keywords: maintain storagegrid sg6100
+  lead: Warten Sie die Hardware Ihrer SG6100 Storage Appliance.
   tiles:
   - title: Häufig ausgeführte Prozeduren
     links:
-    - title: Upgrade-SANtricity (SG6160)
+    - title: Upgrade von SANtricity
       url: "../sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html"
     - title: Upgrade der Laufwerk-Firmware (SG6160)
-      url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager.html"
-    - title: Die Position-LED ein- oder ausschalten
+      url: "../sg6100/upgrade-drive-firmware-using-santricity-system-manager.html"
+    - title: Die Identifizieren-LED ein- oder ausschalten
       url: "../sg6100/turning-sgf6112-identify-led-on-and-off.html"
     - title: Suchen Sie die Appliance im Datacenter
       url: "../sg6100/locating-sgf6112-in-data-center.html"
@@ -25,10 +29,8 @@ indexpage:
       url: "../sg6100/replacing-sg6100-cn-controller.html"
     - title: Speicher-Controller-Controller austauschen (SG6160)
       url: "../sg6100/replace-controller-e4000-duplex.html"
-    - title: Verlegung des SGF6112 in ein Rack
+    - title: Verlegung des SGF6112 oder SG6100-CN in ein Rack
       url: "../sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html"
-    - title: Verlegung des SG6100-CN in ein Rack
-      url: "../sg6100/reinstalling-sg6100-cn-controller-into-cabinet-or-rack.html"
   - title: Hardware-Verfahren
     links:
     - title: Abdeckung wieder anbringen
@@ -53,7 +55,7 @@ indexpage:
     - title: Austausch der internen NIC (SGF6112 und SG6160)
       url: "../sg6100/replace-nic-in-sgf6112.html"
     - title: Austausch externer NIC (SG6160)
-      url: "../sg6100/replace-ocp-nic-in-sg6100-cn.html"
+      url: "../sg6100/replace-ocp-nic-sg6100-cn.html"
     - title: DIMMs ersetzen (SG6160)
       url: "../sg6100/replace-dimms-e4000.html"
     - title: Batterien austauschen (SG6160)

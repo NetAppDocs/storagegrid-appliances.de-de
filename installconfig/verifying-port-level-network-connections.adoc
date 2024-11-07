@@ -16,7 +16,7 @@ Damit der Zugriff zwischen dem Installationsprogramm der StorageGRID Appliance u
 .Über diese Aufgabe
 Mithilfe der Liste der im StorageGRID-Appliance-Installationsprogramm bereitgestellten Ports können Sie die Verbindung zwischen der Appliance und den anderen Nodes im Grid-Netzwerk testen.
 
-Darüber hinaus können Sie die Konnektivität auf den Admin- und Client-Netzwerken sowie auf UDP-Ports testen, wie sie für externe NFS- oder DNS-Server verwendet werden. Eine Liste dieser Ports finden Sie im https://docs.netapp.com/us-en/storagegrid-118/network/network-port-reference.html["Netzwerkportreferenz"^].
+Darüber hinaus können Sie die Konnektivität auf den Admin- und Client-Netzwerken sowie auf UDP-Ports testen, wie sie für externe NFS- oder DNS-Server verwendet werden. Eine Liste dieser Ports finden Sie im https://docs.netapp.com/us-en/storagegrid/network/network-port-reference.html["Netzwerkportreferenz"^].
 
 
 NOTE: Die in der Tabelle für die Anschlusskonnektivität aufgeführten Netznetzwerkports sind nur für StorageGRID Version 11.7 oder höher gültig. Um zu überprüfen, welche Ports für jeden Node-Typ korrekt sind, sollten Sie immer die Netzwerkrichtlinien für Ihre Version von StorageGRID lesen.

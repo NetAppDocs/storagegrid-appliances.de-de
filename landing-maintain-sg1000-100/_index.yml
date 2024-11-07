@@ -1,9 +1,13 @@
 ---
 indexpage:
+  title: Hardware der SG1000 und SG100 Services Appliance warten
+  summary: Warten Sie die Hardware für Ihre SG1000 und SG100 Services Appliance.
+  keywords: maintain storagegrid sg100, maintain storagegrid sg1000
+  lead: Warten Sie die Hardware für Ihre SG1000 und SG100 Services Appliance.
   tiles:
   - title: Häufig ausgeführte Prozeduren
     links:
-    - title: Die Position-LED ein- oder ausschalten
+    - title: Die Identifizieren-LED ein- oder ausschalten
       url: "../sg100-1000/turning-controller-identify-led-on-and-off.html"
     - title: Suchen Sie die Appliance im Datacenter
       url: "../sg100-1000/locating-controller-in-data-center.html"

@@ -1,5 +1,11 @@
 ---
 indexpage:
+  title: Vorbereiten der StorageGRID-Installation
+  summary: Bereiten Sie Ihren Standort für die Installation eines StorageGRID-Systems
+    vor.
+  keywords: storagegrid installation preparation
+  lead: Bereiten Sie Ihren Standort für die Installation eines StorageGRID-Systems
+    vor.
   tiles:
   - title: Vorbereiten
     links:

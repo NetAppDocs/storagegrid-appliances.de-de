@@ -987,8 +987,11 @@ Stellt eine Verbindung zum Netzwerk her, in dem Sie auf die BMC-Schnittstelle zu
  a| 
 2
  a| 
-Vier 10/25-GbE-Netzwerkports auf der Appliance
+Vier Netzwerk-Ports am SG6100-CN Controller
  a| 
+* Vier 10/25-GbE-Netzwerkports auf der Appliance
+* Vier 10/25/40/100-GbE-Netzwerkports mit optionaler 100-GB-NIC-SKU (nur SG6160)
+
  a| 
 Stellen Sie eine Verbindung zum Grid-Netzwerk und dem Client-Netzwerk für StorageGRID her. Siehe link:gathering-installation-information-sg6100.html#port-bond-modes["Port-Bond-Modi (SG6100)"]
 

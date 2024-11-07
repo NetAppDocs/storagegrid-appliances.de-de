@@ -3,7 +3,7 @@
 
 
 .Bevor Sie beginnen
-* Sie haben das im Lieferumfang enthaltene Dokument mit den Sicherheitshinweise gelesen und die Vorsichtsmaßnahmen für das Bewegen und Installieren der Hardware verstanden.
+* Sie haben das im Lieferumfang enthaltene Dokument durchgesehen https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Sicherheitshinweise"^] und die Vorsichtsmaßnahmen für das Bewegen und Installieren der Hardware verstanden.
 * Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
 
 

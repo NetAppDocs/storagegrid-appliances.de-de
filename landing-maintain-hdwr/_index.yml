@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Wartung der Appliance-Hardware
+  summary: Warten Sie die Hardware für Ihre Storage- oder Service-Appliance.
+  keywords: maintain storagegrid hardware
+  lead: Warten Sie die Hardware für Ihre Storage- oder Service-Appliance.
   tiles:
   - title: Häufig ausgeführte Prozeduren
     links:
@@ -11,6 +15,8 @@ indexpage:
       url: "../commonhardware/checking-dns-server-configuration.html"
     - title: MAC-Adresse aktualisieren
       url: "../commonhardware/locate-mac-address.html"
+    - title: Verwalten Sie Laufwerke
+      url: "../commonhardware/manage-drives-tab.html"
     - title: Monitoring der Node-Verschlüsselung
       url: "../commonhardware/monitoring-node-encryption-in-maintenance-mode.html"
   - title: Klonen von Nodes

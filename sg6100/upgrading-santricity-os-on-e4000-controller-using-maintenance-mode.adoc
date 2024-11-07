@@ -14,7 +14,7 @@ summary: Sie können den Wartungsmodus verwenden, um ein Upgrade von SANtricity 
 Sie können den Wartungsmodus verwenden, um ein Upgrade von SANtricity OS auf dem E4000 Controller durchzuführen.
 
 
-NOTE: Für Storage-Controller, die derzeit SANtricity OS mit einem neueren Betriebssystem als 08.42.20.00 (11.42) verwenden, wird empfohlen, dies zu tun link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Verwenden Sie den Grid Manager, um ein Upgrade anzuwenden"]. Sie können das Verfahren für den Wartungsmodus jedoch verwenden, wenn Sie es bevorzugen oder vom technischen Support dazu angewiesen wurden.
+NOTE: Für Storage-Controller, die derzeit SANtricity OS mit einem neueren Betriebssystem als 08.42.20.00 (11.42) verwenden, wird empfohlen, dies zu tun link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Verwenden Sie den Grid Manager, um ein Upgrade anzuwenden"]. Sie können das Verfahren für den Wartungsmodus jedoch verwenden, wenn Sie es bevorzugen oder vom technischen Support dazu angewiesen wurden.
 
 .Bevor Sie beginnen
 * Sie haben den konsultiert https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um sicherzustellen, dass die für das Upgrade verwendete SANtricity OS-Version mit Ihrer Appliance kompatibel ist.
@@ -62,4 +62,4 @@ image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden
 
 
 .Verwandte Informationen
-link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager"]
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager"]

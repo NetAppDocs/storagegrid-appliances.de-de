@@ -98,7 +98,7 @@ Wenn das Klonen erfolgreich abgeschlossen wurde:
 
 
 * Der Ziel-Node beendet den Wartungsmodus und tritt dem StorageGRID bei und ersetzt den Quell-Node.
-* Die Quell-Appliance befindet sich in einem vorinstallierten Zustand, so als ob Sie es hätten https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["Es für die Neuinstallation vorbereitet"^].
+* Die Quell-Appliance befindet sich in einem vorinstallierten Zustand, als hätten Sie https://docs.netapp.com/us-en/storagegrid/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["Es für die Neuinstallation vorbereitet"^] .
 
 
 

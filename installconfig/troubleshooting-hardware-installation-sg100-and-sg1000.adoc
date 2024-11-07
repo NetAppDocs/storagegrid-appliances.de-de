@@ -107,6 +107,13 @@ NOTE: In einigen Fällen kann der Standardbenutzername sein `root` Statt `admin`
 
 
  a| 
+HOCHSPANNUNG
+ a| 
+Das Master-Startskript wartet auf den Abschluss des BS-Starts.
+
+
+
+ a| 
 HI
  a| 
 Das Master-Boot-Skript wurde gestartet.
@@ -114,9 +121,23 @@ Das Master-Boot-Skript wurde gestartet.
 
 
  a| 
+PP
+ a| 
+Das System prüft, ob das FPGA aktualisiert werden muss.
+
+
+
+ a| 
 HP
  a| 
 Das System prüft, ob die NIC-Firmware (Network Interface Card) aktualisiert werden muss.
+
+
+
+ a| 
+HP
+ a| 
+Das System überprüft, ob die 10/25-GbE-Controller-Firmware aktualisiert werden muss.
 
 
 
@@ -160,18 +181,48 @@ StorageGRID wird ausgeführt.
 
 == Fehlercodes anzeigen
 
-Wenn beim Starten der Appliance ein Hardwarefehler auftritt, meldet der BMC einen Fehlercode. Bei Bedarf können Sie diese Fehlercodes über die BMC-Schnittstelle anzeigen und dann mit dem technischen Support zusammenarbeiten, um das Problem zu lösen.
+Wenn beim Starten der Appliance ein Hardwarefehler auftritt, meldet der BMC einen Fehlercode. Bei Bedarf können Sie diese Fehlercodes über die BMC-Schnittstelle oder den seriellen Port des Geräts anzeigen und dann mit dem technischen Support zusammenarbeiten, um das Problem zu lösen.
 
 .Bevor Sie beginnen
-* Sie wissen, wie es geht link:accessing-bmc-interface.html["Rufen Sie das BMC-Dashboard auf"].
+
+NOTE: Wenn Ihr BMC nicht über ein BIOS-POST-Code-Menüelement verfügt, greifen Sie über den seriellen Port des Geräts auf die Fehlercodes zu.
+
+* Wenn Sie die BMC verwenden, wissen Sie, wie man link:accessing-bmc-interface.html["Rufen Sie das BMC-Dashboard auf"].
+* Wenn Sie einen seriellen Anschluss und ein Terminal verwenden, sammeln Sie die erforderlichen Geräte:
++
+** SERIELLES DB-9-Kabel
+** Serielles virtuelles Terminal
+
+
 
 
 .Schritte
-. Wählen Sie im BMC-Dashboard *BIOS POST Code* aus.
-. Überprüfen Sie die angezeigten Informationen für den aktuellen Code und den vorherigen Code.
+. Greifen Sie auf die Fehlercodes mit einer der folgenden Methoden zu.
 +
-Wenn einer der folgenden Fehlercodes angezeigt wird, wenden Sie sich an den technischen Support, um das Problem zu beheben.
+[role="tabbed-block"]
+====
+.BMC
+--
+Wenn Sie den BMC verwenden, führen Sie die folgenden Schritte aus:
 
+.. link:accessing-bmc-interface.html["Öffnen Sie das BMC Dashboard"].
+.. Wählen Sie im BMC-Dashboard *BIOS POST Code* aus.
+.. Überprüfen Sie die angezeigten Informationen für den aktuellen Code und den vorherigen Code.
+
+
+--
+.Serieller Port
+--
+Wenn Sie eine serielle Schnittstelle und ein Terminal verwenden, führen Sie die folgenden Schritte aus, um die Fehlercodes anzuzeigen. Wenn die Appliance neu gestartet wird, werden an der seriellen Konsole BIOS-POST-Codes angezeigt.
+
+.. Schließen Sie den seriellen Anschluss DB-9 an der Rückseite des Geräts an.
+.. Einstellungen verwenden `115200 8-N-1`.
+.. Zeigen Sie die Codes an, die über der seriellen Klemme gedruckt wurden.
+
+
+--
+====
+. Wenn einer der folgenden Fehlercodes angezeigt wird, wenden Sie sich an den technischen Support, um das Problem zu beheben.
 +
 [cols="1a,3a"]
 |===

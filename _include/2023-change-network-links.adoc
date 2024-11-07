@@ -3,8 +3,7 @@
 
 
 .Bevor Sie beginnen
-* Das ist schon link:../commonhardware/placing-appliance-into-maintenance-mode.html["Das Gerät in den Wartungsmodus versetzt"].
-
+Das ist schon link:../commonhardware/placing-appliance-into-maintenance-mode.html["Das Gerät in den Wartungsmodus versetzt"].
 
 
 NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.
@@ -17,8 +16,7 @@ Weitere Informationen zu den Optionen finden Sie unter link:../installconfig/con
 
 +
 
-NOTE: IP-Konfigurationsänderungen, die vorgenommen werden, während sich die Appliance im Wartungsmodus befindet, werden nicht auf die installierte StorageGRID-Umgebung angewendet. Führen Sie die aus
-[`change-ip` Befehl] nach dem Neustart der Appliance in StorageGRID.
+NOTE: IP-Konfigurationsänderungen, die vorgenommen werden, während sich die Appliance im Wartungsmodus befindet, werden nicht auf die installierte StorageGRID-Umgebung angewendet. Führen Sie den  Befehl] aus[`change-ip`, nachdem Sie die Appliance in StorageGRID neu gestartet haben.
 
 . Wenn Sie mit Ihrer Auswahl zufrieden sind, klicken Sie auf *Speichern*.
 +

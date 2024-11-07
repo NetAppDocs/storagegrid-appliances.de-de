@@ -161,12 +161,12 @@ image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Entfernen Sie die NVME
 
 
  a| 
-image::../media/legend_icon_01.png[Legendensymbol 01]
+image::../media/legend_icon_01.png[Legende Referenz 1]
 | Akkufreigabelasche 
 
 
  a| 
-image::../media/legend_icon_02.png[Legende Symbol 02]
+image::../media/legend_icon_02.png[Legende Referenz 2]
 | Batterieanschluss 
 |===
 
@@ -210,12 +210,12 @@ image::../media/drw_E4000_replace_dimms_IEOPS-865.png[DIMMs entfernen.]
 
 
  a| 
-image::../media/legend_icon_01.png[Legendensymbol 01]
+image::../media/legend_icon_01.png[Legende Referenz 1]
 | DIMM-Auswerferlaschen 
 
 
  a| 
-image::../media/legend_icon_02.png[Legende Symbol 02]
+image::../media/legend_icon_02.png[Legende Referenz 2]
 | DIMMS 
 |===
 

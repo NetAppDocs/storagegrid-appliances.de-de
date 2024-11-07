@@ -20,7 +20,7 @@ Mit SANtricity System Manager lässt sich der Status von Storage Controllern, St
 Sie müssen möglicherweise auf SANtricity System Manager auf dem Storage Controller zugreifen, um die Hardware im Storage Controller Shelf zu überwachen oder um E-Series AutoSupport zu konfigurieren.
 
 .Bevor Sie beginnen
-* Sie verwenden ein https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie verwenden einen https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Für den Zugriff auf den SANtricity System Manager über den Grid-Manager haben Sie StorageGRID installiert, und Sie verfügen über die Berechtigung zum Administrator der Storage-Appliance oder zum Root-Zugriff.
 * Um über das Installationsprogramm für das StorageGRID-Gerät auf den SANtricity-System-Manager zuzugreifen, verfügen Sie über den Benutzernamen und das Kennwort des SANtricity-System-Managers.
 * Für den direkten Zugriff auf SANtricity System Manager über einen Webbrowser verfügen Sie über den Benutzernamen und das Passwort für den SANtricity System Manager Administrator.
@@ -61,7 +61,7 @@ Mit SANtricity System Manager können Sie die folgenden Einstellungen konfigurie
 * E-Mail-Warnmeldungen, SNMP-Warnmeldungen oder Syslog-Warnmeldungen für die Komponenten im Storage Controller-Shelf
 * AutoSupport-Einstellungen der E-Series für die Komponenten im Storage Controller Shelf
 +
-Weitere Informationen zur E-Series AutoSupport finden Sie im http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^].
+Weitere Informationen zu E-Series AutoSupport finden Sie im https://docs.netapp.com/us-en/e-series-family/index.html["Dokumentation zur NetApp E-Series"^].
 
 * Laufwerkssicherheitsschlüssel, die zum Entsperren gesicherter Laufwerke erforderlich sind (dieser Schritt ist erforderlich, wenn die Laufwerksicherheitsfunktion aktiviert ist)
 * Administratorpasswort für den Zugriff auf SANtricity System Manager
@@ -106,24 +106,58 @@ image::../media/sam_home_page.gif[Screenshot der Startseite von SANtricity Syste
 .. Im Abschnitt *SUPPORT* > *Support Center* der Online-Hilfe erfahren Sie mehr über die AutoSupport-Funktion.
 .. Folgen Sie den Anweisungen „`Anleitung`“, um AutoSupport zu managen.
 +
-Spezielle Anweisungen zum Konfigurieren eines StorageGRID-Proxys zum Senden von E-Series AutoSupport-Meldungen ohne Verwendung des Management-Ports finden Sie unter https://docs.netapp.com/us-en/storagegrid-118/admin/configuring-storage-proxy-settings.html["Anweisungen zur Konfiguration von Speicher-Proxy-Einstellungen"^].
+Spezielle Anweisungen zum Konfigurieren eines StorageGRID-Proxys zum Senden von E-Series AutoSupport-Meldungen ohne Verwendung des Management-Ports finden Sie unter https://docs.netapp.com/us-en/storagegrid/admin/configuring-storage-proxy-settings.html["Anweisungen zur Konfiguration von Speicher-Proxy-Einstellungen"^] .
 
 
 
-. Wenn die Laufwerkssicherheitsfunktion für die Appliance aktiviert ist, erstellen und verwalten Sie den Sicherheitsschlüssel.
+. Wenn https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html#what-is-drive-security["Laufwerkssicherheit"^] für die Appliance aktiviert ist, erstellen und verwalten Sie den Sicherheitsschlüssel.
 +
-.. Wählen Sie *Hilfe*, um die Online-Hilfe für SANtricity System Manager zu öffnen.
-.. Verwenden Sie den Abschnitt *Einstellungen* > *System* > *Sicherheitsschlüsselverwaltung* der Online-Hilfe, um mehr über Drive Security zu erfahren.
-.. Befolgen Sie die Anweisungen „`Anleitung`“, um den Sicherheitsschlüssel zu erstellen und zu verwalten.
+[role="tabbed-block"]
+====
+.SG5700 und SG5800
+--
+Führen Sie bei Storage Appliances der SG5700 und SG5800 die grundlegenden Schritte https://docs.netapp.com/us-en/e-series-santricity/sm-settings/how-the-drive-security-feature-works.html#how-to-implement-drive-security["Laufwerksicherheit implementieren"^] in SANtricity System Manager aus.
 
+--
+.SG6060
+--
+Bei der SG6060-Storage-Appliance kann die Laufwerksicherheit nur dann automatisch auf den SSD-Laufwerken aktiviert werden, wenn die Schlüsselverwaltung vor der Installation der Storage Appliance konfiguriert wurde.
 
-. Ändern Sie optional das Administratorpasswort.
+.. Statten Sie Ihr Storage-Array mit sicheren Laufwerken (FDE-Laufwerke oder FIPS-Laufwerke) aus.
 +
-.. Wählen Sie *Hilfe*, um die Online-Hilfe für SANtricity System Manager zu öffnen.
-.. Verwenden Sie den Abschnitt *Home* > *Storage Array Administration* der Online-Hilfe, um mehr über das Administrator-Passwort zu erfahren.
-.. Befolgen Sie die Anweisungen „`Anleitung`“, um das Passwort zu ändern.
+*** Für Volumes, die FIPS-Unterstützung erfordern, verwenden Sie nur FIPS-Laufwerke.
+*** Durch die Kombination von FIPS- und FDE-Laufwerken in einer Volume-Gruppe oder einem Pool werden alle Laufwerke als FDE-Laufwerke behandelt.
+*** Ein FDE-Laufwerk kann nicht zu einer reinen FIPS-Volume-Gruppe oder einem Pool hinzugefügt oder als Ersatzlaufwerk verwendet werden.
 
 
+.. Erstellen Sie für das E4000-Controller-Shelf einen Sicherheitsschlüssel (eine Zeichenfolge, die vom Controller und von den Laufwerken für Lese- und Schreibzugriff gemeinsam genutzt wird).
++
+*** Sie können https://docs.netapp.com/us-en/e-series-santricity/sm-settings/create-internal-security-key.html["Erstellen Sie einen internen Schlüssel"^] aus dem persistenten Speicher des Controllers oder einen externen Schlüssel verwenden, der von einem Verschlüsselungsmanagement-Server bereitgestellt wird.
+*** Um einen externen Schlüssel zu verwenden, der von einem Schlüsselverwaltungsserver bereitgestellt wird, müssen Sie zuerst https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html["Einrichten der Authentifizierung mit einem Verschlüsselungsmanagement-Server"^] in SANtricity System Manager arbeiten.
+
+
+.. link:deploying-appliance-storage-node.html["Starten Sie die Installation"] Des Geräts.
+.. Vergewissern Sie sich nach Abschluss der Appliance-Installation, dass die Laufwerksicherheit für den StorageGRID Flash Cache aktiviert wurde, und aktivieren Sie die Laufwerksicherheit für alle verbleibenden Laufwerkpools oder Volume-Gruppen (siehe https://docs.netapp.com/us-en/e-series-santricity/sm-storage/enable-security.html["Aktivieren Sie die Sicherheit für einen Pool oder eine Volume-Gruppe"^] in SANtricity System Manager).
+
+
+--
+.SG6160
+--
+Die SG6160 Storage Appliance kann sowohl im SG6100-CN Computing-Controller als auch im E4000 Controller-Shelf mit FIPS-konformen Laufwerken ausgestattet werden. Die Laufwerkverschlüsselung wird separat für die SG6100-CN-Laufwerke und E4000 Laufwerke konfiguriert.
+
+.. link:optional-enabling-node-encryption.html#drive-encryption["Aktivieren Sie Die Laufwerkverschlüsselung"] Für SED-SSDs, die im SG6100-CN-Compute-Node installiert sind.
+.. Erstellen Sie einen Sicherheitsschlüssel (eine Zeichenkette, die vom Controller und den Laufwerken für Lese-/Schreibzugriff gemeinsam genutzt wird).
++
+*** Sie können https://docs.netapp.com/us-en/e-series-santricity/sm-settings/create-internal-security-key.html["Erstellen Sie einen internen Schlüssel"^] aus dem persistenten Speicher des Controllers oder einen externen Schlüssel verwenden, der von einem Verschlüsselungsmanagement-Server bereitgestellt wird.
+*** Um einen externen Schlüssel zu verwenden, der von einem Schlüsselverwaltungsserver bereitgestellt wird, müssen Sie zuerst https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html["Einrichten der Authentifizierung mit einem Verschlüsselungsmanagement-Server"^] in SANtricity System Manager arbeiten.
+
+
+.. link:deploying-appliance-storage-node.html["Starten Sie die Installation"] Des Geräts.
+.. Nach Abschluss der Installation können https://docs.netapp.com/us-en/e-series-santricity/sm-storage/enable-security.html["Laufwerksicherheit aktivieren"^] alle Disk Pools oder Volume-Gruppen im SANtricity System Manager erstellt werden.
+
+
+--
+====
 
 
 
@@ -133,7 +167,7 @@ Spezielle Anweisungen zum Konfigurieren eines StorageGRID-Proxys zum Senden von 
 Mit SANtricity System Manager können Sie die einzelnen Hardwarekomponenten im Storage Controller-Shelf überwachen und verwalten. Darüber hinaus werden Hardware-Diagnose- und Umgebungsinformationen, z. B. Komponentententententemperaturen oder Problemen mit den Laufwerken, überprüft.
 
 .Bevor Sie beginnen
-* Sie verwenden ein https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie verwenden einen https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Für den Zugriff auf den SANtricity System Manager über den Grid-Manager verfügen Sie über eine Administratorberechtigung oder Root-Zugriff der Storage-Appliance.
 * Um über das Installationsprogramm für das StorageGRID-Gerät auf den SANtricity-System-Manager zuzugreifen, verfügen Sie über den Benutzernamen und das Kennwort des SANtricity-System-Managers.
 * Für den direkten Zugriff auf SANtricity System Manager über einen Webbrowser verfügen Sie über den Benutzernamen und das Passwort für den SANtricity System Manager Administrator.

@@ -24,7 +24,7 @@ StorageGRID Grid Manager überwacht den Appliance-Status und gibt bei Laufwerksa
 ** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 ** Zugriff auf den SANtricity System Manager:
 +
-*** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Controller-Informationen befinden sich auf dem https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+*** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Informationen zum Controller finden Sie auf der https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
 *** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
 
 

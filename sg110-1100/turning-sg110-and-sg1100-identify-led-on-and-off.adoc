@@ -2,7 +2,7 @@
 permalink: sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html 
 sidebar: sidebar 
 keywords: sg110, sg1100, locate, find, locating, finding, identify, blue led, blue light 
-summary: Die blaue Identifizieren-LED auf der Vorderseite des Geräts kann eingeschaltet werden, um das Gerät in einem Rechenzentrum zu lokalisieren. 
+summary: Die blaue Identifizieren-LED auf der Vorder- und Rückseite des Geräts kann eingeschaltet werden, um das Gerät in einem Rechenzentrum zu lokalisieren. 
 ---
 = Schalten Sie die SG110- oder SG1100-Identifizieren-LED ein und aus
 :allow-uri-read: 

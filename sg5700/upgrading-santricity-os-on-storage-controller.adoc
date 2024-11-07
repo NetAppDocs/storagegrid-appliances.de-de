@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
 summary: Um die optimale Funktion des Storage Controllers sicherzustellen, müssen Sie auf die neueste Wartungsversion des SANtricity-Betriebssystems aktualisieren, das für Ihre StorageGRID Appliance geeignet ist. 
 ---
-= Upgrade des SANtricity Betriebssystems auf SG5700 Storage-Controller
+= Allgemeines zum Upgrade von SANtricity OS auf einem SG5700 Storage-Controller
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

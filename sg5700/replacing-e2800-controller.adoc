@@ -26,7 +26,7 @@ NOTE: Verlassen Sie sich beim Austausch eines Controllers in der StorageGRID App
 CAUTION: Sie können das Gerät erst dann verwenden, wenn Sie die Laufwerke mit dem gespeicherten Schlüssel entsperren.
 
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
-* Sie müssen mit einem beim Grid Manager angemeldet sein https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie müssen im Grid-Manager mit einem angemeldet sein https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 
 
 .Über diese Aufgabe

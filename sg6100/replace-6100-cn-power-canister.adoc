@@ -52,7 +52,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 . Bestimmen Sie aus dem SANtricity-System-Manager, welcher Stromversorgungsbehälter ausgefallen ist.
 +
 .. Wählen Sie *Hardware*.
-.. Schau dir die Macht an image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] Symbol rechts neben den Dropdown-Listen *Shelf*, um zu bestimmen, welches Regal den defekten Strombehälter hat.
+.. Sehen Sie sich das Power-image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ein/aus-Symbol"]Symbol rechts neben der Dropdown-Liste *Shelf* an, um festzustellen, welches Shelf den defekten Strombehälter hat.
 +
 Wenn eine Komponente ausgefallen ist, ist dieses Symbol rot.
 

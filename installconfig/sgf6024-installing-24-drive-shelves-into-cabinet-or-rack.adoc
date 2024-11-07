@@ -14,7 +14,7 @@ summary: Sie installieren einen Satz Schienen für das EF570 Controller-Shelf in
 Sie installieren einen Satz Schienen für das EF570 Controller-Shelf in Ihrem Schrank oder Rack und schieben das Array dann auf die Schienen.
 
 .Bevor Sie beginnen
-* Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
+* Sie haben die geprüft https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Sicherheitshinweise"^] Im Lieferumfang enthaltene Dokumentation und Informationen zu den Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware.
 * Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
 
 

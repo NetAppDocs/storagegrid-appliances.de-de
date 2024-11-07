@@ -14,7 +14,7 @@ summary: Erfahren Sie, wie Sie ein StorageGRID System konfigurieren und verwende
 
 
 [role="lead"]
-Gehen Sie zu https://docs.netapp.com/us-en/storagegrid-118/index.html["StorageGRID 11.8-Dokumentation"^] Anleitung zur Konfiguration und Verwendung eines StorageGRID 11.8-Systems.
+Unter https://docs.netapp.com/us-en/storagegrid/index.html["StorageGRID 11.9-Dokumentation"^] erfahren Sie, wie Sie ein StorageGRID 11.9-System konfigurieren und verwenden.
 
 Die StorageGRID-Dokumentseite enthält Informationen wie:
 
@@ -33,6 +33,7 @@ Die StorageGRID-Dokumentseite enthält Informationen wie:
 
 Dokumentation für andere Versionen der NetApp StorageGRID-Software finden Sie hier:
 
+* https://docs.netapp.com/us-en/storagegrid-118/index.html["StorageGRID 11.8-Dokumentation"^]
 * https://docs.netapp.com/us-en/storagegrid-117/index.html["StorageGRID 11.7-Dokumentation"^]
 * https://docs.netapp.com/us-en/storagegrid-116/index.html["StorageGRID 11.6-Dokumentation"^]
 * https://docs.netapp.com/us-en/storagegrid-115/index.html["StorageGRID 11.5-Dokumentation"^]

@@ -22,7 +22,7 @@ Wenn Sie eine Services-Appliance als primären Administratorknoten bereitstellen
 .Bevor Sie beginnen
 * Das Gerät wurde in einem Rack oder Schrank installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
 * Mithilfe des Installationsprogramms der StorageGRID Appliance wurden Netzwerkverbindungen, IP-Adressen und (falls erforderlich) die Port-Neuzuordnung für die Appliance konfiguriert.
-* Sie haben einen Service-Laptop mit einem https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie haben einen Service-Laptop mit einem https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Sie kennen eine der IP-Adressen, die der Appliance zugewiesen sind. Sie können die IP-Adresse für jedes angeschlossene StorageGRID-Netzwerk verwenden.
 
 
@@ -90,7 +90,7 @@ Wenn Sie eine Services-Appliance als Gateway-Node oder als nicht-primärer Admin
 * Mithilfe des Installationsprogramms der StorageGRID Appliance wurden Netzwerkverbindungen, IP-Adressen und (falls erforderlich) die Port-Neuzuordnung für die Appliance konfiguriert.
 * Der primäre Admin-Node für das StorageGRID System wurde bereitgestellt.
 * Alle Grid-Subnetze, die auf der Seite IP-Konfiguration des Installationsprogramms für StorageGRID-Geräte aufgeführt sind, wurden in der Netznetzwerksubnetz-Liste auf dem primären Admin-Node definiert.
-* Sie haben einen Service-Laptop mit einem https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie haben einen Service-Laptop mit einem https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Sie kennen die IP-Adresse, die der Appliance zugewiesen ist. Sie können die IP-Adresse für jedes angeschlossene StorageGRID-Netzwerk verwenden.
 
 

@@ -10,8 +10,9 @@ entries:
   pdf-filename: Verfahren zur Wartungskonfiguration – SG5800
   entries:
   - title: Upgrade von SANtricity OS auf Storage Controller
-    url: "/sg5800/upgrading-santricity-os-on-storage-controller.html"
     entries:
+    - title: Allgemeines zum Upgrade von SANtricity OS auf einem SG5800 Storage Controller
+      url: "/sg5800/upgrading-santricity-os-on-storage-controller.html"
     - title: Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager
       url: "/sg5800/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html"
     - title: Upgrade von SANtricity OS auf E4000 Controller im Wartungsmodus
@@ -32,7 +33,7 @@ entries:
   pdf-filename: Hardware-Verfahren - SG5800
   entries:
   - title: SG5800-Controller austauschen
-    url: "/sg5800/replace-controller-sg5800.html"
+    url: "/sg5800/replace-controller-5800sg.html"
   - title: E4000-Controller austauschen
     url: "/sg5800/replace-controller-e4000-simplex.html"
   - title: Lüfter austauschen (SG5860)

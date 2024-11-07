@@ -314,4 +314,4 @@ Schließen Sie den E4000-Controller an den SG5800-Controller an.
 
 |===
 .Verwandte Informationen
-http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]
+https://docs.netapp.com/us-en/e-series-family/index.html["Dokumentation zur NetApp E-Series"^]

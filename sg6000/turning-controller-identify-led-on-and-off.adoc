@@ -37,8 +37,7 @@ NOTE: Wenn eine Blende auf dem Controller installiert ist, kann es schwierig sei
 
 
 .Verwandte Informationen
-link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Überprüfen Sie, ob der Fibre-Channel-HBA ersetzt werden soll"]
+* link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Überprüfen Sie, ob der Fibre-Channel-HBA ersetzt werden soll"]
+* link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+* link:../installconfig/accessing-bmc-interface.html["Greifen Sie auf die BMC-Schnittstelle zu"]
 
-link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
-
-link:../installconfig/accessing-bmc-interface.html["Greifen Sie auf die BMC-Schnittstelle zu"]

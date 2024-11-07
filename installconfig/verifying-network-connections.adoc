@@ -35,7 +35,7 @@ Sie können beispielsweise den Pfad zwischen dem Appliance-Node und einem Node a
 Wenn die Netzwerkverbindung gültig ist, wird die Meldung „Ping Test bestanden“ angezeigt, wobei die Ausgabe des Ping-Befehls aufgelistet ist.
 
 +
-image::../media/ping_test_passed.png[Screenshot der Ping-Testergebnisse im StorageGRID Webscale Appliance Installer]
+image::../media/ping_test_passed.png[Screenshot der Ping-Testergebnisse im Installationsprogramm der StorageGRID Appliance]
 
 
 

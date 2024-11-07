@@ -20,7 +20,7 @@ Nehmen Sie das SGF6112 oder SG6100-CN aus einem Schrank oder Rack, um auf die ob
 .Bevor Sie beginnen
 * Jedes Kabel, das mit dem SGF6112 oder SG6100-CN verbunden ist, ist mit Etiketten gekennzeichnet.
 * Das ist schon link:locating-sgf6112-in-data-center.html["Physische Lage des SGF6112 oder SG6100-CN"] Wo Sie Wartungsarbeiten im Rechenzentrum durchführen.
-* Das ist schon link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Fahren Sie die SGF6112 oder SG6100-CN herunter"].
+* Sie haben link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Fahren Sie die SGF6112 oder SG6100-CN herunter"].
 +
 
 CAUTION: Schalten Sie das Gerät nicht über den Netzschalter aus.
@@ -81,4 +81,4 @@ NOTE: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen,
 
 
 .Nachdem Sie fertig sind
-link:power-sgf6112-off-on.html#power-on-sgf6112-and-verify-operation["Starten Sie das Gerät neu"].
+link:power-sgf6112-off-on.html#power-on-sgf6112-or-sg6100-cn-and-verify-operation["Starten Sie das Gerät neu"].

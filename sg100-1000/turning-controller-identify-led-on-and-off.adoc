@@ -17,7 +17,7 @@ Die blaue Identify-LED auf der Vorder- und Rückseite des Controllers kann einge
 Sie haben die BMC-IP-Adresse des Controllers, den Sie identifizieren möchten.
 
 .Schritte
-. Rufen Sie die BMC-Schnittstelle des Geräts auf.
+. link:../installconfig/accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle des Geräts auf"].
 . Wählen Sie *Server Identify* Aus.
 +
 Der aktuelle Status der Identifizieren-LED ist ausgewählt.
@@ -37,6 +37,6 @@ NOTE: Wenn eine Blende auf dem Controller installiert ist, kann es schwierig sei
 
 
 .Verwandte Informationen
-link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+* link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
+* link:../installconfig/accessing-bmc-interface.html["Greifen Sie auf die BMC-Schnittstelle zu"]
 
-link:../installconfig/accessing-bmc-interface.html["Greifen Sie auf die BMC-Schnittstelle zu"]

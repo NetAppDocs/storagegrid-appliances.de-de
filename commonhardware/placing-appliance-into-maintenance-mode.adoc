@@ -14,7 +14,7 @@ summary: Sie müssen das Gerät in den Wartungsmodus versetzen, bevor Sie bestim
 Sie müssen das Gerät in den Wartungsmodus versetzen, bevor Sie bestimmte Wartungsarbeiten durchführen.
 
 .Bevor Sie beginnen
-* Sie sind mit einem bei Grid Manager angemeldet https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie sind im Grid Manager mit einem angemeldet https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Sie haben die Berechtigung Wartung oder Stammzugriff. Weitere Informationen finden Sie in den Anweisungen zum Verwalten von StorageGRID.
 
 

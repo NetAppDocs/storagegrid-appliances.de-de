@@ -38,48 +38,9 @@ Bei der Installation der Ersatzanwendung müssen Sie temporäre IP-Adressen für
 
 
 
-== Kompatibilität der Ziel-Appliance
-
-Ersatz-Appliances müssen vom gleichen Typ sein wie der Quell-Node, den sie ersetzen, und beide müssen Teil desselben logischen StorageGRID-Standorts sein.
-
-* Eine Ersatz-Services-Appliance kann sich von dem Admin-Node oder dem Gateway-Node unterscheiden, den er ersetzt.
-+
-** Sie können eine SG100 Quell-Node-Appliance auf einer SG110-, SG1000- oder SG1100-Services-Ziel-Appliance klonen. Durch das Klonen der SG100 auf eine SG1000- oder SG1100-Services-Ziel-Appliance kann der Admin-Node oder Gateway-Node mehr Funktionen erhalten.
-** Sie können eine SG110-Quell-Node-Appliance auf ein SG1100-Services-Appliance-Ziel klonen, um dem Admin-Node oder Gateway-Node eine höhere Kapazität zu geben.
-** Sie können eine SG1000 Quell-Node-Appliance auf einer SG100-, SG110- oder SG1100-Services-Ziel-Appliance klonen. Durch das Klonen der SG1000 in eine SG100- oder SG110-Services-Ziel-Appliance können Sie die SG1000 für eine anspruchsvollere Applikation implementieren.
-** Sie können eine SG1100 Quell-Node-Appliance in eine SG110 Services-Ziel-Appliance klonen, um die SG1100 für eine anspruchsvollere Applikation neu zu implementieren.
-+
-Wenn beispielsweise eine SG1100- oder SG1000-Quell-Node-Appliance als Admin-Node verwendet wird und Sie sie als dedizierten Load-Balancing-Node verwenden möchten.
-
-** Wenn Sie eine SG1100-Quell-Node-Appliance durch eine SG110-Services-Ziel-Appliance ersetzen, wird die maximale Geschwindigkeit der Netzwerk-Ports von 100 GbE auf 25 GbE reduziert.
-** Durch den Austausch einer SG1000-Quell-Node-Appliance durch eine SG100-Services-Ziel-Appliance wird die maximale Geschwindigkeit der Netzwerkports von 100 GbE auf 25 GbE verringert.
-** Die Services-Appliances haben unterschiedliche Netzwerkanschlüsse. Wenn Sie den Gerätetyp ändern, müssen möglicherweise die Kabel oder SFP-Module ersetzt werden.
-
-
-* Eine Ersatzspeichergerät muss über eine größere Kapazität verfügen als der zu ersetzende Speicher-Node.
-+
-** Wenn die Ziel-Storage-Appliance über dieselbe Anzahl von Laufwerken wie der Quell-Node verfügt, müssen die Laufwerke in der Ziel-Appliance über eine größere Kapazität (in TB) verfügen.
-** Wenn Sie planen, auf dem Zielknoten denselben RAID-Modus wie auf dem Quellknoten zu verwenden, Oder in einem weniger Storage-effizienten RAID-Modus (z. B. Wechsel von RAID 6 zu DDP) müssen die Laufwerke in der Ziel-Appliance größer (in TB) sein als die Laufwerke in der Quell-Appliance.
-** Wenn die Anzahl der in einer Ziel-Storage-Appliance installierten Standardlaufwerke aufgrund der Installation von Solid-State-Laufwerken (SSDs) geringer ist als die Anzahl der Laufwerke im Quell-Node, ist die allgemeine Storage-Kapazität der Standardlaufwerke in der Ziel-Appliance (in TB) Muss die gesamte funktionale Laufwerkskapazität aller Laufwerke im Quell-Storage-Node überschreiten.
-+
-Wenn Sie beispielsweise eine SG5760 Quell-Storage-Node-Appliance mit 60 Laufwerken auf eine SG6060 Ziel-Appliance mit 58 Standardlaufwerken klonen, sollten Sie vor dem Klonen in der SG6060 Ziel-Appliance größere Laufwerke installieren, um die Storage-Kapazität aufrechtzuerhalten. (Die zwei Laufwerksschächte, die SSDs in der Ziel-Appliance enthalten, sind nicht in der gesamten Appliance-Storage-Kapazität enthalten.)
-
-+
-Wenn jedoch eine SG5760 Quell-Node-Appliance mit 60 Laufwerken mit SANtricity Dynamic Disk Pools DDP-8 konfiguriert ist, kann die SG6060 Appliance mit 58 Laufwerken und derselben Größe mit DDP-16 aufgrund der verbesserten Storage-Effizienz ein gültiges Klonziel für die SG6060 Appliance werden.
-
-+
-Auf der Seite *NODES* im Grid Manager können Sie Informationen zum aktuellen RAID-Modus des Quell-Appliance-Knotens anzeigen. Wählen Sie die Registerkarte * Storage* für das Gerät aus.
-
-
-
-* Die Anzahl der Volumes in einer Ziel-Storage-Appliance muss größer oder gleich der Anzahl der Volumes im Quell-Node sein. Sie können einen Quell-Node mit 16 Objektspeicher-Volumes (rangedb) nicht auf einer Ziel-Storage-Appliance mit 12 Objektspeicher-Volumes klonen, selbst wenn die Ziel-Appliance über eine größere Kapazität als der Quell-Node verfügt. Die meisten Storage Appliances verfügen über 16 Objektspeicher-Volumes, außer der SGF6112 Storage Appliance mit nur 12 Objektspeicher-Volumes.
-
-
-
-
 == Welche Informationen sind nicht geklont?
 
-Die folgenden Appliance-Konfigurationen werden beim Klonen nicht auf die Ersatz-Appliance übertragen. Sie müssen sie während der Ersteinrichtung des Ersatzgeräts konfigurieren.
+Die folgenden Appliance-Konfigurationen werden beim Klonen nicht auf die Ersatz-Appliance übertragen. Sie müssen sie bei der Ersteinrichtung des Ersatzgeräts konfigurieren.
 
 * BMC Schnittstelle
 * Netzwerkverbindungen
@@ -101,3 +62,120 @@ Wenn beim Klonen eines der folgenden Probleme auftreten, stoppt der Klonprozess 
 
 
 Sie müssen jedes Problem lösen, damit das Klonen fortgesetzt werden kann.
+
+
+
+== Kompatibilität der Ziel-Appliance
+
+Ersatz-Appliances müssen vom gleichen Typ sein wie der Quell-Node, den sie ersetzen, und beide müssen Teil desselben logischen StorageGRID-Standorts sein.
+
+Lesen Sie vor dem Klonen die allgemeinen Klonüberlegungen sowie die spezifischen Kloninformationen und -Einschränkungen für die einzelnen Appliance-Typen durch.
+
+
+
+=== Allgemeine Überlegungen zum Klonen von Services-Appliances
+
+* Eine Ersatzdienstanwendung kann ein anderes Modell sein als der Admin-Node oder der Gateway-Node, den sie ersetzt.
+* Die Services-Appliances haben unterschiedliche Netzwerkanschlüsse. Wenn Sie den Gerätetyp ändern, müssen möglicherweise die Kabel oder SFP-Module ersetzt werden.
+
+
+
+
+=== Allgemeine Überlegungen zum Klonen von Storage Appliances
+
+* Eine Ersatzspeichergerät muss über eine größere Kapazität verfügen als der zu ersetzende Speicher-Node.
++
+** Wenn die Ziel-Storage-Appliance über dieselbe Anzahl von Laufwerken wie der Quell-Node verfügt, müssen die Laufwerke in der Ziel-Appliance über eine größere Kapazität (in TB) verfügen.
+** Wenn Sie planen, auf dem Zielknoten denselben RAID-Modus wie auf dem Quellknoten zu verwenden, Oder in einem weniger Storage-effizienten RAID-Modus (z. B. Wechsel von RAID 6 zu DDP) müssen die Laufwerke in der Ziel-Appliance größer (in TB) sein als die Laufwerke in der Quell-Appliance.
+** Ausnahmen zu den allgemeinen Überlegungen zum Klonen von Storage Appliances sind:
++
+*** Wenn die Anzahl der in einer Ziel-Storage-Appliance installierten Standardlaufwerke aufgrund der Installation von Solid-State-Laufwerken (SSDs) geringer ist als die Anzahl der Laufwerke im Quell-Node, ist die allgemeine Storage-Kapazität der Standardlaufwerke in der Ziel-Appliance (in TB) Muss die gesamte funktionale Laufwerkskapazität aller Laufwerke im Quell-Storage-Node überschreiten.
++
+Wenn Sie beispielsweise eine SG5760 Quell-Storage-Node-Appliance mit 60 Laufwerken auf eine SG6060 Ziel-Appliance mit 58 Standardlaufwerken klonen, sollten Sie vor dem Klonen in der SG6060 Ziel-Appliance größere Laufwerke installieren, um die Storage-Kapazität aufrechtzuerhalten. (Die zwei Laufwerksschächte, die SSDs in der Ziel-Appliance enthalten, sind nicht in der gesamten Appliance-Storage-Kapazität enthalten.)
+
++
+Wenn jedoch eine SG5760 Quell-Node-Appliance für 60 Laufwerke mit SANtricity Dynamic Disk Pools DDP-8 (DDP) konfiguriert ist, kann die SG6060 Appliance für 58 Laufwerke mit DDP-16 aufgrund der verbesserten Storage-Effizienz ein gültiges Klonziel für die SG6060 Appliance werden.
+
++
+Auf der Seite *NODES* im Grid Manager können Sie Informationen zum aktuellen RAID-Modus des Quell-Appliance-Knotens anzeigen. Wählen Sie die Registerkarte * Storage* für das Gerät aus.
+
+*** Die Anzahl der Volumes in einer Ziel-Storage-Appliance muss größer oder gleich der Anzahl der Volumes im Quell-Node sein. Sie können einen Quell-Node mit 16 Objektspeicher-Volumes (rangedb) nicht auf einer Ziel-Storage-Appliance mit 12 Objektspeicher-Volumes klonen, selbst wenn die Ziel-Appliance über eine größere Kapazität als der Quell-Node verfügt. Die meisten Storage Appliances verfügen über 16 Objektspeicher-Volumes, außer der SGF6112 Storage Appliance mit nur 12 Objektspeicher-Volumes.
+
+
+
+
+
+
+
+
+=== Informationen und Einschränkungen zum Klonen der SG100 Appliance
+
+Sie können eine SG100 Quell-Node-Appliance auf einer SG110-, SG1000- oder SG1100-Services-Ziel-Appliance klonen. Durch das Klonen der SG100 auf eine SG1000- oder SG1100-Services-Ziel-Appliance kann der Admin-Node oder Gateway-Node mehr Funktionen erhalten.
+
+
+
+=== Informationen und Einschränkungen zum Klonen von SG110-Appliances
+
+Sie können eine SG110-Quell-Node-Appliance auf ein SG1100-Services-Appliance-Ziel klonen, um dem Admin-Node oder Gateway-Node eine höhere Kapazität zu geben.
+
+
+
+=== Informationen und Einschränkungen zum Klonen von SG1000 Appliances
+
+Sie können eine SG1000 Quell-Node-Appliance auf einer SG100-, SG110- oder SG1100-Services-Ziel-Appliance klonen.
+
+* Durch das Klonen der SG1000 in eine SG100- oder SG110-Services-Ziel-Appliance können Sie die SG1000 für eine anspruchsvollere Applikation implementieren.
+* Durch den Austausch einer SG1000-Quell-Node-Appliance durch eine SG100-Services-Ziel-Appliance wird die maximale Geschwindigkeit der Netzwerkports von 100 GbE auf 25 GbE verringert.
+
+
+
+
+=== SG1100 Appliance zum Klonen von Informationen und Einschränkungen
+
+Sie können eine SG1100 Quell-Node-Appliance auf eine SG110 Services-Ziel-Appliance klonen.
+
+* Durch das Klonen der SG1100 in eine SG110-Services-Ziel-Appliance können Sie die SG1100 für eine anspruchsvollere Applikation neu implementieren. Wenn beispielsweise eine SG1100-Quell-Node-Appliance als Admin-Node verwendet wird und Sie sie als dedizierten Load-Balancing-Node verwenden möchten.
+* Wenn Sie eine SG1100-Quell-Node-Appliance durch eine SG110-Services-Ziel-Appliance ersetzen, wird die maximale Geschwindigkeit der Netzwerk-Ports von 100 GbE auf 25 GbE reduziert.
+
+
+
+
+=== SG5712 Informationen und Einschränkungen zum Klonen von Appliances
+
+Sie können eine mit DDP konfigurierte SG5712-Quell-Node-Appliance in einer SG5812-Storage-Ziel-Appliance klonen.
+
+
+
+=== Informationen und Einschränkungen zum Klonen der SG5760 Appliance
+
+* Sie können eine mit DDP16 konfigurierte SG5760-Quell-Node-Appliance in einer mit DDP16 konfigurierten SG5860-Storage-Ziel-Appliance klonen.
+* Eine SG5760-Quell-Node-Appliance, die mit DDP konfiguriert ist, kann nicht auf eine SG5860-Storage-Ziel-Appliance geklont werden, die mit DDP konfiguriert ist.
+* Eine SG5760-Quell-Node-Appliance, die mit DDP oder DDP-16 konfiguriert ist, kann nicht auf eine SG6160 Storage-Ziel-Appliance mit passendem RAID-Modus geklont werden.
+
+
+
+
+=== SG5812 Appliance zum Klonen von Informationen und Einschränkungen
+
+Sie können eine SG5812-Appliance erfolgreich als Quelle oder Ziel klonen.
+
+
+
+=== SG5860 Appliance zum Klonen von Informationen und Einschränkungen
+
+Sie können eine SG5860-Appliance erfolgreich als Quelle oder Ziel mit einigen Einschränkungen klonen (siehe Informationen zum Klonen der Appliance und Einschränkungen für jede Quelle).
+
+
+
+=== Informationen und Einschränkungen zum Klonen der SG6060 Appliance
+
+* Sie können eine SG6060-Quell-Node-Appliance, die mit DDP oder DDP16 konfiguriert ist, in einem passenden RAID-Modus auf eine SG5860-Storage-Ziel-Appliance klonen.
+* Eine SG6060-Quell-Node-Appliance kann ohne Erweiterungs-Shelfs auf eine SG6160 Storage-Ziel-Appliance ohne Erweiterungs-Shelfs geklont werden, wenn die Laufwerkgrößen und der RAID-Modus identisch sind.
+* Eine SG6060 Quell-Node-Appliance mit einer beliebigen Anzahl an Erweiterungs-Shelfs _kann nicht_ in eine SG6160 Storage-Ziel-Appliance geklont werden, selbst wenn die Anzahl der Erweiterungs-Shelfs, Laufwerkgrößen und RAID-Modi identisch ist.
+
+
+
+
+=== SG6160 Appliance für das Klonen von Informationen und Einschränkungen
+
+Sie können eine SG6160-Appliance mit einigen Einschränkungen erfolgreich als Quelle oder Ziel klonen (siehe Informationen zum Klonen der Appliance und Einschränkungen für jede Quelle).

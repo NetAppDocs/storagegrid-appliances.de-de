@@ -24,7 +24,7 @@ link:locating-controller-in-data-center.html["Controller im Datacenter finden"]
 .Über diese Aufgabe
 Informationen zum Austauschen der Batterie im Speicher-Controller finden Sie in den Schritten in der Anleitung für link:replacing-storage-controller-sg6000.html["Austauschen eines Speicher-Controllers"]. Diese Anweisungen beschreiben, wie Sie einen Controller aus dem Gerät entfernen, den Akku aus dem Controller entfernen, den Akku einbauen und den Controller austauschen.
 
-Anweisungen zu den anderen Field Replaceable Units (FRUs) in den Controller-Shelfs finden Sie im http://mysupport.netapp.com/info/web/ECMP1658252.html["E-Series Verfahren für die Systemwartung"^].
+Anweisungen zu den anderen Field Replaceable Units (FRUs) in den Controller-Shelfs finden Sie auf der https://docs.netapp.com/us-en/e-series-family/index.html["E-Series Verfahren für die Systemwartung"^].
 
 [cols="1a,3a"]
 |===

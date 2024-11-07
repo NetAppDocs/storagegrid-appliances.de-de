@@ -30,7 +30,7 @@ Verwenden Sie diese Informationen, um zu helfen link:troubleshooting-hardware-in
 Gerätesteuchten und -Tasten::
 +
 --
-Die folgende Abbildung zeigt Statusanzeigen und -Tasten des SG100 und SG1000.
+Die folgende Abbildung zeigt Statusanzeigen und -Tasten an der Vorderseite des SG100 und SG1000.
 
 image::../media/sg6000_cn_front_indicators.gif[Vordere Anzeigen - SG1000]
 
@@ -89,6 +89,39 @@ Alarm-LED
 --
 
 
+Die folgende Abbildung zeigt die Position des Netzteils und die Identifizieren-LEDs auf der Rückseite des SG100 und des SG1000. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Geräteanschlüssen. Diese LEDs können je nach Gerätelodell variieren.
+
+image::../media/q2023_rear_leds.png[LEDs an der Rückseite SG100 und SG1000]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+|===
 [[general_boot_codes_SG100_1000]]
 Allgemeine Startcodes::
 +
@@ -159,7 +192,7 @@ Verwenden Sie diese Informationen, um zu helfen link:troubleshooting-hardware-in
 Gerätesteuchten und -Tasten::
 +
 --
-Die folgende Abbildung zeigt Anzeigen und Tasten an den SG110- und SG1100-Geräten.
+Die folgende Abbildung zeigt Anzeigen und Tasten an der Vorderseite der SG110- und SG1100-Geräte.
 
 image::../media/sgf6112_front_indicators.png[Vordere Anzeigen - SG110 und SG1100]
 
@@ -227,6 +260,39 @@ Diese Leuchte wird von den Geräten SG110 und SG1100 nicht verwendet und bleibt 
 --
 
 
+Die folgende Abbildung zeigt die Position des Netzteils und die Identifizieren-LEDs auf der Rückseite des SG110 und des SG1100. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Geräteanschlüssen. Diese LEDs können je nach Gerätelodell variieren.
+
+image::../media/q2024_rear_leds.png[Hintere LEDs SG110 und SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+|===
 [[general_boot_codes]]
 Allgemeine Startcodes::
 +
@@ -475,6 +541,13 @@ Beim normalen Hochfahren des Geräts zeigt das siebenSegment-Display des E5700SG
 [cols="1a,3a"]
 |===
 | Codieren | Zeigt An 
+
+
+ a| 
+HOCHSPANNUNG
+ a| 
+Das Master-Startskript wartet auf den Abschluss des BS-Starts.
+
 
 
  a| 
@@ -744,8 +817,7 @@ Blinkt grün: Es gibt Ethernet-Aktivität.
 
 
 .Verwandte Informationen
-* https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
-
+link:https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
 
 --
 .SG6000
@@ -765,7 +837,7 @@ Statusanzeigen und -Tasten am SG6000-CN-Controller::
 --
 Der SG6000-CN-Controller enthält Anzeigen, mit denen Sie den Status des Controllers bestimmen können, einschließlich der folgenden Anzeigen und Schaltflächen.
 
-Die folgende Abbildung zeigt Statusanzeigen und -Tasten am SG6000-CN-Controller.
+Die folgende Abbildung zeigt Statusanzeigen und -Tasten auf der Vorderseite des SG6000-CN-Controllers.
 
 image::../media/sg6000_cn_front_indicators.gif[Frontanzeigen - SG6000-CN]
 
@@ -825,6 +897,39 @@ Alarm-LED
 --
 
 
+Die folgende Abbildung zeigt die Position des Netzteils und die Identifizieren-LEDs auf der Rückseite des SG6000-CN-Controllers. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Geräteanschlüssen. Diese LEDs können je nach Gerätelodell variieren.
+
+image::../media/q2023_rear_leds.png[LEDs auf der Rückseite SG6000-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+|===
 [[general_boot_codes_sg6000]]
 Allgemeine Startcodes::
 +
@@ -889,7 +994,7 @@ Verwenden Sie diese Informationen, um zu helfen link:troubleshooting-hardware-in
 Gerätesteuchten und -Tasten::
 +
 --
-Die folgende Abbildung zeigt Anzeigen und Tasten an den SG6100-Geräten.
+Die folgende Abbildung zeigt Anzeigen und Tasten an der Vorderseite der SG6100-Geräte.
 
 image::../media/sgf6112_front_indicators.png[Vordere Anzeigen - SGF6112]
 
@@ -957,6 +1062,39 @@ Diese Leuchte wird von SG6100-Geräten nicht verwendet und bleibt ausgeschaltet.
 --
 
 
+Die folgende Abbildung zeigt die Position des Netzteils und die Identifizieren-LEDs auf der Rückseite des SGF6112 und SG6100-CN. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Geräteanschlüssen. Diese LEDs können je nach Gerätelodell variieren.
+
+image::../media/q2024_rear_leds.png[Hintere LEDs SGF6112 und SG6100-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+|===
 [[general_boot_codes_SG6100]]
 Allgemeine Startcodes::
 +
@@ -1013,8 +1151,7 @@ Blau (blinkend): Auf das Laufwerk wird zugegriffen
 
 
 .Verwandte Informationen
-* https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
-
+https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
 
 --
 ====

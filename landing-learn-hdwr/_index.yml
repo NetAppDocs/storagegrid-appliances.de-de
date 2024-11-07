@@ -1,14 +1,20 @@
 ---
 indexpage:
+  title: Erste Schritte mit StorageGRID Appliances
+  summary: Erfahren Sie mehr über die Storage oder Services Appliance in Ihrem StorageGRID
+    System.
+  keywords: learn storagegrid appliances
+  lead: Erfahren Sie mehr über die Storage oder Services Appliance in Ihrem StorageGRID
+    System.
   tiles:
   - title: Los geht's
     links:
     - title: Was gibt es Neues bei Appliances
       url: "../whats-new-appliances.html"
     - title: Weitere Informationen zu StorageGRID
-      url: https://docs.netapp.com/us-en/storagegrid-118/primer/index.html
+      url: https://docs.netapp.com/us-en/storagegrid/primer/index.html
     - title: Quick Start Guide für StorageGRID
-      url: https://docs.netapp.com/us-en/storagegrid-118/primer/quick-start.html
+      url: https://docs.netapp.com/us-en/storagegrid/primer/quick-start.html
     - title: Schnellstart für die Installation des Geräts
       url: "../installconfig/index.html"
   - title: Informieren Sie sich über Storage Appliances

@@ -24,10 +24,10 @@ NOTE: Verlassen Sie sich beim Austausch eines Controllers in der StorageGRID App
 * Ein ESD-Armband, oder Sie haben antistatische Vorkehrungen getroffen.
 * Etiketten zur Kennzeichnung aller Kabel, die mit dem Controller verbunden sind.
 * Bestimmte Zugriffsberechtigungen.
-* Sie müssen mit einem beim Grid Manager angemeldet sein https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie müssen im Grid-Manager mit einem angemeldet sein https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Zugriff auf den SANtricity System Manager:
 +
-** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Controller-Informationen befinden sich auf dem https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Informationen zum Controller finden Sie auf der https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"^].
 ** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
 
 
@@ -180,12 +180,12 @@ image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Entfernen Sie die NVME
 
 
  a| 
-image::../media/legend_icon_01.png[Legendensymbol 01]
+image::../media/legend_icon_01.png[Legende Referenz 1]
 | Akkufreigabelasche 
 
 
  a| 
-image::../media/legend_icon_02.png[Legende Symbol 02]
+image::../media/legend_icon_02.png[Legende Referenz 2]
 | Batterieanschluss 
 |===
 
@@ -229,12 +229,12 @@ image::../media/drw_E4000_replace_dimms_IEOPS-865.png[DIMMs entfernen.]
 
 
  a| 
-image::../media/legend_icon_01.png[Legendensymbol 01]
+image::../media/legend_icon_01.png[Legende Referenz 1]
 | DIMM-Auswerferlaschen 
 
 
  a| 
-image::../media/legend_icon_02.png[Legende Symbol 02]
+image::../media/legend_icon_02.png[Legende Referenz 2]
 | DIMMS 
 |===
 

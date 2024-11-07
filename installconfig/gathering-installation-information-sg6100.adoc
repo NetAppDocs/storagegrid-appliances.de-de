@@ -239,6 +239,7 @@ Bitte auswählen:
 * Auto (Standard)
 * 10 GbE
 * 25 GBitE
+* 40 GbE mit der optionalen 100G NIC SKU (nur SG6160)
 * 100 GbE (nur SG6160)
 
 

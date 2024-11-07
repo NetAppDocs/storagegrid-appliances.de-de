@@ -22,7 +22,7 @@ Sie können auf die BMC-Schnittstelle über die DHCP- oder statische IP-Adresse 
 
 
 .Bevor Sie beginnen
-* Der Management-Client verwendet ein https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Der Management-Client verwendet einen https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 * Der BMC-Managementport der Appliance ist mit dem zu verwendenden Managementnetzwerk verbunden.
 +
 [role="tabbed-block"]

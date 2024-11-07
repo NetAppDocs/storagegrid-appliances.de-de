@@ -15,7 +15,7 @@ Wenn während der Installation Probleme auftreten, können Sie die Fehlerbehebun
 
 
 
-== Anzeigen von Startcodes (nur SGF6112 und SG6160)
+== [[View-Boot-Codes]]Start-up-Codes anzeigen (nur SGF6112 und SG6160)
 
 Wenn Sie das Gerät mit Strom versorgen, protokolliert der BMC eine Reihe von Startcodes. Sie können diese Codes auf einer grafischen Konsole anzeigen, die mit dem BMC-Management-Port verbunden ist.
 
@@ -107,9 +107,23 @@ NOTE: In einigen Fällen kann der Standardbenutzername „root“ anstelle von �
 
 
  a| 
+HOCHSPANNUNG
+ a| 
+Das Master-Startskript wartet auf den Abschluss des BS-Starts.
+
+
+
+ a| 
 HI
  a| 
 Das Master-Boot-Skript wurde gestartet.
+
+
+
+ a| 
+PP
+ a| 
+Das System prüft, ob das FPGA aktualisiert werden muss.
 
 
 
@@ -174,17 +188,23 @@ StorageGRID wird ausgeführt.
 
 
 
-== Fehlercodes anzeigen (nur SGF6112 und SG6160)
+== [[View-error-Codes]]Fehlercodes anzeigen (nur SGF6112 und SG6160)
 
-Wenn beim Starten der Appliance ein Hardwarefehler auftritt, meldet der BMC einen Fehlercode. Bei Bedarf können Sie diese Fehlercodes über die BMC-Schnittstelle anzeigen und dann mit dem technischen Support zusammenarbeiten, um das Problem zu lösen.
+Wenn beim Starten der Appliance ein Hardwarefehler auftritt, meldet der BMC einen Fehlercode. Bei Bedarf können Sie diese Fehlercodes über den seriellen Port des Geräts anzeigen und dann mit dem technischen Support zusammenarbeiten, um das Problem zu lösen.
 
 .Bevor Sie beginnen
-* Sie wissen, wie es geht link:accessing-bmc-interface.html["Rufen Sie das BMC-Dashboard auf"].
+* Sammeln Sie die erforderliche Ausrüstung:
++
+** USB-Kabel
+** Serielles virtuelles Terminal
+
+
 
 
 .Schritte
-. Wählen Sie im BMC-Dashboard *BIOS POST Code* aus.
-. Überprüfen Sie die angezeigten Informationen für den aktuellen Code und den vorherigen Code.
+. Schließen Sie den seriellen USB-Anschluss an der Rückseite des Geräts an.
+. Einstellungen verwenden `115200 8-N-1`.
+. Überprüfen Sie die Informationen, die über das serielle Terminal für den aktuellen Code und den vorherigen Code gedruckt wurden.
 +
 Wenn einer der folgenden Fehlercodes angezeigt wird, wenden Sie sich an den technischen Support, um das Problem zu beheben.
 

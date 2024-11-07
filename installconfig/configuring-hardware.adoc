@@ -58,12 +58,12 @@ Die folgenden Geräte verfügen über eine BMC-Schnittstelle, die konfiguriert w
 +
 ** Konfigurieren Sie SANtricity System Manager (SG5700, SG5800, SG6000 und SG6100) die Software, die Sie für die Überwachung der Hardware verwenden
 ** Ändern Sie den RAID-Modus
-** Greifen Sie auf die BMC-Schnittstelle für den Controller SG6000-CN oder SG6100-CN zu
+** link:../installconfig/accessing-bmc-interface.html["Zugriff auf die BMC-Schnittstelle"] Für den Controller SG6000-CN oder SG6100-CN
 
 
 * Service-Appliances
 +
-** Greifen Sie auf die BMC-Schnittstelle für SG100, SG110, SG1000 und SG1100 zu
+** link:../installconfig/accessing-bmc-interface.html["Zugriff auf die BMC-Schnittstelle"] Für SG100, SG110, SG1000 und SG1100
 
 
 

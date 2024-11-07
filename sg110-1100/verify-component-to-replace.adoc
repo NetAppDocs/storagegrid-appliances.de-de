@@ -15,7 +15,7 @@ Wenn Sie sich nicht sicher sind, welche Hardwarekomponente in Ihrem Gerät ausge
 
 .Bevor Sie beginnen
 * Sie haben die Seriennummer der Speicher-Appliance, bei der die Komponente ausgetauscht werden muss.
-* Sie sind mit einem bei Grid Manager angemeldet https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+* Sie sind im Grid Manager mit einem angemeldet https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 
 
 .Über diese Aufgabe
@@ -42,7 +42,7 @@ NOTE: Wählen Sie die Meldung und nicht die Überschrift einer Gruppe von Warnun
 
 .. Notieren Sie den Node-Namen und die eindeutige Identifizierungsbezeichnung der ausgefallenen Komponente.
 +
-image::../media/nic-alert-sgf6112.jpg[Warnung mit Komponenten-ID]
+image::../media/nic-alert-sgf6112.png[Warnung mit Komponenten-ID]
 
 
 

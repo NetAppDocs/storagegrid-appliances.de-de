@@ -1,9 +1,13 @@
 ---
 indexpage:
+  title: Wartung der SG6000 Storage Appliance Hardware
+  summary: Warten Sie die Hardware Ihrer SG6000 Storage Appliance.
+  keywords: maintain storagegrid sg6000
+  lead: Warten Sie die Hardware Ihrer SG6000 Storage Appliance.
   tiles:
   - title: Häufig ausgeführte Prozeduren
     links:
-    - title: Die Position-LED ein- oder ausschalten
+    - title: Die Identifizieren-LED ein- oder ausschalten
       url: "../sg6000/turning-controller-identify-led-on-and-off.html"
     - title: Suchen Sie die Appliance im Datacenter
       url: "../sg6000/locating-controller-in-data-center.html"
@@ -13,8 +17,10 @@ indexpage:
       url: "../sg6000/changing-link-configuration-of-sg6000-cn-controller.html"
     - title: Upgrade von SANtricity
       url: "../sg6000/upgrading-santricity-os-on-storage-controllers.html"
-    - title: Aktualisieren Sie die Laufwerk-Firmware
-      url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager.html"
+    - title: Upgrade der Laufwerk-Firmware (Online-Methode)
+      url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Upgrade der Laufwerk-Firmware (Offline-Methode)
+      url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
   - title: Rack-Verfahren
     links:
     - title: Controller im Rack austauschen

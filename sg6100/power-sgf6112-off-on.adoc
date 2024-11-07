@@ -20,8 +20,7 @@ Sie können das SGF6112-Gerät oder den SG6100-CN-Controller herunterfahren und 
 Fahren Sie die Appliance herunter, um eine Hardwarewartung durchzuführen.
 
 .Bevor Sie beginnen
-* Das ist schon link:locating-sgf6112-in-data-center.html["Das Gerät befindet sich physisch"].
-
+Das ist schon link:locating-sgf6112-in-data-center.html["Das Gerät befindet sich physisch"].
 
 .Über diese Aufgabe
 Um Serviceunterbrechungen zu vermeiden, fahren Sie die Appliance während eines geplanten Wartungsfensters herunter, wenn Serviceunterbrechungen akzeptabel sind.
