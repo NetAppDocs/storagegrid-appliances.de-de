@@ -5648,7 +5648,6 @@ Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.</b
   <block id="2060996e4ea036c84fe524f4bb640ff0" category="list-text">*Managementnetzwerk für SANtricity* (optional für Speichergeräte, nicht für SGF6112 erforderlich): Dieses Netzwerk bietet Zugriff auf SANtricity System Manager, mit dem Sie die Hardwarekomponenten im Appliance- und Speicher-Controller-Shelf überwachen und verwalten können. Dieses Managementnetzwerk kann das gleiche sein wie das Admin-Netzwerk für StorageGRID, oder es kann ein unabhängiges Managementnetzwerk sein.</block>
   <block id="e6b3f8c787f110e738041acfec63cd45" category="admonition">Ausführliche Informationen zu StorageGRID-Netzwerken finden Sie im<block ref="c9a67c39cb366102345c95ea9d802249" category="inline-link-rx"></block>.</block>
   <block id="79ffe998f527a3998a83d054ff067c7e" category="list-text"><block ref="79ffe998f527a3998a83d054ff067c7e" category="inline-link-macro-rx"></block></block>
-  <block id="44ef269732748f70c763abafc0361990" category="list-text"><block ref="44ef269732748f70c763abafc0361990" category="inline-link-macro-rx"></block></block>
   <block id="2b5994be0ad1518a670726d49503aef3" category="admonition">Die bei diesem Verfahren vorgenommenen BMC-Einstellungen bleiben möglicherweise nicht erhalten, wenn ein Controller oder eine Appliance ausfällt und ersetzt werden muss. Stellen Sie sicher, dass Sie über eine Aufzeichnung aller Einstellungen verfügen, die Sie angewendet haben, so dass sie nach einem Hardware-Austausch bei Bedarf leicht wieder angewendet werden können.</block>
   <block id="156e455630a4e49e7afff2a829c35531" category="open-title">StorageGRID 11.9 und höher</block>
   <block id="1433f3dea3005561ee1f9e94e4de877d" category="paragraph">Verwenden Sie in der BMC-Oberfläche die Optionen *Benutzerverwaltung* und *Plattformereignisfilter* auf der Seite Einstellungen, um E-Mail-Benachrichtigungen zu konfigurieren.</block>
@@ -5761,4 +5760,5 @@ Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.</b
   <block id="4f45c0c0b55884bea7e7649654813e35" category="sidebar">Laufwerke managen (SG110, SG1100, SGF6112 und SG6160)</block>
   <block id="3f7fe61f120f9ba5cf2d622ad7597a37" category="sidebar">Verwenden Sie die BMC-Schnittstelle</block>
   <block id="6aa2cc2f099a383774f35aa72c7c8c6d" category="paragraph"><block ref="6aa2cc2f099a383774f35aa72c7c8c6d" category="inline-link-rx"></block></block>
+  <block id="06670f0887e1e6231759b0c18c236453" category="list-text"><block ref="06670f0887e1e6231759b0c18c236453" category="inline-link-macro-rx"></block></block>
 </blocks>
