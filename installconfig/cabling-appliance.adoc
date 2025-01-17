@@ -1124,6 +1124,7 @@ Grid-Netzwerk
 
 
 . Wenn Sie das Admin-Netzwerk für StorageGRID verwenden möchten, schließen Sie den Admin-Netzwerkport des Geräts über ein Ethernet-Kabel an das Admin-Netzwerk an.
+. Wenn Ihre Appliance über ein Erweiterungs-Shelf verfügt, finden Sie Informationen zur Verkabelung imlink:../sg6100/adding-expansion-shelf-to-deployed-sg6160.html["Anweisungen zum Hinzufügen eines Erweiterungs-Shelf zu einem bereitgestellten SG6160"].
 
 
 --
