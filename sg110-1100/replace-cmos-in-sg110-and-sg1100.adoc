@@ -26,9 +26,25 @@ Mit diesen Verfahren können Sie:
 .Bevor Sie beginnen
 * Das ist schon link:verify-component-to-replace.html["SG110 oder SG1100 geprüft, wo die CMOS-Batterie ausgetauscht werden muss"].
 * Das ist schon link:locating-sg110-and-sg1100-in-data-center.html["Das SG110- oder SG1100-Gerät befindet sich in einem physischen Standort"] Wo Sie die CMOS-Batterie im Rechenzentrum austauschen.
+* Sie haben die aktuelle BMC-Konfiguration der Appliance aufgezeichnet, sofern sie weiterhin verfügbar ist.
++
+.. Melden Sie sich bei der zu ersetzenden Appliance an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Geben Sie ein: `*run-host-command ipmitool lan print*` Um die aktuelle BMC-Konfiguration für die Appliance anzuzeigen.
 +
 
 NOTE: A link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["Kontrolliertes Herunterfahren des Geräts"] Ist erforderlich, bevor Sie das Gerät aus dem Rack entfernen.
+
+
 
 * Sie haben alle Kabel und getrennt link:reinstalling-sg110-and-sg1100-cover.html["Die Geräteabdeckung entfernt"].
 

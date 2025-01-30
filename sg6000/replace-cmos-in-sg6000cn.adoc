@@ -26,9 +26,25 @@ Mit diesen Verfahren können Sie:
 .Bevor Sie beginnen
 * Sie haben link:verify-component-to-replace-sg6000cn.html["Überprüfen Sie das Gerät, in dem die CMOS-Batterie ausgetauscht werden muss"].
 * Sie haben link:locating-controller-in-data-center.html["Physikalischer Standort des SG6000-CN-Controllers"] die Stelle, an der Sie die CMOS-Batterie im Rechenzentrum austauschen.
+* Sie haben die aktuelle BMC-Konfiguration der Appliance aufgezeichnet, sofern sie weiterhin verfügbar ist.
++
+.. Melden Sie sich bei der zu ersetzenden Appliance an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Geben Sie ein: `*run-host-command ipmitool lan print*` Um die aktuelle BMC-Konfiguration für die Appliance anzuzeigen.
 +
 
 NOTE: Vor dem Entfernen des Geräts aus dem Rack ist ein link:power-sg6000-cn-controller-off-on.html["Kontrolliertes Herunterfahren des Geräts"] erforderlich.
+
+
 
 * Sie haben alle Kabel und getrennt link:reinstalling-sg6000-cn-controller-cover.html["Die Geräteabdeckung entfernt"].
 

@@ -26,9 +26,25 @@ Mit diesen Verfahren können Sie:
 .Bevor Sie beginnen
 * Sie haben link:verify-component-to-replace-sg100-and-sg1000.html["SG100 oder SG1000 geprüft, wo die CMOS-Batterie ausgetauscht werden muss"].
 * Sie haben link:locating-controller-in-data-center.html["Standort der SG100- oder SG1000-Appliance"] die Stelle, an der Sie die CMOS-Batterie im Rechenzentrum austauschen.
+* Sie haben die aktuelle BMC-Konfiguration der Appliance aufgezeichnet, sofern sie weiterhin verfügbar ist.
++
+.. Melden Sie sich bei der zu ersetzenden Appliance an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Geben Sie ein: `*run-host-command ipmitool lan print*` Um die aktuelle BMC-Konfiguration für die Appliance anzuzeigen.
 +
 
 NOTE: Vor dem Entfernen des Geräts aus dem Rack ist ein link:shut-down-sg100-and-sg1000.html["Kontrolliertes Herunterfahren des Geräts"] erforderlich.
+
+
 
 * Sie haben alle Kabel und getrennt link:reinstalling-sg100-and-sg1000-controller-cover.html["Die Geräteabdeckung entfernt"].
 
