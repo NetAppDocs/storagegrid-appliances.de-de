@@ -311,7 +311,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
-. Wenn Sie die Appliance während dieses Verfahrens in den Wartungsmodus versetzt haben, beenden Sie den Wartungsmodus und warten Sie, bis der Node neu gebootet wurde und sich wieder dem Grid angeschlossen hat. Dieser Vorgang kann bis zu 20 Minuten dauern. Überprüfen Sie dann im Grid Manager, ob auf der Seite Knoten ein normaler Status angezeigt wird (grünes Häkchen-Symbol) image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+. Wenn Sie die Appliance während dieses Verfahrens in den Wartungsmodus versetzt haben, beenden Sie den Wartungsmodus und warten Sie, bis der Node neu gebootet wurde und sich wieder dem Grid angeschlossen hat. Dieser Vorgang kann bis zu 20 Minuten dauern. Überprüfen Sie dann im Grid Manager, ob auf der Seite Knoten ein normaler Status (grünes Häkchen links neben dem Node-Namen) für den Appliance-Node angezeigt image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"]wird. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
 +
 image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
 

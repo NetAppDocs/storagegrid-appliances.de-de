@@ -11,8 +11,10 @@ indexpage:
       url: "../sg5800/changing-link-configuration-of-e5800sg-controller.html"
     - title: Upgrade von SANtricity
       url: "../sg5800/upgrading-santricity-os-on-storage-controller.html"
-    - title: Aktualisieren Sie die Laufwerk-Firmware
-      url: "../sg5800/upgrading-drive-firmware-using-santricity-system-manager.html"
+    - title: Upgrade der Laufwerk-Firmware (Online-Methode)
+      url: "../sg5800/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Upgrade der Laufwerk-Firmware (Offline-Methode)
+      url: "../sg5800/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
   - title: Hardware-Verfahren
     links:
     - title: SG5800-Computing-Controller austauschen

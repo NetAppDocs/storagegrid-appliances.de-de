@@ -382,7 +382,7 @@ image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Contr
 +
 Das Gerät wird neu gestartet und wieder in das Raster integriert. Dieser Vorgang kann bis zu 20 Minuten dauern.
 
-. Vergewissern Sie sich, dass das Neubooten abgeschlossen ist und dass der Node wieder dem Raster beigetreten ist. Überprüfen Sie im Grid Manager, ob auf der Seite Knoten ein normaler Status angezeigt wird (grünes Häkchen-Symbol image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+. Vergewissern Sie sich, dass das Neubooten abgeschlossen ist und dass der Node wieder dem Raster beigetreten ist. Überprüfen Sie im Grid Manager, ob auf der Seite Knoten ein normaler Status (grünes Häkchen links neben dem Node-Namen) für den Appliance-Node angezeigt image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"]wird. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
 +
 image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
 

@@ -9,8 +9,10 @@ indexpage:
     links:
     - title: Upgrade von SANtricity
       url: "../sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html"
-    - title: Upgrade der Laufwerk-Firmware (SG6160)
-      url: "../sg6100/upgrade-drive-firmware-using-santricity-system-manager.html"
+    - title: Upgrade der Laufwerk-Firmware (SG6160 Online-Methode)
+      url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Upgrade der Laufwerk-Firmware (SG6160 offline-Methode)
+      url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
     - title: Die Identifizieren-LED ein- oder ausschalten
       url: "../sg6100/turning-sgf6112-identify-led-on-and-off.html"
     - title: Suchen Sie die Appliance im Datacenter

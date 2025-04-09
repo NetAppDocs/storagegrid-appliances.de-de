@@ -67,8 +67,8 @@ Wenn Sie Grid-Subnetze haben, ist das Grid-Netzwerk-Gateway erforderlich. Alle a
 NOTE: Die Standardroute wird nicht aufgeführt. Wenn das Client-Netzwerk nicht aktiviert ist, verwendet die Standardroute das Grid-Netzwerk-Gateway.
 
 +
-*** Um ein Subnetz hinzuzufügen, klicken Sie auf das Insert-Symbol image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"] Rechts neben dem letzten Eintrag.
-*** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Löschsymbol image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
+*** Um ein Subnetz hinzuzufügen, klicken Sie auf das Symbol Einfügen image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"]rechts neben dem letzten Eintrag.
+*** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Symbol Löschen image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
 
 
 .. Klicken Sie Auf *Speichern*.
@@ -92,8 +92,8 @@ Wenn Sie Grid-Subnetze haben, ist das Grid-Netzwerk-Gateway erforderlich. Alle a
 NOTE: Die Standardroute wird nicht aufgeführt. Wenn das Client-Netzwerk nicht aktiviert ist, verwendet die Standardroute das Grid-Netzwerk-Gateway.
 
 +
-*** Um ein Subnetz hinzuzufügen, klicken Sie auf das Insert-Symbol image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"] Rechts neben dem letzten Eintrag.
-*** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Löschsymbol image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
+*** Um ein Subnetz hinzuzufügen, klicken Sie auf das Symbol Einfügen image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"]rechts neben dem letzten Eintrag.
+*** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Symbol Löschen image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
 
 
 .. Wenn Sie Jumbo Frames verwenden möchten, ändern Sie das MTU-Feld in einen für Jumbo Frames geeigneten Wert, z. B. 9000. Behalten Sie andernfalls den Standardwert 1500 bei.
@@ -148,8 +148,8 @@ Sie müssen überprüfen, ob alle Subnetze über das von Ihnen angegebene Gatewa
 NOTE: Die Standardroute kann nicht für die Verwendung des Admin-Netzwerk-Gateways erstellt werden.
 
 +
-*** Um ein Subnetz hinzuzufügen, klicken Sie auf das Insert-Symbol image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"] Rechts neben dem letzten Eintrag.
-*** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Löschsymbol image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
+*** Um ein Subnetz hinzuzufügen, klicken Sie auf das Symbol Einfügen image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"]rechts neben dem letzten Eintrag.
+*** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Symbol Löschen image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
 
 
 .. Klicken Sie Auf *Speichern*.
@@ -173,8 +173,8 @@ Sie müssen überprüfen, ob alle Subnetze über das von Ihnen angegebene Gatewa
 NOTE: Die Standardroute kann nicht für die Verwendung des Admin-Netzwerk-Gateways erstellt werden.
 
 +
-*** Um ein Subnetz hinzuzufügen, klicken Sie auf das Insert-Symbol image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"] Rechts neben dem letzten Eintrag.
-*** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Löschsymbol image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
+*** Um ein Subnetz hinzuzufügen, klicken Sie auf das Symbol Einfügen image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"]rechts neben dem letzten Eintrag.
+*** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Symbol Löschen image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
 
 
 .. Wenn Sie Jumbo Frames verwenden möchten, ändern Sie das MTU-Feld in einen für Jumbo Frames geeigneten Wert, z. B. 9000. Behalten Sie andernfalls den Standardwert 1500 bei.

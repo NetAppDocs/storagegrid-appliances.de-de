@@ -23,7 +23,7 @@ Das Installationsprogramm der StorageGRID Appliance stellt den Status bereit, bi
 Auf der Seite Monitor-Installation wird der Installationsfortschritt angezeigt.
 
 +
-image::../media/monitor_installation_configure_storage.gif[Dieses Bild wird durch den umgebenden Text erläutert.]
+image::../media/monitor_installation_configure_storage.gif[Seite „Monitorinstallation“]
 
 +
 Die blaue Statusleiste zeigt an, welche Aufgabe zurzeit ausgeführt wird. Grüne Statusleisten zeigen Aufgaben an, die erfolgreich abgeschlossen wurden.
@@ -47,7 +47,7 @@ In dieser Phase kopiert das Installationsprogramm das Betriebssystem-Image für 
 
 . Überwachen Sie den Installationsfortschritt weiter, bis die Phase *StorageGRID installieren* angehalten wird. Auf der eingebetteten Konsole wird eine Meldung angezeigt, in der Sie aufgefordert werden, diesen Knoten auf dem Admin-Knoten mithilfe des Grid-Managers zu genehmigen. Fahren Sie mit dem nächsten Schritt fort.
 +
-image::../media/monitor_installation_install_sgws.gif[Dieses Bild wird durch den umgebenden Text erläutert.]
+image::../media/monitor_installation_install_sgws.gif[Seite „Monitorinstallation“]
 
 . Wechseln Sie zum Grid-Manager des Knotens „primärer Administrator“, genehmigen Sie den ausstehenden Speicherknoten und führen Sie den StorageGRID-Installationsprozess durch.
 +
@@ -95,7 +95,7 @@ In dieser Phase kopiert das Installationsprogramm das Betriebssystem-Image für 
 NOTE: Während der Installation eines primären Admin-Knotens der Appliance wird eine fünfte Phase angezeigt, in der der StorageGRID-Installer geladen wird (der Beispielbildschirm zeigt nur die ersten vier Phasen). Wenn der StorageGRID-Installer (fünfte Phase) länger als 10 Minuten geladen wird, aktualisieren Sie die Webseite manuell.
 
 +
-image::../media/monitor_installation_install_sgws.gif[Dieses Bild wird durch den umgebenden Text erläutert.]
+image::../media/monitor_installation_install_sgws.gif[Seite „Monitorinstallation“]
 
 
 

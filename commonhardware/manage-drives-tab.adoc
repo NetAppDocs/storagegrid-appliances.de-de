@@ -57,7 +57,7 @@ Das Fenster mit den Laufwerkdetails wird angezeigt.
 
 . Wählen Sie *Positionsanzeige ein*.
 +
-** Ein Glühbirnensymbol image:../media/icon_drive-light-bulb.png["Glühlampe der Antriebsleuchte"] Wird für das Laufwerk angezeigt.
+** Für das Laufwerk wird ein Leuchtstoffsymbol image:../media/icon_drive-light-bulb.png["Glühlampe der Antriebsleuchte"] angezeigt.
 ** Eine gelbe LED blinkt auf dem physischen Laufwerk.
 
 

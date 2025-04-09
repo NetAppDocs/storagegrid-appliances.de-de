@@ -114,7 +114,7 @@ image::../media/sg5860_front_and_back_views.png[Vorder- und Rückseite des SG586
 
 Der SG5860 umfasst zwei Controller, zwei Lüfterzangen und zwei Leistungszangen.
 
-image::../media/sg5860_with_callouts.png[Controller,fan canisters,and power canisters in SG5860 appliance]
+image::../media/sg5860_with_callouts.png[Controller, Lüfterzangen und Leistungszangen in SG5860-Gerät]
 
 [cols="1a,2a"]
 |===

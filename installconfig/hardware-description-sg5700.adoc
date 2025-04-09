@@ -175,7 +175,7 @@ image::../media/sg5760_front_and_back_views.gif[Vorder- und Rückseite des SG576
 
 Die SG5760 verfügt über zwei Controller, zwei Lüfterbehälter und zwei Strombehälter.
 
-image::../media/sg5760_with_callouts.gif[Controller,fan canisters,and power canisters in SG5760 appliance]
+image::../media/sg5760_with_callouts.gif[Controller, Lüfterzangen und Leistungszangen in SG5760-Appliance]
 
 [cols="1a,2a"]
 |===
@@ -223,7 +223,7 @@ image::../media/sg5760x_front_and_back_views.gif[Vorder- und Rückseite des SG57
 
 Die SG5760X enthält zwei Controller, zwei Lüfterzangen und zwei Leistungszangen.
 
-image::../media/sg5760x_with_callouts.gif[Controller,fan canisters,and power canisters in SG5760X appliance]
+image::../media/sg5760x_with_callouts.gif[Controller, Lüfterzangen und Stromzangen in SG5760X-Appliance]
 
 [cols="1a,3a"]
 |===

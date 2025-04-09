@@ -40,7 +40,7 @@ Zusätzlich zu allen anderen Tests, die Sie durchführen möchten, bestätigen S
 image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
 
 +
-Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite Knoten sollte ein normaler Status angezeigt werden (grünes Häkchen-Symbol image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] Links neben dem Node-Namen) für den Appliance-Node. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite Knoten sollte ein normaler Status (grünes Häkchen links neben dem Node-Namen) für den Appliance-Node angezeigt image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"]werden. Dies bedeutet, dass keine Warnmeldungen aktiv sind und der Node mit dem Grid verbunden ist.
 
 +
 image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
