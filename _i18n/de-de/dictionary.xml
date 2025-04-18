@@ -2865,7 +2865,6 @@ Laden Sie nach Abschluss des aktuellen Upgrades die korrekte SANtricity OS-Datei
   <block id="9bb391312ffed336cc1adbf60045dba8" category="list-text">Überprüfen Sie anhand der an der Vorderseite des Geräts angebrachten Etiketten, ob Sie das richtige Gerät gefunden haben.</block>
   <block id="d3cb531b4f9c05d46c6be8f0489a9b86" category="list-text">Entfernen Sie gegebenenfalls die Frontverkleidung, um Zugang zu den Bedienelementen und Anzeigen auf der Vorderseite zu erhalten.</block>
   <block id="8727881150b0ace8b598a648cdfcd4e1" category="summary">NetApp StorageGRID ist eine Suite für softwaredefinierten Objekt-Storage, die eine Vielzahl von Anwendungsfällen in Public-, Private- und Hybrid-Multi-Cloud-Umgebungen unterstützt. StorageGRID bietet nicht nur nativen Support für die Amazon S3-API, sondern auch branchenführende Innovationen wie automatisiertes Lifecycle Management. Damit können Sie unstrukturierte Daten kostengünstig über längere Zeiträume hinweg speichern, sichern, schützen und aufbewahren.</block>
-  <block id="4fab2171e21f4258294a2a074494fa18" category="doc">StorageGRID Appliance-Dokumentation</block>
   <block id="2e1c8345a49fcd97288e52caaad82a49" category="summary">In einigen Fällen müssen Sie möglicherweise die MAC-Adressenreferenzen nach dem Austausch einer Appliance aktualisieren.</block>
   <block id="8731fac4810f4eee46647147bd16bf3d" category="paragraph">Wenn eine der Netzwerkschnittstellen auf einer Appliance, die Sie ersetzen, für DHCP konfiguriert ist, müssen Sie möglicherweise die permanenten DHCP-Lease-Zuweisungen auf den DHCP-Servern aktualisieren, um auf die MAC-Adressen der Ersatz-Appliance zu verweisen. Das Update stellt sicher, dass dem Ersatzgerät die erwarteten IP-Adressen zugewiesen werden.</block>
   <block id="5d98e441c401a29a6e5bb2f1212a7a15" category="list-text">Suchen Sie das Etikett auf der Vorderseite des Geräts. Das Etikett enthält die MAC-Adresse für den BMC-Verwaltungsport der Appliance.</block>
@@ -3865,7 +3864,6 @@ Weitere Informationen zum Verwalten von Objekten mit Information Lifecycle Manag
   <block id="8ef596bf4eb7277f78ad1d7ad4cc04de" category="sidebar">StorageGRID Knowledge Base</block>
   <block id="c2d388654878e1108f99fdeaa465fcac" category="sidebar">NetApp Blog</block>
   <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">NetApp Community</block>
-  <block id="69d1c297210c956cee51bf4ccf9dc0d1" category="sidebar">StorageGRID Appliance Docs</block>
   <block id="42201415720ad552ae0536ddda18b94e" category="sidebar">Erfahren Sie mehr über StorageGRID Appliances</block>
   <block id="b7cd29c1531745149a88d6056a6c42c4" category="sidebar">Klonen von Appliance-Nodes</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">Überblick</block>
@@ -5762,4 +5760,5 @@ Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.</b
   <block id="0160256cfe219f6b22fa00049dc8b08b" category="list-text">Sehen Sie sich das Lüftersymbol <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>rechts neben der Dropdown-Liste *Regal* an, um zu ermitteln, welches Gerät über den defekten Lüfterbehälter verfügt.</block>
   <block id="1a41776500a52e28aa05db3c32dfc47a" category="sidebar">Upgrade der Laufwerk-Firmware (SG6160 Online-Methode)</block>
   <block id="2c8a2ef75a9a05ce84a4b89f17f20322" category="sidebar">Upgrade der Laufwerk-Firmware (SG6160 offline-Methode)</block>
+  <block id="d07792f91c33735c12a1ce89b21df7a3" category="sidebar">Dokumentation zur StorageGRID Appliance</block>
 </blocks>
