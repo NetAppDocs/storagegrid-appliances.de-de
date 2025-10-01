@@ -12,7 +12,7 @@
 .Über diese Aufgabe
 Andere Software-Updates (StorageGRID Software-Upgrade oder Hotfix) können nicht ausgeführt werden, während ein SANtricity-Betriebssystem-Upgrade durchgeführt wird. Wenn Sie versuchen, vor Abschluss des SANtricity OS-Upgrades einen Hotfix oder ein StorageGRID-Software-Upgrade zu starten, werden Sie zur Upgrade-Seite von SANtricity OS umgeleitet.
 
-Das Verfahren ist erst abgeschlossen, wenn das SANtricity OS Upgrade erfolgreich auf alle zutreffenden Nodes angewendet wurde, die für das Upgrade ausgewählt wurden. Das SANtricity Betriebssystem kann länger als 30 Minuten dauern, bis das Betriebssystem auf jedem Node (sequenziell) und bis zu 90 Minuten zum Neustart jeder StorageGRID Storage Appliance benötigt wird. Alle Nodes in Ihrem Grid, die SANtricity OS nicht verwenden, sind von diesem Verfahren nicht betroffen.
+Der Vorgang ist erst abgeschlossen, wenn das SANtricity OS-Upgrade erfolgreich auf alle für das Upgrade ausgewählten Knoten angewendet wurde.  Das Laden des SANtricity -Betriebssystems auf jedem Knoten (nacheinander) kann mehr als 30 Minuten dauern und der Neustart jedes StorageGRID Speichergeräts kann bis zu 90 Minuten dauern.  Knoten in Ihrem Grid, die SANtricity OS nicht verwenden, sind von diesem Verfahren nicht betroffen.
 
 
 CAUTION: Die folgenden Schritte sind nur anwendbar, wenn Sie den Grid Manager zur Durchführung des Upgrades verwenden. Die Storage Controller in der Appliance können nicht mit dem Grid-Manager aktualisiert werden, wenn die Controller SANtricity OS verwenden, die älter als 08.42.20.00 (11.42) sind.
@@ -21,12 +21,12 @@ CAUTION: Die folgenden Schritte sind nur anwendbar, wenn Sie den Grid Manager zu
 NOTE: Mit diesem Verfahren wird der NVSRAM automatisch auf die neueste Version aktualisiert, die mit dem Upgrade des SANtricity-Betriebssystems verknüpft ist. Sie müssen keine separate NVSRAM-Aktualisierungsdatei anwenden.
 
 
-NOTE: Stellen Sie sicher, dass Sie den aktuellen StorageGRID-Hotfix installieren, bevor Sie mit diesem Vorgang beginnen. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["StorageGRID Hotfix Verfahren"^].
+NOTE: Wenden Sie den neuesten StorageGRID -Hotfix an, bevor Sie mit diesem Verfahren beginnen. Sehen https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["StorageGRID Hotfix Verfahren"^] für Details.
 
 .Schritte
 . [[Download-santricity-os]] Laden Sie die neue SANtricity OS Softwaredatei von herunter https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^].
 +
-Achten Sie darauf, die SANtricity Betriebssystemversion für Ihre Storage Controller auszuwählen.
+Wählen Sie die SANtricity OS-Version für Ihre Speichercontroller.
 
 . Wählen Sie *WARTUNG* > *System* > *Software-Update*.
 +
@@ -176,9 +176,9 @@ NOTE: Nodes, die bereits genehmigt und ohne Fehler aktualisiert wurden, werden w
 
 
 
-. Wiederholen Sie dieses Upgrade-Verfahren für alle Nodes in einer vollständigen Phase, für die eine andere SANtricity OS Upgrade-Datei erforderlich ist.
+. Wiederholen Sie diesen Upgrade-Vorgang für Knoten im Status „Abgeschlossen“, die eine andere SANtricity OS-Upgrade-Datei erfordern.
 +
 
-NOTE: Verwenden Sie für alle Nodes, für die der Status als Warnung angezeigt wird, den Wartungsmodus, um das Upgrade durchzuführen.
+NOTE: Verwenden Sie für Knoten mit dem Status „Benötigt Aufmerksamkeit“ den Wartungsmodus, um das Upgrade durchzuführen.
 
 

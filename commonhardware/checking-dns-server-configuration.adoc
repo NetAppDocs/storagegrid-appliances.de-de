@@ -31,9 +31,6 @@ Wenn sich beispielsweise der DNS-Server für das Grid ändert, während ein vers
 .Schritte
 . Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Netzwerke konfigurieren* > *DNS-Konfiguration* aus.
 . Vergewissern Sie sich, dass die angegebenen DNS-Server richtig sind.
-+
-image::../media/dns_configuration.png[DNS-Konfiguration]
-
 . Ändern Sie bei Bedarf die DNS-Server.
 +
 
@@ -48,17 +45,16 @@ Der Knoten verwendet die auf dieser Seite angegebenen DNS-Servereinstellungen, u
 ** Wählen Sie *Neustart in StorageGRID* aus, um den Controller neu zu starten, wobei der Knoten wieder in das Raster integriert wird. Wählen Sie diese Option, wenn Sie im Wartungsmodus ausgeführt werden und den Node in den normalen Betrieb zurückkehren möchten.
 ** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. (Diese Option ist nur verfügbar, wenn sich der Controller im Wartungsmodus befindet.) Wählen Sie diese Option aus, wenn weitere Wartungsmaßnahmen erforderlich sind, die Sie auf dem Node durchführen müssen, bevor Sie das Raster neu beitreten.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
-
-+
 
 NOTE: Wenn der Node neu gebootet und neu in das Grid wechselt, werden die im Grid Manager aufgeführten systemweiten DNS-Server verwendet. Nach dem erneuten Beitritt zum Grid verwendet die Appliance nicht mehr die im StorageGRID Appliance Installer angegebenen temporären DNS-Server, während sich die Appliance im Wartungsmodus befand.
 
 +
-Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite *NODES* sollte ein normaler Status (grünes Häkchen links neben dem Knotennamen) für den Appliance-Node angezeigt image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"]werden, der anzeigt, dass keine Warnungen aktiv sind und der Node mit dem Raster verbunden ist.
+Es kann bis zu 20 Minuten dauern, bis das Gerät neu gestartet wird und sich wieder mit dem Netz verbindet.  So bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 
 +
-image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+... Wählen Sie im Grid Manager *NODES* aus.
+... Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
+
 
 
 

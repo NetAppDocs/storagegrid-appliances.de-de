@@ -118,6 +118,8 @@ Sie können eine SG100 Quell-Node-Appliance auf einer SG110-, SG1000- oder SG110
 
 Sie können eine SG110-Quell-Node-Appliance auf ein SG1100-Services-Appliance-Ziel klonen, um dem Admin-Node oder Gateway-Node eine höhere Kapazität zu geben.
 
+Das Klonen von Knoten von einer SG110-Quellknoten-Appliance ohne Knotenverschlüsselung auf ein SG110-Appliance-Ziel mit Knotenverschlüsselung wird nicht unterstützt.
+
 
 
 === Informationen und Einschränkungen zum Klonen von SG1000 Appliances
@@ -137,6 +139,8 @@ Sie können eine SG1100 Quell-Node-Appliance auf eine SG110 Services-Ziel-Applia
 * Durch das Klonen der SG1100 in eine SG110-Services-Ziel-Appliance können Sie die SG1100 für eine anspruchsvollere Applikation neu implementieren. Wenn beispielsweise eine SG1100-Quell-Node-Appliance als Admin-Node verwendet wird und Sie sie als dedizierten Load-Balancing-Node verwenden möchten.
 * Wenn Sie eine SG1100-Quell-Node-Appliance durch eine SG110-Services-Ziel-Appliance ersetzen, wird die maximale Geschwindigkeit der Netzwerk-Ports von 100 GbE auf 25 GbE reduziert.
 
+
+Das Klonen von Knoten von einer SG1100-Quellknoten-Appliance ohne Knotenverschlüsselung auf ein SG1100-Appliance-Ziel mit Knotenverschlüsselung wird nicht unterstützt.
 
 
 
@@ -173,6 +177,12 @@ Sie können eine SG5860-Appliance erfolgreich als Quelle oder Ziel mit einigen E
 * Eine SG6060-Quell-Node-Appliance kann ohne Erweiterungs-Shelfs auf eine SG6160 Storage-Ziel-Appliance ohne Erweiterungs-Shelfs geklont werden, wenn die Laufwerkgrößen und der RAID-Modus identisch sind.
 * Eine SG6060 Quell-Node-Appliance mit einer beliebigen Anzahl an Erweiterungs-Shelfs _kann nicht_ in eine SG6160 Storage-Ziel-Appliance geklont werden, selbst wenn die Anzahl der Erweiterungs-Shelfs, Laufwerkgrößen und RAID-Modi identisch ist.
 
+
+
+
+=== Informationen und Einschränkungen zum Klonen von SGF6112-Geräten
+
+Das Klonen von Knoten von einer SGF6112-Quellknoten-Appliance ohne Knotenverschlüsselung auf ein SGF6112-Appliance-Ziel mit Knotenverschlüsselung wird nicht unterstützt.
 
 
 

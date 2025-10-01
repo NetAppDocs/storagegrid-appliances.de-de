@@ -54,9 +54,42 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 
 CAUTION: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
 
-.. Entfernen Sie den fehlerhaften Controller aus dem Schrank oder Rack.
-.. Setzen Sie den Ersatzcontroller in den Schrank oder Rack ein.
-.. Ersetzen Sie die Kabel.
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Entfernen Sie den ausgefallenen Controller aus dem Schrank oder Rack"] .
+.. Notieren Sie die Position der austauschbaren Komponenten (zwei Netzteile, drei NICs und zwei SSDs) im ausgefallenen Controller.
++
+Die beiden Laufwerke befinden sich in den folgenden Positionen im Gehäuse (Vorderseite des Gehäuses mit entfernter Blende):
+
++
+image::../media/sg6100cn_ssds_locations.png[Laufwerkpositionen]
+
++
+|===
+|  | Laufwerk 
+
+
+ a| 
+1
+ a| 
+HDD00
+
+
+
+ a| 
+2
+ a| 
+HDD01
+
+|===
+.. Übertragen Sie die austauschbaren Komponenten auf den Ersatzcontroller.
++
+Befolgen Sie die Wartungsanweisungen, um die austauschbaren Komponenten wieder einzusetzen.
+
++
+
+CAUTION: Wenn Sie die Daten auf den Laufwerken behalten möchten, setzen Sie die SSD-Laufwerke in dieselben Laufwerkssteckplätze ein, die sie im ausgefallenen Gerät belegt haben.  Wenn Sie dies nicht tun, zeigt das Appliance-Installationsprogramm eine Warnung an und Sie müssen die Laufwerke in die richtigen Steckplätze einsetzen und den Controller neu starten, bevor der Controller wieder dem Grid beitreten kann.
+
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Installieren Sie den Ersatzcontroller im Schrank oder Rack"] .
+.. Ersetzen Sie die Kabel und optische Transceiver.
 .. Schalten Sie den Controller ein und überwachen Sie die Controller-LEDs.
 
 

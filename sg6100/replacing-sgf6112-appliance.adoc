@@ -60,7 +60,7 @@ NOTE: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen,
 Die zwölf Laufwerke befinden sich in den folgenden Positionen im Gehäuse (Vorderseite des Gehäuses mit entfernter Blende):
 
 +
-image::../media/sgf6112_ssds_locations.png[Lüfterpositionen]
+image::../media/sgf6112_ssds_locations.png[Laufwerkpositionen]
 
 +
 |===
@@ -156,7 +156,7 @@ Befolgen Sie die Wartungsanweisungen, um die austauschbaren Komponenten wieder e
 
 +
 
-CAUTION: Wenn Sie die Daten auf den Laufwerken aufbewahren möchten, müssen Sie die SSD-Laufwerke in die gleichen Laufwerkschächte einsetzen, die sie in der ausgefallenen Appliance belegt haben. Andernfalls zeigt der Appliance Installer eine Warnmeldung an, und Sie müssen die Laufwerke in die richtigen Steckplätze stecken und die Appliance neu starten, bevor die Appliance wieder in das Raster eingesetzt werden kann.
+CAUTION: Wenn Sie die Daten auf den Laufwerken behalten möchten, setzen Sie die SSD-Laufwerke in dieselben Laufwerkssteckplätze ein, die sie im ausgefallenen Gerät belegt haben.  Wenn Sie dies nicht tun, zeigt das Appliance-Installationsprogramm eine Warnung an und Sie müssen die Laufwerke in die richtigen Steckplätze einsetzen und die Appliance neu starten, bevor sie wieder dem Netz beitreten kann.
 
 .. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Setzen Sie das Ersatzgerät in den Schrank oder das Rack ein"].
 .. Ersetzen Sie die Kabel und optische Transceiver.

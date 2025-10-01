@@ -17,6 +17,8 @@ indexpage:
       url: "../sg6000/changing-link-configuration-of-sg6000-cn-controller.html"
     - title: Upgrade von SANtricity
       url: "../sg6000/upgrading-santricity-os-on-storage-controllers.html"
+    - title: Aktualisieren Sie die Laufwerksfirmware (automatische Neustartmethode)
+      url: "../sg6000/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Upgrade der Laufwerk-Firmware (Online-Methode)
       url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager-online.html"
     - title: Upgrade der Laufwerk-Firmware (Offline-Methode)
@@ -43,5 +45,7 @@ indexpage:
       url: "../sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
     - title: Fibre-Channel-HBA austauschen
       url: "../sg6000/reinstalling-fibre-channel-hba.html"
+    - title: Controllerlüfter ersetzen
+      url: "../sg6000/replacing-fan-in-sg6000cn.html"
     - title: Ersetzen Sie die CMOS-Batterie
       url: "../sg6000/replace-cmos-in-sg6000cn.html"

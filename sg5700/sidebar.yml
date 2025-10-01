@@ -18,8 +18,11 @@ entries:
     - title: Aktualisieren Sie SANtricity OS auf einem E2800 Controller mithilfe des
         Wartungsmodus
       url: "/sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html"
-  - title: Aktualisieren Sie die Laufwerk-Firmware mit SANtricity System Manager
+  - title: Aktualisieren Sie die Laufwerksfirmware
     entries:
+    - title: Automatisches Upgrade der SG5700-Laufwerksfirmware während des Neustarts
+        der Appliance
+      url: "/sg5700/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Aktualisieren Sie die Laufwerk-Firmware mithilfe von SANtricity System
         Manager und verwenden Sie die Online-Methode
       url: "/sg5700/upgrading-drive-firmware-using-santricity-system-manager-online.html"

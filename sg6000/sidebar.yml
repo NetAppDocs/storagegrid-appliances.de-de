@@ -17,8 +17,11 @@ entries:
       url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html"
     - title: Aktualisieren Sie das SANtricity OS auf Storage Controllern mit dem Wartungsmodus
       url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html"
-  - title: Aktualisieren Sie die Laufwerk-Firmware mit SANtricity System Manager
+  - title: Aktualisieren Sie die Laufwerksfirmware
     entries:
+    - title: Automatisches Upgrade der SG6000-Laufwerksfirmware während des Neustarts
+        der Appliance
+      url: "/sg6000/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Aktualisieren Sie die Firmware des SG6000 Laufwerks mithilfe von SANtricity
         System Manager über die Online-Methode
       url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager-online.html"
@@ -53,6 +56,8 @@ entries:
     url: "/sg6000/replacing-sg6000-cn-controller.html"
   - title: Tauschen Sie ein oder beide Netzteile im SG6000-CN Controller aus
     url: "/sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
+  - title: Ersetzen Sie den Lüfter
+    url: "/sg6000/replacing-fan-in-sg6000cn.html"
   - title: Ersetzen Sie die CMOS-Batterie im SG6000-CN-Controller
     url: "/sg6000/replace-cmos-in-sg6000cn.html"
   - title: Controller im Rack austauschen

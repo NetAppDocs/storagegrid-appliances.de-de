@@ -38,6 +38,9 @@ Leere Konfigurationsdatei für die Verwendung mit dem Skript
 * Sie haben ein erstellt `configure-storagegrid.json` Konfigurationsdatei Um diese Datei zu erstellen, können Sie die Beispielkonfigurationsdatei ändern (`configure-storagegrid.sample.json`) Oder die leere Konfigurationsdatei (`configure-storagegrid.blank.json`).
 
 
+
+CAUTION: Speichern Sie das Verwaltungskennwort und die Bereitstellungspassphrase aus dem Kennwortbereich des geänderten `configure-storagegrid.json` Konfigurationsdatei an einem sicheren Ort.  Diese Passwörter werden für Installations-, Erweiterungs- und Wartungsvorgänge benötigt.  Sie sollten auch die geänderten `configure-storagegrid.json` Konfigurationsdatei und speichern Sie sie an einem sicheren Ort.
+
 .Über diese Aufgabe
 Sie können das verwenden `configure-storagegrid.py` Python-Skript und das `configure-storagegrid.json` Konfigurationsdatei zur automatischen Konfiguration des StorageGRID Systems
 

@@ -78,21 +78,15 @@ Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
 
 . Wählen Sie *Hardware konfigurieren* > *BMC-Konfiguration*.
 +
-image::../media/bmc_configuration_page.gif[Screenshot mit der Option „Erweitert“ > „BMC-Konfiguration“]
-
-+
 Die Seite Baseboard Management Controller Configuration wird angezeigt.
 
-. Notieren Sie sich die automatisch angezeigte IPv4-Adresse.
+. Notieren Sie sich in den LAN-IP-Einstellungen die automatisch angezeigte IPv4-Adresse.
 +
 DHCP ist die Standardmethode zum Zuweisen einer IP-Adresse zu diesem Port.
 
 +
 
 NOTE: Es kann einige Minuten dauern, bis die DHCP-Werte angezeigt werden.
-
-+
-image::../media/bmc_configuration_dhcp_address.gif[Konfigurationsseite für Untergeschoss Management Controller mit DHCP-Adresse]
 
 . Legen Sie optional eine statische IP-Adresse für den BMC-Verwaltungsport fest.
 +
@@ -103,9 +97,6 @@ NOTE: Sie sollten entweder eine statische IP für den BMC-Verwaltungsport zuweis
 .. Wählen Sie *Statisch*.
 .. Geben Sie die IPv4-Adresse unter Verwendung der CIDR-Schreibweise ein.
 .. Geben Sie das Standard-Gateway ein.
-+
-image::../media/bmc_configuration_static_ip.gif[Die statische Option für die Konfiguration des Baseboard-Management-Controllers]
-
 .. Klicken Sie Auf *Speichern*.
 +
 Es kann einige Minuten dauern, bis Ihre Änderungen angewendet werden.

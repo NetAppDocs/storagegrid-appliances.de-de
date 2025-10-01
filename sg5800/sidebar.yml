@@ -17,8 +17,11 @@ entries:
       url: "/sg5800/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html"
     - title: Upgrade von SANtricity OS auf E4000 Controller im Wartungsmodus
       url: "/sg5800/upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html"
-  - title: Aktualisieren Sie die Laufwerk-Firmware mit SANtricity System Manager
+  - title: Aktualisieren Sie die Laufwerksfirmware
     entries:
+    - title: Automatisches Upgrade der SG5800-Laufwerksfirmware während des Neustarts
+        der Appliance
+      url: "/sg5800/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Aktualisieren Sie die Firmware des SG5800 Laufwerks mithilfe der Online-Methode
         von SANtricity System Manager
       url: "/sg5800/upgrading-drive-firmware-using-santricity-system-manager-online.html"

@@ -4,7 +4,7 @@ permalink: whats-new-appliances.html
 keywords: storagegrid, appliance, whats new 
 summary: Erfahren Sie mehr über die Neuerungen auf dieser Dokumentseite. 
 ---
-= Neuerungen bei Appliances
+= Was ist neu bei StorageGRID -Geräten?
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,28 +14,40 @@ summary: Erfahren Sie mehr über die Neuerungen auf dieser Dokumentseite.
 
 
 [role="lead"]
-Informieren Sie sich über die Neuerungen bei StorageGRID Appliances.
+Erfahren Sie, was es Neues bei StorageGRID -Geräten gibt.
+
+
+
+== Client-Netzwerk kann ohne IP-Adresse konfiguriert werden
+
+Sie können das Client-Netzwerk jetzt aktivieren, ohne eine IP-Adresse anzugeben.  Dadurch können im Client-Netzwerk VLAN-Schnittstellen in StorageGRID konfiguriert werden, ohne dass für die Schnittstelle selbst eine zusätzliche IP-Adresse erforderlich ist. Weitere Informationen finden Sie unter link:.//installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"] .
+
+
+
+== Versionsnummern für StorageGRID -Software und Appliance Installer angepasst
+
+Bei StorgeGRID Version 12.0 entspricht die Versionsnummer des StorageGRID Appliance Installer der Version der StorageGRID -Software.  Benutzer müssen nicht mehr herausfinden, welche Versionen zusammenarbeiten. Weitere Informationen finden Sie unter link:./installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html["Überprüfen und Aktualisieren der Installationsversion der StorageGRID Appliance"] .
 
 
 
 == BMC-Informationen
 
-Detaillierte Informationen zur Verwendung der BMC-Schnittstelle der StorageGRID Appliance sind jetzt verfügbar. Siehe link:./commonhardware/use-bmc.html["Verwenden des Baseboard Management Controllers (BMC) der StorageGRID Appliance"].
+Detaillierte Informationen zur Verwendung der BMC -Schnittstelle der StorageGRID Appliance sind jetzt verfügbar. Weitere Informationen finden Sie unter link:./commonhardware/use-bmc.html["Verwenden des Baseboard Management Controllers (BMC) der StorageGRID Appliance"] .
 
 
 
 == SG5812 und SG5860 Appliances
 
-Die neuen StorageGRID Appliances SG5812 und SG5860 sind integrierte Storage- und Computing-Plattformen, die als Storage-Nodes in einem StorageGRID Grid betrieben werden. Weitere Informationen finden Sie unterlink:./installconfig/hardware-description-sg5800.html["SG5800 Appliances: Überblick"].
+Die StorageGRID SG5812- und SG5860-Geräte sind integrierte Speicher- und Computerplattformen, die als Speicherknoten in einem StorageGRID -Grid fungieren.  Weitere Informationen finden Sie imlink:./installconfig/hardware-description-sg5800.html["SG5800 Appliances: Überblick"] um mehr zu erfahren.
 
 
 
 == SG6160 Appliance
 
-Die neue StorageGRID SG6160 Appliance umfasst einen Computing-Controller und ein Storage-Controller-Shelf mit zwei Storage-Controllern und 60 Laufwerken sowie zwei NVMe-SSD-Laufwerke für das Caching. Optional können der SG6160 auch Erweiterungs-Shelfs mit 60 Laufwerken hinzugefügt werden. Weitere Informationen finden Sie unterlink:./installconfig/hardware-description-sg6100.html["SGF6100 Appliances: Überblick"].
+Das neue StorageGRID SG6160-Gerät umfasst einen Compute-Controller und ein Storage-Controller-Shelf, das zwei Storage-Controller und 60 Laufwerke sowie zwei NVMe-SSD-Laufwerke für das Caching enthält.  Optional können dem SG6160 Erweiterungsgehäuse für 60 Laufwerke hinzugefügt werden.  Siehelink:./installconfig/hardware-description-sg6100.html["SGF6100 Appliances: Überblick"] um mehr zu erfahren.
 
 
 
 == Service Appliances für SG110 und SG1100
 
-Die neuen Service-Appliances StorageGRID SG110 und SG1100 sind ein evolutionäres Hardware-Update, das eine verbesserte Verwaltungs- und Load-Balancing-Performance bietet. Siehe link:./installconfig/hardware-description-sg110-and-1100.html["SG110 und SG1100 Services Appliance: Überblick"].
+Die neuen StorageGRID SG110- und SG1100-Service-Appliances sind ein evolutionäres Hardware-Update, das eine verbesserte Verwaltungs- und Lastausgleichsleistung bietet. Weitere Informationen finden Sie unter link:./installconfig/hardware-description-sg110-and-1100.html["SG110 und SG1100 Services Appliance: Überblick"] .

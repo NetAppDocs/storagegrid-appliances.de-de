@@ -23,10 +23,7 @@ Das Installationsprogramm von StorageGRID Appliance wird automatisch aktualisier
 
 .Schritte
 . Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* > *Firmware aktualisieren* aus.
-. Vergleichen Sie die aktuelle Firmware-Version mit der auf Ihrem StorageGRID System installierten Softwareversion. (Wählen Sie oben im Grid Manager das Hilfesymbol aus, und wählen Sie *über*.)
-+
-Die zweite Ziffer in den beiden Versionen sollte übereinstimmen. Wenn auf Ihrem StorageGRID-System beispielsweise die Version 11.*6*._x_._y_ ausgeführt wird, sollte die StorageGRID Appliance Installer-Version 3.*6*._z_ sein.
-
+. Stellen Sie sicher, dass die aktuelle Firmware-Version mit der auf Ihrem StorageGRID System installierten Softwareversion übereinstimmt.  (Wählen Sie oben im Grid Manager das Hilfesymbol und dann *Info* aus.)
 . Wenn die Appliance über eine heruntergeebene Version des Installationsprogramms für StorageGRID-Geräte verfügt, fahren Sie mit fort https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^].
 +
 Melden Sie sich mit Ihrem Benutzernamen und Passwort für Ihr NetApp Konto an.

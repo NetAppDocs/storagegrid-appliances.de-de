@@ -817,7 +817,7 @@ Blinkt grün: Es gibt Ethernet-Aktivität.
 
 
 .Verwandte Informationen
-link:https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
+https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
 
 --
 .SG6000

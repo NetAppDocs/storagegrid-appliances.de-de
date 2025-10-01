@@ -77,7 +77,7 @@ image::../media/fan_removal.png[Ausbau Des Lüfters]
 
 . Schieben Sie den Ersatzlüfter in den offenen Steckplatz des Gehäuses.
 +
-Stellen Sie sicher, dass der Anschluss am Lüfter an der Buchse in der Platine ausgerichtet ist.
+Richten Sie den Stecker am Lüfter mit der Buchse auf der Platine aus.
 
 . Drücken Sie den Lüfteranschluss fest in die Platine (Buchse hervorgehoben).
 +

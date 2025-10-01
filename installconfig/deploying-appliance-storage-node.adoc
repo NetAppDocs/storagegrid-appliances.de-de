@@ -17,6 +17,10 @@ Nach der Installation und Konfiguration der Storage Appliance können Sie sie al
 * Wenn Sie einen Appliance-Node klonen, fahren Sie mit fort link:../commonhardware/appliance-node-cloning-procedure.html["Klonen von Appliance-Nodes"] Prozess.
 * Das Gerät wurde in einem Rack oder Schrank installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
 * Mithilfe des Installationsprogramms der StorageGRID Appliance wurden Netzwerkverbindungen, IP-Adressen und (falls erforderlich) die Port-Neuzuordnung für die Appliance konfiguriert.
++
+
+NOTE: Die Unterstützung für die Neuzuordnung von Ports ist veraltet und wird in einer zukünftigen Version entfernt.  Informationen zum Entfernen neu zugeordneter Ports finden Sie unter https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Entfernen Sie Port-Neuzuordnungen auf StorageGRID -Geräten"^] .
+
 * Sie kennen eine der IP-Adressen, die dem Computing-Controller der Appliance zugewiesen sind. Sie können die IP-Adresse für jedes angeschlossene StorageGRID-Netzwerk verwenden.
 * Der primäre Admin-Node für das StorageGRID System wurde bereitgestellt.
 * Alle Grid-Subnetze, die auf der Seite IP-Konfiguration des Installationsprogramms für StorageGRID-Geräte aufgeführt sind, wurden in der Netznetzwerksubnetz-Liste auf dem primären Admin-Node definiert.
@@ -57,7 +61,7 @@ NOTE: Nur Metadaten können nur während der Appliance-Bereitstellung ausgewähl
 
 . Geben Sie im Feld *Node Name* den Systemnamen ein, den Sie für diesen Appliance-Knoten verwenden möchten, und klicken Sie auf *Save*.
 +
-Der Name, der hier angezeigt wird, ist der Systemname des Appliance-Node. Systemnamen sind für interne StorageGRID-Vorgänge erforderlich und können nicht geändert werden.
+Der hier angezeigte Name ist der Systemname des Appliance-Knotens.  Systemnamen sind für interne StorageGRID -Vorgänge erforderlich und können nicht geändert werden.  Informationen zum Ändern des Anzeigenamens eines Appliance-Knotens finden Sie unter https://docs.netapp.com/us-en/storagegrid/maintain/rename-grid-site-node.html#how-to-rename-grid-sites-or-nodes["So benennen Sie Raster, Sites oder Knoten um"^] .
 
 . Legen Sie im Abschnitt * Primary Admin Node Connection* fest, ob Sie die IP-Adresse für den primären Admin Node angeben müssen.
 +

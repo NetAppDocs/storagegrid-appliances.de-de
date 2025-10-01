@@ -11,14 +11,14 @@ summary: Sie verwenden das Installationsprogramm der StorageGRID-Appliance, um d
 
 
 [role="lead"]
-Sie verwenden das Installationsprogramm der StorageGRID-Appliance, um die IP-Adressen und Routinginformationen zu konfigurieren, die für die Service-Appliance oder den Speicher-Node der Appliance im StorageGRID-Grid-, Administrator- und Client-Netzwerk verwendet werden.
+Verwenden Sie den StorageGRID Appliance Installer, um IP-Adressen und Routing für die Service-Appliance oder den Storage Node in den Grid-, Admin- und Client-Netzwerken zu konfigurieren.
 
 Wenn Sie mit ConfigBuilder eine JSON-Datei erstellen, können Sie IP-Adressen automatisch konfigurieren. Siehe link:automating-appliance-installation-and-configuration.html["Automatisierung der Appliance-Installation und -Konfiguration"].
 
 .Über diese Aufgabe
-Sie müssen entweder auf jedem verbundenen Netzwerk eine statische IP-Adresse für das Gerät zuweisen oder einen permanenten Leasing für die Adresse des DHCP-Servers zuweisen.
+Sie müssen dem Gerät entweder in jedem verbundenen Grid oder Admin-Netzwerk eine statische IP-Adresse zuweisen oder der Adresse auf dem DHCP-Server eine permanente Lease zuweisen.  Für ein verbundenes Client-Netzwerk ist die Konfiguration einer statischen IP-Adresse oder DHCP optional.
 
-Informationen zum Ändern der Verbindungskonfiguration finden Sie in den folgenden Anweisungen:
+Um einen Link zu aktivieren oder zu deaktivieren oder die Linkkonfiguration zu ändern, befolgen Sie die folgenden Anweisungen:
 
 * link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Ändern der Link-Konfiguration der Service-Appliance SG100 oder SG1000"]
 * link:../sg110-1100/changing-link-configuration-of-sg110-and-sg1100-appliance.html["Ändern der Verbindungskonfiguration der Service-Appliance SG110 oder SG1100"]
@@ -53,9 +53,14 @@ Verwenden Sie beispielsweise nicht die folgenden Subnetzbereiche für das Grid-N
 +
 Die Seite IP-Konfiguration wird angezeigt.
 
-. Um das Grid-Netzwerk zu konfigurieren, wählen Sie entweder *statisch* oder *DHCP* im Abschnitt *Grid Network* der Seite aus.
-. Wenn Sie *statisch* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Grid-Netzwerk zu konfigurieren:
+. Um das Grid-Netzwerk zu konfigurieren, wählen Sie im Abschnitt *Grid-Netzwerk* der Seite entweder *Statisch* oder *DHCP* und geben Sie dann Ihre Netzwerkeinstellungen ein.
 +
+[role="tabbed-block"]
+====
+.Statisch
+--
+Wenn Sie *statisch* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Grid-Netzwerk zu konfigurieren:
+
 .. Geben Sie die statische IPv4-Adresse unter Verwendung von CIDR-Notation ein.
 .. Geben Sie das Gateway ein.
 +
@@ -84,18 +89,20 @@ Wenn Sie Grid-Subnetze haben, ist das Grid-Netzwerk-Gateway erforderlich. Alle a
 
 +
 
-NOTE: Die Standardroute wird nicht aufgeführt. Wenn das Client-Netzwerk nicht aktiviert ist, verwendet die Standardroute das Grid-Netzwerk-Gateway.
+NOTE: Wenn das Client-Netzwerk nicht aktiviert ist, verwendet die Standardroute das Grid-Netzwerk-Gateway.
 
 +
 *** Um ein Subnetz hinzuzufügen, klicken Sie auf das Symbol Einfügen image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"]rechts neben dem letzten Eintrag.
 *** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Symbol Löschen image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
 
 
-.. Klicken Sie Auf *Speichern*.
 
 
-. Wenn Sie *DHCP* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Grid-Netzwerk zu konfigurieren:
-+
+--
+.DHCP
+--
+Wenn Sie *DHCP* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Grid-Netzwerk zu konfigurieren:
+
 .. Nachdem Sie das Optionsfeld *DHCP* aktiviert haben, klicken Sie auf *Speichern*.
 +
 Die Felder *IPv4 Address*, *Gateway* und *Subnets* werden automatisch ausgefüllt. Wenn der DHCP-Server so konfiguriert ist, dass er einen MTU-Wert zuweist, wird das Feld *MTU* mit diesem Wert ausgefüllt, und das Feld ist schreibgeschützt.
@@ -109,7 +116,7 @@ Wenn Sie Grid-Subnetze haben, ist das Grid-Netzwerk-Gateway erforderlich. Alle a
 
 +
 
-NOTE: Die Standardroute wird nicht aufgeführt. Wenn das Client-Netzwerk nicht aktiviert ist, verwendet die Standardroute das Grid-Netzwerk-Gateway.
+NOTE: Wenn das Client-Netzwerk nicht aktiviert ist, verwendet die Standardroute das Grid-Netzwerk-Gateway.
 
 +
 *** Um ein Subnetz hinzuzufügen, klicken Sie auf das Symbol Einfügen image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"]rechts neben dem letzten Eintrag.
@@ -128,19 +135,23 @@ NOTE: Für die beste Netzwerkleistung sollten alle Knoten auf ihren Grid Network
 .. Klicken Sie Auf *Speichern*.
 
 
-. Um das Admin-Netzwerk zu konfigurieren, wählen Sie im Abschnitt *Admin-Netzwerk* der Seite entweder *statisch* oder *DHCP* aus.
+--
+====
+. Um das Admin-Netzwerk zu konfigurieren, wählen Sie im Abschnitt *Admin-Netzwerk* der Seite entweder *Statisch* oder *DHCP* und geben Sie dann Ihre Netzwerkeinstellungen ein.
 +
 
 NOTE: Um das Admin-Netzwerk zu konfigurieren, aktivieren Sie das Admin-Netzwerk auf der Seite Verbindungskonfiguration.
 
 +
-image::../media/admin_network_static.png[Admin-Netzwerk-IP]
+[role="tabbed-block"]
+====
+.Statisch
+--
+Wenn Sie *statisch* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Admin-Netzwerk zu konfigurieren:
 
-. Wenn Sie *statisch* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Admin-Netzwerk zu konfigurieren:
-+
 .. Geben Sie die statische IPv4-Adresse mit CIDR-Schreibweise für Management-Port 1 auf dem Gerät ein.
 +
-Management-Port 1 befindet sich links von den beiden 1-GbE-RJ45-Ports am rechten Ende der Appliance.
+Sehenlink:../installconfig/cabling-appliance.html["Kabelgerät"] für den Standort des Verwaltungsports 1 auf Ihrem Gerät.
 
 .. Geben Sie das Gateway ein.
 +
@@ -172,11 +183,13 @@ NOTE: Die Standardroute kann nicht für die Verwendung des Admin-Netzwerk-Gatewa
 *** Um ein nicht verwendetes Subnetz zu entfernen, klicken Sie auf das Symbol Löschen image:../media/icon_nms_delete_new.gif["Symbol Löschen"].
 
 
-.. Klicken Sie Auf *Speichern*.
 
 
-. Wenn Sie *DHCP* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Admin-Netzwerk zu konfigurieren:
-+
+--
+.DHCP
+--
+Wenn Sie *DHCP* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Admin-Netzwerk zu konfigurieren:
+
 .. Nachdem Sie das Optionsfeld *DHCP* aktiviert haben, klicken Sie auf *Speichern*.
 +
 Die Felder *IPv4 Address*, *Gateway* und *Subnets* werden automatisch ausgefüllt. Wenn der DHCP-Server so konfiguriert ist, dass er einen MTU-Wert zuweist, wird das Feld *MTU* mit diesem Wert ausgefüllt, und das Feld ist schreibgeschützt.
@@ -205,16 +218,20 @@ CAUTION: Der MTU-Wert des Netzwerks muss mit dem Wert übereinstimmen, der auf d
 .. Klicken Sie Auf *Speichern*.
 
 
-. Um das Client-Netzwerk zu konfigurieren, wählen Sie entweder *statisch* oder *DHCP* im Abschnitt *Client-Netzwerk* der Seite aus.
+--
+====
+. Um das Client-Netzwerk zu konfigurieren, wählen Sie im Abschnitt *Client-Netzwerk* der Seite entweder *Statisch*, *DHCP* oder *Keine* und geben Sie dann Ihre Netzwerkeinstellungen ein.
 +
 
-NOTE: Um das Client-Netzwerk zu konfigurieren, aktivieren Sie das Client-Netzwerk auf der Seite Verbindungskonfiguration.
+NOTE: Um das Client-Netzwerk zu konfigurieren, stellen Sie sicher, dass das Client-Netzwerk auf der Seite „Link-Konfiguration“ aktiviert ist.
 
 +
-image::../media/client_network_static.png[Client-Netzwerk-IP]
+[role="tabbed-block"]
+====
+.Statisch
+--
+Wenn Sie *statisch* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Client-Netzwerk zu konfigurieren:
 
-. Wenn Sie *statisch* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Client-Netzwerk zu konfigurieren:
-+
 .. Geben Sie die statische IPv4-Adresse unter Verwendung von CIDR-Notation ein.
 .. Klicken Sie Auf *Speichern*.
 .. Vergewissern Sie sich, dass die IP-Adresse für das Client-Netzwerk-Gateway korrekt ist.
@@ -230,8 +247,11 @@ CAUTION: Der MTU-Wert des Netzwerks muss mit dem Wert übereinstimmen, der auf d
 .. Klicken Sie Auf *Speichern*.
 
 
-. Wenn Sie *DHCP* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Client-Netzwerk zu konfigurieren:
-+
+--
+.DHCP
+--
+Wenn Sie *DHCP* ausgewählt haben, führen Sie die folgenden Schritte aus, um das Client-Netzwerk zu konfigurieren:
+
 .. Nachdem Sie das Optionsfeld *DHCP* aktiviert haben, klicken Sie auf *Speichern*.
 +
 Die Felder *IPv4 Address* und *Gateway* werden automatisch ausgefüllt. Wenn der DHCP-Server so konfiguriert ist, dass er einen MTU-Wert zuweist, wird das Feld *MTU* mit diesem Wert ausgefüllt, und das Feld ist schreibgeschützt.
@@ -251,4 +271,11 @@ CAUTION: Der MTU-Wert des Netzwerks muss mit dem Wert übereinstimmen, der auf d
 
 
 
+--
+.Keine
+--
+Wählen Sie *Keine*, um das Client-Netzwerk ohne Angabe einer IP-Adresse zu aktivieren.  Das Client-Netzwerk benötigt für den direkten Zugriff lediglich eine IP-Adresse.  Durch Aktivieren des Client-Netzwerks ohne IP-Adresse können Sie die VLAN-Schnittstellen des Client-Netzwerks in StorageGRID konfigurieren.
+
+--
+====
 

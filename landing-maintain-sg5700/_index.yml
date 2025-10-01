@@ -11,6 +11,8 @@ indexpage:
       url: "../sg5700/changing-link-configuration-of-e5700sg-controller.html"
     - title: Upgrade von SANtricity
       url: "../sg5700/upgrading-santricity-os-on-storage-controller.html"
+    - title: Aktualisieren Sie die Laufwerksfirmware (automatische Neustartmethode)
+      url: "../sg5700/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Upgrade der Laufwerk-Firmware (Online-Methode)
       url: "../sg5700/upgrading-drive-firmware-using-santricity-system-manager-online.html"
     - title: Upgrade der Laufwerk-Firmware (Offline-Methode)

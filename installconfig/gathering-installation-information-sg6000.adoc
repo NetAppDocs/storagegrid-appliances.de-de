@@ -552,7 +552,6 @@ Der Port auf der linken Seite ist mit dem Admin-Netzwerk verbunden. Der Anschlus
 .Verwandte Informationen
 * link:../installconfig/hardware-description-sg6000.html#sg6000-controllers["SG6000 Controller"]
 * link:../installconfig/reviewing-appliance-network-connections.html["Appliance-Netzwerkverbindungen ermitteln"]
-* link:../installconfig/gathering-installation-information-sg6000.html#port-bond-modes["Port-Bond-Modi (SG6000-CN-Controller)"]
 * link:cabling-appliance.html["Kabelgerät"]
 * link:../installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"]
 

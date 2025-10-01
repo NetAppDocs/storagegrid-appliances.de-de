@@ -14,6 +14,9 @@ summary: Vor dem Klonen eines Appliance-Nodes müssen Sie die Überlegungen und 
 Vor dem Klonen eines Appliance-Nodes müssen Sie die Überlegungen und Anforderungen verstehen.
 
 
+TIP: Knotenklonen ist für Gateway-Knoten deaktiviert.  Um einen Gateway-Knoten zu ersetzen, nehmen Sie ihn außer Betrieb und führen Sie dann eine Erweiterung durch, um einen neuen Appliance-Gateway-Knoten hinzuzufügen.  Der Außerbetriebnahme- und Erweiterungsvorgang ist bei einem Gateway-Knoten viel schneller als bei einem Speicherknoten.
+
+
 
 == Hardwareanforderungen für die Ersatz-Appliance
 
@@ -21,11 +24,11 @@ Stellen Sie sicher, dass das Ersatzgerät die folgenden Kriterien erfüllt:
 
 * Der Quell-Node (eine Appliance, die ersetzt wird) und das Ziel-Appliance müssen denselben Appliance-Typ sein:
 +
-** Sie können eine Admin-Node-Appliance oder eine Gateway-Node-Appliance nur auf einer neuen Services-Appliance klonen.
+** Sie können eine Admin Node-Appliance nur auf eine neue Service-Appliance klonen.
 ** Sie können eine Storage-Node-Appliance nur auf einer neuen Storage Appliance klonen.
 
 
-* Bei Admin-Node- oder Gateway-Node-Appliances müssen die Quell-Node-Appliance und die Ziel-Appliance nicht das gleiche Appliance-Modell sein. Ein Ändern des Appliance-Modells erfordert jedoch möglicherweise den Austausch der Kabel oder SFP-Module.
+* Bei einer Admin-Node-Appliance müssen die Quellknoten-Appliance und die Ziel-Appliance nicht dasselbe Appliance-Modell aufweisen. Allerdings kann eine Änderung des Appliance-Modells den Austausch der Kabel oder SFP-Module erfordern.
 +
 Sie können beispielsweise eine SG1000-Node-Appliance durch ein SG100 ersetzen oder eine SG100-Appliance durch eine SG1000-Appliance ersetzen.
 
@@ -37,7 +40,7 @@ Beispielsweise kann eine SG5700 Node Appliance durch eine SG6000 Appliance erset
 
 ** Die Ziel-Appliance muss eine gleiche oder größere Anzahl von Objekt-Storage-Volumes aufweisen als die Quell-Appliance.
 +
-Beispielsweise können Sie eine SG6000 Node-Appliance (16 Objektspeicher-Volumes) nicht durch eine SGF6112-Appliance (12 Objektspeicher-Volumes) ersetzen.
+Sie können beispielsweise eine SG6000-Knoten-Appliance (16 Objektspeicher-Volumes) nicht durch eine SGF6112-Appliance (12 Objektspeicher-Volumes) ersetzen.
 
 
 
@@ -60,9 +63,18 @@ Temporäre IP-Adressen befinden sich normalerweise im selben Subnetz wie die zu 
 
 NOTE: Die Verwendung des 1-GbE-Admin-Netzwerks für die Übertragung von Klondaten führt zu langsamerem Klonen.
 
-* Ermitteln, ob die Node-Verschlüsselung mithilfe eines Verschlüsselungsmanagement-Servers (KMS) auf der Ziel-Appliance verwendet wird, damit die Node-Verschlüsselung während der Erstinstallation der Ziel-Appliance vor dem Klonen aktiviert werden kann. Sie können prüfen, ob die Knotenverschlüsselung auf dem Quell-Appliance-Node aktiviert ist, wie in beschrieben link:../installconfig/optional-enabling-node-encryption.html["Aktivieren der Node-Verschlüsselung"].
+* Bestimmen Sie, ob Sie die Knotenverschlüsselung mithilfe eines Schlüsselverwaltungsservers (KMS) auf dem Zielgerät verwenden, sodass Sie die Knotenverschlüsselung während der Erstinstallation des Zielgeräts vor dem Klonen aktivieren können.  Sie können überprüfen, ob die Knotenverschlüsselung auf dem Quell-Appliance-Knoten aktiviert ist, wie im Abschnittlink:../installconfig/optional-enabling-node-encryption.html["Aktivieren der Node-Verschlüsselung"] .
 +
-Der Quell- und die Ziel-Appliance können unterschiedliche Node-Verschlüsselungseinstellungen aufweisen. Die Entschlüsselung und Verschlüsselung der Daten erfolgt automatisch während des Datentransfers und beim Neustart des Ziel-Nodes und Beitritt zum Grid.
+Der Quellknoten und das Zielgerät können mit den folgenden Ausnahmen unterschiedliche Knotenverschlüsselungseinstellungen haben.  Das Klonen von Knoten von unverschlüsselten Knotenquellen auf knotenverschlüsselte Ziele wird für die folgenden Appliances nicht unterstützt:
+
++
+** Eine SGF6112-Knoten-Appliance ohne Knotenverschlüsselung zu einer SGF6112-Appliance mit Knotenverschlüsselung
+** Eine SG1100-Knoten-Appliance ohne Knotenverschlüsselung zu einer SG1100-Appliance mit Knotenverschlüsselung
+** Eine SG110-Knoten-Appliance ohne Knotenverschlüsselung zu einer SG110-Appliance mit Knotenverschlüsselung
+
+
++
+Die Entschlüsselung und Verschlüsselung der Daten erfolgt automatisch während der Datenübertragung und wenn der Zielknoten neu gestartet wird und sich dem Grid anschließt.
 
 * Ermitteln Sie, ob der RAID-Modus auf der Ziel-Appliance von der Standardeinstellung geändert werden soll, damit Sie diese Informationen bei der Erstinstallation der Ziel-Appliance vor dem Klonen angeben können. Auf der Seite *NODES* im Grid Manager können Sie Informationen zum aktuellen RAID-Modus des Quell-Appliance-Knotens anzeigen. Wählen Sie die Registerkarte *Hardware* für das Gerät aus.
 +

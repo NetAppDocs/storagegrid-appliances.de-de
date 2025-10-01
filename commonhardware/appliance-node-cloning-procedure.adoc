@@ -40,9 +40,6 @@ Sie sollten jeweils nur einen Appliance-Node klonen, um die Netzwerk-Performance
 +
 Der Abschnitt primäre Admin-Node-Verbindung wird durch den Abschnitt „Verbindung zum Ziel-Node klonen“ ersetzt.
 
-+
-image::../media/clone_peer_node_connection_section.png[Abschnitt „Verbindung des Ziel-Node klonen“]
-
 . Geben Sie für *Zielknoten-IP* die temporäre IP-Adresse ein, die dem Zielknoten zugewiesen ist, das Netzwerk für den Datenverkehr der Klondatenübertragung verwenden soll, und wählen Sie dann *Speichern* aus.
 +
 Normalerweise geben Sie die IP-Adresse für das Grid-Netzwerk ein. Wenn Sie jedoch ein anderes Netzwerk für den Datenverkehr von Klondaten verwenden müssen, geben Sie die IP-Adresse des Zielknoten in diesem Netzwerk ein.
@@ -64,9 +61,6 @@ Wenn *Klonen starten* aktiviert ist, zeigt der *Aktueller Status* das zum Klonen
 . Überwachen Sie den Klonfortschritt mit dem Installationsprogramm von StorageGRID Appliance auf dem Quell- oder Zielknoten.
 +
 Der StorageGRID-Appliance-Installer auf den Quell- und Zielknoten zeigt einen ähnlichen Status an.
-
-+
-image::../media/cloning_progress.png[Klonvorgang läuft]
 
 +
 Die Seite Klonen überwachen bietet detaillierte Fortschritte für jede Phase des Klonprozesses:

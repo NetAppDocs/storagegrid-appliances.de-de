@@ -1,0 +1,35 @@
+---
+permalink: sg6000/upgrading-drive-firmware-using-auto-reboot.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, upgrade, firmware, drive, disk, automatic 
+summary: Der StorageGRID Appliance Installer installiert beim Neustart der Appliance automatisch die neuesten Firmware-Dateien für E-Series-Laufwerke. 
+---
+= Automatisches Upgrade der SG6000-Laufwerksfirmware während des Neustarts der Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der StorageGRID Appliance Installer installiert beim Neustart der Appliance automatisch die neuesten Firmware-Dateien für E-Series-Laufwerke.
+
+Firmware-Dateien für Laufwerke der E-Serie sind in der StorageGRID -Software enthalten.  Diese Updates werden automatisch installiert, wenn ein StorageGRID -Gerät neu gestartet wird:
+
+* Hineinlink:../installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html["Wartungsmodus"]
+* Im Rahmen einer https://docs.netapp.com/us-en/storagegrid/maintain/rolling-reboot-procedure.html["Rollierender Neustart"]
+* Während einer https://docs.netapp.com/us-en/storagegrid/upgrade/performing-upgrade.html["StorageGRID -Versionsupgrade"] oder https://docs.netapp.com/us-en/storagegrid/maintain/applying-hotfix.html["Hotfix-Installation"]
+* Während einerlink:../sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html["SANtricity OS-Upgrade"] Verwenden des Wartungsmodus
+
+
+
+CAUTION: Für Knoten mit dem Status „Benötigt Aufmerksamkeit“ wird kein Versuch unternommen, die Laufwerksfirmware zu aktualisieren.
+
+
+NOTE: Während ein Gerät neu gestartet wird, wird die E/A-Aktivität (Eingabe/Ausgabe) zum Speichercontroller gestoppt.
+
+Sie können Laufwerk-Firmware-Upgrades auch manuell mit dem SANtricity System Manager installierenlink:upgrading-drive-firmware-using-santricity-system-manager-online.html["online"] oderlink:upgrading-drive-firmware-using-santricity-system-manager-offline.html["offline"] Verfahren:
+
+* So wenden Sie ein neues Laufwerk-Firmware-Upgrade an, bevor es in die StorageGRID -Software integriert wird
+* Wenn ein automatisches Firmware-Upgrade des Laufwerks fehlschlägt
+* So verwenden Sie den SANtricity System Managerlink:upgrading-drive-firmware-using-santricity-system-manager-online.html["Online-Upgrade der Laufwerksfirmware"] vom Grid Manager, anstatt den Knoten neu zu starten
+

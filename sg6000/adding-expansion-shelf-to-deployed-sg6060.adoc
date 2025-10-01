@@ -138,16 +138,16 @@ IOM B für Erweiterungs-Shelf 2
 Die Erweiterungs-Shelfs wurden in etwa fünf Minuten eingeschaltet und vom System erkannt. Auf der Startseite wird die Anzahl der neu erkannten Erweiterungs-Shelves angezeigt, und die Schaltfläche Expansion starten ist aktiviert.
 
 +
-Der Screenshot zeigt Beispiele für Meldungen, die auf der Startseite angezeigt werden können, je nach Anzahl der vorhandenen oder neuen Erweiterungs-Shelfs, wie folgt:
+Beispiele für Meldungen, die je nach Anzahl vorhandener oder neuer Erweiterungsregale auf der Startseite erscheinen können:
 
 +
-** Das oben auf der Seite eingekreiste Banner zeigt die Gesamtzahl der erkannten Erweiterungs-Shelfs an.
+** Ein Banner, das oben auf der Seite angezeigt wird, gibt die Gesamtzahl der erkannten Erweiterungsregale an.
 +
 *** Das Banner zeigt die Gesamtzahl der Erweiterungs-Shelfs an, unabhängig davon, ob die Shelfs konfiguriert und implementiert oder neu und nicht konfiguriert sind.
 *** Wenn keine Erweiterungs-Shelfs erkannt werden, wird das Banner nicht angezeigt.
 
 
-** Die Nachricht, die unten auf der Seite eingekreist wurde, zeigt an, dass eine Erweiterung bereit ist, gestartet zu werden.
+** Eine Meldung unten auf der Seite zeigt an, dass eine Erweiterung zum Starten bereit ist.
 +
 *** Die Meldung gibt die Anzahl der neu erkannten Erweiterungs-Shelfs StorageGRID an. „`Attached`“ gibt an, dass das Shelf erkannt wird. „`Unconfigured`“ gibt an, dass das Shelf neu und noch nicht mit dem Installationsprogramm für StorageGRID Appliance konfiguriert ist.
 +
@@ -155,9 +155,6 @@ Der Screenshot zeigt Beispiele für Meldungen, die auf der Startseite angezeigt 
 NOTE: Bereits bereitgestellte Erweiterungs-Shelfs sind in dieser Meldung nicht enthalten. Sie werden in die Zählung in das Banner oben auf der Seite aufgenommen.
 
 *** Die Meldung wird nicht angezeigt, wenn keine neuen Erweiterungseinschübe erkannt werden.
-+
-image::../media/appl_installer_home_expansion_shelf_ready_to_install.png[Installation Von Erweiterungs-Shelf]
-
 
 
 
@@ -177,9 +174,6 @@ NOTE: Wenn die neuen Erweiterungs-Shelfs nicht erkannt wurden, überprüfen Sie,
 Fortschrittsbalken werden auf der Webseite angezeigt, genau wie bei der Erstinstallation.
 
 +
-image::../media/monitor_expansion_for_new_appliance_shelf.png[Überwachung Der Erweiterungs-Shelf-Konfiguration]
-
-+
 Nach Abschluss der Konfiguration wird das Gerät automatisch neu gestartet, um den Wartungsmodus zu beenden und wieder in das Raster einzusteigen. Dieser Vorgang kann bis zu 20 Minuten dauern.
 
 +
@@ -187,10 +181,7 @@ Nach Abschluss der Konfiguration wird das Gerät automatisch neu gestartet, um d
 NOTE: Um die Konfiguration des Erweiterungs-Shelfs erneut zu versuchen, falls dies fehlschlägt, wechseln Sie zum Installationsprogramm der StorageGRID-Appliance, wählen Sie *Erweitert* > *Controller neu starten* und wählen Sie dann *Neustart im Wartungsmodus* aus. Nachdem der Node neu gebootet wurde, versuchen Sie den erneut <<start_expansion,Konfiguration des Erweiterungs-Shelfs>>.
 
 +
-Wenn der Neustart abgeschlossen ist, sieht die Registerkarte *Tasks* wie der folgende Screenshot aus:
-
-+
-image::../media/appliance_installer_reboot_complete.png[Neustart Abgeschlossen]
+Wenn der Neustart abgeschlossen ist, wird die Registerkarte *Aufgaben* mit Auswahlmöglichkeiten zum Neustarten des Knotens oder zum Versetzen der Appliance in den Wartungsmodus angezeigt.
 
 . Überprüfen Sie den Status des Appliance Storage Node und der neuen Erweiterungs-Shelfs.
 +

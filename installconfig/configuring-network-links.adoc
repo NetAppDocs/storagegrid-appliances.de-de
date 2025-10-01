@@ -31,12 +31,12 @@ Wenn Sie den aggregierten Port Bond-Modus, den LACP Network Bond-Modus oder VLAN
 
 
 .Über diese Aufgabe
-Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+Sie müssen die Einstellungen auf der Seite „Link-Konfiguration“ nur konfigurieren, wenn Sie andere Werte als die<<default_values,Standardeinstellungen>> .
 
 
-NOTE: Die LACP Übertragungs-Hash-Richtlinie ist layer2+3.
+NOTE: Änderungen der LACP-PDU-Rate, die gemäß diesen Anweisungen vorgenommen werden, bleiben in der StorageGRID Umgebung bestehen.  Informationen zum Vornehmen vorübergehender Änderungen der LACP-PDU-Rate bei der Durchführung von Wartungsarbeiten an den in Ihrer Appliance installierten Netzwerkkomponenten finden Sie unter https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html#temporarily-changing-the-lacp-pdu-rate["Vorübergehende Änderung der LACP-PDU-Rate"^] .
 
-Die Abbildungen und Tabellen fassen die Optionen für den Port Bond-Modus und den Network Bond-Modus für jede Appliance zusammen. Weitere Informationen finden Sie im Folgenden:
+[[port_config_tables]]Die Abbildungen und Tabellen fassen die Optionen für den Port-Bond-Modus und den Netzwerk-Bond-Modus für jedes Gerät zusammen.  Weitere Informationen finden Sie im Folgenden:
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Port-Bond-Modi (SG1000 und SG100)"]
 * link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Port-Bond-Modi (SG1100 und SG110)"]
@@ -85,7 +85,7 @@ In der Tabelle sind die Optionen für die Konfiguration der vier Netzwerkanschl�
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -109,11 +109,13 @@ LACP (802.3ad)
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 werden nicht verwendet.
 * Ein VLAN-Tag ist optional.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Grid-Netzwerk“ angegeben werden.
 
  a| 
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
 * VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können in den Abschnitten „Grid-Netzwerk“ und „Client-Netzwerk“ angegeben werden.
 
 
 |===
@@ -146,7 +148,7 @@ In der Tabelle sind die Optionen für die Konfiguration der vier Netzwerkanschl�
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -154,10 +156,12 @@ Nur LACP (802.3ad
  a| 
 * Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
 * Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
  a| 
 * Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
 * Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
 
 |===
@@ -216,7 +220,7 @@ In der Tabelle sind die Optionen für die Konfiguration der vier Netzwerkanschl�
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -240,11 +244,13 @@ LACP (802.3ad)
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 werden nicht verwendet.
 * Ein VLAN-Tag ist optional.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Grid-Netzwerk“ angegeben werden.
 
  a| 
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
 * VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können in den Abschnitten „Grid-Netzwerk“ und „Client-Netzwerk“ angegeben werden.
 
 
 |===
@@ -277,7 +283,7 @@ In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusamm
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -285,10 +291,12 @@ Nur LACP (802.3ad
  a| 
 * Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
 * Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
  a| 
 * Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
 * Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
 
 |===
@@ -341,7 +349,7 @@ In der Tabelle sind die Optionen für die Konfiguration der vier 10/25-GbE-Ports
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -365,11 +373,13 @@ LACP (802.3ad)
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 werden nicht verwendet.
 * Ein VLAN-Tag ist optional.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Grid-Netzwerk“ angegeben werden.
 
  a| 
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
 * VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können in den Abschnitten „Grid-Netzwerk“ und „Client-Netzwerk“ angegeben werden.
 
 
 |===
@@ -396,7 +406,7 @@ In der Tabelle sind die Optionen für die Konfiguration der vier 10/25-GbE-Ports
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -404,10 +414,12 @@ Nur LACP (802.3ad
  a| 
 * Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
 * Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
  a| 
 * Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
 * Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
 
 |===
@@ -454,7 +466,7 @@ In der Tabelle sind die Optionen für die Konfiguration der vier 10/25-GbE-Ports
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -478,11 +490,13 @@ LACP (802.3ad)
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 werden nicht verwendet.
 * Ein VLAN-Tag ist optional.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Grid-Netzwerk“ angegeben werden.
 
  a| 
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
 * VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können in den Abschnitten „Grid-Netzwerk“ und „Client-Netzwerk“ angegeben werden.
 
 
 |===
@@ -509,7 +523,7 @@ In der Tabelle sind die Optionen für die Konfiguration der vier 10/25-GbE-Ports
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -517,10 +531,12 @@ Nur LACP (802.3ad
  a| 
 * Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
 * Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
  a| 
 * Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
 * Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
 
 |===
@@ -559,7 +575,7 @@ In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusamm
 
 [cols="1a,3a,3a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -583,11 +599,13 @@ LACP (802.3ad)
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 werden nicht verwendet.
 * Ein VLAN-Tag ist optional.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Grid-Netzwerk“ angegeben werden.
 
  a| 
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
 * VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können in den Abschnitten „Grid-Netzwerk“ und „Client-Netzwerk“ angegeben werden.
 
 
 |===
@@ -614,7 +632,7 @@ In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusamm
 
 [cols="1a,3a,3a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -622,10 +640,12 @@ Nur LACP (802.3ad
  a| 
 * Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
 * Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
  a| 
 * Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
 * Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
 
 |===
@@ -678,7 +698,7 @@ In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusamm
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -702,11 +722,13 @@ LACP (802.3ad)
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 werden nicht verwendet.
 * Ein VLAN-Tag ist optional.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Grid-Netzwerk“ angegeben werden.
 
  a| 
 * Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
 * Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
 * VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können in den Abschnitten „Grid-Netzwerk“ und „Client-Netzwerk“ angegeben werden.
 
 
 |===
@@ -739,7 +761,7 @@ In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusamm
 
 [cols="1a,2a,2a"]
 |===
-| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
 
 
  a| 
@@ -747,10 +769,12 @@ Nur LACP (802.3ad
  a| 
 * Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
 * Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
  a| 
 * Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
 * Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
 
 
 |===
@@ -782,14 +806,20 @@ Auf der Seite Network Link Configuration wird ein Diagramm der Appliance angezei
 In der Tabelle Verbindungsstatus werden der Verbindungsstatus, die Verbindungsgeschwindigkeit und andere Statistiken der nummerierten Ports aufgeführt.
 
 +
-Das erste Mal, wenn Sie diese Seite aufrufen:
+
+NOTE: Beim SG5800 ist der Verbindungsstatus für Port 1 in der Software nicht verfügbar und muss physisch mithilfe der Status-LED am SG5800-Controller überprüft werden.
+
++
+[[default_values]]Wenn Sie diese Seite zum ersten Mal aufrufen, sind die Standardwerte:
 
 +
 ** *Verbindungsgeschwindigkeit* ist auf *Auto* eingestellt.
 ** *Port Bond Modus* ist auf *fest* eingestellt.
+** *LACP-Übertragungs-Hash-Richtlinie* ist auf *Layer2+3* eingestellt.
+** *LACP PDU-Rate* ist auf *Schnell* eingestellt.
 ** *Network Bond Mode* ist für das Grid Network auf *Active-Backup* eingestellt.
 ** Das *Admin-Netzwerk* ist aktiviert, und der Netzwerk-Bond-Modus ist auf *unabhängig* eingestellt.
-** Das *Client-Netzwerk* ist deaktiviert.
+** Das *Client-Netzwerk* ist aktiviert.
 
 
 . Wählen Sie die Verbindungsgeschwindigkeit für die Netzwerkanschlüsse aus der Dropdown-Liste *Link Speed* aus.
@@ -817,17 +847,9 @@ Die Client-Netzwerkeinstellungen für die Daten-NIC-Ports werden nun angezeigt.
 
 
 
-. In der Tabelle finden Sie Informationen zum Konfigurieren des Port-Bond-Modus und des Netzwerk-Bond-Modus.
+. Weitere Informationen finden Sie im<<port_config_tables,Konfigurationstabelle für den festen und aggregierten Port-Bond-Modus>> für jeden Gerätetyp und konfigurieren Sie den Port-Bond-Modus und den Netzwerk-Bond-Modus entsprechend Ihrer Netzwerkkonfiguration.
 +
-Dieses Beispiel zeigt:
-
-+
-** *Aggregate* und *LACP* ausgewählt für das Grid und die Client Netzwerke. Sie müssen für jedes Netzwerk ein eindeutiges VLAN-Tag angeben. Sie können Werte zwischen 0 und 4095 auswählen.
-** *Active-Backup* für das Admin-Netzwerk ausgewählt.
-+
-image::../media/sg1000_network_link_configuration_aggregate.png[Network Link Configuration Aggregate]
-
-
+Sie müssen eindeutige VLAN-Tags für das Grid und die Client-Netzwerke angeben.  Sie können Werte zwischen 0 und 4095 auswählen.
 
 . Wenn Sie mit Ihrer Auswahl zufrieden sind, klicken Sie auf *Speichern*.
 +

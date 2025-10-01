@@ -24,6 +24,7 @@ Sie können die Konfiguration folgender Komponenten automatisieren:
 ** Port Bond-Modus
 ** Netzwerk-Bond-Modus
 ** Verbindungsgeschwindigkeit
+** LACP-Übertragungs-Hash-Richtlinie und PDU-Rate
 
 
 
@@ -81,16 +82,13 @@ Nachdem Sie eine JSON-Datei generiert haben, können Sie die Konfiguration einer
 
 .Schritte
 . Wählen Sie im Installationsprogramm des StorageGRID-Geräts *Erweitert* > *Gerätekonfiguration aktualisieren* aus. Die Seite Gerätekonfiguration aktualisieren wird angezeigt.
-. Suchen Sie die JSON-Datei mit der Konfiguration, die Sie hochladen möchten, und wählen Sie sie aus.
+. Suchen Sie im Abschnitt „JSON hochladen“ nach der JSON-Konfigurationsdatei, die Sie hochladen möchten, und wählen Sie sie aus.
 +
 Die Datei wird hochgeladen und validiert. Wenn der Validierungsprozess abgeschlossen ist, wird der Dateiname neben einem grünen Häkchen angezeigt.
 
 +
 
 NOTE: Möglicherweise wird die Verbindung zur Appliance unterbrochen, wenn die Konfiguration aus der JSON-Datei Abschnitte für enthält `link_config`, `networks`Oder beides. Wenn Sie innerhalb von 1 Minute keine Verbindung mehr hergestellt haben, geben Sie die Appliance-URL erneut ein, indem Sie eine der anderen IP-Adressen verwenden, die der Appliance zugewiesen wurden.
-
-+
-image::../media/update_appliance_configuration_valid_json.png[Aktualisieren Sie die Appliance-Konfiguration JSON hochgeladen]
 
 +
 Das Dropdown-Menü *Node Name* enthält die in der JSON-Datei definierten Node-Namen auf oberster Ebene.

@@ -23,9 +23,6 @@ Informationen zur Implementierung von KMS für StorageGRID-Appliances finden Sie
 .Schritte
 . Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Hardware konfigurieren* > *Node-Verschlüsselung*.
 +
-image::../media/fde_monitor_in_maint_mode.png[KMS klare Konfiguration]
-
-+
 Die Seite Node Encryption enthält drei Abschnitte:
 
 +
@@ -49,13 +46,12 @@ CAUTION: Durch das Löschen der KMS-Konfiguration werden Daten von der Appliance
 ** Wählen Sie *Neustart in StorageGRID* aus, um den Controller neu zu starten, wobei der Knoten wieder in das Raster integriert wird. Wählen Sie diese Option, wenn Sie im Wartungsmodus ausgeführt werden und den Node in den normalen Betrieb zurückkehren möchten.
 ** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. (Diese Option ist nur verfügbar, wenn sich der Controller im Wartungsmodus befindet.) Wählen Sie diese Option aus, wenn weitere Wartungsmaßnahmen erforderlich sind, die Sie auf dem Node durchführen müssen, bevor Sie das Raster neu beitreten.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+Es kann bis zu 20 Minuten dauern, bis das Gerät neu gestartet wird und sich wieder mit dem Netz verbindet.  So bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 
 +
-Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite *NODES* sollte ein normaler Status (grünes Häkchen links neben dem Knotennamen) für den Appliance-Node angezeigt image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"]werden, der anzeigt, dass keine Warnungen aktiv sind und der Node mit dem Raster verbunden ist.
+... Wählen Sie im Grid Manager *NODES* aus.
+... Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 
-+
-image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
 
 
 
@@ -87,7 +83,7 @@ CAUTION: Löschen Sie die KMS-Konfiguration nicht, wenn Sie einen Appliance-Node
 
 * Bevor Sie einen Node wiederherstellen und neu installieren können, bei dem die KMS-Konfiguration verloren ging und der KMS-Schlüssel nicht wiederhergestellt werden kann.
 * Bevor Sie ein Gerät zurückgeben, das zuvor an Ihrem Standort verwendet wurde.
-* Nach der Stilllegung einer Appliance, für die die Node-Verschlüsselung aktiviert war.
+* Nach der Außerbetriebnahme eines Geräts, bei dem die Knotenverschlüsselung aktiviert war.
 
 
 
@@ -112,7 +108,7 @@ CAUTION: Wenn die KMS-Konfiguration gelöscht wird, werden die Daten auf der App
 . Wählen Sie unten im Fenster *KMS-Schlüssel löschen und Daten löschen*.
 . Wenn Sie sicher sind, dass Sie die KMS-Konfiguration löschen möchten, geben Sie ein `*clear*` Wählen Sie im Warndialogfeld *KMS-Schlüssel löschen und Daten löschen*.
 +
-Der KMS-Schlüssel und alle Daten werden vom Node gelöscht und die Appliance wird neu gebootet. Dies kann bis zu 20 Minuten dauern.
+Der KMS-Verschlüsselungsschlüssel und alle Daten werden vom Knoten gelöscht und das Gerät wird neu gestartet.  Während des Neustarts der Appliance wird ein Dialogfeld angezeigt. Dieser Vorgang kann bis zu 20 Minuten dauern.
 
 . Öffnen Sie einen Browser, und geben Sie eine der IP-Adressen für den Computing-Controller der Appliance ein. +
 `*https://_Controller_IP_:8443*`

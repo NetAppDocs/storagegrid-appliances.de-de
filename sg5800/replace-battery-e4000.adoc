@@ -243,10 +243,15 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
-. Vergewissern Sie sich, dass das Neubooten abgeschlossen ist und dass der Node wieder dem Raster beigetreten ist. Überprüfen Sie im Grid Manager, ob auf der Seite *Nodes* ein normaler Status (grünes Häkchen links neben dem Node-Namen) für den Appliance-Node angezeigt wird. Dies bedeutet, dass keine Warnungen aktiv sind und der Node mit dem Grid verbunden ist.
+. Bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
++
+.. Wählen Sie im Grid Manager *NODES* aus.
+.. Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 +
 
-NOTE: Es kann 20 Minuten dauern, vom Einschalten der Netzschalter bis zum erneuten Beitritt des Node zum Grid und der normale Status in Grid Manager angezeigt wird.“
+NOTE: Vom Einschalten der Netzschalter bis zur Wiederherstellung der Verbindung des Knotens mit dem Netz und der Anzeige eines normalen Status im Grid Manager können 20 Minuten vergehen.
+
+
 
 
 

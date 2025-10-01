@@ -23,9 +23,6 @@ Das Installationsprogramm der StorageGRID Appliance stellt den Status bereit, bi
 Auf der Seite Monitor-Installation wird der Installationsfortschritt angezeigt.
 
 +
-image::../media/monitor_installation_configure_storage.gif[Seite „Monitorinstallation“]
-
-+
 Die blaue Statusleiste zeigt an, welche Aufgabe zurzeit ausgeführt wird. Grüne Statusleisten zeigen Aufgaben an, die erfolgreich abgeschlossen wurden.
 
 +
@@ -45,11 +42,8 @@ Während dieser Phase stellt das Installationsprogramm eine Verbindung zum Speic
 +
 In dieser Phase kopiert das Installationsprogramm das Betriebssystem-Image für StorageGRID auf die Appliance.
 
-. Überwachen Sie den Installationsfortschritt weiter, bis die Phase *StorageGRID installieren* angehalten wird. Auf der eingebetteten Konsole wird eine Meldung angezeigt, in der Sie aufgefordert werden, diesen Knoten auf dem Admin-Knoten mithilfe des Grid-Managers zu genehmigen. Fahren Sie mit dem nächsten Schritt fort.
-+
-image::../media/monitor_installation_install_sgws.gif[Seite „Monitorinstallation“]
-
-. Wechseln Sie zum Grid-Manager des Knotens „primärer Administrator“, genehmigen Sie den ausstehenden Speicherknoten und führen Sie den StorageGRID-Installationsprozess durch.
+. Überwachen Sie den Installationsfortschritt weiter, bis die Phase *Install StorageGRID* angehalten wird und auf der eingebetteten Konsole eine Meldung angezeigt wird, in der Sie aufgefordert werden, diesen Knoten auf dem Admin-Knoten mithilfe des Grid Managers zu genehmigen. Fahren Sie dann mit dem nächsten Schritt fort.
+. https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Wechseln Sie zum Grid-Manager"^]des primären Admin-Knotens, genehmigen Sie den ausstehenden Speicherknoten und schließen Sie den StorageGRID -Installationsprozess ab.
 +
 Wenn Sie im Grid Manager auf *Installieren* klicken, wird Stufe 3 abgeschlossen und Stufe 4, *Installation abschließen*, beginnt. Wenn Phase 4 abgeschlossen ist, wird der Controller neu gestartet.
 
@@ -60,12 +54,9 @@ Schließen Sie das Fenster, nachdem alle Installationsschritte abgeschlossen sin
 --
 .Service-Appliance
 --
-. Um den Installationsfortschritt zu überwachen, klicken Sie in der Menüleiste auf *Installation überwachen*.
+. Um den Installationsfortschritt zu überwachen, klicken Sie auf *Installation überwachen*.
 +
 Auf der Seite Monitor-Installation wird der Installationsfortschritt angezeigt.
-
-+
-image::../media/monitor_installation_services_appl.png[Monitor Installation - Services Appl]
 
 +
 Die blaue Statusleiste zeigt an, welche Aufgabe zurzeit ausgeführt wird. Grüne Statusleisten zeigen Aufgaben an, die erfolgreich abgeschlossen wurden.
@@ -76,26 +67,24 @@ NOTE: Das Installationsprogramm stellt sicher, dass Aufgaben, die in einer früh
 
 . Überprüfen Sie den Fortschritt der ersten beiden Installationsphasen.
 +
-** *1. Speicher konfigurieren*
+*1. Speicher konfigurieren*
+
 +
 In dieser Phase löscht das Installationsprogramm alle vorhandenen Konfigurationen von den Laufwerken in der Appliance und konfiguriert die Hosteinstellungen.
 
-** *2. Installieren Sie das Betriebssystem*
++
+*2. Installieren Sie das Betriebssystem*
+
 +
 In dieser Phase kopiert das Installationsprogramm das Betriebssystem-Image für StorageGRID auf die Appliance.
 
-
-
 . Fahren Sie mit der Überwachung des Installationsfortschritts fort, bis einer der folgenden Prozesse erfolgt ist:
 +
-** Für alle Appliance-Knoten außer dem primären Admin-Knoten wird die StorageGRID-Stufe installieren angehalten, und in der integrierten Konsole wird eine Meldung angezeigt, in der Sie aufgefordert werden, diesen Knoten auf dem Admin-Knoten mithilfe deszu genehmigen https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Grid Manager"^]. Fahren Sie mit dem nächsten Schritt fort.
+** Für alle Appliance-Knoten außer dem primären Admin-Knoten wird die Phase „StorageGRID installieren“ angehalten und auf der eingebetteten Konsole wird eine Meldung angezeigt, in der Sie aufgefordert werden, diesen Knoten auf dem Admin-Knoten mithilfe des https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Grid Manager"^] ; fahren Sie dann mit dem nächsten Schritt fort.
 ** Für die Installation des primären Admin-Knotens der Appliance müssen Sie den Knoten nicht genehmigen. Das Gerät wird neu gestartet. Sie können den nächsten Schritt überspringen.
 +
 
 NOTE: Während der Installation eines primären Admin-Knotens der Appliance wird eine fünfte Phase angezeigt, in der der StorageGRID-Installer geladen wird (der Beispielbildschirm zeigt nur die ersten vier Phasen). Wenn der StorageGRID-Installer (fünfte Phase) länger als 10 Minuten geladen wird, aktualisieren Sie die Webseite manuell.
-
-+
-image::../media/monitor_installation_install_sgws.gif[Seite „Monitorinstallation“]
 
 
 

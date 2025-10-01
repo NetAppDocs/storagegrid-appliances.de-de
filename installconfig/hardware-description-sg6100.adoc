@@ -32,6 +32,7 @@ NOTE: Je nach Ihrer konfigurierten ILM-Richtlinie können Anforderungen für lok
 
 * Während der Wartung ist die vollständige Recovery bei SSD-Ausfällen möglich, die keine extremen Schäden am RAID-Gehäuse des Root-Volumes des Nodes (des StorageGRID-Betriebssystems) zur Folge haben.
 * Falls diverse SSD-Ausfälle zu einem lokalen Datenverlust führen, können Objektdaten automatisch aus Kopien oder Erasure Coded Brocken auf anderen Nodes wiederhergestellt werden.
+* Fähigkeit zur Tätigkeit als https://docs.netapp.com/us-en/storagegrid/admin/managing-load-balancing.html["Gateway-Knoten mit Caching"^] .
 
 
 Das SG6160 bietet folgende Datensicherungsfunktionen:

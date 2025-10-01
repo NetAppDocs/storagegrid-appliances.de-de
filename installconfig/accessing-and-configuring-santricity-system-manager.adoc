@@ -121,7 +121,7 @@ Führen Sie bei Storage Appliances der SG5700 und SG5800 die grundlegenden Schri
 --
 .SG6060
 --
-Bei der SG6060-Storage-Appliance kann die Laufwerksicherheit nur dann automatisch auf den SSD-Laufwerken aktiviert werden, wenn die Schlüsselverwaltung vor der Installation der Storage Appliance konfiguriert wurde.
+Beim Speichergerät SG6060 kann die Laufwerkssicherheit auf den SSD-Laufwerken nur dann automatisch aktiviert werden, wenn vor der Installation des Speichergeräts die Schlüsselverwaltung konfiguriert wurde.
 
 .. Statten Sie Ihr Storage-Array mit sicheren Laufwerken (FDE-Laufwerke oder FIPS-Laufwerke) aus.
 +
@@ -130,7 +130,7 @@ Bei der SG6060-Storage-Appliance kann die Laufwerksicherheit nur dann automatisc
 *** Ein FDE-Laufwerk kann nicht zu einer reinen FIPS-Volume-Gruppe oder einem Pool hinzugefügt oder als Ersatzlaufwerk verwendet werden.
 
 
-.. Erstellen Sie für das E4000-Controller-Shelf einen Sicherheitsschlüssel (eine Zeichenfolge, die vom Controller und von den Laufwerken für Lese- und Schreibzugriff gemeinsam genutzt wird).
+.. Erstellen Sie für das E2800-Controller-Shelf einen Sicherheitsschlüssel (eine Zeichenfolge, die vom Controller und den Laufwerken für den Lese- und Schreibzugriff gemeinsam genutzt wird).
 +
 *** Sie können https://docs.netapp.com/us-en/e-series-santricity/sm-settings/create-internal-security-key.html["Erstellen Sie einen internen Schlüssel"^] aus dem persistenten Speicher des Controllers oder einen externen Schlüssel verwenden, der von einem Verschlüsselungsmanagement-Server bereitgestellt wird.
 *** Um einen externen Schlüssel zu verwenden, der von einem Schlüsselverwaltungsserver bereitgestellt wird, müssen Sie zuerst https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html["Einrichten der Authentifizierung mit einem Verschlüsselungsmanagement-Server"^] in SANtricity System Manager arbeiten.
@@ -250,9 +250,6 @@ DHCP ist die Standardmethode, um dem Management-Port des Storage Controllers ein
 
 NOTE: Es kann einige Minuten dauern, bis die DHCP-Werte angezeigt werden.
 
-+
-image::../media/storage_controller_network_config_ipv4.gif[Speichercontroller-Netzwerk-Konfig. IPv4]
-
 . Legen Sie optional eine statische IP-Adresse für den Management-Port des Storage Controllers fest.
 +
 
@@ -262,9 +259,6 @@ NOTE: Sie sollten entweder eine statische IP für den Management-Port zuweisen o
 .. Wählen Sie *Statisch*.
 .. Geben Sie die IPv4-Adresse unter Verwendung der CIDR-Schreibweise ein.
 .. Geben Sie das Standard-Gateway ein.
-+
-image::../media/storage_controller_ipv4_and_def_gateway.gif[Speicher-Controller-Netzwerk-Konfig. IPv4 und Standard-Gateway]
-
 .. Klicken Sie Auf *Speichern*.
 +
 Es kann einige Minuten dauern, bis Ihre Änderungen angewendet werden.

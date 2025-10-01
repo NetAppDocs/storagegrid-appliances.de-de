@@ -20,8 +20,7 @@ Sie können den SG6000-CN-Controller herunterfahren und wieder einschalten, um W
 Fahren Sie den SG6000-CN-Controller herunter, um die Hardware zu warten.
 
 .Bevor Sie beginnen
-* Der SG6000-CN Controller ist physisch zu finden, der im Datacenter gewartet werden muss. Siehe link:locating-controller-in-data-center.html["Controller im Datacenter finden"].
-
+Der SG6000-CN Controller ist physisch zu finden, der im Datacenter gewartet werden muss. Siehe link:locating-controller-in-data-center.html["Controller im Datacenter finden"].
 
 .Über diese Aufgabe
 Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Controller herunterfahren oder den Controller während eines geplanten Wartungsfensters herunterfahren, wenn die Serviceunterbrechungen akzeptabel sind. Siehe die Informationen über https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
@@ -84,7 +83,7 @@ image::../media/bmc_power_control_page_controller_off.png[BMC Power Control Seit
 
 
 
-== Schalten Sie den SG6000-CN Controller ein, und überprüfen Sie den Betrieb
+== [[poweron]]Schalten Sie den SG6000-CN-Controller ein und überprüfen Sie den Betrieb
 
 Schalten Sie den Controller nach dem Abschluss der Wartung ein.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= SG5800-Controller austauschen
+= Ersetzen Sie den StorageGRID SG5800-Controller
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,7 +19,7 @@ Möglicherweise müssen Sie den SG5800-Controller austauschen, wenn er nicht opt
 
 
 .Über diese Aufgabe
-Auf den Appliance-Speicherknoten kann nicht zugegriffen werden, wenn Sie den Controller austauschen. Wenn der SG5800-Controller ausreichend funktioniert, können Sie zu Beginn dieses Verfahrens ein kontrolliertes Herunterfahren durchführen.
+Wenn Sie den Controller austauschen, können Sie nicht mehr auf den Speicherknoten des Geräts zugreifen.  Wenn der SG5800-Controller ausreichend funktioniert, können Sie zu Beginn dieses Vorgangs ein kontrolliertes Herunterfahren durchführen.
 
 
 NOTE: Wenn Sie den Controller vor dem Installieren der StorageGRID-Software ersetzen, können Sie nach Abschluss dieses Verfahrens möglicherweise nicht sofort auf den StorageGRID Appliance Installer zugreifen. Sie können zwar von anderen Hosts im selben Subnetz wie die Appliance auf den StorageGRID-Appliance-Installer zugreifen, aber der Zugriff darauf ist von Hosts in anderen Subnetzen nicht möglich. Diese Bedingung sollte sich innerhalb von 15 Minuten lösen (wenn Einträge im ARP-Cache für die ursprüngliche Controller-Zeit erforderlich sind), oder Sie können den Zustand sofort löschen, indem Sie alle alten ARP-Cacheeinträge manuell vom lokalen Router oder Gateway löschen.
@@ -38,23 +38,11 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 
 
 
-.. Fahren Sie den SG5800-Controller herunter:
+
+
+. Fahren Sie den SG5800-Controller herunter:
 +
 *`shutdown -h now`*
-
-.. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
-+
-Die grüne Cache-Aktivitäts-LED auf der Rückseite des E4000-Controllers leuchtet, wenn zwischengespeicherte Daten auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
-
-
-
-. Schalten Sie den Strom aus.
-+
-.. Wählen Sie auf der Startseite von SANtricity System Manager die Option laufende Vorgänge anzeigen aus.
-.. Vergewissern Sie sich, dass alle Vorgänge abgeschlossen sind.
-.. Schalten Sie beide Netzschalter am Gerät aus.
-.. Warten Sie, bis alle LEDs ausgeschaltet sind.
-
 
 . Wenn die mit dem Controller verbundenen StorageGRID-Netzwerke DHCP-Server verwenden:
 +
@@ -62,7 +50,7 @@ Die grüne Cache-Aktivitäts-LED auf der Rückseite des E4000-Controllers leucht
 .. Bitten Sie den Netzwerkadministrator, die IP-Adresseinstellungen für den ursprünglichen Controller zu aktualisieren, um die MAC-Adressen für den Ersatz-Controller zu reflektieren.
 +
 
-NOTE: Sie müssen sicherstellen, dass die IP-Adressen für den ursprünglichen Controller aktualisiert wurden, bevor Sie den Ersatz-Controller mit Strom versorgen. Andernfalls erhält der Controller neue DHCP-IP-Adressen, wenn er gebootet wird und kann möglicherweise nicht die Verbindung mit StorageGRID wiederherstellen. Dieser Schritt gilt für alle StorageGRID-Netzwerke, die mit dem Controller verbunden sind.
+NOTE: Sie müssen sicherstellen, dass die IP-Adressen für den Original-Controller aktualisiert wurden, bevor Sie den Ersatz-Controller in das Gerät einsetzen.  Andernfalls erhält der Controller beim Booten neue DHCP-IP-Adressen und kann möglicherweise keine erneute Verbindung zu StorageGRID herstellen.  Dieser Schritt gilt für alle StorageGRID -Netzwerke, die an den Controller angeschlossen sind.
 
 
 
@@ -90,8 +78,7 @@ NOTE: Verwenden Sie immer zwei Hände, um das Gewicht der Steuerung zu unterstü
 .. Ersetzen Sie die Kabel.
 
 
-. Schalten Sie das Gerät ein, und überwachen Sie die Controller-LEDs.
-. Vergewissern Sie sich, dass der Appliance Storage Node im Grid Manager angezeigt wird und keine Alarme angezeigt werden.
+. Nachdem der Controller neu gestartet wurde und das Gerät wieder dem Grid beitritt, bestätigen Sie, dass der Speicherknoten des Geräts im Grid Manager angezeigt wird und dass keine Alarme auftreten.
 
 
 Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"] Seite für weitere Informationen.

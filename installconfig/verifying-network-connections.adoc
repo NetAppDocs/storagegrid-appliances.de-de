@@ -18,9 +18,6 @@ Vergewissern Sie sich, dass Sie über die Appliance auf die StorageGRID-Netzwerk
 +
 Die Seite Ping und MTU Test wird angezeigt.
 
-+
-image::../media/ping_test_start.png[Screenshot der Ping- und MTU-Testoption im StorageGRID-Appliance-Installationsprogramm]
-
 . Wählen Sie aus dem Dropdown-Feld *Netzwerk* das Netzwerk aus, das Sie testen möchten: Grid, Admin oder Client.
 . Geben Sie die IPv4-Adresse oder den vollqualifizierten Domänennamen (FQDN) für einen Host in diesem Netzwerk ein.
 +
@@ -33,9 +30,6 @@ Sie können beispielsweise den Pfad zwischen dem Appliance-Node und einem Node a
 . Klicken Sie Auf *Konnektivität Testen*.
 +
 Wenn die Netzwerkverbindung gültig ist, wird die Meldung „Ping Test bestanden“ angezeigt, wobei die Ausgabe des Ping-Befehls aufgelistet ist.
-
-+
-image::../media/ping_test_passed.png[Screenshot der Ping-Testergebnisse im Installationsprogramm der StorageGRID Appliance]
 
 
 

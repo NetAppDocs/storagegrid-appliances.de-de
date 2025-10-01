@@ -24,15 +24,13 @@ Die Ethernet Link-Konfiguration der Services Appliance kann wie folgt geändert 
 
 * Ändern des *Port Bond Modus* von Fixed zu Aggregate oder von Aggregat zu Fixed
 * Ändern des *Netzwerk-Bond-Modus* von Active-Backup zu LACP oder von LACP zu Active-Backup
+* Ändern der Werte für *LACP-Übertragungs-Hash-Richtlinie* und *LACP-PDU-Rate*
 * Aktivieren oder Deaktivieren von VLAN-Tagging oder Ändern des Werts einer VLAN-Tag-Nummer
 * Ändern der Verbindungsgeschwindigkeit
 
 
 .Schritte
 . Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Netzwerke konfigurieren* > *Link-Konfiguration* aus.
-+
-image::../media/link_configuration_option.gif[Verbindungskonfiguration]
-
 . Nehmen Sie die gewünschten Änderungen an der Verbindungskonfiguration vor.
 +
 Weitere Informationen zu den Optionen finden Sie unter link:../installconfig/configuring-network-links.html["Netzwerkverbindungen konfigurieren"].
@@ -57,13 +55,12 @@ Zusätzlich zu allen anderen Tests, die Sie durchführen möchten, bestätigen S
 ** Wählen Sie *Neustart in StorageGRID* aus, um den Controller neu zu starten, wobei der Knoten wieder in das Raster integriert wird. Wählen Sie diese Option, wenn Sie im Wartungsmodus ausgeführt werden und den Node in den normalen Betrieb zurückkehren möchten.
 ** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. (Diese Option ist nur verfügbar, wenn sich der Controller im Wartungsmodus befindet.) Wählen Sie diese Option aus, wenn weitere Wartungsmaßnahmen erforderlich sind, die Sie auf dem Node durchführen müssen, bevor Sie das Raster neu beitreten.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+Es kann bis zu 20 Minuten dauern, bis das Gerät neu gestartet wird und sich wieder mit dem Netz verbindet.  So bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 
 +
-Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite *NODES* sollte ein normaler Status (grünes Häkchen links neben dem Knotennamen) für den Appliance-Node angezeigt image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"]werden, der anzeigt, dass keine Warnungen aktiv sind und der Node mit dem Raster verbunden ist.
+... Wählen Sie im Grid Manager *NODES* aus.
+... Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 
-+
-image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
 
 
 
