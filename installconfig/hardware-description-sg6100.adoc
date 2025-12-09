@@ -296,7 +296,7 @@ Lüfter (1 von 2) für E4000 Controller Shelf
  a| 
 4
  a| 
-E-Series E400 Storage Controller (1 von 2) und Anschlüsse
+Speicherkontroller der E-Serie E4000 (1 von 2) und Anschlüsse
 
 
 

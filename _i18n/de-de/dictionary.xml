@@ -4685,7 +4685,6 @@ Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff s
   <block id="023a03630e96cd25b69d134411531e8c" category="paragraph">Netzteil (1 von 2) für SG6100-CN Computing-Controller</block>
   <block id="471615f4f3a518f7bbbe1d1ef8f319de" category="paragraph">Anschlüsse für SG6100-CN Computing-Controller</block>
   <block id="cc53c11094cddf3f51bd4537e9e7158b" category="paragraph">Lüfter (1 von 2) für E4000 Controller Shelf</block>
-  <block id="e5a8c894ca52500bc6bcb77e429cb813" category="paragraph">E-Series E400 Storage Controller (1 von 2) und Anschlüsse</block>
   <block id="8e6dd71ab1d82f641fffaf74f1a6f6b8" category="paragraph">Netzteil (1 von 2) für E4000 Controller Shelf</block>
   <block id="7f515b7b271e2f2650ab9205041ae23a" category="section-title">SG6100 Controller</block>
   <block id="e095a9ee88152254e105acb911c6ddc3" category="section-title">SG6100-CN Computing-Controller</block>
@@ -5808,4 +5807,5 @@ Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.</b
   <block id="883368f2f68b2c26ebcfb31f09f529d5" category="sidebar">Aktualisieren Sie die Firmware des SG6160-Laufwerks mit der Offline-Methode von SANtricity System Manager</block>
   <block id="58abe205d3265bf2555ee7c37bee89cb" category="sidebar">Interne Netzwerkkarte (SGF6112 oder SG6100-CN)</block>
   <block id="b883da35aa37ea53f8afe4d94c8d01ee" category="sidebar">Externe Netzwerkkarte (SG6100-CN)</block>
+  <block id="45d6f533deefe293ac89312b73991e3c" category="paragraph">Speicherkontroller der E-Serie E4000 (1 von 2) und Anschlüsse</block>
 </blocks>
