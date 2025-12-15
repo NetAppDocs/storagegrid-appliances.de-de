@@ -16,7 +16,7 @@ Zur Erhöhung der Storage-Kapazität können Sie ein oder zwei Erweiterungs-Shel
 .Bevor Sie beginnen
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
 * Sie müssen StorageGRID 11.4 oder höher ausführen.
-* Sie haben das Erweiterungs-Shelf und zwei SAS-Kabel für jedes Erweiterungs-Shelf.
+* Sie erhalten das Erweiterungsfach und vier SAS-Kabel für jedes Erweiterungsfach.
 * Dort befinden sich die Storage Appliance physisch, wo das Erweiterungs-Shelf im Datacenter hinzugefügt wird.
 +
 link:locating-controller-in-data-center.html["Controller im Datacenter finden"]

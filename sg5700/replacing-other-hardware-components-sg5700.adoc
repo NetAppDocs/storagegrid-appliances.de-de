@@ -35,14 +35,14 @@ Wenn Sie ein Laufwerk, einen Netzlüfterbehälter, einen Lüfterbehälter, einen
  a| 
 Laufwerk
  a| 
-Austausch eines Laufwerks bei Shelfs der E2800 mit 12 Laufwerken oder mit 24 Laufwerken
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html["Austausch eines Laufwerks bei Shelfs der E2800 mit 12 Laufwerken oder mit 24 Laufwerken"^]
 
 
 
  a| 
 Lüfter-Behälter
  a| 
-Austausch eines Power-Fan-Behälters in E2800 Shelfs
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html["Austausch eines Power-Fan-Behälters in E2800 Shelfs"^]
 
 |===
 
@@ -57,27 +57,27 @@ Austausch eines Power-Fan-Behälters in E2800 Shelfs
  a| 
 Laufwerk
  a| 
-Ersetzen eines Laufwerks in E2860 Shelfs
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html["Ersetzen eines Laufwerks in E2860 Shelfs"^]
 
 
 
  a| 
 Leistungsbehälter
  a| 
-Austausch eines Netzkanisters in E2860 Shelfs
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-60-replace-power-task.html["Austausch eines Netzkanisters in E2860 Shelfs"^]
 
 
 
  a| 
 Gebläsebehälter
  a| 
-Austausch eines Lüftergehäuses in E2860 Shelfs
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html["Austausch eines Lüftergehäuses in E2860 Shelfs"^]
 
 
 
  a| 
 Laufwerksschublade
  a| 
-Austauschen eines Laufwerksschubs in E2860 Shelfs
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-60-supertask-task.html["Austauschen eines Laufwerksschubs in E2860 Shelfs"^]
 
 |===
