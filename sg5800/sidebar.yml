@@ -35,10 +35,12 @@ entries:
 - title: Hardware-Verfahren
   pdf-filename: Hardware-Verfahren - SG5800
   entries:
-  - title: SG5800-Controller austauschen
+  - title: SG5800-Controller ersetzen
     url: "/sg5800/replace-controller-5800sg.html"
   - title: E4000-Controller austauschen
     url: "/sg5800/replace-controller-e4000-simplex.html"
+  - title: Ersetzen Sie die CMOS-Batterie
+    url: "/sg5800/replace-cmos-battery-sg5800.html"
   - title: Lüfter austauschen (SG5860)
     url: "/sg5800/replace-fan-canister.html"
   - title: Netzteil austauschen (SG5812)

@@ -1,0 +1,106 @@
+---
+permalink: sg5800/replace-cmos-battery-sg5800.html 
+sidebar: sidebar 
+keywords: cmos, battery, replace, sg5800, controller 
+summary: Möglicherweise müssen Sie die CMOS-Batterie im SG5800 Controller austauschen, damit die Dienste und Anwendungen Ihres Systems eine genaue Zeitsynchronisation aufweisen und weiterhin normal funktionieren. 
+---
+= CMOS-Batterie im SG5800-Controller ersetzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie die CMOS-Batterie im SG5800 Controller austauschen, damit die Dienste und Anwendungen Ihres Systems eine genaue Zeitsynchronisation aufweisen und weiterhin normal funktionieren.
+
+.Über diese Aufgabe
+Sie können nicht auf den Speicherknoten des Geräts zugreifen, wenn Sie die CMOS-Batterie austauschen. Um Betriebsunterbrechungen zu vermeiden, vergewissern Sie sich vor dem Austausch der CMOS-Batterie, dass alle anderen Speicherknoten mit dem Grid verbunden sind, oder tauschen Sie die Batterie während eines geplanten Wartungsfensters aus, wenn Betriebsunterbrechungen akzeptabel sind.
+
+
+
+== Schritt 1: Fahren Sie den SG5800-Controller herunter
+
+.Schritte
+. Melden Sie sich beim Grid-Node an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@grid_node_IP`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+. Fahren Sie den SG5800-Controller herunter:
++
+*`shutdown -h now`*
+
+
+
+
+
+== Schritt 2: Entfernen Sie den Controller vom Gerät
+
+.Schritte
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie die Kabel, und trennen Sie dann die Kabel und SFPs.
++
+
+NOTE: Um eine Beeinträchtigung der Leistung zu vermeiden, drehen, falten, quetschen oder treten Sie nicht auf die Kabel.
+
+. Lösen Sie die Steuerung vom Gerät, indem Sie die Verriegelung am Nockengriff so lange drücken, bis sie sich löst, und öffnen Sie dann den Nockengriff nach rechts.
+. Schieben Sie den Regler mit zwei Händen und dem Nockengriff aus dem Gerät.
++
+
+NOTE: Verwenden Sie immer zwei Hände, um das Gewicht der Steuerung zu unterstützen.
+
+. Drehen Sie das Steuermodul um und legen Sie es auf eine flache, stabile Oberfläche.
+. Öffnen Sie die Abdeckung, indem Sie die blauen Knöpfe an den Seiten des Controllermoduls drücken, und drehen Sie dann die Abdeckung nach oben und vom Controllermodul ab.
++
+image::../media/drw_sg5800_open_controller_module_cover_IEOPS-695.svg[Öffnen Sie die Abdeckung des SG5800 controller module.]
+
+
+
+
+
+== Schritt 3: Ersetzen Sie die CMOS-Batterie
+
+.Schritte
+. Suchen Sie die CMOS-Batterie.
++
+image::../media/drw_sg5800_replace_rtc_battery_IEOPS-701.svg[Ersetzen Sie den CMOS-Batteriestandort im SG5800-Controller]
+
++
+
+NOTE: Ihr Controller kann anders aussehen als der in der Abbildung gezeigte. Die Position der CMOS-Batterie ist jedoch identisch.
+
+. Drücken Sie die Batterie vorsichtig aus der Halterung und drehen Sie sie, und heben Sie sie dann aus dem Gerät heraus.
++
+
+NOTE: Achten Sie beim Entnehmen der Batterie aus der Halterung auf die Polarität. Die Batterie ist mit einem Pluszeichen gekennzeichnet und muss korrekt in die Halterung eingesetzt werden. Ein Pluszeichen neben der Halterung zeigt Ihnen, wie die Batterie positioniert werden muss.
+
+. Nehmen Sie die Ersatzbatterie aus dem antistatischen Versandbeutel.
+. Suchen Sie den leeren Batteriehalter im Controller-Modul.
+. Beachten Sie die Polarität der CMOS-Batterie und setzen Sie sie dann in die Halterung ein, indem Sie die Batterie schräg halten und nach unten drücken.
+. Überprüfen Sie die Batterie visuell, um sicherzustellen, dass sie vollständig im Halter installiert ist und die Polarität korrekt ist.
+. Bringen Sie die Controller-Abdeckung wieder an.
+
+
+
+
+== Schritt 4: Installieren Sie den Controller erneut in das Gerät.
+
+.Schritte
+. Installieren Sie den Controller in das Appliance:
++
+.. Drehen Sie den Controller so um, dass die abnehmbare Abdeckung nach unten zeigt.
+.. Schieben Sie den Steuerknebel in die geöffnete Stellung, und schieben Sie ihn bis zum Gerät.
+.. Bewegen Sie den Nockengriff nach links, um die Steuerung zu verriegeln.
+.. Schließen Sie die Kabel wieder an.
+
+
+. Nachdem der Controller neu gestartet wurde und das Gerät wieder dem Grid beitritt, bestätigen Sie, dass der Speicherknoten des Geräts im Grid Manager angezeigt wird und dass keine Alarme auftreten.
+
+
+Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"] Seite für weitere Informationen.

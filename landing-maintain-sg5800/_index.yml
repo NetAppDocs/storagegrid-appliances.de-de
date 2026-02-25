@@ -23,6 +23,8 @@ indexpage:
       url: "../sg5800/replace-controller-5800sg.html"
     - title: Ersetzen Sie den E4000-Speichercontroller
       url: "../sg5800/replace-controller-e4000-simplex.html"
+    - title: Ersetzen Sie die CMOS-Batterie
+      url: "../sg5800/replace-cmos-battery-sg5800.html"
     - title: Ersetzen Sie den Lüfterbehälter
       url: "../sg5800/replace-fan-canister.html"
     - title: Ersetzen Sie den Aktivkohlebehälter

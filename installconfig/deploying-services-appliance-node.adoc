@@ -184,3 +184,6 @@ NOTE: Wenn Sie manuell auf die Seite Monitor-Installation zugreifen müssen, kli
 
 . Wenn Ihr Grid mehrere Appliance-Nodes enthält, wiederholen Sie die vorherigen Schritte für jede Appliance.
 
+
+.Was kommt als Nächstes?
+Erfahren Sie mehr über link:https://docs.netapp.com/us-en/storagegrid/swnodes/navigating-to-grid-manager.html["Konfiguration des Grid und Abschluss der Installation"^] und link:monitoring-appliance-installation.html["Überwachung der Geräteinstallation"].
