@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, clone appliance node, cloning appliance node 
 summary: Vor dem Klonen eines Appliance-Nodes müssen Sie die Überlegungen und Anforderungen verstehen. 
 ---
-= Überlegungen und Anforderungen zum Klonen von Appliance-Nodes
+= Anforderungen für das Klonen von StorageGRID-Appliance-Knoten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -65,18 +65,20 @@ NOTE: Die Verwendung des 1-GbE-Admin-Netzwerks für die Übertragung von Klondat
 
 * Bestimmen Sie, ob Sie die Knotenverschlüsselung mithilfe eines Schlüsselverwaltungsservers (KMS) auf dem Zielgerät verwenden, sodass Sie die Knotenverschlüsselung während der Erstinstallation des Zielgeräts vor dem Klonen aktivieren können.  Sie können überprüfen, ob die Knotenverschlüsselung auf dem Quell-Appliance-Knoten aktiviert ist, wie im Abschnittlink:../installconfig/optional-enabling-node-encryption.html["Aktivieren der Node-Verschlüsselung"] .
 +
-Der Quellknoten und das Zielgerät können mit den folgenden Ausnahmen unterschiedliche Knotenverschlüsselungseinstellungen haben.  Das Klonen von Knoten von unverschlüsselten Knotenquellen auf knotenverschlüsselte Ziele wird für die folgenden Appliances nicht unterstützt:
+Quellknoten und Zielgerät können unterschiedliche Verschlüsselungseinstellungen aufweisen, mit folgenden Ausnahmen. Das Klonen von Knoten von unverschlüsselten Quellknoten zu node-verschlüsselten Zielgeräten wird für die folgenden Appliances nicht unterstützt:
 
 +
 ** Eine SGF6112-Knoten-Appliance ohne Knotenverschlüsselung zu einer SGF6112-Appliance mit Knotenverschlüsselung
 ** Eine SG1100-Knoten-Appliance ohne Knotenverschlüsselung zu einer SG1100-Appliance mit Knotenverschlüsselung
+** Eine SG1200-Knoten-Appliance ohne Knotenverschlüsselung zu einer SG1200-Appliance mit Knotenverschlüsselung
 ** Eine SG110-Knoten-Appliance ohne Knotenverschlüsselung zu einer SG110-Appliance mit Knotenverschlüsselung
+** Eine SG120-Knoten-Appliance ohne Knotenverschlüsselung zu einer SG120-Appliance mit Knotenverschlüsselung
 
 
 +
 Die Entschlüsselung und Verschlüsselung der Daten erfolgt automatisch während der Datenübertragung und wenn der Zielknoten neu gestartet wird und sich dem Grid anschließt.
 
-* Ermitteln Sie, ob der RAID-Modus auf der Ziel-Appliance von der Standardeinstellung geändert werden soll, damit Sie diese Informationen bei der Erstinstallation der Ziel-Appliance vor dem Klonen angeben können. Auf der Seite *NODES* im Grid Manager können Sie Informationen zum aktuellen RAID-Modus des Quell-Appliance-Knotens anzeigen. Wählen Sie die Registerkarte *Hardware* für das Gerät aus.
+* Prüfen Sie, ob der RAID-Modus des Zielgeräts von der Standardeinstellung geändert werden soll, damit Sie diese Information bei der Erstinstallation des Zielgeräts vor dem Klonen angeben können. Sie können Informationen über den aktuellen RAID-Modus des Quell-Appliance-Knotens auf der Seite *Nodes* im Grid Manager anzeigen. Wählen Sie die Registerkarte *Hardware* für die Appliance aus.
 +
 Der Quell- und die Ziel-Appliance können unterschiedliche RAID-Einstellungen aufweisen.
 

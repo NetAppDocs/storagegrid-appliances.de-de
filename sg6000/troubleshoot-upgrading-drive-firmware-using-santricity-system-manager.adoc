@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, troubleshoot, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Beheben Sie Fehler, die auftreten können, wenn Sie SANtricity System Manager zum Aktualisieren der Firmware auf den Laufwerken in Ihrer Appliance verwenden. 
 ---
-= Fehler beim Upgrade der Laufwerk-Firmware beheben
+= Fehlerbehebung bei Upgrade-Fehlern der Laufwerk-Firmware des SG6000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

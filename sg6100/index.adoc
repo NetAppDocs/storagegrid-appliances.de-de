@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100 storage appliance, SGF6112 storage appliance, maintain, maintaining, hardware, procedures, tasks 
 summary: Möglicherweise müssen Sie Wartungsmaßnahmen an Ihrem Gerät durchführen. In diesem Abschnitt finden Sie spezifische Verfahren zur Wartung Ihrer SG6100 Appliance. 
 ---
-= SG6100 Appliance warten
+= SG6100-Geräte warten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

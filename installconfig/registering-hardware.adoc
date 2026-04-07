@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, registering, registration, support 
 summary: Die Registrierung der Appliance-Hardware bietet Support-Vorteile. 
 ---
-= Hardware registrieren
+= Registrieren Sie StorageGRID Appliance-Hardware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

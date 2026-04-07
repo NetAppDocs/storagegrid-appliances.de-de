@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sg110, sg1100 
 summary: Wenn Sie sich nicht sicher sind, welche Hardwarekomponente in Ihrem Gerät ausgetauscht werden soll, gehen Sie wie folgt vor, um die Komponente und den Standort des Geräts im Rechenzentrum zu identifizieren. 
 ---
-= Prüfen Sie, ob die Komponente im SG110 oder SG1100 ausgetauscht werden soll
+= Prüfen Sie, welches Bauteil im SG110 oder SG1100 ausgetauscht werden muss.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,12 +14,12 @@ summary: Wenn Sie sich nicht sicher sind, welche Hardwarekomponente in Ihrem Ger
 Wenn Sie sich nicht sicher sind, welche Hardwarekomponente in Ihrem Gerät ausgetauscht werden soll, gehen Sie wie folgt vor, um die Komponente und den Standort des Geräts im Rechenzentrum zu identifizieren.
 
 .Bevor Sie beginnen
-* Sie haben die Seriennummer der Speicher-Appliance, bei der die Komponente ausgetauscht werden muss.
+* Sie haben die Seriennummer des Geräts, bei dem das Bauteil ausgetauscht werden muss.
 * Sie sind im Grid Manager mit einem angemeldet https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
 
 
 .Über diese Aufgabe
-Gehen Sie wie folgt vor, um das Gerät mit fehlerhafter Hardware zu identifizieren und zu ermitteln, welche der austauschbaren Hardwarekomponenten nicht ordnungsgemäß funktionieren. Folgende Komponenten können ausgetauscht werden:
+Mithilfe dieses Verfahrens können Sie das Gerät mit dem Hardwaredefekt identifizieren und feststellen, welche der austauschbaren Hardwarekomponenten nicht ordnungsgemäß funktioniert. Zu den Komponenten, die möglicherweise ausgetauscht werden müssen, gehören:
 
 * Netzteile
 * Lüfter
@@ -48,14 +48,14 @@ image::../media/nic-alert-sgf6112.png[Warnung mit Komponenten-ID]
 
 . Identifizieren Sie das Gehäuse mit der zu ersetzenden Komponente.
 +
-.. Wählen Sie im Grid Manager die Option *NODES* aus.
-.. Wählen Sie in der Tabelle auf der Seite Nodes den Namen des Appliance-Storage-Node mit der fehlerhaften Komponente aus.
+.. Im Grid Manager wählen Sie *Knoten* aus.
+.. Wählen Sie in der Tabelle auf der Seite „Knoten“ den Namen der StorageGRID-Appliance mit der ausgefallenen Komponente aus.
 .. Wählen Sie die Registerkarte *Hardware* aus.
 +
 Überprüfen Sie die Seriennummer * des Compute-Controllers im Abschnitt StorageGRID-Gerät. Überprüfen Sie, ob die Seriennummer mit der Seriennummer des Speichergeräts übereinstimmt, in dem Sie die Komponente austauschen. Wenn die Seriennummer übereinstimmt, haben Sie das richtige Gerät gefunden.
 
 +
-*** Wenn der Abschnitt StorageGRID-Appliance in Grid-Manager nicht angezeigt wird, ist der ausgewählte Knoten keine StorageGRID-Appliance. Wählen Sie einen anderen Knoten in der Strukturansicht aus.
+*** Wenn der Abschnitt „StorageGRID Appliance“ im Grid Manager nicht angezeigt wird, ist der ausgewählte Knoten keine StorageGRID Appliance. Wählen Sie einen anderen Knoten in der Baumansicht aus.
 *** Wenn die Seriennummern nicht übereinstimmen, wählen Sie einen anderen Knoten aus der Strukturansicht aus.
 
 

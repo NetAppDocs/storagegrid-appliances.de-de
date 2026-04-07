@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
 ---
-= Aktualisieren Sie die Firmware des SG5800 Laufwerks mithilfe von SANtricity System Manager über die Offline-Methode
+= Führen Sie das Upgrade der SG5800-Laufwerk-Firmware mit der Offline-Methode des SANtricity System Manager durch.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -37,7 +37,7 @@ Die Offline-Methode ist schneller als die Online-Methode und wird deutlich schne
 . Greifen Sie mit einer der folgenden Methoden auf SANtricity System Manager zu:
 +
 ** Verwenden Sie das StorageGRID-Appliance-Installationsprogramm, und wählen Sie *Erweitert* > *SANtricity-Systemmanager*
-** Verwenden Sie den Grid-Manager, und wählen Sie *NODES* > *_Storage Node_* > *SANtricity System Manager* aus
+** Verwenden Sie den Grid Manager und wählen Sie *Knoten* > *_Speicherknoten_* > *SANtricity System Manager*
 ** Verwenden Sie SANtricity System Manager, indem Sie zur Storage Controller-IP navigieren:
 +
 `*https://_Storage_Controller_IP_*`
@@ -146,7 +146,7 @@ link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html[
 Es kann bis zu 20 Minuten dauern, bis das Gerät neu gestartet wird und sich wieder mit dem Netz verbindet.  So bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 
 +
-... Wählen Sie im Grid Manager *NODES* aus.
+... Im Grid Manager wählen Sie *Knoten* aus.
 ... Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 
 

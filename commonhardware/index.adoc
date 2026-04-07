@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: maintain overview, maintenance overview, about maintain, about maintenance 
 summary: Befolgen Sie diese Anweisungen, um Ihr StorageGRID-System zu warten. 
 ---
-= Allgemeine Verfahren für die Knotenwartung: Übersicht
+= Allgemeine Wartungsverfahren für StorageGRID-Geräte
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -38,10 +38,12 @@ NOTE: In dieser Anleitung bezieht sich „`Linux`“ auf eine Red hat® Enterpri
 
 Spezifische Wartungsverfahren für jeden StorageGRID-Gerätetyp finden Sie in den Abschnitten zur Gerätewartung:
 
+* link:../sg6200/index.html["SG6200-Gerät warten"]
 * link:../sg6100/index.html["SG6100 Appliance warten"]
 * link:../sg6000/index.html["Warten Sie die SG6000-Appliance"]
-* link:../sg5800/index.html["SG5800 Appliance warten"]
 * link:../sg5700/index.html["SG5700 Appliance warten"]
-* link:../sg110-1100/index.html["Wartung von SG110- und SG1100-Appliances"]
+* link:../sg5800/index.html["SG5800 Appliance warten"]
 * link:../sg100-1000/index.html["Wartung von SG100 und SG1000 Appliances"]
+* link:../sg110-1100/index.html["Wartung von SG110- und SG1100-Appliances"]
+* link:../sg120-1200/index.html["Warten Sie die SG120- und SG1200-Appliances"]
 

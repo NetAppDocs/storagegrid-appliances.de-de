@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, deploy node, deploying node, node, deploy, deploying 
 summary: Nach der Installation und Konfiguration der Storage Appliance können Sie sie als Storage Node in einem StorageGRID System bereitstellen. Wenn Sie eine Appliance als Speicherknoten bereitstellen, verwenden Sie das StorageGRID-Appliance-Installationsprogramm, das in der Appliance enthalten ist. 
 ---
-= Appliance-Storage-Node implementieren
+= Bereitstellen eines StorageGRID Appliance Storage Node
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

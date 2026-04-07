@@ -1,0 +1,170 @@
+---
+permalink: sg6200/replacing-drive-in-sgf6212.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6212, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Das Speichersystem SGF6212 enthält 12 SSD-Laufwerke. Die Daten auf den Laufwerken sind durch ein RAID-System geschützt, das es dem Appliance ermöglicht, sich von einem Einzellaufwerk-Ausfall zu erholen, ohne dass Daten von einem anderen Knoten kopiert werden müssen. 
+---
+= Ersetzen Sie die Laufwerke im SGF6212
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Speichersystem SGF6212 enthält 12 SSD-Laufwerke. Wenn ein SGF6212 als Speicherknoten fungiert, sind die Daten auf den Laufwerken durch ein RAID-Schema geschützt, das es dem Appliance ermöglicht, sich von einem Ausfall eines Einzellaufwerks zu erholen, ohne Daten von einem anderen Knoten kopieren zu müssen. Wenn ein SGF6212 als Gateway-Knoten fungiert, führt der Ausfall eines Einzellaufwerks zu einer Verringerung der Cache-Kapazität.
+
+Wenn das SGF6212 als Speicherknoten fungiert, kann der Ausfall eines zweiten Laufwerks, bevor ein erster Laufwerksausfall behoben wurde, das Kopieren von Daten von anderen Knoten erforderlich machen, um die Redundanz wiederherzustellen. Diese Wiederherstellung der Redundanz kann länger dauern oder unmöglich sein, wenn Single-Copy-ILM-Regeln verwendet werden oder wurden oder wenn die Datenredundanz durch Ausfälle auf anderen Knoten beeinträchtigt wurde. Daher muss ein Laufwerk des SGF6212 so schnell wie möglich ausgetauscht werden, um die Redundanz zu gewährleisten.
+
+Wenn der SGF6212 als Gateway-Knoten fungiert, führt jeder Laufwerksausfall in einem SGF6212 zu einer weiteren Verringerung der Cache-Kapazität. Außerdem werden alle zwischengespeicherten Daten auf dem ausgefallenen Laufwerk nicht mehr zwischengespeichert. Weitere Laufwerksausfälle können zu einem Ausfall des Betriebssystems führen, daher müssen Sie ein ausgefallenes Laufwerk so schnell wie möglich ersetzen, um die Verfügbarkeit sicherzustellen.
+
+
+CAUTION: Wenn drei oder mehr Laufwerke ausfallen, kann der Node möglicherweise StorageGRID nicht mehr ausführen. Er verlässt das Grid, startet neu und führt den StorageGRID Appliance Installer aus, um die Diagnose und Behebung des Speicherproblems zu ermöglichen.
+
+.Bevor Sie beginnen
+* Du hast link:locating-sg6200-in-data-center.html["Das Gerät befindet sich physisch"].
+* Sie haben überprüft, welches Laufwerk ausgefallen ist, indem Sie feststellen, dass die linke LED des Laufwerks gelb leuchtet oder den Grid Manager für verwenden link:verify-component-to-replace.html["Zeigen Sie die Warnung an, die durch das ausgefallene Laufwerk verursacht wurde"].
++
+
+NOTE: Informationen zur Anzeige von Statusanzeigen zur Überprüfung des Fehlers finden Sie unter.
+
+* Sie haben das Ersatzlaufwerk erhalten.
+* Sie haben einen angemessenen ESD-Schutz erhalten.
+
+
+.Schritte
+. Stellen Sie sicher, dass die linke Fehler-LED des Laufwerks gelb leuchtet, oder verwenden Sie die Laufwerksteckplatz-ID aus der Warnmeldung, um das Laufwerk zu finden.
++
+Die zwölf Laufwerke befinden sich in den folgenden Positionen im Gehäuse (Vorderseite des Gehäuses mit entfernter Blende):
+
++
+image::../media/sgf6212_front_with_ssds.png[Laufwerkpositionen]
+
++
+|===
+| Position | Laufwerk 
+
+
+ a| 
+1
+ a| 
+HDD00
+
+
+
+ a| 
+2
+ a| 
+HDD01
+
+
+
+ a| 
+3
+ a| 
+HDD02
+
+
+
+ a| 
+4
+ a| 
+HDD03
+
+
+
+ a| 
+5
+ a| 
+HDD04
+
+
+
+ a| 
+6
+ a| 
+HDD05
+
+
+
+ a| 
+7
+ a| 
+HDD06
+
+
+
+ a| 
+8
+ a| 
+HDD07
+
+
+
+ a| 
+9
+ a| 
+HDD08
+
+
+
+ a| 
+10
+ a| 
+HDD09
+
+
+
+ a| 
+11
+ a| 
+HDD10
+
+
+
+ a| 
+12
+ a| 
+HDD11
+
+|===
++
+Sie können den Grid Manager auch verwenden, um den Status der SSD-Laufwerke zu überwachen. Wählen Sie *Knoten*. Wählen Sie dann  `*Storage Node*` > *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld „Storage RAID Mode“ eine Meldung darüber, welches Laufwerk ausgefallen ist.
+
+
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.
++
+Alle Verpackungsmaterialien speichern.
+
+. Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
++
+image:../media/drw_s2025_drive_replace_ieops-2553.svg["Ausbau eines Laufwerks aus dem Gehäuse"]
+
++
+Der Griff an den Antriebsfedern öffnet sich teilweise, und das Laufwerk löst sich aus dem Schlitz.
+
+. Öffnen Sie den Griff, schieben Sie das Laufwerk heraus und legen Sie es auf eine statisch freie, Ebene Oberfläche.
+. Drücken Sie die Entriegelungstaste am Ersatzlaufwerk, bevor Sie es in den Laufwerkschacht einsetzen.
++
+Die Verriegelungsfedern öffnen sich.
+
+. Setzen Sie das Ersatzlaufwerk in den Steckplatz ein, und schließen Sie dann den Laufwerkgriff.
++
+
+NOTE: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
+
++
+Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
+
++
+Das ersetzte Laufwerk wird automatisch mit gespiegelten Daten von den Arbeitslaufwerken neu aufgebaut. Die Laufwerk-LED blinkt zunächst, hört aber auf zu blinken, sobald das System feststellt, dass das Laufwerk über genügend Kapazität verfügt und funktionsfähig ist.
+
++
+Sie können den Status der Neuerstellung mithilfe des Grid Manager überprüfen.
+
+. Wenn der SGF6212 als Speicherknoten fungiert und mehr als ein Laufwerk ausgefallen und ersetzt wurde, erhalten Sie möglicherweise Warnmeldungen, die darauf hinweisen, dass einige Volumes eine Datenwiederherstellung benötigen. Wenn Sie eine Warnmeldung erhalten, wählen Sie vor dem Versuch der Volume-Wiederherstellung *Knoten* > `*appliance Storage Node*` > *Hardware* aus. Überprüfen Sie im Abschnitt „StorageGRID Appliance“ der Seite, ob der Storage-RAID-Modus „intakt“ oder „wird wiederhergestellt“ ist. Wenn der Status ein oder mehrere ausgefallene Laufwerke auflistet, beheben Sie diesen Zustand, bevor Sie die Volume-Wiederherstellung versuchen.
+. Im Grid Manager navigieren Sie zu *Knoten* > `*appliance Storage Node*` > *Hardware*. Überprüfen Sie im Abschnitt „StorageGRID Appliance“ der Seite, ob der Storage RAID-Modus fehlerfrei ist.
+
+
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

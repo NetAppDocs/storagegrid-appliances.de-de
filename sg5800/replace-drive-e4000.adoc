@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Bevor Sie ein E4000-Laufwerk austauschen, lesen Sie die Anforderungen und Überlegungen. 
 ---
-= Ersetzen Sie die Übersicht über das SG5800-Laufwerk
+= Anforderungen für den Austausch des SG5800-Laufwerks
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

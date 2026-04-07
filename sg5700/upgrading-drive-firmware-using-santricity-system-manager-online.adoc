@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
 ---
-= Aktualisieren Sie die Firmware des SG5700-Laufwerks mithilfe der Online-Methode von SANtricity System Manager
+= Aktualisieren Sie die SG5700-Laufwerk-Firmware mit der Online-Methode des SANtricity System Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,7 +35,7 @@ Sie müssen den verwenden link:upgrading-drive-firmware-using-santricity-system-
 . Greifen Sie mit einer der folgenden Methoden auf SANtricity System Manager zu:
 +
 ** Verwenden Sie das StorageGRID-Appliance-Installationsprogramm, und wählen Sie *Erweitert* > *SANtricity-Systemmanager*
-** Verwenden Sie den Grid-Manager, und wählen Sie *NODES* > *_Storage Node_* > *SANtricity System Manager* aus
+** Verwenden Sie den Grid Manager und wählen Sie *Knoten* > *_Speicherknoten_* > *SANtricity System Manager*
 ** Verwenden Sie SANtricity System Manager, indem Sie zur Storage Controller-IP navigieren:
 +
 `*https://_Storage_Controller_IP_*`

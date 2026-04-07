@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, storage node, storage appliance, controller, e2800, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
 summary: 'Für Storage-Controller, die derzeit SANtricity OS verwenden, die älter als 08.42.20.00 \(11.42\) sind, müssen Sie das Verfahren des Wartungsmodus verwenden, um ein Upgrade durchzuführen.' 
 ---
-= Aktualisieren Sie SANtricity OS auf einem E2800 Controller mithilfe des Wartungsmodus
+= Aktualisieren Sie das SANtricity OS auf dem SG5700 E2800 Controller im Wartungsmodus
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,7 +49,7 @@ NOTE: Aktivieren Sie die Upgrade-Dateien sofort. Die Aktivierung darf nicht verz
 Es kann bis zu 20 Minuten dauern, bis das Gerät neu gestartet wird und sich wieder mit dem Netz verbindet.  So bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 
 +
-... Wählen Sie im Grid Manager *NODES* aus.
+... Im Grid Manager wählen Sie *Knoten* aus.
 ... Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 
 

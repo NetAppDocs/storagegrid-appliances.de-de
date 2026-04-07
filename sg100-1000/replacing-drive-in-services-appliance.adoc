@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
 summary: Die SSDs in der Services-Appliance enthalten das Betriebssystem StorageGRID. Wenn die Appliance als Admin-Node konfiguriert ist, enthalten die SSDs außerdem Prüfprotokolle, Kennzahlen und Datenbanktabellen. Die Laufwerke werden aus Redundanzgründen mithilfe von RAID1 gespiegelt. Wenn eines der Laufwerke ausfällt, müssen Sie es so schnell wie möglich ersetzen, um Redundanz sicherzustellen. 
 ---
-= Das Laufwerk in SG100 oder SG1000 austauschen
+= Ersetzen Sie ein Laufwerk in einem SG100 oder SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ CAUTION: Wenn Sie das Arbeitslaufwerk entfernen, wird der Appliance-Node herunte
 .Schritte
 . Stellen Sie sicher, dass die linke LED des zu ersetzenden Laufwerks gelb blinkt. Wenn im Grid Manager oder der BMC-Benutzeroberfläche ein Laufwerkproblem gemeldet wurde, beziehen sich HDD02 oder HDD2 auf das Laufwerk im oberen Steckplatz und HDD03 oder HDD3 auf das Laufwerk im unteren Steckplatz.
 +
-Sie können den Status der SSDs auch mit Grid Manager überwachen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Appliance Node*` > *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld Speicher-RAID-Modus eine Meldung darüber, welches Laufwerk ausgefallen ist.
+Sie können den Grid Manager auch verwenden, um den Status der SSDs zu überwachen. Wählen Sie *Knoten*. Wählen Sie dann  `*Appliance Node*` > *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld Storage RAID Mode eine Meldung darüber, welches Laufwerk ausgefallen ist.
 
 . Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
 . Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.
@@ -64,8 +64,8 @@ CAUTION: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
 Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
 
 +
-Das Laufwerk wird automatisch mit gespiegelten Daten aus dem Arbeitslaufwerk neu aufgebaut. Sie können den Status der Neuerstellung mithilfe des Grid Manager überprüfen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Appliance Node*` > *Hardware*. Das Feld Speicher-RAID-Modus enthält eine Meldung „`reBuilding`“, bis das Laufwerk komplett neu aufgebaut ist.
+Das Laufwerk wird automatisch mit gespiegelten Daten des funktionierenden Laufwerks wiederhergestellt. Den Status der Wiederherstellung können Sie im Grid Manager überprüfen. Wählen Sie *Knoten*. Wählen Sie dann  `*Appliance Node*` > *Hardware*. Im Feld „Storage RAID Mode“ wird die Meldung „`rebuilding`“ angezeigt, bis das Laufwerk vollständig wiederhergestellt ist.
 
 
 
-Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

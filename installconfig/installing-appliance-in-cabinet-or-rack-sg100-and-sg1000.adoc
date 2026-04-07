@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installing, installation, cabinet, rack, rail, rails 
 summary: Sie installieren eine Reihe von Schienen für das Gerät in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen. 
 ---
-= In Schrank oder Rack installieren (SG100 und SG1000)
+= Installieren Sie den SG100 oder SG1000 in einem Schrank oder Rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

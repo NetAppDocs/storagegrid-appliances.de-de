@@ -1,0 +1,59 @@
+---
+permalink: sg6200/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6260.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6260, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
+summary: 'Für Storage-Controller, die derzeit SANtricity OS verwenden, die älter als 08.42.20.00 \(11.42\) sind, müssen Sie das Verfahren des Wartungsmodus verwenden, um ein Upgrade durchzuführen.' 
+---
+= Aktualisieren Sie das SANtricity OS auf dem SG6260 Storage-Controller im Wartungsmodus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Wartungsmodus verwenden, um SANtricity OS auf dem SG6260 Controller zu aktualisieren.
+
+
+NOTE: Für Speicherkontroller, die derzeit SANtricity OS neuer als 08.42.20.00 (11.42) verwenden, wird empfohlen, link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6260.html["Verwenden Sie den Grid Manager, um ein Upgrade anzuwenden"]. Sie können jedoch auch das Verfahren im Wartungsmodus verwenden, wenn Sie dies bevorzugen oder vom technischen Support dazu aufgefordert wurden.
+
+.Über diese Aufgabe
+Führen Sie keine Upgrades des SANtricity Betriebssystems oder des NVSRAM im Storage Controller auf mehr als einer StorageGRID Appliance gleichzeitig durch.
+
+
+CAUTION: Wenn Sie mehrere StorageGRID Appliances gleichzeitig aktualisieren, kann dies in Abhängigkeit von Ihrem Implementierungsmodell und den ILM-Richtlinien zu Datenunverfügbarkeit führen.
+
+.Bevor Sie beginnen
+* Sie haben den konsultiert https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool (IMT)"^] Um sicherzustellen, dass die für das Upgrade verwendete SANtricity OS-Version mit Ihrer Appliance kompatibel ist.
+* Sie müssen den SG6260-Controller in link:../commonhardware/placing-appliance-into-maintenance-mode.html["Wartungsmodus"] versetzen, wodurch alle I/O-Vorgänge zu den E4000-Speichercontrollern gestoppt werden.
++
+
+NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.
+
+
+
+.Schritte
+. Überprüfen Sie, ob das Gerät in ist link:../commonhardware/placing-appliance-into-maintenance-mode.html["Wartungsmodus"].
+. Greifen Sie über ein Service-Laptop auf den SANtricity System Manager zu und melden Sie sich an.
+. Laden Sie die neue SANtricity OS Software-Datei und die NVSRAM-Datei auf den Management-Client herunter.
++
+
+CAUTION: Das NVSRAM bezieht sich auf die StorageGRID Appliance. Verwenden Sie den Standard-NVSRAM-Download nicht.
+
+. Befolgen Sie die Anweisungen in der https://docs.netapp.com/us-en/e-series-santricity/sm-support/upgrade-controller-software-and-firmware.html["_Upgrade von SANtricity OS_ Guide"^] oder der Online-Hilfe des SANtricity System Managers, um die Firmware und den NVSRAM zu aktualisieren.
++
+
+NOTE: Aktivieren Sie die Upgrade-Dateien sofort. Die Aktivierung darf nicht verzögert werden.
+
+. Wenn diese Prozedur erfolgreich abgeschlossen ist und Sie weitere durchzuführenden Verfahren haben, während sich der Node im Wartungsmodus befindet, führen Sie sie jetzt aus. Wenn Sie fertig sind oder Fehler auftreten und von vorne beginnen möchten, wählen Sie *Erweitert* > *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus
+** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt.  Wählen Sie diese Option aus, wenn während des Verfahrens Fehler auftreten und neu starten möchten.  Nachdem der Node das Neubooten in den Wartungsmodus abgeschlossen hat, starten Sie den entsprechenden Schritt während des ausgefallenen Verfahrens neu.
++
+Es kann bis zu 20 Minuten dauern, bis das Gerät neu startet und wieder dem Grid beitritt. Um zu bestätigen, dass der Neustart abgeschlossen ist und der Node wieder dem Grid beigetreten ist, kehren Sie zum Grid Manager zurück. Auf der Seite „Nodes“ sollte für den Appliance-Node ein normaler Status angezeigt werden (grünes Häkchen-Symbol image:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Node-Name), was anzeigt, dass keine Warnungen aktiv sind und der Node mit dem Grid verbunden ist.
+
+
+
+
+
+.Verwandte Informationen
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6260.html["Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager"]

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= E4000-Speicher-Controller (SG6160) austauschen
+= Ersetzen Sie einen E4000-Speichercontroller in einem SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -313,7 +313,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 . Wenn Sie die Appliance während dieses Vorgangs in den Wartungsmodus versetzt haben, beenden Sie den Wartungsmodus und warten Sie, bis der Knoten neu gestartet wird und sich wieder dem Grid anschließt.  Dieser Vorgang kann bis zu 20 Minuten dauern.  So bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 +
-.. Wählen Sie im Grid Manager *NODES* aus.
+.. Im Grid Manager wählen Sie *Knoten* aus.
 .. Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 
 
@@ -322,4 +322,4 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 .Was kommt als Nächstes?
 Der Austausch des Controllers ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.
 
-Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

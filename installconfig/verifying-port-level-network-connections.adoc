@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, ports, port, port-level, port level, test, testing, udp, Client Network, Admin Network 
 summary: Damit der Zugriff zwischen dem Installationsprogramm der StorageGRID Appliance und anderen Nodes nicht durch Firewalls beeinträchtigt wird, vergewissern Sie sich, dass der Installer von StorageGRID eine Verbindung zu einem bestimmten TCP-Port oder einem Satz von Ports an der angegebenen IP-Adresse oder dem angegebenen Adressbereich herstellen kann. 
 ---
-= Überprüfen Sie Netzwerkverbindungen auf Portebene
+= Überprüfen Sie die Netzwerkverbindungen auf Portebene an StorageGRID Appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

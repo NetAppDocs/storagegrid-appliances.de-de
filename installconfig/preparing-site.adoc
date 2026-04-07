@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: site prep, site preparation, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
 summary: Vor der Installation der Appliance müssen Sie sicherstellen, dass der Standort und das Rack, das Sie verwenden möchten, die Spezifikationen einer StorageGRID Appliance erfüllen. 
 ---
-= Standort vorbereiten
+= Bereiten Sie den Standort für die Installation des StorageGRID-Geräts vor
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,6 +33,13 @@ SG100 und SG1000
 SG110 und SG1100
  a| 
 100 bis 240 Volt Wechselstrom
+
+
+
+ a| 
+SG120 und SG1200
+ a| 
+240 Volt Wechselstrom
 
 
 
@@ -90,12 +97,22 @@ SG6160
  a| 
 240 Volt Wechselstrom
 
+
+
+ a| 
+SGF6212
+ a| 
+240 Volt Wechselstrom
+
+
+
+ a| 
+SG6260
+ a| 
+240 Volt Wechselstrom
+
 |===
 . Vergewissern Sie sich, dass Ihr Standort die Energieanforderungen für Ihr Gerät erfüllt:
-+
-
-NOTE: Die Netzteile in StorageGRID Appliances haben selbst in Zeiten des maximalen Stromverbrauchs eine deutlich höhere Nennleistung als die von StorageGRID Appliance verwendete Hardware. NetApp empfiehlt, mithilfe der Zahlen in der folgenden Tabelle zu bestimmen, ob ein vorgeschlagenes Rack-Layout, das StorageGRID Appliances enthält, mit Ihrem Rack-Leistungsbudget kompatibel ist.
-
 +
 [cols="1a,1a,1a"]
 |===
@@ -135,6 +152,24 @@ SG1100
 422
  a| 
 700
+
+
+
+ a| 
+SG120
+ a| 
+432
+ a| 
+519
+
+
+
+ a| 
+SG1200
+ a| 
+557
+ a| 
+668
 
 
 
@@ -208,7 +243,29 @@ SG6160
  a| 
 1800
 
+
+
+ a| 
+SGF6212
+ a| 
+673
+ a| 
+808
+
+
+
+ a| 
+SG6260
+ a| 
+580
+ a| 
+696
+
 |===
++
+
+NOTE: Die Netzteile der StorageGRID Appliances sind für deutlich höhere Wattzahlen ausgelegt, als die StorageGRID Appliance-Hardware selbst bei maximalem Stromverbrauch benötigt. NetApp empfiehlt, das  https://hwu.netapp.com["NetApp Hardware Universe"^] zu verwenden, um zu bestimmen, ob ein geplantes Rack-Layout mit StorageGRID Appliances mit Ihrem Rack-Strombudget kompatibel ist.
+
 . Beziehen Sie einen 19-Zoll-Schrank (48.3 cm) für die folgenden Regale (ohne Kabel).
 +
 [role="tabbed-block"]
@@ -262,6 +319,55 @@ SG6160
 43.83 lb.
 
 (19.88 kg)
+
+|===
+--
+.SG120 und SG1200
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Appliance-Modell | Höhe | Breite | Tiefe | Maximales Gewicht 
+
+
+ a| 
+SG120
+ a| 
+1.70 Zoll
+
+(4.32 cm)
+ a| 
+18.98 Zoll
+
+(48,21 cm)
+ a| 
+30,56 Zoll.
+
+(77,62 cm)
+ a| 
+42,13 lb.
+
+(19,11 kg)
+
+
+
+ a| 
+SG1200
+ a| 
+1.70 Zoll
+
+(4.32 cm)
+ a| 
+18.98 Zoll
+
+(48,21 cm)
+ a| 
+30,56 Zoll.
+
+(77,62 cm)
+ a| 
+43,43 Pfund
+
+(19,70 kg)
 
 |===
 --
@@ -553,15 +659,90 @@ Erweiterungs-Shelf (SG6160) – optional
 
 |===
 --
+.SG6200
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Appliance-Modell/Shelf-Typ | Höhe | Breite | Tiefe | Maximales Gewicht 
+
+
+ a| 
+SGF6212 Appliance
+ a| 
+1,70 Zoll (4,32 cm)
+ a| 
+18,98 Zoll (48,21 cm)
+ a| 
+30,56 Zoll (77,62 cm)
+ a| 
+55,98 lb. (25,39 kg)
+
+
+
+ a| 
+SG6200-CN Rechencontroller (SG6260)
+ a| 
+1,70 Zoll (4,32 cm)
+ a| 
+18,98 Zoll (48,21 cm)
+ a| 
+30,56 Zoll (77,62 cm)
+ a| 
+44,0 lb. (19,70 kg)
+
+
+
+ a| 
+E4060 Controller-Einschub (SG6260)
+ a| 
+6.87 Zoll
+
+(17.45 cm)
+ a| 
+17.64 Zoll
+
+(44.8 cm)
+ a| 
+36.3 Zoll
+
+(97.16 cm)
+ a| 
+223.58 lb.
+
+(101.42 kg)
+
+
+
+ a| 
+Erweiterungs-Shelf (SG6260) – Optional
+ a| 
+6.87 Zoll
+
+(17.45 cm)
+ a| 
+17.64 Zoll
+
+(44.8 cm)
+ a| 
+36.3 Zoll
+
+(97.16 cm)
+ a| 
+223.58 lb.
+
+(101.42 kg)
+
+|===
+--
 ====
 . Entscheiden Sie, wo Sie das Gerät installieren möchten.
 +
 
-CAUTION: Bei der Installation des E2860 oder E4000 Controller-Shelf oder der optionalen Erweiterungs-Shelfs installieren Sie die Hardware von unten nach oben an dem Rack oder Schrank, um ein Umkippen der Geräte zu verhindern. Um sicherzustellen, dass sich die schwerste Ausrüstung unten im Schrank oder Rack befindet, installieren Sie den SG6000-CN- oder SG6100-CN-Controller über dem E2860- oder E4000-Controller-Shelf und den Erweiterungs-Shelfs.
+CAUTION: Bei der Installation des Controller-Einschubs E2860 oder E4000 bzw. optionaler Erweiterungseinschübe montieren Sie die Hardware von unten nach oben im Rack oder Schrank, um ein Umkippen der Geräte zu verhindern. Um sicherzustellen, dass sich die schwersten Geräte unten im Schrank oder Rack befinden, installieren Sie den SG6000-CN, SG6100-CN oder SG6200-CN Controller über dem E2860 oder E4000 Controller-Einschub und den Erweiterungseinschüben.
 
 +
 
-NOTE: Vergewissern Sie sich vor der Installation, dass die mit einer SG6000- oder SG6100-Appliance gelieferten Kabel bzw. die von Ihnen gelieferten Kabel lang genug für das geplante Layout sind.
+NOTE: Bevor Sie mit der Installation beginnen, vergewissern Sie sich, dass die mit einem SG6000, SG6100 oder SG6200 Appliance gelieferten Kabel oder die von Ihnen bereitgestellten Kabel für die geplante Anordnung lang genug sind.
 
 . Installieren Sie alle erforderlichen Netzwerk-Switches. Siehe link:https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool"^] Informationen zur Kompatibilität.
 

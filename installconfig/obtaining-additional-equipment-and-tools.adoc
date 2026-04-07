@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: equipment to install appliance, tools for installation 
 summary: Vergewissern Sie sich vor der Installation eines StorageGRID-Geräts, dass Sie über alle zusätzlichen Geräte und Werkzeuge verfügen, die Sie benötigen. 
 ---
-= Beschaffen Sie sich zusätzliche Geräte und Werkzeuge
+= Zusätzliches Equipment und Werkzeug für StorageGRID-Geräte beschaffen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -83,7 +83,7 @@ Optische Kabel und Transceiver::
 *** 10-GbE QSFP-to-SFP-Adapter (QSA) und SFP+
 *** 25-GbE QSFP-zu-SFP-Adapter (QSA) und SFP28
 *** 40-GbE QSFP+
-*** 100-GbE-QFSP28
+*** 100-GbE-QSFP28
 
 
 
@@ -121,7 +121,46 @@ Optische Kabel und Transceiver::
 *** 10-GbE QSFP-to-SFP-Adapter (QSA) und SFP+
 *** 25-GbE QSFP-zu-SFP-Adapter (QSA) und SFP28
 *** 40-GbE QSFP+
-*** 100-GbE-QFSP28
+*** 100-GbE-QSFP28
+
+
+
+
+
+
+--
+Ethernet-Kabel:: RJ-45 (Kat. 5/Kat. 5e/Kat. 6/Kat. 6a)
+
+
+--
+.SG120 und SG1200
+--
+Für die Installation und Konfiguration der SG120- und SG1200-Hardware benötigen Sie folgende zusätzliche Ausrüstung.
+
+Optische Kabel und Transceiver::
++
+--
+* Kabel, 1 bis 4 von:
++
+** Twinax/Kupfer
+** Glasfaser/Optisch
+
+
+* Transceiver/Adapter, jeweils 1 bis 4 je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt):
++
+** SG120:
++
+*** 10-GbE SFP+
+*** 25-GbE-SFP28
+
+
+** SG1200:
++
+*** 10-GbE QSFP-to-SFP-Adapter (QSA) und SFP+
+*** 25-GbE QSFP-zu-SFP-Adapter (QSA) und SFP28
+*** 40-GbE QSFP+
+*** 100-GbE-QSFP28
+*** 200-GbE QSFP56 (nur 200GbE NIC)
 
 
 
@@ -211,6 +250,36 @@ Kabel und Transceiver::
 ** 10-GbE SFP+
 ** 25-GbE-SFP28
 ** 100-GbE-QSFP28
+
+
+
+
+--
+Ethernet-Kabel:: RJ-45 (Kat. 5/Kat. 5e/Kat. 6/Kat. 6a)
+Optionale Werkzeuge:: Mechanisierter Lift für 60-Laufwerk-Shelfs
+
+
+--
+.SG6200
+--
+Für die Installation und Konfiguration der SG6100-Hardware benötigen Sie die folgenden zusätzlichen Geräte:
+
+Kabel und Transceiver::
++
+--
+* Kabel, 1 bis 4 von:
++
+** Twinax/Kupfer
+** Glasfaser/Optisch
+
+
+* Transceiver/Adapter, jeweils 1 bis 8 je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt):
++
+** 10-GbE SFP+
+** 25-GbE-SFP28
+** 40-GbE QSFP+
+** 100-GbE-QSFP28
+** 200-GbE QSFP56 (nur 200 GbE NIC)
 
 
 

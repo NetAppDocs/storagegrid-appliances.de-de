@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: links, network links, configure, setup, set up, grid network connections, grid network connection, link speed, bond mode 
 summary: Sie können Netzwerkverbindungen für die Ports konfigurieren, die zum Verbinden der Appliance mit dem Grid-Netzwerk, dem Client-Netzwerk und dem Admin-Netzwerk verwendet werden. Sie können die Verbindungsgeschwindigkeit sowie den Port- und Netzwerk-Bond-Modus einstellen. 
 ---
-= Netzwerkverbindungen konfigurieren
+= Konfigurieren Sie Netzwerkverbindungen für eine StorageGRID Appliance
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,10 +40,12 @@ NOTE: Änderungen der LACP-PDU-Rate, die gemäß diesen Anweisungen vorgenommen 
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Port-Bond-Modi (SG1000 und SG100)"]
 * link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Port-Bond-Modi (SG1100 und SG110)"]
+* link:gathering-installation-information-sg120-and-sg1200.html#port-bond-modes["Port-Bond-Modi (SG1200 und SG120)"]
 * link:gathering-installation-information-sg5700.html#port-bond-modes["Port-Bond-Modi (E5700SG)"]
 * link:gathering-installation-information-sg5800.html#port-bond-modes["Port-Bond-Modi (SG5800)"]
 * link:gathering-installation-information-sg6000.html#port-bond-modes["Port-Bond-Modi (SG6000-CN)"]
 * link:gathering-installation-information-sg6100.html#port-bond-modes["Port-Bond-Modi (SGF6112 und SG6100-CN)"]
+* link:gathering-installation-information-sg6200.html#port-bond-modes["Port-Bond-Modi (SGF6212 und SG6200-CN)"]
 
 
 [role="tabbed-block"]
@@ -313,6 +315,141 @@ image::../media/sg1100_bonded_management_ports.png[Admin Network Ports, verbunde
 SG110:
 
 image::../media/sgf6112_bonded_management_ports.png[Admin Network Ports, verbunden mit SG110]
+
+--
+
+
+--
+.SG120 und SG1200
+--
+Bond-Modus mit festem Port (Standard)::
++
+--
+Die Abbildungen zeigen, wie die vier Netzwerkports des SG120 und SG1200 im festen Port-Bond-Modus (Standardkonfiguration) gebündelt sind.
+
+SG120:
+
+image::../media/sg120_fixed_port.png[SG120 Fixed Port Bond-Modus]
+
+SG1200:
+
+image::../media/sg1200_fixed_port.png[SG1200 Festport-Bond-Modus]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+C
+ a| 
+Die Ports 1 und 3 sind für das Client-Netzwerk verbunden, falls dieses Netzwerk verwendet wird.
+
+
+
+ a| 
+G
+ a| 
+Die Ports 2 und 4 sind für das Grid-Netzwerk verbunden.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der vier Netzwerkanschlüsse zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+[cols="1a,2a,2a"]
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
+
+
+ a| 
+Aktiv/Backup (Standard)
+ a| 
+* Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+* Die Ports 1 und 3 werden nicht verwendet.
+* Ein VLAN-Tag ist optional.
+
+ a| 
+* Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+* Die Ports 1 und 3 verwenden eine aktiv-Backup-Verbindung für das Client-Netzwerk.
+* VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+
+
+
+
+ a| 
+LACP (802.3ad)
+ a| 
+* Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+* Die Ports 1 und 3 werden nicht verwendet.
+* Ein VLAN-Tag ist optional.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Grid-Netzwerk“ angegeben werden.
+
+ a| 
+* Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+* Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
+* VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können in den Abschnitten „Grid-Netzwerk“ und „Client-Netzwerk“ angegeben werden.
+
+
+|===
+--
+Bond-Modus für aggregierten Ports::
++
+--
+Diese Abbildungen zeigen, wie die vier Netzwerk-Ports im aggregierten Port Bond-Modus verbunden sind.
+
+SG120:
+
+image::../media/sg120_aggregate_ports.png[SG120 Aggregat-Port-Bond-Modus]
+
+SG1200:
+
+image::../media/sg1200_aggregate_ports.png[SG1200-Aggregat-Port-Bond-Modus]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+1
+ a| 
+Alle vier Ports werden in einer einzelnen LACP Bond gruppiert, sodass alle Ports für den Grid-Netzwerk- und Client-Netzwerk-Traffic verwendet werden können.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+[cols="1a,2a,2a"]
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
+
+
+ a| 
+Nur LACP (802.3ad
+ a| 
+* Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
+* Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
+
+ a| 
+* Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
+* Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
+
+
+|===
+--
+Active-Backup Netzwerk-Bond-Modus für Management-Ports::
++
+--
+Diese Abbildungen zeigen, wie die beiden 1-GbE-Management-Ports auf den Appliances im Active-Backup-Netzwerk-Bond-Modus für das Admin-Netzwerk verbunden sind.
+
+SG120:
+
+image::../media/sg120_bonded_management_ports.png[Admin-Netzwerkports gebündelt SG120]
+
+SG1200:
+
+image::../media/sg1200_bonded_management_ports.png[Admin-Netzwerkports gebündelt SG1200]
 
 --
 
@@ -796,6 +933,141 @@ image::../media/sg6100_cn_bonded_management_ports.png[Admin Network Ports, verbu
 
 
 --
+.SG6200
+--
+Bond-Modus mit festem Port (Standard)::
++
+--
+Die Abbildung zeigt, wie die vier Netzwerk-Ports im Bond-Modus mit festen Ports verbunden sind (Standardkonfiguration).
+
+*SGF6212*:
+
+image::../media/sgf6212_fixed_port.png[SGF6212 Fixed Port Bond-Modus]
+
+*SG6200-CN*:
+
+image::../media/sg6200_cn_fixed_port.png[SG6200-CN Fester Port-Bond-Modus]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+C
+ a| 
+Die Ports 1 und 3 sind für das Client-Netzwerk verbunden, falls dieses Netzwerk verwendet wird.
+
+
+
+ a| 
+G
+ a| 
+Die Ports 2 und 4 sind für das Grid-Netzwerk verbunden.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+[cols="1a,2a,2a"]
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
+
+
+ a| 
+Aktiv/Backup (Standard)
+ a| 
+* Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+* Die Ports 1 und 3 werden nicht verwendet.
+* Ein VLAN-Tag ist optional.
+
+ a| 
+* Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+* Die Ports 1 und 3 verwenden eine aktiv-Backup-Verbindung für das Client-Netzwerk.
+* VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+
+
+
+
+ a| 
+LACP (802.3ad)
+ a| 
+* Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+* Die Ports 1 und 3 werden nicht verwendet.
+* Ein VLAN-Tag ist optional.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Grid-Netzwerk“ angegeben werden.
+
+ a| 
+* Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+* Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
+* VLAN-Tags können für beide Netzwerke festgelegt werden, damit der Netzwerkadministrator dies tun kann.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können in den Abschnitten „Grid-Netzwerk“ und „Client-Netzwerk“ angegeben werden.
+
+
+|===
+--
+Bond-Modus für aggregierten Ports::
++
+--
+Die Abbildung zeigt, wie die vier Netzwerk-Ports im aggregierten Port-Bond-Modus verbunden sind.
+
+*SGF6212*:
+
+image::../media/sgf6212_aggregate_ports.png[SGF6212 Aggregat-Port-Bond-Modus]
+
+*SG6200*:
+
+image::../media/sg6200_cn_aggregate_ports.png[SG6200-CN Aggregat-Port-Bond-Modus]
+
+[cols="1a,3a"]
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+1
+ a| 
+Alle vier Ports werden in einer einzelnen LACP Bond gruppiert, sodass alle Ports für den Grid-Netzwerk- und Client-Netzwerk-Traffic verwendet werden können.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der Netzwerkports zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+[cols="1a,2a,2a"]
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert | Client-Netzwerk aktiviert (Standard) 
+
+
+ a| 
+Nur LACP (802.3ad
+ a| 
+* Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
+* Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
+
+ a| 
+* Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
+* Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+* Die Werte für die LACP-PDU-Rate und die LACP-Übertragungs-Hash-Richtlinie können im Abschnitt „Link-Einstellungen“ angegeben werden.
+
+
+|===
+--
+Active-Backup Netzwerk-Bond-Modus für Management-Ports::
++
+--
+Diese Abbildung zeigt, wie die beiden 1-GbE-Management-Ports im Active-Backup-Netzwerk-Bond-Modus für das Admin-Netzwerk verbunden sind.
+
+*SGF6212*:
+
+image::../media/sgf6212_bonded_management_ports.png[Admin-Netzwerkports gebündelt SGF6212]
+
+*SG6200*:
+
+image::../media/sg6200_cn_bonded_management_ports.png[Admin-Netzwerkanschlüsse gebündelt SG6200-CN]
+
+--
+
+
+--
 ====
 .Schritte
 . Klicken Sie in der Menüleiste des StorageGRID-Appliance-Installationsprogramms auf *Netzwerke konfigurieren* > *Link-Konfiguration*.
@@ -827,12 +1099,12 @@ NOTE: Beim SG5800 ist der Verbindungsstatus für Port 1 in der Software nicht ve
 Die Netzwerk-Switches, die Sie für das Grid-Netzwerk und das Client-Netzwerk verwenden, müssen ebenfalls für diese Geschwindigkeit konfiguriert sein. Für die konfigurierte Verbindungsgeschwindigkeit müssen Sie die entsprechenden Adapter oder Transceiver verwenden. Verwenden Sie die automatische Verbindungsgeschwindigkeit, wenn möglich, da diese Option sowohl die Verbindungsgeschwindigkeit als auch den FEC-Modus (Forward Error Correction) mit dem Link-Partner verhandelt.
 
 +
-Falls Sie die 25-GbE-Verbindungsgeschwindigkeit für die SG6100-, SG6000-, SG5800- oder SG5700-Netzwerkports verwenden möchten:
+Wenn Sie die 25-GbE-Verbindungsgeschwindigkeit für die SG6200-, SG6100-, SG6000-, SG5800- oder SG5700-Netzwerkports verwenden möchten:
 
 +
 ** Verwenden Sie SFP28 Transceiver und SFP28 Twinax-Kabel oder optische Kabel.
 ** Wählen Sie für den SG5700 *25GbE* aus der Dropdown-Liste *Link Speed* aus.
-** Wählen Sie für den SG5800, SG6000 oder SG6100 aus der Dropdown-Liste *Verbindungsgeschwindigkeit* die Option *Auto* aus.
+** Wählen Sie für die SG5800, SG6000, SG6100 oder SG6200 in der Dropdown-Liste *Link speed* die Option *Auto* aus.
 
 
 . Aktivieren oder deaktivieren Sie die StorageGRID-Netzwerke, die Sie verwenden möchten.

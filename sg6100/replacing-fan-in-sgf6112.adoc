@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, sg6100-cn, sg6160, storage appliance, Replacing, replace, fan, remove, removing, removal, install, installing 
 summary: Die Appliance SGF6112 und der Controller SG6100-CN verfügen über acht Lüfter. Wenn einer der Lüfter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät ordnungsgemäß gekühlt wird. 
 ---
-= Lüfter in SGF6112 oder SG6100-CN (SG6160) austauschen
+= Ersetzen Sie einen Lüfter im SGF6112 oder SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -132,4 +132,4 @@ Verwenden Sie die BMC-Schnittstelle, um den Boot-up-Status zu überwachen.
 . Vergewissern Sie sich, dass der Appliance-Node im Grid Manager angezeigt wird und keine Meldungen angezeigt werden.
 
 
-Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

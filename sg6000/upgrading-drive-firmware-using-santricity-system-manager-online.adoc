@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, upgrade, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
 ---
-= Aktualisieren Sie die Firmware des SG6000 Laufwerks mithilfe von SANtricity System Manager über die Online-Methode
+= Aktualisieren Sie die SG6000-Laufwerk-Firmware mit der Online-Methode des SANtricity System Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,7 +35,7 @@ Es gibt zwei Laufwerkstypen: SSD und HDD. Sie müssen den verwenden link:upgradi
 . Greifen Sie mit einer der folgenden Methoden auf SANtricity System Manager zu:
 +
 ** Verwenden Sie das StorageGRID-Appliance-Installationsprogramm, und wählen Sie *Erweitert* > *SANtricity-Systemmanager*
-** Verwenden Sie den Grid-Manager, und wählen Sie *NODES* > *_Storage Node_* > *SANtricity System Manager* aus
+** Verwenden Sie den Grid Manager und wählen Sie *Knoten* > *_Speicherknoten_* > *SANtricity System Manager*
 ** Verwenden Sie SANtricity System Manager, indem Sie zur Storage Controller-IP navigieren:
 +
 `*https://_Storage_Controller_IP_*`

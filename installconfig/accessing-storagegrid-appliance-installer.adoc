@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: appliance installer, installer, access, accessing, start, starting 
 summary: 'Sie müssen auf das Installationsprogramm der StorageGRID-Appliance zugreifen, um die Installationsversion zu überprüfen und die Verbindungen zwischen der Appliance und den drei StorageGRID-Netzwerken zu konfigurieren: Das Grid-Netzwerk, das Admin-Netzwerk \ (optional\) und das Client-Netzwerk \ (optional\).' 
 ---
-= Rufen Sie das Installationsprogramm für StorageGRID-Appliances auf
+= Zugriff auf den StorageGRID Appliance Installer
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,6 +13,9 @@ summary: 'Sie müssen auf das Installationsprogramm der StorageGRID-Appliance zu
 [role="lead"]
 Sie müssen auf das Installationsprogramm der StorageGRID Appliance zugreifen, um die Installationsversion zu überprüfen und die Verbindungen zwischen der Appliance und den drei StorageGRID-Netzwerken zu konfigurieren: Das Grid-Netzwerk, das Admin-Netzwerk (optional) und das Client-Netzwerk (optional).
 
+.Über diese Aufgabe
+Für den ersten Zugriff auf das Installationsprogramm der StorageGRID-Appliance können Sie die DHCP-zugewiesene IP-Adresse für den Port des Admin-Netzwerks auf der Services-Appliance oder dem Controller der Storage-Appliance verwenden (vorausgesetzt, es ist mit dem Admin-Netzwerk verbunden). Alternativ können Sie einen Service-Laptop direkt an die Service-Appliance oder den Controller der Storage-Appliance anschließen.
+
 .Bevor Sie beginnen
 * Sie verwenden einen beliebigen Management-Client, der eine Verbindung zum StorageGRID-Admin-Netzwerk herstellen kann, oder Sie haben einen Service-Laptop.
 * Der Client oder Service-Laptop hat eine https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
@@ -20,9 +23,6 @@ Sie müssen auf das Installationsprogramm der StorageGRID Appliance zugreifen, u
 * Sie kennen die IP-Adresse, das Gateway und das Subnetz für die Service-Appliance oder den Storage-Appliance-Controller in diesen Netzwerken.
 * Sie haben die geplanten Netzwerk-Switches konfiguriert.
 
-
-.Über diese Aufgabe
-Für den ersten Zugriff auf das Installationsprogramm der StorageGRID-Appliance können Sie die DHCP-zugewiesene IP-Adresse für den Port des Admin-Netzwerks auf der Services-Appliance oder dem Controller der Storage-Appliance verwenden (vorausgesetzt, es ist mit dem Admin-Netzwerk verbunden). Alternativ können Sie einen Service-Laptop direkt an die Service-Appliance oder den Controller der Storage-Appliance anschließen.
 
 .Schritte
 . Verwenden Sie, falls möglich, die DHCP-Adresse für den Admin-Netzwerk-Port auf der Service-Appliance oder dem Controller der Storage-Appliance. Der Admin-Netzwerkanschluss ist in der folgenden Abbildung hervorgehoben. (Verwenden Sie die IP-Adresse im Grid-Netzwerk, wenn das Admin-Netzwerk nicht verbunden ist.)
@@ -39,6 +39,11 @@ image::../media/sg100_admin_network_port.png[Admin-Netzwerk-Port auf dem SG100]
 image::../media/sg6100_admin_network_port.png[Admin-Netzwerk-Port auf dem SG110]
 
 --
+.SG120
+--
+image::../media/sg120_admin_network_port.png[Admin-Netzwerkanschluss am SG120]
+
+--
 .SG1000
 --
 image::../media/sg1000_admin_network_port.png[Admin-Netzwerk-Port auf der SG1000]
@@ -47,6 +52,11 @@ image::../media/sg1000_admin_network_port.png[Admin-Netzwerk-Port auf der SG1000
 .SG1100
 --
 image::../media/sg1100_admin_network_port.png[Admin-Netzwerk-Port auf der SG1100]
+
+--
+.SG1200
+--
+image::../media/sg1200_admin_network_port.png[Admin-Netzwerkanschluss am SG1200]
 
 --
 .E5700SG
@@ -89,9 +99,19 @@ image::../media/sg6000_cn_admin_network_port.png[Admin-Netzwerk-Port am SG6000-C
 image::../media/sg6100_cn_admin_network_port.png[Admin-Netzwerk-Port am SG6000-CN Controller]
 
 --
+.SG6200-CN
+--
+image::../media/sg6200_cn_admin_network_port.png[Admin-Netzwerkanschluss am SG6200-CN-Controller]
+
+--
 .SGF6112
 --
 image::../media/sg6100_admin_network_port.png[Admin-Netzwerk-Port auf der SGF6112]
+
+--
+.SGF6212
+--
+image::../media/sgf6212_admin_network_port.png[Admin-Netzwerkanschluss am SGF6212]
 
 --
 ====
@@ -129,6 +149,13 @@ Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den
 image::../media/sg6100_link_local_port.png[SG110 Link-Local Connection]
 
 --
+.SG120
+--
+Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den ganz rechts am RJ-45-Port der Appliance an.
+
+image::../media/sg120_link_local_port.png[SG120 Link-Local-Verbindung]
+
+--
 .SG1000
 --
 Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den rechtesten RJ-45-Port des Services-Geräts an.
@@ -141,6 +168,13 @@ image::../media/sg1000_link_local_port.png[SG1000-Link-Local-Verbindung]
 Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den ganz rechts am RJ-45-Port der Appliance an.
 
 image::../media/sg1100_link_local_port.png[SG1100 Link-Local Connection]
+
+--
+.SG1200
+--
+Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den ganz rechts am RJ-45-Port der Appliance an.
+
+image::../media/sg1200_link_local_port.png[SG1200 Link-Local-Verbindung]
 
 --
 .E5700SG
@@ -171,11 +205,25 @@ Verbinden Sie einen Service-Laptop über ein Ethernet-Kabel direkt mit dem am re
 image::../media/sg6100_cn_link_local_port.png[Standort des Management-Ports für SG6100-CN]
 
 --
+.SG6200-CN
+--
+Verbinden Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt mit dem ganz rechts befindlichen RJ-45-Anschluss am SG6200-CN-Controller.
+
+image::../media/sg6200_cn_link_local_port.png[Standort des Management-Ports für SG6200-CN]
+
+--
 .SGF6112
 --
 Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den ganz rechts am RJ-45-Port der Appliance an.
 
 image::../media/sg6100_link_local_port.png[SGF6112-Link-Local-Verbindung]
+
+--
+.SGF6212
+--
+Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den ganz rechts am RJ-45-Port der Appliance an.
+
+image::../media/sgf6212_link_local_port.png[SGF6212 Link-Local-Verbindung]
 
 --
 ====

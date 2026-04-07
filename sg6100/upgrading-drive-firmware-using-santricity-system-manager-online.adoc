@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
 ---
-= Upgrade der Firmware des SG6100 Laufwerks mithilfe der SANtricity System Manager Online-Methode (SG6160)
+= Aktualisieren Sie die SG6160-Laufwerk-Firmware mit der SANtricity-Online-Methode
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,7 +36,7 @@ Laufwerke, die zu Volumes ohne Redundanz gehören, müssen mithilfe des aktualis
 . Greifen Sie mit einer der folgenden Methoden auf SANtricity System Manager zu:
 +
 ** Verwenden Sie das StorageGRID-Appliance-Installationsprogramm, und wählen Sie *Erweitert* > *SANtricity-Systemmanager*
-** Verwenden Sie den Grid-Manager, und wählen Sie *NODES* > *_Storage Node_* > *SANtricity System Manager* aus
+** Verwenden Sie den Grid Manager und wählen Sie *Knoten* > *_Speicherknoten_* > *SANtricity System Manager*
 ** Verwenden Sie SANtricity System Manager, indem Sie zur Storage Controller-IP navigieren:
 +
 `*https://_Storage_Controller_IP_*`

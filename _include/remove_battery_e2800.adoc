@@ -73,14 +73,14 @@ Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metall
 . Drehen Sie den Controller um, um zu bestätigen, dass der Akku korrekt installiert ist.
 +
 
-CAUTION: *Mögliche Hardware-Schäden* -- der Metallflansch an der Vorderseite der Batterie muss vollständig in den Schlitz am Controller eingesetzt werden (wie in der ersten Abbildung dargestellt). Wenn die Batterie nicht richtig eingesetzt ist (wie in der zweiten Abbildung dargestellt), kann der Metallflansch die Controllerplatine kontaktieren, was zu Schäden führt.
+CAUTION: *Mögliche Hardwarebeschädigung* – Der Metallflansch an der Vorderseite des Akkus muss vollständig in den Steckplatz des Controllers eingesetzt sein (siehe erste Abbildung). Ist der Akku nicht korrekt eingesetzt (siehe zweite Abbildung), kann der Metallflansch die Controllerplatine berühren und diese beschädigen.
 
 +
 ** *Korrekt -- der Metallflansch der Batterie ist vollständig in den Schlitz am Controller eingesetzt:*
 +
 image::../media/e2800_battery_flange_ok.gif[Batterieflansch Korrekt]
 
-** *Falsch -- der Metallflansch der Batterie ist nicht in den Steckplatz an der Steuerung eingefügt:*
+** *Falsch – Der Metallflansch der Batterie ist nicht in den Schlitz am Controller eingesetzt:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Batterieflansch Nicht Korrekt]
 

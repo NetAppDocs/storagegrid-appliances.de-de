@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unpack, unbox, prepare, inventory, components, contents 
 summary: Packen Sie vor der Installation des StorageGRID-Geräts alle Kartons aus und vergleichen Sie den Inhalt mit den Artikeln auf dem Verpackungsschein. 
 ---
-= Packen Sie die Kartons aus
+= Packen Sie die StorageGRID Gerätekartons aus.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -72,6 +72,42 @@ Frontblende::
 image::../media/sgf_6112_front_bezel.png[Frontblende]
 
 --
+
+
+* * Netzkabel*
++
+
+TIP: Ihr Schrank verfügt möglicherweise über spezielle Netzkabel, die Sie anstelle der Netzkabel verwenden, die Sie zur Einheit mit dem Gerät anschließen.
+
++
+Zwei Netzkabel für dein Land::
++
+--
+image::../media/power_cords.gif[Stromkabel]
+
+--
+
+
+
+
+--
+.SG120 und SG1200
+--
+* *Hardware*
++
+SG120 oder SG1200::
++
+--
+image::../media/sg120_front_view.png[Frontlaufwerke SG120 und SG1200 Appliances]
+
+--
+Schienensatz mit Anleitung::
++
+--
+image::../media/rail_kit.gif[Schienensatz]
+
+--
+Blende (nicht abgebildet)::
 
 
 * * Netzkabel*
@@ -518,6 +554,128 @@ Frontblende::
 image::../media/sgf_6112_front_bezel.png[Frontblende]
 
 --
+
+
+* * Netzkabel*
++
+
+TIP: Ihr Schrank verfügt möglicherweise über spezielle Netzkabel, die Sie anstelle der Netzkabel verwenden, die Sie zur Einheit mit dem Gerät anschließen.
+
++
+Zwei Netzkabel für dein Land::
++
+--
+image::../media/power_cords.gif[Stromkabel]
+
+--
+
+
+
+
+--
+.SG6200
+--
+* *SG6260 Hardware*
++
+SG6200-CN Controller::
++
+--
+image::../media/s25_front_with_ssds.png[SG6200-CN Controller]
+
+--
+E4000 Controller Shelf ohne installierte Laufwerke::
++
+--
+image::../media/de460c_table_size.gif[E4000 4U-Controller]
+
+--
+Zwei Frontblenden (nicht abgebildet)::
++
+--
+image::../media/rail_kit.gif[Schienensatz]
+
+--
+60 NL-SAS-Laufwerke::
++
+--
+image::../media/sg5760_drive.gif[60 NL-SAS-Laufwerke]
+
+--
+Vier Griffe::
++
+--
+image::../media/handles.gif[E4000 Griffe]
+
+--
+Rückhalterungen und Käfigmuttern für Rack-Montage mit Vierkantloch::
++
+--
+image::../media/back_brackets_table_size.gif[Rückenhalterungen und Käfigmuttern für SG5860]
+
+--
+Ein Breakout-Kabel mit 100 GbE auf 4x25 GbE::
++
+--
+image::../media/sg6100_4x25gbe_spf28_cable.png[Breakout-Kabel mit 100 GbE auf 4x25 GbE]
+
+--
+Vier Netzkabel für Ihr Land::
++
+--
+image::../media/power_cords.gif[Stromkabel]
+
+--
+
+
+* *SG6260 Erweiterungsfach*
++
+Erweiterungs-Shelf ohne Laufwerke installiert::
++
+--
+image::../media/de460c_table_size.gif[E4000 4U-Controller]
+
+--
+Blende (nicht abgebildet)::
++
+--
+image::../media/sg5760_drive.gif[Laufwerk]
+
+--
+Ein Schienensatz mit Anweisungen::
++
+--
+image::../media/rail_kit.gif[Schienensatz]
+
+--
+Vier Griffe::
++
+--
+image::../media/handles.gif[E4000 Griffe]
+
+--
+Rückhalterungen und Käfigmuttern für Rack-Montage mit Vierkantloch::
++
+--
+image::../media/back_brackets_table_size.gif[Rückenhalterungen und Käfigmuttern für SG5860]
+
+--
+
+
+* *SGF6212 Hardware*
++
+SGF6212::
++
+--
+image::../media/s25_front_with_ssds.png[Frontlaufwerke SGF6212 Appliance]
+
+--
+Schienensatz mit Anleitung::
++
+--
+image::../media/rail_kit.gif[Schienensatz]
+
+--
+Blende (nicht abgebildet)::
 
 
 * * Netzkabel*

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, storage controller shelf, Battery, Drive, Power canister, power supply, Fan canister, fan, Drive drawer 
 summary: Wenn ein Hardwareproblem auftritt, müssen Sie möglicherweise eine Komponente im Storage-Controller-Shelf ersetzen. 
 ---
-= Ersetzen Sie Hardwarekomponenten im SG6000 Storage-Controller-Shelf
+= Tauschen Sie die Hardwarekomponenten im SG6000-Speichercontroller-Gehäuse aus
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -73,4 +73,4 @@ Laufwerkseinschub (nur Shelfs mit 60 Laufwerken)
 E-Series: Auswechseln der Laufwerkschublade (60 Laufwerke)
 
 |===
-Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, upgrade, firmware, drive, disk, automatic 
 summary: Der StorageGRID Appliance Installer installiert beim Neustart der Appliance automatisch die neuesten Firmware-Dateien für E-Series-Laufwerke. 
 ---
-= Automatisches Upgrade der SG5800-Laufwerksfirmware während des Neustarts der Appliance
+= Upgrade der SG5800-Laufwerk-Firmware erfolgt beim Neustart automatisch.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

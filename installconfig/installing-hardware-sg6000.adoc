@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, sg6000, sg6060, sgf6024, expansion shelf, cabinet, rack, drives 
 summary: Beim SG6060 und SGF6024 installieren Sie Schienen in Ihrem Schrank oder Rack und schieben das Controller-Shelf, alle Erweiterungseinschübe und den Compute-Controller auf die Schienen. Installieren Sie beim SG6060 die Laufwerke erst in jedem Shelf, wenn die Shelfs installiert sind. 
 ---
-= In Schrank oder Rack installieren (SG6000)
+= Installieren Sie den SG6000 in einem Schrank oder Rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -2,18 +2,42 @@
 permalink: installconfig/configuring-bmc-interface.html 
 sidebar: sidebar 
 keywords: BMC, baseboard management controller, configure, setup, set up 
-summary: 'Die Benutzeroberfläche des Baseboard Management Controllers \(BMC\) auf der SG6100-, SG6000- oder Services-Appliance liefert Statusinformationen zur Hardware und ermöglicht Ihnen die Konfiguration von SNMP-Einstellungen und anderen Optionen für die Appliances.' 
+summary: 'Die Benutzeroberfläche für den Baseboard Management Controller (BMC) auf dem SG6200, SG6100, SG6000 oder der Services Appliance liefert Statusinformationen über die Hardware und ermöglicht die Konfiguration von SNMP-Einstellungen und anderen Optionen für die Appliances.' 
 ---
-= BMC-SCHNITTSTELLE: ÜBERBLICK (SG100, SG110, SG1000, SG1100, SG6000, und SG6100)
+= BMC-Schnittstelle für SG6000-, SG6100- und SG6200-StorageGRID-Appliances und Service-Appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die Benutzeroberfläche des Baseboard Management Controllers (BMC) auf der SG6100-, SG6000- oder Services-Appliance liefert Statusinformationen zur Hardware und ermöglicht die Konfiguration von SNMP-Einstellungen und anderen Optionen für die Appliances.
+Die Benutzeroberfläche des Baseboard Management Controllers (BMC) liefert Statusinformationen über Ihre Hardware und ermöglicht den Zugriff auf die Hardware auf niedriger Ebene für die Gerätekonfiguration, Überwachung und Diagnose.
 
-Gehen Sie wie folgt vor, um den BMC bei der Installation des Geräts zu konfigurieren:
+Sie können das BMC für Folgendes verwenden:
+
+* Beheben Sie Probleme bei der Hardwareinstallation
+* Konfigurieren Sie die SNMP-Einstellungen
+* Ermitteln Sie den Energiestatus Ihres Geräts
+* Steuern Sie die Identitäts-LED an Ihrem Gerät
+
+
+Die folgenden StorageGRID Appliances unterstützen die BMC-Schnittstelle:
+
+* SG100
+* SG110
+* SG120
+* SG1000
+* SG1100
+* SG1200
+* SGF6024
+* SGF6112
+* SGF6212
+* SG6060
+* SG6160
+* SG6260
+
+
+Wenn Sie Ihr Gerät installieren, verwenden Sie die folgenden Verfahren zur Konfiguration des BMC:
 
 * link:../installconfig/changing-root-password-for-bmc-interface.html["Ändern Sie das Admin- oder Root-Passwort für die BMC-Schnittstelle"]
 * link:../installconfig/setting-ip-address-for-bmc-management-port.html["Legen Sie die IP-Adresse für den BMC-Managementport fest"]
@@ -22,12 +46,10 @@ Gehen Sie wie folgt vor, um den BMC bei der Installation des Geräts zu konfigur
 * link:../installconfig/setting-up-email-notifications-for-alerts.html["E-Mail-Benachrichtigungen für BMC-Warnungen einrichten"]
 
 
-[NOTE]
-====
-Wenn die Appliance bereits in einem Grid installiert wurde und StorageGRID-Software ausgeführt wird, gehen Sie wie folgt vor:
+Wenn Sie das Gerät bereits in ein Grid integriert haben und darauf StorageGRID-Software läuft, gehen Sie wie folgt vor:
 
 * link:../commonhardware/placing-appliance-into-maintenance-mode.html["Stellen Sie das Gerät in den Wartungsmodus"] Um auf das Installationsprogramm für die StorageGRID Appliance zuzugreifen.
-* Siehe link:../installconfig/setting-ip-address-for-bmc-management-port.html["Legen Sie die IP-Adresse für den BMC-Managementport fest"] Für Informationen über den Zugriff auf die BMC-Schnittstelle mithilfe des StorageGRID-Appliance-Installationsprogramms.
+* Weitere Informationen zum Zugriff auf die BMC-Schnittstelle mithilfe des StorageGRID Appliance Installers finden Sie unter link:../installconfig/setting-ip-address-for-bmc-management-port.html["Legen Sie die IP-Adresse für den BMC-Managementport fest"].
 
 
-====
+Um mehr über die Funktionen zu erfahren, die Sie mit dem BMC nach der Konfiguration nutzen können, lesen Sie bitte link:../commonhardware/use-bmc.html["Verwenden Sie die BMC-Schnittstelle"] und die  https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["BMC-Benutzerhandbuch"^].

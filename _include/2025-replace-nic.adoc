@@ -1,0 +1,118 @@
+= Schritt 1: Netzwerkkarte entfernen
+:allow-uri-read: 
+
+
+
+
+== Schritt 1: Netzwerkkarte entfernen
+
+[role="tabbed-block"]
+====
+.NIC 1/NIC 2
+--
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Suchen Sie die Riserbaugruppe, in der sich die NIC auf der Rückseite des Geräts befindet.
+. Drehen Sie den blauen Verriegelungsriegel am Steigrohr mit der defekten Netzwerkkarte nach oben und offen.
++
+image:../media/drw_s2025_io_1_2_replace_ieops-2555.svg["Entfernen von NIC 1 oder NIC 2 aus der Riser-Baugruppe"]
+
+. Heben Sie die Riser-Baugruppe mit der defekten NIC vorsichtig an den blau markierten Löchern nach oben. Bewegen Sie die Riser-Baugruppe beim Anheben in Richtung der Vorderseite des Gehäuses, damit die externen Anschlüsse in der installierten NIC das Gehäuse freigeben.
+. Platzieren Sie die Riser-Schiene mit der Metallrahmenseite nach unten auf einer ebenen, antistatischen Oberfläche, um Zugang zum NIC zu erhalten.
+. Öffnen Sie die blaue Verriegelung an der defekten NIC und entnehmen Sie sie vorsichtig aus der Riser-Einheit. Bewegen Sie die NIC leicht hin und her, um sie aus dem Anschluss zu lösen. Wenden Sie dabei keine übermäßige Kraft an.
++
+image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Entfernen einer E/A-Karte aus der Riser-Baugruppe"]
+
+. Platzieren Sie das Riser und den NIC auf einer ebenen, antistatischen Oberfläche.
+
+
+--
+.NIC 3
+--
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Drehen Sie die blaue Verriegelung am Steigrohr mit der defekten Netzwerkkarte in die offene Position.
++
+image:../media/drw_s2025_io_3_replace_ieops-2556.svg["Entfernen der Netzwerkkarte 3 aus der Riser-Baugruppe"]
+
+. Heben Sie die Riser-Baugruppe vorsichtig an der blau markierten Öffnung und der Riser-Kante nach oben. Bewegen Sie die Riser-Baugruppe beim Anheben in Richtung der Vorderseite des Gehäuses, damit die externen Anschlüsse in der installierten NIC das Gehäuse passieren können.
+. Platzieren Sie die Riser-Schiene mit der Metallrahmenseite nach unten auf einer ebenen, antistatischen Oberfläche, um Zugang zum NIC zu erhalten.
+. Öffnen Sie die blaue Verriegelung an der defekten NIC und entnehmen Sie sie vorsichtig aus der Riser-Einheit. Bewegen Sie die NIC leicht hin und her, um sie aus dem Anschluss zu lösen. Wenden Sie dabei keine übermäßige Kraft an.
++
+image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Entfernen einer E/A-Karte aus der Riser-Baugruppe"]
+
+. Platzieren Sie das Riser und den NIC auf einer ebenen, antistatischen Oberfläche.
+
+
+--
+====
+
+
+== Schritt 2: Installieren Sie die interne Netzwerkkarte neu
+
+Installieren Sie die Ersatz-NIC an derselben Stelle wie die entfernte.
+
+[role="tabbed-block"]
+====
+.NIC 1/NIC 2
+--
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Nehmen Sie die Ersatz-NIC aus der Verpackung.
+. Installieren Sie die Ersatz-Netzwerkkarte in die Riser-Baugruppe.
++
+.. Stellen Sie sicher, dass sich die blaue Verriegelung in der geöffneten Position befindet.
++
+image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Einbau einer E/A-Karte in die Riser-Baugruppe"]
+
+.. Richten Sie die Netzwerkkarte an ihrem Anschluss auf der Riser-Baugruppe aus. Drücken Sie die Netzwerkkarte vorsichtig in den Anschluss, bis sie vollständig eingerastet ist, und schließen Sie dann die blaue Verriegelung.
+
+
+. Bauen Sie die Riser-Baugruppe wieder in das Chassis ein.
++
+.. Suchen Sie die Ausrichtungsbohrung an der Riser-Baugruppe, die mit einem Führungsstift auf der Systemplatine übereinstimmt, um die korrekte Positionierung der Riser-Baugruppe sicherzustellen.
++
+image:../media/drw_s2025_io_1_2_reinstall_ieops-2685.svg["Austausch von NIC 1 oder NIC 2 in der Riser-Baugruppe"]
+
+.. Positionieren Sie die Riser-Baugruppe im Gehäuse, und achten Sie darauf, dass sie mit dem Anschluss auf der Systemplatine und dem Führungsstift ausgerichtet ist.
+.. Drücken Sie die Riserbaugruppe vorsichtig entlang der Mittellinie neben den blau markierten Löchern, bis sie vollständig sitzt.
+
+
+. Wenn Sie keine weiteren Wartungsmaßnahmen im Gerät durchführen müssen, setzen Sie die Geräteabdeckung wieder ein, bringen Sie das Gerät wieder in das Rack ein, schließen Sie die Kabel an und schalten Sie das Gerät mit Strom aus.
+
+
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.
+
+--
+.NIC 3
+--
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Nehmen Sie die Ersatz-NIC aus der Verpackung.
+. Installieren Sie die Ersatz-Netzwerkkarte in die Riser-Baugruppe.
++
+.. Stellen Sie sicher, dass sich die blaue Verriegelung in der geöffneten Position befindet.
++
+image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Einbau einer E/A-Karte in die Riser-Baugruppe"]
+
+.. Richten Sie die Netzwerkkarte an ihrem Anschluss auf der Riser-Baugruppe aus. Drücken Sie die Netzwerkkarte vorsichtig in den Anschluss, bis sie vollständig eingerastet ist, und schließen Sie dann die blaue Verriegelung.
+
+
+. Bauen Sie die Riser-Baugruppe wieder in das Chassis ein.
++
+.. Positionieren Sie die Riser-Baugruppe im Gehäuse und achten Sie darauf, dass die Kanten der Riser-Baugruppe korrekt mit den Kanten des Gehäuses übereinstimmen.
++
+image:../media/drw_s2025_IO_3_replace_ieops-2686.svg["Austausch von NIC 3 in der Riser-Baugruppe"]
+
+.. Drücken Sie die Steigrohrbaugruppe vorsichtig entlang ihrer Mittellinie neben dem blau markierten Loch an ihren Platz, bis sie vollständig eingerastet ist.
+.. Drehen Sie den blauen Verschluss am Steigrohr in die geschlossene Position.
+
+
+. Entfernen Sie die Schutzkappen von den NIC-Ports, an denen Sie die Kabel neu installieren.
+. Wenn Sie keine weiteren Wartungsmaßnahmen im Gerät durchführen müssen, setzen Sie die Geräteabdeckung wieder ein, bringen Sie das Gerät wieder in das Rack ein, schließen Sie die Kabel an und schalten Sie das Gerät mit Strom aus.
+
+
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.
+
+--
+====

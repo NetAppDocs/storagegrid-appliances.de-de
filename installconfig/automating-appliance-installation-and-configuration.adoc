@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: automate, automating, automation, automatic, install, installation, configuration, configure 
 summary: Eine Automatisierung von Installation und Konfiguration kann sich bei der Implementierung mehrerer StorageGRID Instanzen oder einer großen, komplexen StorageGRID Instanz als nützlich erweisen. 
 ---
-= Automatisierung der Appliance-Installation und -Konfiguration
+= Automatisieren Sie die Installation und Konfiguration der StorageGRID-Appliance
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
 summary: Sie installieren einen Satz Schienen für das E2860-Controller-Shelf in Ihrem Schrank oder Rack und schieben das Controller-Shelf dann auf die Schienen. Bei Installation der Erweiterungs-Shelfs für 60 Laufwerke gilt dasselbe Verfahren. 
 ---
-= Installation von Shelfs mit 60 Laufwerken (SG6060)
+= Installieren Sie die 60-Laufwerksregale für ein SG6060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

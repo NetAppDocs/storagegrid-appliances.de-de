@@ -1,10 +1,10 @@
 ---
 permalink: commonhardware/manage-drives-tab.html 
 sidebar: sidebar 
-keywords: sgf6112, sg110, sg1100, sg6160, manage drives tab, locate drive, fail drive, logically replace drive 
+keywords: sgf6112, sg110, sg1100, sg6160, sg6200, sg6260, sgf6212 manage drives tab, locate drive, fail drive, logically replace drive 
 summary: Auf der Registerkarte Laufwerke verwalten im Grid Manager können Sie Fehlerbehebungs- und Wartungsaufgaben für Laufwerke für Geräte durchführen, die diese Funktion unterstützen. 
 ---
-= Verwenden Sie die Registerkarte Laufwerke managen (SG110, SG1100, SGF6112 und SG6160).
+= Verwenden Sie die Registerkarte „Laufwerke verwalten“ für die SG110, SG120, SG1100, SG1200, SG6100 und SG6200 StorageGRID Appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,7 +50,7 @@ image:../media/manage_drives_tab_details.png["Registerkarte Laufwerke verwalten 
 
 So finden Sie ein Laufwerk in der Appliance physisch:
 
-. Wählen Sie im Grid Manager *NODES* > *_Data Center_* aus.
+. Im Grid Manager wählen Sie *Knoten* > *_data center_*.
 . Wählen Sie *_Appliance Storage Node_* > *Manage Drives* > *Layout* > *_Drive_*.
 +
 Das Fenster mit den Laufwerkdetails wird angezeigt.
@@ -70,7 +70,7 @@ Das Fenster mit den Laufwerkdetails wird angezeigt.
 
 Wenn ein Laufwerk in der Speicher-Appliance neu erstellt oder neu initialisiert werden muss:
 
-. Wählen Sie im Grid Manager *NODES* > *_Data Center_* aus.
+. Im Grid Manager wählen Sie *Knoten* > *_data center_*.
 . Wählen Sie *_Appliance Storage Node_* > *Manage Drives* > *Layout* > *_Drive_*.
 +
 Das Fenster mit den Laufwerkdetails wird angezeigt.
@@ -87,7 +87,7 @@ Im Detailbereich des Laufwerks zeigt der Status des Laufwerks _Rebuilding_ an. D
 
 Für die Fehlerbehebung können Sie ein Laufwerk, das vermutlich fehlerhaft ist, manuell „ausfallen“. Das System läuft dann ohne dieses Laufwerk.
 
-. Wählen Sie im Grid Manager *NODES* > *_Data Center_* aus.
+. Im Grid Manager wählen Sie *Knoten* > *_data center_*.
 . Wählen Sie *_Appliance Storage Node_* > *Manage Drives* > *Layout* > *_Drive_*.
 +
 Das Fenster mit den Laufwerkdetails wird angezeigt.

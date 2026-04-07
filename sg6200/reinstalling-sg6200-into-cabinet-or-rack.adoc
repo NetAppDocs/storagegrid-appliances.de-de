@@ -1,0 +1,84 @@
+---
+permalink: sg6200/reinstalling-sg6200-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6212, sg6200, sg6200cn, storage node, storage appliance, install, installing, installation, cabinet, rack 
+summary: Nehmen Sie das SGF6212 aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bewegen. Installieren Sie das Gerät nach Abschluss der Hardwarewartung wieder in einem Schrank oder Rack. 
+---
+= Platzieren Sie SGF6212 oder SG6200-CN im Schrank oder Rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nehmen Sie das SGF6212 oder SG6200-CN aus einem Schrank oder Rack, um Zugang zur oberen Abdeckung zu erhalten oder das Appliance an einen anderen Ort zu verlegen, und installieren Sie das Appliance anschließend wieder in einem Schrank oder Rack, wenn die Hardwarewartung abgeschlossen ist.
+
+
+
+== Entfernen Sie SGF6212 oder SG6200-CN aus dem Schrank oder Rack
+
+.Bevor Sie beginnen
+* Sie verfügen über Etiketten zur Kennzeichnung der einzelnen Kabel, die mit dem SGF6212 oder SG6200-CN verbunden sind.
+* Sie haben link:locating-sg6200-in-data-center.html["physisch lokalisiert das SGF6212 oder SG6200-CN"], wo Sie Wartungsarbeiten im Rechenzentrum durchführen.
+* Du hast link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["Schalten Sie den SGF6212 oder SG6200-CN aus"].
++
+
+CAUTION: Schalten Sie das Gerät nicht über den Netzschalter aus.
+
+
+
+.Schritte
+. Beschriften Sie die Netzkabel des Geräts, und ziehen Sie sie ab.
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Beschriften Sie die Gerätedatenkabel und alle SFP+- oder SFP28-Transceiver, und trennen Sie sie anschließend.
++
+
+NOTE: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
+. Lösen Sie die beiden unverlierbaren Schrauben an der Gerätevorderseite.
++
+image::../media/s25_rack_retaining_screws.png[SGF6212 oder SG6200-CN Rack-Befestigungsschrauben]
+
+. Schieben Sie das SGF6212 oder SG6200-CN aus dem Rack nach vorne, bis die Montageschienen vollständig ausgefahren sind und Sie die Verriegelungen auf beiden Seiten einrasten hören.
++
+Die obere Abdeckung des Geräts ist zugänglich.
+
+. Optional: Wenn Sie das Gerät vollständig aus dem Schrank oder Rack entfernen, befolgen Sie die Anweisungen für den Schienensatz, um das Gerät von den Schienen zu entfernen.
+
+
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.
+
+
+
+== Installieren Sie SGF6212 oder SG6200-CN wieder in den Schrank oder das Rack.
+
+.Bevor Sie beginnen
+Du hast link:reinstalling-sg6200-cover.html["Die Geräteabdeckung wieder anbringen"].
+
+.Schritte
+. Drücken Sie die blaue Schienenentriegelung, um beide Rackschienen gleichzeitig zu lösen, und schieben Sie das SGF6212 oder SG6200-CN in das Rack, bis es vollständig eingerastet ist.
++
+Wenn Sie den Controller nicht weiter bewegen können, ziehen Sie die blauen Laschen auf beiden Seiten des Chassis, um den Controller vollständig einzuschieben.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 Schieben auf Schienen]
+
++
+
+NOTE: Bringen Sie die Frontverkleidung erst an, nachdem Sie den Controller eingeschaltet haben.
+
+. Ziehen Sie die unverlierbaren Schrauben an der Vorderseite des Controllers fest, um den Controller im Rack zu befestigen.
++
+image::../media/s25_rack_retaining_screws.png[Befestigungsschrauben des SG6060-Racks]
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. link:../installconfig/cabling-appliance.html["Schließen Sie die Controller-Datenkabel und alle SFP+, SFP28, QSFP+, QSFP28 oder QSFP56 Transceiver wieder an."].
++
+
+NOTE: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdrehen, falten, zusammendrücken oder treten.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Schließen Sie die Controller-Stromkabel wieder an"].
+
+
+.Nachdem Sie fertig sind
+link:power-sg6200-off-on.html#power-on-sgf6212-or-sg6200-cn-and-verify-operation["Starten Sie das Gerät neu"].

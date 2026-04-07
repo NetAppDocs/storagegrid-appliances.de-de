@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, service appliance, services appliance, gateway Node, admin node, reboot, restart 
 summary: Möglicherweise müssen Sie die Appliance neu starten, während das Installationsprogramm der StorageGRID-Appliance ausgeführt wird. Sie müssen die Appliance beispielsweise neu starten, wenn die Installation fehlschlägt. 
 ---
-= Starten Sie die Appliance neu, während das Installationsprogramm der StorageGRID Appliance ausgeführt wird
+= Starten Sie das Gerät neu, während der StorageGRID Appliance Installer ausgeführt wird.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

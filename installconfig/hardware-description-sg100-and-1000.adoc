@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
 summary: 'Die StorageGRID SG100 Services Appliance und die SG1000 Services Appliance können als Gateway-Node und als Admin-Node ausgeführt werden, um hochverfügbare Load-Balancing-Services in einem StorageGRID System bereitzustellen. Beide Geräte können gleichzeitig als Gateway-Knoten und Admin-Nodes \ (primär oder nicht primär\) betrieben werden.' 
 ---
-= SG100- und SG1000-Geräte: Überblick
+= StorageGRID SG100- und SG1000-Geräte
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -72,7 +72,7 @@ Identifizieren Sie die LED
  a| 
 * Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
 * Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
-* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+* Aus: Das Gerät ist im Schrank oder Rack optisch nicht erkennbar.
 
 
 |===

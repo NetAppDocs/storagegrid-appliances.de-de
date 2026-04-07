@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: email, notifications, alerts, set up, setup, configure, configuration, bmc 
 summary: Wenn Sie möchten, dass E-Mail-Benachrichtigungen bei Auftreten von Warnungen gesendet werden, verwenden Sie die BMC-Schnittstelle, um SMTP-Einstellungen, Benutzer, LAN-Ziele, Warnungsrichtlinien und Ereignisfilter zu konfigurieren. 
 ---
-= E-Mail-Benachrichtigungen für BMC-Warnungen einrichten
+= Richten Sie E-Mail-Benachrichtigungen für BMC-Warnungen auf einem StorageGRID Appliance ein
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

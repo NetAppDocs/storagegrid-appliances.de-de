@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
 summary: Die SGF6112 Storage Appliance enthält 12 SSD-Laufwerke. Die Daten auf den Laufwerken werden durch ein RAID-Schema geschützt, mit dem die Appliance nach dem Ausfall eines einzelnen Laufwerks wiederherstellen kann, ohne dass die Daten von einem anderen Node kopiert werden müssen.  
 ---
-= Ersetzen Sie die Laufwerke im SGF6112
+= Tauschen Sie die Laufwerke in einem SGF6112 aus.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -123,7 +123,7 @@ HDD11
 
 |===
 +
-Sie können den Grid Manager auch verwenden, um den Status der SSD-Laufwerke zu überwachen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Storage Node*` > *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld Speicher-RAID-Modus eine Meldung darüber, welches Laufwerk ausgefallen ist.
+Sie können den Grid Manager auch verwenden, um den Status der SSD-Laufwerke zu überwachen. Wählen Sie *Knoten*. Wählen Sie dann  `*Storage Node*` > *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld „Storage RAID Mode“ eine Meldung darüber, welches Laufwerk ausgefallen ist.
 
 
 
@@ -161,8 +161,8 @@ Das ersetzte Laufwerk wird automatisch mit gespiegelten Daten von den Arbeitslau
 +
 Sie können den Status der Neuerstellung mithilfe des Grid Manager überprüfen.
 
-. Wenn mehr als ein Laufwerk ausgefallen und ersetzt wurde, haben Sie möglicherweise Warnmeldungen, die darauf hinweisen, dass einige Volumes Daten wiederherstellen müssen. Wenn Sie eine Warnmeldung erhalten, wählen Sie vor dem Versuch, eine Volume-Wiederherstellung durchzuführen, *NODES* > aus `*appliance Storage Node*` > *Hardware*. Überprüfen Sie im Abschnitt StorageGRID-Appliance auf der Seite, ob der Speicher-RAID-Modus ordnungsgemäß ist oder neu erstellt wird. Wenn im Status ein oder mehrere ausgefallene Laufwerke aufgeführt sind, korrigieren Sie diese Bedingung, bevor Sie eine Wiederherstellung des Volumes durchführen.
-. Gehen Sie im Grid Manager zu *NODES* > `*appliance Storage Node*` > *Hardware*. Überprüfen Sie im Abschnitt StorageGRID-Gerät auf der Seite, ob der Speicher-RAID-Modus ordnungsgemäß funktioniert.
+. Wenn mehr als ein Laufwerk ausgefallen und ersetzt wurde, erhalten Sie möglicherweise Warnmeldungen, die darauf hinweisen, dass einige Volumes eine Datenwiederherstellung benötigen. Wenn Sie eine Warnmeldung erhalten, wählen Sie vor dem Versuch der Volume-Wiederherstellung *Knoten* > `*appliance Storage Node*` > *Hardware*. Überprüfen Sie im Abschnitt „StorageGRID Appliance“ auf der Seite, ob der Storage-RAID-Modus intakt ist oder wiederhergestellt wird. Wenn der Status ein oder mehrere ausgefallene Laufwerke auflistet, beheben Sie diesen Zustand, bevor Sie die Volume-Wiederherstellung versuchen.
+. Im Grid Manager navigieren Sie zu *Knoten* > `*appliance Storage Node*` > *Hardware*. Überprüfen Sie im Abschnitt „StorageGRID Appliance“ der Seite, ob der Storage RAID-Modus fehlerfrei ist.
 
 
-Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

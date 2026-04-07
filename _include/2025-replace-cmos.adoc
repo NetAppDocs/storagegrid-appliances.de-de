@@ -1,0 +1,68 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Entfernen Sie die erste CMOS-Batterie.
++
+.. Suchen Sie die CMOS-Batterie auf der Systemplatine.
+.. Drücken Sie den Halteclip mit dem Finger oder einem Kunststoffhebelwerkzeug von der Batterie weg, um ihn aus der Steckdose zu fecken.
++
+image::../media/drw_s2025_cmos_battery_replace_ieops-2558.svg[Entfernen einer CMOS-Batterie von der Systemplatine]
+
+.. Entfernen Sie die Batterie, und entsorgen Sie sie ordnungsgemäß.
+
+
+. Setzen Sie die Ersatz-CMOS-Batterie ein.
++
+.. Nehmen Sie die Ersatz-CMOS-Batterie aus ihrer Verpackung.
+.. Drücken Sie den Ersatzakku mit der positiven (+) Seite nach oben in den leeren Sockel auf der Systemplatine, bis der Akku einrastet.
+
+
+. Wiederholen Sie diese Schritte für die zweite CMOS-Batterie.
+. Wenn Sie keine weiteren Wartungsmaßnahmen im Gerät durchführen müssen, setzen Sie die Geräteabdeckung wieder ein, bringen Sie das Gerät wieder in das Rack ein, schließen Sie die Kabel an und schalten Sie das Gerät mit Strom aus.
+. Wenn die Laufwerkverschlüsselung für die SED-Laufwerke auf der ersetzten Appliance aktiviert war, müssen Sie dies tun link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["Geben Sie die Passphrase für die Laufwerkverschlüsselung ein"] So greifen Sie auf die verschlüsselten Laufwerke zu, wenn die Ersatz-Appliance zum ersten Mal gestartet wird.
+. Wenn die von Ihnen ersetzte Appliance einen Verschlüsselungsmanagement-Server (KMS) zum Management der Schlüssel für die Node-Verschlüsselung verwendet hat, ist möglicherweise eine zusätzliche Konfiguration erforderlich, bevor der Node dem Grid beitreten kann. Wenn der Node nicht automatisch in das Raster integriert wird, stellen Sie sicher, dass diese Konfigurationseinstellungen auf die neue Appliance übertragen wurden, und konfigurieren Sie manuell alle Einstellungen, die nicht über die erwartete Konfiguration verfügen:
++
+** link:../installconfig/accessing-storagegrid-appliance-installer.html["Konfigurieren Sie StorageGRID-Verbindungen"]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"^]
+
+
+. Melden Sie sich bei der Appliance an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+. Stellen Sie die BMC-Netzwerkverbindung für das Gerät mithilfe einer der folgenden Optionen wieder her:
++
+** Verwenden Sie statische IP, Netzmaske und Gateway
+** Verwenden Sie DHCP, um eine IP, eine Netzmaske und ein Gateway zu erhalten
++
+... Geben Sie zum Wiederherstellen der BMC-Konfiguration für die Verwendung einer statischen IP, Netzmaske und eines Gateways die folgenden Befehle ein:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Geben Sie den folgenden Befehl ein, um die BMC-Konfiguration so wiederherzustellen, dass DHCP zum Abrufen einer IP, einer Netmask und eines Gateways verwendet wird:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Stellen Sie nach dem Wiederherstellen der BMC-Netzwerkverbindung eine Verbindung zur BMC-Schnittstelle her, um die zusätzlich angewendete benutzerdefinierte BMC-Konfiguration zu prüfen und wiederherzustellen. Sie sollten beispielsweise die Einstellungen für SNMP-Trap-Ziele und E-Mail-Benachrichtigungen bestätigen. Siehe link:../installconfig/configuring-bmc-interface.html["Konfigurieren Sie die BMC-Schnittstelle"].
+. Vergewissern Sie sich, dass der Appliance-Node im Grid Manager angezeigt wird und keine Meldungen angezeigt werden.
+

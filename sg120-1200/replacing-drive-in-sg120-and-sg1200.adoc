@@ -1,0 +1,71 @@
+---
+permalink: sg120-1200/replacing-drive-in-sg120-and-sg1200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Die Service-Appliances SG120 und SG1200 enthalten zwei SSD-Festplatten. Die Festplatten sind zur Redundanz per RAID1 gespiegelt. Fällt eine der Festplatten aus, muss sie so schnell wie möglich ersetzt werden, um die Redundanz sicherzustellen. 
+---
+= Ersetzen Sie die Laufwerke im SG120 oder SG1200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Service-Appliances SG120 und SG1200 enthalten zwei SSD-Laufwerke. Die Laufwerke sind zur Redundanz mit RAID1 gespiegelt. Fällt eines der Laufwerke aus, muss es so schnell wie möglich ersetzt werden, um die Redundanz sicherzustellen.
+
+.Bevor Sie beginnen
+* Du hast link:locating-sg120-and-sg1200-in-data-center.html["Das Gerät befindet sich physisch"].
+* Sie haben überprüft, welches Laufwerk ausgefallen ist, indem Sie feststellen, dass die linke LED des Laufwerks gelb leuchtet oder den Grid Manager für verwenden link:verify-component-to-replace.html["Zeigen Sie die Warnung an, die durch das ausgefallene Laufwerk verursacht wurde"].
++
+
+IMPORTANT: Informationen zur Anzeige von Statusanzeigen zur Überprüfung des Fehlers finden Sie unter.
+
+* Sie haben das Ersatzlaufwerk erhalten.
+* Sie haben einen angemessenen ESD-Schutz erhalten.
+
+
+.Schritte
+. Stellen Sie sicher, dass die linke Fehler-LED des Laufwerks gelb leuchtet, oder verwenden Sie die Laufwerksteckplatz-ID aus der Warnmeldung, um das Laufwerk zu finden.
++
+Die Laufwerke befinden sich in den folgenden Positionen im Gehäuse (Vorderseite des Gehäuses mit entfernter Blende):
+
++
+image::../media/sg120_sg1200_front_with_ssds.png[Standorte der Laufwerke SG120 und SG1200]
+
+
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.
++
+Alle Verpackungsmaterialien speichern.
+
+. Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
++
+image::../media/drw_s2025_drive_replace_ieops-2553.svg[Ausbau eines Laufwerks aus dem Gehäuse]
+
++
+Der Griff an den Antriebsfedern öffnet sich teilweise, und das Laufwerk löst sich aus dem Schlitz.
+
+. Öffnen Sie den Griff, schieben Sie das Laufwerk heraus und legen Sie es auf eine statisch freie, Ebene Oberfläche.
++
+
+NOTE: Vergewissern Sie sich, dass der Griff des Laufwerksfachs vollständig geöffnet ist, bevor Sie versuchen, das Laufwerk zu entnehmen.
+
+. Drücken Sie die Entriegelungstaste am Ersatzlaufwerk, bevor Sie es in den Laufwerkschacht einsetzen.
++
+Die Verriegelungsfedern öffnen sich.
+
+. Setzen Sie das Ersatzlaufwerk in den Steckplatz ein, und schließen Sie dann den Laufwerkgriff.
++
+
+IMPORTANT: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
+
++
+Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
+
++
+Das ausgetauschte Laufwerk wird automatisch mit gespiegelten Daten des funktionierenden Laufwerks wiederhergestellt. Den Status der Wiederherstellung können Sie im Grid Manager überprüfen. Gehen Sie zu *Knoten* > `*Appliance Node*` > *Hardware*. Im Feld „Storage RAID Mode“ wird die Meldung „rebuilding“ angezeigt, bis das Laufwerk vollständig wiederhergestellt ist.
+
+
+
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

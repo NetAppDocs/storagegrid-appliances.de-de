@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
 summary: Möglicherweise müssen Sie auf der SG6000-Appliance Wartungsarbeiten durchführen. Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass die Appliance bereits als Storage-Node in einem StorageGRID-System bereitgestellt wurde. 
 ---
-= Warten Sie die SG6000-Appliance
+= Führen Sie Wartungsarbeiten am SG6000 Appliance durch.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

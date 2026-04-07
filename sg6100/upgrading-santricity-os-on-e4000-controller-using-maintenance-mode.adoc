@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, controller, e4000, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
 summary: Sie können den Wartungsmodus verwenden, um ein Upgrade von SANtricity OS auf dem E4000 Controller durchzuführen. 
 ---
-= Upgrade von SANtricity OS auf E4000 Controller mithilfe des Wartungsmodus (SG6160)
+= Aktualisieren Sie das SANtricity OS auf einem SG6160 E4000 im Wartungsmodus
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ NOTE: Aktivieren Sie die Upgrade-Dateien sofort. Die Aktivierung darf nicht verz
 Es kann bis zu 20 Minuten dauern, bis das Gerät neu gestartet wird und sich wieder mit dem Netz verbindet.  So bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 
 +
-... Wählen Sie im Grid Manager *NODES* aus.
+... Im Grid Manager wählen Sie *Knoten* aus.
 ... Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: status, indicators, lights, leds, light, led, display, switch , button, power, reset, identify, alarm, ssd, indicator, boot codes, boot, code, start, startup, start up, start-up, progress 
 summary: Die Geräte und Controller enthalten Anzeigen, mit denen Sie den Status der Gerätekomponenten ermitteln können. 
 ---
-= Statusanzeigen und -Codes anzeigen
+= Statusanzeigen und Codes auf StorageGRID Geräten anzeigen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -118,7 +118,7 @@ Identifizieren Sie die LED
  a| 
 * Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
 * Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
-* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+* Aus: Das Gerät ist im Schrank oder Rack optisch nicht erkennbar.
 
 
 |===
@@ -289,7 +289,7 @@ Identifizieren Sie die LED
  a| 
 * Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
 * Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
-* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+* Aus: Das Gerät ist im Schrank oder Rack optisch nicht erkennbar.
 
 
 |===
@@ -315,6 +315,176 @@ SSD-LEDs::
 +
 --
 Die folgende Abbildung zeigt die SSD-Anzeigen auf den SG110- und SG1100-Geräten.
+
+image::../media/ssd_indicators.png[SSD-Kennzahlen]
+
+[cols="1a,2a,2a"]
+|===
+| LED | Anzeige | Status 
+
+
+ a| 
+1
+ a| 
+Laufwerksstatus/-Fehler
+ a| 
+* Blau (fest): Laufwerk ist online
+* Gelb (konstant): Laufwerksausfall
+* Aus: Steckplatz ist leer
+
+
+
+
+ a| 
+2
+ a| 
+Laufwerk aktiv
+ a| 
+Blau (blinkend): Auf das Laufwerk wird zugegriffen
+
+|===
+--
+
+
+--
+.SG120 und SG1200
+--
+Die Appliance enthält Anzeigen, mit denen Sie den Status des Appliance-Controllers und der SSDs ermitteln können:
+
+* <<appliance_indicators_sg120_sg1200,Gerätesteuchten und -Tasten>>
+* <<general_boot_codes_sg120_sg1200,Allgemeine Startcodes>>
+* <<ssd_indicators_sg120_sg1200,SSD-LEDs>>
+
+
+Nutzen Sie diese Informationen, um link:troubleshooting-hardware-installation-sg120-and-sg1200.html["Fehlerbehebung bei der Hardwareinstallation von SG120 und SG1200"] zu helfen.
+
+[[appliance_indicators_sg120_sg1200]]
+Gerätesteuchten und -Tasten::
++
+--
+Die folgende Abbildung zeigt die Anzeigen und Tasten an der Vorderseite der SG120 und SG1200 Appliances.
+
+image::../media/sg120_sg1200_front_indicators.png[Frontanzeigen - SG120 und SG1200]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | Anzeige | Status 
+
+
+ a| 
+1
+ a| 
+Ein-/aus-Schalter
+ a| 
+* Blau: Das Gerät ist eingeschaltet.
+* Aus: Das Gerät ist ausgeschaltet.
+
+
+
+
+ a| 
+2
+ a| 
+Reset-Taste
+ a| 
+Mit dieser Taste können Sie den Controller auf einen harten Reset zurücksetzen.
+
+
+
+ a| 
+3
+ a| 
+Schaltfläche „Identifizierung“
+ a| 
+Mit dem BMC kann diese Taste auf Blinken, ein (Vollton) oder aus eingestellt werden.
+
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+
+
+ a| 
+4
+ a| 
+Status-LED
+ a| 
+* Gelb, konstant: Ein Fehler ist aufgetreten.
++
+*Hinweis:* um die Boot-up- und Fehlercodes anzuzeigen, link:accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle auf"].
+
+* Aus: Es sind keine Fehler vorhanden.
+
+
+
+
+ a| 
+5
+ a| 
+PFR
+ a| 
+Diese Leuchte wird von den SG120- und SG1200-Appliances nicht verwendet und bleibt ausgeschaltet.
+
+|===
+--
+
+
+Die folgende Abbildung zeigt die Position des Netzteils und der Identifizierungs-LEDs auf der Rückseite des SG120 und des SG1200. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Appliance-Ports. Diese LEDs können je nach Appliance-Modell variieren.
+
+image::../media/sg120_sg1200_rear_leds.png[Hintere LEDs SG120 und SG1200]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack optisch nicht erkennbar.
+
+
+|===
+[[general_boot_codes_sg120_sg1200]]
+Allgemeine Startcodes::
++
+--
+Beim Hochfahren oder nach einem harten Reset des Geräts treten folgende Aktionen auf:
+
+. Der BMC (Baseboard Management Controller) protokolliert Codes für die Boot-Sequenz, einschließlich etwaiger Fehler.
+. Der Betriebsschalter leuchtet auf.
+. Wenn während des Startvorgangs Fehler auftreten, leuchtet die Alarm-LED auf.
++
+So zeigen Sie die Starts- und Fehlercodes an: link:accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle auf"].
+
+
+
+--
+
+
+[[ssd_indicators_sg120_sg1200]]
+SSD-LEDs::
++
+--
+Die folgende Abbildung zeigt die SSD-Indikatoren auf den SG120- und SG1200-Appliances.
 
 image::../media/ssd_indicators.png[SSD-Kennzahlen]
 
@@ -926,7 +1096,7 @@ Identifizieren Sie die LED
  a| 
 * Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
 * Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
-* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+* Aus: Das Gerät ist im Schrank oder Rack optisch nicht erkennbar.
 
 
 |===
@@ -1091,7 +1261,7 @@ Identifizieren Sie die LED
  a| 
 * Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
 * Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
-* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+* Aus: Das Gerät ist im Schrank oder Rack optisch nicht erkennbar.
 
 
 |===
@@ -1136,6 +1306,181 @@ Laufwerksstatus/-Fehler
 
 
 *Hinweis:* Wenn eine neue funktionsfähige SSD in einen funktionierenden SGF6112 oder SG6160 StorageGRID-Knoten eingesetzt wird, sollten die LEDs der SSD zunächst blinken, hören aber auf zu blinken, sobald das System feststellt, dass das Laufwerk über genügend Kapazität verfügt und funktionsfähig ist.
+
+
+
+ a| 
+2
+ a| 
+Laufwerk aktiv
+ a| 
+Blau (blinkend): Auf das Laufwerk wird zugegriffen
+
+|===
+--
+
+
+.Verwandte Informationen
+https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
+
+--
+.SG6200
+--
+Die Appliance enthält Anzeigen, mit denen Sie den Status des Appliance-Controllers und der SSDs ermitteln können:
+
+* <<appliance_indicators_SG6200,Gerätesteuchten und -Tasten>>
+* <<general_boot_codes_SG6200,Allgemeine Startcodes>>
+* <<ssd_indicators_SG6200,SSD-LEDs>>
+
+
+Nutzen Sie diese Informationen, um link:troubleshooting-hardware-installation-sg6200.html["Fehlerbehebung bei der Hardwareinstallation des SG6200"] zu helfen.
+
+[[appliance_indicators_SG6200]]
+Gerätesteuchten und -Tasten::
++
+--
+Die folgende Abbildung zeigt die Anzeigen und Tasten an der Vorderseite der SG6200-Geräte.
+
+image::../media/s25_front_indicators.png[Frontanzeigen - SG6200]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | Anzeige | Status 
+
+
+ a| 
+1
+ a| 
+Ein-/aus-Schalter
+ a| 
+* Blau: Das Gerät ist eingeschaltet.
+* Aus: Das Gerät ist ausgeschaltet.
+
+
+
+
+ a| 
+2
+ a| 
+Reset-Taste
+ a| 
+Mit dieser Taste können Sie den Controller auf einen harten Reset zurücksetzen.
+
+
+
+ a| 
+3
+ a| 
+Schaltfläche „Identifizierung“
+ a| 
+Mit dem BMC kann diese Taste auf Blinken, ein (Vollton) oder aus eingestellt werden.
+
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+
+
+ a| 
+4
+ a| 
+Status-LED
+ a| 
+* Gelb, konstant: Ein Fehler ist aufgetreten.
++
+*Hinweis:* um die Boot-up- und Fehlercodes anzuzeigen, link:accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle auf"].
+
+* Aus: Es sind keine Fehler vorhanden.
+
+
+
+
+ a| 
+5
+ a| 
+PFR
+ a| 
+Diese Leuchte wird von SG6200-Geräten nicht verwendet und bleibt ausgeschaltet.
+
+|===
+--
+
+
+Die folgende Abbildung zeigt die Position des Netzteils und der Identifizierungs-LEDs auf der Rückseite der SGF6212 und SG6200-CN. Zusätzliche Status- und Aktivitäts-LEDs befinden sich an den Appliance-Ports. Diese LEDs können je nach Appliance-Modell variieren.
+
+image::../media/s25_rear_leds.png[Hintere LEDs SGF6212 und SG6200-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Legende | LED | Status 
+
+
+ a| 
+1
+ a| 
+Netzteil-LED
+ a| 
+* Grün, konstant: Das Gerät wird mit Strom versorgt, der Netzschalter ist eingeschaltet.
+* Grün, blinkend: Das Gerät wird mit Strom versorgt, der Netzschalter ist ausgeschaltet.
+* Aus: Das Gerät wird nicht mit Strom versorgt.
+* Gelb: Netzteilfehler.
+
+
+
+
+ a| 
+2
+ a| 
+Identifizieren Sie die LED
+ a| 
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack optisch nicht erkennbar.
+
+
+|===
+[[general_boot_codes_SG6200]]
+Allgemeine Startcodes::
++
+--
+Beim Hochfahren oder nach einem harten Reset des Geräts treten folgende Aktionen auf:
+
+. Der BMC (Baseboard Management Controller) protokolliert Codes für die Boot-Sequenz, einschließlich etwaiger Fehler.
+. Der Betriebsschalter leuchtet auf.
+. Wenn während des Startvorgangs Fehler auftreten, leuchtet die Alarm-LED auf.
++
+So zeigen Sie die Starts- und Fehlercodes an: link:accessing-bmc-interface.html["Rufen Sie die BMC-Schnittstelle auf"].
+
+
+
+--
+
+
+[[ssd_indicators_SG6200]]
+SSD-LEDs::
++
+--
+Die folgende Abbildung zeigt SSD-Indikatoren auf der SGF6212- oder SG6260-Appliance.
+
+image::../media/ssd_indicators.png[SSD-Kennzahlen]
+
+[cols="1a,2a,2a"]
+|===
+| LED | Anzeige | Status 
+
+
+ a| 
+1
+ a| 
+Laufwerksstatus/-Fehler
+ a| 
+* Blau (fest): Laufwerk ist online
+* Gelb (konstant): Laufwerksausfall
+* Aus: Steckplatz ist leer
+
+
+*Hinweis:* Wenn eine neue, funktionierende SSD in einen funktionierenden SGF6212- oder SG6260 StorageGRID Node eingesetzt wird, sollten die LEDs auf der SSD zunächst blinken, aber aufhören zu blinken, sobald das System feststellt, dass das Laufwerk über ausreichende Kapazität verfügt und funktionsfähig ist.
 
 
 

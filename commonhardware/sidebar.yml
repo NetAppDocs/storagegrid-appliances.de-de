@@ -13,7 +13,7 @@ entries:
   url: "/commonhardware/checking-dns-server-configuration.html"
 - title: Aktualisieren der MAC-Adressenreferenzen (SG100, SG1000, SGF6024 und SG6060)
   url: "/commonhardware/locate-mac-address.html"
-- title: Laufwerke managen (SG110, SG1100, SGF6112 und SG6160)
+- title: Laufwerke verwalten (SG110, SG120, SG1100, SG1200, SGF6100 und SG6260)
   url: "/commonhardware/manage-drives-tab.html"
 - title: Überwachung der Node-Verschlüsselung im Wartungsmodus
   url: "/commonhardware/monitoring-node-encryption-in-maintenance-mode.html"

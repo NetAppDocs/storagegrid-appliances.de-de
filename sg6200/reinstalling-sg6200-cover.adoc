@@ -1,0 +1,43 @@
+---
+permalink: sg6200/reinstalling-sg6200-cover.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, sgf6212, storage node, storage appliance, cover, install, installing, installation, reinstall, reinstalling, reinstallation 
+summary: Entfernen Sie die Geräteabdeckung, um zu Wartungszwecken Zugang zu den internen Komponenten zu erhalten, und bringen Sie die Abdeckung wieder an, wenn Sie fertig sind. 
+---
+= Ersetzen Sie die Abdeckung SGF6212 oder SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entfernen Sie die Geräteabdeckung, um zu Wartungszwecken Zugang zu den internen Komponenten zu erhalten, und bringen Sie die Abdeckung wieder an, wenn Sie fertig sind.
+
+
+
+== Schritt 1: Abdeckung entfernen
+
+.Schritte
+. Wickeln Sie das Gurtende eines ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende an einem Metallboden, um eine statische Entladung bei Arbeiten im Inneren des Geräts zu verhindern.
+. link:reinstalling-sg6200-into-cabinet-or-rack.html["Nehmen Sie das Gerät aus dem Schrank oder Rack"] um an die obere Abdeckung zu gelangen.
+
+
+. Drücken Sie den blauen Verriegelungsknopf an der Geräteabdeckung, um den Deckelverschluss zu entriegeln.
++
+image:../media/drw_s2025_cover_replace_ieops-2559.svg["Entriegeln und Entfernen der Geräteabdeckung"]
+
+. Drehen Sie den Riegel nach oben und zurück in Richtung der Rückseite des Gerätegehäuses, bis er anhält. Heben Sie dann die Abdeckung vorsichtig vom Gehäuse ab und legen Sie sie beiseite.
+
+
+
+
+== Schritt 2: Abdeckung wieder anbringen
+
+.Schritte
+. Bei geöffnetem Deckelverschluss den Deckel über dem Chassis ausrichten und vorsichtig absenken.
+. Drehen Sie die Verriegelung nach vorne und unten, bis sie anhält und die Abdeckung vollständig im Gehäuse sitzt. Stellen Sie sicher, dass an der Vorderkante der Abdeckung keine Lücken vorhanden sind.
++
+Wenn die Abdeckung nicht vollständig eingesetzt ist, können Sie das Gerät möglicherweise nicht in das Rack schieben.
+
+. link:reinstalling-sg6200-into-cabinet-or-rack.html["Setzen Sie das Gerät wieder in den Schrank oder das Rack ein"].
+

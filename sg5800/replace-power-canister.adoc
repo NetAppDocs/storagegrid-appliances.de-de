@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: Ersetzen Sie ein Controller-Shelf oder Festplatten-Shelf für 60 Laufwerke, das zwei Stromankanister für Redundanz enthält. 
 ---
-= Den Aktivkohlebehälter in SG5860 austauschen
+= Ersetzen Sie eine Stromversorgungseinheit im SG5860
 :allow-uri-read: 
 :experimental: 
 :icons: font

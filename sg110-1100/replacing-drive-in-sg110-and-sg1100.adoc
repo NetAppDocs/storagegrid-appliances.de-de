@@ -63,8 +63,8 @@ IMPORTANT: Beim Schließen des Griffs keine übermäßige Kraft anwenden.
 Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
 
 +
-Das ersetzte Laufwerk wird automatisch mit gespiegelten Daten vom Arbeitslaufwerk neu erstellt.  Sie können den Status der Neuerstellung mithilfe des Grid Manager überprüfen. Gehen Sie zu *NODES* > `*Appliance Node*` > *Hardware*. Das Feld Speicher-RAID-Modus enthält eine Meldung „Neuaufbau“, bis das Laufwerk vollständig neu erstellt wurde.
+Das ausgetauschte Laufwerk wird automatisch mit gespiegelten Daten des funktionierenden Laufwerks wiederhergestellt. Den Status der Wiederherstellung können Sie im Grid Manager überprüfen. Gehen Sie zu *Knoten* > `*Appliance Node*` > *Hardware*. Im Feld „Storage RAID Mode“ wird die Meldung „rebuilding“ angezeigt, bis das Laufwerk vollständig wiederhergestellt ist.
 
 
 
-Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Teilerückgabe  Austausch"^] Seite für weitere Informationen.
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

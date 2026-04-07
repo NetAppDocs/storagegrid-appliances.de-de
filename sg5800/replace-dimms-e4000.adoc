@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Ersetzen Sie die DIMMs in E4000 (SG5800).
+= Ersetzen Sie die DIMMs im E4000-Controller in einem SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ Der Gerätespeicherknoten ist möglicherweise nicht verfügbar, wenn Sie den Con
 
 * Zugriff auf den SANtricity System Manager:
 +
-** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Informationen zum Controller finden Sie auf der https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+** Wählen Sie im Grid Manager *Knoten* > *Geräteknoten* > *SANtricity System Manager*. Die Controller-Informationen befinden sich auf der  https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
 +
 
 NOTE: Während bestimmter Schritte dieses Verfahrens ist der Zugriff auf den SANtricity System Manager unter Umständen nicht über den Grid-Manager möglich. Wenn der SG5800 Controller heruntergefahren wird, müssen Sie über Ihren Browser auf den SANtricity System Manager zugreifen.
@@ -265,7 +265,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 . Bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 +
-.. Wählen Sie im Grid Manager *NODES* aus.
+.. Im Grid Manager wählen Sie *Knoten* aus.
 .. Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 +
 

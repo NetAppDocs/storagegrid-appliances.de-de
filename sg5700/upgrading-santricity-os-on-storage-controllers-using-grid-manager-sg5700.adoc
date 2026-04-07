@@ -114,7 +114,7 @@ CAUTION: Genehmigen Sie das SANtricity OS Upgrade für einen Appliance-Speicher-
 
 NOTE: Wenn die Reihenfolge, in der die Knoten aktualisiert werden, wichtig ist, genehmigen Sie nacheinander Knoten oder Gruppen von Knoten, und warten Sie, bis das Upgrade für jeden Knoten abgeschlossen ist, bevor Sie den nächsten Knoten genehmigen.
 
-** Wählen Sie eine oder mehrere *Genehmigen*-Schaltflächen, um einen oder mehrere Knoten zur SANtricity OS-Upgrade-Warteschlange hinzuzufügen. Die Schaltfläche *approve* ist deaktiviert, wenn der Status nicht nominal ist.
+** Wählen Sie eine oder mehrere *Genehmigen*-Schaltflächen aus, um einen oder mehrere Knoten zur SANtricity OS-Upgrade-Warteschlange hinzuzufügen. Die Schaltfläche *Genehmigen* ist deaktiviert, wenn der Status nicht Nominal ist.
 +
 Nachdem Sie *Genehmigen* ausgewählt haben, bestimmt der Upgrade-Prozess, ob der Knoten aktualisiert werden kann. Wenn ein Knoten aktualisiert werden kann, wird er der Upgrade-Warteschlange hinzugefügt.
 
@@ -160,14 +160,14 @@ Keine weiteren Maßnahmen erforderlich.
 
 
  a| 
-Das SANtricity OS Upgrade ist für diesen Node nicht verfügbar.
+SANtricity OS-Upgrade ist für diesen Knoten nicht anwendbar.
  a| 
 Der Node verfügt nicht über einen Storage Controller, der vom StorageGRID System gemanagt werden kann. Schließen Sie das Upgrade ab, ohne den Node mit dieser Meldung zu aktualisieren.
 
 
 
  a| 
-Die SANtricity OS-Datei ist mit diesem Node nicht kompatibel.
+SANtricity OS-Datei ist mit diesem Knoten nicht kompatibel.
  a| 
 Der Node erfordert eine andere SANtricity OS-Datei als die ausgewählte.
 Laden Sie nach Abschluss des aktuellen Upgrades die korrekte SANtricity OS-Datei für den Node herunter, und wiederholen Sie den Upgrade-Vorgang.

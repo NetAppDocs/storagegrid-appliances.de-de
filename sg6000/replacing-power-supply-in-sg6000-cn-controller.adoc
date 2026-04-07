@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, power supply, remove, removing, removal, install, installing, installation 
 summary: Der SG6000-CN Controller verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich ersetzen, um sicherzustellen, dass der Compute-Controller über redundante Stromversorgung verfügt. 
 ---
-= Ersetzen Sie das Netzteil im SG6000-CN-Controller
+= Ersetzen Sie das Netzteil in einem SG6000-CN-Controller
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

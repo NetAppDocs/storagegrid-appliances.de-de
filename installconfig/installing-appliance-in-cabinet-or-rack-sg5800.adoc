@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, sg5812, sg5860, install, cabinet, rack, rails, drives 
 summary: Sie installieren eine Reihe von Schienen in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen. Wenn Sie ein SG5760 besitzen, installieren Sie die Laufwerke nach der Installation des Geräts. 
 ---
-= In Schrank oder Rack installieren (SG5800)
+= Installieren Sie den SG5800 in einem Schrank oder Rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

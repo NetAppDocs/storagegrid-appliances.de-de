@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= SG5800 Appliance warten
+= Warten Sie das SG5800 Appliance.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

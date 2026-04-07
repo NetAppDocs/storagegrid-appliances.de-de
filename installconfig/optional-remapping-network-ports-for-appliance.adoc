@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remap appliance ports, network, internal to external port mapping 
 summary: Optional können Sie die internen Ports auf einem Appliance-Node verschiedenen externen Ports neu zuordnen. Aufgrund eines Firewall-Problems müssen Sie möglicherweise Ports neu zuordnen. 
 ---
-= Optional: Netzwerkports für Appliance neu zuordnen
+= Netzwerkports für StorageGRID-Geräte neu zuordnen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: appliance, installation, install, progress, monitor, status 
 summary: Das Installationsprogramm der StorageGRID Appliance stellt den Status bereit, bis die Installation abgeschlossen ist. Nach Abschluss der Softwareinstallation wird die Appliance neu gestartet. 
 ---
-= Überwachen Sie die Appliance-Installation
+= Installation der StorageGRID-Appliance überwachen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

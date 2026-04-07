@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, expansion shelf, expansion, drive, disk, install, installing, installation, add, adding, expand 
 summary: Zur Erhöhung der Storage-Kapazität können einem SG6060, das in einem StorageGRID System implementiert wird, ein oder zwei Erweiterungs-Shelfs hinzugefügt werden. 
 ---
-= Erweiterungs-Shelf für das implementierte SG6060 hinzufügen
+= Fügen Sie einer bereits im Einsatz befindlichen SG6060 Appliance ein Erweiterungsgehäuse hinzu.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -185,7 +185,7 @@ Wenn der Neustart abgeschlossen ist, wird die Registerkarte *Aufgaben* mit Auswa
 
 . Überprüfen Sie den Status des Appliance Storage Node und der neuen Erweiterungs-Shelfs.
 +
-.. Wählen Sie im Grid Manager *NODES* aus, und überprüfen Sie, ob der Storage Node der Appliance über ein grünes Häkchen verfügt.
+.. Wählen Sie im Grid Manager *Knoten* aus und vergewissern Sie sich, dass der Appliance Storage Node mit einem grünen Häkchen gekennzeichnet ist.
 +
 Das grüne Häkchen bedeutet, dass keine Meldungen aktiv sind und der Node mit dem Raster verbunden ist. Eine Beschreibung der Knotensymbole finden Sie unter https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Überwachen Sie die Status der Node-Verbindung"^].
 

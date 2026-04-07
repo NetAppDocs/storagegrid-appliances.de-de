@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, troubleshoot, troubleshooting, hardware, install, installation, boot codes, boot-up codes, start codes, codes, boot, start, bmc, error codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection 
 summary: Wenn während der Installation Probleme auftreten, können Sie die Fehlerbehebungsinformationen zu Hardware-Setup- und Konnektivitätsproblemen überprüfen. 
 ---
-= Fehlerbehebung bei Hardwareinstallation (SG110 und SG1100)
+= Fehlerbehebung bei der Hardwareinstallation für SG110 und SG1100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

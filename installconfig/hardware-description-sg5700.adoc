@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sg5700, sg5712, sg5712x, sg5760, sg5760x, storage appliance 
 summary: 'Die SG5700 StorageGRID Appliance ist eine integrierte Storage- und Computing-Plattform, die als Storage-Node in einem StorageGRID Grid ausgeführt wird. Die Appliance kann in einer hybriden Grid-Umgebung verwendet werden, in der Appliance Storage Nodes und virtuelle \(softwarebasierte\) Storage-Nodes kombiniert werden.' 
 ---
-= SG5700 Appliances: Überblick
+= StorageGRID SG5700-Appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

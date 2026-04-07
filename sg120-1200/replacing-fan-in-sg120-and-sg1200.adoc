@@ -1,0 +1,117 @@
+---
+permalink: sg120-1200/replacing-fan-in-sg120-and-sg1200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, admin appliance, replacing, replace, fan, remove, removing, removal, install, installing 
+summary: Die SG120 oder SG1200 Appliances verfügen über acht Lüfter. Wenn einer der Lüfter ausfällt, müssen Sie ihn so schnell wie möglich ersetzen, um sicherzustellen, dass das Appliance ordnungsgemäß gekühlt wird. 
+---
+= Lüfter in einem SG120 oder SG1200 austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die SG120 oder SG1200 Appliances verfügen über sieben Kühlventilatoren. Wenn einer der Ventilatoren ausfällt, müssen Sie ihn so schnell wie möglich ersetzen, um sicherzustellen, dass das Appliance ordnungsgemäß gekühlt wird.
+
+.Über diese Aufgabe
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Lüfteraustausch starten oder den Lüfter während eines geplanten Wartungsfensters austauschen, wenn Serviceunterbrechungen akzeptabel sind. Siehe die Informationen über https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitoring der Verbindungsstatus der Nodes"^].
+
+Auf den Geräteknoten kann nicht zugegriffen werden, wenn Sie den Lüfter austauschen.
+
+Die Lüfter sind zugänglich, nachdem man die obere Abdeckung des Geräts abgenommen hat.
+
+
+NOTE: Jede der beiden Netzteile enthält zudem einen Lüfter. Die Netzteillüfter sind in diesem Verfahren nicht enthalten.
+
+.Bevor Sie beginnen
+* Sie haben den richtigen Ersatzlüfter.
+* Das ist schon link:verify-component-to-replace.html["Die Position des auszutauenden Lüfters ermittelt"].
+* Sie haben link:locating-sg120-and-sg1200-in-data-center.html["physisch den Standort des SG120- oder SG1200-Appliance bestimmen"]wo Sie den Lüfter im Rechenzentrum austauschen.
++
+
+NOTE: Ein link:power-sg120-and-sg1200-off-on.html#shut-down-the-sg120-or-sg1200-appliance["Kontrolliertes Herunterfahren des Geräts"] ist erforderlich, bevor das Gerät aus dem Rack entfernt wird.
+
+* Sie haben alle Kabel getrennt und link:reinstalling-sg120-and-sg1200-cover.html["Die Geräteabdeckung entfernt"].
+* Sie haben bestätigt, dass die anderen Lüfter installiert sind und ausgeführt werden.
+
+
+.Schritte
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Suchen Sie den Lüfter, den Sie ersetzen müssen.
++
+Die sieben Lüfter befinden sich an folgenden Positionen im Gehäuse (Vorderhälfte des StorageGRID Appliance mit abgenommener oberer Abdeckung dargestellt):
+
++
+image::../media/drw_fan_position_ieops-2614.svg[Lüfterpositionen im StorageGRID Gerätegehäuse]
+
++
+|===
+| Chassis-Position | Lüftereinheit 
+
+
+ a| 
+1
+ a| 
+Fan_SYS0
+
+
+
+ a| 
+2
+ a| 
+Fan_SYS1
+
+
+
+ a| 
+3
+ a| 
+Fan_SYS2
+
+
+
+ a| 
+4
+ a| 
+Fan_SYS3
+
+
+
+ a| 
+5
+ a| 
+Fan_SYS4
+
+
+
+ a| 
+6
+ a| 
+Fan_SYS5
+
+
+
+ a| 
+7
+ a| 
+Fan_SYS6
+
+|===
+. Heben Sie den defekten Lüfter mithilfe der blauen Laschen am Lüfter aus dem Gehäuse.
++
+image:../media/drw_s2025_fan_replace_ieops-2552.svg["Ausbau eines Lüfters aus dem Gehäuse"]
+
+. Schieben Sie den Ersatzlüfter in den offenen Steckplatz des Gehäuses.
++
+Richten Sie den Stecker am Lüfter mit der Buchse auf der Platine aus.
+
+. Drücken Sie den Lüfteranschluss fest in die Leiterplatte.
+. link:reinstalling-sg120-and-sg1200-cover.html["Setzen Sie die obere Abdeckung wieder auf das Gerät"], und drücken Sie den Riegel nach unten, um die Abdeckung zu fixieren.
+. link:power-sg120-and-sg1200-off-on.html["Schalten Sie das Gerät ein"] und überwachen Sie die LEDs des Geräts sowie die Startcodes.
++
+Verwenden Sie die BMC-Schnittstelle, um den Boot-up-Status zu überwachen.
+
+. Vergewissern Sie sich, dass der Appliance-Node im Grid Manager angezeigt wird und keine Meldungen angezeigt werden.
+
+
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

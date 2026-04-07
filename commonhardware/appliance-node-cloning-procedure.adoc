@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, appliance node clone, appliance node cloning, node clone, node cloning 
 summary: 'Der Klonprozess kann mehrere Tage dauern, bis die Daten zwischen dem Quell-Node \(Appliance, die ersetzt wird\) und der Ziel-\(New\) Appliance übertragen wurden.' 
 ---
-= Klon-Appliance-Node
+= Klonen eines StorageGRID Appliance-Knotens
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ NOTE: Die Verwendung des 1-GbE-Admin-Netzwerks für die Übertragung von Klondat
 Nachdem die Zielanwendung konfiguriert und validiert wurde, ist im Abschnitt Installation *Klonen starten* auf dem Quellknoten aktiviert.
 
 +
-Wenn Probleme bestehen, die das Klonen verhindern, ist *Klonen starten* nicht aktiviert und Probleme, die Sie lösen müssen, werden als *Verbindungsstatus* aufgeführt. Diese Probleme sind auf der Startseite des StorageGRID-Appliance-Installationsprogramms sowohl des Quell-Knotens als auch der Ziel-Appliance aufgeführt. Es wird immer nur ein Problem angezeigt, und der Status wird automatisch aktualisiert, wenn sich die Bedingungen ändern. Lösen Sie alle Klonprobleme, um *Klonen starten* zu aktivieren.
+Wenn Probleme bestehen, die das Klonen verhindern, ist *Klonen starten* nicht aktiviert und Probleme, die Sie beheben müssen, werden als *Verbindungsstatus* aufgeführt. Diese Probleme werden auf der StorageGRID Appliance Installer-Startseite sowohl des Quellknotens als auch des Zielgeräts angezeigt. Es wird jeweils nur ein Problem angezeigt und der Status wird automatisch aktualisiert, wenn sich die Bedingungen ändern. Beheben Sie alle Klonprobleme, um *Klonen starten* zu aktivieren.
 
 +
 Wenn *Klonen starten* aktiviert ist, zeigt der *Aktueller Status* das zum Klonen des Datenverkehrs ausgewählte StorageGRID-Netzwerk sowie Informationen über die Verwendung dieser Netzwerkverbindung an. Siehe link:considerations-and-requirements-for-appliance-node-cloning.html["Überlegungen und Anforderungen zum Klonen von Appliance-Nodes"].

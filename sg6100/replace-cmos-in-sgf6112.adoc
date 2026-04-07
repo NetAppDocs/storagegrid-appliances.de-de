@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, SGF6112, storage node, storage appliance, Replacing, replace, CMOS, battery, sg6160 
 summary: Gehen Sie wie folgt vor, um die CMOS-Knopfzellenbatterie auf der Systemplatine auszutauschen. 
 ---
-= Ersetzen Sie die SGF6112- oder SG6100-CN CMOS-Batterie
+= Tauschen Sie eine CMOS-Batterie in einem SGF6112 oder SG6100-CN aus.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

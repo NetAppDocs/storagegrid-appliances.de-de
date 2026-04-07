@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, maintenance mode 
 summary: Sie müssen das Gerät in den Wartungsmodus versetzen, bevor Sie bestimmte Wartungsarbeiten durchführen. 
 ---
-= Stellen Sie das Gerät in den Wartungsmodus
+= Versetzen Sie ein StorageGRID Gerät in den Wartungsmodus
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,7 @@ In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wa
 NOTE: Das Passwort des Admin-Kontos und die SSH-Host-Schlüssel für eine StorageGRID-Appliance im Wartungsmodus bleiben identisch mit dem Kennwort, das zum Zeitpunkt der Wartung der Appliance vorhanden war.
 
 .Schritte
-. Wählen Sie im Grid Manager die Option *NODES* aus.
+. Im Grid Manager wählen Sie *Knoten* aus.
 . Wählen Sie in der Strukturansicht der Seite Knoten den Appliance Storage Node aus.
 . Wählen Sie *Aufgaben*.
 . Wählen Sie *Wartungsmodus*. Ein Bestätigungsdialogfeld wird angezeigt.
@@ -54,7 +54,7 @@ NOTE: Wenn Sie über eine direkte Verbindung zum Management-Port der Appliance v
 Es kann bis zu 20 Minuten dauern, bis das Gerät neu gestartet wird und sich wieder mit dem Netz verbindet.  So bestätigen Sie, dass der Neustart abgeschlossen ist und der Knoten wieder dem Grid beigetreten ist:
 
 +
-.. Wählen Sie im Grid Manager *NODES* aus.
+.. Im Grid Manager wählen Sie *Knoten* aus.
 .. Überprüfen Sie, ob der Appliance-Knoten einen normalen Status hat (grünes Häkchen-Symbolimage:../media/icon_alert_green_checkmark.png["Grünes Häkchen"] links neben dem Knotennamen), was darauf hinweist, dass keine Warnungen aktiv sind und der Knoten mit dem Grid verbunden ist.
 
 

@@ -1,0 +1,46 @@
+---
+permalink: installconfig/installing-hardware-sg6200.html 
+sidebar: sidebar 
+keywords: install, sg6200, sg6212, expansion shelf, cabinet, rack, drives 
+summary: Für die SG6260 und SGF6212 installieren Sie Schienen in Ihrem Schrank oder Rack und schieben das Controller-Shelf, eventuelle Erweiterungs-Shelfs und den Compute-Controller auf die Schienen. 
+---
+= Installieren Sie den SG6200 in einem Schrank oder Rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die SG6260 und SGF6212 installieren Sie Schienen in Ihrem Schrank oder Rack und schieben das Controller-Shelf, eventuelle Erweiterungs-Shelfs und den Compute-Controller auf die Schienen.
+
+[cols="1a,2a,2a"]
+|===
+| Modell | Installieren | Zur Information 
+
+
+ a| 
+SG6260
+ a| 
+Controller Shelf mit 60 Laufwerken und Erweiterungs-Shelfs mit 60 Laufwerken
+ a| 
+link:sg6260-installing-60-drive-shelves-into-cabinet-or-rack.html["Installation von Shelfs mit 60 Laufwerken"]
+
+
+
+ a| 
+SG6212
+ a| 
+Appliance-Shelf für 12 Laufwerke
+ a| 
+link:installing-appliance-in-cabinet-or-rack-sgf6212.html["Installation von Shelfs mit 12 Laufwerken"]
+
+
+
+ a| 
+SG6260
+ a| 
+SG6200-CN Rechencontroller
+ a| 
+link:sg6200-cn-installing-into-cabinet-or-rack.html["Installieren Sie den SG6200-CN-Controller"]
+
+|===

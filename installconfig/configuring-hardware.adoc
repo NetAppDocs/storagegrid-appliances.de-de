@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, hardware, configure, configuration, set up, setup, network, networking 
 summary: Nachdem Sie die Appliance mit Strom versorgt haben, konfigurieren Sie die Netzwerkverbindungen, die von StorageGRID verwendet werden.  
 ---
-= Hardware einrichten: Übersicht
+= StorageGRID Gerätehardware einrichten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,55 +15,94 @@ Nachdem Sie die Appliance mit Strom versorgt haben, konfigurieren Sie die Netzwe
 
 
 
-== Konfigurieren Sie die erforderlichen Netzwerkverbindungen
-
-Bei allen Appliances führen Sie mehrere Aufgaben zur Konfiguration erforderlicher Netzwerkverbindungen aus, z. B.:
-
-* Greifen Sie auf den Appliance Installer zu
-* Netzwerkverbindungen konfigurieren
-* Überprüfen Sie Netzwerkverbindungen auf Portebene
+== Erforderliche Hardwarekonfigurationen
 
 
 
+=== Netzwerkverbindungen
 
-== Zusätzliche Konfiguration, die möglicherweise erforderlich ist
+Sie müssen die erforderlichen Netzwerkverbindungen für alle Geräte konfigurieren und überprüfen:
 
-Je nachdem, welche Gerätetypen Sie konfigurieren, ist möglicherweise eine zusätzliche Hardwarekonfiguration erforderlich.
+* link:../installconfig/accessing-storagegrid-appliance-installer.html["Greifen Sie auf den Appliance Installer zu"]
+* link:../installconfig/configuring-network-links.html["Netzwerkverbindungen konfigurieren"]
+* link:../installconfig/verifying-port-level-network-connections.html["Überprüfen Sie Netzwerkverbindungen auf Portebene"]
 
-
-
-=== SANtricity System Manager
-
-Für SG6160, SG6000, SG5800 und SG5700 wird SANtricity System Manager konfiguriert. Die SANtricity-Software wird verwendet, um die Hardware für diese Appliances zu überwachen.
 
 
 
 === BMC Schnittstelle
 
-Die folgenden Geräte verfügen über eine BMC-Schnittstelle, die konfiguriert werden muss:
+Sie müssen link:../installconfig/configuring-bmc-interface.html["Konfigurieren Sie die Baseboard Management Controller (BMC)-Schnittstelle"] , wenn Sie eines der folgenden Geräte installieren:
 
 * SG100
 * SG110
+* SG120
 * SG1000
 * SG1100
-* SG6000
-* SG6100
+* SG1200
+* SGF6024
+* SGF6112
+* SGF6212
+* SG6060
+* SG6160
+* SG6260
+
+
+Über die BMC-Schnittstelle können Sie SNMP und andere grundlegende Einstellungen für Ihre Appliances konfigurieren. Sie ermöglicht Ihnen außerdem, Ihre Hardwareinstallation zu überprüfen, den Betriebszustand Ihrer Appliance zu bestimmen und die Identify-LED an Ihrer Appliance zu steuern.
+
+Weitere Informationen zu den Funktionen, die Sie mit dem BMC nutzen können, finden Sie unter link:../commonhardware/use-bmc.html["Verwenden Sie die BMC-Schnittstelle"].
+
+
+
+== Optionale Hardwarekonfigurationen
+
+
+
+=== SANtricity System Manager
+
+Sie können link:../installconfig/accessing-and-configuring-santricity-system-manager.html["SANtricity System Manager konfigurieren"], wenn Sie eines der folgenden Geräte besitzen:
+
+* SG5712
+* SG5760
+* SG5812
+* SG5860
+* SGF6024
+* SG6060
+* SG6160
+* SG6260
+
+
+SANtricity System Manager software ermöglicht Ihnen Folgendes:
+
+* Überwachen Sie Systemleistungsdaten, den Status der Hardwarekomponenten und die Supportfunktionen Ihres Geräts
+* Verwalten Sie Laufwerkssicherheitsschlüssel, SNMP- und syslog-Warnungen sowie Administratorkennwörter für den Zugriff auf SANtricity System Manager
+* Zugriff auf die E-Series AutoSupport konfigurieren
 
 
 
 
-== Optionale Konfiguration
+=== Aktivieren Sie die Node- oder Laufwerkverschlüsselung
 
-* Storage Appliances
-+
-** Konfigurieren Sie SANtricity System Manager (SG5700, SG5800, SG6000 und SG6100) die Software, die Sie für die Überwachung der Hardware verwenden
-** Ändern Sie den RAID-Modus
-** link:../installconfig/accessing-bmc-interface.html["Zugriff auf die BMC-Schnittstelle"] Für den Controller SG6000-CN oder SG6100-CN
-
-
-* Service-Appliances
-+
-** link:../installconfig/accessing-bmc-interface.html["Zugriff auf die BMC-Schnittstelle"] Für SG100, SG110, SG1000 und SG1100
+Sie können link:../installconfig/optional-enabling-node-encryption.html["Knoten- oder Laufwerkverschlüsselung aktivieren"] verwenden, um die Laufwerke und Festplatten in Ihrem Gerät zu schützen.
 
 
 
+=== RAID-Modus ändern
+
+Sie können link:../installconfig/optional-changing-raid-mode.html["Ändern Sie den RAID-Modus Ihres Storage Appliance."] erfüllen, um Ihre Speicher- und Wiederherstellungsanforderungen zu berücksichtigen.
+
+Folgende Geräte unterstützen die Änderung des RAID-Modus:
+
+* SG5760
+* SG5860
+* SGF6024
+* SG6060
+* SG6160
+* SG6260
+
+
+
+
+=== Netzwerkports neu zuordnen
+
+Sie können link:../installconfig/optional-remapping-network-ports-for-appliance.html["Ordnen Sie die Netzwerkports Ihres Geräts neu zu"] verwenden, um Ihre Netzwerkverbindungen zu optimieren.

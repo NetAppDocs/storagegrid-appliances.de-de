@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, sg5860 
 summary: Sie können ein Laufwerk im SG5860 austauschen. 
 ---
-= Das Laufwerk in SG5860 austauschen
+= Ersetzen Sie ein Laufwerk im SG5860
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,7 +26,7 @@ Dieses Verfahren gilt für DCM- und DCM2-Laufwerkseinschübe.
 ** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 ** Zugriff auf den SANtricity System Manager:
 +
-*** Wählen Sie im Grid-Manager *NODES* > *_Appliance Node_* > *SANtricity System Manager* aus. Informationen zum Controller finden Sie auf der https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
+*** Wählen Sie im Grid Manager *Knoten* > *Geräteknoten* > *SANtricity System Manager*. Die Controller-Informationen befinden sich auf der  https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Registerkarte „SANtricity System Manager“"].
 *** Zeigen Sie einen Browser in der Management Station auf den Domänennamen oder die IP-Adresse des Controllers.
 
 

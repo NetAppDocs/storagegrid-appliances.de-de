@@ -1,0 +1,65 @@
+---
+permalink: sg6200/replace-ocp-nic-sg6200-cn.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, storage node, storage appliance, Replacing, replace, NIC, network interface card 
+summary: 'Möglicherweise müssen Sie die Netzwerkkarte (NIC) im SG6200-CN austauschen, wenn sie nicht optimal funktioniert oder ausgefallen ist.' 
+---
+= Ersetzen Sie die externe Netzwerkkarte im SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie die externe Netzwerkkarte (NIC) im SG6200-CN austauschen, wenn sie nicht optimal funktioniert oder ausgefallen ist.
+
+.Über diese Aufgabe
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage Nodes mit dem Grid verbunden sind, bevor Sie mit dem Austausch der Network Interface Card (NIC) beginnen, oder ersetzen Sie die NIC während eines geplanten Wartungsfensters, wenn Serviceunterbrechungen akzeptabel sind. Siehe Informationen über link:https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Verbindungsstatus des Knotens wird montierend dargestellt"].
+
+
+CAUTION: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie die Netzwerkkarte (NIC) während eines geplanten Wartungsfensters ersetzen, da Sie während dieses Vorgangs möglicherweise vorübergehend den Zugriff auf diese Objekte verlieren. Siehe Informationen über link:https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"].
+
+.Bevor Sie beginnen
+* Sie haben die richtige Ersatz-NIC.
+* Sie haben die festgelegt link:verify-component-to-replace.html["Position der zu ersetzenden NIC"].
++
+image::../media/sg6200_cn_ocp_nic_location.png[NIC-Blende.]
+
+* Sie haben link:locating-sg6200-in-data-center.html["den SG6200-CN-Controller physisch lokalisiert"], an dem Sie die Netzwerkkarte im Rechenzentrum austauschen.
++
+
+NOTE: Hot-Swapping wird bei diesem Vorgang *nicht* unterstützt. Ein link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["Kontrolliertes Herunterfahren des Geräts"] ist erforderlich, bevor Sie die Kabel trennen und die Netzwerkkarte entfernen.
+
+* Sie haben sämtliche Kabel abgeklemmt, einschließlich der beiden Netzkabel am SG6200-CN.
+* *Optional*: Sie haben den Controller aus dem Rack entfernt, wenn dies durch lokale Vorschriften erforderlich ist. Das Entfernen ist nicht erforderlich, da die NIC von außen zugänglich ist.
+
+
+
+
+== Schritt 1: Externe Netzwerkkarte entfernen
+
+.Schritte
+. Wickeln Sie das Gurtende eines ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende an einem Metallboden, um eine statische Entladung zu vermeiden.
+. Lösen Sie die Schraube an der Frontplatte der NIC mit einem Schraubendreher.
++
+
+CAUTION: Hot-Swapping wird für dieses Verfahren *nicht* unterstützt. Der Controller muss vor dem Entfernen der NIC von der Stromversorgung getrennt werden.
+
+. Entfernen Sie die NIC vorsichtig, indem Sie am Griff der Frontplatte ziehen. Stellen Sie die NIC auf eine flache, antistatische Oberfläche.
+
+
+
+
+== Schritt 2: Installieren Sie die externe Netzwerkkarte neu
+
+.Schritte
+. Wickeln Sie das Gurtende eines ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende an einem Metallboden, um eine statische Entladung zu vermeiden.
+. Nehmen Sie die Ersatz-NIC aus der Verpackung.
+. Richten Sie die NIC an der Öffnung im Gehäuse aus, und drücken Sie sie vorsichtig hinein, bis sie vollständig eingesetzt ist.
+. Ziehen Sie die Schraube an der Frontplatte der NIC fest.
+
+
+.Nachdem Sie fertig sind
+Wenn Sie keine weiteren Wartungsmaßnahmen im Gerät durchführen müssen, setzen Sie das Gerät wieder in das Rack ein, wenn es entfernt wurde, schließen Sie die Kabel an, und schalten Sie das Gerät mit Strom aus.
+
+Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe  -ersatz"^] Seite für weitere Informationen.

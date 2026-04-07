@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: Ersetzen Sie ein Controller-Shelf oder Festplatten-Shelf für 60 Laufwerke, das zwei Stromankanister für Redundanz enthält. 
 ---
-= Austauschen des Strombehälters im Speicher-Controller-Shelf oder Erweiterungs-Shelf (SG6160)
+= Ersetzen Sie eine Stromversorgungsdose in einem SG6160-Speichercontroller-Einschub oder Erweiterungseinschub
 :allow-uri-read: 
 :experimental: 
 :icons: font

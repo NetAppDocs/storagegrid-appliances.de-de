@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, raid, raid mode, change, changing, modify, DDP, ddp16, RAID 6 
 summary: Bei einigen Appliance-Modellen können Sie zu einem anderen RAID-Modus auf der Appliance wechseln, um Ihre Speicher- und Recovery-Anforderungen zu erfüllen. Sie können den Modus nur ändern, bevor Sie den Appliance-Speicherknoten bereitstellen. 
 ---
-= Optional: Ändern des RAID-Modus (SG5760, SG5860, SG6000 und SG6160)
+= Ändern des RAID-Modus für einen SG5760, SG5860, SG6000, SG6160 oder SG6260
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,16 @@ summary: Bei einigen Appliance-Modellen können Sie zu einem anderen RAID-Modus 
 Bei einigen Appliance-Modellen können Sie zu einem anderen RAID-Modus auf der Appliance wechseln, um Ihre Speicher- und Recovery-Anforderungen zu erfüllen. Sie können den Modus nur ändern, bevor Sie den Appliance-Speicherknoten bereitstellen.
 
 Wenn Sie mit ConfigBuilder eine JSON-Datei erstellen, können Sie den RAID-Modus automatisch ändern. Siehe link:automating-appliance-installation-and-configuration.html["Automatisierung der Appliance-Installation und -Konfiguration"].
+
+Sie können den RAID-Modus auf den folgenden Geräten ändern:
+
+* SG5760
+* SG5860
+* SGF6024
+* SG6060
+* SG6160
+* SG6260
+
 
 .Über diese Aufgabe
 Wenn die Appliance unterstützt, können Sie eine der folgenden Optionen für die Volume-Konfiguration auswählen:
@@ -25,7 +35,7 @@ NOTE: Die Volume-Größe ist nicht konsistent für alle DDP- und RAID-Typen. Unt
 +
 ** Im Vergleich zu RAID 6 erzielt DDP eine bessere System-Performance, kürzere Wiederherstellungszeiten nach Laufwerksausfällen und ein vereinfachtes Management.
 ** Pro Storage Appliance oder Erweiterungs-Shelf wird ein Festplatten-Pool erstellt.
-** DDP bietet in SG5760, SG5860 und SG6160 Appliances Schutz vor Schubladenverlusten.
+** DDP bietet Schutz vor Schubladenverlust in SG5760, SG5860, SG6160 und SG6260 Appliances.
 +
 
 NOTE: Aufgrund der beiden SSDs bietet DDP in SG6060 Appliances keine Schubladensicherung. Der Schutz vor Schubladenverlusten ist in allen Erweiterungs-Shelfs, die zu einem SG6060 hinzugefügt werden, wirksam.
@@ -120,6 +130,30 @@ Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
 
 --
 .SG6160
+--
+.Bevor Sie beginnen
+* Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.
+* Der Kunde hat einen  https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Unterstützter Webbrowser"^].
+
+
+.Schritte
+. Öffnen Sie einen Browser, und geben Sie eine der IP-Adressen für den Computing-Controller der Appliance ein.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` Die IP-Adresse des Compute-Controllers (nicht des Storage-Controllers) in einem der drei StorageGRID-Netzwerke.
+
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
+
+. Wählen Sie *Erweitert* > *RAID-Modus*.
+. Wählen Sie auf der Seite *RAID-Modus konfigurieren* den gewünschten RAID-Modus aus der Dropdown-Liste Modus aus.
+. Klicken Sie Auf *Speichern*.
+
+
+--
+.SG6260
 --
 .Bevor Sie beginnen
 * Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.

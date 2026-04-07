@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, storage node, install, installing, installation, cabinet, rack, rail, rails 
 summary: Sie installieren eine Reihe von Schienen für das Gerät in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen. 
 ---
-= In Schrank oder Rack einbauen (SGF6112)
+= Installieren Sie den SGF6112 in einem Schrank oder Rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

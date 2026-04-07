@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, appliance, locate, find, locating, finding, identify, blue led, blue light 
 summary: Suchen Sie die Appliance, sodass Sie Hardware-Wartungsarbeiten oder -Upgrades durchführen können. 
 ---
-= Suchen Sie die SGF6112 Appliance oder den SG6100-CN Controller im Datacenter
+= Suchen Sie ein SGF6112-Gerät oder einen SG6100-CN-Controller in einem Rechenzentrum
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

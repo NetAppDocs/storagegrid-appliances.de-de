@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg1000, SG100, power off, turn off, shut off, shutdown, shut down, 
 summary: Fahren Sie die Service-Appliance herunter, um Hardware-Wartungsarbeiten durchzuführen. 
 ---
-= Fahren Sie die SG100 oder SG1000 herunter
+= Fahren Sie das SG100- oder SG1000-Servicegerät herunter.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

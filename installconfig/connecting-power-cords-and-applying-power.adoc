@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, wire, wiring, cabling, cable, Connecting, connect, power cords, power, applying power, apply power, turn on, power up, ac, ac power 
 summary: Nach dem Anschließen der Netzwerkkabel können Sie das Gerät mit Strom versorgen. 
 ---
-= Stromkabel anschließen und Strom anschließen
+= Schließen Sie die Netzkabel an und schalten Sie die StorageGRID Appliances ein.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -30,6 +30,23 @@ Drücken Sie den Netzschalter während des Einschalters nicht erneut.
 
 --
 .SG110 und SG1100
+--
+.Schritte
+. Schließen Sie ein Netzkabel an jede der beiden Netzteile im Gerät an.
+. Schließen Sie diese beiden Netzkabel an zwei verschiedene Stromverteiler (Power Distribution Units, PDUs) im Schrank oder Rack an.
+. Wenn der Netzschalter auf der Vorderseite des Geräts derzeit nicht blau leuchtet, drücken Sie die Taste, um das Gerät einzuschalten.
++
+Drücken Sie den Netzschalter während des Einschalters nicht erneut.
+
++
+Die LED am Netzteil sollte grün leuchten, ohne zu blinken.
+
+. Wenn Fehler auftreten, beheben Sie alle Probleme.
+. Befestigen Sie die Frontverkleidung am Gerät, falls sie entfernt wurde.
+
+
+--
+.SG120 und SG1200
 --
 .Schritte
 . Schließen Sie ein Netzkabel an jede der beiden Netzteile im Gerät an.
@@ -173,6 +190,54 @@ Drücken Sie den Netzschalter während des Einschalters nicht erneut.
 . Überprüfen Sie nach dem Hochfahren der Komponenten, ob der Betriebsschalter an der Vorderseite des SG6100-CN-Controllers leuchtet.
 . Wenn Fehler auftreten, beheben Sie alle Probleme.
 . Bringen Sie die Frontverkleidung am SG6100-CN-Controller an, falls sie entfernt wurde.
+
+
+--
+.SG6200
+--
+*SGF6212*:
+
+.Schritte
+. Schließen Sie ein Netzkabel an jede der beiden Netzteile im Gerät an.
+. Schließen Sie diese beiden Netzkabel an zwei verschiedene Stromverteiler (Power Distribution Units, PDUs) im Schrank oder Rack an.
+. Wenn der Netzschalter auf der Vorderseite des Geräts derzeit nicht blau leuchtet, drücken Sie die Taste, um das Gerät einzuschalten.
+. Drücken Sie den Netzschalter während des Einschalters nicht erneut.
+. Die LED am Netzteil sollte grün leuchten, ohne zu blinken.
+. Wenn Fehler auftreten, beheben Sie alle Probleme.
+. Befestigen Sie die Frontverkleidung am Gerät, falls sie entfernt wurde.
+
+
+*SG6260*:
+
+.Schritte
+. Vergewissern Sie sich, dass beide Controller im Storage-Controller-Shelf deaktiviert sind.
++
+
+CAUTION: *Gefahr eines elektrischen Schlags* -- vor dem Anschließen der Netzkabel sicherstellen, dass die Netzschalter für jeden der beiden Speicher-Controller ausgeschaltet sind.
+
+. Wenn Sie über Erweiterungs-Shelfs verfügen, bestätigen Sie, dass beide IOM-Netzschalter aus sind.
++
+
+CAUTION: *Gefahr eines elektrischen Schlags* -- bevor Sie die Netzkabel anschließen, stellen Sie sicher, dass die beiden Netzschalter für jedes Erweiterungs-Regal ausgeschaltet sind.
+
+. Schließen Sie ein Netzkabel an jedes der beiden Netzteile im SG6200-CN-Controller an.
+. Schließen Sie diese beiden Netzkabel an zwei verschiedene Stromverteiler (Power Distribution Units, PDUs) im Schrank oder Rack an.
+. Schließen Sie ein Netzkabel an jede der beiden Netzteile im Storage Controller Shelf an.
+. Wenn Sie über Erweiterungs-Shelfs verfügen, schließen Sie ein Netzkabel an jede der beiden Netzteile in jedem Erweiterungs-Shelf an.
+. Verbinden Sie die beiden Netzkabel jedes Storage Shelf (einschließlich der optionalen Erweiterungs-Shelfs) mit zwei verschiedenen PDUs im Rack oder Rack.
+. Wenn die Einschalttaste an der Vorderseite des SG6200-CN-Controllers derzeit nicht blau leuchtet, drücken Sie die Taste, um den Controller einzuschalten.
++
+Drücken Sie den Netzschalter während des Einschalters nicht erneut.
+
+. Falls Sie Erweiterungsregale haben, schalten Sie zuerst die beiden Netzschalter für jedes Regal ein. Schalten Sie anschließend die beiden Netzschalter auf der Rückseite des Speicherkontroller-Regals ein.
++
+** Schalten Sie die Netzschalter während des Einschalters nicht aus.
+** Die Lüfter im Storage Controller Shelf und optionale Erweiterungs-Shelfs sind beim ersten Starten möglicherweise sehr laut. Das laute Geräusch beim Anfahren ist normal.
+
+
+. Nachdem die Komponenten hochgefahren sind, überprüfen Sie, ob die Einschalttaste an der Vorderseite des SG6200-CN-Controllers leuchtet.
+. Wenn Fehler auftreten, beheben Sie alle Probleme.
+. Bringen Sie die Blende am SG6200-CN-Controller wieder an, falls diese abgenommen wurde.
 
 
 --

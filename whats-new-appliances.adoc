@@ -18,6 +18,24 @@ Erfahren Sie, was es Neues bei StorageGRID -Geräten gibt.
 
 
 
+== SG120- und SG1200-Servicegeräte
+
+Die neuen StorageGRID SG120 und SG1200 Services Appliances sind eine Weiterentwicklung der Hardware und bieten eine verbesserte administrative Leistung sowie eine bessere Lastverteilung. Weitere Informationen finden Sie unter link:./installconfig/hardware-description-sg120-and-1200.html["SG120 und SG1200 Services Appliance: Übersicht"].
+
+
+
+== SGF6212 Appliance
+
+Das neue StorageGRID SGF6212 Storage-System zeichnet sich durch sein kompaktes Design mit integriertem Compute- und Storage-Controller in einem 1U-Gehäuse aus. Das System unterstützt 12 SSD-NVMe-Laufwerke in einem RAID-Verbund für ausfallsicheren Objektspeicher. Siehe link:installconfig/hardware-description-sg6200.html["SGF6212-Gerät: Übersicht"] für weitere Informationen.
+
+
+
+== SG6260 Appliance
+
+Das neue StorageGRID SG6260-System umfasst einen Compute-Controller und ein Storage-Controller-Gehäuse mit zwei Storage-Controllern und 60 Laufwerken sowie zwei NVMe-SSDs für Caching. Optional können dem SG6260 Erweiterungsgehäuse für 60 Laufwerke hinzugefügt werden. Weitere Informationen finden Sie unter link:./installconfig/hardware-description-sg6200.html["SGF6200-Geräte: Übersicht"].
+
+
+
 == Client-Netzwerk kann ohne IP-Adresse konfiguriert werden
 
 Sie können das Client-Netzwerk jetzt aktivieren, ohne eine IP-Adresse anzugeben.  Dadurch können im Client-Netzwerk VLAN-Schnittstellen in StorageGRID konfiguriert werden, ohne dass für die Schnittstelle selbst eine zusätzliche IP-Adresse erforderlich ist. Weitere Informationen finden Sie unter link:.//installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"] .
@@ -33,21 +51,3 @@ Bei StorgeGRID Version 12.0 entspricht die Versionsnummer des StorageGRID Applia
 == BMC-Informationen
 
 Detaillierte Informationen zur Verwendung der BMC -Schnittstelle der StorageGRID Appliance sind jetzt verfügbar. Weitere Informationen finden Sie unter link:./commonhardware/use-bmc.html["Verwenden des Baseboard Management Controllers (BMC) der StorageGRID Appliance"] .
-
-
-
-== SG5812 und SG5860 Appliances
-
-Die StorageGRID SG5812- und SG5860-Geräte sind integrierte Speicher- und Computerplattformen, die als Speicherknoten in einem StorageGRID -Grid fungieren.  Weitere Informationen finden Sie imlink:./installconfig/hardware-description-sg5800.html["SG5800 Appliances: Überblick"] um mehr zu erfahren.
-
-
-
-== SG6160 Appliance
-
-Das neue StorageGRID SG6160-Gerät umfasst einen Compute-Controller und ein Storage-Controller-Shelf, das zwei Storage-Controller und 60 Laufwerke sowie zwei NVMe-SSD-Laufwerke für das Caching enthält.  Optional können dem SG6160 Erweiterungsgehäuse für 60 Laufwerke hinzugefügt werden.  Siehelink:./installconfig/hardware-description-sg6100.html["SGF6100 Appliances: Überblick"] um mehr zu erfahren.
-
-
-
-== Service Appliances für SG110 und SG1100
-
-Die neuen StorageGRID SG110- und SG1100-Service-Appliances sind ein evolutionäres Hardware-Update, das eine verbesserte Verwaltungs- und Lastausgleichsleistung bietet. Weitere Informationen finden Sie unter link:./installconfig/hardware-description-sg110-and-1100.html["SG110 und SG1100 Services Appliance: Überblick"] .

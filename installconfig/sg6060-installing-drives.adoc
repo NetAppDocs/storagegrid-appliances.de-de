@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, drives, drive, disk, disks, install, installing, installation 
 summary: Installieren Sie nach der Installation des Shelf für 60 Laufwerke in einem Schrank oder Rack alle 60 Laufwerke in das Shelf. Der Versand für das E2860 Controller-Shelf umfasst zwei SSD-Laufwerke, die Sie im oberen Einschub des Controller Shelf installieren sollten. Jedes optionale Erweiterungs-Shelf umfasst 60 HDD-Laufwerke und keine SSD-Laufwerke. 
 ---
-= Laufwerke installieren (SG6060)
+= Installieren Sie die Laufwerke in die SG6060-Laufwerkseinschübe
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

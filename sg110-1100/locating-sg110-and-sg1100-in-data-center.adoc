@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, appliance, locate, find, locating, finding, identify, blue led, blue light 
 summary: Suchen Sie die Appliance, sodass Sie Hardware-Wartungsarbeiten oder -Upgrades durchführen können. 
 ---
-= Suchen Sie SG110 oder SG1100 im Datacenter
+= Suchen Sie einen SG110 oder SG1100 in einem Rechenzentrum
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

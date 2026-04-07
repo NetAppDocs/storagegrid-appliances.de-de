@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000-cn, storage node, storage appliance, Replacing, replace, CMOS, battery 
 summary: Gehen Sie wie folgt vor, um die CMOS-Knopfzellenbatterie auf der Systemplatine auszutauschen. 
 ---
-= Ersetzen Sie die SG6000-CN CMOS-Batterie
+= Tauschen Sie die CMOS-Batterie des SG6000-CN aus.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

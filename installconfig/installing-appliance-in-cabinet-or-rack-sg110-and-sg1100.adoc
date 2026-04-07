@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, storage node, install, installing, installation, cabinet, rack, rail, rails 
 summary: Sie installieren eine Reihe von Schienen für das Gerät in Ihrem Schrank oder Rack und schieben das Gerät dann auf die Schienen. 
 ---
-= In Schrank oder Rack einbauen (SG110 oder SG1100)
+= Installieren Sie den SG110 oder SG1100 in einem Schrank oder Rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

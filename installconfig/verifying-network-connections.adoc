@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, mtu, test, testing 
 summary: Vergewissern Sie sich, dass Sie über die Appliance auf die StorageGRID-Netzwerke zugreifen können, die Sie verwenden. Um das Routing über Netzwerk-Gateways zu validieren, sollten Sie die Verbindung zwischen dem StorageGRID Appliance Installer und den IP-Adressen in verschiedenen Subnetzen testen. Sie können auch die MTU-Einstellung überprüfen. 
 ---
-= Netzwerkverbindungen prüfen
+= Überprüfen Sie die Netzwerkverbindungen auf StorageGRID Appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
