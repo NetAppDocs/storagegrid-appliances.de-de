@@ -29,7 +29,7 @@ Wenn Sie die Node-Verschlüsselung aktivieren, können die Festplatten Ihrer App
 
 Wenn Sie ConfigBuilder zum Generieren einer JSON-Datei verwenden, können Sie die Node-Verschlüsselung automatisch aktivieren. Siehe link:automating-appliance-installation-and-configuration.html["Automatisierung der Appliance-Installation und -Konfiguration"].
 
-Wenn Sie den FIPS-Modus nach der Aktivierung der Knotenverschlüsselung aktivieren, wird außerdem das Modul NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 zur Verschlüsselung ruhender Daten verwendet. Siehe https://review.docs.netapp.com/us-en/storagegrid_storagegrid-120-dev/admin/manage-tls-ssh-policy.html#select-a-security-policy["Wählen Sie eine Sicherheitsrichtlinie"^] für weitere Informationen.
+Wenn Sie zusätzlich nach der Aktivierung der Knotenverschlüsselung den FIPS-Modus aktivieren, wird das NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 Modul zur Verschlüsselung von Daten im Ruhezustand verwendet. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/storagegrid/admin/manage-tls-ssh-policy.html#select-a-security-policy["Wählen Sie eine Sicherheitsrichtlinie"^].
 
 .Bevor Sie beginnen
 Überprüfen Sie die Informationen über https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Konfigurieren von KMS"^].
