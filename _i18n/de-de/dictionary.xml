@@ -6586,4 +6586,5 @@ Zeigt Yes an und zeigt an, dass diese Komponente sicher entfernt werden kann.</b
   <block id="2ba40bc143304c6482f4d84aed967cc7" category="sidebar">SG6200-CN Controller (SG6260)</block>
   <block id="966b0abd256df531996f5779b0267572" category="sidebar">E4000-Steuerung (SG6260)</block>
   <block id="7a6eea70e2a063993169b9f20b674a54" category="paragraph">Wenn Sie zusätzlich nach der Aktivierung der Knotenverschlüsselung den FIPS-Modus aktivieren, wird das NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 Modul zur Verschlüsselung von Daten im Ruhezustand verwendet. Weitere Informationen finden Sie unter <block ref="fb536484ccdd3f2f62bef4c60558bb81" category="inline-link-rx"></block>.</block>
+  <block id="8eca4ebb793a1236eac6e1dd47dd0f10" category="section-title">[[poweron]]Schalten Sie den SG6000-CN-Controller ein und überprüfen Sie die Funktion.</block>
 </blocks>
