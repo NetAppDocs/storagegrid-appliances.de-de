@@ -330,6 +330,7 @@ Laufwerksstatus/-Fehler
  a| 
 * Blau (fest): Laufwerk ist online
 * Gelb (konstant): Laufwerksausfall
+* Gelb (blinkend): Laufwerksanzeige leuchtet
 * Aus: Steckplatz ist leer
 
 
@@ -1302,6 +1303,7 @@ Laufwerksstatus/-Fehler
  a| 
 * Blau (fest): Laufwerk ist online
 * Gelb (konstant): Laufwerksausfall
+* Gelb (blinkend): Laufwerksanzeige leuchtet
 * Aus: Steckplatz ist leer
 
 
