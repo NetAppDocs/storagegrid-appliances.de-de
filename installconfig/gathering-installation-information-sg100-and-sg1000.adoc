@@ -18,6 +18,7 @@ TIP: Verwenden Sie anstelle der Tabellen das mit ConfigBuilder bereitgestellte A
 
 
 
+[[check-storagegrid-version]]
 == Überprüfen Sie die StorageGRID-Version
 
 Vergewissern Sie sich vor der Installation einer SG100- oder SG1000-Service-Appliance, dass Ihr StorageGRID-System eine erforderliche Version der StorageGRID-Software verwendet.
@@ -42,6 +43,7 @@ SG100
 |===
 
 
+[[administration-and-maintenance-ports]]
 == Administrations- und Wartungs-Ports
 
 Das Admin-Netzwerk für StorageGRID ist ein optionales Netzwerk, das zur Systemadministration und -Wartung verwendet wird. Die Appliance stellt über die folgenden 1-GbE-Management-Ports auf der Appliance eine Verbindung zum Admin-Netzwerk her.
@@ -130,6 +132,7 @@ Admin-Netzwerk-Subnetze (CIDR)
 |===
 
 
+[[networking-ports]]
 == Netzwerkports
 
 Die vier Netzwerkports auf der Appliance werden mit dem StorageGRID-Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden.
@@ -198,6 +201,7 @@ Switch-Port für Port 4 (Grid-Netzwerk für Fixed-Modus)
 |===
 
 
+[[grid-network-ports]]
 == Grid-Netzwerkports
 
 Das Grid-Netzwerk für StorageGRID ist ein erforderliches Netzwerk, das für den gesamten internen StorageGRID-Datenverkehr verwendet wird. Die Appliance wird über die vier Netzwerk-Ports mit dem Grid-Netzwerk verbunden.
@@ -269,6 +273,7 @@ Einstellung für maximale Übertragungseinheit (MTU) (optional) Sie können den 
 |===
 
 
+[[client-network-ports]]
 == Client-Netzwerkports
 
 Das Client-Netzwerk für StorageGRID ist ein optionales Netzwerk, das in der Regel für den Zugriff auf das Grid auf das Clientprotokoll verwendet wird. Die Appliance wird über die vier Netzwerk-Ports mit dem Client-Netzwerk verbunden.
@@ -339,6 +344,7 @@ Statische IP-Adresse, die Sie für den Appliance-Knoten im Client-Netzwerk verwe
 |===
 
 
+[[bmc-management-network-ports]]
 == BMC-Management-Netzwerk-Ports
 
 Sie können über den in der Abbildung eingekreisten 1-GbE-Managementport auf die BMC-Schnittstelle auf der Services-Appliance zugreifen. Dieser Port unterstützt die Remote-Verwaltung der Controller-Hardware über Ethernet unter Verwendung des IPMI-Standards (Intelligent Platform Management Interface).
@@ -386,12 +392,14 @@ Statische IP-Adresse, die Sie für den BMC-Verwaltungsport verwenden möchten
 |===
 
 
+[[port-bond-modes]]
 == Port-Bond-Modi
 
 Wenn Sie Netzwerkverbindungen für die SG100- und SG1000-Appliances konfigurieren, können Sie die Portbindung für die Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie für die 1-GbE-Management-Ports, die eine Verbindung zum optionalen Admin-Netzwerk herstellen. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen.
 
 
 
+[[network-bond-modes]]
 === Netzwerk-Bond-Modi
 
 Die Netzwerk-Ports auf der Services-Appliance unterstützen den Bond-Modus mit festen Ports oder den aggregierten Port-Bond-Modus für die Grid-Netzwerk- und Client-Netzwerkverbindungen.
@@ -477,6 +485,7 @@ NOTE: Wenn Sie weniger als vier Netzwerkanschlüsse verwenden möchten, beachten
 
 
 
+[[network-bond-modes-for-management-ports]]
 === Network Bond-Modi für Management-Ports
 
 Für die beiden 1-GbE-Management-Ports auf der Services-Appliance können Sie den unabhängigen Netzwerk-Bond-Modus oder den aktiv-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung mit dem optionalen Admin-Netzwerk herzustellen. Diese Abbildungen zeigen, wie die Management-Ports auf den Appliances im Netzwerk-Bond-Modus für das Admin-Netzwerk verbunden sind.

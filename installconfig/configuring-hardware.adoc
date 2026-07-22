@@ -15,10 +15,12 @@ Nachdem Sie die Appliance mit Strom versorgt haben, konfigurieren Sie die Netzwe
 
 
 
+[[required-hardware-configurations]]
 == Erforderliche Hardwarekonfigurationen
 
 
 
+[[network-connections]]
 === Netzwerkverbindungen
 
 Sie müssen die erforderlichen Netzwerkverbindungen für alle Geräte konfigurieren und überprüfen:
@@ -30,6 +32,7 @@ Sie müssen die erforderlichen Netzwerkverbindungen für alle Geräte konfigurie
 
 
 
+[[bmc-interface]]
 === BMC Schnittstelle
 
 Sie müssen link:../installconfig/configuring-bmc-interface.html["Konfigurieren Sie die Baseboard Management Controller (BMC)-Schnittstelle"] , wenn Sie eines der folgenden Geräte installieren:
@@ -54,10 +57,12 @@ Weitere Informationen zu den Funktionen, die Sie mit dem BMC nutzen können, fin
 
 
 
+[[optional-hardware-configurations]]
 == Optionale Hardwarekonfigurationen
 
 
 
+[[santricity-system-manager]]
 === SANtricity System Manager
 
 Sie können link:../installconfig/accessing-and-configuring-santricity-system-manager.html["SANtricity System Manager konfigurieren"], wenn Sie eines der folgenden Geräte besitzen:
@@ -81,12 +86,14 @@ SANtricity System Manager software ermöglicht Ihnen Folgendes:
 
 
 
+[[enable-node-or-drive-encryption]]
 === Aktivieren Sie die Node- oder Laufwerkverschlüsselung
 
 Sie können link:../installconfig/optional-enabling-node-encryption.html["Knoten- oder Laufwerkverschlüsselung aktivieren"] verwenden, um die Laufwerke und Festplatten in Ihrem Gerät zu schützen.
 
 
 
+[[change-raid-mode]]
 === RAID-Modus ändern
 
 Sie können link:../installconfig/optional-changing-raid-mode.html["Ändern Sie den RAID-Modus Ihres Storage Appliance."] erfüllen, um Ihre Speicher- und Wiederherstellungsanforderungen zu berücksichtigen.
@@ -103,6 +110,7 @@ Folgende Geräte unterstützen die Änderung des RAID-Modus:
 
 
 
+[[remap-network-ports]]
 === Netzwerkports neu zuordnen
 
 Sie können link:../installconfig/optional-remapping-network-ports-for-appliance.html["Ordnen Sie die Netzwerkports Ihres Geräts neu zu"] verwenden, um Ihre Netzwerkverbindungen zu optimieren.

@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg5800.html 
 sidebar: sidebar 
 keywords: sg5800, sg5812, sg5860, storage appliance 
-summary: 'Die SG5800 StorageGRID Appliance ist eine integrierte Storage- und Computing-Plattform, die als Storage-Node in einem StorageGRID Grid ausgeführt wird. Die Appliance kann in einer hybriden Grid-Umgebung verwendet werden, in der Appliance Storage Nodes und virtuelle \(softwarebasierte\) Storage-Nodes kombiniert werden.' 
+summary: 'Die StorageGRID SG5800 Appliance ist eine integrierte Speicher- und Rechenplattform, die als Storage Node in einem StorageGRID Grid betrieben wird. Die Appliance kann in einer hybriden Grid-Umgebung verwendet werden, die Appliance Storage Nodes und virtuelle (softwarebasierte) Storage Nodes kombiniert.' 
 ---
 = StorageGRID SG5800-Appliances
 :allow-uri-read: 
@@ -26,6 +26,7 @@ Die SG5800 Appliance ist in zwei Modellen erhältlich: Dem SG5812 und dem SG5860
 
 
 
+[[sg5800-components]]
 == SG5800 Komponenten
 
 Die SG5800 Modelle umfassen die folgenden Komponenten:
@@ -57,10 +58,12 @@ Der maximale Rohkapazität, der in der StorageGRID-Appliance verfügbar ist, ric
 
 
 
+[[sg5800-diagrams]]
 == SG5800-Diagramme
 
 
 
+[[sg5812-front-and-rear-views]]
 === SG5812 Vorder- und Rückansicht
 
 Die Abbildungen zeigen die Vorder- und Rückseite des SG5812, einem 2U-Gehäuse für 12 Laufwerke.
@@ -69,6 +72,7 @@ image::../media/sg5812_front_and_back_views.png[Vorder- und Rückseite des SG581
 
 
 
+[[sg5812-components]]
 === SG5812-Komponenten
 
 Der SG5812 umfasst zwei Controller und zwei Power-Fan-Kanister.
@@ -102,6 +106,7 @@ Power-Fan-Behälter
 |===
 
 
+[[sg5860-front-and-rear-views]]
 === SG5860 Vorder- und Rückansicht
 
 Die Abbildungen zeigen die Vorder- und Rückseite des Modells SG5860, ein 4U-Gehäuse, das 60 Laufwerke in 5 Laufwerkseinschüben aufnehmen kann.
@@ -110,6 +115,7 @@ image::../media/sg5860_front_and_back_views.png[Vorder- und Rückseite des SG586
 
 
 
+[[sg5860-components]]
 === SG5860 Komponenten
 
 Der SG5860 umfasst zwei Controller, zwei Lüfterzangen und zwei Leistungszangen.
@@ -150,12 +156,14 @@ Leistungsbehälter (1 von 2)
 |===
 
 
+[[sg5800-controller]]
 == SG5800 Controller
 
 Die SG5812 und die SG5860 60 Modelle mit 12 Laufwerken der StorageGRID Appliance umfassen einen SG5800 Computing-Controller und einen E-Series E4000 Storage Controller.
 
 
 
+[[sg5800-compute-controller]]
 === SG5800 Computing-Controller
 
 * Arbeitet als Computing-Server für die Appliance.
@@ -238,6 +246,7 @@ Stellen Sie eine Verbindung zum Grid-Netzwerk und dem Client-Netzwerk für Stora
 |===
 
 
+[[e4000-storage-controller]]
 === E4000 Storage Controller
 
 Der Speicher-Controller der E4000-Serie verfügt über die folgenden Spezifikationen:

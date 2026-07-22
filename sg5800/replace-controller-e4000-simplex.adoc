@@ -44,6 +44,7 @@ Auf den Appliance-Speicherknoten kann nicht zugegriffen werden, wenn Sie den Con
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Schritt 1: Vorbereitung auf den Austausch der Steuerung
 
 Bereiten Sie sich darauf vor, einen Controller-Behälter zu ersetzen, indem Sie den Sicherheitsschlüssel des Laufwerks speichern, die Konfiguration sichern und Support-Daten sammeln. Dann können Sie die Host-I/O-Vorgänge beenden und das Controller-Shelf herunterfahren.
@@ -105,6 +106,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+[[step-2-place-the-controller-offline]]
 == Schritt 2: Stellen Sie den Controller offline
 
 Versetzen Sie den Controller in den Offline-Modus und vergewissern Sie sich, dass alle Vorgänge abgeschlossen sind.
@@ -127,6 +129,7 @@ Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, we
 
 
 
+[[step-3-remove-e4000-controller-canister]]
 == Schritt 3: Entfernen Sie den E4000-Controllerbehälter
 
 Entfernen Sie einen E4000-Controllerbehälter.
@@ -146,6 +149,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 
 
 
+[[step-4-determine-parts-to-transfer-to-replacement-controller]]
 == Schritt 4: Bestimmen Sie die Teile, die an den Ersatz-Controller übergeben werden sollen
 
 Möglicherweise sind Teile Ihres Ersatzcontrollers bereits vorinstalliert. Bestimmen Sie, welche Teile in den Behälter des Ersatzcontrollers übertragen werden müssen.
@@ -162,6 +166,8 @@ Möglicherweise sind Teile Ihres Ersatzcontrollers bereits vorinstalliert. Besti
 
 
 
+[[step-5-remove-the-battery]]
+[[step5_remove_battery]]
 == Schritt 5: Entfernen Sie die Batterie
 
 Den Akku aus dem außer Betrieb genommenen Controller herausgenommen und in den Ersatzcontroller einsetzen.
@@ -200,6 +206,8 @@ image::../media/legend_icon_02.png[Legende Referenz 2]
 
 
 
+[[step-6-move-the-dimms]]
+[[step6_remove_dimm]]
 == Schritt 6: Verschieben Sie die DIMMs
 
 Entfernen Sie die DIMMs aus dem Aktivkohlebehälter des Controllers, und setzen Sie sie in den Ersatzbehälter des Controllers ein.
@@ -258,6 +266,8 @@ NOTE: Prüfen Sie das DIMM visuell, um sicherzustellen, dass es gleichmäßig au
 
 
 
+[[step-7-install-the-battery]]
+[[step7_install_battery]]
 == Schritt 7: Setzen Sie die Batterie ein
 
 Setzen Sie den Akku in den Behälter des Ersatzcontrollers ein.
@@ -274,6 +284,8 @@ Vergewissern Sie sich, dass der Stecker in der Akkubuchse auf der Hauptplatine e
 
 
 
+[[step-8-replace-controller]]
+[[step8_replace_controller]]
 == Schritt 8: Controller austauschen
 
 Installieren Sie den Ersatz-Controller, und überprüfen Sie, ob der Node wieder mit dem Raster verbunden ist.

@@ -26,6 +26,7 @@ Wenn das Client- oder Admin-Netzwerk während der ersten Installation nicht im I
 
 
 
+[[change-the-mtu-setting-using-the-change-ip-tool]]
 == Ändern Sie die MTU-Einstellung mit dem Tool IP ändern
 
 .Bevor Sie beginnen
@@ -36,6 +37,7 @@ Greifen Sie auf das Tool IP ändern zu und aktualisieren Sie die MTU-Einstellung
 
 
 
+[[change-the-mtu-setting-using-maintenance-mode]]
 == Ändern Sie die MTU-Einstellung im Wartungsmodus
 
 Ändern Sie die MTU-Einstellung unter Verwendung des Wartungsmodus, wenn Sie mit dem Tool IP ändern nicht auf diese Einstellungen zugreifen können.

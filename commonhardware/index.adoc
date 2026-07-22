@@ -15,6 +15,7 @@ Befolgen Sie diese Anweisungen, um Ihr StorageGRID-System zu warten.
 
 
 
+[[about-these-instructions]]
 == Informationen zu diesen Anweisungen
 
 In diesen Anweisungen werden die für alle Knoten üblichen Verfahren beschrieben, z. B. die Anwendung eines Software-Hotfix, die Wiederherstellung von Grid-Nodes, die Wiederherstellung eines ausgefallenen Standorts, die Stilllegung von Grid-Nodes oder eines gesamten Standorts, die Durchführung von Netzwerkwartungen, die Durchführung von Wartungsverfahren auf Host-Ebene und Middleware sowie die Durchführung von Grid Node-Verfahren.
@@ -24,6 +25,7 @@ NOTE: In dieser Anleitung bezieht sich „`Linux`“ auf eine Red hat® Enterpri
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 * Sie verfügen über ein umfassendes Verständnis des StorageGRID Systems.
@@ -34,6 +36,7 @@ NOTE: In dieser Anleitung bezieht sich „`Linux`“ auf eine Red hat® Enterpri
 
 
 
+[[maintenance-procedures-for-appliances]]
 == Wartungsverfahren für Geräte
 
 Spezifische Wartungsverfahren für jeden StorageGRID-Gerätetyp finden Sie in den Abschnitten zur Gerätewartung:

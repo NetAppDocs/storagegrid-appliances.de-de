@@ -46,6 +46,7 @@ image:../media/manage_drives_tab_details.png["Registerkarte Laufwerke verwalten 
 
 
 
+[[turn-locator-light-on-or-off]]
 == Die Positionsanzeige ein- oder ausschalten
 
 So finden Sie ein Laufwerk in der Appliance physisch:
@@ -66,6 +67,7 @@ Das Fenster mit den Laufwerkdetails wird angezeigt.
 
 
 
+[[logically-replace-drivelogically-replace-drive]]
 == [[Logicy-replace-drive]]Laufwerk logisch ersetzen
 
 Wenn ein Laufwerk in der Speicher-Appliance neu erstellt oder neu initialisiert werden muss:
@@ -83,6 +85,7 @@ Im Detailbereich des Laufwerks zeigt der Status des Laufwerks _Rebuilding_ an. D
 
 
 
+[[fail-drive]]
 == Laufwerk ausfällt
 
 Für die Fehlerbehebung können Sie ein Laufwerk, das vermutlich fehlerhaft ist, manuell „ausfallen“. Das System läuft dann ohne dieses Laufwerk.

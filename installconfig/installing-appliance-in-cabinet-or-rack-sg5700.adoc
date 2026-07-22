@@ -20,6 +20,7 @@ Sie installieren eine Reihe von Schienen in Ihrem Schrank oder Rack und schieben
 
 
 
+[[install-sg5712]]
 == Installieren Sie SG5712
 
 Führen Sie die folgenden Schritte aus, um eine SG5712-Appliance in einem Rack oder Schrank zu installieren.
@@ -40,6 +41,7 @@ CAUTION: Installieren Sie die Hardware von der Unterseite des Racks oder Racks b
 
 
 
+[[install-sg5760]]
 == SG5760 installieren
 
 Führen Sie die folgenden Schritte aus, um eine SG5760-Appliance und alle Erweiterungs-Shelfs in einem Rack oder Schrank zu installieren.

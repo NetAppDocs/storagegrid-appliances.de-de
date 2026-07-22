@@ -15,6 +15,7 @@ Sie können den SG6000-CN-Controller herunterfahren und wieder einschalten, um W
 
 
 
+[[shut-down-sg6000-cn-controller]]
 == Fahren Sie den SG6000-CN-Controller herunter
 
 Fahren Sie den SG6000-CN-Controller herunter, um die Hardware zu warten.
@@ -83,6 +84,7 @@ image::../media/bmc_power_control_page_controller_off.png[BMC Power Control Seit
 
 
 
+[[poweronpower-on-sg6000-cn-controller-and-verify-operation]]
 == [[poweron]]Schalten Sie den SG6000-CN-Controller ein und überprüfen Sie die Funktion.
 
 Schalten Sie den Controller nach dem Abschluss der Wartung ein.

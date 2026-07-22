@@ -25,6 +25,8 @@ CAUTION: Schalten Sie das Gerät nicht über den Netzschalter aus.
 
 
 
+[[step-1-remove-sg120-or-sg1200-from-cabinet-or-rack]]
+[[remove-from-rack]]
 == Schritt 1: SG120 oder SG1200 aus dem Schrank oder Rack entnehmen
 
 .Schritte
@@ -51,6 +53,7 @@ NOTE: Wenn Sie das Gerät vollständig aus dem Schrank oder dem Rack entfernen, 
 
 
 
+[[step-2-reinstall-sg120-or-sg1200-into-cabinet-or-rack]]
 == Schritt 2: Installieren Sie SG120 oder SG1200 wieder in den Schrank oder das Rack.
 
 .Schritte

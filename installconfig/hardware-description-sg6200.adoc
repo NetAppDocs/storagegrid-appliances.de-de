@@ -17,10 +17,12 @@ Das StorageGRID SG6260-System umfasst einen Compute-Controller mit zwei NVMe-SSD
 
 
 
+[[appliance-features]]
 == Funktionen der Appliance
 
 
 
+[[general-features]]
 === Allgemeine Merkmale
 
 Die Geräte SGF6212 und SG6260 bieten folgende Funktionen:
@@ -32,6 +34,7 @@ Die Geräte SGF6212 und SG6260 bieten folgende Funktionen:
 
 
 
+[[data-protection-features]]
 === Datenschutzfunktionen
 
 Der SGF6212 bietet folgende Datenschutzfunktionen:
@@ -57,10 +60,12 @@ Der SG6260 bietet folgende Datenschutzfunktionen:
 
 
 
+[[sg6200-hardware-components]]
 == SG6200 Hardwarekomponenten
 
 
 
+[[sgf6212-appliance]]
 === SGF6212 Appliance
 
 Das Gerät SGF6212 umfasst folgende Komponenten:
@@ -68,8 +73,9 @@ Das Gerät SGF6212 umfasst folgende Komponenten:
 Computing- und Storage-Plattform:: Ein Server mit einer Höheneinheit (1 HE), der Folgendes umfasst:
 +
 --
+* Ein AMD Prozessor mit 3,55 GHz, der 32 Kerne (64 Threads) bereitstellt
 * 256 GB RAM
-* 240 GB internes Bootlaufwerk (inkl. StorageGRID Software)
+* 256 GB internes Bootlaufwerk (inkl. StorageGRID Software)
 * 2 × 1/10 GBase-T-Ports
 * 4 × 10/25/40/100GbE Ethernet-Ports für Grid-/Client-Netzwerkverkehr (oder 4 × 200GbE mit optionaler 200GbE NIC)
 * 12 NVMe-SSDs zur Datenspeicherung
@@ -82,6 +88,7 @@ Computing- und Storage-Plattform:: Ein Server mit einer Höheneinheit (1 HE), de
 
 
 
+[[sg6260-appliance]]
 === SG6260 Appliance
 
 Das Gerät SG6260 umfasst folgende Komponenten:
@@ -89,8 +96,9 @@ Das Gerät SG6260 umfasst folgende Komponenten:
 Computing-Controller:: Der SG6200-CN-Controller ist ein Server im 1-HE-Format (1U), der Folgendes umfasst:
 +
 --
+* Ein AMD Prozessor mit 3,55 GHz, der 32 Kerne (64 Threads) bereitstellt
 * 256 GB RAM
-* 240 GB internes Bootlaufwerk (inkl. StorageGRID Software)
+* 256 GB internes Bootlaufwerk (inkl. StorageGRID Software)
 * 2 × 1/10 GBase-T-Ports
 * 4 × 10/25/40/100GbE Ethernet-Ports für Grid-/Client-Netzwerkverkehr (oder 4 × 200GbE mit optionaler 200GbE NIC)
 * 1 x 100-GbE-Speicherverbindungsanschluss
@@ -124,10 +132,12 @@ Das E-Series DE460C Gehäuse ist ein 4-HE-Shelf mit folgenden Komponenten:
 
 
 
+[[sgf6212-and-sg6260-diagrams]]
 == Diagramme für SGF6212 und SG6260
 
 
 
+[[sgf6212-front-view]]
 === SGF6212 Vorderansicht
 
 Diese Abbildung zeigt die Vorderseite des SGF6212 ohne Blende. Das Gerät umfasst eine 1U-Rechen- und Speicherplattform mit 12 SSD-Laufwerken.
@@ -136,6 +146,7 @@ image::../media/s25_front_with_ssds.png[SGF6212 Vorderansicht]
 
 
 
+[[sgf6212-rear-view]]
 === SGF6212 Rückansicht
 
 Diese Abbildung zeigt die Rückseite des SGF6212, einschließlich der Anschlüsse, Lüfter und Netzteile.
@@ -246,6 +257,7 @@ Identifizieren Sie die LED
 |===
 
 
+[[sg6260-front-view]]
 === SG6260 Vorderansicht
 
 Diese Abbildung zeigt die Vorderseite des SG6260, der einen 1U-Rechencontroller und ein 4U-Gehäuse mit zwei Speichercontrollern und 60 Laufwerken in fünf Laufwerksschubladen enthält.
@@ -272,6 +284,7 @@ E4000 Controller Shelf mit entfernter Frontverkleidung (das optionale Erweiterun
 |===
 
 
+[[sg6260-rear-view]]
 === SG6260 Rückansicht
 
 Diese Abbildung zeigt die Rückseite des SG6260, einschließlich der Rechen- und Speichercontroller, Lüfter und Netzteile.
@@ -307,7 +320,7 @@ Lüfter (1 von 2) für E4000 Controller Shelf
  a| 
 4
  a| 
-Speicherkontroller der E-Series E400 (1 von 2) und Anschlüsse
+Speicherkontroller der E-Serie E4000 (1 von 2) und Anschlüsse
 
 
 
@@ -319,10 +332,12 @@ Netzteil (1 von 2) für E4000 Controller Shelf
 |===
 
 
+[[sg6200-controllers]]
 == SG6200-Controller
 
 
 
+[[sg6200-cn-compute-controller]]
 === SG6200-CN Rechencontroller
 
 * Stellt für die Appliance Computing-Ressourcen bereit
@@ -452,6 +467,7 @@ Identifizieren Sie die LED
 |===
 
 
+[[sg6260-e4000-storage-controller]]
 === SG6260: E4000 Storage-Controller
 
 * Zwei Controller für Failover-Support.
@@ -527,6 +543,7 @@ Es gibt vier Verbindungen zum SG6200-CN Controller (jeweils zwei von jedem E4000
 |===
 
 
+[[sg6260-ioms-for-optional-expansion-shelves]]
 === SG6260: IOMs für optionale Erweiterungsfächer
 
 Das Erweiterungs-Shelf enthält zwei I/O-Module (IOMs), die mit den Storage-Controllern oder anderen Erweiterungs-Shelfs verbunden sind.

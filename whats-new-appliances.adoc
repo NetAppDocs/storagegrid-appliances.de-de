@@ -18,36 +18,42 @@ Erfahren Sie, was es Neues bei StorageGRID -Geräten gibt.
 
 
 
+[[sg120-and-sg1200-services-appliances]]
 == SG120- und SG1200-Servicegeräte
 
 Die neuen StorageGRID SG120 und SG1200 Services Appliances sind eine Weiterentwicklung der Hardware und bieten eine verbesserte administrative Leistung sowie eine bessere Lastverteilung. Weitere Informationen finden Sie unter link:./installconfig/hardware-description-sg120-and-1200.html["SG120 und SG1200 Services Appliance: Übersicht"].
 
 
 
+[[sgf6212-appliance]]
 == SGF6212 Appliance
 
 Das neue StorageGRID SGF6212 Storage-System zeichnet sich durch sein kompaktes Design mit integriertem Compute- und Storage-Controller in einem 1U-Gehäuse aus. Das System unterstützt 12 SSD-NVMe-Laufwerke in einem RAID-Verbund für ausfallsicheren Objektspeicher. Siehe link:installconfig/hardware-description-sg6200.html["SGF6212-Gerät: Übersicht"] für weitere Informationen.
 
 
 
+[[sg6260-appliance]]
 == SG6260 Appliance
 
 Das neue StorageGRID SG6260-System umfasst einen Compute-Controller und ein Storage-Controller-Gehäuse mit zwei Storage-Controllern und 60 Laufwerken sowie zwei NVMe-SSDs für Caching. Optional können dem SG6260 Erweiterungsgehäuse für 60 Laufwerke hinzugefügt werden. Weitere Informationen finden Sie unter link:./installconfig/hardware-description-sg6200.html["SGF6200-Geräte: Übersicht"].
 
 
 
+[[client-network-can-be-configured-without-an-ip-address]]
 == Client-Netzwerk kann ohne IP-Adresse konfiguriert werden
 
 Sie können das Client-Netzwerk jetzt aktivieren, ohne eine IP-Adresse anzugeben.  Dadurch können im Client-Netzwerk VLAN-Schnittstellen in StorageGRID konfiguriert werden, ohne dass für die Schnittstelle selbst eine zusätzliche IP-Adresse erforderlich ist. Weitere Informationen finden Sie unter link:.//installconfig/setting-ip-configuration.html["Konfigurieren Sie StorageGRID-IP-Adressen"] .
 
 
 
+[[version-numbers-for-storagegrid-software-and-appliance-installer-aligned]]
 == Versionsnummern für StorageGRID -Software und Appliance Installer angepasst
 
 Bei StorgeGRID Version 12.0 entspricht die Versionsnummer des StorageGRID Appliance Installer der Version der StorageGRID -Software.  Benutzer müssen nicht mehr herausfinden, welche Versionen zusammenarbeiten. Weitere Informationen finden Sie unter link:./installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html["Überprüfen und Aktualisieren der Installationsversion der StorageGRID Appliance"] .
 
 
 
+[[bmc-information]]
 == BMC-Informationen
 
 Detaillierte Informationen zur Verwendung der BMC -Schnittstelle der StorageGRID Appliance sind jetzt verfügbar. Weitere Informationen finden Sie unter link:./commonhardware/use-bmc.html["Verwenden des Baseboard Management Controllers (BMC) der StorageGRID Appliance"] .

@@ -23,6 +23,7 @@ image::../media/SGF6112-battery-cmos.png[CMOS-Batterieclip]
 
 
 
+[[reinstall-the-cmos-battery]]
 == Setzen Sie die CMOS-Batterie wieder ein
 
 Setzen Sie den Ersatz-CMOS-Akku in den Sockel auf der Systemplatine ein.

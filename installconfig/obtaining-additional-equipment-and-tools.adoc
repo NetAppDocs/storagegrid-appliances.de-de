@@ -15,6 +15,7 @@ Vergewissern Sie sich vor der Installation eines StorageGRID-Geräts, dass Sie �
 
 
 
+[[all-appliances]]
 == Alle Geräte
 
 Für die Installation und Konfiguration aller Appliances benötigen Sie die folgenden Geräte:
@@ -53,6 +54,7 @@ Optionale Werkzeuge::
 
 
 
+[[appliance-specific-equipment-and-tools]]
 == Gerätespezifische Geräte und Werkzeuge
 
 [role="tabbed-block"]

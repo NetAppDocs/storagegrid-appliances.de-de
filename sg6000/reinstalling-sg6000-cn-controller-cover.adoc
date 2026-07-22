@@ -15,6 +15,7 @@ Entfernen Sie die Geräteabdeckung, um zu Wartungszwecken Zugang zu den internen
 
 
 
+[[remove-sg6000-cn-controller-cover]]
 == Entfernen Sie die SG6000-CN Controller-Abdeckung
 
 Entfernen Sie die Controllerabdeckung, um zu Wartungszwecken auf interne Komponenten zuzugreifen.
@@ -40,6 +41,7 @@ Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie 
 
 
 
+[[reinstall-sg6000-cn-controller-cover]]
 == Bringen Sie die SG6000-CN Controller-Abdeckung wieder an
 
 Setzen Sie die Controllerabdeckung wieder ein, wenn die interne Hardwarewartung abgeschlossen ist.

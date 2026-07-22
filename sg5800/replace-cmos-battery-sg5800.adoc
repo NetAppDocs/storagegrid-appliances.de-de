@@ -18,6 +18,7 @@ Sie können nicht auf den Speicherknoten des Geräts zugreifen, wenn Sie die CMO
 
 
 
+[[step-1-shut-down-the-sg5800-controller]]
 == Schritt 1: Fahren Sie den SG5800-Controller herunter
 
 .Schritte
@@ -40,6 +41,7 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 
 
 
+[[step-2-remove-the-controller-from-the-appliance]]
 == Schritt 2: Entfernen Sie den Controller vom Gerät
 
 .Schritte
@@ -64,6 +66,7 @@ image::../media/drw_sg5800_open_controller_module_cover_IEOPS-695.svg[Öffnen Si
 
 
 
+[[step-3-replace-the-cmos-battery]]
 == Schritt 3: Ersetzen Sie die CMOS-Batterie
 
 .Schritte
@@ -89,6 +92,7 @@ NOTE: Achten Sie beim Entnehmen der Batterie aus der Halterung auf die Polaritä
 
 
 
+[[step-4-reinstall-the-controller-into-the-appliance]]
 == Schritt 4: Installieren Sie den Controller erneut in das Gerät.
 
 .Schritte

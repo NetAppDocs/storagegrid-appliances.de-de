@@ -83,6 +83,9 @@ CAUTION: Um Leistungseinbußen zu vermeiden, sollten Sie die Kabel nicht verdreh
 +
 ... Geben Sie zum Wiederherstellen der BMC-Konfiguration für die Verwendung einer statischen IP, Netzmaske und eines Gateways die folgenden Befehle ein:
 +
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
 `*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
 
 +

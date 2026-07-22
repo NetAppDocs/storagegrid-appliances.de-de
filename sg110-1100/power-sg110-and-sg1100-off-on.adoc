@@ -15,6 +15,7 @@ Sie können das SG110- oder SG1100-Gerät herunterfahren und zur Durchführung v
 
 
 
+[[shut-down-the-sg110-or-sg1100-appliance]]
 == Fahren Sie das SG110- oder SG1100-Gerät herunter
 
 Fahren Sie die Appliance herunter, um eine Hardwarewartung durchzuführen.
@@ -60,6 +61,7 @@ Dieser Befehl kann bis zu 10 Minuten in Anspruch nehmen.
 
 
 
+[[power-on-sg110-or-sg1100-and-verify-operation]]
 == Schalten Sie SG110 oder SG1100 ein, und überprüfen Sie den Betrieb
 
 Schalten Sie den Controller nach dem Abschluss der Wartung ein.

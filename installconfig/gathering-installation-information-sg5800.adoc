@@ -1,7 +1,7 @@
 ---
 permalink: installconfig/gathering-installation-information-sg5800.html 
 sidebar: sidebar 
-keywords: storagegrid, sg5800, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10/25-gbe, 10/25 gbe, SG5800, independent, active-backup, active backup, 1-gbe, 1 gbe 
+keywords: storagegrid, sg5800, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10-gbe, 10 gbe, 25-gbe, 25 gbe, SG5800, independent, active-backup, active backup, 1-gbe, 1 gbe 
 summary: Notieren Sie die erforderlichen Informationen für jedes Netzwerk, das Sie mit dem Gerät verbinden, in den Tabellen. Diese Werte sind für die Installation und Konfiguration der Hardware erforderlich. 
 ---
 = Sammeln Sie Netzwerkinformationen für den SG5800
@@ -18,6 +18,7 @@ TIP: Verwenden Sie anstelle der Tabellen das mit ConfigBuilder bereitgestellte A
 
 
 
+[[information-needed-to-connect-to-santricity-system-manager-on-e4000-controller]]
 == Informationen, die für die Verbindung zum SANtricity System Manager auf dem E4000 Controller erforderlich sind
 
 Verwenden Sie den SANtricity-System-Manager, um den Controller der E4000-Serie mit dem Managementnetzwerk zu verbinden.
@@ -90,6 +91,7 @@ Für IPv6:
 |===
 
 
+[[information-needed-to-connect-sg5800-controller-to-admin-network]]
 == Erforderliche Informationen für die Verbindung des SG5800 Controllers mit dem Admin-Netzwerk
 
 Das Admin-Netzwerk für StorageGRID ist ein optionales Netzwerk, das zur Systemadministration und -Wartung verwendet wird. Die Appliance stellt über den 1-GbE-Managementport des SG5800-Controllers eine Verbindung zum Admin-Netzwerk her.
@@ -145,6 +147,7 @@ Admin-Netzwerk-Subnetze (CIDR)
 |===
 
 
+[[information-needed-to-connect-and-configure-1025-gbe-ports-on-sg5800-controller]]
 == Erforderliche Informationen für das Verbinden und Konfigurieren von 10/25-GbE-Ports am SG5800 Controller
 
 Die vier 10/25-GbE-Ports des SG5800-Controllers werden mit dem StorageGRID-Grid-Netzwerk und dem Client-Netzwerk verbunden.
@@ -205,6 +208,7 @@ Switch-Port für Port 4 (Grid-Netzwerk)
 |===
 
 
+[[information-needed-to-connect-sg5800-controller-to-grid-network]]
 == Erforderliche Informationen für die Verbindung des SG5800 Controllers mit dem Grid-Netzwerk
 
 Das Grid-Netzwerk für StorageGRID ist ein erforderliches Netzwerk, das für den gesamten internen StorageGRID-Datenverkehr verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des SG5800 Controllers mit dem Grid-Netzwerk verbunden.
@@ -275,6 +279,7 @@ Grid-Netzwerknetze (CIDR)
 |===
 
 
+[[information-needed-to-connect-sg5800-controller-to-client-network]]
 == Informationen, die für die Verbindung des SG5800-Controllers mit dem Client-Netzwerk erforderlich sind
 
 Das Client-Netzwerk für StorageGRID ist ein optionales Netzwerk, das in der Regel für den Zugriff auf das Grid auf das Clientprotokoll verwendet wird. Die Appliance stellt über die 10/25-GbE-Ports des SG5800-Controllers eine Verbindung zum Client-Netzwerk her.
@@ -350,12 +355,14 @@ Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Client-Netzwe
 |===
 
 
+[[port-bond-modes]]
 == Port-Bond-Modi
 
 Wenn link:configuring-network-links.html["Netzwerk-Links werden konfiguriert"] Für den SG5800-Controller können Sie Port-Bonding für die 10/25-GbE-Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden werden. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen. Die 10/25-GbE-Netzwerk-Ports des SG5800-Controllers unterstützen den Bond-Modus mit festem Port oder den Bond-Modus mit aggregiertem Port für Grid-Netzwerk- und Client-Netzwerkverbindungen.
 
 
 
+[[fixed-port-bond-mode]]
 === Bond-Modus mit festem Port
 
 Der Fixed-Modus ist die Standardkonfiguration für 10/25-GbE-Netzwerkports.
@@ -391,6 +398,7 @@ NOTE: Wenn Sie keine redundanten Verbindungen benötigen, können Sie für jedes
 
 
 
+[[aggregate-port-bond-mode]]
 === Bond-Modus für aggregierten Ports
 
 Der Aggregat-Port-Bond-Modus erhöht das ganze für jedes StorageGRID-Netzwerk deutlich und bietet zusätzliche Failover-Pfade.

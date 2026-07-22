@@ -18,6 +18,7 @@ TIP: Verwenden Sie anstelle der Tabellen das mit ConfigBuilder bereitgestellte A
 
 
 
+[[information-needed-to-connect-to-santricity-system-manager-on-storage-controllers]]
 == Erforderliche Informationen für die Verbindung mit SANtricity System Manager auf Storage Controllern
 
 Beide Storage-Controller in der Appliance (entweder die Controller der E2800 Serie oder die EF570 Controller) werden mit dem Managementnetzwerk verbunden, das Sie für SANtricity System Manager verwenden. Die Controller befinden sich in jeder Appliance wie folgt:
@@ -122,6 +123,7 @@ Muss sein:
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-admin-network]]
 == Zum Anschließen des SG6000-CN-Controllers an das Admin-Netzwerk erforderliche Informationen
 
 Das Admin-Netzwerk für StorageGRID ist ein optionales Netzwerk, das zur Systemadministration und -Wartung verwendet wird. Die Appliance stellt über die folgenden 1-GbE-Management-Ports des SG6000-CN-Controllers eine Verbindung zum Admin-Netzwerk her.
@@ -204,6 +206,7 @@ Admin-Netzwerk-Subnetze (CIDR)
 |===
 
 
+[[information-needed-to-connect-and-configure-1025-gbe-ports-on-sg6000-cn-controller]]
 == Erforderliche Informationen zum Verbinden und Konfigurieren von 10/25-GbE-Ports am SG6000-CN Controller
 
 Die vier 10/25-GbE-Ports des SG6000-CN-Controllers stellen eine Verbindung zum StorageGRID-Grid-Netzwerk und dem optionalen Client-Netzwerk her.
@@ -261,6 +264,7 @@ Switch-Port für Port 4 (Grid-Netzwerk für Fixed-Modus)
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-grid-network]]
 == Informationen zum Anschließen des SG6000-CN-Controllers an das Grid-Netzwerk erforderlich
 
 Das Grid-Netzwerk für StorageGRID ist ein erforderliches Netzwerk, das für den gesamten internen StorageGRID-Datenverkehr verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des SG6000-CN-Controllers mit dem Grid-Netzwerk verbunden.
@@ -326,6 +330,7 @@ Grid-Netzwerknetze (CIDRs)
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-client-network]]
 == Informationen zum Anschließen des SG6000-CN-Controllers an das Client-Netzwerk erforderlich
 
 Das Client-Netzwerk für StorageGRID ist ein optionales Netzwerk, das in der Regel für den Zugriff auf das Grid auf das Clientprotokoll verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des SG6000-CN-Controllers mit dem Client-Netzwerk verbunden.
@@ -396,6 +401,7 @@ Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Client-Netzwe
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-bmc-management-network]]
 == Informationen zum Anschließen des SG6000-CN Controllers an das BMC-Managementnetzwerk erforderlich
 
 Sie können über den folgenden 1-GbE-Management-Port auf die BMC-Schnittstelle des SG6000-CN Controllers zugreifen. Dieser Port unterstützt die Remote-Verwaltung der Controller-Hardware über Ethernet unter Verwendung des IPMI-Standards (Intelligent Platform Management Interface).
@@ -437,12 +443,14 @@ Statische IP-Adresse, die Sie für den BMC-Verwaltungsport verwenden möchten
 |===
 
 
+[[port-bond-modes]]
 == Port-Bond-Modi
 
 Wenn link:configuring-network-links.html["Netzwerk-Links werden konfiguriert"] Für den SG6000-CN-Controller können Sie Port-Bonding für die 10/25-GbE-Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie für die 1-GbE-Management-Ports, die mit dem optionalen Admin-Netzwerk verbunden werden. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen.
 
 
 
+[[network-bond-modes-for-1025-gbe-ports]]
 === Netzwerk-Bond-Modi für 10/25-GbE-Ports
 
 Die 10/25-GbE-Netzwerk-Ports des SG6000-CN-Controllers unterstützen den Bond-Modus Fixed Port oder den Bond-Modus für aggregierte Ports für Grid-Netzwerk- und Client-Netzwerk-Verbindungen.
@@ -518,6 +526,7 @@ NOTE: Wenn Sie weniger als vier Ports verwenden, beachten Sie, dass nach der Ins
 
 
 
+[[network-bond-modes-for-1-gbe-management-ports]]
 === Netzwerk-Bond-Modi für 1-GbE-Management-Ports
 
 Für die beiden 1-GbE-Management-Ports des SG6000-CN-Controllers können Sie den unabhängigen Netzwerk-Bond-Modus oder den aktiv-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen.

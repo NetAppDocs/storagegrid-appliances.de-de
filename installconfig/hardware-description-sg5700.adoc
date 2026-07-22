@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg5700.html 
 sidebar: sidebar 
 keywords: sg5700, sg5712, sg5712x, sg5760, sg5760x, storage appliance 
-summary: 'Die SG5700 StorageGRID Appliance ist eine integrierte Storage- und Computing-Plattform, die als Storage-Node in einem StorageGRID Grid ausgeführt wird. Die Appliance kann in einer hybriden Grid-Umgebung verwendet werden, in der Appliance Storage Nodes und virtuelle \(softwarebasierte\) Storage-Nodes kombiniert werden.' 
+summary: 'Die SG5700 StorageGRID Appliance ist eine integrierte Storage- und Computing-Plattform, die als Storage-Node in einem StorageGRID Grid ausgeführt wird. Die Appliance kann in einer hybriden Grid-Umgebung verwendet werden, die Appliance Storage Nodes und virtuelle (softwarebasierte) Storage-Nodes kombiniert.' 
 ---
 = StorageGRID SG5700-Appliances
 :allow-uri-read: 
@@ -26,6 +26,7 @@ Das SG5700-Appliance ist in vier Modellen verfügbar: SG5712 und SG5712X sowie S
 
 
 
+[[sg5700-components]]
 == SG5700 Komponenten
 
 Die SG5700 Modelle umfassen die folgenden Komponenten:
@@ -77,10 +78,12 @@ Der maximale Rohkapazität, der in der StorageGRID-Appliance verfügbar ist, ric
 
 
 
+[[sg5700-diagrams]]
 == SG5700-Diagramme
 
 
 
+[[sg5712-front-and-rear-views]]
 === SG5712 Vorder- und Rückansicht
 
 Die Abbildungen zeigen die Vorder- und Rückseite des SG5712, einem 2-HE-Gehäuse für 12 Laufwerke.
@@ -89,6 +92,7 @@ image::../media/sg5712_front_and_back_views.gif[Vorder- und Rückseite des SG571
 
 
 
+[[sg5712-components]]
 === SG5712 Komponenten
 
 Die SG5712 umfasst zwei Controller und zwei Power-Fan-Kanister.
@@ -122,6 +126,7 @@ Power-Fan-Behälter
 |===
 
 
+[[sg5712x-front-and-rear-views]]
 === SG5712X Vorder- und Rückansicht
 
 Die Abbildungen zeigen die Vorder- und Rückseite des SG5712X, einem 2U-Gehäuse für 12 Laufwerke.
@@ -130,6 +135,7 @@ image::../media/sg5712x_front_and_back_views.gif[Vorder- und Rückseite des SG57
 
 
 
+[[sg5712x-components]]
 === SG5712X Komponenten
 
 Das SG5712X besteht aus zwei Controllern und zwei Power-Fan-Kanistern.
@@ -163,6 +169,7 @@ Power-Fan-Behälter
 |===
 
 
+[[sg5760-front-and-rear-views]]
 === Vorder- und Rückansicht des SG5760
 
 Die Abbildungen zeigen die Vorder- und Rückseite des SG5760-Modells, ein 4-HE-Gehäuse für 60 Laufwerke in 5 Laufwerkseinschüben.
@@ -171,6 +178,7 @@ image::../media/sg5760_front_and_back_views.gif[Vorder- und Rückseite des SG576
 
 
 
+[[sg5760-components]]
 === SG5760 Komponenten
 
 Die SG5760 verfügt über zwei Controller, zwei Lüfterbehälter und zwei Strombehälter.
@@ -211,6 +219,7 @@ Leistungsbehälter (1 von 2)
 |===
 
 
+[[sg5760x-front-and-rear-views]]
 === SG5760X Vorder- und Rückansicht
 
 Die Abbildungen zeigen die Vorder- und Rückseite des Modells SG5760X, einem 4U-Gehäuse, das 60 Laufwerke in 5 Laufwerkseinschüben aufnehmen kann.
@@ -219,6 +228,7 @@ image::../media/sg5760x_front_and_back_views.gif[Vorder- und Rückseite des SG57
 
 
 
+[[sg5760x-components]]
 === SG5760X Komponenten
 
 Die SG5760X enthält zwei Controller, zwei Lüfterzangen und zwei Leistungszangen.
@@ -259,6 +269,7 @@ Leistungsbehälter (1 von 2)
 |===
 
 
+[[sg5700-controllers]]
 == SG5700 Controller
 
 Sowohl die SG5712 und SG5712X mit 12 Laufwerken als auch die SG5760 und SG5760X Modelle mit 60 Laufwerken der StorageGRID Appliance umfassen einen E5700SG Computing-Controller und einen E-Series E2800 Storage-Controller.
@@ -271,6 +282,7 @@ Die E2800A- und E2800B-Controller sind in der Spezifikation und Funktion identis
 
 
 
+[[e5700sg-compute-controller]]
 === E5700SG Compute-Controller
 
 * Arbeitet als Computing-Server für die Appliance.
@@ -369,6 +381,7 @@ Optionen:
 |===
 
 
+[[e2800-storage-controller]]
 === E2800 Storage-Controller
 
 Der E2800 Storage-Controller wurde in den SG5700 Appliances in zwei Versionen verwendet: E2800A und E2800B. Das E2800A hat keine HIC und das E2800B hat eine HIC mit vier Ports. Die beiden Controller-Versionen haben die gleichen Spezifikationen und Funktionen, mit Ausnahme der Lage der Interconnect-Ports.

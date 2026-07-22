@@ -23,6 +23,7 @@ Weitere Informationen zu allen für StorageGRID Appliances verfügbaren Verschl�
 
 
 
+[[enable-node-encryption]]
 == Aktivieren Sie die Node-Verschlüsselung
 
 Wenn Sie die Node-Verschlüsselung aktivieren, können die Festplatten Ihrer Appliance durch eine sichere KMS-Verschlüsselung (Key Management Server) gegen physischen Verlust oder die Entfernung vom Standort geschützt werden. Während der Appliance-Installation müssen Sie die Node-Verschlüsselung auswählen und aktivieren. Die Knotenverschlüsselung kann nach dem Start der KMS-Verschlüsselung nicht deaktiviert werden.
@@ -88,6 +89,7 @@ Wenn sich der Appliance-Node im Wartungsmodus befindet, können Sie den Verschl�
 
 
 
+[[drive-encryption]]
 == Laufwerkverschlüsselung
 
 Die Laufwerkverschlüsselung wird während des Schreib- und Lesevorgangs auf der SED-Hardware (Self-Encrypting Drive) verwaltet. Der Zugriff auf Daten auf diesen Laufwerken wird über eine benutzerdefinierte Passphrase gesteuert.
@@ -118,6 +120,7 @@ CAUTION: Stellen Sie sicher, dass Sie die Passphrase für die Laufwerkverschlüs
 
 
 
+[[enable-drive-encryption]]
 === Laufwerkverschlüsselung aktivieren
 
 . Greifen Sie auf das Installationsprogramm der StorageGRID Appliance zu.
@@ -156,6 +159,7 @@ Speichern Sie den Anzeigetext für Passphrase und Passphrase an einem sicheren O
 
 
 
+[[view-drive-encryption-status]]
 === Anzeigen des Status der Laufwerkverschlüsselung
 
 . link:../commonhardware/placing-appliance-into-maintenance-mode.html["Stellen Sie das Gerät in den Wartungsmodus"].
@@ -164,6 +168,7 @@ Speichern Sie den Anzeigetext für Passphrase und Passphrase an einem sicheren O
 
 
 
+[[access-an-encrypted-drive]]
 === Zugriff auf ein verschlüsseltes Laufwerk
 
 Sie müssen die Passphrase eingeben, um auf ein verschlüsseltes Laufwerk zuzugreifen, nachdem ein Compute-Node ausgetauscht wurde oder ein Laufwerk auf einen neuen Compute-Node verschoben wurde.
@@ -196,6 +201,7 @@ Die Warnbanner werden nicht mehr angezeigt, wenn die Laufwerke entsperrt sind.
 
 
 
+[[change-the-drive-encryption-passphrase]]
 === Ändern Sie die Passphrase für die Laufwerkverschlüsselung
 
 . Greifen Sie auf das Installationsprogramm der StorageGRID Appliance zu.
@@ -227,6 +233,7 @@ CAUTION: Nachdem Sie eine neue Passphrase festgelegt haben, können die verschl�
 
 
 
+[[disable-drive-encryption]]
 === Deaktivieren Sie die Laufwerkverschlüsselung
 
 . Greifen Sie auf das Installationsprogramm der StorageGRID Appliance zu.

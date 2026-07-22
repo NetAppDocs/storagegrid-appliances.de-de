@@ -15,6 +15,7 @@ Wenn während der Installation Probleme auftreten, können Sie die Fehlerbehebun
 
 
 
+[[view-boot-codesview-boot-up-codes-sgf6112-and-sg6160-only]]
 == [[View-Boot-Codes]]Start-up-Codes anzeigen (nur SGF6112 und SG6160)
 
 Wenn Sie das Gerät mit Strom versorgen, protokolliert der BMC eine Reihe von Startcodes. Sie können diese Codes auf einer grafischen Konsole anzeigen, die mit dem BMC-Management-Port verbunden ist.
@@ -188,6 +189,7 @@ StorageGRID wird ausgeführt.
 
 
 
+[[view-error-codesview-error-codes-sgf6112-and-sg6160-only]]
 == [[View-error-Codes]]Fehlercodes anzeigen (nur SGF6112 und SG6160)
 
 Wenn beim Starten der Appliance ein Hardwarefehler auftritt, meldet der BMC einen Fehlercode. Bei Bedarf können Sie diese Fehlercodes über den seriellen Port des Geräts anzeigen und dann mit dem technischen Support zusammenarbeiten, um das Problem zu lösen.
@@ -560,6 +562,8 @@ MRC: ERR_INTERLEAVE_FAILURE
 
 
 
+[[hardware-setup-appears-to-hang]]
+[[hardware-setup-hangs]]
 == Die Hardware-Einrichtung scheint zu hängen
 
 Das Installationsprogramm von StorageGRID Appliance ist möglicherweise nicht verfügbar, wenn Hardwarefehler oder Verkabelungsfehler eine Ausführung der Appliance verhindern.
@@ -571,10 +575,12 @@ Das Installationsprogramm von StorageGRID Appliance ist möglicherweise nicht ve
 
 
 
+[[connection-issues]]
 == Verbindungsprobleme
 
 
 
+[[expansion-shelves-dont-appear-in-appliance-installer-sg6160]]
 === Erweiterungs-Shelfs werden im Appliance Installer (SG6160) nicht angezeigt
 
 Wenn Sie Erweiterungs-Shelfs installiert haben und diese nicht im Installationsprogramm der StorageGRID Appliance angezeigt werden, sollten Sie überprüfen, ob die Shelfs vollständig installiert und eingeschaltet wurden.
@@ -599,6 +605,7 @@ Wenn die Seiten des Installationsprogramms für StorageGRID-Geräte nicht angebe
 
 
 
+[[unable-to-connect-to-appliance]]
 === Verbindung zum Gerät nicht möglich
 
 Wenn Sie keine Verbindung zur Storage Appliance herstellen können, liegt möglicherweise ein Netzwerkproblem vor oder die Hardwareinstallation wurde möglicherweise nicht erfolgreich abgeschlossen.

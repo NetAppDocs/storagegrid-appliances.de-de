@@ -17,6 +17,7 @@ Optional können beide Appliances mit Erweiterungs-Shelfs für 60 Laufwerke erg�
 
 
 
+[[sg6060-and-sg6060x-components]]
 == Komponenten SG6060 und SG6060X
 
 Die SG6060 und SG6060X Appliances umfassen die folgenden Komponenten:
@@ -64,12 +65,14 @@ Das E-Series DE460C Gehäuse ist ein 4-HE-Shelf mit folgenden Komponenten:
 
 
 
+[[sg6060-and-sg6060x-diagrams]]
 == Diagramme SG6060 und SG6060X
 
 Die Fronten des SG6060 und des SG6060X sind identisch.
 
 
 
+[[sg6060-or-sg6060x-front-view]]
 === Vorderansicht des SG6060 oder SG6060X
 
 Diese Abbildung zeigt die Vorderseite des SG6060 oder SG6060X, der einen 1-HE-Computing-Controller und ein 4-HE-Shelf mit zwei Storage-Controllern und 60 Laufwerken in fünf Laufwerkseinschüben umfasst.
@@ -143,6 +146,7 @@ Identifizieren Sie die LED
 |===
 
 
+[[sg6060-rear-view]]
 === SG6060 – Rückansicht
 
 Diese Abbildung zeigt die Rückseite des SG6060, einschließlich der Computing- und Storage-Controller, Lüfter und Netzteile.
@@ -190,6 +194,7 @@ Netzteil (1 von 2) für E2860 Controller-Shelf
 |===
 
 
+[[sg6060x-rear-view]]
 === SG6060X – Rückansicht
 
 Diese Abbildung zeigt die Rückseite des SG6060X.
@@ -237,6 +242,7 @@ Netzteil (1 von 2) für E2860 Controller-Shelf
 |===
 
 
+[[expansion-shelf]]
 === Erweiterungs-Shelf
 
 Diese Abbildung zeigt die Rückseite des optionalen Erweiterungs-Shelfs für SG6060 und SG6060X, einschließlich der ein-/Ausgabemodule (IOMs), Lüfter und Netzteile. Jeder SG6060 kann mit einem oder zwei Erweiterungs-Shelfs installiert werden. Dies kann bei der Erstinstallation oder einem späteren Zeitpunkt hinzugefügt werden.
@@ -270,12 +276,14 @@ Netzteil (1 von 2) für Erweiterungs-Shelf
 |===
 
 
+[[sg6000-controllers]]
 == SG6000 Controller
 
 Jedes Modell der StorageGRID SG6000 Appliance umfasst je nach Modell einen SG6000-CN Computing Controller in einem 1-HE-Gehäuse und E-Series Duplex Storage-Controller in einem 2-HE- oder 4-HE-Gehäuse. In den Diagrammen erfahren Sie mehr über die einzelnen Controller-Typen.
 
 
 
+[[sg6000-cn-compute-controller]]
 === SG6000-CN Computing-Controller
 
 * Stellt für die Appliance Computing-Ressourcen bereit
@@ -374,6 +382,7 @@ Optionen:
 |===
 
 
+[[sgf6024-ef570-storage-controllers]]
 === SGF6024 – EF570 Storage-Controller
 
 * Zwei Controller für Failover-Support.
@@ -447,6 +456,7 @@ Management-Ports 1 und 2
 |===
 
 
+[[sg6060-and-sg6060x-e2800-storage-controllers]]
 === SG6060 und SG6060X: E2800 Storage-Controller
 
 * Zwei Controller für Failover-Support.
@@ -632,6 +642,7 @@ Verbinden Sie die Ports mit den Laufwerkserweiterungsports der IOMs im Erweiteru
 |===
 
 
+[[sg6060-and-sg6060x-ioms-for-optional-expansion-shelves]]
 === SG6060 und SG6060X: IOMs für optionale Erweiterungs-Shelfs
 
 Das Erweiterungs-Shelf enthält zwei I/O-Module (IOMs), die mit den Storage-Controllern oder anderen Erweiterungs-Shelfs verbunden sind.

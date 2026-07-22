@@ -2,7 +2,7 @@
 permalink: sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6000, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
-summary: 'Für Storage-Controller, die derzeit SANtricity OS verwenden, die älter als 08.42.20.00 \(11.42\) sind, müssen Sie das Verfahren des Wartungsmodus verwenden, um ein Upgrade durchzuführen.' 
+summary: 'Für Storage-Controller, die derzeit SANtricity OS verwenden, die älter als 08.42.20.00 (11.42) sind, müssen Sie das Verfahren des Wartungsmodus verwenden, um ein Upgrade durchzuführen.' 
 ---
 = Aktualisieren Sie das SANtricity OS auf SG6000-Speichercontrollern im Wartungsmodus
 :allow-uri-read: 

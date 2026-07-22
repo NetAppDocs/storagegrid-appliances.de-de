@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg100-and-1000.html 
 sidebar: sidebar 
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
-summary: 'Die StorageGRID SG100 Services Appliance und die SG1000 Services Appliance können als Gateway-Node und als Admin-Node ausgeführt werden, um hochverfügbare Load-Balancing-Services in einem StorageGRID System bereitzustellen. Beide Geräte können gleichzeitig als Gateway-Knoten und Admin-Nodes \ (primär oder nicht primär\) betrieben werden.' 
+summary: 'Die StorageGRID SG100 Services Appliance und die SG1000 Services Appliance können als Gateway-Node und als Admin-Node ausgeführt werden, um hochverfügbare Load-Balancing-Services in einem StorageGRID System bereitzustellen. Beide Appliances können gleichzeitig als Gateway-Nodes und Admin-Nodes (primär oder nicht primär) betrieben werden.' 
 ---
 = StorageGRID SG100- und SG1000-Geräte
 :allow-uri-read: 
@@ -15,6 +15,7 @@ Die StorageGRID SG100 Services Appliance und die SG1000 Services Appliance könn
 
 
 
+[[appliance-features]]
 == Funktionen der Appliance
 
 Beide Modelle der Service Appliance bieten die folgenden Funktionen:
@@ -33,6 +34,7 @@ Beide Modelle der Service Appliance bieten die folgenden Funktionen:
 
 
 
+[[sg100-and-sg1000-diagrams]]
 == SG100- und SG1000-Diagramme
 
 Diese Abbildung zeigt die Vorderseite des SG100 und des SG1000 mit entfernter Blende. Von der Vorderseite sind die beiden Geräte identisch, mit Ausnahme des Produktnamens auf der Blende.
@@ -78,6 +80,7 @@ Identifizieren Sie die LED
 |===
 
 
+[[sg100-connectors]]
 == SG100-Anschlüsse
 
 Diese Abbildung zeigt die Anschlüsse auf der Rückseite des SG100.
@@ -153,6 +156,7 @@ Optionen:
 |===
 
 
+[[sg1000-connectors]]
 == SG1000-Anschlüsse
 
 Diese Abbildung zeigt die Anschlüsse auf der Rückseite des SG1000.
@@ -228,6 +232,7 @@ Optionen:
 |===
 
 
+[[sg100-and-sg1000-applications]]
 == SG100- und SG1000-Applikationen
 
 Die StorageGRID Services Appliances können auf unterschiedliche Weise konfiguriert werden, um Gateway Services oder Redundanz einiger Grid-Administrations-Services bereitzustellen.

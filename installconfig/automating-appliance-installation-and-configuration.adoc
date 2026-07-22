@@ -31,11 +31,12 @@ Sie können die Konfiguration folgender Komponenten automatisieren:
 
 
 
+[[automation-options]]
 == Automatisierungsoptionen
 
 Um die Installation und Konfiguration der Appliance zu automatisieren, verwenden Sie eine oder mehrere der folgenden Optionen:
 
-* Generieren Sie eine JSON-Datei mit Konfigurationsdetails. Verwenden Sie zusammen mit Ihrem NetApp Professional Services Berater das link:https://configbuilder.netapp.com/index.aspx["NetApp ConfigBuilder Tool"^] Gehen Sie wie folgt vor:
+* Eine JSON-Datei mit Konfigurationsdetails wird generiert. In Zusammenarbeit mit Ihrem NetApp Professional Services Consultant kann das link:https://configbuilder.netapp.com/Index.aspx["NetApp ConfigBuilder Tool"^] (Anmeldung erforderlich) zur Durchführung dieser Schritte verwendet werden:
 +
 .. Wenden Sie sich an NetApp Professional Services, um eine Auftragsnummer zu erhalten.
 .. Rufen Sie das Arbeitsbuch von ConfigBuilder ab.
@@ -69,6 +70,8 @@ NOTE: StorageGRID-Automatisierungs-Python-Skripte können direkt verwendet werde
 
 
 
+[[automate-appliance-configuration-using-storagegrid-appliance-installer]]
+[[automate-with-appliance-installer]]
 == Automatisieren Sie die Appliance-Konfiguration mit dem StorageGRID Appliance Installer
 
 Nachdem Sie eine JSON-Datei generiert haben, können Sie die Konfiguration einer oder mehrerer Appliances automatisieren, indem Sie die JSON-Datei mit dem Installationsprogramm von StorageGRID Appliance hochladen.
@@ -109,6 +112,8 @@ Die Konfiguration wird auf den ausgewählten Knoten angewendet.
 
 
 
+[[automate-appliance-installation-and-configuration-using-configure-sga-py-script]]
+[[automate-with-configure-sga-py-script]]
 == Automatisierung der Appliance-Installation und -Konfiguration mit dem Skript configure-sga.py
 
 Wenn Sie ein fortgeschrittener Benutzer sind, können Sie das verwenden `configure-sga.py` Skript zur Automatisierung vieler Installations- und Konfigurationsaufgaben für StorageGRID-Appliance-Nodes, einschließlich der Installation und Konfiguration eines primären Admin-Knotens Dieses Skript kann nützlich sein, wenn Sie über eine große Anzahl von Geräten verfügen, die konfiguriert werden müssen.

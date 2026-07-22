@@ -4,6 +4,7 @@
 
 
 
+[[step-1-remove-the-nic]]
 == Schritt 1: Netzwerkkarte entfernen
 
 [role="tabbed-block"]
@@ -48,6 +49,7 @@ image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Entfernen einer E/A-Kar
 ====
 
 
+[[step-2-reinstall-the-internal-nic]]
 == Schritt 2: Installieren Sie die interne Netzwerkkarte neu
 
 Installieren Sie die Ersatz-NIC an derselben Stelle wie die entfernte.

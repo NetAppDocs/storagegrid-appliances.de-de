@@ -43,6 +43,7 @@ NOTE: Mischen Sie Netzteileinheiten der verschiedenen Spannungsarten nicht. Imme
 
 
 
+[[step-1-prepare-to-replace-power-supply]]
 == Schritt 1: Vorbereitung auf den Austausch der Stromversorgung
 
 Bereiten Sie den Austausch eines Netzteils in einem Controller-Shelf mit 12 Laufwerken oder 24 Laufwerken vor.
@@ -88,6 +89,7 @@ Sie müssen das Netzteil, für das die Warn-LED leuchtet, ersetzen.
 
 
 
+[[step-2-remove-failed-power-supply]]
 == Schritt 2: Entfernen Sie das defekte Netzteil
 
 Entfernen Sie ein ausgefallenes Netzteil, damit Sie es durch ein neues ersetzen können.
@@ -114,6 +116,7 @@ CAUTION: Wenn Sie ein Netzteil entfernen, verwenden Sie immer zwei Hände, um se
 
 
 
+[[step-3-install-new-power-supply]]
 == Schritt 3: Neues Netzteil installieren
 
 Installieren Sie ein neues Netzteil, um das fehlerhafte Netzteil auszutauschen.
@@ -140,6 +143,7 @@ CAUTION: Beim Einschieben des Netzteils in das System keine übermäßige Kraft 
 
 
 
+[[step-4-complete-power-supply-replacement]]
 == Schritt 4: Vollständige Netzteilaustausch
 
 Überprüfen Sie, ob das neue Netzteil ordnungsgemäß funktioniert, sammeln Sie Support-Daten und setzen Sie den normalen Betrieb fort.

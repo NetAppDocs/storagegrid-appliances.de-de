@@ -32,6 +32,7 @@ Wenn Sie einen fehlerhaften Akku austauschen möchten, müssen Sie Folgendes hab
 
 
 
+[[step-1-prepare-to-replace-battery]]
 == Schritt 1: Bereiten Sie den Batteriewechsel vor
 
 Sie müssen den betroffenen Controller offline schalten, damit Sie den fehlerhaften Akku sicher entfernen können. Der Controller, den Sie nicht in den Offline-Modus versetzen, muss den Status „Online“ (im optimalen Status) aufweisen.
@@ -100,6 +101,7 @@ NOTE: Wenn Sie mit dem Controller auf SANtricity System Manager zugreifen, den S
 
 
 
+[[step-2-remove-e4000-controller-canister]]
 == Schritt 2: Entfernen Sie den E4000-Controllerbehälter
 
 Sie müssen den Controller-Behälter aus dem Controller-Regal entfernen, damit Sie den Akku entfernen können.
@@ -124,6 +126,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 
 
 
+[[step-3-install-the-new-battery]]
 == Schritt 3: Setzen Sie die neue Batterie ein
 
 Sie müssen die fehlerhafte Batterie entfernen und austauschen.
@@ -180,6 +183,7 @@ Vergewissern Sie sich, dass der Stecker in der Akkubuchse auf der Hauptplatine e
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Schritt 4: Montieren Sie den Controller-Behälter wieder
 
 Nachdem Sie Komponenten im Controller-Aktivkohlebehälter ausgetauscht haben, setzen Sie ihn wieder in das Gehäuse ein.
@@ -212,6 +216,7 @@ Der Controller beginnt zu booten, sobald er im Gehäuse sitzt.
 
 
 
+[[step-5-complete-battery-replacement]]
 == Schritt 5: Kompletter Batteriewechsel
 
 Schalten Sie den Controller online.

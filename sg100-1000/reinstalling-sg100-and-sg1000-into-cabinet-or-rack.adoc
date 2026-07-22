@@ -15,6 +15,7 @@ Nehmen Sie das SG100- oder SG1000-Gerät aus einem Schrank oder Rack, um auf die
 
 
 
+[[remove-sg100-or-sg1000-from-cabinet-or-rack]]
 == Entfernen Sie SG100 oder SG1000 aus dem Schrank oder Rack
 
 Nehmen Sie das SG100 oder SG1000 aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder das Gerät an einen anderen Ort zu bringen.
@@ -55,6 +56,7 @@ Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie 
 
 
 
+[[reinstall-sg100-or-sg1000-into-cabinet-or-rack]]
 == Setzen Sie SG100 oder SG1000 wieder in den Schrank oder das Rack ein
 
 Setzen Sie das Gerät nach Abschluss der Hardwarewartung wieder in einen Schrank oder ein Rack ein.

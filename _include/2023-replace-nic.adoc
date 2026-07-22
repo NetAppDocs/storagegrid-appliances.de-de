@@ -80,6 +80,7 @@ image::../media/one-slot-assembly-sgf6112.png[NIC in Riser-Baugruppe mit einem S
 
 
 
+[[reinstall-the-internal-nic]]
 == Installieren Sie die interne NIC neu
 
 Installieren Sie die Ersatz-NIC an derselben Stelle wie die entfernte.

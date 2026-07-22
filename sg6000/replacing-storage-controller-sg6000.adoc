@@ -57,6 +57,7 @@ NOTE: Die Storage Controller in den meisten Appliance-Modellen umfassen keine Ho
 
 
 
+[[step-1-prepare-the-replacement-controller]]
 == Schritt 1: Bereiten Sie die Ersatzsteuerung vor
 
 Bereiten Sie den neuen E2800A- oder E2800B-Controller vor.
@@ -114,6 +115,7 @@ Die Host Interface Card (HIC) mit 4 Ports. Diese Karte muss auf den neuen Contro
 |===
 
 
+[[step-2-take-the-controller-offline]]
 == Schritt 2: Den Controller offline schalten
 
 Bereiten Sie vor, den ausgefallenen Controller zu entfernen und in den Offline-Modus zu versetzen.
@@ -146,6 +148,7 @@ NOTE: Durch das Erfassen von Support-Daten vor und nach dem Ersetzen einer Kompo
 
 
 
+[[step-3-remove-the-controller]]
 == Schritt 3: Entfernen Sie die Steuerung
 
 Entfernen Sie den fehlerhaften Controller aus dem Gerät.
@@ -169,6 +172,7 @@ CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht der Steuerung zu unters
 
 
 
+[[step-4-move-battery-to-the-new-controller]]
 == Schritt 4: Batterie auf den neuen Controller bringen
 
 Entfernen Sie den Akku aus dem fehlerhaften Controller, und setzen Sie ihn in den Ersatz-Controller ein.
@@ -256,6 +260,7 @@ image::../media/e2800_battery_flange_not_ok.gif[Batterieflansch Nicht Korrekt]
 
 
 
+[[step-5-move-hic-to-new-controller-if-needed]]
 == Schritt 5: Verschieben Sie HIC auf neuen Controller, falls erforderlich
 
 Wenn der ausgefallene Controller eine Host Interface Card (HIC) enthält, verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
@@ -364,6 +369,8 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[Schrauben für
 ====
 
 
+[[step-6-replace-controller]]
+[[step6_replace_controller]]
 == Schritt 6: Controller austauschen
 
 Installieren Sie den Ersatz-Controller und überprüfen Sie, ob er wieder an das Raster angeschlossen ist.

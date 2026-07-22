@@ -1,7 +1,7 @@
 ---
 permalink: installconfig/gathering-installation-information-sg5700.html 
 sidebar: sidebar 
-keywords: storagegrid, sg5700, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10/25-gbe, 10/25 gbe, e5700sg, independent, active-backup, active backup, 1-gbe, 1 gbe 
+keywords: storagegrid, sg5700, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10-gbe, 10 gbe, 25-gbe, 25 gbe, e5700sg, independent, active-backup, active backup, 1-gbe, 1 gbe 
 summary: Notieren Sie die erforderlichen Informationen für jedes Netzwerk, das Sie mit dem Gerät verbinden, in den Tabellen. Diese Werte sind für die Installation und Konfiguration der Hardware erforderlich. 
 ---
 = Sammeln Sie Netzwerkinformationen für den SG5700
@@ -18,6 +18,7 @@ TIP: Verwenden Sie anstelle der Tabellen das mit ConfigBuilder bereitgestellte A
 
 
 
+[[information-needed-to-connect-to-santricity-system-manager-on-e2800-controller]]
 == Für die Verbindung mit SANtricity System Manager auf dem E2800 Controller erforderliche Informationen
 
 Sie verbinden den Controller der E2800 Serie mit dem Managementnetzwerk, das Sie für SANtricity System Manager verwenden.
@@ -90,6 +91,7 @@ Für IPv6:
 |===
 
 
+[[information-needed-to-connect-e5700sg-controller-to-admin-network]]
 == Für die Verbindung des E5700SG-Controllers mit dem Admin-Netzwerk erforderliche Informationen
 
 Das Admin-Netzwerk für StorageGRID ist ein optionales Netzwerk, das zur Systemadministration und -Wartung verwendet wird. Die Appliance wird über die 1-GbE-Management-Ports des E5700SG Controllers mit dem Admin-Netzwerk verbunden.
@@ -162,6 +164,7 @@ Admin-Netzwerk-Subnetze (CIDR)
 |===
 
 
+[[information-needed-to-connect-and-configure-1025-gbe-ports-on-e5700sg-controller]]
 == Erforderliche Informationen zum Verbinden und Konfigurieren von 10/25-GbE-Ports auf dem E5700SG Controller
 
 Die vier 10/25-GbE-Ports des E5700SG-Controllers stellen eine Verbindung zum StorageGRID-Grid-Netzwerk und dem Client-Netzwerk her.
@@ -223,6 +226,7 @@ Switch-Port für Port 4 (Grid-Netzwerk)
 |===
 
 
+[[information-needed-to-connect-e5700sg-controller-to-grid-network]]
 == Zum Verbinden des E5700SG-Controllers mit dem Grid-Netzwerk erforderliche Informationen
 
 Das Grid-Netzwerk für StorageGRID ist ein erforderliches Netzwerk, das für den gesamten internen StorageGRID-Datenverkehr verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des E5700SG-Controllers mit dem Grid-Netzwerk verbunden.
@@ -295,6 +299,7 @@ Grid-Netzwerknetze (CIDR)
 |===
 
 
+[[information-needed-to-connect-e5700sg-controller-to-client-network]]
 == Für die Verbindung des E5700SG-Controllers mit dem Client-Netzwerk erforderliche Informationen
 
 Das Client-Netzwerk für StorageGRID ist ein optionales Netzwerk, das in der Regel für den Zugriff auf das Grid auf das Clientprotokoll verwendet wird. Die Appliance wird über die 10/25-GbE-Ports des E5700SG-Controllers mit dem Client-Netzwerk verbunden.
@@ -370,12 +375,14 @@ Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Client-Netzwe
 |===
 
 
+[[port-bond-modes]]
 == Port-Bond-Modi
 
 Wenn link:configuring-network-links.html["Netzwerk-Links werden konfiguriert"] Für den E5700SG-Controller können Sie Port-Bonding für die 10/25-GbE-Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie für die 1-GbE-Management-Ports, die mit dem optionalen Admin-Netzwerk verbunden werden. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen.
 
 
 
+[[network-bond-modes-for-1025-gbe-ports]]
 === Netzwerk-Bond-Modi für 10/25-GbE-Ports
 
 Die 10/25-GbE-Netzwerk-Ports auf dem E5700SG Controller unterstützen den Bond-Modus für festen Port oder aggregierten Port für die Grid-Netzwerk- und Client-Netzwerkverbindungen.
@@ -449,6 +456,7 @@ NOTE: Wenn Sie weniger als vier Ports verwenden, beachten Sie, dass nach der Ins
 
 
 
+[[network-bond-modes-for-1-gbe-management-ports]]
 === Netzwerk-Bond-Modi für 1-GbE-Management-Ports
 
 Für die beiden 1-GbE-Management-Ports des E5700SG-Controllers können Sie den Independent Network Bond-Modus oder den Active-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen.

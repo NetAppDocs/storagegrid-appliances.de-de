@@ -45,10 +45,12 @@ Das SG6160 bietet folgende Datensicherungsfunktionen:
 
 
 
+[[sg6100-hardware-components]]
 == Hardwarekomponenten des SG6100
 
 
 
+[[sgf6112-appliance]]
 === SGF6112-Appliance
 
 Die Appliance SGF6112 umfasst die folgenden Komponenten:
@@ -70,6 +72,7 @@ Computing- und Storage-Plattform:: Ein Server mit einer Höheneinheit (1 HE), de
 
 
 
+[[sg6160-appliance]]
 === SG6160 Appliance
 
 Die SG6160 Appliance umfasst die folgenden Komponenten:
@@ -114,10 +117,12 @@ Das E-Series DE460C Gehäuse ist ein 4-HE-Shelf mit folgenden Komponenten:
 
 
 
+[[sgf6112-and-sg6160-diagrams]]
 == Diagramme SGF6112 und SG6160
 
 
 
+[[sgf6112-front-view]]
 === SGF6112 – Vorderansicht
 
 Diese Abbildung zeigt die Vorderseite des SGF6112 ohne Blende. Die Appliance verfügt über eine 1-HE-Computing- und Storage-Plattform mit 12 SSD-Laufwerken.
@@ -126,6 +131,7 @@ image::../media/sgf6112_front_with_ssds.png[SGF6112, Vorderansicht]
 
 
 
+[[sgf6112-rear-view]]
 === SGF6112 – Rückansicht
 
 Diese Abbildung zeigt die Rückseite des SGF6112, einschließlich der Ports, Lüfter und Netzteile.
@@ -235,6 +241,7 @@ Identifizieren Sie die LED
 |===
 
 
+[[sg6160-front-view]]
 === SG6160 – Vorderansicht
 
 Diese Abbildung zeigt die Vorderseite des SG6160, der einen 1-HE-Computing-Controller und ein 4-HE-Shelf mit zwei Storage-Controllern und 60 Laufwerken in fünf Laufwerkseinschüben umfasst.
@@ -261,6 +268,7 @@ E4000 Controller Shelf mit entfernter Frontverkleidung (das optionale Erweiterun
 |===
 
 
+[[sg6160-rear-view]]
 === SG6160 – Rückansicht
 
 Diese Abbildung zeigt die Rückseite des SG6160, einschließlich der Computing- und Storage-Controller, Lüfter und Netzteile.
@@ -308,10 +316,12 @@ Netzteil (1 von 2) für E4000 Controller Shelf
 |===
 
 
+[[sg6100-controllers]]
 == SG6100 Controller
 
 
 
+[[sg6100-cn-compute-controller]]
 === SG6100-CN Computing-Controller
 
 * Stellt für die Appliance Computing-Ressourcen bereit
@@ -444,6 +454,7 @@ Identifizieren Sie die LED
 |===
 
 
+[[sg6160-e4000-storage-controller]]
 === SG6160: E4000 Storage Controller
 
 * Zwei Controller für Failover-Support.
@@ -519,6 +530,7 @@ Es gibt vier Verbindungen zum SG6100-CN Controller (zwei von jedem E4000).
 |===
 
 
+[[sg6160-ioms-for-optional-expansion-shelves]]
 === SG6160: IOMs für optionale Erweiterungs-Shelfs
 
 Das Erweiterungs-Shelf enthält zwei I/O-Module (IOMs), die mit den Storage-Controllern oder anderen Erweiterungs-Shelfs verbunden sind.

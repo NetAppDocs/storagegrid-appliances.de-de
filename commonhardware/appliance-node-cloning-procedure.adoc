@@ -2,7 +2,7 @@
 permalink: commonhardware/appliance-node-cloning-procedure.html 
 sidebar: sidebar 
 keywords: storagegrid, appliance node clone, appliance node cloning, node clone, node cloning 
-summary: 'Der Klonprozess kann mehrere Tage dauern, bis die Daten zwischen dem Quell-Node \(Appliance, die ersetzt wird\) und der Ziel-\(New\) Appliance übertragen wurden.' 
+summary: 'Der Klonprozess kann mehrere Tage dauern, bis die Daten zwischen dem Quell-Node (Appliance, die ersetzt wird) und der Ziel-Appliance übertragen werden.' 
 ---
 = Klonen eines StorageGRID Appliance-Knotens
 :allow-uri-read: 
@@ -19,6 +19,7 @@ Der Klonprozess kann mehrere Tage dauern, bis die Daten zwischen dem Quell-Node 
 * Sie haben die Ziel-Appliance konfiguriert, einschließlich der Konfiguration von StorageGRID-Verbindungen, SANtricity System Manager (nur Storage Appliances) und der BMC-Schnittstelle.
 +
 ** Verwenden Sie beim Konfigurieren von StorageGRID-Verbindungen die temporären IP-Adressen.
+** Wenn DHCP auf Ports des Zielknotens aktiviert wird, die auf dem Quellknoten als statisch konfiguriert waren, muss sichergestellt sein, dass keine permanenten DHCP-Leases für MAC-Adressen des Quellknotens bestehen. Andernfalls kann es am Ende des Klonprozesses zu einem IP-Adresskonflikt kommen.
 ** Verwenden Sie bei der Konfiguration von Netzwerkverbindungen die abschließende Link-Konfiguration.
 
 
@@ -88,6 +89,10 @@ Wenn das Klonen erfolgreich abgeschlossen wurde:
 * Die Quell- und Ziel-Knoten tauschen IP-Adressen aus:
 +
 ** Der Zielknoten verwendet nun die IP-Adressen, die ursprünglich dem Quellknoten für Grid-, Admin- und Client-Netzwerke zugewiesen wurden.
++
+
+NOTE: Wenn am Ende des Klonprozesses ein IP-Adresskonflikt auftritt, sollte sichergestellt werden, dass für keine der MAC-Adressen von Ports, die auf dem Quellknoten statische IP-Adressen hatten und auf dem Zielknoten für DHCP aktiviert wurden, permanente DHCP-Leases vergeben wurden. Das Entfernen oder Aktualisieren der permanenten DHCP-Leases auf dem DHCP-Server behebt diesen Konflikt.
+
 ** Der Quellknoten verwendet jetzt die temporäre IP-Adresse, die dem Zielknoten ursprünglich zugewiesen wurde.
 
 

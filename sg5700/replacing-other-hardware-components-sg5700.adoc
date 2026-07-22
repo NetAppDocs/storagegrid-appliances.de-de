@@ -25,6 +25,7 @@ Wenn Sie ein Laufwerk, einen Netzlüfterbehälter, einen Lüfterbehälter, einen
 
 
 
+[[sg5712-component-replacement-instructions]]
 == Anweisungen zum Austausch der SG5712-Komponente
 
 [cols="1a,3a"]
@@ -47,6 +48,7 @@ link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supe
 |===
 
 
+[[sg5760-component-replacement-instructions]]
 == Anweisungen zum Austausch der SG5760 Komponenten
 
 [cols="1a,3a"]

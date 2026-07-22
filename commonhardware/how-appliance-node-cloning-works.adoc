@@ -17,6 +17,7 @@ Mit dem Appliance-Node-Klonen können Sie einen vorhandenen Appliance-Node (Quel
 
 
 
+[[why-clone-an-appliance-node]]
 == Warum einen Appliance-Node klonen?
 
 Sie können einen Appliance-Node klonen, wenn Sie Folgendes benötigen:
@@ -30,6 +31,7 @@ Sie können einen Appliance-Node klonen, wenn Sie Folgendes benötigen:
 
 
 
+[[which-storagegrid-network-is-used]]
 == Welches StorageGRID Netzwerk wird verwendet?
 
 Durch das Klonen werden Daten vom Quell-Node über ein beliebiges StorageGRID-Netzwerk direkt an die Ziel-Appliance übertragen. Das Grid-Netzwerk wird normalerweise verwendet, Sie können aber auch das Admin-Netzwerk oder das Client-Netzwerk verwenden, wenn die Quell-Appliance mit diesen Netzwerken verbunden ist. Wählen Sie das Netzwerk für den Klon-Traffic aus, das die beste Performance bei der Datenübertragung bietet, ohne die Leistung des StorageGRID-Netzwerks oder die Datenverfügbarkeit zu beeinträchtigen.
@@ -38,6 +40,7 @@ Bei der Installation der Ersatzanwendung müssen Sie temporäre IP-Adressen für
 
 
 
+[[what-information-is-not-cloned]]
 == Welche Informationen sind nicht geklont?
 
 Die folgenden Appliance-Konfigurationen werden beim Klonen nicht auf die Ersatz-Appliance übertragen. Sie müssen sie bei der Ersteinrichtung des Ersatzgeräts konfigurieren.
@@ -51,20 +54,27 @@ Die folgenden Appliance-Konfigurationen werden beim Klonen nicht auf die Ersatz-
 
 
 
+[[what-issues-prevent-cloning]]
 == Welche Probleme verhindern das Klonen?
 
 Wenn beim Klonen eines der folgenden Probleme auftreten, stoppt der Klonprozess und eine Fehlermeldung wird erzeugt:
 
+* Klonvorgang läuft bereits
 * Falsche Netzwerkkonfiguration
+* Das Zielgerät kann den Primary Admin Node nicht erreichen.
 * Fehlende Konnektivität zwischen Quell- und Ziel-Appliances
-* Nicht kompatibel mit Quell- und Ziel-Appliance
-* Bei Storage-Nodes eine Ersatz-Appliance mit unzureichender Kapazität
+* Quell- und Zielgeräte sind nicht kompatibel
+* Quell- und Zielgerät befinden sich in unterschiedlichen Wartungsmodus-Zuständen
+* Die Versionen des StorageGRID Appliance Installers auf den Quell- und Zielgeräten stimmen nicht überein.
+* Für Speicherknoten weist das Zielgerät inkompatiblen Speicher oder unzureichende Kapazität auf.
+* Das Zielgerät ist nicht bereit
 
 
 Sie müssen jedes Problem lösen, damit das Klonen fortgesetzt werden kann.
 
 
 
+[[target-appliance-compatibility]]
 == Kompatibilität der Ziel-Appliance
 
 Ersatz-Appliances müssen vom gleichen Typ sein wie der Quell-Node, den sie ersetzen, und beide müssen Teil desselben logischen StorageGRID-Standorts sein.
@@ -73,6 +83,7 @@ Lesen Sie vor dem Klonen die allgemeinen Klonüberlegungen sowie die spezifische
 
 
 
+[[general-services-appliance-cloning-considerations]]
 === Allgemeine Überlegungen zum Klonen von Services-Appliances
 
 * Eine Ersatzdienstanwendung kann ein anderes Modell sein als der Admin-Node oder der Gateway-Node, den sie ersetzt.
@@ -81,6 +92,7 @@ Lesen Sie vor dem Klonen die allgemeinen Klonüberlegungen sowie die spezifische
 
 
 
+[[general-storage-appliance-cloning-considerations]]
 === Allgemeine Überlegungen zum Klonen von Storage Appliances
 
 * Eine Ersatzspeichergerät muss über eine größere Kapazität verfügen als der zu ersetzende Speicher-Node.
@@ -109,12 +121,14 @@ Informationen zum aktuellen RAID-Modus des Quellgeräteknotens finden Sie auf de
 
 
 
+[[sg100-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen der SG100 Appliance
 
 Sie können eine SG100 Quell-Node-Appliance auf einer SG110-, SG1000- oder SG1100-Services-Ziel-Appliance klonen. Durch das Klonen der SG100 auf eine SG1000- oder SG1100-Services-Ziel-Appliance kann der Admin-Node oder Gateway-Node mehr Funktionen erhalten.
 
 
 
+[[sg110-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen von SG110-Appliances
 
 Sie können eine SG110-Quell-Node-Appliance auf ein SG1100-Services-Appliance-Ziel klonen, um dem Admin-Node oder Gateway-Node eine höhere Kapazität zu geben.
@@ -123,6 +137,7 @@ Das Klonen von Knoten von einer SG110-Quellknoten-Appliance ohne Knotenverschlü
 
 
 
+[[sg120-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen des SG120-Geräts
 
 Sie können eine SG120-Quellknoten-Appliance auf eine SG1200-Services-Appliance als Ziel klonen, um dem Admin Node oder Gateway Node mehr Funktionalität zu verleihen.
@@ -131,6 +146,7 @@ Das Klonen von Knoten wird von einer SG120-Quellknoten-Appliance ohne Knotenvers
 
 
 
+[[sg1000-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen von SG1000 Appliances
 
 Sie können eine SG1000 Quell-Node-Appliance auf einer SG100-, SG110- oder SG1100-Services-Ziel-Appliance klonen.
@@ -141,6 +157,7 @@ Sie können eine SG1000 Quell-Node-Appliance auf einer SG100-, SG110- oder SG110
 
 
 
+[[sg1100-appliance-cloning-information-and-restrictions]]
 === SG1100 Appliance zum Klonen von Informationen und Einschränkungen
 
 Sie können eine SG1100 Quell-Node-Appliance auf eine SG110 Services-Ziel-Appliance klonen.
@@ -153,6 +170,7 @@ Das Klonen von Knoten von einer SG1100-Quellknoten-Appliance ohne Knotenverschl�
 
 
 
+[[sg1200-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen des SG1200-Geräts
 
 Sie können eine SG1200-Quellknoten-Appliance auf eine SG120-Services-Ziel-Appliance klonen.
@@ -165,12 +183,14 @@ Das Klonen von Knoten wird von einer SG1200-Quellknoten-Appliance ohne Knotenver
 
 
 
+[[sg5712-appliance-cloning-information-and-restrictions]]
 === SG5712 Informationen und Einschränkungen zum Klonen von Appliances
 
 Sie können eine mit DDP konfigurierte SG5712-Quell-Node-Appliance in einer SG5812-Storage-Ziel-Appliance klonen.
 
 
 
+[[sg5760-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen der SG5760 Appliance
 
 * Sie können eine mit DDP16 konfigurierte SG5760-Quell-Node-Appliance in einer mit DDP16 konfigurierten SG5860-Storage-Ziel-Appliance klonen.
@@ -180,18 +200,21 @@ Sie können eine mit DDP konfigurierte SG5712-Quell-Node-Appliance in einer SG58
 
 
 
+[[sg5812-appliance-cloning-information-and-restrictions]]
 === SG5812 Appliance zum Klonen von Informationen und Einschränkungen
 
 Sie können eine SG5812-Appliance erfolgreich als Quelle oder Ziel klonen.
 
 
 
+[[sg5860-appliance-cloning-information-and-restrictions]]
 === SG5860 Appliance zum Klonen von Informationen und Einschränkungen
 
 Sie können eine SG5860-Appliance erfolgreich als Quelle oder Ziel mit einigen Einschränkungen klonen (siehe Informationen zum Klonen der Appliance und Einschränkungen für jede Quelle).
 
 
 
+[[sg6060-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen der SG6060 Appliance
 
 * Sie können eine SG6060-Quell-Node-Appliance, die mit DDP oder DDP16 konfiguriert ist, in einem passenden RAID-Modus auf eine SG5860-Storage-Ziel-Appliance klonen.
@@ -201,12 +224,14 @@ Sie können eine SG5860-Appliance erfolgreich als Quelle oder Ziel mit einigen E
 
 
 
+[[sgf6112-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen von SGF6112-Geräten
 
 Das Klonen von Knoten wird von einer SGF6112-Quellknoten-Appliance ohne Knotenverschlüsselung auf eine SGF6112- oder SGF6212-Appliance als Ziel mit Knotenverschlüsselung nicht unterstützt.
 
 
 
+[[sg6160-and-sg6260-appliance-cloning-information-and-restrictions]]
 === Informationen und Einschränkungen zum Klonen der SG6160- und SG6260-Appliances
 
 Sie können eine SG6160-Appliance mit einigen Einschränkungen erfolgreich als Quelle oder Ziel klonen (siehe Informationen zum Klonen der Appliance und Einschränkungen für jede Quelle).

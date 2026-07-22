@@ -27,6 +27,7 @@ Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass
 
 
 
+[[drive-firmware-upgrade]]
 == Upgrade der Laufwerk-Firmware
 
 Die Firmware der Laufwerke in der und SG6260 wird bei jedem Neustart des Systems automatisch überprüft. Bei Bedarf wird die Firmware automatisch auf die von der aktuellen StorageGRID-Version erwartete Version aktualisiert. Firmware-Aktualisierungen erfolgen üblicherweise im Rahmen von StorageGRID-Software-Upgrades. Alle notwendigen Firmware-Aktualisierungen für bestehende StorageGRID-Versionen werden in Hotfixes bereitgestellt. Befolgen Sie die Anweisungen in jedem Hotfix, um sicherzustellen, dass die Aktualisierung auf allen Laufwerken angewendet wird, die davon profitieren könnten.
@@ -38,6 +39,7 @@ NOTE: Für die Wartung des SGF6212-Geräts wird kein SANtricity System Manager b
 
 
 
+[[general-maintenance-procedures]]
 == Allgemeine Wartungsverfahren
 
 Siehe link:../commonhardware/index.html["Allgemeine Wartungsverfahren"] Für Verfahren, die für alle Appliances gleich sind, wie z. B. das Anwenden eines Hotfix, das Wiederherstellen eines Knotens oder Standorts und das Durchführen von Netzwerkwartungen.

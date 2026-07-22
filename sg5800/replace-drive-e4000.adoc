@@ -15,6 +15,7 @@ Lesen Sie vor dem Austausch eines Laufwerks in einem SG5812 oder SG5860 die Anfo
 
 
 
+[[drive-handling]]
 == Handhabung von Laufwerken
 
 Die Laufwerke in Ihrem Gerät sind zerbrechlich. Eine unsachgemäße Handhabung von Laufwerken stellt eine der Hauptursachen für Laufwerkausfälle dar.

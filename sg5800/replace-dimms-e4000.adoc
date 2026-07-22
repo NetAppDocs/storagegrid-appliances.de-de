@@ -41,6 +41,7 @@ NOTE: Während bestimmter Schritte dieses Verfahrens ist der Zugriff auf den SAN
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Schritt 1: Bestimmen Sie, ob Sie ein DIMM ersetzen müssen
 
 Überprüfen Sie die Cache-Größe Ihres Controllers, bevor Sie das DIMMS ersetzen.
@@ -53,6 +54,7 @@ NOTE: Während bestimmter Schritte dieses Verfahrens ist der Zugriff auf den SAN
 
 
 
+[[step-2-power-down-the-controller-shelf]]
 == Schritt 2: Schalten Sie das Controller-Shelf aus
 
 Fahren Sie den Controller herunter, damit Sie die DIMMs sicher entfernen und austauschen können.
@@ -109,6 +111,7 @@ Die grüne Cache-Aktivitäts-LED auf der Rückseite des E4000-Controllers leucht
 
 
 
+[[step-3-remove-controller-canister]]
 == Schritt 3: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Aktivkohlebehälter aus dem System, und entfernen Sie dann die Abdeckung des Controller-Aktivkohlebehälters.
@@ -130,6 +133,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Öffnen Sie
 
 
 
+[[step-4-replace-the-dimms]]
 == Schritt 4: Ersetzen Sie die DIMMs
 
 Suchen Sie das DIMM im Controller, entfernen Sie es, und ersetzen Sie es.
@@ -201,6 +205,7 @@ NOTE: Prüfen Sie das DIMM visuell, um sicherzustellen, dass es gleichmäßig au
 
 
 
+[[step-5-reinstall-the-controller-canister]]
 == Schritt 5: Setzen Sie den Controller-Behälter wieder ein
 
 Setzen Sie den Controller-Aktivkohlebehälter wieder in das Gehäuse ein.
@@ -234,6 +239,7 @@ Der Controller beginnt zu booten, sobald er im Gehäuse sitzt.
 
 
 
+[[step-6-complete-dimms-replacement]]
 == Schritt 6: Kompletter Austausch der DIMMs
 
 Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

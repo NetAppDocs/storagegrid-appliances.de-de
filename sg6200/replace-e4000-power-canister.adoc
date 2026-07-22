@@ -34,6 +34,7 @@ Während Sie diese Aufgabe ausführen, versorgt der andere Netzbehälter beide L
 
 
 
+[[step-1-prepare-to-replace-power-canister]]
 == Schritt 1: Bereiten Sie sich auf den Austausch des Stromkanisters vor
 
 Bereiten Sie den Austausch eines Netzkanisters in einem Controller-Shelf mit 60 Laufwerken oder Festplatten vor.
@@ -80,6 +81,7 @@ Sie müssen den Netzbehälter austauschen, dessen Warn-LED leuchtet.
 
 
 
+[[step-2-remove-failed-power-canister]]
 == Schritt 2: Entfernen Sie den defekten Netzbehälter
 
 Entfernen Sie einen defekten Netzbehälter, so dass Sie ihn durch einen neuen ersetzen können.
@@ -102,6 +104,7 @@ CAUTION: Wenn Sie einen Netzbehälter entfernen, verwenden Sie immer zwei Hände
 
 
 
+[[step-3-install-new-power-canister]]
 == Schritt 3: Installieren Sie einen neuen Leistungsbehälter
 
 Installieren Sie einen neuen Netzbehälter, um den defekten auszutauschen.
@@ -120,6 +123,7 @@ CAUTION: Verwenden Sie keine übermäßige Kraft, wenn Sie den Netzbehälter in 
 
 
 
+[[step-4-complete-power-canister-replacement]]
 == Schritt 4: Vollständiger Netzbehälter Austausch
 
 Überprüfen Sie, ob der neue Strombehälter ordnungsgemäß funktioniert, sammeln Sie Support-Daten und setzen Sie den normalen Betrieb fort.

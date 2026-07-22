@@ -15,6 +15,8 @@ Nehmen Sie das SGF6112 oder SG6100-CN aus einem Schrank oder Rack, um auf die ob
 
 
 
+[[remove-sgf6112-or-sg6100-cn-from-cabinet-or-rack]]
+[[remove-from-rack]]
 == Entfernen Sie SGF6112 oder SG6100-CN aus dem Schrank oder Rack
 
 .Bevor Sie beginnen
@@ -50,6 +52,7 @@ Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie 
 
 
 
+[[reinstall-sgf6112-or-sg6100-cn-into-cabinet-or-rack]]
 == Setzen Sie SGF6112 oder SG6100-CN wieder in den Schrank oder das Rack ein
 
 .Bevor Sie beginnen

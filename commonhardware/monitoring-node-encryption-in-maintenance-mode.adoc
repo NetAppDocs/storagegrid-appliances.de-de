@@ -2,7 +2,7 @@
 permalink: commonhardware/monitoring-node-encryption-in-maintenance-mode.html 
 sidebar: sidebar 
 keywords: kms, key management server, monitor, monitoring, status, encryption 
-summary: 'Wenn Sie während der Installation die Node-Verschlüsselung für die Appliance aktiviert haben, können Sie den Verschlüsselungsstatus aller Appliance-Nodes überwachen, einschließlich Details zur Node-Verschlüsselung und zum Schlüsselmanagementserver \(KMS\).' 
+summary: 'Wenn Sie während der Installation die Node-Verschlüsselung für die Appliance aktiviert haben, können Sie den Verschlüsselungsstatus aller Appliance-Nodes überwachen, einschließlich Details zur Node-Verschlüsselung und zum Key Management Server (KMS).' 
 ---
 = Überwachen Sie die Knotenverschlüsselung für eine StorageGRID Appliance im Wartungsmodus
 :allow-uri-read: 
@@ -59,6 +59,7 @@ Es kann bis zu 20 Minuten dauern, bis das Gerät neu gestartet wird und sich wie
 
 
 
+[[clear-key-management-server-configuration]]
 == Die Konfiguration des Verschlüsselungsmanagement-Servers löschen
 
 Durch Löschen der KMS-Konfiguration (Key Management Server) wird die Node-Verschlüsselung auf der Appliance deaktiviert. Nach dem Löschen der KMS-Konfiguration werden die Daten auf der Appliance dauerhaft gelöscht und sind nicht mehr zugänglich. Diese Daten können nicht wiederhergestellt werden.

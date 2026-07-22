@@ -36,6 +36,7 @@ Dieses Verfahren gilt für DCM- und DCM2-Laufwerkseinschübe.
 
 
 
+[[step-1-prepare-to-replace-drive]]
 == Schritt 1: Vorbereitung auf den Austausch des Laufwerks
 
 Bereiten Sie sich auf den Austausch eines Laufwerks vor, indem Sie den Recovery Guru in SANtricity System Manager prüfen und alle erforderlichen Schritte ausführen. Dann können Sie die ausgefallene Komponente finden.
@@ -75,6 +76,7 @@ Die Warn-LEDs der Laufwerksschublade befinden sich auf der linken Seite vor jede
 
 
 
+[[step-2-remove-failed-drive]]
 == Schritt 2: Entfernen Sie ausgefallenes Laufwerk
 
 Entfernen Sie ein ausgefallenes Laufwerk, um es durch ein neues zu ersetzen.
@@ -103,6 +105,7 @@ NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindeste
 
 
 
+[[step-3-install-new-drive]]
 == Schritt 3: Neues Laufwerk installieren
 
 Installieren Sie ein neues Laufwerk, um das ausgefallene zu ersetzen.
@@ -129,6 +132,7 @@ Je nach Konfiguration rekonstruiert der Controller möglicherweise automatisch D
 
 
 
+[[step-4-complete-drive-replacement]]
 == Schritt 4: Vollständige Laufwerksaustausch
 
 Überprüfen Sie, ob das neue Laufwerk ordnungsgemäß funktioniert.

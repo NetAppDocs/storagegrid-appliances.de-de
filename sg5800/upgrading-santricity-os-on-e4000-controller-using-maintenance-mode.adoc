@@ -2,7 +2,7 @@
 permalink: sg5800/upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html 
 sidebar: sidebar 
 keywords: storagegrid, sg5800, storage node, storage appliance, controller, e2800, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
-summary: 'Für Storage-Controller, die derzeit SANtricity OS verwenden, die älter als 08.42.20.00 \(11.42\) sind, müssen Sie das Verfahren des Wartungsmodus verwenden, um ein Upgrade durchzuführen.' 
+summary: 'Für Storage-Controller, die derzeit SANtricity OS verwenden, die älter als 08.42.20.00 (11.42) sind, müssen Sie das Verfahren des Wartungsmodus verwenden, um ein Upgrade durchzuführen.' 
 ---
 = Aktualisieren Sie das SANtricity OS auf dem SG5800 E4000 Controller im Wartungsmodus
 :allow-uri-read: 

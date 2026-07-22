@@ -2,7 +2,7 @@
 permalink: installconfig/accessing-storagegrid-appliance-installer.html 
 sidebar: sidebar 
 keywords: appliance installer, installer, access, accessing, start, starting 
-summary: 'Sie müssen auf das Installationsprogramm der StorageGRID-Appliance zugreifen, um die Installationsversion zu überprüfen und die Verbindungen zwischen der Appliance und den drei StorageGRID-Netzwerken zu konfigurieren: Das Grid-Netzwerk, das Admin-Netzwerk \ (optional\) und das Client-Netzwerk \ (optional\).' 
+summary: 'Sie müssen auf den StorageGRID Appliance Installer zugreifen, um die Installer-Version zu überprüfen und die Verbindungen zwischen der Appliance und den drei StorageGRID Netzwerken zu konfigurieren: dem Grid Netzwerk, dem Admin Netzwerk (optional) und dem Client Netzwerk (optional).' 
 ---
 = Zugriff auf den StorageGRID Appliance Installer
 :allow-uri-read: 

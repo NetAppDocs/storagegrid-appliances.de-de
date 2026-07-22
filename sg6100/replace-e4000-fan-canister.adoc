@@ -32,6 +32,7 @@ CAUTION: *Möglicher Geräteschaden* -- Wenn Sie diesen Vorgang bei eingeschalte
 
 
 
+[[step-1-prepare-to-replace-fan-canister]]
 == Schritt 1: Bereiten Sie den Austausch des Ventilatorkanisters vor
 
 Bereiten Sie den Austausch eines Lüfterbehälters vor, indem Sie Unterstützungsdaten zu Ihrem Gerät sammeln und die fehlerhafte Komponente ausfindig machen.
@@ -77,6 +78,7 @@ Sie müssen den Lüfterbehälter austauschen, dessen Warn-LED leuchtet.
 
 
 
+[[step-2-remove-failed-fan-canister-and-install-new-one]]
 == Schritt 2: Entfernen Sie den defekten Lüfterbehälter und installieren Sie einen neuen
 
 Entfernen Sie einen defekten Lüfterbehälter, so dass Sie ihn durch einen neuen ersetzen können.
@@ -96,6 +98,7 @@ Bewahren Sie das gesamte Verpackungsmaterial für die Verwendung auf, wenn Sie d
 
 
 
+[[step-3-complete-fan-canister-replacement]]
 == Schritt 3: Vollständige Lüfterbehälter Austausch
 
 Überprüfen Sie, ob der neue Lüfterbehälter ordnungsgemäß funktioniert, sammeln Sie Support-Daten und setzen Sie den normalen Betrieb fort.

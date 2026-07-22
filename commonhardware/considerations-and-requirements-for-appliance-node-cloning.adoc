@@ -18,6 +18,7 @@ TIP: Knotenklonen ist für Gateway-Knoten deaktiviert.  Um einen Gateway-Knoten 
 
 
 
+[[hardware-requirements-for-the-replacement-appliance]]
 == Hardwareanforderungen für die Ersatz-Appliance
 
 Stellen Sie sicher, dass das Ersatzgerät die folgenden Kriterien erfüllt:
@@ -50,6 +51,7 @@ Wenden Sie sich an Ihren StorageGRID Vertriebsmitarbeiter, wenn Sie Unterstützu
 
 
 
+[[prepare-to-clone-an-appliance-node]]
 == Das Klonen eines Appliance-Nodes wird vorbereitet
 
 Vor dem Klonen eines Appliance-Node müssen Sie folgende Informationen haben:
@@ -58,6 +60,7 @@ Vor dem Klonen eines Appliance-Node müssen Sie folgende Informationen haben:
 +
 Temporäre IP-Adressen befinden sich normalerweise im selben Subnetz wie die zu klonende Quell-Node-Appliance und sind nach Abschluss des Klonens nicht erforderlich. Die Quell- und Ziel-Appliances müssen eine Verbindung zu dem primären Admin-Node Ihrer StorageGRID herstellen, um eine Klonverbindung herzustellen.
 
+* Wenn DHCP auf Ports des Zielknotens aktiviert wird, die auf dem Quellknoten als statisch konfiguriert waren, muss sichergestellt sein, dass keine permanenten DHCP-Leases für MAC-Adressen des Quellknotens bestehen. Andernfalls kann es am Ende des Klonprozesses zu einem IP-Adresskonflikt kommen.
 * Bestimmung des Netzwerks zum Klonen von Datenübertragungsdaten, das die beste Performance bei der Datenübertragung bietet, ohne die Leistung des StorageGRID-Netzwerks oder die Datenverfügbarkeit zu beeinträchtigen
 +
 

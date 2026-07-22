@@ -15,6 +15,7 @@ Sie müssen möglicherweise einen Fibre-Channel-HBA austauschen, wenn er nicht o
 
 
 
+[[verify-fibre-channel-hba-to-replace]]
 == Überprüfen Sie, ob der Fibre-Channel-HBA ersetzt werden soll
 
 Wenn Sie sich nicht sicher sind, welcher Fibre Channel-Host Bus Adapter (HBA) ersetzt werden soll, führen Sie dieses Verfahren aus, um ihn zu identifizieren.
@@ -52,6 +53,7 @@ Sie können diese IP-Adresse für verwenden link:turning-controller-identify-led
 
 
 
+[[remove-fibre-channel-hba]]
 == Entfernen Sie den Fibre Channel HBA
 
 Möglicherweise müssen Sie den Fibre-Channel-Hostbus-Adapter (HBA) im SG6000-CN-Controller ersetzen, wenn dieser nicht optimal funktioniert oder wenn er ausgefallen ist.
@@ -100,6 +102,7 @@ Nach dem Austausch des Teils senden Sie das defekte Teil an NetApp zurück, wie 
 
 
 
+[[reinstall-fibre-channel-hba]]
 == Installieren Sie den Fibre Channel HBA neu
 
 Der Ersatz-Fibre Channel HBA wird an demselben Standort installiert wie der zuvor entfernte.

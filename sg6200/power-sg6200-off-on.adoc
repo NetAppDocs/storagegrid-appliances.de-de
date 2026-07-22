@@ -15,6 +15,7 @@ Sie können das Gerät SGF6212 oder den Controller SG6200-CN herunterfahren und 
 
 
 
+[[shut-down-the-sgf6212-appliance-or-sg6200-cn-controller]]
 == Schalten Sie das SGF6212-Gerät oder den SG6200-CN-Controller aus
 
 Fahren Sie die Appliance herunter, um eine Hardwarewartung durchzuführen.
@@ -60,6 +61,7 @@ Dieser Befehl kann bis zu 10 Minuten in Anspruch nehmen.
 
 
 
+[[power-on-sgf6212-or-sg6200-cn-and-verify-operation]]
 == Schalten Sie SGF6212 oder SG6200-CN ein und überprüfen Sie den Betrieb.
 
 Schalten Sie den Controller nach dem Abschluss der Wartung ein.

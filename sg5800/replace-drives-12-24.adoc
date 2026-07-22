@@ -34,6 +34,7 @@ StorageGRID Grid Manager überwacht den Appliance-Status und gibt bei Laufwerksa
 
 
 
+[[step-1-prepare-to-replace-drive]]
 == Schritt 1: Vorbereitung auf den Austausch des Laufwerks
 
 Bereiten Sie sich auf den Austausch eines Laufwerks vor, indem Sie den Recovery Guru in SANtricity System Manager prüfen und alle erforderlichen Schritte ausführen. Dann können Sie die ausgefallene Komponente finden.
@@ -63,6 +64,7 @@ NOTE: Wenn Sie ein Laufwerk in einem Shelf ersetzen, das über eine Blende verf�
 
 
 
+[[step-2-remove-failed-drive]]
 == Schritt 2: Entfernen Sie ausgefallenes Laufwerk
 
 Entfernen Sie ein ausgefallenes Laufwerk, um es durch ein neues zu ersetzen.
@@ -86,6 +88,7 @@ NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindeste
 
 
 
+[[step-3-install-new-drive]]
 == Schritt 3: Neues Laufwerk installieren
 
 Installieren Sie ein neues Laufwerk, um das ausgefallene zu ersetzen.
@@ -108,6 +111,7 @@ NOTE: Je nach Konfiguration rekonstruiert der Controller möglicherweise automat
 
 
 
+[[step-4-complete-drive-replacement]]
 == Schritt 4: Vollständige Laufwerksaustausch
 
 Führen Sie den Austausch des Laufwerks durch, um sicherzustellen, dass das neue Laufwerk ordnungsgemäß funktioniert.

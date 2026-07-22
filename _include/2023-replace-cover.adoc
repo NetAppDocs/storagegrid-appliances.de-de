@@ -16,6 +16,7 @@ CAUTION: Wickeln Sie das Gurtende eines ESD-Armbands um Ihr Handgelenk, und befe
 
 
 
+[[reinstall-cover]]
 == Setzen Sie die Abdeckung wieder ein
 
 .Bevor Sie beginnen

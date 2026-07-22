@@ -18,6 +18,7 @@ TIP: Verwenden Sie anstelle der Tabellen das mit ConfigBuilder bereitgestellte A
 
 
 
+[[check-storagegrid-version]]
 == Überprüfen Sie die StorageGRID-Version
 
 Vergewissern Sie sich vor der Installation eines SGF6112- oder SG6160-Geräts, dass Ihr StorageGRID-System eine erforderliche Version der StorageGRID-Software verwendet.
@@ -42,6 +43,7 @@ SG6160
 |===
 
 
+[[connect-to-santricity-system-manager]]
 == Stellen Sie eine Verbindung mit dem SANtricity System Manager her
 
 Sie verbinden beide Speicher-Controller der SG6160 Appliance mit dem Managementnetzwerk, das Sie für SANtricity System Manager verwenden. Controller A befindet sich oben und Controller B ist unten.
@@ -142,6 +144,7 @@ Muss sein:
 |===
 
 
+[[administration-and-maintenance-ports]]
 == Administrations- und Wartungs-Ports
 
 Das Admin-Netzwerk für StorageGRID ist ein optionales Netzwerk, das zur Systemadministration und -Wartung verwendet wird. Die Appliance stellt über die folgenden 1/10-GbE-Ports auf der Appliance eine Verbindung zum Admin-Netzwerk her.
@@ -222,6 +225,7 @@ Admin-Netzwerk-Subnetze (CIDR)
 |===
 
 
+[[networking-ports]]
 == Netzwerkports
 
 Die vier Netzwerkports auf der Appliance werden mit dem StorageGRID-Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden.
@@ -281,6 +285,7 @@ Switch-Port für Port 4 (Grid-Netzwerk für Fixed-Modus)
 |===
 
 
+[[grid-network-ports]]
 == Grid-Netzwerkports
 
 Das Grid-Netzwerk für StorageGRID ist ein erforderliches Netzwerk, das für den gesamten internen StorageGRID-Datenverkehr verwendet wird. Die Appliance wird über die vier Netzwerk-Ports mit dem Grid-Netzwerk verbunden.
@@ -352,6 +357,7 @@ Einstellung für maximale Übertragungseinheit (MTU) (optional). Sie können den
 |===
 
 
+[[client-network-ports]]
 == Client-Netzwerkports
 
 Das Client-Netzwerk für StorageGRID ist ein optionales Netzwerk, das in der Regel für den Zugriff auf das Grid auf das Clientprotokoll verwendet wird. Die Appliance wird über die vier Netzwerk-Ports mit dem Client-Netzwerk verbunden.
@@ -422,6 +428,7 @@ Statische IP-Adresse, die Sie für den Appliance-Knoten im Client-Netzwerk verwe
 |===
 
 
+[[bmc-management-network-ports]]
 == BMC-Management-Netzwerk-Ports
 
 Sie können auf die BMC-Schnittstelle auf der Appliance über den in der Abbildung eingekreisten 1-GbE-Managementport zugreifen. Dieser Port unterstützt die Remote-Verwaltung der Controller-Hardware über Ethernet unter Verwendung des IPMI-Standards (Intelligent Platform Management Interface).
@@ -471,12 +478,14 @@ Statische IP-Adresse, die Sie für den BMC-Verwaltungsport verwenden möchten
 |===
 
 
+[[port-bond-modes]]
 == Port-Bond-Modi
 
 Wenn link:configuring-network-links.html["Netzwerk-Links werden konfiguriert"] Für die SGF6112-Appliance können Sie Port-Bonding für die Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie für die 1/10-GbE-Management-Ports, die mit dem optionalen Admin-Netzwerk verbunden sind. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen.
 
 
 
+[[network-bond-modes]]
 === Netzwerk-Bond-Modi
 
 Die Netzwerk-Ports auf der Appliance unterstützen den Bond-Modus für feste Ports oder den Bond-Modus für aggregierte Ports für Grid-Netzwerk- und Client-Netzwerkverbindungen.
@@ -562,6 +571,7 @@ NOTE: Wenn Sie weniger als vier Netzwerkanschlüsse verwenden möchten, beachten
 
 
 
+[[network-bond-modes-for-management-ports]]
 === Network Bond-Modi für Management-Ports
 
 Für die beiden 1/10-GbE-Management-Ports können Sie den Independent Network Bond-Modus oder den Active-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen.
